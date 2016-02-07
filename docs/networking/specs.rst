@@ -3,6 +3,10 @@ AE Specifications
 
 .. toctree::
 
-   specs/storescu
-   specs/qrscp
-   specs/storescp
+   specs/storage
+   specs/query-retrieve
+   specs/workflow
+   specs/stow-rs
+   specs/wado-uri
+   specs/wado-rs
+   specs/qido-rs
