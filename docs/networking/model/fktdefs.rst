@@ -1,12 +1,38 @@
 Functional Definitions of AEs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. toctree::
+.. _storage:
 
-   fktdefs/storage
-   fktdefs/query-retrieve
-   fktdefs/workflow
-   fktdefs/stow-rs
-   fktdefs/wado-uri
-   fktdefs/wado-rs
-   fktdefs/qido-rs
+Storage Application Entity
+""""""""""""""""""""""""""
+
+.. _query-retrieve:
+
+Query/Retrieve Application Entity
+"""""""""""""""""""""""""""""""""
+
+.. _workflow:
+
+Workflow Application Entity
+"""""""""""""""""""""""""""
+
+.. _stow-rs:
+
+STOW-RS
+"""""""
+
+.. _wado-uri:
+
+WADO-URI
+""""""""
+
+.. _wado-rs:
+
+WADO-RS
+"""""""
+
+.. _qido-rs:
+
+QIDO-RS
+"""""""
+
