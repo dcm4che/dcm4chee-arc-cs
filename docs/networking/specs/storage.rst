@@ -6,6 +6,12 @@ Storage Application Entity Specification
 SOP Classes
 """""""""""
 
+The Storage Application Entity provides Standard Conformance to the following SOP Class(es) :
+
+.. csv-table:: Table 4.2.1.1-1.: SOP Classes for Storage Application Entity (SCP)
+   :header: "SOP Class Name", "SOP Class UID", "SCU", "SCP"
+   :file: storage-sop-classes.csv
+
 .. _storage-association-establishment:
 
 Association Establishment Policies
@@ -36,17 +42,17 @@ Implementation Identifying Information
 Association Initiation Policies
 """""""""""""""""""""""""""""""
 
-.. _send-stgcmt-notif:
+.. _send-stgcmt-result:
 
-Activity - Send Storage Commitment Notification
-'''''''''''''''''''''''''''''''''''''''''''''''
+Activity - Send Storage Commitment Result
+'''''''''''''''''''''''''''''''''''''''''
 
-.. _send-stgcmt-notif-seq:
+.. _send-stgcmt-result-seq:
 
 Description and Sequencing of Activity
 ......................................
 
-.. _send-stgcmt-proposed-pcs:
+.. _send-stgcmt-result-proposed-pcs:
 
 Proposed Presentation Contexts
 ..............................
@@ -63,8 +69,8 @@ Association Acceptance Policy
 
 .. _receive-instance:
 
-Activity - Remote AE Sends Instances
-''''''''''''''''''''''''''''''''''''
+Activity - Received Storage Request
+'''''''''''''''''''''''''''''''''''
 
 .. _receive-instance-seq:
 
@@ -78,8 +84,8 @@ Accepted Presentation Contexts
 
 .. _receive-stgcmt-rq:
 
-Activity - Remote AE Requests Storage Commitment
-''''''''''''''''''''''''''''''''''''''''''''''''
+Activity - Receive Storage Commitment Request
+'''''''''''''''''''''''''''''''''''''''''''''
 
 .. _receive-stgcmt-rq-seq:
 
