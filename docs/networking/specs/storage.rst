@@ -33,8 +33,6 @@ The DICOM standard Application Context Name for DICOM is always proposed:
 Number of Associations
 ''''''''''''''''''''''
 
-.. _storage-asynchrounous-nature:
-
 The maximum number of simultaneous Associations is configurable, but is usually limited to a maximum of 10. This configuration largely depends on whether relatively quick response to multiple simultaneous C-MOVE Destination AEs is required or maximum throughput performance is required. If the latter is the case, then no simultaneous Associations are permitted, in order to reduce disk thrashing and thus maximize throughput. The STORAGE-SCU AE can initiate simultaneous Associations to a given external C-MOVE Destination AE up to the maximum number configured. There is no separate limit on the maximum number permitted to the same C-MOVE Destination AE.
 
 If the first attempt to open an Association fails then the STORAGE-SCU AE will reschedule the task to attempt it again after a configurable time delay. The number of times to reattempt Association establishment is configurable, with the default being zero.
@@ -42,8 +40,15 @@ If the first attempt to open an Association fails then the STORAGE-SCU AE will r
 .. csv-table:: Table 4.2.1.2-2.: Number of Associations as a SCU for STORAGE-SCU AE
    :file: storage-number-of-associations.csv
 
+.. _storage-asynchrounous-nature:
+
 Asynchronous Nature
 '''''''''''''''''''
+
+The STORAGE-SCU AE does not support asynchronous communication (multiple outstanding transactions over a single Association). All Association requests must be completed and acknowledged before a new operation can be initiated.
+
+.. csv-table:: Table 4.2.1.2-3.: Asynchronous Nature as a SCU for STORAGE-SCU AE
+   :file: storage-asynchrounous-nature.csv
 
 .. _storage-implementation-class-uid:
 
