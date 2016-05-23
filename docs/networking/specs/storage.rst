@@ -55,6 +55,11 @@ The STORAGE-SCU AE does not support asynchronous communication (multiple outstan
 Implementation Identifying Information
 ''''''''''''''''''''''''''''''''''''''
 
+.. csv-table:: Table 4.2.1.2-4.: DICOM Implementation Class and Version for STORAGE-SCU AE
+   :file: storage-implementation-identifying-information.csv
+
+Note that the STORAGE-SCU AE and QUERY-RETRIEVE-SCP AE use the same Implementation Class UID. All EXAMPLE-QUERY-RETRIEVE-SERVER AEs use the same Implementation Version Name. This Version Name is updated with each new release of the product software, as the different AE versions are never released independently.
+
 .. _storage-association-initiation:
 
 Association Initiation Policies
