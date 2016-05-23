@@ -25,7 +25,8 @@ The STORAGE-SCU AE can only form Associations when requested to do so by the QUE
 
 The DICOM standard Application Context Name for DICOM is always proposed:
 
-        "Application Context Name", "1.2.840.10008.3.1.1.1"
+.. csv-table:: Table 4.2.1.2-1.: DICOM Application Context for STORAGE-SCU AE
+   :file: storage-general.csv
 
 .. _storage-number-of-associations:
 
@@ -33,6 +34,10 @@ Number of Associations
 ''''''''''''''''''''''
 
 .. _storage-asynchrounous-nature:
+
+The maximum number of simultaneous Associations is configurable, but is usually limited to a maximum of 10. This configuration largely depends on whether relatively quick response to multiple simultaneous C-MOVE Destination AEs is required or maximum throughput performance is required. If the latter is the case, then no simultaneous Associations are permitted, in order to reduce disk thrashing and thus maximize throughput. The STORAGE-SCU AE can initiate simultaneous Associations to a given external C-MOVE Destination AE up to the maximum number configured. There is no separate limit on the maximum number permitted to the same C-MOVE Destination AE.
+
+If the first attempt to open an Association fails then the STORAGE-SCU AE will reschedule the task to attempt it again after a configurable time delay. The number of times to reattempt Association establishment is configurable, with the default being zero.
 
 Asynchronous Nature
 '''''''''''''''''''
