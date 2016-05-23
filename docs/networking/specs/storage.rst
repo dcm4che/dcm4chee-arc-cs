@@ -83,7 +83,7 @@ If the STORAGE-SCP AE sends a Notification request (N-EVENT-REPORT-RQ) over the 
 
 The STORAGE-SCP AE can be configured to always open a new Association before sending a Storage Commitment Push Model Notifications (N-EVENT-REPORT), in which case the sequencing illustrated in figure below will always be followed.
 
-.. figure:: storage-sequencing-of-activity.svg
+.. figure:: storage-sequencing-of-activity-send-storage-commitment-notification-over-new-association.svg
 
    Figure : Sequencing of Activity - Send Storage Commitment Notification Over New Association
 
@@ -111,7 +111,7 @@ Proposed Presentation Contexts
 
 STORAGE-SCP AE will propose Presentation Contexts as shown in the following table:
 
-.. csv-table:: Table 4.2.1.2-4.: Proposed Presentation Contexts By the STORAGE-SCP AE
+.. csv-table:: Table 4.2.1.3-1.: Proposed Presentation Contexts By the STORAGE-SCP AE
    :file: storage-proposed-presentation-contexts.csv
 
 .. _stgcmt-conformance:
@@ -152,7 +152,7 @@ Accepted Presentation Contexts
 
 .. _receive-stgcmt-rq:
 
-Activity - Receive Storage Commitment Request
+Activity - Receive Storage Commitment Response
 '''''''''''''''''''''''''''''''''''''''''''''
 
 .. _receive-stgcmt-rq-seq:
@@ -160,8 +160,51 @@ Activity - Receive Storage Commitment Request
 Description and Sequencing of Activities
 ........................................
 
+The STORAGE-SCP AE accepts Associations only if they have valid Presentation Contexts. If none of the requested Presentation Contexts are accepted then the Association Request itself is rejected. It can be configured to only accept Associations with certain hosts (using TCP/IP address) and/or Application Entity Titles.
+
+The default behavior of the STORAGE-SCP AE is to always attempt to send a Storage Commitment Push Model Notification (N-EVENT-REPORT) over the same Association opened by the peer AE to send the request (N-ACTION). If the STORAGE-SCP AE receives a request to close the Association either before sending the Notification or before receiving the corresponding N-EVENT-REPORT-RSP then it will open a new Association to send the Notification. Refer to Section F.4.2.3.4.1.5 for the details.
+
+.. figure:: storage-sequencing-of-activity-receive-images-and-storage-commitment-requests.svg
+
+   Figure : Sequencing of Activity - Receive Images and Storage Commitment Requests
+
+The following sequencing constraints illustrated in figure above apply to the STORAGE-SCP AE for handling Storage Commitment Push Model Requests over the original Association:
+
+1. Peer AE opens an Association with the STORAGE-SCP AE.
+
+2. Peer AE sends zero or more Composite SOP Instances.
+
+3. Peer AE requests Storage Commitment of Composite SOP Instance(s) (peer sends N-ACTION-RQ and STORAGE-SCP AE responds with N-ACTION-RSP to indicate that it received the request).
+
+4. STORAGE-SCP AE sends Storage Commitment Push Model Notification request (N-EVENT-REPORT-RQ) and successfully receives Notification response (N-EVENT-REPORT-RSP) from peer AE.
+
+5. Peer AE closes the Association.
+
+If the STORAGE-SCP AE receives a request to close the Association from the peer AE before sending the Notification request (N-EVENT-REPORT-RQ) or when expecting to receive a Notification response (N-EVENT-REPORT-RSP) then it will open a new Association to send (or resend) the Notification. Refer to 0 for the details. The STORAGE-SCP AE has a configurable timeout value for the maximum amount of time that it will wait on an open Association for a new request from a peer AE. A peer AE can reset this timer by sending a Verification request (C-ECHO-RQ). This can act as a useful mechanism for a peer AE to maintain an active Association if the length of time between sending Storage or Storage Commitment requests can be long (such as when using a single Association to send images as they are acquired during an ultrasound exam).
+
+The STORAGE-SCP AE may reject Association attempts as shown in the Table below. The Result, Source and Reason/Diag columns represent the values returned in the corresponding fields of an ASSOCIATE-RJ PDU. The following abbreviations are used in the Source column:
+
+a. 1 - DICOM UL service-user
+
+b. 2 - DICOM UL service-provider (ASCE related function)
+
+c. 3 - DICOM UL service-provider (Presentation related function)
+
+.. csv-table:: Table 4.2.1.4-1.: Association Rejection Reasons
+   :file: storage-association-rejection-reasons.csv
+
 .. _receive-stgcmt-rq-accepted-pcs:
 
 Accepted Presentation Contexts
 ..............................
 
+The default Behavior of the STORAGE-SCP AE supports the Implicit VR Little Endian and Explicit VR Little Endian Transfer Syntaxes for all Associations. In addition, explicit JPEG (baseline lossy) compression syntax is supported for the following SOP Classes: US Image, US Multi-frame Image, US Image (retired), US Multi-frame Image (retired), VL Image, VL Multi-frame and Secondary Capture Image Storage.
+
+The STORAGE-SCP AE can be configured to accept a subset of these Transfer Syntaxes, with the inclusion of Implicit VR Little Endian being mandatory.
+
+If multiple Transfer Syntaxes are proposed per Presentation Context then only the most preferable Transfer Syntax is accepted. The order of Transfer Syntax preference for the STORAGE-SCP AE is configurable. The default preference order if multiple Transfer Syntaxes are proposed in a single Presentation Context is: JPEG Baseline1, Little Endian Explicit, Little Endian Implicit (if all these are proposed for a single Presentation Context). This means that if the Implicit VR Little Endian and Explicit VR Little Endian Transfer Syntaxes are proposed in a single Presentation Context then the accepted Transfer Syntax will be Explicit VR Little Endian. This order of preference is configurable.
+
+Any of the Presentation Contexts shown in the following table are acceptable to the STORAGE-SCP AE for receiving images.
+
+.. csv-table:: Table 4.2.1.4-2.: Accepted Presentation Contexts By STORAGE-SCP AE
+   :file: storage-accepted-presentation-contexts-by-STORAGE-SCP-AE.csv
