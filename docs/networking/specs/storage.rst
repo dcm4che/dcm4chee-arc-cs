@@ -21,6 +21,11 @@ Association Establishment Policies
 
 General
 '''''''
+The STORAGE-SCU AE can only form Associations when requested to do so by the QUERY-RETRIEVE-SCP AE. The STORAGE-SCU AE can only request the opening of an Association. It cannot accept requests to open Associations from external Application Entities.
+
+The DICOM standard Application Context Name for DICOM is always proposed:
+
+        "Application Context Name", "1.2.840.10008.3.1.1.1"
 
 .. _storage-number-of-associations:
 
