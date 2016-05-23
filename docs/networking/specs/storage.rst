@@ -83,7 +83,7 @@ If the STORAGE-SCP AE sends a Notification request (N-EVENT-REPORT-RQ) over the 
 
 The STORAGE-SCP AE can be configured to always open a new Association before sending a Storage Commitment Push Model Notifications (N-EVENT-REPORT), in which case the sequencing illustrated in figure below will always be followed.
 
-.. figure:: sequencing-of-activity.svg
+.. figure:: storage-sequencing-of-activity.svg
 
    Figure : Sequencing of Activity - Send Storage Commitment Notification Over New Association
 
@@ -109,10 +109,26 @@ The Verification Service as an SCU is only supported as a utility function for S
 Proposed Presentation Contexts
 ..............................
 
+STORAGE-SCP AE will propose Presentation Contexts as shown in the following table:
+
+.. csv-table:: Table 4.2.1.2-4.: Proposed Presentation Contexts By the STORAGE-SCP AE
+   :file: storage-proposed-presentation-contexts.csv
+
 .. _stgcmt-conformance:
 
 SOP Specific Conformance for Storage Commitment Push Model SOP Class
 ....................................................................
+
+The associated Activity with the Storage Commitment Push Model service is the communication by the STORAGE-SCP AE to peer AEs that it has committed to permanently store Composite SOP Instances that have been sent to it. It thus allows peer AEs to determine whether the EXAMPLE-QUERY-RETRIEVE-SERVER has taken responsibility for the archiving of specific SOP Instances so that they can be flushed from the peer AE system.
+
+The STORAGE-SCP AE will initiate a new Association to a peer AE that sent a Storage Commitment Push Model request if the original Association over which this was sent is no longer open. For a detailed explanation of the SOP specific Behavior of the STORAGE-SCP AE in this case please refer to 4.2.4.4.1.3.3, Storage Commitment Push Model as an SCP.
+
+.. _stgcmt-conformance-verification:
+
+SOP Specific Conformance for Storage Commitment Verification SOP Class
+....................................................................
+
+Standard conformance is provided to the DICOM Verification Service Class as an SCU. The Verification Service as an SCU is actually only supported as a diagnostic service tool for network communication issues. It can be used to test whether Associations can actually be opened with a peer AE that is issuing Storage Commitment Push Model requests (i.e., to test whether the indicated TCP/IP port and AE Title for sending N-EVENT-REPORT Requests to the peer AE are truly functional).
 
 .. _storage-association-acceptance:
 
