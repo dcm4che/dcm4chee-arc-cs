@@ -191,6 +191,7 @@ b. 2 - DICOM UL service-provider (ASCE related function)
 c. 3 - DICOM UL service-provider (Presentation related function)
 
 .. csv-table:: Table 4.2.1.4-1.: Association Rejection Reasons
+   :header: "Result", "Source", "Reason/Diag", "Explanation"
    :file: storage-association-rejection-reasons.csv
 
 .. _receive-stgcmt-rq-accepted-pcs:
