@@ -39,6 +39,9 @@ The maximum number of simultaneous Associations is configurable, but is usually 
 
 If the first attempt to open an Association fails then the STORAGE-SCU AE will reschedule the task to attempt it again after a configurable time delay. The number of times to reattempt Association establishment is configurable, with the default being zero.
 
+.. csv-table:: Table 4.2.1.2-2.: Number of Associations as a SCU for STORAGE-SCU AE
+   :file: storage-number-of-associations.csv
+
 Asynchronous Nature
 '''''''''''''''''''
 
