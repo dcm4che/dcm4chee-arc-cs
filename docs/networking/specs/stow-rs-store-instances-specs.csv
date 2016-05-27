@@ -1,0 +1,4 @@
+"Media Types Supported (Accept header)", "Restricted to application/dicom or application/dicom+xml"
+"Transfer Syntaxes Supported (Media Type parameter)", "Any Transfer Syntax supported by the hosting DCM4CHEE ARCHIVE"
+"SOP Class Restrictions", "Restricted to SOP classes supported by the hosting DCM4CHEE ARCHIVE"
+"Size restriction", "Restricted to size supported by the hosting DCM4CHEE ARCHIVE"
