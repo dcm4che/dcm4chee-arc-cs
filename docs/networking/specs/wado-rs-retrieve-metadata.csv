@@ -1,0 +1,4 @@
+"Data Types Supported (Accept Type)", "Restricted to application/dicom+xml"
+"Accept-Encoding", "Restricted to gzip, deflate, or identity (the use of no transformation whatsoever). See W3C RFC 2616 Protocol Parameters Section 3.5 for more information (http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html)."
+"SOP Class restrictions", "Restricted to SOP classes supported by the hosting DCM4CHEE ARCHIVE"
+"Size restriction", "Restricted to size supported by the hosting DCM4CHEE ARCHIVE"
