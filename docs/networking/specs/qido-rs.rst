@@ -74,7 +74,7 @@ Types of Matching: As explained above in QIDO-RS Search For Studies
 
 .. csv-table:: Table 4.2.7.3-2.: QIDO-RS Instance Attribute Matching
    :header: "Keyword", "Tag", "Types of Matching"
-   :file: qido-rs-instances-attribute-matching.csv
+   :file: qido-rs-instance-attribute-matching.csv
 
 .. _qido-rs-connection-policies
 
