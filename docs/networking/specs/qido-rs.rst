@@ -10,11 +10,13 @@ QIDO-RS Search For Studies
    :header: "Parameter", "Restrictions"
    :file: qido-rs-search-for-studies.csv
 
+
 .. csv-table:: Table 4.2.7.1-1a.: QIDO-RS Study Attribute Matching
    :header: "Keyword", "Tag", "Types of Matching"
    :file: qido-rs-study-attribute-matching.csv
 
 Types of Matching:
+''''''''''''''''''
 "S" indicates the identifier attribute uses Single Value Matching
 "L" indicates UID List Matching
 "U" indicates Universal Matching.
@@ -26,6 +28,7 @@ Note : If only Universal Matching is supported for an attribute then that attrib
 "UNIQUE" indicates that this is the Unique Key for that query level, in which case Universal Matching or Single Value Matching is used depending on the query level (see Section C.2.2.1.1 “Unique Keys” in PS3.4 ).
 
 Section 1b : Extended Negotiation
+'''''''''''''''''''''''''''''''''
 DCM4CHEE-QIDO-SERVICE does not support the "fuzzymatching" query key.
 DCM4CHEE-QIDO-SERVICE will perform case insensitive matching for PN VR attributes but will not perform other forms of fuzzy matching. This applies to the following attributes:
     > Referring Physician's Name (0008,0090)
@@ -41,6 +44,7 @@ QIDO-RS Search For Series
    :header: "Parameter", "Restrictions"
    :file: qido-rs-search-for-series.csv
 
+
 .. csv-table:: Table 4.2.7.2-1a.: QIDO-RS Series Attribute Matching
    :header: "Keyword", "Tag", "Types of Matching"
    :file: qido-rs-series-attribute-matching.csv
@@ -55,6 +59,7 @@ QIDO-RS Search For Instances
 .. csv-table:: Table 4.2.7.3-1.: QIDO-RS Search for Instances Specification
    :header: "Parameter", "Restrictions"
    :file: qido-rs-search-for-instances.csv
+
 
 .. csv-table:: Table 4.2.7.3-1a.: QIDO-RS Instance Attribute Matching
    :header: "Keyword", "Tag", "Types of Matching"
