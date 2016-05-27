@@ -11,25 +11,39 @@ QIDO-RS Search For Studies
    :file: qido-rs-search-for-studies.csv
 
 Extended Negotiation :
+
 DCM4CHEE-QIDO-SERVICE does not support the "fuzzymatching" query key.
+
 DCM4CHEE-QIDO-SERVICE will perform case insensitive matching for PN VR attributes but will not perform other forms of fuzzy matching. This applies to the following attributes:
+
 1. Referring Physician's Name (0008,0090).
+
 2. Physician(s) of Record (0008,1048).
+
 3. Patient's Name (0010,0010).
 
-.. csv-table:: Table 4.2.7.1-1a.: QIDO-RS Study Attribute Matching
+.. csv-table:: Table 4.2.7.1-2.: QIDO-RS Study Attribute Matching
    :header: "Keyword", "Tag", "Types of Matching"
    :file: qido-rs-study-attribute-matching.csv
 
 Types of Matching :
+
 1. "S" indicates the identifier attribute uses Single Value Matching.
+
 2. "L" indicates UID List Matching.
+
 3. "U" indicates Universal Matching.
+
 Note : If only Universal Matching is supported for an attribute then that attribute can only be passed as an "includefield" query key.
+
 4. "*" indicates wild card matching.
+
 5. "R" indicates Range Matching.
+
 6. "SEQUENCE" indicates Sequence Matching.
+
 7. "NONE" indicates that no matching is supported, but that values for this Element requested will be returned with all requests.
+
 8. "UNIQUE" indicates that this is the Unique Key for that query level, in which case Universal Matching or Single Value Matching is used depending on the query level.
 
 .. _qido-rs-search-for-series
