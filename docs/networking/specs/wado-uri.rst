@@ -46,7 +46,7 @@ Number Of Connections
 DCM4CHEE-WADO-SERVICE limits the number of simultaneous HTTP connections.
 
 .. csv-table:: Table 4.2.5.4-1.: Number of HTTP Requests Supported
-   :file: stow-rs-wado-uri-wado-rs-number-of-connections.csv
+   :file: qido-rs-stow-rs-wado-uri-wado-rs-number-of-connections.csv
 
 .. _wado-uri-asynchronous-nature:
 

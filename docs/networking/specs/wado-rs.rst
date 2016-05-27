@@ -3,7 +3,7 @@ WADO-RS Specifications
 
 .. _wado-rs-retrieve-study
 
-WADO-URI Retrieve Study
+WADO-RS Retrieve Study
 """""""""""""""""""""""
 
 .. csv-table:: Table 4.2.6.1-1.: WADO-RS Retrieve Study
@@ -73,7 +73,7 @@ Number Of Connections
 DCM4CHEE-WADO-SERVICE limits the number of simultaneous RS requests. Additional requests will be queued after the HTTP connection is accepted. When an earlier request completes, a pending request will proceed.
 
 .. csv-table:: Table 4.2.6.7-1.: Number of HTTP Requests Supported
-   :file: stow-rs-wado-uri-wado-rs-number-of-connections.csv
+   :file: qido-rs-stow-rs-wado-uri-wado-rs-number-of-connections.csv
 
 .. _wado-rs-asynchronous-nature:
 

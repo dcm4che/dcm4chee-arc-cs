@@ -1,0 +1,8 @@
+"Success"
+"200", "OK", "The query completed and any matching results are returned in the message body."
+"Failure"
+"400", "Bad Request", "This indicates that the QIDO-RS Provider was unable to fulfill it because it cannot understand the query component."
+"401", "Unauthorized", "This indicates that the QIDO-RS Provider refused to fulfill it because the client is not authorized."
+"403", "Forbidden", "This indicates that the QIDO-RS Provider understood the request, but is refusing to fulfill it (e.g., no single patient specified, an authorized user with insufficient privileges, etc.)."
+"413", "Request entity too large", "This indicates that the query was too broad and a narrower query or paging should be requested. This code will be returned for queries that do not specify PatientID."
+"503", "Busy", "Service is unavailable."
