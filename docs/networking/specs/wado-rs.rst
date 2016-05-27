@@ -53,7 +53,7 @@ WADO-RS Retrieve Metadata
 
 .. csv-table:: Table 4.2.6.6-1.: WADO-RS Retrieve Metadata
    :header: "Options", "Restrictions"
-   :file: wado-rs-retrieve-mtadata.csv
+   :file: wado-rs-retrieve-metadata.csv
 
 .. _wado-rs-connection-policies
 
