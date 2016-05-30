@@ -1,0 +1,5 @@
+"Verification", "1.2.840.10008.1.1", "DICOM Implicit VR Little Endian", "1.2.840.10008.1.2", "SCP", "None"
+"Patient Root Q/R Information Model - FIND", "1.2.840.10008.5.1.4.1.2.1.1", "DICOM Implicit VR Little Endian", "1.2.840.10008.1.2", "SCP", "None"
+"Patient Root Q/R Information Model - MOVE", "1.2.840.10008.5.1.4.1.2.1.2", "DICOM Implicit VR Little Endian", "1.2.840.10008.1.2", "SCP", "None"
+"Study Root Q/R Information Model - FIND", "1.2.840.10008.5.1.4.1.2.2.1", "DICOM Implicit VR Little Endian", "1.2.840.10008.1.2", "SCP", "None"
+"Study Root Q/R Information Model - MOVE", "1.2.840.10008.5.1.4.1.2.2.2", "DICOM Implicit VR Little Endian", "1.2.840.10008.1.2", "SCP", "None"

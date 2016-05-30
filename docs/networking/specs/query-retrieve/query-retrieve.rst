@@ -102,8 +102,7 @@ Proposed Presentation Contexts
 STORAGE-SCU AE will propose Presentation Contexts as shown in the following table:
 
 .. csv-table:: Table 4.2.2.1.3-1.: Proposed Presentation Contexts By the STORAGE-SCU AE
-   :header: "Abstract Syntax", "Transfer Syntax", "Role", "Ext. Neg."
-   :sub-header: "Name", "UID"
+   :header: "Abstract Syntax Name", "Abstract Syntax UID", "Transfer Syntax Name", "Transfer Syntax UID", "Role", "Extended Negotiation"
    :file: storage-scu-presentation-contexts.csv
 
 Note
@@ -263,8 +262,8 @@ Accepted Presentation Contexts
 QUERY-RETRIEVE-SCP AE will accept Presentation Contexts as shown in the following table:
 
 .. csv-table:: Table 4.2.2.2.4-2.: Accepted Presentation Contexts By the QUERY-RETRIEVE-SCP AE
-   :header: "Abstract Syntax", "Transfer Syntax", "Role", "Extended Negotiation"
-   :file: storage-scu-presentation-contexts.csv
+   :header: "Abstract Syntax Name", "Abstract Syntax UID", "Transfer Syntax Name", "Transfer Syntax UID", "Role", "Extended Negotiation"
+   :file: query-retrieve-scp-presentation-contexts.csv
 
 SOP Specific Conformance for Query SOP Classes
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -308,4 +307,4 @@ Note that the Warning Status, B000 (Sub-operations complete - One or more Failur
 
 .. csv-table:: Table 4.2.2.2.4-7.: QUERY-RETRIEVE-SCP AE Communication Failure Behavior
    :header: "Exception", "Behaviour"
-   :file: storage-scu-communication-failure-behaviour.csv
+   :file: query-retrieve-scp-communication-failure-behaviour.csv
