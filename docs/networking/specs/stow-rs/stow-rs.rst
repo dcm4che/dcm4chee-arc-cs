@@ -28,7 +28,7 @@ Number Of Connections
 DCM4CHEE-STOW-SERVICE limits the number of simultaneous RS requests. Additional requests will be queued after the HTTP connection is accepted. When an earlier request completes, a pending request will proceed.
 
 .. csv-table:: Table 4.2.4.2-1.: Number of HTTP Requests Supported
-   :file: qido-rs-stow-rs-wado-uri-wado-rs-number-of-connections.csv
+   :file: common/qido-rs-stow-rs-wado-uri-wado-rs-number-of-connections.csv
 
 .. _stow-rs-asynchronous-nature:
 

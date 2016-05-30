@@ -26,7 +26,7 @@ The STORAGE-SCU AE can only form Associations when requested to do so by the QUE
 The DICOM standard Application Context Name for DICOM is always proposed:
 
 .. csv-table:: Table 4.2.1.2-1.: DICOM Application Context for STORAGE-SCU AE
-   :file: common/storage-general.csv
+   :file: common/storage-workflow-general.csv
 
 .. _storage-number-of-associations:
 
