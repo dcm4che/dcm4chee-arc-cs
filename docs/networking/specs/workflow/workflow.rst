@@ -24,7 +24,7 @@ General
 The DICOM standard application context name for DICOM 3.0 is always proposed:
 
 .. csv-table:: Table 4.2.3.1-2.: DICOM Application Context for AE Workflow
-   :file: common/storage-workflow-general.csv
+   :file: common/storage-query-retrieve-workflow-general.csv
 
 .. _workflow-number-of-associations:
 

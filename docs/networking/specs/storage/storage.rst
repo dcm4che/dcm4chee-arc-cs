@@ -26,7 +26,7 @@ The STORAGE-SCU AE can only form Associations when requested to do so by the QUE
 The DICOM standard Application Context Name for DICOM is always proposed:
 
 .. csv-table:: Table 4.2.1.2-1.: DICOM Application Context for STORAGE-SCU AE
-   :file: common/storage-workflow-general.csv
+   :file: common/storage-query-retrieve-workflow-general.csv
 
 .. _storage-number-of-associations:
 
@@ -38,7 +38,7 @@ The maximum number of simultaneous Associations is configurable, but is usually 
 If the first attempt to open an Association fails then the STORAGE-SCU AE will reschedule the task to attempt it again after a configurable time delay. The number of times to reattempt Association establishment is configurable, with the default being zero.
 
 .. csv-table:: Table 4.2.1.2-2.: Number of Associations as a SCU for STORAGE-SCU AE
-   :file: storage-number-of-associations.csv
+   :file: common/storage-query-retrieve-number-of-associations.csv
 
 .. _storage-asynchrounous-nature:
 
@@ -56,7 +56,7 @@ Implementation Identifying Information
 ''''''''''''''''''''''''''''''''''''''
 
 .. csv-table:: Table 4.2.1.2-4.: DICOM Implementation Class and Version for STORAGE-SCU AE
-   :file: storage-implementation-identifying-information.csv
+   :file: common/storage-query-retrieve-implementation-identifying-information.csv
 
 Note that the STORAGE-SCU AE and QUERY-RETRIEVE-SCP AE use the same Implementation Class UID. All EXAMPLE-QUERY-RETRIEVE-SERVER AEs use the same Implementation Version Name. This Version Name is updated with each new release of the product software, as the different AE versions are never released independently.
 
@@ -192,7 +192,7 @@ c. 3 - DICOM UL service-provider (Presentation related function)
 
 .. csv-table:: Table 4.2.1.4.2-1.: Association Rejection Reasons
    :header: "Result", "Source", "Reason/Diag", "Explanation"
-   :file: storage-association-rejection-reasons.csv
+   :file: common/storage-query-retrieve-association-rejection-reasons.csv
 
 .. _receive-stgcmt-rq-accepted-pcs:
 
