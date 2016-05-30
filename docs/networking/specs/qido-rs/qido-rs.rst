@@ -8,7 +8,7 @@ QIDO-RS Search For Studies
 
 .. csv-table:: Table 4.2.7.1-1.: QIDO-RS Search for Studies Specification
    :header: "Parameter", "Restrictions"
-   :file: qido-rs-search-for-studies.csv
+   :file: search-for-studies.csv
 
 Extended Negotiation :
 
@@ -24,7 +24,7 @@ DCM4CHEE-QIDO-SERVICE will perform case insensitive matching for PN VR attribute
 
 .. csv-table:: Table 4.2.7.1-2.: QIDO-RS Study Attribute Matching
    :header: "Keyword", "Tag", "Types of Matching"
-   :file: qido-rs-study-attribute-matching.csv
+   :file: study-attribute-matching.csv
 
 Types of Matching :
 
@@ -53,13 +53,13 @@ QIDO-RS Search For Series
 
 .. csv-table:: Table 4.2.7.2-1.: QIDO-RS Search for Series Specification
    :header: "Parameter", "Restrictions"
-   :file: qido-rs-search-for-series.csv
+   :file: search-for-series.csv
 
 Types of Matching: As explained above in QIDO-RS Search For Studies
 
 .. csv-table:: Table 4.2.7.2-2.: QIDO-RS Series Attribute Matching
    :header: "Keyword", "Tag", "Types of Matching"
-   :file: qido-rs-series-attribute-matching.csv
+   :file: series-attribute-matching.csv
 
 .. _qido-rs-search-for-instances
 
@@ -68,13 +68,13 @@ QIDO-RS Search For Instances
 
 .. csv-table:: Table 4.2.7.3-1.: QIDO-RS Search for Instances Specification
    :header: "Parameter", "Restrictions"
-   :file: qido-rs-search-for-instances.csv
+   :file: search-for-instances.csv
 
 Types of Matching: As explained above in QIDO-RS Search For Studies
 
 .. csv-table:: Table 4.2.7.3-2.: QIDO-RS Instance Attribute Matching
    :header: "Keyword", "Tag", "Types of Matching"
-   :file: qido-rs-instance-attribute-matching.csv
+   :file: instance-attribute-matching.csv
 
 .. _qido-rs-connection-policies
 
@@ -110,4 +110,4 @@ DCM4CHEE-QIDO-SERVICE shall provide a response message header containing the app
 
 .. csv-table:: Table 4.2.7.4-2.: HTTP Standard Response Codes
    :header: "Code", "Name", "Description"
-   :file: qido-rs-http-standard-response-codes.csv
+   :file: http-standard-response-codes.csv

@@ -8,7 +8,7 @@ STOW-RS Store Instance
 
 .. csv-table:: Table 4.2.4.1-1.: STOW-RS Store Instances Specification
    :header: "Category", "Restrictions"
-   :file: stow-rs-store-instances-specs.csv
+   :file: store-instances-specs.csv
 
 .. _stow-rs-connection-policies:
 
@@ -44,4 +44,4 @@ The DCM4CHEE-STOW-SERVICE response message header contains status codes indicati
 
 .. csv-table:: Table 4.2.4.2-2.: HTTP Standard Response Codes
    :header: "Service Status", "HTTP Status Code", "STOW-RS Description"
-   :file: stow-rs-http-standard-response-codes.csv
+   :file: http-standard-response-codes.csv

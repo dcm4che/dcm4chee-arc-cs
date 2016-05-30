@@ -187,7 +187,7 @@ Asynchronous Nature
 The QUERY-RETRIEVE-SCP AE does not support asynchronous communication (multiple outstanding transactions over a single Association). All Association requests must be completed and acknowledged before a new operation can be initiated.
 
 .. csv-table:: Table 4.2.2.2.2-3.: Asynchronous Nature as a SCP for QUERY-RETRIEVE-SCP AE
-   :file: query-retrieve-asynchronous-nature.csv
+   :file: query-retrieve-scp-asynchronous-nature.csv
 
 .. _query-retrieve-scp-implementation-identifying-info
 
@@ -276,11 +276,11 @@ All the required search keys on each of the three levels (Study, Series, and Ima
 
 .. csv-table:: Table 4.2.2.2.4-3.: Patient Root C-FIND SCP Supported Elements
    :header: "Level Name    Attribute Name", "Tag", "VR", "Types of Matching"
-   :file: query-retrieve-patient-root-c-find-elements.csv
+   :file: query-retrieve-scp-patient-root-c-find-elements.csv
 
 .. csv-table:: Table 4.2.2.2.4-4.: Study Root C-FIND SCP Supported Elements
    :header: "Level Name    Attribute Name", "Tag", "VR", "Types of Matching"
-   :file: query-retrieve-study-root-c-find-elements.csv
+   :file: query-retrieve-scp-study-root-c-find-elements.csv
 
 The tables should be read as follows:
 Attribute Name: Attributes supported for returned C-FIND Responses.
@@ -290,7 +290,7 @@ Types of Matching: The types of Matching supported by the C-FIND SCP. A "S" indi
 
 .. csv-table:: Table 4.2.2.2.4-5.: QUERY-RETRIEVE-SCP AE C-FIND Response Status Return Behavior
    :header: "Service Status", "Further Meaning", "Error Code", "Behaviour"
-   :file: query-retrieve-c-find-response-status-behaviour.csv
+   :file: query-retrieve-scp-c-find-response-status-behaviour.csv
 
 SOP Specific Conformance for Retrieval SOP Classes
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

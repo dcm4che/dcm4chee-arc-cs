@@ -8,7 +8,7 @@ WADO-URI Retrieve Imaging Document Set
 
 .. csv-table:: Table 4.2.5.1-1.: WADO-URI Retrieve Imaging Documents Specification
    :header: "Parameter", "Restrictions"
-   :file: wado-uri-retrieve-imaging-docs-specs.csv
+   :file: retrieve-imaging-docs-specs.csv
 
 If the URI Retrieve specifies no transfer syntax that is supported by the archive, the SOP Instance will be returned using the Implicit VR Little Endian Transfer Syntax.
 
@@ -19,7 +19,7 @@ WADO-URI Retrieve Rendered Imaging Document Set
 
 .. csv-table:: Table 4.2.5.2-1.: WADO-URI Retrieve Rendered Imaging Documents Specification
    :header: "Parameter", "Restrictions"
-   :file: wado-uri-retrieve-rendered-imaging-docs-specs.csv
+   :file: retrieve-rendered-imaging-docs-specs.csv
 
 .. _wado-uri-retrieve-imaging-document-set-metadata
 

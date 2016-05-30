@@ -10,7 +10,7 @@ The Workflow Application Entity provides Standard Conformance to the following S
 
 .. csv-table:: Table 4.2.3.1-1.: SOP Classes for Workflow Application Entity (SCP)
    :header: "SOP Class Name", "SOP Class UID", "SCU", "SCP"
-   :file: workflow-sop-classes.csv
+   :file: sop-classes.csv
 
 .. _workflow-association-establishment:
 
@@ -33,7 +33,7 @@ Number of Associations
 The Workflow Application Entity initiates one Association at a time for a Worklist request.
 
 .. csv-table:: Table 4.2.3.1-3.: Number of Associations Initiated for AE Workflow
-   :file: workflow-number-of-associations.csv
+   :file: number-of-associations.csv
 
 .. _workflow-asynchrounous-nature:
 
@@ -43,7 +43,7 @@ Asynchronous Nature
 The Workflow AE does not support asynchronous communication (multiple outstanding transactions over a single Association).
 
 .. csv-table:: Table 4.2.3.1-4.: Asynchronous Nature as a SCU for STORAGE-SCU AE
-   :file: workflow-asynchronous-nature.csv
+   :file: common/storage-workflow-asynchronous-nature.csv
 
 .. _workflow-implementation-class-uid:
 
@@ -52,7 +52,7 @@ Implementation Identifying Information
 The implementation information for this Application Entity is:
 
 .. csv-table:: Table 4.2.3.1-5.: DICOM Implementation Class and Version for AE Workflow
-   :file: workflow-implementation-identifying-information.csv
+   :file: implementation-identifying-information.csv
 
 .. _workflow-association-initiation:
 
@@ -86,7 +86,7 @@ of items is reached. The results will be displayed in a separate list, which wil
 Worklist Application Entity will initiate an Association in order to issue a C-FIND request according to the Modality
 Worklist Information Model.
 
-.. figure:: worklist-sequencing-of-activities-worklist-update.svg
+.. figure:: sequencing-of-activities-worklist-update.svg
 
    Figure : Sequencing of Activity - Worklist Update
 

@@ -8,7 +8,7 @@ WADO-RS Retrieve Study
 
 .. csv-table:: Table 4.2.6.1-1.: WADO-RS Retrieve Study
    :header: "Options", "Restrictions"
-   :file: wado-rs-retrieve-study-series-instance.csv
+   :file: retrieve-study-series-instance.csv
 
 .. _wado-rs-retrieve-series
 
@@ -17,7 +17,7 @@ WADO-RS Retrieve Series
 
 .. csv-table:: Table 4.2.6.2-1.: WADO-RS Retrieve Series
    :header: "Options", "Restrictions"
-   :file: wado-rs-retrieve-study-series-instance.csv
+   :file: retrieve-study-series-instance.csv
 
 .. _wado-rs-retrieve-instance
 
@@ -26,7 +26,7 @@ WADO-RS Retrieve Instance
 
 .. csv-table:: Table 4.2.6.3-1.: WADO-RS Retrieve Instance
    :header: "Options", "Restrictions"
-   :file: wado-rs-retrieve-study-series-instance.csv
+   :file: retrieve-study-series-instance.csv
 
 .. _wado-rs-retrieve-frames
 
@@ -35,7 +35,7 @@ WADO-RS Retrieve Frames
 
 .. csv-table:: Table 4.2.6.4-1.: WADO-RS Retrieve Frames
    :header: "Options", "Restrictions"
-   :file: wado-rs-retrieve-frames.csv
+   :file: retrieve-frames.csv
 
 .. _wado-rs-retrieve-bulkdata
 
@@ -44,7 +44,7 @@ WADO-RS Retrieve Bulk Data
 
 .. csv-table:: Table 4.2.6.5-1.: WADO-RS Retrieve Bulk Data
    :header: "Options", "Restrictions"
-   :file: wado-rs-retrieve-bulkdata.csv
+   :file: retrieve-bulkdata.csv
 
 .. _wado-rs-retrieve-metadata
 
@@ -53,7 +53,7 @@ WADO-RS Retrieve Metadata
 
 .. csv-table:: Table 4.2.6.6-1.: WADO-RS Retrieve Metadata
    :header: "Options", "Restrictions"
-   :file: wado-rs-retrieve-metadata.csv
+   :file: retrieve-metadata.csv
 
 .. _wado-rs-connection-policies
 
