@@ -255,7 +255,7 @@ c. 3 - DICOM UL service-provider (Presentation related function)
 .. csv-table:: Table 4.2.2.2.4-1.: Accepted Presentation Contexts By the QUERY-RETRIEVE-SCP AE
    :header: "Result", "Source", "Reason/Diag", "Explanation"
    :sub-header: "Name", "UID"
-   :file: storage-scu-presentation-contexts.csv
+   :file: common/storage-query-retrieve-association-rejection-reasons.csv
 
 Accepted Presentation Contexts
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -264,7 +264,7 @@ QUERY-RETRIEVE-SCP AE will accept Presentation Contexts as shown in the followin
 
 .. csv-table:: Table 4.2.2.2.4-2.: Accepted Presentation Contexts By the QUERY-RETRIEVE-SCP AE
    :header: "Abstract Syntax", "Transfer Syntax", "Role", "Extended Negotiation"
-   :file: query-retrieve-patient-root-c-find-elements.csv
+   :file: storage-scu-presentation-contexts.csv
 
 SOP Specific Conformance for Query SOP Classes
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -299,3 +299,13 @@ SOP Specific Conformance for Retrieval SOP Classes
 The QUERY-RETRIEVE-SCP AE will convey to the STORAGE-SCU AE that an Association with a DICOM Application Entity named by the external C-MOVE SCU (through a MOVE Destination AE Title) should be established. It will also convey to the STORAGE-SCU AE to perform C-STORE operations on specific images requested by the external C-MOVE SCU. One or more of the Image Storage Presentation Contexts listed in Table 4.2.2.1.3-1. will be negotiated.
 The QUERY-RETRIEVE-SCP AE can support lists of UIDs in the C-MOVE Request at the Study, Series, and Image Levels. The list of UIDs must be at the Level of the C-MOVE Request however. For example, if the C-MOVE Request is for Series Level retrieval but the identifier contains a list of Study UIDs then the C-MOVE Request will be rejected, and the A900 Failed Status Code will be returned in the C-MOVE Response.
 An initial C-MOVE Response is always sent after confirming that the C-MOVE Request itself can be processed. After this, the QUERY-RETRIEVE-SCP AE will return a response to the C-MOVE SCU after the STORAGE-SCU AE has attempted to send each image. This response reports the number of remaining SOP Instances to transfer, and the number transferred having a successful, failed, or warning status. If the Composite SOP Instances must be retrieved from long-term archive prior to export there may be quite a long delay between the first C-MOVE Response and the next one after the attempt to export the first image. The maximum length of time for this delay will depend on the particular type of archive used but typically varies between 3 and 10 minutes.
+
+.. csv-table:: Table 4.2.2.2.4-6.: QUERY-RETRIEVE-SCP AE C-MOVE Response Status Return Behavior
+   :header: "Service Status", "Further Meaning", "Error Code", "Behaviour"
+   :file: query-retrieve-c-move-response-status-behaviour.csv
+
+Note that the Warning Status, B000 (Sub-operations complete - One or more Failures) is never returned. If a failure occurs during export to the C-MOVE Destination AE by the STORAGE-SCU AE then the entire task is aborted. Thus any remaining matches are not exported.
+
+.. csv-table:: Table 4.2.2.2.4-7.: QUERY-RETRIEVE-SCP AE Communication Failure Behavior
+   :header: "Exception", "Behaviour"
+   :file: storage-scu-communication-failure-behaviour.csv
