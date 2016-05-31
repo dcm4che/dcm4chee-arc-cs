@@ -40,7 +40,7 @@ The STORAGE-SCP AE initiates one Association at a time for sending Storage Commi
 .. csv-table:: Table 4.2.1.2-2.: Number of Simultaneous Associations as an SCP for STORAGE-SCP AE
    :file: number-of-associations.csv
 
-.. _storage-asynchronous-nature:
+.. _storage-asynchrounous-nature:
 
 Asynchronous Nature
 '''''''''''''''''''
@@ -168,7 +168,7 @@ b. 2 - DICOM UL service-provider (ASCE related function)
 c. 3 - DICOM UL service-provider (Presentation related function)
 
 .. csv-table:: Table 4.2.1.4.1-1.: Association Rejection Reasons
-   :header: "Result", "Source", "Reason/Diag", "Explanation"
+   :header: "Result", "Source", "Reason-Diag", "Explanation"
    :file: common/storage-query-retrieve-association-rejection-reasons.csv
 
 .. _storage-receive-stgcmt-rq-accepted-pcs:

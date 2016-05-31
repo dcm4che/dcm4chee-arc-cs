@@ -252,7 +252,7 @@ b. 2 - DICOM UL service-provider (ASCE related function)
 c. 3 - DICOM UL service-provider (Presentation related function)
 
 .. csv-table:: Table 4.2.2.2.4-1.: Accepted Presentation Contexts By the QUERY-RETRIEVE-SCP AE
-   :header: "Result", "Source", "Reason/Diag", "Explanation"
+   :header: "Result", "Source", "Reason-Diag", "Explanation"
    :sub-header: "Name", "UID"
    :file: common/storage-query-retrieve-association-rejection-reasons.csv
 
