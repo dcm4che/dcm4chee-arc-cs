@@ -45,7 +45,7 @@ The maximum number of simultaneous Associations is configurable, but is usually 
 If the first attempt to open an Association fails then the STORAGE-SCU AE will reschedule the task to attempt it again after a configurable time delay. The number of times to reattempt Association establishment is configurable, with the default being zero.
 
 .. csv-table:: Table 4.2.2.1.2-2.: Number of Associations as a SCU for STORAGE-SCU AE
-   :file: common/storage-query-retrieve-number-of-associations.csv
+   :file: storage-scu-query-retrieve-scp-number-of-associations.csv
 
 .. _storage-scu-asynchronous-nature
 
@@ -177,7 +177,7 @@ Number Of Associations
 The QUERY-RETRIEVE-SCP AE can support multiple simultaneous Associations. Each time the QUERY-RETRIEVE-SCP AE receives an Association, a child process will be spawned to process the Verification, Query, or Retrieval request. The maximum number of child processes, and thus the maximum number of simultaneous Associations that can be processed, is set by configuration. The default maximum is 10 in total. The maximum number of simultaneous Associations can be either an absolute number or a maximum number for each requesting external Application Entity. The latter flexibility can be useful if communication with one external AE is unreliable and one does not wish 'hung' connections with this AE to prevent Associations with other client AEs.
 
 .. csv-table:: Table 4.2.2.2.2-2.: Number of Associations as a SCP for QUERY-RETRIEVE-SCP AE
-   :file: common/storage-query-retrieve-number-of-associations.csv
+   :file: storage-scu-query-retrieve-scp-number-of-associations.csv
 
 .. _query-retrieve-scp-asynchronous-nature
 

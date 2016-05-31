@@ -43,7 +43,7 @@ Asynchronous Nature
 The Workflow AE does not support asynchronous communication (multiple outstanding transactions over a single Association).
 
 .. csv-table:: Table 4.2.3.1-4.: Asynchronous Nature as a SCU for STORAGE-SCU AE
-   :file: common/storage-workflow-asynchronous-nature.csv
+   :file: asynchronous-nature.csv
 
 .. _workflow-implementation-class-uid:
 
