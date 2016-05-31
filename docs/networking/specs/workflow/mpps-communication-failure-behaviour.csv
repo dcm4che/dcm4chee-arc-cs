@@ -1,0 +1,2 @@
+"Timeout", "The Association is aborted using A-ABORT and MPPS marked as failed. The reason is logged and reported to the user."
+"Association aborted by the SCP or network layers", "The MPPS is marked as failed. The reason is logged and reported to the user."

@@ -1,7 +1,7 @@
 AE Title/Presentation Address Mapping
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. _aets-local-aets
+.. _aets-local-aets:
 
 Local AE Titles
 """""""""""""""

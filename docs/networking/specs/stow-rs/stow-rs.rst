@@ -1,7 +1,7 @@
 STOW-RS Specifications
 ^^^^^^^^^^^^^^^^^^^^^^
 
-.. _stow-rs-store-instances
+.. _stow-rs-store-instances:
 
 STOW-RS Store Instance
 """"""""""""""""""""""
@@ -13,7 +13,7 @@ STOW-RS Store Instance
 .. _stow-rs-connection-policies:
 
 Connection Policies
-""""""""""""""""""""
+"""""""""""""""""""
 
 .. _stow-rs-general:
 
@@ -36,7 +36,7 @@ Asynchronous Nature
 '''''''''''''''''''
 DCM4CHEE-STOW-SERVICE does not support RS asynchronous response.
 
-.. _stow-rs-sop-specific-conformance-for-sop-classes
+.. _stow-rs-sop-specific-conformance-for-sop-classes:
 
 SOP Specific Conformance for SOP Class(es)
 ''''''''''''''''''''''''''''''''''''''''''

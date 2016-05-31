@@ -6,7 +6,7 @@ QUERY-RETRIEVE-SERVER is configured so that the QUERY-RETRIEVE-SCP AE and STORAG
 STORAGE-SCU Application Entity Specification
 """"""""""""""""""""""""""""""""""""""""""""
 
-.. _storage-scu-sop-classes
+.. _storage-scu-sop-classes:
 
 SOP Classes
 '''''''''''
@@ -20,12 +20,12 @@ The STORAGE-SCU AE provides Standard Conformance to the following DICOM V3.0 SOP
 STORAGE-SCU AE can be configured to use the retired US Image objects (US Image Storage, 1.2.840.10008.5.1.4.1.1.6, and US Multi-frame Storage, 1.2.840.10008.5.1.4.1.1.3) rather than the current US SOP Classes for ultrasound images or vice-versa, making any necessary changes to make the transformed image objects conformant to the corresponding SOP Class. This is only done if the external Storage SCP AE does not support the SOP Instance's original SOP Class.
 By altering the configuration it is possible to support additional or fewer SOP Classes.
 
-.. _storage-scu-association-establishment-policies
+.. _storage-scu-association-establishment-policies:
 
 Association Establishment Policies
 ''''''''''''''''''''''''''''''''''
 
-.. _storage-scu-general
+.. _storage-scu-general:
 
 General
 .......
@@ -36,7 +36,7 @@ The DICOM standard Application Context Name for DICOM is always proposed:
 .. csv-table:: Table 4.2.2.1.2-1.: DICOM Application Context for STORAGE-SCU AE
    :file: common/storage-query-retrieve-workflow-general.csv
 
-.. _storage-scu-number-of-associations
+.. _storage-scu-number-of-associations:
 
 Number Of Associations
 ......................
@@ -47,7 +47,7 @@ If the first attempt to open an Association fails then the STORAGE-SCU AE will r
 .. csv-table:: Table 4.2.2.1.2-2.: Number of Associations as a SCU for STORAGE-SCU AE
    :file: storage-scu-query-retrieve-scp-number-of-associations.csv
 
-.. _storage-scu-asynchronous-nature
+.. _storage-scu-asynchronous-nature:
 
 Asynchronous Nature
 ...................
@@ -57,7 +57,7 @@ The STORAGE-SCU AE does not support asynchronous communication (multiple outstan
 .. csv-table:: Table 4.2.2.1.2-3.: Asynchronous Nature as a SCU for STORAGE-SCU AE
    :file: query-retrieve-asynchronous-nature.csv
 
-.. _storage-scu-implementation-identifying-info
+.. _storage-scu-implementation-identifying-info:
 
 Implementation Identifying Information
 ......................................
@@ -67,12 +67,12 @@ Implementation Identifying Information
 
 Note that the STORAGE-SCU AE and QUERY-RETRIEVE-SCP AE use the same Implementation Class UID. All QUERY-RETRIEVE-SERVER AEs use the same Implementation Version Name. This Version Name is updated with each new release of the product software, as the different AE versions are never released independently.
 
-.. _storage-scu-association-initiation-policy
+.. _storage-scu-association-initiation-policy:
 
 Association Initiation Policy
 '''''''''''''''''''''''''''''
 
-.. _storage-scu-activity
+.. _storage-scu-activity:
 
 Activity - Send Images Requested By an External Peer AE
 .......................................................
@@ -131,7 +131,7 @@ All Status Codes indicating an error or refusal are treated as a permanent failu
    :header: "Exception", "Behaviour"
    :file: storage-scu-communication-failure-behaviour.csv
 
-.. _storage-scu-association-acceptance-policy
+.. _storage-scu-association-acceptance-policy:
 
 Association Acceptance Policy
 '''''''''''''''''''''''''''''
@@ -142,7 +142,7 @@ The STORAGE-SCU AE does not accept Associations.
 QUERY-RETRIEVE-SCP Application Entity Specification
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
-.. _query-retrieve-scp-sop-classes
+.. _query-retrieve-scp-sop-classes:
 
 SOP Classes
 '''''''''''
@@ -153,12 +153,12 @@ The QUERY-RETRIEVE-SCP AE provides Standard Conformance to the following DICOM V
    :header: "SOP Class Name", "SOP Class UID", "SCU", "SCP"
    :file: query-retrieve-scp-sop-classes.csv
 
-.. _query-retrieve-association-policies
+.. _query-retrieve-association-policies:
 
 Association Policies
 ''''''''''''''''''''
 
-.. _query-retrieve-scp-general
+.. _query-retrieve-scp-general:
 
 General
 .......
@@ -169,7 +169,7 @@ The DICOM standard Application Context Name for DICOM 3.0 is always accepted:
 .. csv-table:: Table 4.2.2.2.2-1.: DICOM Application Context for QUERY-RETRIEVE-SCP AE
    :file: common/storage-query-retrieve-workflow-general.csv
 
-.. _query-retrieve-scp-number-of-associations
+.. _query-retrieve-scp-number-of-associations:
 
 Number Of Associations
 ......................
@@ -179,7 +179,7 @@ The QUERY-RETRIEVE-SCP AE can support multiple simultaneous Associations. Each t
 .. csv-table:: Table 4.2.2.2.2-2.: Number of Associations as a SCP for QUERY-RETRIEVE-SCP AE
    :file: storage-scu-query-retrieve-scp-number-of-associations.csv
 
-.. _query-retrieve-scp-asynchronous-nature
+.. _query-retrieve-scp-asynchronous-nature:
 
 Asynchronous Nature
 ...................
@@ -189,7 +189,7 @@ The QUERY-RETRIEVE-SCP AE does not support asynchronous communication (multiple 
 .. csv-table:: Table 4.2.2.2.2-3.: Asynchronous Nature as a SCP for QUERY-RETRIEVE-SCP AE
    :file: query-retrieve-scp-asynchronous-nature.csv
 
-.. _query-retrieve-scp-implementation-identifying-info
+.. _query-retrieve-scp-implementation-identifying-info:
 
 Implementation Identifying Information
 ......................................
@@ -201,19 +201,19 @@ The implementation information for the Application Entity is:
 
 Note that the STORAGE-SCU AE, and QUERY-RETRIEVE-SCP AE use the same Implementation Class UID. All QUERY-RETRIEVE-SERVER AEs use the same Implementation Version Name. This Version Name is updated with each new release of the product software, as the different AE versions are never released independently.
 
-.. _query-retrieve-scp-association-initiation-policy
+.. _query-retrieve-scp-association-initiation-policy:
 
 Association Initiation Policy
 '''''''''''''''''''''''''''''
 
 The QUERY-RETRIEVE-SCP AE does not initiate Associations.
 
-.. _query-retrieve-scp-association-acceptance-policy
+.. _query-retrieve-scp-association-acceptance-policy:
 
 Association Acceptance Policy
 '''''''''''''''''''''''''''''
 
-.. _query-retrieve-scp-activity
+.. _query-retrieve-scp-activity:
 
 Activity - Handling Query and Retrieval Requests
 ................................................

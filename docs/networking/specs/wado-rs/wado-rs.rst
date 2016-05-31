@@ -1,16 +1,16 @@
 WADO-RS Specifications
 ^^^^^^^^^^^^^^^^^^^^^^
 
-.. _wado-rs-retrieve-study
+.. _wado-rs-retrieve-study:
 
 WADO-RS Retrieve Study
-"""""""""""""""""""""""
+""""""""""""""""""""""
 
 .. csv-table:: Table 4.2.6.1-1.: WADO-RS Retrieve Study
    :header: "Options", "Restrictions"
    :file: retrieve-study-series-instance.csv
 
-.. _wado-rs-retrieve-series
+.. _wado-rs-retrieve-series:
 
 WADO-RS Retrieve Series
 """""""""""""""""""""""
@@ -19,7 +19,7 @@ WADO-RS Retrieve Series
    :header: "Options", "Restrictions"
    :file: retrieve-study-series-instance.csv
 
-.. _wado-rs-retrieve-instance
+.. _wado-rs-retrieve-instance:
 
 WADO-RS Retrieve Instance
 """""""""""""""""""""""""
@@ -28,7 +28,7 @@ WADO-RS Retrieve Instance
    :header: "Options", "Restrictions"
    :file: retrieve-study-series-instance.csv
 
-.. _wado-rs-retrieve-frames
+.. _wado-rs-retrieve-frames:
 
 WADO-RS Retrieve Frames
 """""""""""""""""""""""
@@ -37,7 +37,7 @@ WADO-RS Retrieve Frames
    :header: "Options", "Restrictions"
    :file: retrieve-frames.csv
 
-.. _wado-rs-retrieve-bulkdata
+.. _wado-rs-retrieve-bulkdata:
 
 WADO-RS Retrieve Bulk Data
 """"""""""""""""""""""""""
@@ -46,21 +46,21 @@ WADO-RS Retrieve Bulk Data
    :header: "Options", "Restrictions"
    :file: retrieve-bulkdata.csv
 
-.. _wado-rs-retrieve-metadata
+.. _wado-rs-retrieve-metadata:
 
 WADO-RS Retrieve Metadata
-""""""""""""""""""""""""""
+"""""""""""""""""""""""""
 
 .. csv-table:: Table 4.2.6.6-1.: WADO-RS Retrieve Metadata
    :header: "Options", "Restrictions"
    :file: retrieve-metadata.csv
 
-.. _wado-rs-connection-policies
+.. _wado-rs-connection-policies:
 
 WADO-RS Connection Policies
-""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""
 
-.. _wado-rs-general
+.. _wado-rs-general:
 
 General
 '''''''

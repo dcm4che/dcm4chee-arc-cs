@@ -1,7 +1,7 @@
 Network Interfaces
 ^^^^^^^^^^^^^^^^^^
 
-.. _interface-physical-network-interface
+.. _interface-physical-network-interface:
 
 Physical Network Interface
 """"""""""""""""""""""""""
@@ -11,7 +11,7 @@ The QUERY-RETRIEVE-SERVER supports a single network interface. One of the follow
 .. csv-table:: Table 4.3.1.1-1.: Supported Physical Network Interfaces
    :file: physical-network-interface.csv
 
-.. _interface-additional-protocols
+.. _interface-additional-protocols:
 
 Additional Protocols
 """"""""""""""""""""
@@ -39,7 +39,7 @@ DNS
 
 DNS can be used for address resolution. If DHCP is not in use or the DHCP server does not return any DNS server addresses, the identity of a DNS server can be configured via the Service/Installation Tool. If a DNS server is not in use, local mapping between hostname and IP address can be manually configured via the Service/Installation Tool.
 
-.. _interface-ip-support
+.. _interface-ip-support:
 
 IPv4 and IPv6 Support
 """""""""""""""""""""

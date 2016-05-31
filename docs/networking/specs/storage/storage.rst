@@ -40,7 +40,7 @@ The STORAGE-SCP AE initiates one Association at a time for sending Storage Commi
 .. csv-table:: Table 4.2.1.2-2.: Number of Simultaneous Associations as an SCP for STORAGE-SCP AE
    :file: number-of-associations.csv
 
-.. _storage-asynchrounous-nature:
+.. _storage-asynchronous-nature:
 
 Asynchronous Nature
 '''''''''''''''''''

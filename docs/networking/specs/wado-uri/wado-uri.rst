@@ -1,7 +1,7 @@
 WADO-URI Specification
 ^^^^^^^^^^^^^^^^^^^^^^
 
-.. _wado-uri-retrieve-imaging-document-set
+.. _wado-uri-retrieve-imaging-document-set:
 
 WADO-URI Retrieve Imaging Document Set
 """"""""""""""""""""""""""""""""""""""
@@ -12,7 +12,7 @@ WADO-URI Retrieve Imaging Document Set
 
 If the URI Retrieve specifies no transfer syntax that is supported by the archive, the SOP Instance will be returned using the Implicit VR Little Endian Transfer Syntax.
 
-.. _wado-uri-retrieve-rendered-imaging-document-set
+.. _wado-uri-retrieve-rendered-imaging-document-set:
 
 WADO-URI Retrieve Rendered Imaging Document Set
 """""""""""""""""""""""""""""""""""""""""""""""
@@ -21,19 +21,19 @@ WADO-URI Retrieve Rendered Imaging Document Set
    :header: "Parameter", "Restrictions"
    :file: retrieve-rendered-imaging-docs-specs.csv
 
-.. _wado-uri-retrieve-imaging-document-set-metadata
+.. _wado-uri-retrieve-imaging-document-set-metadata:
 
 WADO-URI Retrieve Imaging Document Set Metadata
 """""""""""""""""""""""""""""""""""""""""""""""
 
 Not Supported
 
-.. _wado-uri-connection-policies
+.. _wado-uri-connection-policies:
 
 WADO-URI Connection Policies
 """"""""""""""""""""""""""""
 
-.. _wado-uri-general
+.. _wado-uri-general:
 
 General
 '''''''
