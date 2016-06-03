@@ -186,6 +186,7 @@ Any of the Presentation Contexts shown in the following table are acceptable to 
    :file: accepted-presentation-contexts-by-STORAGE-SCP-AE.csv
 
 (*) : Decompression not supported when retrieved from archive again.
+
 Note : Refer Table 4.2.1.1-1. which has SOP Class Names and SOP Class UIDs against each of the SOP Class groups
 
 .. _storage-verification-sop-conformance:
