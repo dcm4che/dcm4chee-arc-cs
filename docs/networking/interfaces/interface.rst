@@ -6,7 +6,7 @@ Network Interfaces
 Physical Network Interface
 """"""""""""""""""""""""""
 
-The QUERY-RETRIEVE-SERVER supports a single network interface. One of the following physical network interfaces will be available depending on installed hardware options:
+The DCM4CHEE archive supports a single network interface. One of the following physical network interfaces will be available depending on installed hardware options:
 
 .. csv-table:: Table 4.3.1.1-1.: Supported Physical Network Interfaces
    :file: physical-network-interface.csv
@@ -16,7 +16,7 @@ The QUERY-RETRIEVE-SERVER supports a single network interface. One of the follow
 Additional Protocols
 """"""""""""""""""""
 
-QUERY-RETRIEVE-SERVER conforms to the System Management Profiles listed in table below. All requested transactions for the listed profiles and actors are supported. It does not support any optional transactions.
+DCM4CHEE archive conforms to the System Management Profiles listed in table below. All requested transactions for the listed profiles and actors are supported. It does not support any optional transactions.
 
 .. csv-table:: Table 4.3.2.1-1.: Supported Physical Network Interfaces
    :header: "Profile Name", "Actor", "Protocols Used", "Optional Transactions", "Security Support"
