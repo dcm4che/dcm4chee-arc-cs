@@ -9,7 +9,7 @@ SOP Classes
 The Storage Application Entity provides Standard Conformance to the following SOP Class(es) :
 
 .. csv-table:: Table 4.2.1.1-1.: SOP Classes for Storage Application Entity (SCP)
-   :header: "SOP Class Name", "SOP Class UID", "SCU", "SCP"
+   :header: "SOP Class Group / SOP Class Name", "SOP Class UID", "SCU", "SCP"
    :file: sop-classes.csv
 
 These are the default SOP Classes supported. By altering the configuration it is possible to support additional or fewer SOP Classes.
@@ -182,8 +182,10 @@ If multiple Transfer Syntaxes are proposed per Presentation Context then only th
 Any of the Presentation Contexts shown in the following table are acceptable to the STORAGE-SCP AE for receiving images.
 
 .. csv-table:: Table 4.2.1.4.2-1.: Accepted Presentation Contexts By STORAGE-SCP AE
-   :header: "Abstract Syntax Name", "Abstract Syntax UID", "Transfer Syntax Name", "Transfer Syntax UID", "Role", "Extended Negotiation"
+   :header: "SOP Class Groups", "Transfer Syntax Name", "Transfer Syntax UID", "Role", "Extended Negotiation"
    :file: accepted-presentation-contexts-by-STORAGE-SCP-AE.csv
+
+Note : Refer Table 4.2.1.1-1. which has SOP Class Names and SOP Class UIDs against each of the SOP Class groups
 
 .. _storage-verification-sop-conformance:
 
