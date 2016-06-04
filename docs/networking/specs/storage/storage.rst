@@ -202,15 +202,12 @@ SOP Specific Conformance for Storage SOP Class
 ..............................................
 
 The associated Activity with the Storage service is the storage of medical image data received over the network on a designated hard disk. The STORAGE-SCP AE will return a failure status if it is unable to store the images on to the hard disk.
+
 The STORAGE-SCP AE does not have any dependencies on the number of Associations used to send images to it. Images belonging to more than one Study or Series can be sent over a single or multiple Associations. Images belonging to a single Study or Series can also be sent over different Associations. There is no limit on either the number of SOP Instances or the maximum amount of total SOP Instance data that can be transferred over a single Association.
+
 The STORAGE-SCP AE is configured to retain the original DICOM data in DICOM Part 10 compliant file format. The STORAGE-SCP AE is Level 2 (Full) conformant as a Storage SCP. In addition, all Private and SOP Class Extended Elements are maintained in the DICOM format files. In addition to saving all Elements in files, a subset of the Elements are stored in the DCM4CHEE archive database to support query and retrieval requests and also allow updating of Patient, Study, and Series information by user input, or demographic and Study related messages. Refer to the Annex for the list of Elements that are checked and/or processed upon receiving a Composite SOP Instance.
+
 The Behavior for handling duplicate SOP Instances is configurable. The default Behavior is to assign a new SOP Instance UID to a received SOP Instance if it conflicts with an existing SOP Instance UID. An alternative configuration is possible that causes the original object with the conflicting SOP Instance UID to be replaced by the new SOP Instance. This Behavior is most commonly enabled if a Storage SCU re-sends entire Studies or Series if a single failure occurs when sending a group of SOP Instances.
-For the purposes of image display the system supports the following photometric interpretations: MONOCHROME1, MONOCHROME2, RGB, PALETTE COLOR, YBR FULL 422, and YBR FULL.
-It is expected that optimal Window Center and Width values are specified in the DICOM Image Objects if they have greater than 8 bits of image data stored per sample. If optimal Window Center and Width values are not provided, then the DCM4CHEE archive is capable of estimating values using histogram analysis.
-For multi-frame image SOP Instances sent using JPEG compression Transfer Syntax, sending a fully specified offset table increases performance, because the entire file does not have to be parsed to find the individual frame offsets. However, the inclusion of an offset table is not required for archiving or viewing of such SOP Instances.
-Display of information conveyed using the DICOM Curve Module is not supported. Graphic overlay data sent either embedded in the unused image pixel data bits or in the separate Overlay Data Element is supported for display. Region of Interest overlays are not yet supported.
-If an image SOP Instance specifies an aspect ratio that is not one-to-one then the image data will be automatically resized when displayed on the system monitor so that they are always displayed in a one-to-one aspect ratio.
-The average throughput performance has been determined to be between 2 and 6 Mega Bytes per second on a 100 Megabit Ethernet network. Actual performance will depend greatly on the performance of the C-STORE SCU, the number of simultaneous active Associations, and the underlying network performance.
 
 .. csv-table:: Table 4.2.1.4.4-1.: STORAGE-SCP AE C-STORE Response Status Return Reasons
    :header: "Service Status", "Further Meaning", "Error Code", "Behaviour"
