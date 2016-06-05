@@ -108,11 +108,23 @@ The Verification Service as an SCU is only supported as a utility function for S
 Proposed Presentation Contexts
 ..............................
 
-STORAGE-SCP AE will propose Presentation Contexts as shown in the following table:
+The Storage Application Entity will propose Presentation Contexts for Verification and the Storage Commitment Push Model SOP Class.
+The list of proposed Transfer Syntaxes for the Storage Commitment Push Model SOP Class is configurable. By default, only the
+Transfer Syntax Implicit VR Little Endian will be proposed.
 
-.. csv-table:: Table 4.2.1.3-1.: Proposed Presentation Contexts By the STORAGE-SCP AE
-   :header: "Abstract Syntax Name", "Abstract Syntax UID", "Transfer Syntax Name", "Transfer Syntax UID", "Role", "Extended Negotiation"
-   :file: proposed-presentation-contexts.csv
+.. table:: Table 4.2.1.3-1.: Proposed Presentation Contexts of Storage Application Entity by default configuration
+
++---------------------------------------------------------------------------------------------------------------------------+
+| Presentation Context Table                                                                                                |
++------------------------------------------------------+---------------------------+---------------------+------+-----------+
+| Abstract Syntax                                      | Transfer Syntax                                 | Role | Ext. Neg. |
++-------------------------------+----------------------+---------------------------+---------------------+      |           |
+| Name                          | UID                  | Name                      | UID                 |      |           |
++===============================+======================+===========================+=====================+======+===========+
+| Verification                  | 1.2.840.10008.1.1    | Implicit VR Little Endian | 1.2.840.10008.1.2   | SCU  | None      |
++-------------------------------+----------------------+---------------------------+---------------------+------+-----------+
+| Storage Commitment Push Model | 1.2.840.10008.1.20.1 | Implicit VR Little Endian | 1.2.840.10008.1.2   | SCP  | None      |
++-------------------------------+----------------------+---------------------------+---------------------+------+-----------+
 
 .. _stgcmt-conformance:
 
@@ -176,44 +188,168 @@ c. 3 - DICOM UL service-provider (Presentation related function)
 Accepted Presentation Contexts
 ..............................
 
-The default Behavior of the STORAGE-SCP AE supports the Implicit VR Little Endian and Explicit VR Little Endian Transfer Syntaxes for all Associations. In addition, explicit JPEG (baseline lossy) compression syntax is supported for the following SOP Classes: US Image, US Multi-frame Image, US Image (retired), US Multi-frame Image (retired), VL Image, VL Multi-frame and Secondary Capture Image Storage.
-The STORAGE-SCP AE can be configured to accept a subset of these Transfer Syntaxes, with the inclusion of Implicit VR Little Endian being mandatory.
-If multiple Transfer Syntaxes are proposed per Presentation Context then only the most preferable Transfer Syntax is accepted. The order of Transfer Syntax preference for the STORAGE-SCP AE is configurable. The default preference order if multiple Transfer Syntaxes are proposed in a single Presentation Context is: JPEG Baseline1, Little Endian Explicit, Little Endian Implicit (if all these are proposed for a single Presentation Context). This means that if the Implicit VR Little Endian and Explicit VR Little Endian Transfer Syntaxes are proposed in a single Presentation Context then the accepted Transfer Syntax will be Explicit VR Little Endian. This order of preference is configurable.
-Any of the Presentation Contexts shown in the following table are acceptable to the STORAGE-SCP AE for receiving images.
+The Storage Application Entity will accept Presentation Contexts for all SOP Classes listed in Table 4.2.1.1-1 by default.
+The list of accepted Transfer Syntaxes for each accepted Abstract Syntax - as the list of accepted Abstract Syntaxes itselfs - is configurable.
 
-.. csv-table:: Table 4.2.1.4.2-1.: Accepted Presentation Contexts By STORAGE-SCP AE
-   :header: "SOP Class Groups", "Transfer Syntax Name", "Transfer Syntax UID", "Role", "Extended Negotiation"
-   :file: accepted-presentation-contexts-by-STORAGE-SCP-AE.csv
+.. table:: Table 4.2.1.4-1.: Accepted Presentation Contexts of Storage Application Entity by default configuration
 
-(*) : Decompression not supported when retrieved from archive again.
++--------------------------------------------------------------------------------------------------------------------------------------+
+| Presentation Context Table                                                                                                           |
++------------------------------------------------------+------------------------------------------------------------+------+-----------+
+| Abstract Syntax                                      | Transfer Syntax                                            | Role | Ext. Neg. |
++-------------------------------+----------------------+----------------------------------+-------------------------+      |           |
+| Name                          | UID                  | Name                             | UID                     |      |           |
++===============================+======================+==================================+=========================+======+===========+
+| Verification                  | 1.2.840.10008.1.1    | Implicit VR Little Endian        | 1.2.840.10008.1.2       | SCP  | None      |
++-------------------------------+----------------------+----------------------------------+-------------------------+------+-----------+
+| Storage Commitment Push Model | 1.2.840.10008.1.20.1 | Implicit VR Little Endian        | 1.2.840.10008.1.2       | SCP  | None      |
++-------------------------------+----------------------+----------------------------------+-------------------------+------+-----------+
+| Any Image Storage SOP Class                          | Implicit VR Little Endian        | 1.2.840.10008.1.2       | SCP  | None      |
+| listed in Table 4.2.1.1-1                            +----------------------------------+-------------------------+      |           |
+|                                                      | Explicit VR Little Endian        | 1.2.840.10008.1.2.1     |      |           |
+|                                                      +----------------------------------+-------------------------+      |           |
+|                                                      | JPEG Baseline (Process 1)        | 1.2.840.10008.1.2.4.50  |      |           |
+|                                                      +----------------------------------+-------------------------+      |           |
+|                                                      | JPEG Extended (Process 2 & 4)    | 1.2.840.10008.1.2.4.51  |      |           |
+|                                                      +----------------------------------+-------------------------+      |           |
+|                                                      | JPEG Lossless, Non-Hierarchical, | 1.2.840.10008.1.2.4.54  |      |           |
+|                                                      | (Process 14)                     |                         |      |           |
+|                                                      +----------------------------------+-------------------------+      |           |
+|                                                      | JPEG Lossless, Non-Hierarchical, | 1.2.840.10008.1.2.4.70  |      |           |
+|                                                      | First-Order Prediction           |                         |      |           |
+|                                                      | (Process 14 [Selection Value 1]) |                         |      |           |
+|                                                      +----------------------------------+-------------------------+      |           |
+|                                                      | JPEG-LS Lossless                 | 1.2.840.10008.1.2.4.80  |      |           |
+|                                                      +----------------------------------+-------------------------+      |           |
+|                                                      | JPEG-LS Lossy (Near-Lossless)    | 1.2.840.10008.1.2.4.81  |      |           |
+|                                                      +----------------------------------+-------------------------+      |           |
+|                                                      | RLE Lossless                     | 1.2.840.10008.1.2.5     |      |           |
++------------------------------------------------------+----------------------------------+-------------------------+------+-----------+
+| Any Video Storage SOP Class                          | JPEG Baseline (Process 1)        | 1.2.840.10008.1.2.4.50  | SCP  | None      |
+| listed in Table 4.2.1.1-1                            +----------------------------------+-------------------------+      |           |
+|                                                      | MPEG2 Main Profile @ Main Level  | 1.2.840.10008.1.2.4.100 |      |           |
+|                                                      +----------------------------------+-------------------------+      |           |
+|                                                      | MPEG2 Main Profile @ High Level  | 1.2.840.10008.1.2.4.101 |      |           |
+|                                                      +----------------------------------+-------------------------+      |           |
+|                                                      | MPEG-4 AVC/H.264                 | 1.2.840.10008.1.2.4.102 |      |           |
+|                                                      | High Profile / Level 4.1         |                         |      |           |
+|                                                      +----------------------------------+-------------------------+      |           |
+|                                                      | MPEG-4 AVC/H.264 BD-compatible   | 1.2.840.10008.1.2.4.103 |      |           |
+|                                                      | High Profile / Level 4.1         |                         |      |           |
+|                                                      +----------------------------------+-------------------------+      |           |
+|                                                      | MPEG-4 AVC/H.264                 | 1.2.840.10008.1.2.4.104 |      |           |
+|                                                      | High Profile / Level 4.2         |                         |      |           |
+|                                                      | For 2D Video                     |                         |      |           |
+|                                                      +----------------------------------+-------------------------+      |           |
+|                                                      | MPEG-4 AVC/H.264                 | 1.2.840.10008.1.2.4.105 |      |           |
+|                                                      | High Profile / Level 4.2         |                         |      |           |
+|                                                      | For 3D Video                     |                         |      |           |
+|                                                      +----------------------------------+-------------------------+      |           |
+|                                                      | MPEG-4 AVC/H.264 Stereo          | 1.2.840.10008.1.2.4.106 |      |           |
+|                                                      | High Profile / Level 4.2         |                         |      |           |
++------------------------------------------------------+----------------------------------+-------------------------+------+-----------+
+| Any Structured Report Storage SOP Class              | Implicit VR Little Endian        | 1.2.840.10008.1.2       | SCP  | None      |
+| listed in Table 4.2.1.1-1                            +----------------------------------+-------------------------+      |           |
+|                                                      | Explicit VR Little Endian        | 1.2.840.10008.1.2.1     |      |           |
+|                                                      +----------------------------------+-------------------------+      |           |
+|                                                      | Deflated Explicit VR             | 1.2.840.10008.1.2.1.99  |      |           |
+|                                                      | Little Endian                    |                         |      |           |
++------------------------------------------------------+----------------------------------+-------------------------+------+-----------+
+| Any Other Storage SOP Class                          | Implicit VR Little Endian        | 1.2.840.10008.1.2       | SCP  | None      |
+| listed in Table 4.2.1.1-1                            +----------------------------------+-------------------------+      |           |
+|                                                      | Explicit VR Little Endian        | 1.2.840.10008.1.2.1     |      |           |
++------------------------------------------------------+----------------------------------+-------------------------+------+-----------+
 
-Note : Refer Table 4.2.1.1-1. which has SOP Class Names and SOP Class UIDs against each of the SOP Class groups
+If multiple Transfer Syntaxes are proposed per Presentation Context the order of Transfer Syntax preference is defined by the order
+in the proposed Presentation Context.
+
 
 .. _storage-verification-sop-conformance:
 
 SOP Specific Conformance for Verification SOP Class
 ...................................................
 
-The STORAGE-SCP AE provides standard conformance to the Verification SOP Class as an SCP.
+The Storage Application Entity provides standard conformance to the Verification SOP Class as an SCP.
 
 .. _storage-sop-conformance:
 
 SOP Specific Conformance for Storage SOP Class
 ..............................................
 
-The associated Activity with the Storage service is the storage of medical image data received over the network on a designated hard disk. The STORAGE-SCP AE will return a failure status if it is unable to store the images on to the hard disk.
+The associated Activity with the Storage service is the storage of medical image data received over the network on a designated hard disk.
+The Storage Application Entity will return a failure status if it is unable to store the images on to the hard disk.
 
-The STORAGE-SCP AE does not have any dependencies on the number of Associations used to send images to it. Images belonging to more than one Study or Series can be sent over a single or multiple Associations. Images belonging to a single Study or Series can also be sent over different Associations. There is no limit on either the number of SOP Instances or the maximum amount of total SOP Instance data that can be transferred over a single Association.
+The Storage Application Entity does not have any dependencies on the number of Associations used to send images to it. Images belonging to
+more than one Study or Series can be sent over a single or multiple Associations. Images belonging to a single Study or Series can also be
+sent over different Associations. There is no limit on either the number of SOP Instances or the maximum amount of total SOP Instance data
+that can be transferred over a single Association.
 
-The STORAGE-SCP AE is configured to retain the original DICOM data in DICOM Part 10 compliant file format. The STORAGE-SCP AE is Level 2 (Full) conformant as a Storage SCP. In addition, all Private and SOP Class Extended Elements are maintained in the DICOM format files. In addition to saving all Elements in files, a subset of the Elements are stored in the DCM4CHEE archive database to support query and retrieval requests and also allow updating of Patient, Study, and Series information by user input, or demographic and Study related messages. Refer to the Annex for the list of Elements that are checked and/or processed upon receiving a Composite SOP Instance.
+The Storage Application Entity retains the original DICOM data in DICOM Part 10 compliant file format. The Storage Application Entity is 
+Level 2 (Full) conformant as a Storage SCP. In addition, all Private and SOP Class Extended Elements are maintained in the DICOM format
+files.
 
-The Behavior for handling duplicate SOP Instances is configurable. The default Behavior is to assign a new SOP Instance UID to a received SOP Instance if it conflicts with an existing SOP Instance UID. An alternative configuration is possible that causes the original object with the conflicting SOP Instance UID to be replaced by the new SOP Instance. This Behavior is most commonly enabled if a Storage SCU re-sends entire Studies or Series if a single failure occurs when sending a group of SOP Instances.
+In addition to saving all Elements in files, a subset of the Elements are stored in the archive database to support query and retrieval
+requests and also allow updating of Patient, Study, and Series information by user input, or demographic and Study related messages.
 
-.. csv-table:: Table 4.2.1.4.4-1.: STORAGE-SCP AE C-STORE Response Status Return Reasons
+The behavior for handling duplicate SOP Instances is configurable by selecting one from 5 available Overwrite Policies:
+
+NEVER:
+  Never overwrite stored Instances on receive of a different Instance with equal SOP Instance UID. Ignore the received instance silently
+  - returning a success status. 
+
+ALWAYS:
+  Always overwrite stored Instances by subsequently received Instances with equal SOP Instance UID.
+
+SAME_SOURCE:
+  Only overwrite stored Instances by subsequently received Instances with equal SOP Instance UID, if the new Instance was sent from the same
+  Source Application Entity or HTTP client as the previous received Instance. Otherwise ignore the received instance silently -
+  returning a success status.
+
+SAME_SERIES:
+  Only overwrite stored Instances by subsequently received Instances with equal SOP Instance UID, if the new Instance belongs to the same
+  Series as the previous received Instance (= if beside the SOP Instance UID, also Study and Series Instance UID are equal). Otherwise
+  ignore the received instance silently - returning a success status.
+
+SAME_SOURCE_AND_SERIES:
+  Only overwrite stored Instances by subsequently received Instances with equal SOP Instance UID, if the new Instance was sent from the same
+  Source Application Entity or HTTP client as the previous received Instance, and if the new Instance belongs to the same Series as the
+  previous received Instance (= if beside the SOP Instance UID, also Study and Series Instance UID are equal). Otherwise ignore the received
+  instance silently - returning a success status.
+
+By default, Overwrite Policy: SAME_SOURCE is configured.
+
+The Storage Application Entity can be configured to compress uncompressed received Image SOP Instances, dependent on the Source Application
+Entity or HTTP client and dependent of DICOM Attribute values of received SOP Instances, using one of following Transfer Syntaxes:
+
+..table:: Table 4.2.1.4.4-1.: Supported Transfer Syntaxes for Image Compression by Storage Application Entity
+
++------------------------------------------------------------+
+| Transfer Syntax                                            |
++----------------------------------+-------------------------+
+| Name                             | UID                     |
++==================================+=========================+
+| JPEG Baseline (Process 1)        | 1.2.840.10008.1.2.4.50  |
++----------------------------------+-------------------------+
+| JPEG Extended (Process 2 & 4)    | 1.2.840.10008.1.2.4.51  |
++----------------------------------+-------------------------+
+| JPEG Lossless, Non-Hierarchical, | 1.2.840.10008.1.2.4.70  |
+| First-Order Prediction           |                         |
+| (Process 14 [Selection Value 1]) |                         |
++----------------------------------+-------------------------+
+| JPEG-LS Lossless                 | 1.2.840.10008.1.2.4.80  |
++----------------------------------+-------------------------+
+
+By default, no image compression is configured.
+
+
+.. csv-table:: Table 4.2.1.4.4-2.: Storage Application C-STORE Response Status Return Reasons
    :header: "Service Status", "Further Meaning", "Error Code", "Behaviour"
    :file: c-store-response-status-return-reasons.csv
 
-Note : If a failure condition does occur when handling an Association then all images previously received successfully over the Association are maintained in the DCM4CHEE archive database. No previously successfully received images are discarded. Even if an image is successfully received but an error occurs transmitting the C-STORE Response then this final image is maintained rather than discarded. If the loss of an Association is detected then the Association is closed.
+Note : If a failure condition does occur when handling an Association then all images previously received successfully over the Association
+are maintained in the DCM4CHEE archive database. No previously successfully received images are discarded. Even if an image is successfully
+received but an error occurs transmitting the C-STORE Response then this final image is maintained rather than discarded. If the loss of an
+Association is detected then the Association is closed.
 The Behavior of STORAGE-SCP AE during communication failure is summarized in the following table:
 
 .. csv-table:: Table 4.2.1.4.4-2.: STORAGE-SCP AE Storage Service Communication Failure Reasons
