@@ -291,7 +291,7 @@ files.
 In addition to saving all Elements in files, a subset of the Elements are stored in the archive database to support query and retrieval
 requests and also allow updating of Patient, Study, and Series information by user input, or demographic and Study related messages.
 
-The behavior for handling duplicate SOP Instances is configurable by selecting one from 5 available Overwrite Policies:
+The behavior for handling duplicate SOP Instances is configurable by selecting one of 5 available Overwrite Policies:
 
 NEVER:
   Never overwrite stored Instances on receive of a different Instance with equal SOP Instance UID. Ignore the received instance silently
@@ -300,7 +300,7 @@ NEVER:
 ALWAYS:
   Always overwrite stored Instances by subsequently received Instances with equal SOP Instance UID.
 
-SAME_SOURCE:
+SAME_SOURCE (default):
   Only overwrite stored Instances by subsequently received Instances with equal SOP Instance UID, if the new Instance was sent from the same
   Source Application Entity or HTTP client as the previous received Instance. Otherwise ignore the received instance silently -
   returning a success status.
@@ -316,12 +316,28 @@ SAME_SOURCE_AND_SERIES:
   previous received Instance (= if beside the SOP Instance UID, also Study and Series Instance UID are equal). Otherwise ignore the received
   instance silently - returning a success status.
 
-By default, Overwrite Policy: SAME_SOURCE is configured.
+
+The behavior for updating Patient, Study and Series Attributes in the archive database, if there values differs between received Instances of
+the same Patient, Study and Series is configurable for each Entity Level by selecting one of 4 Attribute Update Policies:
+
+NONE:
+  Do not update the Attributes of the Entity in the database from its initial values extracted from the first received Instance of the Entity. 
+
+SUPPLEMENT (default for Patient Attributes):
+  Supplement the Attributes of the Entity in the database with Attributes of subsequently received Instances which were not present or had
+  no value in previous received Instances of the same Entity.
+
+MERGE (default for Study and Series Attributes):
+  Overwrite the Attributes of the Entity in the database with non-empty Attributes from subsequently received Instances of the same Entity.
+
+OVERWRITE: 
+  Overwrite the Attributes of the Entity in the database with all Attributes from subsequently received Instances of the same Entity.
+
 
 The Storage Application Entity can be configured to compress uncompressed received Image SOP Instances, dependent on the Source Application
 Entity or HTTP client and dependent of DICOM Attribute values of received SOP Instances, using one of following Transfer Syntaxes:
 
-..table:: Table 4.2.1.4.4-1.: Supported Transfer Syntaxes for Image Compression by Storage Application Entity
+.. table:: Table 4.2.1.4.4-1.: Supported Transfer Syntaxes for Image Compression by Storage Application Entity
 
 +--------------------------------------------------------------+
 | | Transfer Syntax                                            |
