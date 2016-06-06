@@ -396,11 +396,7 @@ Once the STORAGE-SCP AE has checked for the existence of the specified Composite
 The STORAGE-SCP AE will not cache Storage Commitment Push Model N-ACTION Requests that specify Composite SOP Instances that have not yet been transferred to the DCM4CHEE archive. If a peer AE sends a Storage Commitment Push Model N-ACTION Request before the specified Composite SOP Instances are later sent over the same Association, the STORAGE-SCP AE will not commit to responsibility for such SOP Instances.
 The STORAGE-SCP AE does not support the optional Storage Media File-Set ID & UID attributes in the N-ACTION.
 The DCM4CHEE archive never automatically deletes Composite SOP Instances from the archive. The absolute persistence of SOP Instances and the maximum archiving capacity for such SOP Instances is dependent on the archiving media and capacity used by the DCM4CHEE archive and is dependent on the actual specifications of the purchased system. It is necessary to check the actual system specifications to determine these characteristics.
-The STORAGE-SCP AE will support Storage Commitment Push Model requests for SOP Instances of any of the Storage SOP Classes that are also supported by the STORAGE-SCP AE:
-
-.. csv-table:: Table 4.2.1.4.5-1.: Supported Referenced SOP Classes in Storage Commitment Push Model N-ACTION Requests
-   :header: "Supported Referenced SOP Classes"
-   :file: supported-sop-classes-stgcmt.csv
+The STORAGE-SCP AE will support Storage Commitment Push Model requests for SOP Instances of any of the Storage SOP Classes that are also supported by the STORAGE-SCP AE as given in 4.2.1.1-1.: SOP Classes for Storage Application Entity (SCP)
 
 The STORAGE-SCP AE will return the following Status Code values in N-ACTION Responses:
 
@@ -412,10 +408,6 @@ The STORAGE-SCP AE will exhibit the following Behavior according to the Status C
 
 .. csv-table:: Table 4.2.1.4.5-3.: STORAGE-SCP AE N-EVENT-REPORT Response Status Handling Behavior
    :header: "Service Status", "Further Meaning", "Error Code", "Behaviour"
-   :file: stgcmt-n-event-response-status-return-behaviour.csv
+   :file: stgcmt-n-eventresponse-status-return-behaviour.csv
 
 All Status Codes indicating an error or refusal are treated as a permanent failure. The STORAGE-SCP AE can be configured to automatically reattempt the sending of Storage Commitment Push Model N-EVENT-REPORT Requests if an error Status Code is returned or a communication failure occurs. The maximum number of times to attempt sending as well as the time to wait between attempts is configurable.
-
-.. csv-table:: Table 4.2.1.4.5-4.: STORAGE-SCP AE Storage Commitment Push Model Communication Failure Behavior
-   :header: "Exception", "Behaviour"
-   :file: stgcmt-communication-failure-behaviour.csv

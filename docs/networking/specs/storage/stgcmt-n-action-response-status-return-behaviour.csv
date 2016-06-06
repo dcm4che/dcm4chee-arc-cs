@@ -1,4 +1,2 @@
 "Success", "Success", "0000", "The SCP has successfully received the Storage Commitment Push Model N-ACTION Request and can process the commitment request for the indicated SOP Instances."
 "Error", "Processing Failure", "0110", "Indicates that the Storage Commitment Push Model N-ACTION Request cannot be parsed or fully processed due to a database or system failure."
-"", "Missing Attribute", "0120", "Indicates that the Storage Commitment Push Model N-ACTION Request cannot be processed because a required attribute is missing from the N-ACTION Request Data Set."
-"", "Missing Attribute Value", "0121", "Indicates that the Storage Commitment Push Model N-ACTION Request cannot be processed because a Type 1 attribute in the N-ACTION Request Data Set does not specify a value."
