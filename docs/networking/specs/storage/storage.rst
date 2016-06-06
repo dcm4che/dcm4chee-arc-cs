@@ -9,7 +9,7 @@ SOP Classes
 The Storage Application Entity provides Standard Conformance to the following SOP Class(es) :
 
 .. csv-table:: Table 4.2.1.1-1.: SOP Classes for Storage Application Entity (SCP)
-   :header: "SOP Class Group / SOP Class Name", "SOP Class UID", "SCU", "SCP"
+   :header: "SOP Class Name", "SOP Class UID", "SCU", "SCP"
    :file: sop-classes.csv
 
 These are the default SOP Classes supported. By altering the configuration it is possible to support additional or fewer SOP Classes.
