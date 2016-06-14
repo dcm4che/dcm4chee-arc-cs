@@ -103,6 +103,26 @@ Items exist. This example assumes that only 2 Worklist items match the Worklist 
 6. The Worklist AE closes the association with the Departmental Scheduler.
 7. The user selects a Worklist Item from the Worklist and prepares to acquire new images.
 
+After Patient registration, the Modality is awaiting the 1st application of X-Ray Dose to the patient. The trigger to create a MPPS SOP Instance is derived from this event. An Association to the configured MPPS SCP system is established immediately and the related MPPS SOP Instance will be created.
+A manual update can be performed with the MPPS user interface where is it possible to set the final state of the MPPS to "COMPLETED" or "DISCONTINUED". In the "Discontinued" case the user can also select the discontinuation reason. A MPPS Instance that has been sent with a state of "COMPLETED" or "DISCONTINUED" can no longer be updated.
+The Modality will support creation of "unscheduled cases" by allowing MPPS Instances to be communicated for locally registered Patients. The Modality only supports a 0-to-1 relationship between Scheduled and Performed Procedure Steps. The Modality will initiate an Association to issue an:
+
+> N-CREATE request according to the CREATE Modality Performed Procedure Step SOP Instance operation or a
+> N-SET request to update the contents and state of the MPPS according to the SET Modality Performed Procedure Step Information operation.
+
+.. figure:: sequencing-of-activities-acquire-images.svg
+
+   Figure : Sequencing of Activity - Acquire Images
+
+A possible sequence of interactions between the Workflow AE and a Departmental Scheduler (e.g., a device such as a RIS or HIS that supports the MPPS SOP Class as an SCP) is illustrated in above figure.
+
+1. The Worklist AE opens an association with the Departmental Scheduler
+2. The Worklist AE sends an N-CREATE request to the Departmental Scheduler to create an MPPS instance with status of "IN PROGRESS" and create all necessary attributes. The Departmental Scheduler acknowledges the MPPS creation with an N-CREATE response (status success).
+3. The Worklist AE closes the association with the Departmental Scheduler.
+4. All images are acquired and stored in the local database.
+5. The Worklist AE opens an association with the Departmental Scheduler.
+6. The Worklist AE sends an N-SET request to the Departmental Scheduler to update the MPPS instance with status of "COMPLETED" and set all necessary attributes. The Departmental Scheduler acknowledges the MPPS update with an N-SET response (status success).
+7. The Worklist AE closes the association with the Departmental Scheduler.
 
 .. _workflow-proposed-presentation-context:
 
@@ -136,7 +156,7 @@ SOP Specific Conformance
 
 The behavior of modality worklist when encountering status codes in a Modality Worklist C-FIND response is summarized in the Table below. If any other SCP response status than "Success" or "Pending" is received by modality worklist, a message "query failed" will appear on the user interface.
 
-.. csv-table:: Table 4.2.3.3.3-1.: MPPS N-CREATE / N-SET Response Status Handling Behavior
+.. csv-table:: Table 4.2.3.3.3-1.: Modality Worklist C-FIND Response Status Handling Behavior
    :header: "Service Status", "Further Meaning", "Error Code", "Behaviour"
    :file: modality-worklist-c-find-resp-status-handling-behaviour.csv
 
@@ -263,8 +283,8 @@ Attribute Name : Attributes supported to build an Modality Worklist Request Iden
 Tag : DICOM tag for this attribute.
 VR : DICOM VR for this attribute.
 M : Matching keys for (automatic) Worklist Update. A "S" will indicate that Modality Worklist will supply an attribute value for Single Value Matching, a "R" will indicate Range Matching and a "*" will denote wild card matching. It can be configured if "Scheduled Station AE Title" is additionally supplied "(S) " and if Modality is set to RF or SC.
-R : Return keys. An "x" will indicate that EXAMPLE-INTEGRATED-MODALITY will supply this attribute as Return Key with zero length for Universal Matching. The EXAMPLE-INTEGRATED-MODALITY will support retired date format (yyyy.mm.dd) for "Patient's Birth Date" and "Scheduled Procedure Step Start Date" in the response identifiers. For "Scheduled Procedure Step Start Time" also retired time format as well as unspecified time components are supported.
-Q : Interactive Query Key. An "x" " will indicate that EXAMPLE-INTEGRATED-MODALITY will supply this attribute as matching key, if entered in the Query Patient Worklist dialog. For example, the Patient Name can be entered thereby restricting Worklist responses to Procedure Steps scheduled for the patient.
+R : Return keys. An "x" will indicate that Modality Worklist will supply this attribute as Return Key with zero length for Universal Matching. The Modality Worklist will support retired date format (yyyy.mm.dd) for "Patient's Birth Date" and "Scheduled Procedure Step Start Date" in the response identifiers. For "Scheduled Procedure Step Start Time" also retired time format as well as unspecified time components are supported.
+Q : Interactive Query Key. An "x" " will indicate that Modality Worklist will supply this attribute as matching key, if entered in the Query Patient Worklist dialog. For example, the Patient Name can be entered thereby restricting Worklist responses to Procedure Steps scheduled for the patient.
 D : Displayed keys. An "x" indicates that this worklist attribute is displayed to the user during a patient registration dialog. For example, Patient Name will be displayed when registering the patient prior to an examination.
 IOD : An "x" indicates that this Worklist attribute is included into all Object Instances created during performance of the related Procedure Step.
 
