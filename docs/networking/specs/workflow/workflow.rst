@@ -107,8 +107,8 @@ After Patient registration, the Modality is awaiting the 1st application of X-Ra
 A manual update can be performed with the MPPS user interface where is it possible to set the final state of the MPPS to "COMPLETED" or "DISCONTINUED". In the "Discontinued" case the user can also select the discontinuation reason. A MPPS Instance that has been sent with a state of "COMPLETED" or "DISCONTINUED" can no longer be updated.
 The Modality will support creation of "unscheduled cases" by allowing MPPS Instances to be communicated for locally registered Patients. The Modality only supports a 0-to-1 relationship between Scheduled and Performed Procedure Steps. The Modality will initiate an Association to issue an:
 
-> N-CREATE request according to the CREATE Modality Performed Procedure Step SOP Instance operation or a
-> N-SET request to update the contents and state of the MPPS according to the SET Modality Performed Procedure Step Information operation.
+1. N-CREATE request according to the CREATE Modality Performed Procedure Step SOP Instance operation or a
+2. N-SET request to update the contents and state of the MPPS according to the SET Modality Performed Procedure Step Information operation.
 
 .. figure:: sequencing-of-activities-acquire-images.svg
 
@@ -278,15 +278,15 @@ Requested return attributes not supported by the SCP are set to have no value. N
 
 The above tables should be read as follows:
 
-Module Name : The name of the associated module for supported worklist attributes.
-Attribute Name : Attributes supported to build an Modality Worklist Request Identifier.
-Tag : DICOM tag for this attribute.
-VR : DICOM VR for this attribute.
-M : Matching keys for (automatic) Worklist Update. A "S" will indicate that Modality Worklist will supply an attribute value for Single Value Matching, a "R" will indicate Range Matching and a "*" will denote wild card matching. It can be configured if "Scheduled Station AE Title" is additionally supplied "(S) " and if Modality is set to RF or SC.
-R : Return keys. An "x" will indicate that Modality Worklist will supply this attribute as Return Key with zero length for Universal Matching. The Modality Worklist will support retired date format (yyyy.mm.dd) for "Patient's Birth Date" and "Scheduled Procedure Step Start Date" in the response identifiers. For "Scheduled Procedure Step Start Time" also retired time format as well as unspecified time components are supported.
-Q : Interactive Query Key. An "x" " will indicate that Modality Worklist will supply this attribute as matching key, if entered in the Query Patient Worklist dialog. For example, the Patient Name can be entered thereby restricting Worklist responses to Procedure Steps scheduled for the patient.
-D : Displayed keys. An "x" indicates that this worklist attribute is displayed to the user during a patient registration dialog. For example, Patient Name will be displayed when registering the patient prior to an examination.
-IOD : An "x" indicates that this Worklist attribute is included into all Object Instances created during performance of the related Procedure Step.
+1. Module Name : The name of the associated module for supported worklist attributes.
+2. Attribute Name : Attributes supported to build an Modality Worklist Request Identifier.
+3. Tag : DICOM tag for this attribute.
+4. VR : DICOM VR for this attribute.
+5. M : Matching keys for (automatic) Worklist Update. A "S" will indicate that Modality Worklist will supply an attribute value for Single Value Matching, a "R" will indicate Range Matching and a "*" will denote wild card matching. It can be configured if "Scheduled Station AE Title" is additionally supplied "(S) " and if Modality is set to RF or SC.
+6. R : Return keys. An "x" will indicate that Modality Worklist will supply this attribute as Return Key with zero length for Universal Matching. The Modality Worklist will support retired date format (yyyy.mm.dd) for "Patient's Birth Date" and "Scheduled Procedure Step Start Date" in the response identifiers. For "Scheduled Procedure Step Start Time" also retired time format as well as unspecified time components are supported.
+7. Q : Interactive Query Key. An "x" " will indicate that Modality Worklist will supply this attribute as matching key, if entered in the Query Patient Worklist dialog. For example, the Patient Name can be entered thereby restricting Worklist responses to Procedure Steps scheduled for the patient.
+8. D : Displayed keys. An "x" indicates that this worklist attribute is displayed to the user during a patient registration dialog. For example, Patient Name will be displayed when registering the patient prior to an examination.
+9. IOD : An "x" indicates that this Worklist attribute is included into all Object Instances created during performance of the related Procedure Step.
 
 The default Query Configuration is set to "Modality" (RF) and "Date" (date of today). Optionally, additional matching for the own AET is configurable.
 Below table provides a description of the MPPS N-CREATE and N-SET request identifiers sent. Empty cells in the N-CREATE and N-SET columns indicate that the attribute is not sent. An "x" indicates that an appropriate value will be sent. A "Zero length" attribute will be sent with zero length.
