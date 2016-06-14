@@ -92,6 +92,7 @@ Worklist Information Model.
 
 A possible sequence of interactions between the Workflow AE and a Departmental Scheduler (e.g., a device such as a RIS or HIS
 that supports the Modality Worklist SOP Class as an SCP) is illustrated in the Figure above:
+
 1. The Worklist AE opens an association with the Departmental Scheduler
 2. The Worklist AE sends a C-FIND request to the Departmental Scheduler containing the Worklist Query attributes.
 3. The Departmental Scheduler returns a C-FIND response containing the requested attributes of the first matching Worklist Item.
@@ -102,6 +103,7 @@ Items exist. This example assumes that only 2 Worklist items match the Worklist 
 6. The Worklist AE closes the association with the Departmental Scheduler.
 7. The user selects a Worklist Item from the Worklist and prepares to acquire new images.
 
+
 .. _workflow-proposed-presentation-context:
 
 Proposed Presentation Contexts
@@ -109,30 +111,167 @@ Proposed Presentation Contexts
 
 The Workflow AE will propose Presentation Contexts as shown in the following table:
 
-.. csv-table:: Table 4.2.3.3.2-1.: Proposed Presentation Contexts for Real-World Activity Acquire Images
-   :header: "Abstract Syntax Name", "Abstract Syntax UID", "Transfer Syntax Name", "Transfer Syntax UID", "Role", "Extended Negotiation"
-   :file: proposed-presentation-contexts.csv
+.. table:: Table 4.2.3.3.2-1.: Proposed Presentation Contexts for Real-World Activity Acquire Images
 
-.. _workflow-mpps-sop-conformance:
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+| Presentation Context Table                                                                                                                         |
++--------------------------------------------------------------+-------------------------------------------------------+------+----------------------+
+| Abstract Syntax                                              | Transfer Syntax                                       | Role | Extended Negotiation |
++------------------------------------+-------------------------+---------------------------------+---------------------+------+----------------------+
+| Name                               | UID                     | Name                            | UID                 |      |                      |
++====================================+=========================+=================================+=====================+======+======================+
+| Modality Performed Procedure Step  | 1.2.840.10008.3.1.2.3.3 | DICOM Implicit VR Little Endian | 1.2.840.10008.1.2   | SCU  | None                 |
++------------------------------------+-------------------------+---------------------------------+---------------------+------+----------------------+
+|                                    |                         | DICOM Explicit VR Little Endian | 1.2.840.10008.1.2.1 |      |                      |
++------------------------------------+-------------------------+---------------------------------+---------------------+------+----------------------+
+| Modality Worklist                  | 1.2.840.10008.5.1.4.31  | DICOM Implicit VR Little Endian | 1.2.840.10008.1.2   | SCP  | None                 |
++------------------------------------+-------------------------+---------------------------------+---------------------+------+----------------------+
+|                                    |                         | DICOM Explicit VR Little Endian | 1.2.840.10008.1.2.1 |      |                      |
++------------------------------------+-------------------------+---------------------------------+---------------------+------+----------------------+
 
-SOP Specific Conformance for MPPS
-.................................
+.. _workflow-sop-conformance:
 
-The behavior when encountering status codes in an MPPS N-CREATE or N-SET response is summarized in Table B.4.2-26. If any other SCP response status than "Success" or "Warning" is received, a message "MPPS update failed" will appear on the user interface.
+SOP Specific Conformance
+........................
+
+The behavior of modality worklist when encountering status codes in a Modality Worklist C-FIND response is summarized in the Table below. If any other SCP response status than "Success" or "Pending" is received by modality worklist, a message "query failed" will appear on the user interface.
 
 .. csv-table:: Table 4.2.3.3.3-1.: MPPS N-CREATE / N-SET Response Status Handling Behavior
+   :header: "Service Status", "Further Meaning", "Error Code", "Behaviour"
+   :file: modality-worklist-c-find-resp-status-handling-behaviour.csv
+
+The behavior when encountering status codes in an MPPS N-CREATE or N-SET response is summarized in table below. If any other SCP response status than "Success" or "Warning" is received, a message "MPPS update failed" will appear on the user interface.
+
+.. csv-table:: Table 4.2.3.3.3-2.: MPPS N-CREATE / N-SET Response Status Handling Behavior
    :header: "Service Status", "Further Meaning", "Error Code", "Behaviour"
    :file: mpps-resp-status-handling-behaviour.csv
 
 The behavior during communication failure is summarized in the Table below:
 
-.. csv-table:: Table 4.2.3.3.3-2.: MPPS Communication Failure Behavior
+.. csv-table:: Table 4.2.3.3.3-3.: MPPS / Modality Worklist Communication Failure Behavior
    :header: "Exception", "Behaviour"
-   :file: mpps-communication-failure-behaviour.csv
+   :file: communication-failure-behaviour.csv
 
+Acquired images will always use the Study Instance UID specified for the Scheduled Procedure Step (if available). If an acquisition is unscheduled, a Study Instance UID will be generated locally.
+The Table below provides a description of the Modality Worklist Request Identifier and specifies the attributes that are copied into the images. Unexpected attributes returned in a C-FIND response are ignored.
+Requested return attributes not supported by the SCP are set to have no value. Non-matching responses returned by the SCP due to unsupported optional matching keys are ignored. No attempt is made it filter out possible duplicate entries.
+
+.. table:: Table 4.2.3.3.3-4.: Worklist Request Identifier
+
++----------------------------------------------------------------------------------------+
+| Module Name                                                                            |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+| Attribute Name                              | Tag         | VR |  M  | R | Q | D | IOD |
++=============================================+=============+====+=====+===+===+===+=====+
+| Scheduled Procedure Step                                                               |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+| Scheduled Procedure Step Sequence           | (0040,0100) |    |     |   |   |   |     |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+| >Scheduled Station AET                      | (0040,0001) | AE | (S) |   |   | x |     |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+| >Scheduled Procedure Step Start Date        | (0040,0002) | DA |  S  |   |   | x |     |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+| >Scheduled Procedure Step Start Time        | (0040,0003) | TM |     | x |   | x |     |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+| >Modality                                   | (0008,0060) | CS |  S  | x |   | x |     |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+| >Scheduled Performing Physician's Name      | (0040,0006) | PN |     | x | x | x | x   |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+| >Scheduled Procedure Step Description       | (0040,0007) | LO |     | x |   | x | x   |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+| >Scheduled Station Name                     | (0040,0010) | SH |     | x |   | x |     |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+| >Scheduled Procedure Step Location          | (0040,0011) | SH |     | x |   | x |     |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+| >Scheduled Protocol Code Sequence           | (0040,0008) | SQ |     | x |   | x | x   |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+| >Pre-Medication                             | (0040,0012) | LO |     | x |   | x |     |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+| >Scheduled Procedure Step ID                | (0040,0009) | SH |     | x |   | x | x   |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+| >Requested Contrast Agent                   | (0032,1070) | LO |     | x |   | x |     |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+| Requested Procedure                                                                    |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+|  Requested Procedure ID                     | (0040,1001) | SH |     | x | x | x | x   |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+|  Requested Procedure Description            | (0032,1060) | LO |     | x |   | x | x   |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+|  Study Instance UID                         | (0020,000D) | UI |     | x |   |   | x   |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+|  Requested Procedure Priority               | (0040,1003) | SH |     | x |   |   |     |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+|  Patient Transport Arrangements             | (0040,1004) | LO |     | x |   |   |     |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+|  Referenced Study Sequence                  | (0008,1110) | SQ |     | x |   |   | x   |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+|  Requested Procedure Code Sequence          | (0032,1064) | SQ |     | x |   |   | x   |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+| Imaging Service Request                                                                |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+|  Accession Number                           | (0008,0050) | SH |     | x | x | x | x   |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+|  Requesting Physician                       | (0032,1032) | PN |     | x |   | x | x   |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+|  Requesting Physician's Name                | (0008,0090) | PN |     | x | x | x | x   |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+| Visit Identification                                                                   |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+|  Admission ID                               | (0038,0010) | LO |     | x |   |   |     |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+| Visit Status                                                                           |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+|  Current Patient Location                   | (0038,0300) | LO |     | x | x |   |     |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+| Visit Admission                                                                        |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+|  Admitting Diagnosis Description            | (0008,1080) | LO |     | x |   | x |     |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+| Patient Identification                                                                 |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+|  Patient Name                               | (0010,0010) | PN |     | x | x | x | x   |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+|  Patient ID                                 | (0010,0020) | LO |     | x | x | x | x   |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+| Patient Demographic                                                                    |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+|  Patient's Birth Date                       | (0010,0030) | DA |     | x | x | x | x   |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+|  Patient's Sex                              | (0010,0040) | CS |     | x | x | x | x   |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+|  Patient's Weight                           | (0010,1030) | DS |     | x |   | x | x   |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+|  Confidentiality constraint on patient data | (0040,3001) | LO |     | x | x | x | x   |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+| Patient Medical                                                                        |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+| Patient State                               | (0038,0500) | LO |     | x |   | x |     |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+| Pregnancy Status                            | (0010,21C0) | US |     | x |   | x |     |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+| Medical Alerts                              | (0010,2000) | LO |     | x |   | x |     |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+| Allergies                                   | (0010,2110) | LO |     | x |   | x |     |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+| Special Needs                               | (0038,0050) | LO |     | x |   | x |     |
++---------------------------------------------+-------------+----+-----+---+---+---+-----+
+
+The above tables should be read as follows:
+
+Module Name : The name of the associated module for supported worklist attributes.
+Attribute Name : Attributes supported to build an Modality Worklist Request Identifier.
+Tag : DICOM tag for this attribute.
+VR : DICOM VR for this attribute.
+M : Matching keys for (automatic) Worklist Update. A "S" will indicate that Modality Worklist will supply an attribute value for Single Value Matching, a "R" will indicate Range Matching and a "*" will denote wild card matching. It can be configured if "Scheduled Station AE Title" is additionally supplied "(S) " and if Modality is set to RF or SC.
+R : Return keys. An "x" will indicate that EXAMPLE-INTEGRATED-MODALITY will supply this attribute as Return Key with zero length for Universal Matching. The EXAMPLE-INTEGRATED-MODALITY will support retired date format (yyyy.mm.dd) for "Patient's Birth Date" and "Scheduled Procedure Step Start Date" in the response identifiers. For "Scheduled Procedure Step Start Time" also retired time format as well as unspecified time components are supported.
+Q : Interactive Query Key. An "x" " will indicate that EXAMPLE-INTEGRATED-MODALITY will supply this attribute as matching key, if entered in the Query Patient Worklist dialog. For example, the Patient Name can be entered thereby restricting Worklist responses to Procedure Steps scheduled for the patient.
+D : Displayed keys. An "x" indicates that this worklist attribute is displayed to the user during a patient registration dialog. For example, Patient Name will be displayed when registering the patient prior to an examination.
+IOD : An "x" indicates that this Worklist attribute is included into all Object Instances created during performance of the related Procedure Step.
+
+The default Query Configuration is set to "Modality" (RF) and "Date" (date of today). Optionally, additional matching for the own AET is configurable.
 Below table provides a description of the MPPS N-CREATE and N-SET request identifiers sent. Empty cells in the N-CREATE and N-SET columns indicate that the attribute is not sent. An "x" indicates that an appropriate value will be sent. A "Zero length" attribute will be sent with zero length.
 
-.. csv-table:: Table 4.2.3.3.3-3.: MPPS N-CREATE / N-SET Request Identifier
+.. csv-table:: Table 4.2.3.3.3-5.: MPPS N-CREATE / N-SET Request Identifier
    :header: "Attribute Name", "Tag", "VR", "N-CREATE", "N-SET"
    :file: mpps-request-identifiers.csv
 
