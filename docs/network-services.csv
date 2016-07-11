@@ -1,4 +1,4 @@
-"**Transfer**"
+"**Transfer**",,
 "Stored Print Storage SOP Class", "Yes", "Yes"
 "Hardcopy Grayscale Image Storage SOP Class", "Yes", "Yes"
 "Hardcopy Color Image Storage SOP Class", "Yes", "Yes"
@@ -177,25 +177,25 @@
 "Private Philips MR Examcard Storage", "Yes", "Yes"
 "Private PMOD Multi-frame Image Storage", "Yes", "Yes"
 "Storage Commitment Push Model SOP Class", "No", "Yes"
-"**Workflow Management**"
-"Modality Worklist Information Model - FIND", "No", "Yes"
-"Modality Performed Procedure Step", "Yes", "Yes"
-"Instance Availability Notification SOP Class", "Yes", "No"
-"**Query/Retrieve**"
+"**Query/Retrieve**",,
 "Patient Root Query/Retrieve Information Model - FIND", "No", "Yes"
 "Patient Root Query/Retrieve Information Model - MOVE", "Yes", "Yes"
 "Patient Root Query/Retrieve Information Model - GET", "No", "Yes"
 "Study Root Query/Retrieve Information Model - FIND", "No", "Yes"
 "Study Root Query/Retrieve Information Model - MOVE", "Yes", "Yes"
 "Study Root Query/Retrieve Information Model - GET", "No", "Yes"
-"**QIDO**"
+"**Workflow Management**",,
+"Modality Worklist Information Model - FIND", "No", "Yes"
+"Modality Performed Procedure Step", "Yes", "Yes"
+"Instance Availability Notification SOP Class", "Yes", "No"
+"**QIDO**",,
 "QIDO-RS - Search for Patients", "No", "Yes"
 "QIDO-RS - Search for Studies", "No", "Yes"
 "QIDO-RS - Search for Series", "No", "Yes"
 "QIDO-RS - Search for Instances", "No", "Yes"
-"**STOW**"
+"**STOW**",,
 "STOW-RS - Store Instances", "No", "Yes"
-"**WADO**"
+"**WADO**",,
 "WADO-URI - Retrieve DICOM Persistent Object", "No", "Yes"
 "WADO-URI - Retrieve Rendered DICOM Persistent Object", "No", "Yes"
 "WADO-RS - Retrieve Study", "No", "Yes"
