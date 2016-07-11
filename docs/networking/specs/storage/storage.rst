@@ -8,7 +8,8 @@ SOP Classes
 
 The Storage Application Entity provides Standard Conformance to the following SOP Class(es) :
 
-.. csv-table:: Table 4.2.1.1-1.: SOP Classes for Storage Application Entity (SCP)
+.. csv-table:: SOP Classes for Storage Application Entity (SCP)
+   :name: SOPClasses
    :header: "SOP Class Name", "SOP Class UID", "SCU", "SCP"
    :file: sop-classes.csv
 
@@ -26,7 +27,7 @@ General
 The STORAGE-SCP AE can both accept and propose Association Requests. The STORAGE-SCP AE will accept Association Requests for the Verification, Storage, and Storage Commitment Push Model Services. It will propose Associations only for the Storage Commitment Push Model Service.
 The DICOM standard Application Context Name for DICOM 3.0 is always accepted and proposed:
 
-.. csv-table:: Table 4.2.1.2-1.: DICOM Application Context for STORAGE-SCP AE
+.. csv-table:: DICOM Application Context for STORAGE-SCP AE
    :file: common/storage-query-retrieve-workflow-general.csv
 
 .. _storage-number-of-associations:
@@ -37,7 +38,7 @@ Number of Associations
 The STORAGE-SCP AE can support multiple simultaneous Associations requested by peer AEs. Each time the STORAGE-SCP AE receives an Association, a child process will be spawned to process the Verification, Storage, or Storage Commitment Push Model Service requests. The maximum number of child processes, and thus the maximum number of simultaneous Associations that can be processed, is set by configuration. The default maximum number is 10 in total. This maximum number of simultaneous Associations can be either an absolute number or a maximum number for each requesting external Application Entity. The latter flexibility can be useful if communication with one external AE is unreliable and one does not wish 'hung' connections with this AE to prevent Associations with other client AEs.
 The STORAGE-SCP AE initiates one Association at a time for sending Storage Commitment Push Model N-EVENT-REPORTs to peer AEs.
 
-.. csv-table:: Table 4.2.1.2-2.: Number of Simultaneous Associations as an SCP for STORAGE-SCP AE
+.. csv-table:: Number of Simultaneous Associations as an SCP for STORAGE-SCP AE
    :file: number-of-associations.csv
 
 .. _storage-asynchrounous-nature:
@@ -47,12 +48,12 @@ Asynchronous Nature
 
 The STORAGE-SCP AE does not support asynchronous communication (multiple outstanding transactions over a single Association). The STORAGE-SCP AE does permit an SCU to send multiple Storage Commitment Push Model Requests before it has sent back any N-EVENT-REPORT Notifications. However, the STORAGE-SCP AE must send an N-ACTION Response before permitting another N-ACTION Request to be received so the DICOM communication itself is not truly asynchronous.
 
-.. csv-table:: Table 4.2.1.2-3.: Asynchronous Nature as a SCP for STORAGE-SCP AE
+.. csv-table:: Asynchronous Nature as a SCP for STORAGE-SCP AE
    :file: asynchronous-nature.csv
 
 There is no limit on the number of outstanding Storage Commitment Push Model Requests that can be received and acknowledged before the STORAGE-SCP AE has responded with the corresponding N-EVENT-REPORT Notifications.
 
-.. csv-table:: Table 4.2.1.2-4.: Outstanding Storage Commitment Push Model Requests for STORAGE-SCP AE
+.. csv-table:: Outstanding Storage Commitment Push Model Requests for STORAGE-SCP AE
    :file: outstanding-stgcmt-push-model-req.csv
 
 .. _storage-implementation-class-uid:
@@ -62,7 +63,7 @@ Implementation Identifying Information
 
 The implementation information for this Application Entity is:
 
-.. csv-table:: Table 4.2.1.2-5.: DICOM Implementation Class and Version for STORAGE-SCP AE
+.. csv-table:: DICOM Implementation Class and Version for STORAGE-SCP AE
    :file: common/storage-query-retrieve-implementation-identifying-information.csv
 
 Note that the STORAGE-SCP AE specifies a different Implementation Class UID than that used by the other Application Entities. All DCM4CHEE archive AEs use the same Implementation Version Name. This Version Name is updated with each new release of the product software, as the different AE versions are never released independently.
@@ -112,7 +113,7 @@ The Storage Application Entity will propose Presentation Contexts for Verificati
 The list of proposed Transfer Syntaxes for the Storage Commitment Push Model SOP Class is configurable. By default, only the
 Transfer Syntax Implicit VR Little Endian will be proposed.
 
-.. table:: Table 4.2.1.3-1.: Proposed Presentation Contexts of Storage Application Entity by default configuration
+.. table:: Proposed Presentation Contexts of Storage Application Entity by default configuration
 
    +---------------------------------------------------------------------------------------------------------------------------+
    | Presentation Context Table                                                                                                |
@@ -179,7 +180,7 @@ a. 1 - DICOM UL service-user
 b. 2 - DICOM UL service-provider (ASCE related function)
 c. 3 - DICOM UL service-provider (Presentation related function)
 
-.. csv-table:: Table 4.2.1.4.1-1.: Association Rejection Reasons
+.. csv-table:: Association Rejection Reasons
    :header: "Result", "Source", "Reason-Diag", "Explanation"
    :file: common/storage-query-retrieve-association-rejection-reasons.csv
 
@@ -191,7 +192,7 @@ Accepted Presentation Contexts
 The Storage Application Entity will accept Presentation Contexts for all SOP Classes listed in Table 4.2.1.1-1 by default.
 The list of accepted Transfer Syntaxes for each accepted Abstract Syntax - as the list of accepted Abstract Syntaxes itselfs - is configurable.
 
-.. table:: Table 4.2.1.4-1.: Accepted Presentation Contexts of Storage Application Entity by default configuration
+.. table:: Accepted Presentation Contexts of Storage Application Entity by default configuration
 
    +---------------------------------------------------------------------------------------------------------------------------------------+
    | Presentation Context Table                                                                                                            |
@@ -204,23 +205,23 @@ The list of accepted Transfer Syntaxes for each accepted Abstract Syntax - as th
    +-------------------------------+----------------------+------------------------------------+------------------------+------+-----------+
    | Storage Commitment Push Model | 1.2.840.10008.1.20.1 | Implicit VR Little Endian          | 1.2.840.10008.1.2      | SCP  | None      |
    +-------------------------------+----------------------+------------------------------------+------------------------+------+-----------+
-   | Image Storage SOP Classes listed in Table 4.2.1.1-1  | see :ref:`Table 4.2.1.4-2`                                  | SCP  | None      |
+   | Image Storage SOP Classes in :numref:`SOPClasses`    | see :numref:`SCPImageTS`                                    | SCP  | None      |
    +------------------------------------------------------+-------------------------------------------------------------+------+-----------+
-   | Video Storage SOP Classes listed in Table 4.2.1.1-1  | see :ref:`Table 4.2.1.4-3`                                  | SCP  | None      |
+   | Video Storage SOP Classes in :numref:`SOPClasses`    | see :numref:`SCPVideoTS`                                    | SCP  | None      |
    +------------------------------------------------------+------------------------------------+------------------------+------+-----------+
-   | SR Storage SOP Classes listed in Table 4.2.1.1-1     | Implicit VR Little Endian          | 1.2.840.10008.1.2      | SCP  | None      |
+   | SR Storage SOP Classes in :numref:`SOPClasses`       | Implicit VR Little Endian          | 1.2.840.10008.1.2      | SCP  | None      |
    |                                                      +------------------------------------+------------------------+      |           |
    |                                                      | Explicit VR Little Endian          | 1.2.840.10008.1.2.1    |      |           |
    |                                                      +------------------------------------+------------------------+      |           |
    |                                                      | Deflated Explicit VR Little Endian | 1.2.840.10008.1.2.1.99 |      |           |
    +------------------------------------------------------+------------------------------------+------------------------+------+-----------+
-   | Other Storage SOP Classes listed in Table 4.2.1.1-1  | Implicit VR Little Endian          | 1.2.840.10008.1.2      | SCP  | None      |
+   | Other Storage SOP Classes in :numref:`SOPClasses`    | Implicit VR Little Endian          | 1.2.840.10008.1.2      | SCP  | None      |
    |                                                      +------------------------------------+------------------------+      |           |
    |                                                      | Explicit VR Little Endian          | 1.2.840.10008.1.2.1    |      |           |
    +------------------------------------------------------+------------------------------------+------------------------+------+-----------+
 
-.. csv-table:: Table 4.2.1.4-2.: Transfer Syntaxes for Image Storage SOP Classes
-   :name: Table 4.2.1.4-2
+.. csv-table:: Transfer Syntaxes for Image Storage SOP Classes
+   :name: SCPImageTS
    :header: "Transfer Syntax Name", "UID"
 
    "Implicit VR Little Endian", "1.2.840.10008.1.2"
@@ -238,8 +239,8 @@ The list of accepted Transfer Syntaxes for each accepted Abstract Syntax - as th
 .. [#j2k1] Because of known issues of the JPEG 2000 implementation, acceptance of JPEG 2000 is only recommended for production, if all
    Retrieve Destinations also accepts JPEG 2000, so the archive does not need to decompress JPEG 2000 images for retrieval.
 
-.. csv-table:: Table 4.2.1.4-3.: Transfer Syntax for Video Storage SOP Classes
-   :name: Table 4.2.1.4-3
+.. csv-table:: Transfer Syntax for Video Storage SOP Classes
+   :name: SCPVideoTS
    :header: "Transfer Syntax Name", "UID"
 
    "JPEG Baseline (Process 1)", "1.2.840.10008.1.2.4.50"
@@ -328,7 +329,7 @@ OVERWRITE:
 The Storage Application Entity can be configured to compress uncompressed received Image SOP Instances, dependent on the Source Application
 Entity or HTTP client and dependent of DICOM Attribute values of received SOP Instances, using one of following Transfer Syntaxes:
 
-.. table:: Table 4.2.1.4-4.: Supported Transfer Syntaxes for Image Compression by Storage Application Entity
+.. table:: Supported Transfer Syntaxes for Image Compression by Storage Application Entity
    :header: "Transfer Syntax Name", "UID"
 
    "JPEG Baseline (Process 1)", "1.2.840.10008.1.2.4.50"
@@ -343,7 +344,7 @@ Entity or HTTP client and dependent of DICOM Attribute values of received SOP In
 By default, no image compression is configured.
 
 
-.. csv-table:: Table 4.2.1.4-5.: Storage Application C-STORE Response Status Return Reasons
+.. csv-table:: Storage Application C-STORE Response Status Return Reasons
    :header: "Service Status", "Further Meaning", "Error Code", "Behaviour"
    :file: c-store-response-status-return-reasons.csv
 
@@ -353,7 +354,7 @@ received but an error occurs transmitting the C-STORE Response then this final i
 Association is detected then the Association is closed.
 The Behavior of STORAGE-SCP AE during communication failure is summarized in the following table:
 
-.. csv-table:: Table 4.2.1.4-6.: STORAGE-SCP AE Storage Service Communication Failure Reasons
+.. csv-table:: STORAGE-SCP AE Storage Service Communication Failure Reasons
    :header: "Exception", "Reason"
    :file: storage-scp-communication-failure-reasons.csv
 
@@ -372,13 +373,13 @@ The STORAGE-SCP AE will support Storage Commitment Push Model requests for SOP I
 
 The STORAGE-SCP AE will return the following Status Code values in N-ACTION Responses:
 
-.. csv-table:: Table 4.2.1.4.5-2.: STORAGE-SCP AE Storage Commitment Push Model N-ACTION Response Status Return Behavior
+.. csv-table:: STORAGE-SCP AE Storage Commitment Push Model N-ACTION Response Status Return Behavior
    :header: "Service Status", "Further Meaning", "Error Code", "Behaviour"
    :file: stgcmt-n-action-response-status-return-behaviour.csv
 
 The STORAGE-SCP AE will exhibit the following Behavior according to the Status Code value returned in an N-EVENT-REPORT Response from a destination Storage Commitment Push Model SCU:
 
-.. csv-table:: Table 4.2.1.4.5-3.: STORAGE-SCP AE N-EVENT-REPORT Response Status Handling Behavior
+.. csv-table:: STORAGE-SCP AE N-EVENT-REPORT Response Status Handling Behavior
    :header: "Service Status", "Further Meaning", "Error Code", "Behaviour"
    :file: stgcmt-n-eventresponse-status-return-behaviour.csv
 

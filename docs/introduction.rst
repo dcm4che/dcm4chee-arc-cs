@@ -6,7 +6,7 @@ Introduction
 Revision History
 ================
 
-.. csv-table:: Table 3.1-1: Revision History
+.. csv-table:: Revision History
    :header: "Document Version", "Date of Issue", "Author", "Description"
 
    |release|, |today|, gz, Initial Draft

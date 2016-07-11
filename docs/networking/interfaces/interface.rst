@@ -8,7 +8,7 @@ Physical Network Interface
 
 The DCM4CHEE archive supports a single network interface. One of the following physical network interfaces will be available depending on installed hardware options:
 
-.. csv-table:: Table 4.3.1.1-1.: Supported Physical Network Interfaces
+.. csv-table:: Supported Physical Network Interfaces
    :file: physical-network-interface.csv
 
 .. _interface-additional-protocols:
@@ -18,7 +18,7 @@ Additional Protocols
 
 DCM4CHEE archive conforms to the System Management Profiles listed in table below. All requested transactions for the listed profiles and actors are supported. It does not support any optional transactions.
 
-.. csv-table:: Table 4.3.2.1-1.: Supported Physical Network Interfaces
+.. csv-table:: Supported Physical Network Interfaces
    :header: "Profile Name", "Actor", "Protocols Used", "Optional Transactions", "Security Support"
    :file: supported-system-management-profiles.csv
 
@@ -27,7 +27,7 @@ DHCP
 
 DHCP can be used to obtain TCP/IP network configuration information. The network parameters obtainable via DHCP are shown in table below. The Default Value column of the table shows the default used if the DHCP server does not provide a value. Values for network parameters set in the Service/Installation tool take precedence over values obtained from the DHCP server. Support for DHCP can be configured via the Service/Installation Tool. The Service/Installation tool can be used to configure the machine name. If DHCP is not in use, TCP/IP network configuration information can be manually configured via the Service/Installation Tool.
 
-.. csv-table:: Table 4.3.2.1-2.: Supported DHCP Parameters
+.. csv-table:: Supported DHCP Parameters
    :header: "DHCP Parameter", "Default Value"
    :file: supported-dhcp-parameters.csv
 

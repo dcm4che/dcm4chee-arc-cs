@@ -8,7 +8,7 @@ Local AE Titles
 
 The mapping from AE Title to TCP/IP addresses and ports is configurable and set at the time of installation by Installation Personnel.
 
-.. csv-table:: Table 4.4.1-1.: Default Application Entity Characteristics
+.. csv-table:: Default Application Entity Characteristics
    :header: "Application Entity", "Role", "Default AE Title", "Default TCP/IP Port"
    :file: default-ae-characteristics.csv
 

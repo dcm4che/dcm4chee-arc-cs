@@ -5,6 +5,6 @@ Conformance Statement Overview
 systems to send DICOM objects to it for permanent storage, retrieve information about such objects, and retrieve
 the DICOM objects themselves.
 
-.. csv-table:: Table 1-1.: Network Services
+.. csv-table:: Network Services
    :header: "SOP Classes", "User", "Provider"
    :file: network-services.csv

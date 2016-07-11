@@ -1,1 +1,156 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="266px" height="480px" viewBox="-50.112 12.903 913.37 1646.73" preserveAspectRatio="xMidYMid meet" zoomAndPan="disable"  ><defs id="svgEditorDefs"><marker id="marker1" markerHeight="12" markerUnits="strokeWidth" markerWidth="15" orient="auto" refX="-3" refY="0" viewBox="-15 -5 20 20"><path d="M -15 -5 L 0 0 L -15 5 z" fill="black"/></marker><marker id="arrow20-16-right" markerHeight="16" markerUnits="strokeWidth" markerWidth="20" orient="auto" refX="-3" refY="0" viewBox="-15 -5 20 20"><path d="M -15 -5 L 0 0 L -15 5 z" fill="black"/></marker><marker id="diam10" markerHeight="10" markerUnits="strokeWidth" markerWidth="10" orient="auto" refX="0" refY="0" viewBox="-5 -5 10 10"><path d="M -5 0 l 5 5 l 5 -5 l -5 -5 z" fill="black;stroke:none;"/></marker><marker id="arrow20-16-left" markerHeight="16" markerUnits="strokeWidth" markerWidth="20" orient="auto" refX="3" refY="0" viewBox="0 -5 20 20"><path d="M 15 -5 L 0 0 L 15 5 z" fill="black"/></marker></defs><rect id="svgEditorBackground" x="-116.87940762347678" y="-2" width="991.0199541629692" height="1836.739990234375" style="stroke: none; fill: none;"/><line id="e1_line" x1="540" y1="60" x2="540" y2="1600" stroke="black" style="stroke-width: 1px; vector-effect: non-scaling-stroke; fill: none; stroke-dasharray: 2px, 2px;" /><text fill="black" style="font-family: Arial; font-size: 20px; text-anchor: middle; font-weight: normal;" x="550" y="40" id="e16_texte" dy="" dx="" >DICOM HTTP Interface</text><g id="e42_group" transform="matrix(1 0 0 1 -100 874)"><circle id="e43_circle" cx="138" cy="123" style="stroke-width: 1px; vector-effect: non-scaling-stroke;" stroke="black" r="70" fill="khaki" transform="matrix(1 0 0 1 43 141)"/><text fill="black" style="font-family: Arial; font-size: 20px; text-anchor: middle;" x="140" y="108" id="e44_texte" transform="matrix(1 0 0 1 41.0078 150.953)">Load<tspan x="140" dy="1.25em">Bulk Data</tspan></text></g><line id="e91_line" x1="470" y1="154" x2="638.977" y2="154.994" stroke="black" style="stroke-width: 2px; fill: none; marker-end: url(&quot;#arrow15-12-right&quot;); marker-start: url(&quot;#arrow20-16-left&quot;); vector-effect: non-scaling-stroke;" transform="matrix(1 0 0 1 16 210)"/><line id="e92_line" x1="473.558" y1="542.558" x2="638.558" y2="542.558" stroke="black" style="fill: none; marker-end: url(&quot;#arrow15-12-right&quot;); marker-start: url(&quot;#arrow20-16-left&quot;); vector-effect: non-scaling-stroke;" transform="matrix(1 0 0 1 16 211.716)" stroke-width="2"/><line id="e94_line" x1="472.116" y1="925.115" x2="637.116" y2="925.115" stroke="black" style="stroke-width: 2px; fill: none; marker-start: url(&quot;#arrow20-16-left&quot;); vector-effect: non-scaling-stroke;" transform="matrix(1 0 0 1 16 209.187)"/><line id="e95_line" x1="475.399" y1="1330.12" x2="640.399" y2="1330.12" stroke="black" style="stroke-width: 2px; fill: none; marker-start: url(&quot;#arrow20-16-left&quot;); vector-effect: non-scaling-stroke;" transform="matrix(1 0 0 1 16 206.826)"/><circle id="e71_circle" cx="141.7249762181521" cy="498.55579230102603" style="stroke-width: 1px; vector-effect: non-scaling-stroke;" stroke="black" r="70" fill="khaki" transform="matrix(1 0 0 1 -59.5 1038.39)"/><text fill="black" style="font-family: Arial; font-size: 20px; text-anchor: middle;" x="137.725" y="480.556" id="e72_texte" transform="matrix(1 0 0 1 -55.4922 1063.39)">Query DB</text><circle id="e48_circle" cx="126.41155073552483" cy="427.99975385707717" style="stroke-width: 1px; vector-effect: non-scaling-stroke;" stroke="black" r="70" fill="khaki" transform="matrix(1 0 0 1 -45 524)"/><text fill="black" style="font-family: Arial; font-size: 20px; text-anchor: middle;" x="130.412" y="412" id="e49_texte" transform="matrix(1 0 0 1 -44.9844 535.359)">Load<tspan x="130.409" dy="1.25em" y="">Metadata</tspan></text><circle id="e52_circle" cx="138" cy="432" style="stroke-width: 1px; vector-effect: non-scaling-stroke;" stroke="black" r="70" fill="khaki" transform="matrix(1 0 0 1 -55 140)"/><text fill="black" style="font-family: Arial; font-size: 20px; text-anchor: middle;" x="134" y="414" id="e53_texte" transform="matrix(1 0 0 1 -50.9922 152.5)">Render<tspan x="134" dy="1.25em">Instance</tspan></text><circle id="e58_circle" cx="816.1770826184913" cy="136.00001509862045" style="stroke-width: 1px; vector-effect: non-scaling-stroke;" stroke="black" r="90" fill="khaki" transform="matrix(1 0 0 1 -71.5951 428.694)"/><text fill="black" style="font-family: Arial; font-size: 20px; text-anchor: middle;" x="666.177" y="116" id="e59_texte" transform="matrix(1 0 0 1 78.4205 419.053)" dy="" dx="">Web Client<tspan x="666.178" dy="1.25em" y="">Sends</tspan><tspan x="666.178" dy="1.25em" y="">WADO-URI</tspan><tspan x="666.178" dy="1.25em" y="">Request</tspan></text><circle id="e51_circle" cx="669.1770215833351" cy="121.99999983983139" style="stroke-width: 1px; vector-effect: non-scaling-stroke;" stroke="black" r="90" fill="khaki" transform="matrix(1 0 0 1 75.4049 632.274)"/><text fill="black" style="font-family: Arial; font-size: 20px; text-anchor: middle;" x="665.177" y="103" id="e52_texte" transform="matrix(1 0 0 1 79.4205 608.274)" dy="" dx="">Web Client<tspan x="665.177" dy="1.25em">Sends WADO-RS</tspan><tspan x="665.177" dy="1.25em">RetrieveStudy/</tspan><tspan x="665.177" dy="1.25em">Series/Instance</tspan><tspan x="665.177" dy="1.25em">Request</tspan></text><circle id="e3_circle" cx="670.902207053113" cy="331.4513611486823" style="stroke-width: 1px; vector-effect: non-scaling-stroke;" stroke="black" r="90" fill="khaki" transform="matrix(1 0 0 1 77.4047 1205.49)"/><text fill="black" style="font-family: Arial; font-size: 20px; text-anchor: middle;" x="666.902" y="312.451" id="e3_texte" transform="matrix(1 0 0 1 81.4127 1206.5)" dy="" dx="">Web Client<tspan x="666.906" dy="1.25em" y="">Sends QIDO</tspan><tspan x="666.906" dy="1.25em" y="">Request</tspan></text><circle id="e46_circle" cx="669.1770215833351" cy="121.99999983983139" style="stroke-width: 1px; vector-effect: non-scaling-stroke;" stroke="black" r="90" fill="khaki" transform="matrix(1 0 0 1 75.4049 1012.3)"/><text fill="black" style="font-family: Arial; font-size: 20px; text-anchor: middle;" x="665.177" y="103" id="e47_texte" transform="matrix(1 0 0 1 79.4205 1000.8)">Web Client<tspan x="665.178" dy="1.25em" y="">Sends WADO-RS</tspan><tspan x="665.178" dy="1.25em" y="">RetrieveBulkdata</tspan><tspan x="665.178" dy="1.25em" y="">Request</tspan></text><circle id="e30_circle" cx="811.1770215833351" cy="119.99999221043686" style="stroke-width: 1px; vector-effect: non-scaling-stroke;" stroke="black" r="90" fill="khaki" transform="matrix(1 0 0 1 -66.5951 245)"/><text fill="black" style="font-family: Arial; font-size: 20px; text-anchor: middle;" x="665.177" y="103" id="e31_texte" transform="matrix(1 0 0 1 79.4205 244.859)">Web Client<tspan x="665.178" dy="1.25em" y="">Uploads</tspan><tspan x="665.178" dy="1.25em" y="">Instances</tspan></text><rect x="289" y="-383" style="stroke-width: 1px; vector-effect: non-scaling-stroke;" stroke="black" id="e7_rectangle" width="200" height="150" fill="khaki" transform="matrix(1 0 0 1 -3.68465 880.186)" ry="0" rx="0"/><rect x="283.72508302967555" y="-117.44414666381772" style="stroke-width: 1px; vector-effect: non-scaling-stroke;" stroke="black" id="e12_rectangle" width="200" height="150" fill="khaki" ry="0" rx="0" transform="matrix(1 0 0 1 5.31541 1579.39)"/><text fill="black" style="font-family: Arial; font-size: 20px; text-anchor: middle;" x="372.115" y="-402.042" id="e13_texte" transform="matrix(1 0 0 1 7.35738 1933.48)">QIDO-RS<tspan x="372.118" dy="1.25em" y="">Provider</tspan></text><circle id="e35_circle" cx="669.1770215833351" cy="121.99999983983139" style="stroke-width: 1px; vector-effect: non-scaling-stroke;" stroke="black" r="90" fill="khaki" transform="matrix(1 0 0 1 75.4049 826.401)"/><text fill="black" style="font-family: Arial; font-size: 20px; text-anchor: middle;" x="665.177" y="103" id="e37_texte" transform="matrix(1 0 0 1 79.4205 814.901)">Web Client<tspan x="665.178" dy="1.25em" y="" dx="">Sends WADO-RS</tspan><tspan x="665.178" dy="1.25em" y="">RetrieveMetadata</tspan><tspan x="665.178" dy="1.25em" y="">Request</tspan></text><circle id="e5_circle" cx="128" cy="121" style="stroke-width: 1px; vector-effect: non-scaling-stroke;" stroke="black" r="70" fill="khaki" transform="matrix(1 0 0 1 -57 249)"/><text fill="black" style="font-family: Arial; font-size: 20px; text-anchor: middle;" x="140" y="108" id="e7_texte" transform="matrix(1 0 0 1 -68.9844 256.5)">Store<tspan x="140" dy="1.25em">Instances</tspan></text><rect x="280" y="80" style="stroke-width: 1px; vector-effect: non-scaling-stroke;" stroke="black" id="e35_rectangle" width="200" height="350" fill="khaki" ry="0" rx="0"/><text fill="black" style="font-family: Arial; font-size: 20px; text-anchor: middle;" x="382.586" y="200" id="e36_texte" dy="" dx="" transform="matrix(1 0 0 1 1.42109e-14 37.4531)">STOW-RS<tspan x="382.586" dy="1.25em">Provider</tspan></text><circle id="e103_circle" cx="805.1770215833351" cy="-76.00003067774674" style="stroke-width: 1px; vector-effect: non-scaling-stroke;" stroke="black" r="90" fill="khaki" transform="matrix(1 0 0 1 -60.5951 245)"/><text fill="black" style="font-family: Arial; font-size: 20px; text-anchor: middle;" x="659.177" y="-93" id="e104_texte" transform="matrix(1 0 0 1 85.4205 231.5)" dy="" dx="">Web Client<tspan x="659.178" dy="1.25em" y="">Uploads</tspan><tspan x="659.178" dy="1.25em" y="">Metadata and</tspan><tspan x="659.178" dy="1.25em" y="">Bulk Data</tspan></text><circle id="e108_circle" cx="146.90200967184242" cy="-62.09702695781442" style="stroke-width: 1px; vector-effect: non-scaling-stroke;" stroke="black" r="80" fill="khaki" transform="matrix(1 0 0 1 -80.8985 233.086)"/><circle id="e117_circle" cx="126" cy="230" style="stroke-width: 1px; vector-effect: non-scaling-stroke;" stroke="black" r="70" fill="khaki" transform="matrix(1 0 0 1 -45 524.274)"/><text fill="black" style="font-family: Arial; font-size: 20px; text-anchor: middle;" x="130" y="214" id="e118_texte" transform="matrix(1 0 0 1 -44.9844 534.774)">Load<tspan x="130" dy="1.25em">Instance</tspan></text><line id="e122_line" x1="123.7749888620667" y1="-40.45899710519831" x2="123.7749888620667" y2="19.54099526540716" stroke="black" style="stroke-width: 2px; fill: none; stroke-dasharray: 5px, 5px; vector-effect: non-scaling-stroke;" transform="matrix(1 0 0 1 -51.5 287)"/><line id="e123_line" x1="137.891" y1="1261" x2="275.355" y2="1261" stroke="black" style="stroke-width: 2px; fill: none; stroke-dasharray: 5px, 5px; vector-effect: non-scaling-stroke;" transform="matrix(1 0 0 1 11 279.156)"/><line id="e125_line" x1="140.501" y1="855" x2="274.631" y2="855" stroke="black" style="stroke-width: 2px; fill: none; stroke-dasharray: 5px, 5px; vector-effect: non-scaling-stroke;" transform="matrix(1 0 0 1 11 281.071)"/><line id="e126_line" x1="140.001" y1="672" x2="274.131" y2="672" stroke="black" style="stroke-width: 2px; fill: none; stroke-dasharray: 5px, 5px; vector-effect: non-scaling-stroke;" transform="matrix(1 0 0 1 11 283)"/><line id="e127_line" x1="136.168" y1="442.669" x2="275.297" y2="332.677" stroke="black" style="stroke-width: 2px; fill: none; stroke-dasharray: 5px, 5px; vector-effect: non-scaling-stroke;" transform="matrix(1 0 0 1 11 280.043)"/><line id="e128_line" x1="141.002" y1="289" x2="273.466" y2="289" stroke="black" style="stroke-width: 2px; fill: none; stroke-dasharray: 5px, 5px; vector-effect: non-scaling-stroke;" transform="matrix(1 0 0 1 11 283)"/><line id="e129_line" x1="134.50271113966437" y1="-110" x2="271.96589168165656" y2="-110" stroke="black" style="stroke-width: 2px; fill: none; stroke-dasharray: 5px, 5px; vector-effect: non-scaling-stroke;" transform="matrix(1 0 0 1 11 283)"/><line id="e130_line" x1="132.00326538085938" y1="87" x2="269.46624755859375" y2="87" stroke="black" style="stroke-width: 2px; fill: none; stroke-dasharray: 5px, 5px; vector-effect: non-scaling-stroke;" transform="matrix(1 0 0 1 11 283)"/><text fill="black" style="font-family: Arial; font-size: 20px; text-anchor: middle;" x="63.8987" y="129.572" id="e109_texte"  dy="" dx="">Create<tspan x="63.8985" dy="1.25em" y=""/><tspan x="63.8985" dy="1.25em" y="">Instances</tspan><tspan x="63.8985" dy="1.25em" y="">from Metadata</tspan><tspan x="63.8985" dy="1.25em" y="">and Bulk Data</tspan></text><line id="e136_line" x1="468.011" y1="-41.9045" x2="638.975" y2="-41.9045" stroke="black" style="stroke-width: 2px; fill: none; marker-end: url(&quot;#arrow15-12-right&quot;); marker-start: url(&quot;#arrow20-16-left&quot;); vector-effect: non-scaling-stroke;" transform="matrix(1 0 0 1 16 210)"/><line id="e137_line" x1="469.8322966912709" y1="360.0021211070499" x2="634.8322966912709" y2="360.0021211070499" stroke="black" style="fill: none; marker-end: url(&quot;#arrow15-12-right&quot;); marker-start: url(&quot;#arrow20-16-left&quot;); vector-effect: non-scaling-stroke;" transform="matrix(1 0 0 1 16 211.716)" stroke-width="2"/><line id="e138_line" x1="468.3903144531249" y1="738.8329716796876" x2="633.3903144531249" y2="738.8329716796876" stroke="black" style="stroke-width: 2px; fill: none; marker-start: url(&quot;#arrow20-16-left&quot;); vector-effect: non-scaling-stroke;" transform="matrix(1 0 0 1 16 209.187)"/><g id="e144_group" transform="matrix(1 0 0 1 -107.451 1071.46)"><circle id="e145_circle" cx="138" cy="123" style="stroke-width: 1px; vector-effect: non-scaling-stroke;" stroke="black" r="70" fill="khaki" transform="matrix(1 0 0 1 43 141)"/><text fill="black" style="font-family: Arial; font-size: 20px; text-anchor: middle;" x="140" y="108" id="e146_texte" transform="matrix(1 0 0 1 41.0078 150.953)">Load<tspan x="140" dy="1.25em">Frame</tspan></text></g><line id="e148_line" x1="140.501" y1="855" x2="281.298" y2="855" stroke="black" style="stroke-width: 2px; fill: none; stroke-dasharray: 5px, 5px; vector-effect: non-scaling-stroke;" transform="matrix(1 0 0 1 3.549 478.531)"/><line id="e149_line" x1="472.1159999576158" y1="1122.5730576818853" x2="637.116030475194" y2="1122.5730576818853" stroke="black" style="stroke-width: 2px; fill: none; marker-start: url(&quot;#arrow20-16-left&quot;); vector-effect: non-scaling-stroke;" transform="matrix(1 0 0 1 16 209.187)"/><circle id="e150_circle" cx="669.1770045962877" cy="319.4590134924322" style="stroke-width: 1px; vector-effect: non-scaling-stroke;" stroke="black" r="90" fill="khaki" transform="matrix(1 0 0 1 75.4049 1012.3)"/><text fill="black" style="font-family: Arial; font-size: 20px; text-anchor: middle;" x="665.177" y="300.459" id="e151_texte" transform="matrix(1 0 0 1 79.4205 1000.8)">Web Client<tspan x="665.177" dy="1.25em">Sends WADO-RS</tspan><tspan x="665.177" dy="1.25em">RetrieveFrames</tspan><tspan x="665.177" dy="1.25em">Request</tspan></text><text fill="black" style="font-family: Arial; font-size: 20px; text-anchor: middle;" x="373.292" y="-610.293" id="e155_texte" transform="matrix(1 0 0 1 12.0342 1176.97)">WADO-URI<tspan x="373.292" dy="1.25em">Provider</tspan></text><rect x="289" y="-186.325" style="stroke-width: 1px; vector-effect: non-scaling-stroke;" stroke="black" id="e158_rectangle" width="200" height="700" fill="khaki" transform="matrix(1 0 0 1 -3.68465 880.186)" ry="0" rx="0"/><text fill="black" style="font-family: Arial; font-size: 20px; text-anchor: middle;" x="373.292" y="-413.618" id="e159_texte" transform="matrix(1 0 0 1 12.0342 1451.97)">WADO-RS<tspan x="373.292" dy="1.25em">Provider</tspan></text><line id="e161_line" x1="150.00165627817952" y1="471.99324426718874" x2="284.1316764197811" y2="471.99324426718874" stroke="black" style="stroke-width: 2px; fill: none; stroke-dasharray: 5px, 5px; vector-effect: non-scaling-stroke;" transform="matrix(1 0 0 1 11 283)"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="900">
+
+  <defs>
+    <style type="text/css">
+      text { font-family: Helvetica, Verdana, ArialUnicodeMS, san-serif }
+    </style>
+  </defs>
+  <text x="360" y="10" font-size="11" text-anchor="middle">DICOM HTTP Interface</text>
+  <line x1="360" y1="20" x2="360" y2="900" stroke="black" stroke-dasharray="2,4"/>
+
+  <rect x="220" y="50" width="120" height="280" fill="none" stroke="black" />
+  <text x="280" y="190" font-size="11" text-anchor="middle">STOW-RS
+    <tspan x="280" dy="12" text-anchor="middle">Provider</tspan>
+  </text>
+
+  <line x1="150" y1="80" x2="220" y2="80" stroke="black" stroke-width="2" stroke-dasharray="8"/>
+  <line x1="150" y1="80" x2="220" y2="190" stroke="black" stroke-width="2" stroke-dasharray="8"/>
+  <line x1="150" y1="80" x2="220" y2="300" stroke="black" stroke-width="2" stroke-dasharray="8"/>
+  <circle cx="100" cy="80" r="50" fill="white" stroke="black"/>
+  <text x="100" y="80" font-size="11" text-anchor="middle">Store
+    <tspan x="100" dy="12" text-anchor="middle">Instances</tspan>
+  </text>
+
+  <line x1="150" y1="190" x2="220" y2="190" stroke="black" stroke-width="2" stroke-dasharray="8"/>
+  <line x1="150" y1="190" x2="220" y2="300" stroke="black" stroke-width="2" stroke-dasharray="8"/>
+  <circle cx="100" cy="190" r="50" fill="white" stroke="black"/>
+  <text x="100" y="190" font-size="11" text-anchor="middle">Reject
+    <tspan x="100" dy="12" text-anchor="middle">Instances</tspan>
+  </text>
+
+  <line x1="150" y1="300" x2="220" y2="300" stroke="black" stroke-width="2" stroke-dasharray="8"/>
+  <circle cx="100" cy="300" r="50" fill="white" stroke="black"/>
+  <text x="100" y="280" font-size="11" text-anchor="middle">Create
+    <tspan x="100" dy="12" text-anchor="middle">Instances</tspan>
+    <tspan x="100" dy="12" text-anchor="middle">from Metadata</tspan>
+    <tspan x="100" dy="12" text-anchor="middle">and Bulk Data</tspan>
+  </text>
+
+  <circle cx="460" cy="80" r="50" fill="white" stroke="black"/>
+  <text x="460" y="70" font-size="11" text-anchor="middle">Web Client
+    <tspan x="460" dy="12" text-anchor="middle">Uploads</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Instances</tspan>
+  </text>
+  <line x1="340" y1="80" x2="410" y2="80" stroke="black" stroke-width="2"/>
+  <path d='M 340 80 l 12 -4 l 0 8' />
+
+  <circle cx="460" cy="190" r="50" fill="white" stroke="black"/>
+  <text x="460" y="180" font-size="11" text-anchor="middle">Web Client
+    <tspan x="460" dy="12" text-anchor="middle">Uploads</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Rejection Note</tspan>
+  </text>
+  <line x1="340" y1="190" x2="410" y2="190" stroke="black" stroke-width="2"/>
+  <path d='M 340 190 l 12 -4 l 0 8' />
+
+  <circle cx="460" cy="300" r="50" fill="white" stroke="black"/>
+  <text x="460" y="285" font-size="11" text-anchor="middle">Web Client
+    <tspan x="460" dy="12" text-anchor="middle">Uploads</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Metadata and</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Bulk Data</tspan>
+  </text>
+  <line x1="340" y1="300" x2="410" y2="300" stroke="black" stroke-width="2"/>
+  <path d='M 340 300 l 12 -4 l 0 8' />
+
+  <rect x="220" y="380" width="120" height="60" fill="none" stroke="black" />
+  <text x="280" y="410" font-size="11" text-anchor="middle">QIDO-RS
+    <tspan x="280" dy="12" text-anchor="middle">Provider</tspan>
+  </text>
+
+  <line x1="150" y1="410" x2="220" y2="410" stroke="black" stroke-width="2" stroke-dasharray="8"/>
+  <circle cx="100" cy="410" r="50" fill="white" stroke="black"/>
+  <text x="100" y="415" font-size="11" text-anchor="middle">Query DB</text>
+
+  <circle cx="460" cy="410" r="50" fill="white" stroke="black"/>
+  <text x="460" y="390" font-size="11" text-anchor="middle">Web Client
+    <tspan x="460" dy="12" text-anchor="middle">Sends</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">QIDO-RS</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Request</tspan>
+  </text>
+  <line x1="340" y1="410" x2="410" y2="410" stroke="black" stroke-width="2"/>
+  <path d='M 340 410 l 12 -4 l 0 8' />
+
+  <rect x="220" y="490" width="120" height="60" fill="none" stroke="black" />
+  <text x="280" y="520" font-size="11" text-anchor="middle">WADO-URI
+    <tspan x="280" dy="12" text-anchor="middle">Provider</tspan>
+  </text>
+
+  <line x1="150" y1="520" x2="220" y2="520" stroke="black" stroke-width="2" stroke-dasharray="8"/>
+  <circle cx="100" cy="520" r="50" fill="white" stroke="black"/>
+  <text x="100" y="520" font-size="11" text-anchor="middle">Render
+    <tspan x="100" dy="12" text-anchor="middle">Instance</tspan>
+  </text>
+
+  <rect x="220" y="600" width="120" height="280" fill="none" stroke="black" />
+  <text x="280" y="740" font-size="11" text-anchor="middle">WADO-RS
+    <tspan x="280" dy="12" text-anchor="middle">Provider</tspan>
+  </text>
+
+  <line x1="150" y1="630" x2="220" y2="520" stroke="black" stroke-width="2" stroke-dasharray="8"/>
+  <line x1="150" y1="630" x2="220" y2="630" stroke="black" stroke-width="2" stroke-dasharray="8"/>
+  <line x1="150" y1="630" x2="220" y2="740" stroke="black" stroke-width="2" stroke-dasharray="8"/>
+  <circle cx="100" cy="630" r="50" fill="white" stroke="black"/>
+  <text x="100" y="630" font-size="11" text-anchor="middle">Load
+    <tspan x="100" dy="12" text-anchor="middle">Instance</tspan>
+  </text>
+
+  <line x1="150" y1="740" x2="220" y2="740" stroke="black" stroke-width="2" stroke-dasharray="8"/>
+  <circle cx="100" cy="740" r="50" fill="white" stroke="black"/>
+  <text x="100" y="740" font-size="11" text-anchor="middle">Extract
+    <tspan x="100" dy="12" text-anchor="middle">Bulk Data</tspan>
+  </text>
+
+  <line x1="150" y1="850" x2="220" y2="850" stroke="black" stroke-width="2" stroke-dasharray="8"/>
+  <circle cx="100" cy="850" r="50" fill="white" stroke="black"/>
+  <text x="100" y="850" font-size="11" text-anchor="middle">Load
+    <tspan x="100" dy="12" text-anchor="middle">Metadata</tspan>
+  </text>
+
+  <circle cx="460" cy="520" r="50" fill="white" stroke="black"/>
+  <text x="460" y="510" font-size="11" text-anchor="middle">Web Client
+    <tspan x="460" dy="12" text-anchor="middle">Sends</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">WADO-URI</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Request</tspan>
+  </text>
+  <line x1="340" y1="520" x2="410" y2="520" stroke="black" stroke-width="2"/>
+  <path d='M 340 520 l 12 -4 l 0 8' />
+
+  <circle cx="460" cy="630" r="50" fill="white" stroke="black"/>
+  <text x="460" y="610" font-size="11" text-anchor="middle">Web Client
+    <tspan x="460" dy="12" text-anchor="middle">Sends WADO-RS</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Retrieve Study/</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Series/Instance</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Request</tspan>
+  </text>
+  <line x1="340" y1="630" x2="410" y2="630" stroke="black" stroke-width="2"/>
+  <path d='M 340 630 l 12 -4 l 0 8' />
+
+  <circle cx="460" cy="740" r="50" fill="white" stroke="black"/>
+  <text x="460" y="720" font-size="11" text-anchor="middle">Web Client
+    <tspan x="460" dy="12" text-anchor="middle">Sends WADO-RS</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Retrieve Frames/</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Bulk Data</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Request</tspan>
+  </text>
+  <line x1="340" y1="740" x2="410" y2="740" stroke="black" stroke-width="2"/>
+  <path d='M 340 740 l 12 -4 l 0 8' />
+
+  <circle cx="460" cy="850" r="50" fill="white" stroke="black"/>
+  <text x="460" y="840" font-size="11" text-anchor="middle">Web Client
+    <tspan x="460" dy="12" text-anchor="middle">Sends WADO-RS</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Retrieve Metadata</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Request</tspan>
+  </text>
+  <line x1="340" y1="850" x2="410" y2="850" stroke="black" stroke-width="2"/>
+  <path d='M 340 850 l 12 -4 l 0 8' />
+
+</svg>

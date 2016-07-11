@@ -8,7 +8,7 @@ SOP Classes
 
 The Workflow Application Entity provides Standard Conformance to the following SOP Class(es) :
 
-.. csv-table:: Table 4.2.3.1-1.: SOP Classes for Workflow Application Entity (SCP)
+.. csv-table:: SOP Classes for Workflow Application Entity (SCP)
    :header: "SOP Class Name", "SOP Class UID", "SCU", "SCP"
    :file: sop-classes.csv
 
@@ -23,7 +23,7 @@ General
 '''''''
 The DICOM standard application context name for DICOM 3.0 is always proposed:
 
-.. csv-table:: Table 4.2.3.2.1-1.: DICOM Application Context for AE Workflow
+.. csv-table:: DICOM Application Context for AE Workflow
    :file: common/storage-query-retrieve-workflow-general.csv
 
 .. _workflow-number-of-associations:
@@ -32,7 +32,7 @@ Number of Associations
 ''''''''''''''''''''''
 The Workflow AE initiates one Association at a time for a Worklist request.
 
-.. csv-table:: Table 4.2.3.2.2-1.: Number of Associations Initiated for AE Workflow
+.. csv-table:: Number of Associations Initiated for AE Workflow
    :file: number-of-associations.csv
 
 .. _workflow-asynchrounous-nature:
@@ -42,7 +42,7 @@ Asynchronous Nature
 
 The Workflow AE does not support asynchronous communication (multiple outstanding transactions over a single Association).
 
-.. csv-table:: Table 4.2.3.2.3-1.: Asynchronous Nature as a SCU for STORAGE-SCU AE
+.. csv-table:: Asynchronous Nature as a SCU for STORAGE-SCU AE
    :file: asynchronous-nature.csv
 
 .. _workflow-implementation-class-uid:
@@ -51,7 +51,7 @@ Implementation Identifying Information
 ''''''''''''''''''''''''''''''''''''''
 The implementation information for this Application Entity is:
 
-.. csv-table:: Table 4.2.3.2.4-1.: DICOM Implementation Class and Version for AE Workflow
+.. csv-table:: DICOM Implementation Class and Version for AE Workflow
    :file: implementation-identifying-information.csv
 
 .. _workflow-association-initiation:
@@ -131,7 +131,7 @@ Proposed Presentation Contexts
 
 The Workflow AE will propose Presentation Contexts as shown in the following table:
 
-.. table:: Table 4.2.3.3.2-1.: Proposed Presentation Contexts for Real-World Activity Acquire Images
+.. table:: Proposed Presentation Contexts for Real-World Activity Acquire Images
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------+
 | Presentation Context Table                                                                                                                         |
@@ -156,19 +156,19 @@ SOP Specific Conformance
 
 The behavior of modality worklist when encountering status codes in a Modality Worklist C-FIND response is summarized in the Table below. If any other SCP response status than "Success" or "Pending" is received by modality worklist, a message "query failed" will appear on the user interface.
 
-.. csv-table:: Table 4.2.3.3.3-1.: Modality Worklist C-FIND Response Status Handling Behavior
+.. csv-table:: Modality Worklist C-FIND Response Status Handling Behavior
    :header: "Service Status", "Further Meaning", "Error Code", "Behaviour"
    :file: modality-worklist-c-find-resp-status-handling-behaviour.csv
 
 The behavior when encountering status codes in an MPPS N-CREATE or N-SET response is summarized in table below. If any other SCP response status than "Success" or "Warning" is received, a message "MPPS update failed" will appear on the user interface.
 
-.. csv-table:: Table 4.2.3.3.3-2.: MPPS N-CREATE / N-SET Response Status Handling Behavior
+.. csv-table:: MPPS N-CREATE / N-SET Response Status Handling Behavior
    :header: "Service Status", "Further Meaning", "Error Code", "Behaviour"
    :file: mpps-resp-status-handling-behaviour.csv
 
 The behavior during communication failure is summarized in the Table below:
 
-.. csv-table:: Table 4.2.3.3.3-3.: MPPS / Modality Worklist Communication Failure Behavior
+.. csv-table:: MPPS / Modality Worklist Communication Failure Behavior
    :header: "Exception", "Behaviour"
    :file: communication-failure-behaviour.csv
 
@@ -176,7 +176,7 @@ Acquired images will always use the Study Instance UID specified for the Schedul
 The Table below provides a description of the Modality Worklist Request Identifier and specifies the attributes that are copied into the images. Unexpected attributes returned in a C-FIND response are ignored.
 Requested return attributes not supported by the SCP are set to have no value. Non-matching responses returned by the SCP due to unsupported optional matching keys are ignored. No attempt is made it filter out possible duplicate entries.
 
-.. table:: Table 4.2.3.3.3-4.: Worklist Request Identifier
+.. table:: Worklist Request Identifier
 
 +----------------------------------------------------------------------------------------+
 | Module Name                                                                            |
@@ -291,7 +291,7 @@ The above tables should be read as follows:
 The default Query Configuration is set to "Modality" (RF) and "Date" (date of today). Optionally, additional matching for the own AET is configurable.
 Below table provides a description of the MPPS N-CREATE and N-SET request identifiers sent. Empty cells in the N-CREATE and N-SET columns indicate that the attribute is not sent. An "x" indicates that an appropriate value will be sent. A "Zero length" attribute will be sent with zero length.
 
-.. csv-table:: Table 4.2.3.3.3-5.: MPPS N-CREATE / N-SET Request Identifier
+.. csv-table:: MPPS N-CREATE / N-SET Request Identifier
    :header: "Attribute Name", "Tag", "VR", "N-CREATE", "N-SET"
    :file: mpps-request-identifiers.csv
 

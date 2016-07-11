@@ -6,7 +6,7 @@ WADO-RS Specifications
 WADO-RS Retrieve Study
 """"""""""""""""""""""
 
-.. csv-table:: Table 4.2.6.1-1.: WADO-RS Retrieve Study
+.. csv-table:: WADO-RS Retrieve Study
    :header: "Options", "Restrictions"
    :file: retrieve-study-series-instance.csv
 
@@ -15,7 +15,7 @@ WADO-RS Retrieve Study
 WADO-RS Retrieve Series
 """""""""""""""""""""""
 
-.. csv-table:: Table 4.2.6.2-1.: WADO-RS Retrieve Series
+.. csv-table:: WADO-RS Retrieve Series
    :header: "Options", "Restrictions"
    :file: retrieve-study-series-instance.csv
 
@@ -24,7 +24,7 @@ WADO-RS Retrieve Series
 WADO-RS Retrieve Instance
 """""""""""""""""""""""""
 
-.. csv-table:: Table 4.2.6.3-1.: WADO-RS Retrieve Instance
+.. csv-table:: WADO-RS Retrieve Instance
    :header: "Options", "Restrictions"
    :file: retrieve-study-series-instance.csv
 
@@ -33,7 +33,7 @@ WADO-RS Retrieve Instance
 WADO-RS Retrieve Frames
 """""""""""""""""""""""
 
-.. csv-table:: Table 4.2.6.4-1.: WADO-RS Retrieve Frames
+.. csv-table:: WADO-RS Retrieve Frames
    :header: "Options", "Restrictions"
    :file: retrieve-frames.csv
 
@@ -42,7 +42,7 @@ WADO-RS Retrieve Frames
 WADO-RS Retrieve Bulk Data
 """"""""""""""""""""""""""
 
-.. csv-table:: Table 4.2.6.5-1.: WADO-RS Retrieve Bulk Data
+.. csv-table:: WADO-RS Retrieve Bulk Data
    :header: "Options", "Restrictions"
    :file: retrieve-bulkdata.csv
 
@@ -51,7 +51,7 @@ WADO-RS Retrieve Bulk Data
 WADO-RS Retrieve Metadata
 """""""""""""""""""""""""
 
-.. csv-table:: Table 4.2.6.6-1.: WADO-RS Retrieve Metadata
+.. csv-table:: WADO-RS Retrieve Metadata
    :header: "Options", "Restrictions"
    :file: retrieve-metadata.csv
 
@@ -72,7 +72,7 @@ Number Of Connections
 '''''''''''''''''''''
 DCM4CHEE-WADO-SERVICE limits the number of simultaneous RS requests. Additional requests will be queued after the HTTP connection is accepted. When an earlier request completes, a pending request will proceed.
 
-.. csv-table:: Table 4.2.6.7-1.: Number of HTTP Requests Supported
+.. csv-table:: Number of HTTP Requests Supported
    :file: common/qido-rs-stow-rs-wado-uri-wado-rs-number-of-connections.csv
 
 .. _wado-rs-asynchronous-nature:

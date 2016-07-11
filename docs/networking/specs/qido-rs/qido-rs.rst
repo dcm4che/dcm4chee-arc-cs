@@ -6,7 +6,7 @@ QIDO-RS Specifications
 QIDO-RS Search For Studies
 """"""""""""""""""""""""""
 
-.. csv-table:: Table 4.2.7.1-1.: QIDO-RS Search for Studies Specification
+.. csv-table:: QIDO-RS Search for Studies Specification
    :header: "Parameter", "Restrictions"
    :file: search-for-studies.csv
 
@@ -19,7 +19,7 @@ DCM4CHEE-QIDO-SERVICE will perform case insensitive matching for PN VR attribute
 2. Physician(s) of Record (0008,1048).
 3. Patient's Name (0010,0010).
 
-.. csv-table:: Table 4.2.7.1-2.: QIDO-RS Study Attribute Matching
+.. csv-table:: QIDO-RS Study Attribute Matching
    :header: "Keyword", "Tag", "Types of Matching"
    :file: study-attribute-matching.csv
 
@@ -41,13 +41,13 @@ Note : If only Universal Matching is supported for an attribute then that attrib
 QIDO-RS Search For Series
 """""""""""""""""""""""""
 
-.. csv-table:: Table 4.2.7.2-1.: QIDO-RS Search for Series Specification
+.. csv-table:: QIDO-RS Search for Series Specification
    :header: "Parameter", "Restrictions"
    :file: search-for-series.csv
 
 Types of Matching: As explained above in QIDO-RS Search For Studies
 
-.. csv-table:: Table 4.2.7.2-2.: QIDO-RS Series Attribute Matching
+.. csv-table:: QIDO-RS Series Attribute Matching
    :header: "Keyword", "Tag", "Types of Matching"
    :file: series-attribute-matching.csv
 
@@ -56,13 +56,13 @@ Types of Matching: As explained above in QIDO-RS Search For Studies
 QIDO-RS Search For Instances
 """"""""""""""""""""""""""""
 
-.. csv-table:: Table 4.2.7.3-1.: QIDO-RS Search for Instances Specification
+.. csv-table:: QIDO-RS Search for Instances Specification
    :header: "Parameter", "Restrictions"
    :file: search-for-instances.csv
 
 Types of Matching: As explained above in QIDO-RS Search For Studies
 
-.. csv-table:: Table 4.2.7.3-2.: QIDO-RS Instance Attribute Matching
+.. csv-table:: QIDO-RS Instance Attribute Matching
    :header: "Keyword", "Tag", "Types of Matching"
    :file: instance-attribute-matching.csv
 
@@ -83,7 +83,7 @@ Number Of Connections
 '''''''''''''''''''''
 DCM4CHEE-QIDO-SERVICE limits the number of simultaneous RS requests. Additional requests will be queued after the HTTP connection is accepted. When an earlier request completes, a pending request will proceed.
 
-.. csv-table:: Table 4.2.7.4-1.: Number of HTTP Requests Supported
+.. csv-table:: Number of HTTP Requests Supported
    :file: common/qido-rs-stow-rs-wado-uri-wado-rs-number-of-connections.csv
 
 .. _qido-rs-asynchronous-nature:
@@ -98,6 +98,6 @@ Response Status
 '''''''''''''''
 DCM4CHEE-QIDO-SERVICE shall provide a response message header containing the appropriate status code indicating success, warning, or failure as shown below
 
-.. csv-table:: Table 4.2.7.4-2.: HTTP Standard Response Codes
+.. csv-table:: HTTP Standard Response Codes
    :header: "Code", "Name", "Description"
    :file: http-standard-response-codes.csv

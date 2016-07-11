@@ -10,8 +10,12 @@ configured that the Application Entities have different AE Titles.
 
 .. figure:: application-data-flow-diagram.svg
 
-   Figure 4.1-1. Application Data Flow Diagram
+   Application Data Flow Diagram
+
+.. figure:: wrkflw-application-data-flow-diagram.svg
+
+   Workflow Application Data Flow Diagram
 
 .. figure:: web-application-data-flow-diagram.svg
 
-   Figure 4.1-2. Web Application Data Flow Diagram
+   Web Application Data Flow Diagram

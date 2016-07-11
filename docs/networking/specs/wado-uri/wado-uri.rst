@@ -6,7 +6,7 @@ WADO-URI Specification
 WADO-URI Retrieve Imaging Document Set
 """"""""""""""""""""""""""""""""""""""
 
-.. csv-table:: Table 4.2.5.1-1.: WADO-URI Retrieve Imaging Documents Specification
+.. csv-table:: WADO-URI Retrieve Imaging Documents Specification
    :header: "Parameter", "Restrictions"
    :file: retrieve-imaging-docs-specs.csv
 
@@ -17,7 +17,7 @@ If the URI Retrieve specifies no transfer syntax that is supported by the archiv
 WADO-URI Retrieve Rendered Imaging Document Set
 """""""""""""""""""""""""""""""""""""""""""""""
 
-.. csv-table:: Table 4.2.5.2-1.: WADO-URI Retrieve Rendered Imaging Documents Specification
+.. csv-table:: WADO-URI Retrieve Rendered Imaging Documents Specification
    :header: "Parameter", "Restrictions"
    :file: retrieve-rendered-imaging-docs-specs.csv
 
@@ -45,7 +45,7 @@ Number Of Connections
 '''''''''''''''''''''
 DCM4CHEE-WADO-SERVICE limits the number of simultaneous HTTP connections.
 
-.. csv-table:: Table 4.2.5.4-1.: Number of HTTP Requests Supported
+.. csv-table:: Number of HTTP Requests Supported
    :file: common/qido-rs-stow-rs-wado-uri-wado-rs-number-of-connections.csv
 
 .. _wado-uri-asynchronous-nature:
