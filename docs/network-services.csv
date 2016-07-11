@@ -176,7 +176,6 @@
 "Private Philips MR Color Image Storage", "Yes", "Yes"
 "Private Philips MR Examcard Storage", "Yes", "Yes"
 "Private PMOD Multi-frame Image Storage", "Yes", "Yes"
-"Storage Commitment Push Model SOP Class", "No", "Yes"
 "**Query/Retrieve**",,
 "Patient Root Query/Retrieve Information Model - FIND", "No", "Yes"
 "Patient Root Query/Retrieve Information Model - MOVE", "Yes", "Yes"
@@ -185,6 +184,7 @@
 "Study Root Query/Retrieve Information Model - MOVE", "Yes", "Yes"
 "Study Root Query/Retrieve Information Model - GET", "No", "Yes"
 "**Workflow Management**",,
+"Storage Commitment Push Model SOP Class", "No", "Yes"
 "Modality Worklist Information Model - FIND", "No", "Yes"
 "Modality Performed Procedure Step", "Yes", "Yes"
 "Instance Availability Notification SOP Class", "Yes", "No"
