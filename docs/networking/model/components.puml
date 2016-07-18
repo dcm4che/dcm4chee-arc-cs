@@ -1,0 +1,12 @@
+@startuml
+[Application\nServer] as arc
+[LDAP] <-- arc
+[Database] <-- arc
+[Storage] <-- arc
+arc -> [ELK]
+() HTTP as http
+[ELK] -- http
+arc -- DICOM
+arc -- HL7v2
+arc -- HTTP
+@enduml

@@ -1,0 +1,28 @@
+@startuml
+frame "Archive Container" {
+[Application\nServer] as arc
+}
+frame "LDAP Cont." {
+[LDAP] <-- arc
+}
+frame "DB Container" {
+[Database] <-- arc
+}
+frame "Storage Cont." {
+[Storage] <-- arc
+}
+frame "Logstash Cont." {
+[Logstash] <- arc
+}
+frame "Elasticsearch Cont." {
+[Logstash] -> [Elasticsearch]
+}
+frame "Kibana Cont." {
+[Elasticsearch] <- [Kibana]
+}
+() HTTP as http
+[Kibana] - http
+arc -- DICOM
+arc -- HL7v2
+arc -- HTTP
+@enduml

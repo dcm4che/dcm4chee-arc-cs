@@ -1,0 +1,33 @@
+@startuml
+node "host A" {
+[Application\nServer 1] as arc1
+[Storage1] <-- arc1
+}
+node "host C" {
+[Application\nServer 2] as arc2
+[Storage2] <-- arc2
+}
+node "host B" {
+[LDAP] <-- arc1
+[LDAP] <-- arc2
+[Database] <- arc1
+[Database] <- arc2
+}
+node "host D" {
+arc1 -> [ELK]
+arc2 -> [ELK]
+}
+HTTP -- [ELK]
+() HTTP as http1
+() HTTP as http2
+() DICOM as dicom1
+() DICOM as dicom2
+() HL7v2 as hl71
+() HL7v2 as hl72
+arc1 -- dicom1
+arc1 -- hl71
+arc1 -- http1
+arc2 -- dicom2
+arc2 -- hl72
+arc2 -- http2
+@enduml
