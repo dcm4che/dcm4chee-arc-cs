@@ -1,31 +1,31 @@
 @startuml
 skinparam componentStyle uml2
-node {
+node "" <<Docker Container>> {
 database LDAP as ldap
 }
-node {
+node "" <<Docker Container>> {
 node "Wildfly AS" as wf1 {
 [Keycloak] as kc
 }
 }
-node {
+node "" <<Docker Container>> {
 node "Wildfly AS" {
 [Archive] as arc
 }
 }
-node {
+node "" <<Docker Container>> {
 database "Database" as db
 }
-node {
+node "" <<Docker Container>> {
 storage Storage
 }
-node {
+node "" <<Docker Container>> {
 [Logstash] <- arc
 }
-node {
+node "" <<Docker Container>> {
 storage Elasticsearch
 }
-node {
+node "" <<Docker Container>> {
 Elasticsearch <- [Kibana]
 }
 () HTTP as http1
