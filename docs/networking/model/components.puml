@@ -3,7 +3,7 @@ skinparam componentStyle uml2
 database LDAP
 database Database as db
 storage Storage
-node "Wildfly AS" {
+node "WildFly AS" {
 [Archive] as arc
 [Keycloack] as kc
 }

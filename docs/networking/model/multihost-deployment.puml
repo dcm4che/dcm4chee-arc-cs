@@ -1,21 +1,21 @@
 @startuml
 skinparam componentStyle uml2
 node "Host B" {
-node "Wildfly AS" as as1 {
+node "WildFly AS" as as1 {
 [Archive] as arc1
 }
 storage Storage1
 storage Storage2
 }
 node "Host C" {
-node "Wildfly AS" as as2 {
+node "WildFly AS" as as2 {
 [Archive] as arc2
 }
 storage Storage3
 storage Storage4
 }
 node "Host A" {
-node "Wildfly AS" as as3 {
+node "WildFly AS" as as3 {
 [Keycloak] as kc
 }
 database LDAP

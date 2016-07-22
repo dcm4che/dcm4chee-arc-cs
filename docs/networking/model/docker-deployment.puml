@@ -4,12 +4,12 @@ node "" <<Docker Container>> {
 database LDAP as ldap
 }
 node "" <<Docker Container>> {
-node "Wildfly AS" as wf1 {
+node "WildFly AS" as wf1 {
 [Keycloak] as kc
 }
 }
 node "" <<Docker Container>> {
-node "Wildfly AS" {
+node "WildFly AS" {
 [Archive] as arc
 }
 }
