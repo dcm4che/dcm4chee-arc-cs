@@ -1,29 +1,52 @@
 @startuml
-node "host A" {
-[Application\nServer 1] as arc1
-[Storage1] <-- arc1
+skinparam componentStyle uml2
+node "Host B" {
+node "Wildfly AS" as as1 {
+[Archive] as arc1
 }
-node "host C" {
-[Application\nServer 2] as arc2
-[Storage2] <-- arc2
+storage Storage1
+storage Storage2
 }
-node "host B" {
-[LDAP] <-- arc1
-[LDAP] <-- arc2
-[Database] <- arc1
-[Database] <- arc2
+node "Host C" {
+node "Wildfly AS" as as2 {
+[Archive] as arc2
 }
-node "host D" {
-arc1 -> [ELK]
-arc2 -> [ELK]
+storage Storage3
+storage Storage4
 }
-HTTP -- [ELK]
+node "Host A" {
+node "Wildfly AS" as as3 {
+[Keycloak] as kc
+}
+database LDAP
+database Database
+}
+node "Host D" {
+storage "Elastic Stack" as elk
+}
 () HTTP as http1
 () HTTP as http2
+() HTTP as http3
+() HTTP as http4
 () DICOM as dicom1
 () DICOM as dicom2
 () HL7v2 as hl71
 () HL7v2 as hl72
+LDAP <- kc
+kc -- http3
+http4 -- elk
+LDAP <-- arc1
+LDAP <-- arc2
+kc <-- arc1
+kc <-- arc2
+Database <- arc1
+Database <- arc2
+Storage1 --> arc1
+Storage2 -> arc1
+Storage3 --> arc2
+Storage4 -> arc2
+arc1 -> elk
+arc2 -> elk
 arc1 -- dicom1
 arc1 -- hl71
 arc1 -- http1

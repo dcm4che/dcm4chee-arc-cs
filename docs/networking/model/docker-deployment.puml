@@ -1,28 +1,45 @@
 @startuml
-frame "Archive Container" {
-[Application\nServer] as arc
+skinparam componentStyle uml2
+node {
+database LDAP as ldap
 }
-frame "LDAP Cont." {
-[LDAP] <-- arc
+node {
+node "Wildfly AS" as wf1 {
+[Keycloak] as kc
 }
-frame "DB Container" {
-[Database] <-- arc
 }
-frame "Storage Cont." {
-[Storage] <-- arc
+node {
+node "Wildfly AS" {
+[Archive] as arc
 }
-frame "Logstash Cont." {
+}
+node {
+database "Database" as db
+}
+node {
+storage Storage
+}
+node {
 [Logstash] <- arc
 }
-frame "Elasticsearch Cont." {
-[Logstash] -> [Elasticsearch]
+node {
+storage Elasticsearch
 }
-frame "Kibana Cont." {
-[Elasticsearch] <- [Kibana]
+node {
+Elasticsearch <- [Kibana]
 }
-() HTTP as http
-[Kibana] - http
+() HTTP as http1
+() HTTP as http2
+() HTTP as http3
+arc --> kc
+ldap <-- kc
+ldap <- arc
+db <- arc
+Storage <- arc
+Logstash -> Elasticsearch
+kc - http1
 arc -- DICOM
 arc -- HL7v2
-arc -- HTTP
+arc -- http2
+Kibana - http3
 @enduml

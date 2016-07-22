@@ -1,12 +1,25 @@
 @startuml
-[Application\nServer] as arc
-[LDAP] <-- arc
-[Database] <-- arc
-[Storage] <-- arc
-arc -> [ELK]
-() HTTP as http
-[ELK] -- http
+skinparam componentStyle uml2
+database LDAP
+database Database as db
+storage Storage
+node "Wildfly AS" {
+[Archive] as arc
+[Keycloack] as kc
+}
+storage "Elastic Stack" as elk
+() HTTP as http1
+() HTTP as http2
+() HTTP as http3
+LDAP <-- kc
+kc -- http1
+LDAP <-- arc
+db <-- arc
+Storage <-- arc
+kc <- arc
 arc -- DICOM
 arc -- HL7v2
-arc -- HTTP
+arc -- http2
+elk <-- arc
+elk -- http3
 @enduml
