@@ -23,8 +23,8 @@ previous received object. That allows to operate with object sources which does 
 to correct failures in the originally sent objects, but which just send the objects with corrected attributes but
 unchanged *SOP Instance UID* again.
 
-Also the behavior how to treat differences in Patient, Study or Series attributes in received instances belonging
-to the same Patient, Study or Series is configurable: the attributes of the already existing Patient, Study or
+The behavior how to treat differences in Patient, Study or Series attributes in received instances belonging
+to the same Patient, Study or Series is also configurable: the attributes of the already existing Patient, Study or
 Series record in the data base may
 
 * not be updated at all,
