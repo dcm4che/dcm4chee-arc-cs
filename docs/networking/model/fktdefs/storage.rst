@@ -42,5 +42,5 @@ If activated, studies - or individual series - will be deleted automatically aft
 On the other hand, |product| can be configured to prevent manual deletion of objects of studies which
 *Rentention Period* is not yet expired.
 
-The Storage AE can be also be configured to act as a cache archive, which deletes least recent accessed studies
+The Storage AE can also be configured to act as a cache archive, which deletes least recent accessed studies
 according configured thresholds of the storage backend.
