@@ -28,9 +28,9 @@ to the same Patient, Study or Series is also configurable: the attributes of the
 Series record in the data base may
 
 * not be updated at all,
-* supplemented with attributes from the new received object, not included in the existing record,
-* additionally also overwrite existing attributes by different values of the attributes in the new received object,
-* completely replaced by the extracted values from the new received object.
+* be supplemented with attributes from the new received object, not included in the existing record,
+* be additionally overwritten by different values of the attributes in the new received object,
+* be completely replaced by the extracted attributes from the new received object.
 
 The Storage AE may also associate a configured *Access Control ID* to a received study. Query/Retrieve AEs can be
 configured to only provide access to data and objects of studies, which associated *Access Control ID* matches one
@@ -44,3 +44,15 @@ On the other hand, |product| can be configured to prevent manual deletion of obj
 
 The Storage AE can also be configured to act as a cache archive, which deletes least recent accessed studies
 according configured thresholds of the storage backend.
+
+Received objects may be exported according configurable export rules, which are triggered by matching
+sending/receiving AE Titles and/or matching object attribute values. Received objects of one series or study may be
+accumulated, before all objects of the series or study are exported in one task. Export by DICOM storage is invoked
+by the :doc:`networking/model/fktdefs/query-retrieve`.
+
+Objects may be also received from the Storage AE as result of a forwarded retrieve request to a configured fallback
+archive by the :doc:`networking/model/fktdefs/query-retrieve`. In that case, the received objects will be forwarded
+immediately to the final retrieve destination by the :doc:`networking/model/fktdefs/query-retrieve`.
+
+The receive of objects may trigger the notification of configured remote AEs by the DICOM Instance Available
+Notification service invoked by the :doc:`networking/model/fktdefs/workflow`.
