@@ -48,11 +48,11 @@ according configured thresholds of the storage backend.
 Received objects may be exported according configurable export rules, which are triggered by matching
 sending/receiving AE Titles and/or matching object attribute values. Received objects of one series or study may be
 accumulated, before all objects of the series or study are exported in one task. Export by DICOM storage is invoked
-by the :doc:`../query-retrieve`.
+by the :doc:`query-retrieve`.
 
 Objects may be also received from the Storage AE as result of a forwarded retrieve request to a configured fallback
-archive by the :doc:`../query-retrieve`. In that case, the received objects will be forwarded immediately to the final
-retrieve destination by the :doc:`../query-retrieve`.
+archive by the :doc:`query-retrieve`. In that case, the received objects will be forwarded immediately to the final
+retrieve destination by the :doc:`query-retrieve`.
 
 The receive of objects may trigger the notification of configured remote AEs by the DICOM Instance Available
-Notification service invoked by the :doc:`../workflow`.
+Notification service invoked by the :doc:`workflow`.
