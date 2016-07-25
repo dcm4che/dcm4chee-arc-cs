@@ -47,7 +47,7 @@ AE Title, or one AE may have multiple instances identified by different AE Title
 - :doc:`fktdefs/stow-rs`, which receives images and other composite instances via HTTP POST requests.
 - :doc:`fktdefs/qido-rs`, which provides access to Patient, Study, Series, and Instance data of received Instances via
   HTTP GET requests.
-- :doc:`fktdefs/wado-uri`, which provides access to individual DICOM Objects - as DICOM file or rendered to a
+- :doc:`fktdefs/wado-uri`, which provides access to individual DICOM Objects - as DICOM file or rendered to
   non-DICOM media types for display - via HTTP GET requests.
 - :doc:`fktdefs/wado-rs`, which provides access to the metadata, the bulk data or the whole DICOM Objects, of a Study
   or Series via HTTP GET requests.
