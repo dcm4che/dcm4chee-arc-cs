@@ -56,3 +56,44 @@ retrieve destination by the :doc:`query-retrieve`.
 
 The receive of objects may trigger the notification of configured remote AEs by the DICOM Instance Available
 Notification service invoked by the :doc:`workflow`.
+
+If the Storage AE receives a Key Object Selection (KOS) Document with a Document Title which matches one of the
+configured Rejection Note Code Values, the object will be treated as Rejection Note and the instances referenced
+by the object will be marked as rejected. The Key Selection Object Document itself is stored on the storage backend
+as other objects received from the Storage AE. Further treatment of the rejected instances and the KOS Document is
+specific to the particular type of rejection.
+
+By default, the KOS Document Titles specified by `Imaging Object Change Management (IOCM)
+<http://wiki.ihe.net/index.php/Imaging_Object_Change_Management>`_ are configured:
+
+- (113001, DCM, "Rejected for Quality Reasons")
+
+  - Hide/Show rejected instances dependend on Query/Retrieve AE
+  - Show KOS Document
+  - Ignore subsequent occurrence of rejected instances
+- (113037, DCM, "Rejected for Patient Safety Reasons")
+
+  - Hide rejected instances
+  - Show KOS Document
+  - Reject subsequent occurrence of rejected instances
+- (113038, DCM, "Incorrect Modality Worklist Entry")
+
+  - Hide rejected instances
+  - Show KOS Document
+  - Reject subsequent occurrence of rejected instances
+- (113039, DCM, "Data Retention Rejected for Quality Reasons")
+
+  - Hide rejected instances and KOS Document
+  - Subsequent occurrence of rejected instances reverts the rejection
+  - Delete rejected instances and KOS Document after delay
+
+The Storage AE accepts requests for commitment for the storage of previous received instances - including KOS Documents
+acting as Rejection Notes. For each object, for which storage commitment is requested, the Storage AE does not only
+check the existence of a record for that object in the data base, but actually read the object from the storage backend,
+recalculating the checksum and compare it with the checksum stored in the data base. Only for objects which recalulated
+checksum matches with that in the data base the commitment to store is accepted.
+
+The amount of time to take responsibility for the safekeeping of an objects is independent of the successful
+commitment to store the object, but depends on other configuration options, particularly on the configured
+*Study Retention Policy*. It is even possible to accept storage commitment requests when acting as a cache archive,
+which deletes least recent accessed studies according configured thresholds of the storage backend.
