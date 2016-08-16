@@ -1,7 +1,7 @@
 Storage Application Entity
 """"""""""""""""""""""""""
 
-The Storage Application Entity receives images and other composite instances from remote AEs.
+The Storage Application Entity receives images and other Composite Object Instances from remote AEs.
 
 Compressed images and non-image objects are stored as received on the storage backend configured for the Storage AE.
 Uncompressed images may be compressed according configurable compression rules before they are stored with all

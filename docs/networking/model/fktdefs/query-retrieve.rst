@@ -1,5 +1,24 @@
 Query/Retrieve Application Entity
 """""""""""""""""""""""""""""""""
 
-The STORAGE-SCU AE can be invoked by the QUERY-RETRIEVE-SCP AE to trigger the transfer of specific images to a remote destination AE. The STORAGE-SCU AE must be correctly configured with the host and port number of any external DICOM AEs that are to be C-MOVE retrieval destinations. The Presentation Contexts to use are determined from the headers of the DICOM files to be transferred. Some conversion of the DICOM image objects is possible if the original Presentation Context is not supported by the remote destination AE or if compression is preferred.
-The QUERY-RETRIEVE-SCP AE waits for another application to connect at the presentation address configured for its Application Entity Title. When another application connects, QUERY-RETRIEVE-SCP AE expects it to be a DICOM application. QUERY-RETRIEVE-SCP AE will accept Associations with Presentation Contexts for SOP Classes of the DICOM Query-Retrieve Service Class, and Verification Service Class. It will handle query and retrieve requests on these Presentation Contexts and respond with data objects with values corresponding to the contents of the DCM4CHEE archive database. For C-MOVE requests the destination for the image objects is determined from the Destination AE Title contained in the C-MOVE request. When a retrieval request is received, the QUERY-RETRIEVE-SCP AE issues a command to the STORAGE-SCU AE to send the specified images to the C-MOVE Destination AE.
+The Query/Retrieve Application Entity processes queries for Patient, Study, Series, and Instance information of
+received DICOM objects invoked by remote AEs. Attributes of requested entities are fetched from the database.
+The objects on the storage backend are not accessed. Therefore, only the configurable sub-set of attributes which
+were extracted from the received objects and stored in the data base is provided.
+
+In addition, the Query/Retrieve Application Entity provides the ability to retrieve/transfer received DICOM objects to
+remote AEs. The transfer may be originated by a retrieve request from the same or from another remote AE, it may be
+caused by a configured Export Rule for received objects, or it may be triggered by the Archive Web UI, which itself
+uses a RESTful service to schedule the transfer, which may be also used by other web clients.
+
+The Query/Retrieve Application Entity may forward retrieve requests for which no matching objects were found in the
+data base to a configured other DICOM Archive. Two configuration options are available:
+
+1. Preserve the original Move Destination AE Title in the forwarded retrieve request, so the other DICOM Archive
+   will directly send the requested objects to the destination AE.
+2. Replace the original Move Destination AE Title in the forwarded retrieve request with the AE Title of the/a
+   :doc:`storage`, so the other DICOM Archive will send the requested objects to the Storage AE and the
+   Query/Retrieve AE will forward the received objects to the original Move Destination AE. If the other DICOM
+   Archive signals that not all requested objects could be transfered to the Storage AE successfully, the Study and
+   Series of the received objects are marked as incomplete in the data base and following retrieve request for that
+   Study or Series will trigger to retry to retrieve the Study or Series from the other DICOM Archive.

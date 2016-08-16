@@ -37,15 +37,15 @@ System components of |product| are also available as Docker images to run within
 Conceptually the network services may be modeled as the following separate AEs, though they may share one
 AE Title, or one AE may have multiple instances identified by different AE Titles, with different configuration.
 
-- :doc:`fktdefs/storage`, which receives incoming images and other composite instances and accepts requests for
-  commitment for the safekeeping of the received instances.
-- :doc:`fktdefs/query-retrieve`, which processes queries for Patient, Study, Series, and Instance data and also
-  processes retrieval requests, sending the requested instances to the retrieve destination AE.
+- :doc:`fktdefs/storage`, which receives incoming images and other Composite Object Instances and accepts requests for
+  commitment for the safekeeping of the received objects.
+- :doc:`fktdefs/query-retrieve`, which processes queries for Patient, Study, Series, and Instance information and also
+  processes retrieval requests, sending the requested objects to the retrieve destination AE.
 - :doc:`fktdefs/workflow`, which processes queries for Scheduled Procedure Steps, receives  Performed Procedure Step
   messages and optionally forwards them to any remote AE, and also notifies remote AEs about the availability of
   received instances.
-- :doc:`fktdefs/stow-rs`, which receives images and other composite instances via HTTP POST requests.
-- :doc:`fktdefs/qido-rs`, which provides access to Patient, Study, Series, and Instance data of received Instances via
+- :doc:`fktdefs/stow-rs`, which receives images and other Composite Object Instances via HTTP POST requests.
+- :doc:`fktdefs/qido-rs`, which provides access to Patient, Study, Series, and Instance data of received objects via
   HTTP GET requests.
 - :doc:`fktdefs/wado-uri`, which provides access to individual DICOM Objects - as DICOM file or rendered to
   non-DICOM media types for display - via HTTP GET requests.
