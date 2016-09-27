@@ -391,8 +391,8 @@ By default, no image compression is configured.
 Note : If a failure condition does occur when handling an Association then all images previously received successfully over the Association
 are maintained in the DCM4CHEE archive database. No previously successfully received images are discarded. Even if an image is successfully
 received but an error occurs transmitting the C-STORE Response then this final image is maintained rather than discarded. If the loss of an
-Association is detected then the Association is closed. In the above table, references to error codes related to Refused Service Status is
-due to the fact that when objects are rejected the rejection notes are stored in the database for further processing.
+Association is detected then the Association is closed. In the above table, some references to rejection error codes in Refused Service
+Status is due to the fact that, when objects are rejected the rejection notes are stored in the database for further processing.
 
 
 The Behavior of STORAGE-SCP AE during communication failure is summarized in the following table:
