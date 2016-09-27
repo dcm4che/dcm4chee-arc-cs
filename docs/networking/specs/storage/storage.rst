@@ -343,15 +343,58 @@ Entity or HTTP client and dependent of DICOM Attribute values of received SOP In
 
 By default, no image compression is configured.
 
+.. table:: Storage Application C-STORE Response Status Return Reasons
 
-.. csv-table:: Storage Application C-STORE Response Status Return Reasons
-   :header: "Service Status", "Further Meaning", "Error Code", "Behaviour"
-   :file: c-store-response-status-return-reasons.csv
+   +----------------+-------------------------------------------------------+------------+----------------------------------------------------------------------------------------------------+
+   | Service Status | Further Meaning                                       | Error Code | Behaviour                                                                                          |
+   +================+=======================================================+============+====================================================================================================+
+   | Success        | Success                                               | 0000       | The Composite SOP Instance was successfully received, verified, and stored in the system database. |
+   +----------------+-------------------------------------------------------+------------+----------------------------------------------------------------------------------------------------+
+   | Refused        | Out of Resources                                      | A700       | Indicates that there was not enough disk space to store the image. Error message is output to the  |
+   |                |                                                       |            | Service Log. The SOP Instance will not be saved.                                                   |
+   +----------------+-------------------------------------------------------+------------+----------------------------------------------------------------------------------------------------+
+   |                | Duplicate Rejection Note                              | A770       | Indicates that rejection note for the object was already received.                                 |
+   +----------------+-------------------------------------------------------+------------+----------------------------------------------------------------------------------------------------+
+   |                | Subsequent Occurrence of Rejected Object              | A771       | Indicates that there was a subsequent occurrence of a rejected object during store operation.      |
+   +----------------+-------------------------------------------------------+------------+----------------------------------------------------------------------------------------------------+
+   |                | Rejection Failed - No Such Instance                   | A772       | Indicates that no object was found in database to be rejected.                                     |
+   +----------------+-------------------------------------------------------+------------+----------------------------------------------------------------------------------------------------+
+   |                | Rejection Failed - Class Instance Conflict            | A773       | Indicates that there was a conflict in SOP Class UIDs of object (between that of the one received  |
+   |                |                                                       |            | from client and one retrieved from database) to be rejected.                                       |
+   +----------------+-------------------------------------------------------+------------+----------------------------------------------------------------------------------------------------+
+   |                | Rejection Failed - Already Rejected                   | A774       | Indicates that the rejected object was already rejected.                                           |
+   +----------------+-------------------------------------------------------+------------+----------------------------------------------------------------------------------------------------+
+   |                | Rejection for Retention Policy Expired not Authorized | A775       | Indicates that rejection of objects with type as Retention Expired and policy                      |
+   |                |                                                       |            | AllowRejectionForDataRetentionPolicyExpired set to NEVER is not allowed.                           |
+   +----------------+-------------------------------------------------------+------------+----------------------------------------------------------------------------------------------------+
+   |                | Retention Period of Study not yet Expired             | A776       | Indicates that rejection of objects is not allowed as Study Retention Period has not expired yet.  |
+   +----------------+-------------------------------------------------------+------------+----------------------------------------------------------------------------------------------------+
+   |                | Patient ID Missing in Object                          | A777       | Indicates that the Patient ID is missing in the object.                                            |
+   +----------------+-------------------------------------------------------+------------+----------------------------------------------------------------------------------------------------+
+   | Error          | Data Set does not match SOP Class                     | A900       | Indicates that the Data Set does not encode a valid instance of the SOP Class specified. This      |
+   |                |                                                       |            | status is returned if the DICOM Object stream can be successfully parsed but does not contain      |
+   |                |                                                       |            | values for one or more mandatory Elements of the SOP Class. The STORAGE-SCP AE does not perform a  |
+   |                |                                                       |            | comprehensive check, as it only checks a subset of required Elements. In addition, if the SOP Class|
+   |                |                                                       |            | is for a type of image but the SOP Instance does not contain values necessary for its display then |
+   |                |                                                       |            | this status is returned. Error message is output to the Service Log. The system can be configured  |
+   |                |                                                       |            | to temporarily save such Data Sets in order to aid problem diagnosis.                              |
+   +----------------+-------------------------------------------------------+------------+----------------------------------------------------------------------------------------------------+
+   |                | Cannot understand                                     | C000       | Indicates that the STORAGE-SCP AE cannot parse the Data Set into Elements. Error message is output |
+   |                |                                                       |            | to the Service Log. The system can be configured to temporarily save such Data Sets in order to aid|
+   |                |                                                       |            | problem diagnosis.                                                                                 |
+   +----------------+-------------------------------------------------------+------------+----------------------------------------------------------------------------------------------------+
+   | Warning        | Coercion of Data Elements                             | B000       | Indicates that one or more Element values were coerced. Refer to the Attributes defined in Annex   |
+   |                |                                                       |            | for a list of those that can be coerced. Note that return of this status is disabled by default, as|
+   |                |                                                       |            | some SCUs treat it as an Error code rather than a Warning.                                         |
+   +----------------+-------------------------------------------------------+------------+----------------------------------------------------------------------------------------------------+
 
 Note : If a failure condition does occur when handling an Association then all images previously received successfully over the Association
 are maintained in the DCM4CHEE archive database. No previously successfully received images are discarded. Even if an image is successfully
 received but an error occurs transmitting the C-STORE Response then this final image is maintained rather than discarded. If the loss of an
-Association is detected then the Association is closed.
+Association is detected then the Association is closed. In the above table, references to error codes related to Refused Service Status is
+due to the fact that when objects are rejected the rejection notes are stored in the database for further processing.
+
+
 The Behavior of STORAGE-SCP AE during communication failure is summarized in the following table:
 
 .. csv-table:: STORAGE-SCP AE Storage Service Communication Failure Reasons
