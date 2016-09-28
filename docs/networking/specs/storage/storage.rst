@@ -344,7 +344,7 @@ Entity or HTTP client and dependent of DICOM Attribute values of received SOP In
 By default, no image compression is configured.
 
 .. csv-table:: Storage Application C-STORE Response Status Return Reasons
-    :header: "Service Status", "Further Meaning", "Error Code", "Error Comment", "Behaviour"
+    :header-rows: 1
     :file: c-store-response-status-return-reasons.csv
 
 Note : If a failure condition does occur when handling an Association then all images previously received successfully over the Association
