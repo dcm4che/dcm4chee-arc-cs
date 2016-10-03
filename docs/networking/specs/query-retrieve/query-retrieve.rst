@@ -329,6 +329,7 @@ The tables should be read as follows:
 - Types of Matching: The types of Matching supported by the C-FIND SCP.
 
 The values in 'Types of Matching' column mean as follows :
+
 - "S" indicates the identifier attribute can specify Single Value Matching.
 - "R" will indicate Range Matching.
 - "*" will denote wild card matching.
