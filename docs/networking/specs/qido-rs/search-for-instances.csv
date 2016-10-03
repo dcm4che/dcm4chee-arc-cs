@@ -1,5 +1,0 @@
-"Media Types", "Restricted to 'multipart/related; type=application/dicom+xml' or 'application/json'"
-"Matching Attributes", "Refer Table 4.2.7.3-2."
-"Return Attributes", "Refer Table 4.2.7.3-2."
-"Limit and Offset supported", "Yes"
-"Relational Queries Supported", "Series-level, only"
