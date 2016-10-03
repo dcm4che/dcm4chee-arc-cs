@@ -1,4 +1,6 @@
 "Success", "Success", "0000", "The SCP has completed the operation successfully."
 "Failure", "Processing Failure - Performed Procedure Step Object may no longer be updated", "0110", "The Association is aborted using A-ABORT and the MPPS is marked as failed. The status meaning is logged and reported to the user. Additional information in the Response will be logged (i.e., Error Comment and Error ID)."
-"Warning", "Attribute Value Out of Range", "0116H", "The MPPS operation is considered successful but the status meaning is logged. Additional information in the Response identifying the attributes out of range will be logged (i.e., Elements in the Modification List/Attribute List)"
+"", "Duplicate SOP instance", "0111", "the new managed SOP Instance Value supplied by the invoking DIMSE-service-user was already registered for a managed SOP Instance of the specified SOP Class."
+"", "No Such Object Instance", "0112", "The SOP Instance was not recognized."
+"Warning", "Attribute Value Out of Range", "0116", "The MPPS operation is considered successful but the status meaning is logged. Additional information in the Response identifying the attributes out of range will be logged (i.e., Elements in the Modification List/Attribute List)"
 "*", "*", "Any other status code.", "The Association is aborted using A-ABORT and the MPPS is marked as failed. The status meaning is logged and reported to the user."

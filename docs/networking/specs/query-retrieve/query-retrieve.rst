@@ -328,7 +328,6 @@ Attribute Name: Attributes supported for returned C-FIND Responses.
 Tag: Appropriate DICOM tag for this attribute.
 
 VR: Appropriate DICOM VR for this attribute.
-
 Types of Matching: The types of Matching supported by the C-FIND SCP.
 
 - "S" indicates the identifier attribute can specify Single Value Matching.
@@ -340,7 +339,6 @@ Types of Matching: The types of Matching supported by the C-FIND SCP.
 - "U" will indicate universal matching.
 
 - "L" will indicate that UID lists are supported for matching.
-
 - "NONE" indicates that no matching is supported, but that values for this Element in the database can be returned.
 
 .. csv-table:: Query/Retrieve SCP AE C-FIND Response Status Return Behavior
