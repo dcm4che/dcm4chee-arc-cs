@@ -8,7 +8,12 @@ QIDO-RS Search For Studies
 
 .. csv-table:: QIDO-RS Search for Studies Specification
    :header: "Parameter", "Restrictions"
-   :file: search-for-studies.csv
+
+   "Media Types", "Restricted to 'multipart/related; type=application/dicom+xml' or 'application/json'"
+   "Matching Attributes", "Refer Table :numref:`StudyAttributesMatching`"
+   "Return Attributes", "Refer Table :numref:`StudyAttributesMatching`"
+   "Limit and Offset supported", "Yes"
+   "Person Name Matching", "Literal, case insensitive. Refer Extended Negotiation"
 
 Extended Negotiation :
 
@@ -20,6 +25,7 @@ DCM4CHEE-QIDO-SERVICE will perform case insensitive matching for PN VR attribute
 3. Patient's Name (0010,0010).
 
 .. csv-table:: QIDO-RS Study Attribute Matching
+   :name: StudyAttributesMatching
    :header: "Keyword", "Tag", "Types of Matching"
    :file: study-attribute-matching.csv
 
@@ -27,9 +33,7 @@ Types of Matching :
 
 1. "S" indicates the identifier attribute uses Single Value Matching.
 2. "L" indicates UID List Matching.
-3. "U" indicates Universal Matching.
-
-Note : If only Universal Matching is supported for an attribute then that attribute can only be passed as an "includefield" query key.
+3. "U" indicates Universal Matching. (Note : If only Universal Matching is supported for an attribute then that attribute can only be passed as an "includefield" query key.)
 4. "*" indicates wild card matching.
 5. "R" indicates Range Matching.
 6. "SEQUENCE" indicates Sequence Matching.
