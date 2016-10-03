@@ -323,21 +323,15 @@ All the required search keys on each of the three levels (Study, Series, and Ima
 
 The tables should be read as follows:
 
-Attribute Name: Attributes supported for returned C-FIND Responses.
-
-Tag: Appropriate DICOM tag for this attribute.
-
-VR: Appropriate DICOM VR for this attribute.
-Types of Matching: The types of Matching supported by the C-FIND SCP.
+- Attribute Name: Attributes supported for returned C-FIND Responses.
+- Tag: Appropriate DICOM tag for this attribute.
+- VR: Appropriate DICOM VR for this attribute.
+- Types of Matching: The types of Matching supported by the C-FIND SCP.
 
 - "S" indicates the identifier attribute can specify Single Value Matching.
-
 - "R" will indicate Range Matching.
-
 - "*" will denote wild card matching.
-
 - "U" will indicate universal matching.
-
 - "L" will indicate that UID lists are supported for matching.
 - "NONE" indicates that no matching is supported, but that values for this Element in the database can be returned.
 
