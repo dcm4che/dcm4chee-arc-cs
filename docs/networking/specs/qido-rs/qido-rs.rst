@@ -10,8 +10,8 @@ QIDO-RS Search For Studies
    :header: "Parameter", "Restrictions"
 
    "Media Types", "Restricted to 'multipart/related; type=application/dicom+xml' or 'application/json'"
-   "Matching Attributes", "Refer Table :numref:`StudyAttributesMatching`"
-   "Return Attributes", "Refer Table :numref:`StudyAttributesMatching`"
+   "Matching Attributes", "Refer :numref:`StudyAttributesMatching`"
+   "Return Attributes", "Refer :numref:`StudyAttributesMatching`"
    "Limit and Offset supported", "Yes"
    "Person Name Matching", "Literal, case insensitive. Refer Extended Negotiation"
 
@@ -40,10 +40,11 @@ QIDO-RS Search For Series
    :header: "Parameter", "Restrictions"
 
    "Media Types", "Restricted to 'multipart/related; type=application/dicom+xml' or 'application/json'"
-   "Matching Attributes", "Refer Table :numref:`StudyAttributesMatching` :numref:`SeriesAttributesMatching`"
-   "Return Attributes", "Refer Table :numref:`SeriesAttributesMatching`"
+   "Matching Attributes", "Refer :numref:`StudyAttributesMatching` and :numref:`SeriesAttributesMatching`"
+   "Return Attributes", "Refer :numref:`SeriesAttributesMatching`"
    "Limit and Offset supported", "Yes"
    "Relational Queries Supported", "No"
+   "Person Name Matching", "Literal, case insensitive. Refer Extended Negotiation"
 
 Types of Matching: As explained above in QIDO-RS Search For Studies
 
@@ -61,10 +62,11 @@ QIDO-RS Search For Instances
    :header: "Parameter", "Restrictions"
 
    "Media Types", "Restricted to 'multipart/related; type=application/dicom+xml' or 'application/json'"
-   "Matching Attributes", "Refer Tables :numref:`StudyAttributesMatching` :numref:`SeriesAttributesMatching` :numref:`InstanceAttributesMatching`"
-   "Return Attributes", "Refer Table :numref:`InstanceAttributesMatching`"
+   "Matching Attributes", "Refer :numref:`StudyAttributesMatching`, :numref:`SeriesAttributesMatching` and :numref:`InstanceAttributesMatching`"
+   "Return Attributes", "Refer :numref:`InstanceAttributesMatching`"
    "Limit and Offset supported", "Yes"
    "Relational Queries Supported", "Series-level, only"
+   "Person Name Matching", "Literal, case insensitive. Refer Extended Negotiation"
 
 Types of Matching: As explained above in QIDO-RS Search For Studies
 
@@ -78,14 +80,14 @@ Extended Negotiation :
 DCM4CHEE-QIDO-SERVICE does not support the "fuzzymatching" query key.
 DCM4CHEE-QIDO-SERVICE will perform case insensitive matching for PN VR attributes but will not perform other forms of fuzzy matching. This applies to the following attributes:
 
-   +--------------------------------------------+------------------------------------------+
-   | Table :numref:`StudyAttributesMatching`    | Referring Physician's Name (0008,0090).  |
-   |                                            | Patient's Name (0010,0010).              |
-   +--------------------------------------------+------------------------------------------+
-   | Table :numref:`SeriesAttributesMatching`   | Performing Physician's Name (0008,1050). |
-   +--------------------------------------------+------------------------------------------+
-   | Table :numref:`InstanceAttributesMatching` | Verifying Observer Name (0040,A075).     |
-   +--------------------------------------------+------------------------------------------+
+   +--------------------------------------+------------------------------------------+
+   | :numref:`StudyAttributesMatching`    | Referring Physician's Name (0008,0090).  |
+   |                                      | Patient's Name (0010,0010).              |
+   +--------------------------------------+------------------------------------------+
+   | :numref:`SeriesAttributesMatching`   | Performing Physician's Name (0008,1050). |
+   +--------------------------------------+------------------------------------------+
+   | :numref:`InstanceAttributesMatching` | Verifying Observer Name (0040,A075).     |
+   +--------------------------------------+------------------------------------------+
 
 .. _qido-rs-connection-policies:
 
