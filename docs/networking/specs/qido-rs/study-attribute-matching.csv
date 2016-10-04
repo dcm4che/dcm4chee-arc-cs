@@ -26,6 +26,7 @@
 "Occupation", "00102180", "", "NONE"
 "Additional Patient History", "001021B0", "", "NONE"
 "Patient Sex Neutered", "00102203", "", "NONE"
+"Physicians of Record", "00081048", "", "NONE"
 "Specific Character Set", "00080005", "", "NONE"
 "Retrieve URL", "00081190", "", "NONE"
 "Retrieve AE Title", "00080054", "", "NONE"

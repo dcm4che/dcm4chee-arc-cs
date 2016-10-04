@@ -85,6 +85,8 @@ DCM4CHEE-QIDO-SERVICE will perform case insensitive matching for PN VR attribute
    +--------------------------------------+------------------------------------------+
    |                                      | Patient's Name (0010,0010).              |
    +--------------------------------------+------------------------------------------+
+   |                                      | Physicians of Record (0008,1048).        |
+   +--------------------------------------+------------------------------------------+
    | :numref:`SeriesAttributesMatching`   | Performing Physician's Name (0008,1050). |
    +--------------------------------------+------------------------------------------+
    | :numref:`InstanceAttributesMatching` | Verifying Observer Name (0040,A075).     |
