@@ -8,7 +8,7 @@
 "Patient Insurance Plan Code Sequence", "00100050", "", "NONE"
 "Patient Primary Language Code Sequence", "00100101", "", "NONE"
 "Other Patient Names", "00101001", "", "NONE"
-"Other Patient IDs Sequence", "00101002" "", "NONE"
+"Other Patient IDs Sequence", "00101002", "", "NONE"
 "Patient Birth Name", "00101005", "", "NONE"
 "Patient Address", "00101040", "", "NONE"
 "Patient Mother Birth Name", "00101060", "", "NONE"
