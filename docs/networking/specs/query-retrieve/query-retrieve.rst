@@ -26,7 +26,7 @@ General
 '''''''
 
 The STORAGE-SCU AE can only form Associations when requested to do so by the DCM4CHEE SCP AE. The STORAGE-SCU AE can only request the opening of an Association. It cannot accept requests to open Associations from external Application Entities.
-The DCM4CHEE SCP AE will never initiate Associations; it only accepts Association Requests from external DICOM AEs. The DCM4CHEE SCP AE will accept Associations for Verification, C-FIND, and C-MOVE requests. In the case of a C-MOVE request, the DCM4CHEE SCP AE will issue a command to the STORAGE-SCU AE to initiate an Association with the Destination DICOM AE to send images as specified by the originator of the C-MOVE Request.
+The DCM4CHEE SCP AE will never initiate Associations; it only accepts Association Requests from external DICOM AEs. The DCM4CHEE SCP AE will accept Associations for Verification, C-FIND, C-GET and C-MOVE requests. In the case of a C-MOVE/C-GET request, the DCM4CHEE SCP AE will issue a command to the STORAGE-SCU AE to initiate an Association with the Destination DICOM AE to send images as specified by the originator of the C-MOVE Request. In case of C-GET request the originator is itself the destination.
 The DICOM standard Application Context Name for DICOM 3.0 is always proposed (Storage SCU) / accepted (Query/Retrieve SCP).
 
 .. csv-table:: DICOM Application Context for STORAGE-SCU AE & DCM4CHEE SCP AE
