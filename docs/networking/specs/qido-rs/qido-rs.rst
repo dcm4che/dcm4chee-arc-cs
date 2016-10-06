@@ -75,6 +75,28 @@ Types of Matching: As explained above in QIDO-RS Search For Studies
    :header: "Attributes Names", "Tag", "Query Keys Matching (SCP)", "Return Attributes (SCP)"
    :file: instance-attribute-matching.csv
 
+.. _qido-rs-search-for-patients:
+
+QIDO-RS Search For Patients
+"""""""""""""""""""""""""""
+
+.. csv-table:: QIDO-RS Search for Patients Specification
+   :header: "Parameter", "Restrictions"
+
+   "Media Types", "Restricted to 'multipart/related; type=application/dicom+xml' or 'application/json'"
+   "Matching Attributes", "Refer :numref:`PatientAttributesMatching`"
+   "Return Attributes", "Refer :numref:`PatientAttributesMatching`"
+   "Limit and Offset supported", "Yes"
+   "Relational Queries Supported", "No"
+   "Person Name Matching", "Literal, case insensitive. Refer Extended Negotiation"
+
+Types of Matching: As explained above in QIDO-RS Search For Studies
+
+.. csv-table:: QIDO-RS Patient Attribute Matching
+   :name: PatientAttributesMatching
+   :header: "Attributes Names", "Tag", "Query Keys Matching (SCP)", "Return Attributes (SCP)"
+   :file: patient-attribute-matching.csv
+
 Extended Negotiation :
 
 DCM4CHEE-QIDO-SERVICE does not support the "fuzzymatching" query key.
@@ -90,6 +112,8 @@ DCM4CHEE-QIDO-SERVICE will perform case insensitive matching for PN VR attribute
    | :numref:`SeriesAttributesMatching`   | Performing Physician's Name (0008,1050). |
    +--------------------------------------+------------------------------------------+
    | :numref:`InstanceAttributesMatching` | Verifying Observer Name (0040,A075).     |
+   +--------------------------------------+------------------------------------------+
+   | :numref:`PatientAttributesMatching`  | Patient's Name (0010,0010).              |
    +--------------------------------------+------------------------------------------+
 
 .. _qido-rs-connection-policies:
