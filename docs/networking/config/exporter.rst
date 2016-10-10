@@ -27,6 +27,10 @@ Exporter Descriptor
     .. _dicomAETitle:
 
     dicomAETitle_"
+    "Storage Commitment SCP AE Title",string,"AE Title of external Storage Commitment SCP used to verify export to another archive.","
+    .. _dcmStgCmtSCP:
+
+    dcmStgCmtSCP_"
     "Ian Destination(s)",string,"Destination to send IAN N-CREATE RQ","
     .. _dcmIanDestination:
 

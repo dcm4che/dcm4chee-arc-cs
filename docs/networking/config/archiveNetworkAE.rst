@@ -135,6 +135,18 @@ DICOM Archive Network AE related information
     .. _dcmStorePermissionServiceExpirationDatePattern:
 
     dcmStorePermissionServiceExpirationDatePattern_"
+    "Default Character Set",string,"Value of Specific Character Set (0008,0005) added to Data Sets without Specific Character Set (0008,0005) attribute received by the Network AE.","
+    .. _dcmDefaultCharacterSet:
+
+    dcmDefaultCharacterSet_"
+    "Store Permission Service Error Comment Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract Error Comment. E.g. ""errorcomment""\s*:\s*""(.*)"". If absent, the Error Comment will be ""Storage denied"".","
+    .. _dcmStorePermissionServiceErrorCommentPattern:
+
+    dcmStorePermissionServiceErrorCommentPattern_"
+    "Store Permission Service Error Code Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract Error Code in hexadecimal. E.g. ""errorcode""\s*:\s*""(\p{XDigit}{4})"". If absent, the Error Code will be 0124H (Not Authorized).","
+    .. _dcmStorePermissionServiceErrorCodePattern:
+
+    dcmStorePermissionServiceErrorCodePattern_"
     ":doc:`exportRule` (s)",object,"Export Rule","
     .. _dcmExportRule:
 

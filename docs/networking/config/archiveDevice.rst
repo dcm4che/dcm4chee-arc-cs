@@ -167,7 +167,7 @@ DICOM Archive Device related information
     .. _dcmLeadingCFindSCPQueryCacheSize:
 
     dcmLeadingCFindSCPQueryCacheSize_"
-    "Audit Spool Directory",string,"Path to Audit Service Spool Directory used to aggregate Audit Messages. Audit Message aggregation disabled, if absent.","
+    "Audit Spool Directory",string,"Path to Audit Service Spool Directory used to aggregate Audit Messages. If absent, audit messages written to temporary location in server","
     .. _dcmAuditSpoolDirectory:
 
     dcmAuditSpoolDirectory_"
@@ -211,10 +211,6 @@ DICOM Archive Device related information
     .. _dcmPurgeQueueMessagePollingInterval:
 
     dcmPurgeQueueMessagePollingInterval_"
-    "Purge Completed Queue Messages Fetch Size",integer,"Number of Completed Queue Messages to be purged; 100 if absent","
-    .. _dcmPurgeQueueMessageFetchSize:
-
-    dcmPurgeQueueMessageFetchSize_"
     "Wado-RS Spool Directory",string,"Path to Wado-RS spool directory used to aggregate uncompressed frames. If absent, aggregation done in temp directory.","
     .. _dcmWadoSpoolDirectory:
 
@@ -279,6 +275,26 @@ DICOM Archive Device related information
     .. _dcmShowPatientInfoInAuditLog:
 
     dcmShowPatientInfoInAuditLog_"
+    "Purge Storage Commitment Completed Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which results of completed Storage Commitment requests are purged. If absent, there is no deletion.","
+    .. _dcmPurgeStgCmtCompletedDelay:
+
+    dcmPurgeStgCmtCompletedDelay_"
+    "Purge Storage Commitment Polling Interval",string,"Polling Interval for purging Storage Commitment Results in ISO-8601 duration format PnDTnHnMn.nS. If absent, there is no deletion","
+    .. _dcmPurgeStgCmtPollingInterval:
+
+    dcmPurgeStgCmtPollingInterval_"
+    "Default Character Set",string,"Value of Specific Character Set (0008,0005) added to Data Sets without Specific Character Set (0008,0005) attribute received by the Network AE.","
+    .. _dcmDefaultCharacterSet:
+
+    dcmDefaultCharacterSet_"
+    "Store Permission Service Error Comment Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract Error Comment. E.g. ""errorcomment""\s*:\s*""(.*)"". If absent, the Error Comment will be ""Storage denied"".","
+    .. _dcmStorePermissionServiceErrorCommentPattern:
+
+    dcmStorePermissionServiceErrorCommentPattern_"
+    "Store Permission Service Error Code Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract Error Code in hexadecimal. E.g. ""errorcode""\s*:\s*""(\p{XDigit}{4})"". If absent, the Error Code will be 0124H (Not Authorized).","
+    .. _dcmStorePermissionServiceErrorCodePattern:
+
+    dcmStorePermissionServiceErrorCodePattern_"
     ":doc:`attributeFilter` (s)",object,"Specifies Attributes stored in the database","
     .. _dcmAttributeFilter:
 

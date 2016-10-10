@@ -39,3 +39,7 @@ Storage Descriptor
     .. _dcmProperty:
 
     dcmProperty_"
+    "External Retrieve AET",string,"Enable deletion of Studies which are retrievable from this AE from the Storage System if the usable space fall below configured threshold.","
+    .. _dcmExternalRetrieveAET:
+
+    dcmExternalRetrieveAET_"
