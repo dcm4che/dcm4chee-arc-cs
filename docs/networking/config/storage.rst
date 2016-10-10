@@ -35,7 +35,7 @@ Storage Descriptor
     .. _dcmDeleterThreshold:
 
     dcmDeleterThreshold_"
-    "Storage Property(s)",string,"Property in format &lt;name&gt;=&lt;value&gt;","
+    "Storage Property(s)",string,"Property in format <name>=<value>","
     .. _dcmProperty:
 
     dcmProperty_"
