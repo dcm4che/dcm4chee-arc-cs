@@ -131,7 +131,7 @@ DICOM Archive Network AE related information
     .. _dcmAllowDeleteStudyPermanently:
 
     dcmAllowDeleteStudyPermanently_"
-    "Store Permission Service Expiration Date Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract the initial Study Expiration Date. E.g. ""expirationdate""\s*:\s*""(\d[8])"". If absent, locally configured Study Retention Policy Rules will be applied.","
+    "Store Permission Service Expiration Date Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract the initial Study Expiration Date. E.g. ""expirationdate""\s*:\s*""([0-9]{8})"". If absent, locally configured Study Retention Policy Rules will be applied.","
     .. _dcmStorePermissionServiceExpirationDatePattern:
 
     dcmStorePermissionServiceExpirationDatePattern_"
@@ -163,3 +163,10 @@ DICOM Archive Network AE related information
     .. _dcmStudyRetentionPolicy:
 
     dcmStudyRetentionPolicy_"
+
+.. toctree::
+
+    exportRule
+    archiveCompressionRule
+    archiveAttributeCoercion
+    studyRetentionPolicy
