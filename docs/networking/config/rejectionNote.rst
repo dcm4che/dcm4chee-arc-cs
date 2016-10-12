@@ -19,7 +19,7 @@ Specifies behavior on Rejection Note Stored
     .. _dcmRejectionNoteCode:
 
     dcmRejectionNoteCode_"
-    "Accept Previous Rejected Instance",string,"Specifies behavior on subsequent occurrence of instances rejected by a particular Rejection Note","
+    "Accept Previous Rejected Instance",string,"Specifies behavior on subsequent occurrence of instances rejected by a particular Rejection Note. Enumerated values: REJECT, RESTORE, IGNORE. REJECT if absent.","
     .. _dcmAcceptPreviousRejectedInstance:
 
     dcmAcceptPreviousRejectedInstance_"
