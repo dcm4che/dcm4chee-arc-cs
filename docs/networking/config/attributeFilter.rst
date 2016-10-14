@@ -27,7 +27,7 @@ Attributes stored in the database
     .. _dcmCustomAttribute3:
 
     dcmCustomAttribute3_"
-    "Attribute Update Policy",string,"Specifies update policy for extracted attributes into the DB on Series, Study & Patient level on receive of further instance of the entity. If absent, the attributes will not be updated","
+    "Attribute Update Policy",string,"Specifies update policy for extracted attributes into the DB on Series, Study & Patient level on receive of further instance of the entity. Enumerated values: SUPPLEMENT, MERGE, OVERWRITE. If absent, the attributes will not be updated","
     .. _dcmAttributeUpdatePolicy:
 
     dcmAttributeUpdatePolicy_"

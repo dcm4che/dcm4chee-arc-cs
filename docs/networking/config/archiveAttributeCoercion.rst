@@ -47,7 +47,7 @@ Archive Attribute Coercion of received/sent DIMSE
     .. _dcmLeadingCFindSCP:
 
     dcmLeadingCFindSCP_"
-    "Attribute Update Policy",string,"Specifies how attributes shall be updated with attributes fetched from Leading C-FIND SCP; MERGE, if absent","
+    "Attribute Update Policy",string,"Specifies how attributes shall be updated with attributes fetched from Leading C-FIND SCP. Enumerated values: SUPPLEMENT, MERGE, OVERWRITE. If absent, MERGE will be applied.","
     .. _dcmAttributeUpdatePolicy:
 
     dcmAttributeUpdatePolicy_"

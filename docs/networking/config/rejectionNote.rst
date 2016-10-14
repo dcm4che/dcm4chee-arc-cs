@@ -11,7 +11,7 @@ Specifies behavior on Rejection Note Stored
     .. _dcmRejectionNoteLabel:
 
     dcmRejectionNoteLabel_"
-    "Rejection Note Type",string,"Rejection Note Type","
+    "Rejection Note Type",string,"Type of Rejection Note. Enumerated values: REJECTED_FOR_QUALITY_REASONS, REJECTED_FOR_PATIENT_SAFETY_REASONS, INCORRECT_MODALITY_WORKLIST_ENTRY, DATA_RETENTION_POLICY_EXPIRED, REVOKE_REJECTION.","
     .. _dcmRejectionNoteType:
 
     dcmRejectionNoteType_"
