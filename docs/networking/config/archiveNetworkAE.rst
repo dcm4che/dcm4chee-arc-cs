@@ -147,6 +147,10 @@ DICOM Archive Network AE related information
     .. _dcmStorePermissionServiceErrorCodePattern:
 
     dcmStorePermissionServiceErrorCodePattern_"
+    "Retrieve AE Title(s)",string,"AE Title associated with Network AE","
+    .. _dcmRetrieveAET:
+
+    dcmRetrieveAET_"
     ":doc:`exportRule` (s)",object,"Export Rule","
     .. _dcmExportRule:
 

@@ -35,7 +35,7 @@ Exporter Descriptor
     .. _dcmIanDestination:
 
     dcmIanDestination_"
-    "Retrieve AE Title(s)",string,"AE Title associated with Storage System","
+    "Retrieve AE Title(s)",string,"AE Title associated with Network AE","
     .. _dcmRetrieveAET:
 
     dcmRetrieveAET_"

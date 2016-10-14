@@ -295,6 +295,10 @@ DICOM Archive Device related information
     .. _dcmStorePermissionServiceErrorCodePattern:
 
     dcmStorePermissionServiceErrorCodePattern_"
+    "Retrieve AE Title(s)",string,"AE Title associated with Network AE","
+    .. _dcmRetrieveAET:
+
+    dcmRetrieveAET_"
     ":doc:`attributeFilter` (s)",object,"Specifies Attributes stored in the database","
     .. _dcmAttributeFilter:
 

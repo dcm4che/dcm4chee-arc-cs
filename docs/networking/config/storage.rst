@@ -19,10 +19,6 @@ Storage Descriptor
     .. _dcmDigestAlgorithm:
 
     dcmDigestAlgorithm_"
-    "Retrieve AE Title(s)",string,"AE Title associated with Storage System","
-    .. _dcmRetrieveAET:
-
-    dcmRetrieveAET_"
     "Instance Availability",string,"Instance Availability: ONLINE, NEARLINE or OFFLINE. ONLINE if absent.","
     .. _dcmInstanceAvailability:
 
