@@ -299,6 +299,10 @@ DICOM Archive Device related information
     .. _dcmRetrieveAET:
 
     dcmRetrieveAET_"
+    "External Retrieve AE Destination",string,"AE Title of local C-STORE-SCP to be set as Move Destination in C-MOVE RQs forwarded to external retrieve AE.","
+    .. _dcmExternalRetrieveAEDestination:
+
+    dcmExternalRetrieveAEDestination_"
     ":doc:`attributeFilter` (s)",object,"Specifies Attributes stored in the database","
     .. _dcmAttributeFilter:
 
