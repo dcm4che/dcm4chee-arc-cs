@@ -35,7 +35,7 @@ Storage Descriptor
     .. _dcmProperty:
 
     dcmProperty_"
-    "External Retrieve AET",string,"Constrain deletion of Studies, whose objects are retrievable using this AE from the external Storage System, if usable space falls below configured threshold.","
+    "External Retrieve AET",string,"Constrain deletion of Studies, whose objects are retrievable using this AE from an external C-MOVE SCP, if usable space falls below configured threshold.","
     .. _dcmExternalRetrieveAET:
 
     dcmExternalRetrieveAET_"
