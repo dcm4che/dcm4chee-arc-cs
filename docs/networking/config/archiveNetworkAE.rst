@@ -171,10 +171,3 @@ DICOM Archive Network AE related information
     .. _dcmStudyRetentionPolicy:
 
     dcmStudyRetentionPolicy_"
-
-.. toctree::
-
-    exportRule
-    archiveCompressionRule
-    archiveAttributeCoercion
-    studyRetentionPolicy

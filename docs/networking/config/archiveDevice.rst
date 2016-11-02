@@ -247,14 +247,22 @@ DICOM Archive Device related information
     .. _dcmStorePermissionCacheStaleTimeout:
 
     dcmStorePermissionCacheStaleTimeout_"
-    "Store Update DB Maximum Number of Retries",integer,"Maximum number of retries to update the database on storage; 1 if absent","
-    .. _dcmStoreUpdateDBMaxRetries:
-
-    dcmStoreUpdateDBMaxRetries_"
     "Store Permission Cache Size",integer,"Maximum number of cached responses from Storage Permission Service; 10 if absent","
     .. _dcmStorePermissionCacheSize:
 
     dcmStorePermissionCacheSize_"
+    "Enrich Request Attributes Cache Stale Timeout",string,"Maximal staleness of Request Attributes extracted from matching DICOM MWL items in ISO-8601 duration format PnDTnHnMn.nS. If absent, cached Request Attributes are only removed on reaching the maximal cache size.","
+    .. _dcmEnrichRequestAttributesCacheStaleTimeout:
+
+    dcmEnrichRequestAttributesCacheStaleTimeout_"
+    "Enrich Request Attributes Cache Size",integer,"Maximum number of cached Request Attributes extracted from matching DICOM MWL items; 10 if absent","
+    .. _dcmEnrichRequestAttributesCacheSize:
+
+    dcmEnrichRequestAttributesCacheSize_"
+    "Store Update DB Maximum Number of Retries",integer,"Maximum number of retries to update the database on storage; 1 if absent","
+    .. _dcmStoreUpdateDBMaxRetries:
+
+    dcmStoreUpdateDBMaxRetries_"
     "Allow Rejection For Data Retention Policy Expired",string,"Allow Rejection For Data Retention Policy Expired : NEVER, ALWAYS, STUDY_RETENTION_POLICY. If absent, STUDY_RETENTION_POLICY will be applied.","
     .. _dcmAllowRejectionForDataRetentionPolicyExpired:
 
