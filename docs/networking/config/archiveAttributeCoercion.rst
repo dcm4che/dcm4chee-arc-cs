@@ -43,11 +43,11 @@ Archive Attribute Coercion of received/sent DIMSE
     .. _dcmNoKeywords:
 
     dcmNoKeywords_"
-    "MWL Matching Key",string,"Specifies attribute of received object to lookup MWL Item used to coerce request attributes. Enumerated values: AccessionNumber, StudyInstanceUID, ScheduledProcedureStepID. If absent, request attributes of received objects will not be coerced.","
+    "Merge MWL Matching Key",string,"Specifies attribute of received object to lookup MWL Item used to coerce request attributes. Enumerated values: AccessionNumber, StudyInstanceUID, ScheduledProcedureStepID. If absent, request attributes of received objects will not be coerced.","
     .. _dcmMergeMWLMatchingKey:
 
     dcmMergeMWLMatchingKey_"
-    "Request Attributes Template URI",string,"Specifies URI for the style sheet to coerce request attributes of received objects from matching DICOM MWL items. Only effectiv, if dcmMergeMWLMatchingKey is specified.","
+    "Merge MWL Template URI",string,"Specifies URI for the style sheet to coerce request attributes of received objects from matching DICOM MWL items. Only effectiv, if dcmMergeMWLMatchingKey is specified.","
     .. _dcmMergeMWLTemplateURI:
 
     dcmMergeMWLTemplateURI_"
