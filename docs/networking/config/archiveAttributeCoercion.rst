@@ -43,18 +43,18 @@ Archive Attribute Coercion of received/sent DIMSE
     .. _dcmNoKeywords:
 
     dcmNoKeywords_"
+    "MWL Matching Key",string,"Specifies attribute of received object to lookup MWL Item used to coerce request attributes. Enumerated values: AccessionNumber, StudyInstanceUID, ScheduledProcedureStepID. If absent, request attributes of received objects will not be coerced.","
+    .. _dcmMergeMWLMatchingKey:
+
+    dcmMergeMWLMatchingKey_"
+    "Request Attributes Template URI",string,"Specifies URI for the style sheet to coerce request attributes of received objects from matching DICOM MWL items. Only effectiv, if dcmMergeMWLMatchingKey is specified.","
+    .. _dcmMergeMWLTemplateURI:
+
+    dcmMergeMWLTemplateURI_"
     "Leading C-FIND SCP",string,"AE Title of external C-FIND SCP for Attribute Coercion with Patient and Study attributes fetched from this AE.","
     .. _dcmLeadingCFindSCP:
 
     dcmLeadingCFindSCP_"
-    "Enrich Request Attributes Matching Key",string,"Specifies attribute of received object to lookup MWL Item used to enrich request attributes. Enumerated values: AccessionNumber, StudyInstanceUID, ScheduledProcedureStepID. If absent, request attributes of received objects will not be enriched.","
-    .. _dcmEnrichRequestAttributesMatchingKey:
-
-    dcmEnrichRequestAttributesMatchingKey_"
-    "Enrich Request Attributes Template URI",string,"Specifies URI for the style sheet to enrich request attributes of received objects from matching DICOM MWL items. Only effectiv, if dcmEnrichRequestAttributesMatchingKey is specified.","
-    .. _dcmEnrichRequestAttributesTemplateURI:
-
-    dcmEnrichRequestAttributesTemplateURI_"
     "Attribute Update Policy",string,"Specifies how attributes shall be updated with attributes fetched from Leading C-FIND SCP. Enumerated values: SUPPLEMENT, MERGE, OVERWRITE. If absent, MERGE will be applied.","
     .. _dcmAttributeUpdatePolicy:
 

@@ -251,14 +251,14 @@ DICOM Archive Device related information
     .. _dcmStorePermissionCacheSize:
 
     dcmStorePermissionCacheSize_"
-    "Enrich Request Attributes Cache Stale Timeout",string,"Maximal staleness of Request Attributes extracted from matching DICOM MWL items in ISO-8601 duration format PnDTnHnMn.nS. If absent, cached Request Attributes are only removed on reaching the maximal cache size.","
-    .. _dcmEnrichRequestAttributesCacheStaleTimeout:
+    "Request Attributes Cache Stale Timeout",string,"Maximal staleness of Request Attributes extracted from matching DICOM MWL items in ISO-8601 duration format PnDTnHnMn.nS. If absent, cached Request Attributes are only removed on reaching the maximal cache size.","
+    .. _dcmMergeMWLCacheStaleTimeout:
 
-    dcmEnrichRequestAttributesCacheStaleTimeout_"
-    "Enrich Request Attributes Cache Size",integer,"Maximum number of cached Request Attributes extracted from matching DICOM MWL items; 10 if absent","
-    .. _dcmEnrichRequestAttributesCacheSize:
+    dcmMergeMWLCacheStaleTimeout_"
+    "Request Attributes Cache Size",integer,"Maximum number of cached Request Attributes extracted from matching DICOM MWL items; 10 if absent","
+    .. _dcmMergeMWLCacheSize:
 
-    dcmEnrichRequestAttributesCacheSize_"
+    dcmMergeMWLCacheSize_"
     "Store Update DB Maximum Number of Retries",integer,"Maximum number of retries to update the database on storage; 1 if absent","
     .. _dcmStoreUpdateDBMaxRetries:
 
