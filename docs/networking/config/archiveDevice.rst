@@ -351,6 +351,10 @@ DICOM Archive Device related information
     .. _dcmStudyRetentionPolicy:
 
     dcmStudyRetentionPolicy_"
+    ":doc:`conditionalStoreAccessControlID` (s)",object,"Conditional Access Contol IDs assigned to Studies received by any AE","
+    .. _dcmConditionalStoreAccessControlID:
+
+    dcmConditionalStoreAccessControlID_"
     ":doc:`idGenerator` (s)",object,"ID Generator","
     .. _dcmIDGenerator:
 
@@ -372,5 +376,6 @@ DICOM Archive Device related information
     archiveAttributeCoercion
     rejectionNote
     studyRetentionPolicy
+    conditionalStoreAccessControlID
     idGenerator
     hl7ForwardRule
