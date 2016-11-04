@@ -19,10 +19,10 @@ DICOM Archive Network AE related information
     .. _dcmStoreAccessControlID:
 
     dcmStoreAccessControlID_"
-    ":doc:`conditionalStoreAccessControlID` (s)",object,"Conditional Access Contol IDs assigned to Studies received by this AE","
-    .. _dcmConditionalStoreAccessControlID:
+    ":doc:`storeAccessControlIDRule` (s)",object,"Store Access Control Rules applied to Studies received by this AE","
+    .. _dcmStoreAccessControlIDRule:
 
-    dcmConditionalStoreAccessControlID_"
+    dcmStoreAccessControlIDRule_"
     "Access Control ID(s)",string,"Access Contol IDs assigned to Query/Retrieve requests received by this AE","
     .. _dcmAccessControlID:
 

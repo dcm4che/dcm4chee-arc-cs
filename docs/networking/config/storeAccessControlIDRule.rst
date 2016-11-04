@@ -1,13 +1,13 @@
-Conditional Store Access Control ID
-===================================
-Conditional Store Access Control ID
+Store Access Control ID Rule
+============================
+Store Access Control ID Rule
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
-.. csv-table:: Conditional Store Access Control ID Attributes (LDAP Object: dcmConditionalStoreAccessControlID)
+.. csv-table:: Store Access Control ID Rule Attributes (LDAP Object: dcmStoreAccessControlIDRule)
     :header: Name ( :sup:`*` = required ), Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Name\ :sup:`*` ",string,"Arbitrary/Meaningful name of the Conditional Store Access Control ID","
+    "Name\ :sup:`*` ",string,"Arbitrary/Meaningful name of the Store Access Control ID Rule","
     .. _cn:
 
     cn_"
