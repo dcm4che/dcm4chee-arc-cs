@@ -4,10 +4,10 @@ Audit Suppress Criteria
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Audit Suppress Criteria Attributes (LDAP Object: dcmAuditSuppressCriteria)
-    :header: Name ( :sup:`*` = required ), Type, Description, LDAP Attribute
+    :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Name\ :sup:`*` ",string,"Arbitrary/Meaningful name of the Audit Suppress Criteria","
+    "**Name**",string,"Arbitrary/Meaningful name of the Audit Suppress Criteria","
     .. _cn:
 
     cn_"

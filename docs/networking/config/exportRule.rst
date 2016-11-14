@@ -4,18 +4,18 @@ Export Rule
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Export Rule Attributes (LDAP Object: dcmExportRule)
-    :header: Name ( :sup:`*` = required ), Type, Description, LDAP Attribute
+    :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Name\ :sup:`*` ",string,"Arbitrary/Meaningful name of the Export Rule","
+    "**Name**",string,"Arbitrary/Meaningful name of the Export Rule","
     .. _cn:
 
     cn_"
-    "Attribute Entity\ :sup:`*` ",string,"Entity of the Attribute Filter or Export Rule ('Patient', 'Study', 'Series', 'Instance', 'MPPS', 'MWL').","
+    "**Attribute Entity**",string,"Entity of the Attribute Filter or Export Rule ('Patient', 'Study', 'Series', 'Instance', 'MPPS', 'MWL').","
     .. _dcmEntity:
 
     dcmEntity_"
-    "Exporter ID(s)\ :sup:`*` ",string,"Exporter ID","
+    "**Exporter ID(s)**",string,"Exporter ID","
     .. _dcmExporterID:
 
     dcmExporterID_"

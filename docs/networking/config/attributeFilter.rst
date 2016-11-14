@@ -1,17 +1,17 @@
-Attribute List
-==============
+Attribute Filter
+================
 Attributes stored in the database
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
-.. csv-table:: Attribute List Attributes (LDAP Object: dcmAttributeFilter)
-    :header: Name ( :sup:`*` = required ), Type, Description, LDAP Attribute
+.. csv-table:: Attribute Filter Attributes (LDAP Object: dcmAttributeFilter)
+    :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Attribute Entity\ :sup:`*` ",string,"Entity of the Attribute Filter or Export Rule ('Patient', 'Study', 'Series', 'Instance', 'MPPS', 'MWL').","
+    "**Attribute Entity**",string,"Entity of the Attribute Filter or Export Rule ('Patient', 'Study', 'Series', 'Instance', 'MPPS', 'MWL').","
     .. _dcmEntity:
 
     dcmEntity_"
-    "Attribute Tag(s)\ :sup:`*` ",integer,"DICOM Tag as hex string","
+    "**Attribute Tag(s)**",integer,"DICOM Tag as hex string","
     .. _dcmTag:
 
     dcmTag_"

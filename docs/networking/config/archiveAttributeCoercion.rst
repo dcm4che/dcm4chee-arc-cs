@@ -4,18 +4,18 @@ Archive Attribute Coercion of received/sent DIMSE
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Archive Attribute Coercion Attributes (LDAP Object: dcmArchiveAttributeCoercion)
-    :header: Name ( :sup:`*` = required ), Type, Description, LDAP Attribute
+    :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Name\ :sup:`*` ",string,"Arbitrary/Meaningful name of the Archive Compression Rule","
+    "**Name**",string,"Arbitrary/Meaningful name of the Archive Compression Rule","
     .. _cn:
 
     cn_"
-    "DIMSE\ :sup:`*` ",string,"DIMSE: 'C_STORE_RQ', 'C_FIND_RQ', 'C_FIND_RSP'","
+    "**DIMSE**",string,"DIMSE: 'C_STORE_RQ', 'C_FIND_RQ', 'C_FIND_RSP'","
     .. _dcmDIMSE:
 
     dcmDIMSE_"
-    "DICOM Transfer Role\ :sup:`*` ",string,"Transfer role (either 'SCU' or 'SCP')","
+    "**DICOM Transfer Role**",string,"Transfer role (either 'SCU' or 'SCP')","
     .. _dicomTransferRole:
 
     dicomTransferRole_"

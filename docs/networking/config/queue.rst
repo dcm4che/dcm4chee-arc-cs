@@ -4,14 +4,14 @@ Managed JMS Queue
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Queue Attributes (LDAP Object: dcmQueue)
-    :header: Name ( :sup:`*` = required ), Type, Description, LDAP Attribute
+    :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Queue Name\ :sup:`*` ",string,"JMS Queue Name","
+    "**Queue Name**",string,"JMS Queue Name","
     .. _dcmQueueName:
 
     dcmQueueName_"
-    "JNDI Name\ :sup:`*` ",string,"JNDI Name","
+    "**JNDI Name**",string,"JNDI Name","
     .. _dcmJndiName:
 
     dcmJndiName_"

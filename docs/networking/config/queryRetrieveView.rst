@@ -4,10 +4,10 @@ Specifies behavior on Rejection Note Stored
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Query Retrieve View Attributes (LDAP Object: dcmQueryRetrieveView)
-    :header: Name ( :sup:`*` = required ), Type, Description, LDAP Attribute
+    :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Query/Retrieve View ID\ :sup:`*` ",string,"Query/Retrieve View Identifier","
+    "**Query/Retrieve View ID**",string,"Query/Retrieve View Identifier","
     .. _dcmQueryRetrieveViewID:
 
     dcmQueryRetrieveViewID_"

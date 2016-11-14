@@ -4,7 +4,7 @@ DICOM Archive Network AE related information
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Archive Network AE Attributes (LDAP Object: dcmArchiveNetworkAE)
-    :header: Name ( :sup:`*` = required ), Type, Description, LDAP Attribute
+    :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
     "Storage ID",string,"Storage ID","

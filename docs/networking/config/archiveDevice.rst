@@ -4,14 +4,14 @@ DICOM Archive Device related information
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Archive Device Attributes (LDAP Object: dcmArchiveDevice)
-    :header: Name ( :sup:`*` = required ), Type, Description, LDAP Attribute
+    :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Fuzzy Algorithm Class\ :sup:`*` ",string,"Specifies Fuzzy Algorithm Implementation Class: 'org.dcm4che3.soundex.Soundex', 'org.dcm4che3.soundex.ESoundex', 'org.dcm4che3.soundex.ESoundex9', 'org.dcm4che3.soundex.Metaphone', 'org.dcm4che3.soundex.KPhonetik', 'org.dcm4che3.soundex.Phonem","
+    "**Fuzzy Algorithm Class**",string,"Specifies Fuzzy Algorithm Implementation Class: 'org.dcm4che3.soundex.Soundex', 'org.dcm4che3.soundex.ESoundex', 'org.dcm4che3.soundex.ESoundex9', 'org.dcm4che3.soundex.Metaphone', 'org.dcm4che3.soundex.KPhonetik', 'org.dcm4che3.soundex.Phonem","
     .. _dcmFuzzyAlgorithmClass:
 
     dcmFuzzyAlgorithmClass_"
-    "Storage ID\ :sup:`*` ",string,"Storage ID","
+    "**Storage ID**",string,"Storage ID","
     .. _dcmStorageID:
 
     dcmStorageID_"
@@ -19,7 +19,7 @@ DICOM Archive Device related information
     .. _dcmMetadataStorageID:
 
     dcmMetadataStorageID_"
-    "Query/Retrieve View ID\ :sup:`*` ",string,"Query/Retrieve View Identifier","
+    "**Query/Retrieve View ID**",string,"Query/Retrieve View Identifier","
     .. _dcmQueryRetrieveViewID:
 
     dcmQueryRetrieveViewID_"

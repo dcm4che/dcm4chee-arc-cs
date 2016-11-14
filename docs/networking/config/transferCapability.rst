@@ -4,22 +4,22 @@ Each transfer capability specifies the SOP class that the Network AE can support
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Transfer Capability Attributes (LDAP Object: dcmTransferCapability)
-    :header: Name ( :sup:`*` = required ), Type, Description, LDAP Attribute
+    :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
     "Name",string,"Arbitrary/Meaningful name for the Transfer Capability object","
     .. _cn:
 
     cn_"
-    "SOP Class\ :sup:`*` ",string,"SOP Class UID","
+    "**SOP Class**",string,"SOP Class UID","
     .. _dicomSOPClass:
 
     dicomSOPClass_"
-    "Transfer Role\ :sup:`*` ",string,"Either SCU or SCP","
+    "**Transfer Role**",string,"Either SCU or SCP","
     .. _dicomTransferRole:
 
     dicomTransferRole_"
-    "Transfer Syntax(s)\ :sup:`*` ",string,"Transfer syntax(es) that may be requested as an SCU or that are offered as an SCP","
+    "**Transfer Syntax(s)**",string,"Transfer syntax(es) that may be requested as an SCU or that are offered as an SCP","
     .. _dicomTransferSyntax:
 
     dicomTransferSyntax_"

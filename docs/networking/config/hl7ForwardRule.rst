@@ -4,14 +4,14 @@ HL7 Forward Rule
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: HL7 Forward Rule Attributes (LDAP Object: hl7ForwardRule)
-    :header: Name ( :sup:`*` = required ), Type, Description, LDAP Attribute
+    :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Name\ :sup:`*` ",string,"Arbitrary/Meaningful name of the HL7 Forward Rule","
+    "**Name**",string,"Arbitrary/Meaningful name of the HL7 Forward Rule","
     .. _cn:
 
     cn_"
-    "HL7 Forward Application Name(s)\ :sup:`*` ",string,"HL7 Forward Destination Application and Facility name (Application^Facility)","
+    "**HL7 Forward Application Name(s)**",string,"HL7 Forward Destination Application and Facility name (Application^Facility)","
     .. _hl7FwdApplicationName:
 
     hl7FwdApplicationName_"

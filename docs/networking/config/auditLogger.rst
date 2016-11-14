@@ -4,10 +4,10 @@ Audit Logger related information
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Audit Logger Attributes (LDAP Object: dcmAuditLogger)
-    :header: Name ( :sup:`*` = required ), Type, Description, LDAP Attribute
+    :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Network Connection Reference(s)\ :sup:`*` ",string,"The JSON Pointers to the Network Connection objects used by this Audit Logger","
+    "**Network Connection Reference(s)**",string,"The JSON Pointers to the Network Connection objects used by this Audit Logger","
     .. _dicomNetworkConnectionReference:
 
     dicomNetworkConnectionReference_"

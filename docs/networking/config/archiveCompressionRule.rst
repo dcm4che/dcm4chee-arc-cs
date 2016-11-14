@@ -4,14 +4,14 @@ Archive Compression rule
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Archive Compression rule Attributes (LDAP Object: dcmArchiveCompressionRule)
-    :header: Name ( :sup:`*` = required ), Type, Description, LDAP Attribute
+    :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Name\ :sup:`*` ",string,"Arbitrary/Meaningful name of the Archive Compression Rule","
+    "**Name**",string,"Arbitrary/Meaningful name of the Archive Compression Rule","
     .. _cn:
 
     cn_"
-    "DICOM Transfer Syntax UID\ :sup:`*` ",string,"A Transfer Syntax UID","
+    "**DICOM Transfer Syntax UID**",string,"A Transfer Syntax UID","
     .. _dicomTransferSyntax:
 
     dicomTransferSyntax_"

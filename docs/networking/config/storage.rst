@@ -4,14 +4,14 @@ Storage Descriptor
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Storage Attributes (LDAP Object: dcmStorage)
-    :header: Name ( :sup:`*` = required ), Type, Description, LDAP Attribute
+    :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Storage ID\ :sup:`*` ",string,"Storage ID","
+    "**Storage ID**",string,"Storage ID","
     .. _dcmStorageID:
 
     dcmStorageID_"
-    "Storage URI\ :sup:`*` ",string,"RFC2079: Uniform Resource Identifier","
+    "**Storage URI**",string,"RFC2079: Uniform Resource Identifier","
     .. _dcmURI:
 
     dcmURI_"

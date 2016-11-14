@@ -4,10 +4,10 @@ DICOM Device related information
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Device Attributes (LDAP Object: dcmDevice)
-    :header: Name ( :sup:`*` = required ), Type, Description, LDAP Attribute
+    :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Device Name\ :sup:`*` ",string,"A unique name for this device","
+    "**Device Name**",string,"A unique name for this device","
     .. _dicomDeviceName:
 
     dicomDeviceName_"
@@ -95,7 +95,7 @@ DICOM Device related information
     .. _dicomThisNodeCertificateReference:
 
     dicomThisNodeCertificateReference_"
-    "installed\ :sup:`*` ",boolean,"Boolean to indicate whether this device is presently installed on the network","
+    "**installed**",boolean,"Boolean to indicate whether this device is presently installed on the network","
     .. _dicomInstalled:
 
     dicomInstalled_"

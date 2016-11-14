@@ -4,14 +4,14 @@ Specifies Java Image IO Image Readers used for decompressing compressed DICOM im
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Image Reader Attributes (LDAP Object: dcmImageReader)
-    :header: Name ( :sup:`*` = required ), Type, Description, LDAP Attribute
+    :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Transfer Syntax\ :sup:`*` ",string,"Transfer Syntax of compressed DICOM image","
+    "**Transfer Syntax**",string,"Transfer Syntax of compressed DICOM image","
     .. _dicomTransferSyntax:
 
     dicomTransferSyntax_"
-    "Image IO Reader Format Name\ :sup:`*` ",string,"Image IO Reader Format Name","
+    "**Image IO Reader Format Name**",string,"Image IO Reader Format Name","
     .. _dcmIIOFormatName:
 
     dcmIIOFormatName_"

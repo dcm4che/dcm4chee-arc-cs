@@ -4,22 +4,22 @@ Application entity that provides services on a network
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Network AE Attributes (LDAP Object: dcmNetworkAE)
-    :header: Name ( :sup:`*` = required ), Type, Description, LDAP Attribute
+    :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "AE Title\ :sup:`*` ",string,"Unique AE title for this Network AE","
+    "**AE Title**",string,"Unique AE title for this Network AE","
     .. _dicomAETitle:
 
     dicomAETitle_"
-    "Network Connection Reference(s)\ :sup:`*` ",string,"JSON Pointers to the Network Connection objects for this AE","
+    "**Network Connection Reference(s)**",string,"JSON Pointers to the Network Connection objects for this AE","
     .. _dicomNetworkConnectionReference:
 
     dicomNetworkConnectionReference_"
-    "Association Initiator\ :sup:`*` ",boolean,"True if the Network AE can initiate associations, false otherwise","
+    "**Association Initiator**",boolean,"True if the Network AE can initiate associations, false otherwise","
     .. _dicomAssociationInitiator:
 
     dicomAssociationInitiator_"
-    "Association Acceptor\ :sup:`*` ",boolean,"True if the Network AE can accept associations, false otherwise","
+    "**Association Acceptor**",boolean,"True if the Network AE can accept associations, false otherwise","
     .. _dicomAssociationAcceptor:
 
     dicomAssociationAcceptor_"

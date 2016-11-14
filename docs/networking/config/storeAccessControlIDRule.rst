@@ -4,14 +4,14 @@ Store Access Control ID Rule
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Store Access Control ID Rule Attributes (LDAP Object: dcmStoreAccessControlIDRule)
-    :header: Name ( :sup:`*` = required ), Type, Description, LDAP Attribute
+    :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Name\ :sup:`*` ",string,"Arbitrary/Meaningful name of the Store Access Control ID Rule","
+    "**Name**",string,"Arbitrary/Meaningful name of the Store Access Control ID Rule","
     .. _cn:
 
     cn_"
-    "Store Access Control ID\ :sup:`*` ",string,"Access Contol ID assigned to Studies which attributes match all conditions","
+    "**Store Access Control ID**",string,"Access Contol ID assigned to Studies which attributes match all conditions","
     .. _dcmStoreAccessControlID:
 
     dcmStoreAccessControlID_"

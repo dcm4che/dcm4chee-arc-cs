@@ -4,18 +4,18 @@ Exporter Descriptor
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Exporter Descriptor Attributes (LDAP Object: dcmExporter)
-    :header: Name ( :sup:`*` = required ), Type, Description, LDAP Attribute
+    :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Exporter ID\ :sup:`*` ",string,"Exporter ID","
+    "**Exporter ID**",string,"Exporter ID","
     .. _dcmExporterID:
 
     dcmExporterID_"
-    "URI\ :sup:`*` ",string,"RFC2079: Uniform Resource Identifier","
+    "**URI**",string,"RFC2079: Uniform Resource Identifier","
     .. _dcmURI:
 
     dcmURI_"
-    "Queue Name\ :sup:`*` ",string,"JMS Queue Name","
+    "**Queue Name**",string,"JMS Queue Name","
     .. _dcmQueueName:
 
     dcmQueueName_"

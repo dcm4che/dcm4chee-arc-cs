@@ -4,14 +4,14 @@ Specifies Java Image IO Image Writer and Write Parameter used for compressing DI
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Image Writer Attributes (LDAP Object: dcmImageWriter)
-    :header: Name ( :sup:`*` = required ), Type, Description, LDAP Attribute
+    :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Transfer Syntax\ :sup:`*` ",string,"Transfer Syntax to which to compress the DICOM image","
+    "**Transfer Syntax**",string,"Transfer Syntax to which to compress the DICOM image","
     .. _dicomTransferSyntax:
 
     dicomTransferSyntax_"
-    "Image IO Writer Format Name\ :sup:`*` ",string,"Image IO Writer Format Name","
+    "**Image IO Writer Format Name**",string,"Image IO Writer Format Name","
     .. _dcmIIOFormatName:
 
     dcmIIOFormatName_"

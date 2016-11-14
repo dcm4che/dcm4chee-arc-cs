@@ -4,14 +4,14 @@ HL7 Application information
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: HL7 Application Attributes (LDAP Object: hl7Application)
-    :header: Name ( :sup:`*` = required ), Type, Description, LDAP Attribute
+    :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "HL7 Application name\ :sup:`*` ",string,"HL7 Application and Facility name (Application|Facility)","
+    "**HL7 Application name**",string,"HL7 Application and Facility name (Application|Facility)","
     .. _hl7ApplicationName:
 
     hl7ApplicationName_"
-    "Network Connection Reference(s)\ :sup:`*` ",string,"The JSON Pointers to the Network Connection objects for this HL7 Application","
+    "**Network Connection Reference(s)**",string,"The JSON Pointers to the Network Connection objects for this HL7 Application","
     .. _dicomNetworkConnectionReference:
 
     dicomNetworkConnectionReference_"

@@ -4,10 +4,10 @@ Audit Record Repository related information
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Audit Record Repository Attributes (LDAP Object: dcmAuditRecordRepository)
-    :header: Name ( :sup:`*` = required ), Type, Description, LDAP Attribute
+    :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Network Connection Reference(s)\ :sup:`*` ",string,"The JSON Pointers to the Network Connection objects of this Audit Record Repository","
+    "**Network Connection Reference(s)**",string,"The JSON Pointers to the Network Connection objects of this Audit Record Repository","
     .. _dicomNetworkConnectionReference:
 
     dicomNetworkConnectionReference_"

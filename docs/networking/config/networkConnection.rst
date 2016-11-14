@@ -4,14 +4,14 @@ Describes one TCP/UDP port on one network device.
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Network Connection Attributes (LDAP Object: dcmNetworkConnection)
-    :header: Name ( :sup:`*` = required ), Type, Description, LDAP Attribute
+    :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
     "Name",string,"Arbitrary/Meaningful name for the Network Connection object","
     .. _cn:
 
     cn_"
-    "Hostname\ :sup:`*` ",string,"DNS name for this particular connection","
+    "**Hostname**",string,"DNS name for this particular connection","
     .. _dicomHostname:
 
     dicomHostname_"

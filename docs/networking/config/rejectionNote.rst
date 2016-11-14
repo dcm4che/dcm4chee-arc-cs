@@ -4,10 +4,10 @@ Specifies behavior on Rejection Note Stored
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Rejection Note Attributes (LDAP Object: dcmRejectionNote)
-    :header: Name ( :sup:`*` = required ), Type, Description, LDAP Attribute
+    :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Rejection Note Label\ :sup:`*` ",string,"Rejection Note Label","
+    "**Rejection Note Label**",string,"Rejection Note Label","
     .. _dcmRejectionNoteLabel:
 
     dcmRejectionNoteLabel_"
@@ -15,7 +15,7 @@ Specifies behavior on Rejection Note Stored
     .. _dcmRejectionNoteType:
 
     dcmRejectionNoteType_"
-    "Rejection Note Code\ :sup:`*` ",string,"Specifies Document Title of Rejection Note in format (CV, CSD, 'CM')","
+    "**Rejection Note Code**",string,"Specifies Document Title of Rejection Note in format (CV, CSD, 'CM')","
     .. _dcmRejectionNoteCode:
 
     dcmRejectionNoteCode_"

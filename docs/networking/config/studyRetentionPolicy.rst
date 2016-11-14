@@ -4,14 +4,14 @@ Study Retention Policy
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Study Retention Policy Attributes (LDAP Object: dcmStudyRetentionPolicy)
-    :header: Name ( :sup:`*` = required ), Type, Description, LDAP Attribute
+    :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Name\ :sup:`*` ",string,"Arbitrary/Meaningful name of the Study Retention Policy","
+    "**Name**",string,"Arbitrary/Meaningful name of the Study Retention Policy","
     .. _cn:
 
     cn_"
-    "Study Retention Period\ :sup:`*` ",string,"Study Retention Period in ISO-8601 period format PnYnMnD or PnW","
+    "**Study Retention Period**",string,"Study Retention Period in ISO-8601 period format PnYnMnD or PnW","
     .. _dcmRetentionPeriod:
 
     dcmRetentionPeriod_"
