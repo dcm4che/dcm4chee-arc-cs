@@ -11,7 +11,7 @@ RESTful Forward Rule
     .. _cn:
 
     cn_"
-    "**Target Base URL **",string,"Target URL without operation specific part: http://<host>:<port>/dcm4chee-arc/aets/<aet>/rs/.","
+    "**Target Base URL**",string,"Target URL without operation specific part: http://<host>:<port>/dcm4chee-arc/aets/<aet>/rs/.","
     .. _dcmURI:
 
     dcmURI_"
