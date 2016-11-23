@@ -15,6 +15,10 @@ DICOM Archive Network AE related information
     .. _dcmMetadataStorageID:
 
     dcmMetadataStorageID_"
+    "Series Metadata Storage ID",string,"ID of Storage on which ZIP archives with aggregated Metadata of all instances of a Series is stored. If absent, no aggregated Series Metadata will be stored.","
+    .. _dcmSeriesMetadataStorageID:
+
+    dcmSeriesMetadataStorageID_"
     "Store Access Control ID",string,"Access Contol ID assigned to Studies received by this AE","
     .. _dcmStoreAccessControlID:
 
@@ -163,6 +167,10 @@ DICOM Archive Network AE related information
     .. _dcmExportRule:
 
     dcmExportRule_"
+    ":doc:`rsForwardRule` (s)",object,"RESTful Forward Rule","
+    .. _dcmRSForwardRule:
+
+    dcmRSForwardRule_"
     ":doc:`archiveCompressionRule` (s)",object,"Archive Compression rule","
     .. _dcmArchiveCompressionRule:
 

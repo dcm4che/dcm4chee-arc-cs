@@ -19,6 +19,22 @@ DICOM Archive Device related information
     .. _dcmMetadataStorageID:
 
     dcmMetadataStorageID_"
+    "Series Metadata Storage ID",string,"ID of Storage on which ZIP archives with aggregated Metadata of all instances of a Series is stored. If absent, no aggregated Series Metadata will be stored.","
+    .. _dcmSeriesMetadataStorageID:
+
+    dcmSeriesMetadataStorageID_"
+    "Aggregate Series Metadata Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS for storing aggregated Series Metadata on storage. If absent, no aggregated Series Metadata will be stored.","
+    .. _dcmSeriesMetadataDelay:
+
+    dcmSeriesMetadataDelay_"
+    "Update Series Metadata Polling Interval",string,"Polling Interval for Series scheduled for Metadata update in ISO-8601 duration format PnDTnHnMn.nS. If absent, no aggregated Series Metadata will be stored.","
+    .. _dcmSeriesMetadataPollingInterval:
+
+    dcmSeriesMetadataPollingInterval_"
+    "Update Series Metadata Fetch Size",integer,"Maximal number of Series scheduled for Metadata update fetched by one query; 100 if absent.","
+    .. _dcmSeriesMetadataFetchSize:
+
+    dcmSeriesMetadataFetchSize_"
     "**Query/Retrieve View ID**",string,"Query/Retrieve View Identifier","
     .. _dcmQueryRetrieveViewID:
 
@@ -335,6 +351,10 @@ DICOM Archive Device related information
     .. _dcmExportRule:
 
     dcmExportRule_"
+    ":doc:`rsForwardRule` (s)",object,"RESTful Forward Rule","
+    .. _dcmRSForwardRule:
+
+    dcmRSForwardRule_"
     ":doc:`archiveCompressionRule` (s)",object,"Archive Compression rule","
     .. _dcmArchiveCompressionRule:
 
@@ -372,6 +392,7 @@ DICOM Archive Device related information
     queue
     exporter
     exportRule
+    rsForwardRule
     archiveCompressionRule
     archiveAttributeCoercion
     rejectionNote
