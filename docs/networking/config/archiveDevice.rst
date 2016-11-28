@@ -331,6 +331,10 @@ DICOM Archive Device related information
     .. _dcmAttributeFilter:
 
     dcmAttributeFilter_"
+    ":doc:`metadataFilter` (s)",object,"Named Attribute Filter for WADO-RS Metadata requests.","
+    .. _dcmMetadataFilter:
+
+    dcmMetadataFilter_"
     ":doc:`storage` (s)",object,"Specifies Storage System","
     .. _dcmStorage:
 
@@ -387,6 +391,7 @@ DICOM Archive Device related information
 .. toctree::
 
     attributeFilter
+    metadataFilter
     storage
     queryRetrieveView
     queue
