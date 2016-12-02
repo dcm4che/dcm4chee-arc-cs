@@ -11,14 +11,18 @@ DICOM Archive Network AE related information
     .. _dcmStorageID:
 
     dcmStorageID_"
-    "Metadata Storage ID",string,"ID of Storage on which Metadata is stored in JSON format - additionally to the complete DICOM composite object. If absent, metadata is not stored additionally","
+    "Metadata Storage ID",string,"ID of Storage on which Metadata is stored in JSON format - additionally to the complete DICOM composite object - of objects received by this AE. Overwrites value specified on Device level.","
     .. _dcmMetadataStorageID:
 
     dcmMetadataStorageID_"
-    "Series Metadata Storage ID",string,"ID of Storage on which ZIP archives with aggregated Metadata of all instances of a Series is stored. If absent, no aggregated Series Metadata will be stored.","
-    .. _dcmSeriesMetadataStorageID:
+    "Aggregate Series Metadata Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS for storing aggregated Series Metadata on storage of objects received by this AE. Overwrites value specified on Device level.","
+    .. _dcmSeriesMetadataDelay:
 
-    dcmSeriesMetadataStorageID_"
+    dcmSeriesMetadataDelay_"
+    "Remove Instance Records Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS for removing Instance Records from the DB received by this AE. Overwrites value specified on Device level.","
+    .. _dcmRemoveInstanceRecordsDelay:
+
+    dcmRemoveInstanceRecordsDelay_"
     "Store Access Control ID",string,"Access Contol ID assigned to Studies received by this AE","
     .. _dcmStoreAccessControlID:
 

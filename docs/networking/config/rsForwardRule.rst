@@ -4,14 +4,14 @@ RESTful Forward Rule
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: RESTful Forward Rule Attributes (LDAP Object: dcmRsForwardRule)
-    :header: Name ( :sup:`*` = required ), Type, Description, LDAP Attribute
+    :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Name\ :sup:`*` ",string,"Arbitrary/Meaningful name of the RESTful Forward Rule","
+    "**Name**",string,"Arbitrary/Meaningful name of the RESTful Forward Rule","
     .. _cn:
 
     cn_"
-    "Target Base URL\ :sup:`*` ",string,"Target URL without operation specific part: http://<host>:<port>/dcm4chee-arc/aets/<aet>/rs/.","
+    "**Target Base URL**",string,"Target URL without operation specific part: http://<host>:<port>/dcm4chee-arc/aets/<aet>/rs/.","
     .. _dcmURI:
 
     dcmURI_"

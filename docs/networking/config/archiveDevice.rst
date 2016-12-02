@@ -35,6 +35,18 @@ DICOM Archive Device related information
     .. _dcmSeriesMetadataFetchSize:
 
     dcmSeriesMetadataFetchSize_"
+    "Remove Instance Records Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS for removing Instance Records from the DB. If absent, Instance Records will never be removed.","
+    .. _dcmRemoveInstanceRecordsDelay:
+
+    dcmRemoveInstanceRecordsDelay_"
+    "Remove Instance Records Polling Interval",string,"Polling Interval for Series scheduled for removing Instance Records from the DB in ISO-8601 duration format PnDTnHnMn.nS. If absent, Instance Records will not be removed.","
+    .. _dcmRemoveInstanceRecordsPollingInterval:
+
+    dcmRemoveInstanceRecordsPollingInterval_"
+    "Remove Instance Records Fetch Size",integer,"Maximal number of Series scheduled for removing Instance Records from the DB fetched by one query; 100 if absent.","
+    .. _dcmRemoveInstanceRecordsFetchSize:
+
+    dcmRemoveInstanceRecordsFetchSize_"
     "**Query/Retrieve View ID**",string,"Query/Retrieve View Identifier","
     .. _dcmQueryRetrieveViewID:
 
