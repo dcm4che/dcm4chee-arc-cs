@@ -39,3 +39,7 @@ DICOM Archive HL7 Application related information
     .. _dcmScheduledStation:
 
     dcmScheduledStation_"
+    ":doc:`hl7Order2SPSStatus` (s)",object,"Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages","
+    .. _hl7Order2SPSStatus:
+
+    hl7Order2SPSStatus_"
