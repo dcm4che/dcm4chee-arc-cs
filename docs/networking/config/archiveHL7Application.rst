@@ -35,3 +35,7 @@ DICOM Archive HL7 Application related information
     .. _hl7ForwardRule:
 
     hl7ForwardRule_"
+    ":doc:`scheduledStation` (s)",object,"Scheduled Station selected on MWL HL7 Order Feed","
+    .. _dcmScheduledStation:
+
+    dcmScheduledStation_"

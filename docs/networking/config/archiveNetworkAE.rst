@@ -19,10 +19,10 @@ DICOM Archive Network AE related information
     .. _dcmSeriesMetadataDelay:
 
     dcmSeriesMetadataDelay_"
-    "Remove Instance Records Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS for removing Instance Records from the DB received by this AE. Overwrites value specified on Device level.","
-    .. _dcmRemoveInstanceRecordsDelay:
+    "Purge Instance Records Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS for purging Instance Records from the DB received by this AE. Overwrites value specified on Device level.","
+    .. _dcmPurgeInstanceRecordsDelay:
 
-    dcmRemoveInstanceRecordsDelay_"
+    dcmPurgeInstanceRecordsDelay_"
     "Store Access Control ID",string,"Access Contol ID assigned to Studies received by this AE","
     .. _dcmStoreAccessControlID:
 

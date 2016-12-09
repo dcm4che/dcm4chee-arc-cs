@@ -35,18 +35,18 @@ DICOM Archive Device related information
     .. _dcmSeriesMetadataFetchSize:
 
     dcmSeriesMetadataFetchSize_"
-    "Remove Instance Records Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS for removing Instance Records from the DB. If absent, Instance Records will never be removed.","
-    .. _dcmRemoveInstanceRecordsDelay:
+    "Remove Instance Records Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS for purging Instance Records from the DB. If absent, Instance Records will never be purged.","
+    .. _dcmPurgeInstanceRecordsDelay:
 
-    dcmRemoveInstanceRecordsDelay_"
-    "Remove Instance Records Polling Interval",string,"Polling Interval for Series scheduled for removing Instance Records from the DB in ISO-8601 duration format PnDTnHnMn.nS. If absent, Instance Records will not be removed.","
-    .. _dcmRemoveInstanceRecordsPollingInterval:
+    dcmPurgeInstanceRecordsDelay_"
+    "Remove Instance Records Polling Interval",string,"Polling Interval for Series scheduled for purging Instance Records from the DB in ISO-8601 duration format PnDTnHnMn.nS. If absent, Instance Records will not be purged.","
+    .. _dcmPurgeInstanceRecordsPollingInterval:
 
-    dcmRemoveInstanceRecordsPollingInterval_"
-    "Remove Instance Records Fetch Size",integer,"Maximal number of Series scheduled for removing Instance Records from the DB fetched by one query; 100 if absent.","
-    .. _dcmRemoveInstanceRecordsFetchSize:
+    dcmPurgeInstanceRecordsPollingInterval_"
+    "Remove Instance Records Fetch Size",integer,"Maximal number of Series scheduled for purging Instance Records from the DB fetched by one query; 100 if absent.","
+    .. _dcmPurgeInstanceRecordsFetchSize:
 
-    dcmRemoveInstanceRecordsFetchSize_"
+    dcmPurgeInstanceRecordsFetchSize_"
     "**Query/Retrieve View ID**",string,"Query/Retrieve View Identifier","
     .. _dcmQueryRetrieveViewID:
 
@@ -399,6 +399,10 @@ DICOM Archive Device related information
     .. _hl7ForwardRule:
 
     hl7ForwardRule_"
+    ":doc:`scheduledStation` (s)",object,"Scheduled Station selected on MWL HL7 Order Feed","
+    .. _dcmScheduledStation:
+
+    dcmScheduledStation_"
 
 .. toctree::
 
@@ -417,3 +421,4 @@ DICOM Archive Device related information
     storeAccessControlIDRule
     idGenerator
     hl7ForwardRule
+    scheduledStation
