@@ -1,9 +1,9 @@
-Scheduled Station
-=================
+Scheduled Station for HL7 Order
+===============================
 Scheduled Station selected on MWL HL7 Order Feed
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
-.. csv-table:: Scheduled Station Attributes (LDAP Object: dcmScheduledStation)
+.. csv-table:: Scheduled Station for HL7 Order Attributes (LDAP Object: hl7OrderScheduledStation)
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
@@ -12,9 +12,9 @@ Scheduled Station selected on MWL HL7 Order Feed
 
     cn_"
     "**Scheduled Station Device Name**",string,"Device Name of Scheduled Station","
-    .. _dcmScheduledStationDeviceName:
+    .. _hl7OrderScheduledStationDeviceName:
 
-    dcmScheduledStationDeviceName_"
+    hl7OrderScheduledStationDeviceName_"
     "Mapping Priority",integer,"Mapping Priority. 0 if absent.","
     .. _dcmRulePriority:
 

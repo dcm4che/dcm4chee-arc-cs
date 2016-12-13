@@ -3,7 +3,7 @@ SPS Status for HL7 Order
 Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
-.. csv-table:: SPS Status for HL7 Order Attributes (LDAP Object: hl7Order2SPSStatus)
+.. csv-table:: SPS Status for HL7 Order Attributes (LDAP Object: hl7OrderSPSStatus)
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
@@ -11,11 +11,7 @@ Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01,
     .. _dcmSPSStatus:
 
     dcmSPSStatus_"
-    "**HL7 Order Control Code(s)**",string,"HL7 Order Control Code","
-    .. _hl7OrderControlCode:
+    "HL7 Order Control Status(s)",string,"HL7 Order Control Status Code combinations","
+    .. _hl7OrderControlStatus:
 
-    hl7OrderControlCode_"
-    "**HL7 Order Status(s)**",string,"HL7 Order Status","
-    .. _hl7OrderStatus:
-
-    hl7OrderStatus_"
+    hl7OrderControlStatus_"

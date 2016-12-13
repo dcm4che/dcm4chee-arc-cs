@@ -35,11 +35,11 @@ DICOM Archive HL7 Application related information
     .. _hl7ForwardRule:
 
     hl7ForwardRule_"
-    ":doc:`scheduledStation` (s)",object,"Scheduled Station selected on MWL HL7 Order Feed","
-    .. _dcmScheduledStation:
+    ":doc:`hl7OrderScheduledStation` (s)",object,"Scheduled Station selected on MWL HL7 Order Feed","
+    .. _hl7OrderScheduledStation:
 
-    dcmScheduledStation_"
-    ":doc:`hl7Order2SPSStatus` (s)",object,"Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages","
-    .. _hl7Order2SPSStatus:
+    hl7OrderScheduledStation_"
+    ":doc:`hl7OrderSPSStatus` (s)",object,"Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages","
+    .. _hl7OrderSPSStatus:
 
-    hl7Order2SPSStatus_"
+    hl7OrderSPSStatus_"
