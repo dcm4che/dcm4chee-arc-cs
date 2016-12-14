@@ -4,14 +4,14 @@ Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01,
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: SPS Status for HL7 Order Attributes (LDAP Object: hl7OrderSPSStatus)
-    :header: Name, Type, Description, LDAP Attribute
+    :header: Name ( :sup:`*` = required ), Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "**Scheduled Procedure Step Status code**",string,"Scheduled Procedure Step Status code","
+    "Scheduled Procedure Step Status code\ :sup:`*` ",string,"Scheduled Procedure Step Status code","
     .. _dcmSPSStatus:
 
     dcmSPSStatus_"
-    "HL7 Order Control Status(s)",string,"HL7 Order Control Status Code combinations","
+    "HL7 Order Control Status(s)",string,"HL7 Order Control Status Code combinations. Enumerated values: NW_SC, NW_IP, CA_CA, DC_CA, XO_SC, XO_CM, SC_CM, SC_DC, SC_IP, SC_A","
     .. _hl7OrderControlStatus:
 
     hl7OrderControlStatus_"
