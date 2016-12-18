@@ -347,6 +347,10 @@ DICOM Archive Device related information
     .. _dcmMetadataFilter:
 
     dcmMetadataFilter_"
+    "Remap Retrieve URL",string,"Remap Retrieve URL used in QIDO-RS and WADO-RS Metadata responses. Optionally prefixed with ""[<http-client-host>]"". E.g.: ""[cache-proxy]http://cache-proxy:8080"". If absent or if the specified <http-client-host> does not match, scheme and server authority of the QIDO-RS or WADO-RS request URL are used.","
+    .. _dcmRemapRetrieveURL:
+
+    dcmRemapRetrieveURL_"
     ":doc:`storage` (s)",object,"Specifies Storage System","
     .. _dcmStorage:
 
