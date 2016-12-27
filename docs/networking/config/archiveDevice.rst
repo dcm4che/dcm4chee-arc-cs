@@ -67,6 +67,10 @@ DICOM Archive Device related information
     .. _dcmHideSPSWithStatusFromMWL:
 
     dcmHideSPSWithStatusFromMWL_"
+    "Validate Calling AE Hostname",boolean,"Validate Calling AE Hostname or IP Address of Association requestors; disabled if absent","
+    .. _dcmValidateCallingAEHostname:
+
+    dcmValidateCallingAEHostname_"
     "Person Name Component Order Insensitive Matching",boolean,"Indicates if name component order insensitive matching is performed on fuzzy semantic matching of person names; disabled if absent","
     .. _dcmPersonNameComponentOrderInsensitiveMatching:
 
