@@ -35,6 +35,10 @@ DICOM Archive Network AE related information
     .. _dcmAccessControlID:
 
     dcmAccessControlID_"
+    "Accepted Move Destination(s)",string,"Accepted Move Destination in C-MOVE requests; any if absent.","
+    .. _dcmAcceptedMoveDestination:
+
+    dcmAcceptedMoveDestination_"
     "Overwrite Policy",string,"Overwrite Policy: NEVER, ALWAYS, SAME_SOURCE, SAME_SERIES or SAME_SOURCE_AND_SERIES. NEVER if absent.","
     .. _dcmOverwritePolicy:
 
