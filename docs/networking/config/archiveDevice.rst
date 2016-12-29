@@ -295,6 +295,10 @@ DICOM Archive Device related information
     .. _dcmStoreUpdateDBMaxRetries:
 
     dcmStoreUpdateDBMaxRetries_"
+    "Store Update DB Maximum Delay of Retry",integer,"Maximum delay in ms of retry to update the database on storage; 1000 if absent","
+    .. _dcmStoreUpdateDBMaxRetryDelay:
+
+    dcmStoreUpdateDBMaxRetryDelay_"
     "Allow Rejection For Data Retention Policy Expired",string,"Allow Rejection For Data Retention Policy Expired : NEVER, ALWAYS, STUDY_RETENTION_POLICY. If absent, STUDY_RETENTION_POLICY will be applied.","
     .. _dcmAllowRejectionForDataRetentionPolicyExpired:
 

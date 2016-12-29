@@ -167,7 +167,7 @@ DICOM Device related information
     .. _dcmImageReader:
 
     dcmImageReader_"
-    ":doc:`auditLogger` ",object,"Audit Logger related information","
+    ":doc:`auditLogger` (s)",object,"Audit Logger related information","
     .. _dcmAuditLogger:
 
     dcmAuditLogger_"
