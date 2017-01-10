@@ -15,6 +15,10 @@ Export Rule
     .. _dcmEntity:
 
     dcmEntity_"
+    "Export Previous Entity",boolean,"Specifies if the previous Entity of a replaced Instance shall be also exported. Disabled if absent.","
+    .. _dcmExportPreviousEntity:
+
+    dcmExportPreviousEntity_"
     "**Exporter ID(s)**",string,"Exporter ID","
     .. _dcmExporterID:
 
