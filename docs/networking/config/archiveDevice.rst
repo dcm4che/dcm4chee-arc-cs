@@ -59,6 +59,10 @@ DICOM Archive Device related information
     .. _dcmAcceptMissingPatientID:
 
     dcmAcceptMissingPatientID_"
+    "Accept Conflicting Patient ID",string,"Indicates if objects with a Patient IDs which differs from the Patient ID in previous received objects of the Study shall be accepted. Enumerated values: YES, NO, MERGED(= accept prior Patient IDs). If absent, MERGED will be applied.","
+    .. _dcmAcceptConflictingPatientID:
+
+    dcmAcceptConflictingPatientID_"
     "Bulk Data Spool Directory",string,"Path to Bulk Data Spool Directory","
     .. _dcmBulkDataSpoolDirectory:
 
@@ -359,6 +363,38 @@ DICOM Archive Device related information
     .. _dcmRemapRetrieveURL:
 
     dcmRemapRetrieveURL_"
+    "HL7 Procedure Status Update Sending Application",string,"Application|Facility name of Sending Application for HL7 Procedure Status Update. HL7 Procedure Status Update disabled.","
+    .. _hl7PSUSendingApplication:
+
+    hl7PSUSendingApplication_"
+    "HL7 Procedure Status Update Receiving Application(s)",string,"Application|Facility name of Receiving Application for HL7 Procedure Status Update.","
+    .. _hl7PSUReceivingApplication:
+
+    hl7PSUReceivingApplication_"
+    "HL7 Procedure Status Update Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which an HL7 Procedure Status Update for a received study is sent to configured HL7 receivers. If absent, HL7 Procedure Status Update is triggered by received MPPS.","
+    .. _hl7PSUDelay:
+
+    hl7PSUDelay_"
+    "HL7 Procedure Status Update MWL",boolean,"Specifies if the Status of MWL Items in the DB is updated to COMPLETED for a received study after the configured HL7 Procedure Status Update Delay. Disabled, if absent.","
+    .. _hl7PSUMWL:
+
+    hl7PSUMWL_"
+    "HL7 Procedure Status Update Timeout",string,"Timeout in ISO-8601 duration format PnDTnHnMn.nS for waiting on receive of instances referenced in MPPS; check for completeness forever if absent.","
+    .. _hl7PSUTimeout:
+
+    hl7PSUTimeout_"
+    "HL7 Procedure Status Update On Timeout",boolean,"Specifies if the HL7 Procedure Status Update is sent if the timeout for waiting on receive of instances referenced is exceeded; just stop check for completeness on timeout if absent.","
+    .. _hl7PSUOnTimeout:
+
+    hl7PSUOnTimeout_"
+    "HL7 Procedure Status Update Task Polling Interval",string,"Polling Interval for HL7 Procedure Status Update Tasks in ISO-8601 duration format PnDTnHnMn.nS. Disabled, if absent.","
+    .. _hl7PSUTaskPollingInterval:
+
+    hl7PSUTaskPollingInterval_"
+    "HL7 Procedure Status Update Tasks Fetch Size",integer,"Maximal number of HL7 Procedure Status Update Tasks fetched in one query; 100 if absent","
+    .. _hl7PSUTaskFetchSize:
+
+    hl7PSUTaskFetchSize_"
     ":doc:`storage` (s)",object,"Specifies Storage System","
     .. _dcmStorage:
 

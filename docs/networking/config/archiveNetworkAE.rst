@@ -175,6 +175,30 @@ DICOM Archive Network AE related information
     .. _dcmExternalRetrieveAEDestination:
 
     dcmExternalRetrieveAEDestination_"
+    "HL7 Procedure Status Update Sending Application",string,"Application|Facility name of Sending Application for HL7 Procedure Status Update. HL7 Procedure Status Update disabled, if absent.","
+    .. _hl7PSUSendingApplication:
+
+    hl7PSUSendingApplication_"
+    "HL7 Procedure Status Update Receiving Application(s)",string,"Application|Facility name of Receiving Application for HL7 Procedure Status Update.","
+    .. _hl7PSUReceivingApplication:
+
+    hl7PSUReceivingApplication_"
+    "HL7 Procedure Status Update Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which an HL7 Procedure Status Update for a received study is sent to configured HL7 receivers. If absent, HL7 Procedure Status Update is triggered by received MPPS.","
+    .. _hl7PSUDelay:
+
+    hl7PSUDelay_"
+    "HL7 Procedure Status Update MWL",boolean,"Specifies if the Status of MWL Items in the DB is updated to COMPLETED for a received study after the configured HL7 Procedure Status Update Delay. Disabled, if absent.","
+    .. _hl7PSUMWL:
+
+    hl7PSUMWL_"
+    "HL7 Procedure Status Update Timeout",string,"Timeout in ISO-8601 duration format PnDTnHnMn.nS for waiting on receive of instances referenced in MPPS; check for completeness forever if absent.","
+    .. _hl7PSUTimeout:
+
+    hl7PSUTimeout_"
+    "HL7 Procedure Status Update On Timeout",boolean,"Specifies if the HL7 Procedure Status Update is sent if the timeout for waiting on receive of instances referenced is exceeded; just stop check for completeness on timeout if absent.","
+    .. _hl7PSUOnTimeout:
+
+    hl7PSUOnTimeout_"
     ":doc:`exportRule` (s)",object,"Export Rule","
     .. _dcmExportRule:
 

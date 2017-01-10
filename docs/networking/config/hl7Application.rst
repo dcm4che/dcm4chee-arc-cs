@@ -15,7 +15,7 @@ HL7 Application information
     .. _dicomNetworkConnectionReference:
 
     dicomNetworkConnectionReference_"
-    "Accepted Sending Application(s)",string,"Application^Facility name of accepted Sending Application(s); any if absent","
+    "Accepted Sending Application(s)",string,"Application|Facility name of accepted Sending Application(s); any if absent","
     .. _hl7AcceptedSendingApplication:
 
     hl7AcceptedSendingApplication_"
