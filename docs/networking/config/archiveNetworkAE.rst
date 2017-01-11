@@ -47,6 +47,10 @@ DICOM Archive Network AE related information
     .. _dcmAcceptMissingPatientID:
 
     dcmAcceptMissingPatientID_"
+    "Accept Conflicting Patient ID",string,"Indicates if objects with a Patient IDs which differs from the Patient ID in previous received objects of the Study shall be accepted. Enumerated values: YES, NO, MERGED(= accept prior Patient IDs). If absent, MERGED will be applied.","
+    .. _dcmAcceptConflictingPatientID:
+
+    dcmAcceptConflictingPatientID_"
     "Query/Retrieve View ID",string,"Query/Retrieve View Identifier","
     .. _dcmQueryRetrieveViewID:
 
