@@ -363,6 +363,10 @@ DICOM Archive Device related information
     .. _dcmRemapRetrieveURL:
 
     dcmRemapRetrieveURL_"
+    "Audit Record Repository URL",string,"Access URL of Audit Record Repository. E.g. http://kibana:5601","
+    .. _dcmAuditRecordRepositoryURL:
+
+    dcmAuditRecordRepositoryURL_"
     "HL7 Procedure Status Update Sending Application",string,"Application|Facility name of Sending Application for HL7 Procedure Status Update. HL7 Procedure Status Update disabled.","
     .. _hl7PSUSendingApplication:
 
