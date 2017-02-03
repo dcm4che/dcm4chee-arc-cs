@@ -367,6 +367,10 @@ DICOM Archive Device related information
     .. _dcmAuditRecordRepositoryURL:
 
     dcmAuditRecordRepositoryURL_"
+    "Copy Move Update Policy",string,"Indicates which policy will be used for updation of attributes for RESTful Copy/Move Instances service. Enumerated values: SUPPLEMENT, OVERWRITE, MERGED. If absent, nothing will be done (target's attributes remain unchanged).","
+    .. _dcmCopyMoveUpdatePolicy:
+
+    dcmCopyMoveUpdatePolicy_"
     "HL7 Procedure Status Update Sending Application",string,"Application|Facility name of Sending Application for HL7 Procedure Status Update. HL7 Procedure Status Update disabled.","
     .. _hl7PSUSendingApplication:
 
