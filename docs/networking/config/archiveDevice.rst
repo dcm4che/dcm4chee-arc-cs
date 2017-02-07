@@ -367,7 +367,7 @@ DICOM Archive Device related information
     .. _dcmAuditRecordRepositoryURL:
 
     dcmAuditRecordRepositoryURL_"
-    "Copy Move Update Policy",string,"Indicates which policy will be used for updation of attributes for RESTful Copy/Move Instances service. Enumerated values: SUPPLEMENT, OVERWRITE, MERGED, REPLACE. If absent, nothing will be done (attributes of target study attributes remain unchanged).","
+    "Copy Move Update Policy",string,"Specifies update policy for attributes of the destination Study on Copy/Move of Instances from another Study. Enumerated values: SUPPLEMENT, OVERWRITE, MERGED, REPLACE. If absent, the attributes will not be updated.","
     .. _dcmCopyMoveUpdatePolicy:
 
     dcmCopyMoveUpdatePolicy_"
