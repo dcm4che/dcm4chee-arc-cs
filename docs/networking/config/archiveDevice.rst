@@ -63,6 +63,10 @@ DICOM Archive Device related information
     .. _dcmAcceptConflictingPatientID:
 
     dcmAcceptConflictingPatientID_"
+    "Track Changed Patient ID",boolean,"Enable to keep track of the prior Patient ID on a change of the Patient ID by HL7 ADT^A47 or by the RESTful Patient Update Service. Enabled if absent.","
+    .. _hl7TrackChangedPatientID:
+
+    hl7TrackChangedPatientID_"
     "Bulk Data Spool Directory",string,"Path to Bulk Data Spool Directory","
     .. _dcmBulkDataSpoolDirectory:
 
