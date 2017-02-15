@@ -179,6 +179,14 @@ DICOM Archive Network AE related information
     .. _dcmExternalRetrieveAEDestination:
 
     dcmExternalRetrieveAEDestination_"
+    "Invoke Image Display Patient URL",string,"URL to launch external Image Display for a Patient. {} will be replaced by the Patient ID formatted as HL7 CX data type. E.g.: http://display:8080/IHEInvokeImageDisplay?requestType=PATIENT&patientID={}","
+    .. _dcmInvokeImageDisplayPatientURL:
+
+    dcmInvokeImageDisplayPatientURL_"
+    "Invoke Image Display Study URL",string,"URL to launch external Image Display for a Study. {} will be replaced by the Study Instance UID. E.g.: http://display:8080/IHEInvokeImageDisplay?requestType=STUDY&studyUID={}","
+    .. _dcmInvokeImageDisplayStudyURL:
+
+    dcmInvokeImageDisplayStudyURL_"
     "Copy Move Update Policy",string,"Specifies update policy for attributes of the destination Study on Copy/Move of Instances from another Study. Enumerated values: SUPPLEMENT, OVERWRITE, MERGED, REPLACE. If absent, the attributes will not be updated.","
     .. _dcmCopyMoveUpdatePolicy:
 

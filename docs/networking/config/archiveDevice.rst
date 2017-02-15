@@ -63,7 +63,7 @@ DICOM Archive Device related information
     .. _dcmAcceptConflictingPatientID:
 
     dcmAcceptConflictingPatientID_"
-    "Track Changed Patient ID",boolean,"Enable to keep track of the prior Patient ID on a change of the Patient ID by HL7 ADT^A47 or by the RESTful Patient Update Service. Enabled if absent.","
+    "HL7 Track Changed Patient ID",boolean,"Enable to keep track of the prior Patient ID on a change of the Patient ID by HL7 ADT^A47 or by the RESTful Patient Update Service. Enabled if absent.","
     .. _hl7TrackChangedPatientID:
 
     hl7TrackChangedPatientID_"
@@ -355,6 +355,10 @@ DICOM Archive Device related information
     .. _dcmExternalRetrieveAEDestination:
 
     dcmExternalRetrieveAEDestination_"
+    "XDS-I Imaging Document Source AE Title",string,"AE Title of local Application Entity associated with XDS-I Imaging Document Source.","
+    .. _dcmXDSiImagingDocumentSourceAETitle:
+
+    dcmXDSiImagingDocumentSourceAETitle_"
     ":doc:`attributeFilter` (s)",object,"Specifies Attributes stored in the database","
     .. _dcmAttributeFilter:
 
@@ -371,6 +375,14 @@ DICOM Archive Device related information
     .. _dcmAuditRecordRepositoryURL:
 
     dcmAuditRecordRepositoryURL_"
+    "Invoke Image Display Patient URL",string,"URL to launch external Image Display for a Patient. {} will be replaced by the Patient ID formatted as HL7 CX data type. E.g.: http://display:8080/IHEInvokeImageDisplay?requestType=PATIENT&patientID={}","
+    .. _dcmInvokeImageDisplayPatientURL:
+
+    dcmInvokeImageDisplayPatientURL_"
+    "Invoke Image Display Study URL",string,"URL to launch external Image Display for a Study. {} will be replaced by the Study Instance UID. E.g.: http://display:8080/IHEInvokeImageDisplay?requestType=STUDY&studyUID={}","
+    .. _dcmInvokeImageDisplayStudyURL:
+
+    dcmInvokeImageDisplayStudyURL_"
     "Copy Move Update Policy",string,"Specifies update policy for attributes of the destination Study on Copy/Move of Instances from another Study. Enumerated values: SUPPLEMENT, OVERWRITE, MERGED, REPLACE. If absent, the attributes will not be updated.","
     .. _dcmCopyMoveUpdatePolicy:
 
