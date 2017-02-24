@@ -387,7 +387,15 @@ DICOM Archive Device related information
     .. _dcmCopyMoveUpdatePolicy:
 
     dcmCopyMoveUpdatePolicy_"
-    "HL7 Procedure Status Update Sending Application",string,"Application|Facility name of Sending Application for HL7 Procedure Status Update. HL7 Procedure Status Update disabled.","
+    "HL7 ADT Sending Application",string,"Application|Facility name of Sending Application for HL7 ADT messages to synchronize external systems about performed Patient Information updates. If absent, synchronization of external systems by HL7 ADT messages is disabled.","
+    .. _hl7ADTSendingApplication:
+
+    hl7ADTSendingApplication_"
+    "HL7 ADT Receiving Application(s)",string,"Application|Facility name of Receiving Application for HL7 ADT messages to synchronize external systems about performed Patient Information updates.","
+    .. _hl7ADTReceivingApplication:
+
+    hl7ADTReceivingApplication_"
+    "HL7 Procedure Status Update Sending Application",string,"Application|Facility name of Sending Application for HL7 Procedure Status Update. HL7 Procedure Status Update disabled, if absent.","
     .. _hl7PSUSendingApplication:
 
     hl7PSUSendingApplication_"
