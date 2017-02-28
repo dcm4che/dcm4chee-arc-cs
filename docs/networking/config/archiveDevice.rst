@@ -391,7 +391,7 @@ DICOM Archive Device related information
     .. _hl7ADTSendingApplication:
 
     hl7ADTSendingApplication_"
-    "HL7 ADT Receiving Application(s)",string,"Application|Facility name of Receiving Application for HL7 ADT messages to synchronize external systems about performed Patient Information updates.","
+    "HL7 ADT Receiving Application(s)",string,"Application|Facility name of Receiving Application for HL7 ADT messages to synchronize external systems about performed Patient Information updates. If absent, synchronization of external systems by HL7 ADT messages is disabled.","
     .. _hl7ADTReceivingApplication:
 
     hl7ADTReceivingApplication_"
