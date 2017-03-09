@@ -63,10 +63,6 @@ DICOM Archive Device related information
     .. _dcmAcceptConflictingPatientID:
 
     dcmAcceptConflictingPatientID_"
-    "HL7 Track Changed Patient ID",boolean,"Enable to keep track of the prior Patient ID on a change of the Patient ID by HL7 ADT^A47 or by the RESTful Patient Update Service. Enabled if absent.","
-    .. _hl7TrackChangedPatientID:
-
-    hl7TrackChangedPatientID_"
     "Bulk Data Spool Directory",string,"Path to Bulk Data Spool Directory","
     .. _dcmBulkDataSpoolDirectory:
 
@@ -427,6 +423,14 @@ DICOM Archive Device related information
     .. _hl7PSUTaskFetchSize:
 
     hl7PSUTaskFetchSize_"
+    "HL7 Track Changed Patient ID",boolean,"Enable to keep track of the prior Patient ID on a change of the Patient ID by HL7 ADT^A47 or by the RESTful Patient Update Service. Enabled if absent.","
+    .. _hl7TrackChangedPatientID:
+
+    hl7TrackChangedPatientID_"
+    "DICOM Correct VR Template URI",string,"Specifies URI for the style sheet used by DICOM Store Service.","
+    .. _dcmCorrectVRTemplateURI:
+
+    dcmCorrectVRTemplateURI_"
     ":doc:`storage` (s)",object,"Specifies Storage System","
     .. _dcmStorage:
 
