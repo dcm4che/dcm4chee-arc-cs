@@ -427,10 +427,6 @@ DICOM Archive Device related information
     .. _hl7TrackChangedPatientID:
 
     hl7TrackChangedPatientID_"
-    "DICOM Correct VR Template URI",string,"Specifies URI for the style sheet used by DICOM Store Service.","
-    .. _dcmCorrectVRTemplateURI:
-
-    dcmCorrectVRTemplateURI_"
     ":doc:`storage` (s)",object,"Specifies Storage System","
     .. _dcmStorage:
 
