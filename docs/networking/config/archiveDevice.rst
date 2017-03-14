@@ -231,6 +231,10 @@ DICOM Archive Device related information
     .. _hl7ScheduleProcedureTemplateURI:
 
     hl7ScheduleProcedureTemplateURI_"
+    "HL7 Schedule Protocol Code in Order",string,"Specifies location of Scheduled Protocol Code in received HL7 Order message. Enumerated values: OBR_4_1, OBR_4_4. If absent, OBR_4_4 will be applied.","
+    .. _hl7ScheduledProtocolCodeInOrder:
+
+    hl7ScheduledProtocolCodeInOrder_"
     "HL7 Log File Pattern",string,"Path to HL7 messages which will be captured exactly as received. If absent, there is no logging.","
     .. _hl7LogFilePattern:
 
