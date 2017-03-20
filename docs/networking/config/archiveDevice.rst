@@ -431,6 +431,14 @@ DICOM Archive Device related information
     .. _hl7TrackChangedPatientID:
 
     hl7TrackChangedPatientID_"
+    "Audit Unknown Study Instance UID",string,"Indicates study instance uid value to be sent in audit message when not known. If absent, 'unknownStudy' will be applied.","
+    .. _dcmAuditUnknownStudyInstanceUID:
+
+    dcmAuditUnknownStudyInstanceUID_"
+    "Audit Unknown Patient ID",string,"Indicates patient id value to be sent in audit message when not known. If absent, '<none>' will be applied.","
+    .. _dcmAuditUnknownPatientID:
+
+    dcmAuditUnknownPatientID_"
     ":doc:`storage` (s)",object,"Specifies Storage System","
     .. _dcmStorage:
 
