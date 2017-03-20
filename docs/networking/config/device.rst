@@ -15,6 +15,10 @@ DICOM Device related information
     .. _dicomDescription:
 
     dicomDescription_"
+    "Device UID",string,"Unique identifier of the device","
+    .. _dicomDeviceUID:
+
+    dicomDeviceUID_"
     "Manufacturer",string,"Should be the same as the value of Manufacturer (0008,0070) in SOP instances created by this device","
     .. _dicomManufacturer:
 

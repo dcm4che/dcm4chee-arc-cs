@@ -47,9 +47,3 @@ DICOM Archive HL7 Application related information
     .. _hl7OrderSPSStatus:
 
     hl7OrderSPSStatus_"
-
-.. toctree::
-
-    hl7ForwardRule
-    hl7OrderScheduledStation
-    hl7OrderSPSStatus

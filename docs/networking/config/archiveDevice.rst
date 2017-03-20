@@ -215,6 +215,22 @@ DICOM Archive Device related information
     .. _dcmAuditAggregateDuration:
 
     dcmAuditAggregateDuration_"
+    "Audit Unknown Study Instance UID",string,"Indicates study instance uid value to be sent in audit message when not known. If absent, 'unknownStudy' will be applied.","
+    .. _dcmAuditUnknownStudyInstanceUID:
+
+    dcmAuditUnknownStudyInstanceUID_"
+    "Audit Unknown Patient ID",string,"Indicates patient id value to be sent in audit message when not known. If absent, '<none>' will be applied.","
+    .. _dcmAuditUnknownPatientID:
+
+    dcmAuditUnknownPatientID_"
+    "Show Patient Info In System Log",string,"Specifies if Patient Information is shown as plain text or hashed in system logs. Enumerated values. PLAIN_TEXT, HASH_NAME, HASH_NAME_AND_ID. PLAIN_TEXT if absent.","
+    .. _dcmShowPatientInfoInSystemLog:
+
+    dcmShowPatientInfoInSystemLog_"
+    "Show Patient Info In Audit Log",string,"Specifies if Patient Information is shown as plain text or hashed in emitted audit messages. Enumerated values. PLAIN_TEXT, HASH_NAME, HASH_NAME_AND_ID. PLAIN_TEXT if absent.","
+    .. _dcmShowPatientInfoInAuditLog:
+
+    dcmShowPatientInfoInAuditLog_"
     "STOW-RS Spool Directory",string,"Path to Directory used by STOW-RS Service to spool Bulkdata of XML/JSON Metadata and Bulk Data Request Messages.","
     .. _dcmStowSpoolDirectory:
 
@@ -319,14 +335,6 @@ DICOM Archive Device related information
     .. _dcmStorePermissionServiceExpirationDatePattern:
 
     dcmStorePermissionServiceExpirationDatePattern_"
-    "Show Patient Info In System Log",string,"Specifies if Patient Information is shown as plain text or hashed in system logs. Enumerated values. PLAIN_TEXT, HASH_NAME, HASH_NAME_AND_ID. PLAIN_TEXT if absent.","
-    .. _dcmShowPatientInfoInSystemLog:
-
-    dcmShowPatientInfoInSystemLog_"
-    "Show Patient Info In Audit Log",string,"Specifies if Patient Information is shown as plain text or hashed in emitted audit messages. Enumerated values. PLAIN_TEXT, HASH_NAME, HASH_NAME_AND_ID. PLAIN_TEXT if absent.","
-    .. _dcmShowPatientInfoInAuditLog:
-
-    dcmShowPatientInfoInAuditLog_"
     "Purge Storage Commitment Completed Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which results of completed Storage Commitment requests are purged. If absent, there is no deletion.","
     .. _dcmPurgeStgCmtCompletedDelay:
 
@@ -431,14 +439,6 @@ DICOM Archive Device related information
     .. _hl7TrackChangedPatientID:
 
     hl7TrackChangedPatientID_"
-    "Audit Unknown Study Instance UID",string,"Indicates study instance uid value to be sent in audit message when not known. If absent, 'unknownStudy' will be applied.","
-    .. _dcmAuditUnknownStudyInstanceUID:
-
-    dcmAuditUnknownStudyInstanceUID_"
-    "Audit Unknown Patient ID",string,"Indicates patient id value to be sent in audit message when not known. If absent, '<none>' will be applied.","
-    .. _dcmAuditUnknownPatientID:
-
-    dcmAuditUnknownPatientID_"
     ":doc:`storage` (s)",object,"Specifies Storage System","
     .. _dcmStorage:
 

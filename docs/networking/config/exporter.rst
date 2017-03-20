@@ -39,6 +39,10 @@ Exporter Descriptor
     .. _dcmRetrieveAET:
 
     dcmRetrieveAET_"
+    "Retrieve Location UID",string,"Retrieve Location UID.","
+    .. _dcmRetrieveLocationUID:
+
+    dcmRetrieveLocationUID_"
     "Instance Availability",string,"Instance Availability: ONLINE, NEARLINE or OFFLINE. ONLINE if absent.","
     .. _dcmInstanceAvailability:
 
