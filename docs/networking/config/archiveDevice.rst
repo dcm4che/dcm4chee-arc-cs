@@ -251,6 +251,10 @@ DICOM Archive Device related information
     .. _hl7ScheduledProtocolCodeInOrder:
 
     hl7ScheduledProtocolCodeInOrder_"
+    "HL7 Schedule Station AET in Order",string,"Specifies location of Scheduled Station AE Title in received HL7 Order message. Enumerated values: ORC_18. Not effective for HL7 v2.5.1 OMI^O23 with IPC segment. If absent or no value is provided in the configured field, the Scheduled Station AE Title is selected according configured rules.","
+    .. _hl7ScheduledStationAETInOrder:
+
+    hl7ScheduledStationAETInOrder_"
     "HL7 Log File Pattern",string,"Path to HL7 messages which will be captured exactly as received. If absent, there is no logging.","
     .. _hl7LogFilePattern:
 
