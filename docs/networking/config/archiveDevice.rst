@@ -215,7 +215,7 @@ DICOM Archive Device related information
     .. _dcmAuditAggregateDuration:
 
     dcmAuditAggregateDuration_"
-    "Audit Unknown Study Instance UID",string,"Indicates study instance uid value to be sent in audit message when not known. If absent, 'unknownStudy' will be applied.","
+    "Audit Unknown Study Instance UID",string,"Indicates study instance uid value to be sent in audit message when not known. If absent, '1.2.40.0.13.1.15.110.3.165.1' will be applied.","
     .. _dcmAuditUnknownStudyInstanceUID:
 
     dcmAuditUnknownStudyInstanceUID_"
