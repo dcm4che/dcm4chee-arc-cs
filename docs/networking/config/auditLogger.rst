@@ -7,6 +7,10 @@ Audit Logger related information
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
+    "**Name**",string,"Arbitrary/Meaningful name for the Network Connection object","
+    .. _cn:
+
+    cn_"
     "**Network Connection Reference(s)**",string,"The JSON Pointers to the Network Connection objects used by this Audit Logger","
     .. _dicomNetworkConnectionReference:
 

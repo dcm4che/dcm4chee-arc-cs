@@ -387,6 +387,18 @@ DICOM Archive Device related information
     .. _dcmAuditRecordRepositoryURL:
 
     dcmAuditRecordRepositoryURL_"
+    "Elastic Search URL",string,"Access URL of Elastic Search. E.g. http://elasticsearch:9200","
+    .. _dcmElasticSearchURL:
+
+    dcmElasticSearchURL_"
+    "Audit to json+fhir Template URI",string,"Specifies URI for the style sheet to transcode Audit Message to a FHIR JSON Resource Audit Event","
+    .. _dcmAudit2JsonFhirTemplateURI:
+
+    dcmAudit2JsonFhirTemplateURI_"
+    "Audit to xml+fhir Template URI",string,"Specifies URI for the style sheet to transcode Audit Message to a FHIR XML Resource Audit Event","
+    .. _dcmAudit2XmlFhirTemplateURI:
+
+    dcmAudit2XmlFhirTemplateURI_"
     "Invoke Image Display Patient URL",string,"URL to launch external Image Display for a Patient. {} will be replaced by the Patient ID formatted as HL7 CX data type. E.g.: http://display:8080/IHEInvokeImageDisplay?requestType=PATIENT&patientID={}","
     .. _dcmInvokeImageDisplayPatientURL:
 
