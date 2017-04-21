@@ -51,18 +51,10 @@ Application entity that provides services on a network
     .. _dicomTransferCapability:
 
     dicomTransferCapability_"
-    "Accepted Calling AE Title(s)",string,"Prohibit accepting associations from unlisted AE. If not present, any AE will be accepted","
-    .. _dcmAcceptedCallingAETitle:
+    ":doc:`dcmNetworkAE` ",object,"dcm4che proprietary Attributes of Network AE","
+    .. _dcmNetworkAE:
 
-    dcmAcceptedCallingAETitle_"
-    "Other AE Title(s)",string,"Additional AE Title of Network AE - will also accept Association RQs with such Called AE Title","
-    .. _dcmOtherAETitle:
-
-    dcmOtherAETitle_"
-    "Masquerade Calling AE Title(s)",string,"AE Title used for initiating network associations, masquerading the actual AE Title for this Network AE - optional prefix [<Called AE Title>] limits the masquerading to association to a particular AE Title","
-    .. _dcmMasqueradeCallingAETitle:
-
-    dcmMasqueradeCallingAETitle_"
+    dcmNetworkAE_"
     ":doc:`archiveNetworkAE` ",object,"DICOM Archive Network AE related information","
     .. _dcmArchiveNetworkAE:
 
@@ -71,4 +63,5 @@ Application entity that provides services on a network
 .. toctree::
 
     transferCapability
+    dcmNetworkAE
     archiveNetworkAE

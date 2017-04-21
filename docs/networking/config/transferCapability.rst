@@ -23,31 +23,11 @@ Each transfer capability specifies the SOP class that the Network AE can support
     .. _dicomTransferSyntax:
 
     dicomTransferSyntax_"
-    "Relational Queries",boolean,"Enable/disable relational queries; disabled if absent","
-    .. _dcmRelationalQueries:
+    ":doc:`dcmTransferCapability` ",object,"dcm4che proprietary Transfer Capability Attributes","
+    .. _dcmTransferCapability:
 
-    dcmRelationalQueries_"
-    "Combined Date Time Matching",boolean,"Enable/disable combined date time matching; disabled if absent","
-    .. _dcmCombinedDateTimeMatching:
+    dcmTransferCapability_"
 
-    dcmCombinedDateTimeMatching_"
-    "Fuzzy Semantic Matching",boolean,"Enable/disable fuzzy semantic matching of person  names; disabled if absent","
-    .. _dcmFuzzySemanticMatching:
+.. toctree::
 
-    dcmFuzzySemanticMatching_"
-    "Timezone Query Adjustment",boolean,"Enable/disable timezone query adjustment; disabled if absent","
-    .. _dcmTimezoneQueryAdjustment:
-
-    dcmTimezoneQueryAdjustment_"
-    "Storage Conformance",integer,"Indicates level of Conformance of a Storage SCP","
-    .. _dcmStorageConformance:
-
-    dcmStorageConformance_"
-    "Digital Signature Support",integer,"Indicates level of Digital Signature Support of a Storage SCP","
-    .. _dcmDigitalSignatureSupport:
-
-    dcmDigitalSignatureSupport_"
-    "Data Element Coercion",integer,"Indicates coercion of Data Elements of a Storage SCP","
-    .. _dcmDataElementCoercion:
-
-    dcmDataElementCoercion_"
+    dcmTransferCapability
