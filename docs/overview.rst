@@ -7,4 +7,5 @@ the DICOM objects themselves.
 
 .. csv-table:: Network Services
    :header: "SOP Classes", "User", "Provider"
+   :widths: 80, 10, 10
    :file: network-services.csv
