@@ -43,8 +43,8 @@ are supported:
        "Korean", "ISO 2022 IR 149", "not supported [#hl7cs]_"
        "Simplified Chinese", "ISO 2022 IR 58", "not supported [#hl7cs]_"
        "Unicode in UTF-8", "ISO_IR 192", "UNICODE UTF-8"
-       "GB18030", "GB18030", "not supported [#hl7cs]_"
-       "GBK", "GBK", "not supported [#hl7cs]_"
+       "GB18030", "GB18030", "GB 18030-2000"
+       "GBK", "GBK", "GB 18030-2000"
 
 .. [#hl7cs] Escape sequences supporting multiple character sets in HL7 v2 messages are not supported.
 
