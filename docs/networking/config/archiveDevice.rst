@@ -2,7 +2,6 @@ Archive Device
 ==============
 DICOM Archive Device related information
 
-
 .. toctree::
 
     attributeFilter
@@ -22,6 +21,7 @@ DICOM Archive Device related information
     hl7ForwardRule
     hl7OrderScheduledStation
     hl7OrderSPSStatus
+
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Archive Device Attributes (LDAP Object: dcmArchiveDevice)
     :header: Name, Type, Description, LDAP Attribute

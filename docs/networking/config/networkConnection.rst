@@ -2,10 +2,10 @@ Network Connection
 ==================
 Describes one TCP/UDP port on one network device.
 
-
 .. toctree::
 
     dcmNetworkConnection
+
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Network Connection Attributes (LDAP Object: dcmNetworkConnection)
     :header: Name, Type, Description, LDAP Attribute

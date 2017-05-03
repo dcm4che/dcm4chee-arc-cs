@@ -2,12 +2,12 @@ Network AE
 ==========
 Application entity that provides services on a network
 
-
 .. toctree::
 
     transferCapability
     dcmNetworkAE
     archiveNetworkAE
+
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Network AE Attributes (LDAP Object: dcmNetworkAE)
     :header: Name, Type, Description, LDAP Attribute
