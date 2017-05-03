@@ -2,6 +2,10 @@ Audit Logger
 ============
 Audit Logger related information
 
+
+.. toctree::
+
+    auditSuppressCriteria
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Audit Logger Attributes (LDAP Object: dcmAuditLogger)
     :header: Name, Type, Description, LDAP Attribute
@@ -99,7 +103,3 @@ Audit Logger related information
     .. _dcmAuditSuppressCriteria:
 
     dcmAuditSuppressCriteria_"
-
-.. toctree::
-
-    auditSuppressCriteria

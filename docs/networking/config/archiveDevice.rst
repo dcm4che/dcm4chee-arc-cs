@@ -2,6 +2,26 @@ Archive Device
 ==============
 DICOM Archive Device related information
 
+
+.. toctree::
+
+    attributeFilter
+    metadataFilter
+    storage
+    queryRetrieveView
+    queue
+    exporter
+    exportRule
+    rsForwardRule
+    archiveCompressionRule
+    archiveAttributeCoercion
+    rejectionNote
+    studyRetentionPolicy
+    storeAccessControlIDRule
+    idGenerator
+    hl7ForwardRule
+    hl7OrderScheduledStation
+    hl7OrderSPSStatus
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Archive Device Attributes (LDAP Object: dcmArchiveDevice)
     :header: Name, Type, Description, LDAP Attribute
@@ -515,23 +535,3 @@ DICOM Archive Device related information
     .. _hl7OrderSPSStatus:
 
     hl7OrderSPSStatus_"
-
-.. toctree::
-
-    attributeFilter
-    metadataFilter
-    storage
-    queryRetrieveView
-    queue
-    exporter
-    exportRule
-    rsForwardRule
-    archiveCompressionRule
-    archiveAttributeCoercion
-    rejectionNote
-    studyRetentionPolicy
-    storeAccessControlIDRule
-    idGenerator
-    hl7ForwardRule
-    hl7OrderScheduledStation
-    hl7OrderSPSStatus

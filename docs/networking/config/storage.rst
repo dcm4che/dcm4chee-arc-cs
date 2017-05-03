@@ -27,10 +27,14 @@ Storage Descriptor
     .. _dcmReadOnly:
 
     dcmReadOnly_"
-    "Deleter Threshold(s)",string,"Minimal Usable Space on Storage System. If present, studies are deleted from the Storage System, if the usable space fall below that value. Format [nn'['<schedule>']']nnn(MB|GB|MiB|GiB)","
-    .. _dcmDeleterThreshold:
+    "Cache",boolean,"Indicates if a Storage System acts as cache - i.e. least recently used objects will be deleted if the usable space fall below the configured Storage Threshold; false if absent.","
+    .. _dcmCache:
 
-    dcmDeleterThreshold_"
+    dcmCache_"
+    "Storage Threshold(s)",string,"Minimal Usable Space on Storage System. The behavior if the usable space fall below that value, depends if the Storage System is marked as cache. In that case least recently used objects will be deleted. Otherwise the Storage System will be removed from the list of configured Storage Systems of the Network AE requesting that Storage System. Format [nn'['<schedule>']']nnn(MB|GB|MiB|GiB).","
+    .. _dcmStorageThreshold:
+
+    dcmStorageThreshold_"
     "Storage Property(s)",string,"Property in format <name>=<value>","
     .. _dcmProperty:
 
