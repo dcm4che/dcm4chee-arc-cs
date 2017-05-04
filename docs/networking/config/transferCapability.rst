@@ -2,10 +2,6 @@ Transfer Capability
 ===================
 Each transfer capability specifies the SOP class that the Network AE can support, the mode that it can utilize (SCP or SCU), and the Transfer Syntax(es) that it can utilize
 
-.. toctree::
-
-    dcmTransferCapability
-
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Transfer Capability Attributes (LDAP Object: dcmTransferCapability)
     :header: Name, Type, Description, LDAP Attribute
@@ -31,3 +27,7 @@ Each transfer capability specifies the SOP class that the Network AE can support
     .. _dcmTransferCapability:
 
     dcmTransferCapability_"
+
+.. toctree::
+
+    dcmTransferCapability

@@ -7,11 +7,15 @@ DICOM Archive Network AE related information
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Storage ID",string,"Storage ID","
-    .. _dcmStorageID:
+    "Object Storage ID(s)",string,"ID of Storage System on which received DICOM composite objects are stored. Multiple Storage Systems may be configured.","
+    .. _dcmObjectStorageID:
 
-    dcmStorageID_"
-    "Metadata Storage ID",string,"ID of Storage on which Metadata is stored in JSON format - additionally to the complete DICOM composite object - of objects received by this AE. Overwrites value specified on Device level.","
+    dcmObjectStorageID_"
+    "Object Storage Count",integer,"Number of Storage Systems which are filled in parallel; 1 if absent.","
+    .. _dcmObjectStorageCount:
+
+    dcmObjectStorageCount_"
+    "Metadata Storage ID(s)",string,"ID of Storage on which Metadata is stored in JSON format - additionally to the complete DICOM composite object. Multiple Storage Systems may be configured. If absent, metadata is not stored additionally.","
     .. _dcmMetadataStorageID:
 
     dcmMetadataStorageID_"

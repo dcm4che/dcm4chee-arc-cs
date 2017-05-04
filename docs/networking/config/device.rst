@@ -2,18 +2,6 @@ Device
 ======
 DICOM Device related information
 
-.. toctree::
-
-    networkConnection
-    networkAE
-    dcmDevice
-    hl7Application
-    imageWriter
-    imageReader
-    auditLogger
-    auditRecordRepository
-    archiveDevice
-
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Device Attributes (LDAP Object: dcmDevice)
     :header: Name, Type, Description, LDAP Attribute
@@ -151,3 +139,15 @@ DICOM Device related information
     .. _dcmArchiveDevice:
 
     dcmArchiveDevice_"
+
+.. toctree::
+
+    networkConnection
+    networkAE
+    dcmDevice
+    hl7Application
+    imageWriter
+    imageReader
+    auditLogger
+    auditRecordRepository
+    archiveDevice

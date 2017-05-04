@@ -2,10 +2,6 @@ HL7 Application
 ===============
 HL7 Application information
 
-.. toctree::
-
-    archiveHL7Application
-
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: HL7 Application Attributes (LDAP Object: hl7Application)
     :header: Name, Type, Description, LDAP Attribute
@@ -39,3 +35,7 @@ HL7 Application information
     .. _dcmArchiveHL7Application:
 
     dcmArchiveHL7Application_"
+
+.. toctree::
+
+    archiveHL7Application

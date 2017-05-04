@@ -2,26 +2,6 @@ Archive Device
 ==============
 DICOM Archive Device related information
 
-.. toctree::
-
-    attributeFilter
-    metadataFilter
-    storage
-    queryRetrieveView
-    queue
-    exporter
-    exportRule
-    rsForwardRule
-    archiveCompressionRule
-    archiveAttributeCoercion
-    rejectionNote
-    studyRetentionPolicy
-    storeAccessControlIDRule
-    idGenerator
-    hl7ForwardRule
-    hl7OrderScheduledStation
-    hl7OrderSPSStatus
-
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
 .. csv-table:: Archive Device Attributes (LDAP Object: dcmArchiveDevice)
     :header: Name, Type, Description, LDAP Attribute
@@ -31,15 +11,7 @@ DICOM Archive Device related information
     .. _dcmFuzzyAlgorithmClass:
 
     dcmFuzzyAlgorithmClass_"
-    "**Storage ID**",string,"Storage ID","
-    .. _dcmStorageID:
-
-    dcmStorageID_"
-    "Metadata Storage ID",string,"ID of Storage on which Metadata is stored in JSON format - additionally to the complete DICOM composite object. If absent, metadata is not stored additionally","
-    .. _dcmMetadataStorageID:
-
-    dcmMetadataStorageID_"
-    "Series Metadata Storage ID",string,"ID of Storage on which ZIP archives with aggregated Metadata of all instances of a Series is stored. If absent, no aggregated Series Metadata will be stored.","
+    "Series Metadata Storage ID(s)",string,"ID of Storage on which ZIP archives with aggregated Metadata of all instances of a Series is stored. Multiple Storage Systems may be configured. If absent, no aggregated Series Metadata will be stored.","
     .. _dcmSeriesMetadataStorageID:
 
     dcmSeriesMetadataStorageID_"
@@ -535,3 +507,23 @@ DICOM Archive Device related information
     .. _hl7OrderSPSStatus:
 
     hl7OrderSPSStatus_"
+
+.. toctree::
+
+    attributeFilter
+    metadataFilter
+    storage
+    queryRetrieveView
+    queue
+    exporter
+    exportRule
+    rsForwardRule
+    archiveCompressionRule
+    archiveAttributeCoercion
+    rejectionNote
+    studyRetentionPolicy
+    storeAccessControlIDRule
+    idGenerator
+    hl7ForwardRule
+    hl7OrderScheduledStation
+    hl7OrderSPSStatus
