@@ -91,6 +91,10 @@ DICOM Archive Device related information
     .. _dcmWadoSR2TextTemplateURI:
 
     dcmWadoSR2TextTemplateURI_"
+    "Query Fetch Size",integer,"Number of rows fetched from the database at once by the Query Service. 100 if absent","
+    .. _dcmQueryFetchSize:
+
+    dcmQueryFetchSize_"
     "Qido Max Number Of Results",integer,"Maximal number of return results by QIDO-RS Service. 0 (=unlimited) if absent","
     .. _dcmQidoMaxNumberOfResults:
 
