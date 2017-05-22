@@ -15,6 +15,10 @@ DICOM Device related information
     .. _dicomDescription:
 
     dicomDescription_"
+    "Vendor Device Data",boolean,"Device specific vendor configuration information","
+    .. _dicomVendorData:
+
+    dicomVendorData_"
     "Device UID",string,"Unique identifier of the device","
     .. _dicomDeviceUID:
 

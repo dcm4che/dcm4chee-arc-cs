@@ -19,7 +19,7 @@ dcm4che proprietary Network Connection Attributes
     .. _dcmTLSNeedClientAuth:
 
     dcmTLSNeedClientAuth_"
-    "TLS Protocol",string,"The Supported TLS Protocols; TLSv1, SSLv3 if absent","
+    "TLS Protocol(s)",string,"The Supported TLS Protocols; TLSv1, SSLv3 if absent","
     .. _dcmTLSProtocol:
 
     dcmTLSProtocol_"

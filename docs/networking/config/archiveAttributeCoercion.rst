@@ -55,6 +55,10 @@ Archive Attribute Coercion of received/sent DIMSE
     .. _dcmLeadingCFindSCP:
 
     dcmLeadingCFindSCP_"
+    "Leading C-FIND SCP return keys(s)",integer,"DICOM Tag as hex string of attributes fetched from external C-FIND SCP for Attribute Coercion. If absent, all Patient and Study Attributes extracted into the DB - configured by the Patient and Study Attribute Filter - are fetched.","
+    .. _dcmTag:
+
+    dcmTag_"
     "Attribute Update Policy",string,"Specifies how attributes shall be updated with attributes fetched from Leading C-FIND SCP. Enumerated values: SUPPLEMENT, MERGE, OVERWRITE. If absent, MERGE will be applied.","
     .. _dcmAttributeUpdatePolicy:
 
