@@ -7,7 +7,7 @@ Archive Attribute Coercion of received/sent DIMSE
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "**Name**",string,"Arbitrary/Meaningful name of the Archive Compression Rule","
+    "**Name**",string,"Arbitrary/Meaningful name of the Archive Attribute Coercion","
     .. _cn:
 
     cn_"
@@ -47,7 +47,7 @@ Archive Attribute Coercion of received/sent DIMSE
     .. _dcmMergeMWLMatchingKey:
 
     dcmMergeMWLMatchingKey_"
-    "Merge MWL Template URI",string,"Specifies URI for the style sheet to coerce request attributes of received objects from matching DICOM MWL items. Only effectiv, if dcmMergeMWLMatchingKey is specified.","
+    "Merge MWL Template URI",string,"Specifies URI for the style sheet to coerce request attributes of received objects from matching DICOM MWL items. Only effective, if dcmMergeMWLMatchingKey is specified.","
     .. _dcmMergeMWLTemplateURI:
 
     dcmMergeMWLTemplateURI_"
@@ -55,7 +55,7 @@ Archive Attribute Coercion of received/sent DIMSE
     .. _dcmLeadingCFindSCP:
 
     dcmLeadingCFindSCP_"
-    "Leading C-FIND SCP return keys(s)",integer,"DICOM Tag as hex string of attributes fetched from external C-FIND SCP for Attribute Coercion. If absent, all Patient and Study Attributes extracted into the DB - configured by the Patient and Study Attribute Filter - are fetched.","
+    "Leading C-FIND SCP return keys(s)",string,"DICOM Tag as hex string of attributes fetched from external C-FIND SCP for Attribute Coercion. If absent, all Patient and Study Attributes extracted into the DB - configured by the Patient and Study Attribute Filter - are fetched.","
     .. _dcmTag:
 
     dcmTag_"

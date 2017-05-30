@@ -27,7 +27,7 @@ DICOM Archive Network AE related information
     .. _dcmPurgeInstanceRecordsDelay:
 
     dcmPurgeInstanceRecordsDelay_"
-    "Store Access Control ID",string,"Access Contol ID assigned to Studies received by this AE","
+    "Store Access Control ID",string,"Access Control ID assigned to Studies received by this AE","
     .. _dcmStoreAccessControlID:
 
     dcmStoreAccessControlID_"
@@ -35,7 +35,7 @@ DICOM Archive Network AE related information
     .. _dcmStoreAccessControlIDRule:
 
     dcmStoreAccessControlIDRule_"
-    "Access Control ID(s)",string,"Access Contol IDs assigned to Query/Retrieve requests received by this AE","
+    "Access Control ID(s)",string,"Access Control IDs assigned to Query/Retrieve requests received by this AE","
     .. _dcmAccessControlID:
 
     dcmAccessControlID_"
@@ -239,3 +239,12 @@ DICOM Archive Network AE related information
     .. _dcmStudyRetentionPolicy:
 
     dcmStudyRetentionPolicy_"
+
+.. toctree::
+
+    storeAccessControlIDRule
+    exportRule
+    rsForwardRule
+    archiveCompressionRule
+    archiveAttributeCoercion
+    studyRetentionPolicy

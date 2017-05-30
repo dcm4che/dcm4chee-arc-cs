@@ -7,11 +7,11 @@ Named Attribute Filter for WADO-RS Metadata requests.
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "**Metadata Filter Name**",string,"Metadata Filter Name referenced by propritary 'includefields' Query Parameter of WADO-RS Metadata requests.","
+    "**Metadata Filter Name**",string,"Metadata Filter Name referenced by proprietary 'includefields' Query Parameter of WADO-RS Metadata requests.","
     .. _dcmMetadataFilterName:
 
     dcmMetadataFilterName_"
-    "**Attribute Tag(s)**",integer,"DICOM Tag as integer value","
+    "**Attribute Tag(s)**",string,"DICOM Tag as hex string","
     .. _dcmTag:
 
     dcmTag_"
