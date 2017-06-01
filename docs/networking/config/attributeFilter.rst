@@ -11,7 +11,7 @@ Attributes stored in the database
     .. _dcmEntity:
 
     dcmEntity_"
-    "**Attribute Tag(s)**",integer,"DICOM Tag as hex string","
+    "**Attribute Tag(s)**",string,"DICOM Tag as hex string","
     .. _dcmTag:
 
     dcmTag_"

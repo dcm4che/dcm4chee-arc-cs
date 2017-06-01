@@ -151,6 +151,10 @@ DICOM Archive Device related information
     .. _dcmAltCMoveSCP:
 
     dcmAltCMoveSCP_"
+    "Diff Studies Attributes(s)",string,"DICOM Tag as hex string of Attributes beeing compared by the DIFF-RS service with Query Parameter includefield=all. Use QIDO-RS STUDY Returned Attributes, if absent.","
+    .. _dcmDiffStudiesIncludefieldAll:
+
+    dcmDiffStudiesIncludefieldAll_"
     "Export Task Polling Interval",string,"Export Task Polling Interval in ISO-8601 duration format PnDTnHnMn.nS","
     .. _dcmExportTaskPollingInterval:
 

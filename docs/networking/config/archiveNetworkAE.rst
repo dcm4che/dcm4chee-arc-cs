@@ -139,6 +139,10 @@ DICOM Archive Network AE related information
     .. _dcmAltCMoveSCP:
 
     dcmAltCMoveSCP_"
+    "Diff Studies Attributes(s)",string,"DICOM Tag as hex string of Attributes beeing compared by the DIFF-RS service with Query Parameter includefield=all. Use value configured on Device level, if absent.","
+    .. _dcmDiffStudiesIncludefieldAll:
+
+    dcmDiffStudiesIncludefieldAll_"
     "Store Permission Service URL",string,"URL of Store Permission Service which will be invoked on receive of the first object of a study. {<dicomTag>} will be replaced by the value of the attribute in the object. E.g. http://host.name/storage-permission/study/{0020000D}?patientId={00100020}&patientIdIssuer={00100021}&studyDescription={00081030}","
     .. _dcmStorePermissionServiceURL:
 
