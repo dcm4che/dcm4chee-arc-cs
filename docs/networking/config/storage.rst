@@ -15,7 +15,7 @@ Storage Descriptor
     .. _dcmURI:
 
     dcmURI_"
-    "Digest Algorithm",string,"Algorithm for generation of check sums: 'MD5' or 'SHA-1' Enumerated values: MD5 or SHA-1","
+    "Digest Algorithm",string,"Algorithm for generation of check sums. Enumerated values: MD5 or SHA-1","
     .. _dcmDigestAlgorithm:
 
     dcmDigestAlgorithm_"
