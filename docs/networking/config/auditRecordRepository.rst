@@ -7,7 +7,7 @@ Audit Record Repository related information
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "**Network Connection Reference(s)**",string,"The JSON Pointers to the Network Connection objects of this Audit Record Repository","
+    "Network Connection Reference(s)",string,"The JSON Pointers to the Network Connection objects of this Audit Record Repository","
     .. _dicomNetworkConnectionReference:
 
     dicomNetworkConnectionReference_"

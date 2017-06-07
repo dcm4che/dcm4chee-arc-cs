@@ -7,7 +7,7 @@ DICOM Archive Device related information
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "**Fuzzy Algorithm Class**",string,"Specifies Fuzzy Algorithm Implementation Class: 'org.dcm4che3.soundex.Soundex', 'org.dcm4che3.soundex.ESoundex', 'org.dcm4che3.soundex.ESoundex9', 'org.dcm4che3.soundex.Metaphone', 'org.dcm4che3.soundex.KPhonetik', 'org.dcm4che3.soundex.Phonem","
+    "Fuzzy Algorithm Class",string,"Specifies Fuzzy Algorithm Implementation Class: 'org.dcm4che3.soundex.Soundex', 'org.dcm4che3.soundex.ESoundex', 'org.dcm4che3.soundex.ESoundex9', 'org.dcm4che3.soundex.Metaphone', 'org.dcm4che3.soundex.KPhonetik', 'org.dcm4che3.soundex.Phonem Enumerated values: org.dcm4che3.soundex.Soundex, org.dcm4che3.soundex.ESoundex, org.dcm4che3.soundex.ESoundex9, org.dcm4che3.soundex.Metaphone, org.dcm4che3.soundex.KPhonetik or org.dcm4che3.soundex.Phonem","
     .. _dcmFuzzyAlgorithmClass:
 
     dcmFuzzyAlgorithmClass_"
@@ -23,11 +23,11 @@ DICOM Archive Device related information
     .. _dcmSeriesMetadataPollingInterval:
 
     dcmSeriesMetadataPollingInterval_"
-    "Update Series Metadata Fetch Size",integer,"Maximal number of Series scheduled for Metadata update fetched by one query; 100 if absent.","
+    "Update Series Metadata Fetch Size",integer,"Maximal number of Series scheduled for Metadata update fetched by one query.","
     .. _dcmSeriesMetadataFetchSize:
 
     dcmSeriesMetadataFetchSize_"
-    "Remove Instance Records Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS for purging Instance Records from the DB. If absent, Instance Records will never be purged.","
+    "Remove Instance Records Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS for purging Instance Records from the DB. If absent, Instance Records will never be purged. May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmPurgeInstanceRecordsDelay:
 
     dcmPurgeInstanceRecordsDelay_"
@@ -35,27 +35,27 @@ DICOM Archive Device related information
     .. _dcmPurgeInstanceRecordsPollingInterval:
 
     dcmPurgeInstanceRecordsPollingInterval_"
-    "Remove Instance Records Fetch Size",integer,"Maximal number of Series scheduled for purging Instance Records from the DB fetched by one query; 100 if absent.","
+    "Remove Instance Records Fetch Size",integer,"Maximal number of Series scheduled for purging Instance Records from the DB fetched by one query.","
     .. _dcmPurgeInstanceRecordsFetchSize:
 
     dcmPurgeInstanceRecordsFetchSize_"
-    "**Query/Retrieve View ID**",string,"Query/Retrieve View Identifier","
+    "Query/Retrieve View ID",string,"Query/Retrieve View Identifier","
     .. _dcmQueryRetrieveViewID:
 
     dcmQueryRetrieveViewID_"
-    "Overwrite Policy",string,"Overwrite Policy: NEVER, ALWAYS, SAME_SOURCE, SAME_SERIES or SAME_SOURCE_AND_SERIES. NEVER if absent.","
+    "Overwrite Policy",string,"Overwrite Policy for the whole Archive Device. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: NEVER, ALWAYS, SAME_SOURCE, SAME_SERIES or SAME_SOURCE_AND_SERIES","
     .. _dcmOverwritePolicy:
 
     dcmOverwritePolicy_"
-    "Accept Missing Patient ID",string,"Indicates if objects without Patient IDs shall be accepted and if a Patient ID shall be created. Enumerated values: YES, NO, CREATE. If absent, CREATE will be applied.","
+    "Accept Missing Patient ID",string,"Indicates if objects without Patient IDs shall be accepted and if a Patient ID shall be created. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: YES, NO or CREATE","
     .. _dcmAcceptMissingPatientID:
 
     dcmAcceptMissingPatientID_"
-    "Accept Conflicting Patient ID",string,"Indicates if objects with a Patient IDs which differs from the Patient ID in previous received objects of the Study shall be accepted. Enumerated values: YES, NO, MERGED(= accept prior Patient IDs). If absent, MERGED will be applied.","
+    "Accept Conflicting Patient ID",string,"Indicates if objects with a Patient IDs which differs from the Patient ID in previous received objects of the Study shall be accepted. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: YES, NO or MERGED","
     .. _dcmAcceptConflictingPatientID:
 
     dcmAcceptConflictingPatientID_"
-    "Bulk Data Spool Directory",string,"Path to Bulk Data Spool Directory","
+    "Bulk Data Spool Directory",string,"Path to Bulk Data Spool Directory. May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmBulkDataSpoolDirectory:
 
     dcmBulkDataSpoolDirectory_"
@@ -63,15 +63,15 @@ DICOM Archive Device related information
     .. _dcmHideSPSWithStatusFromMWL:
 
     dcmHideSPSWithStatusFromMWL_"
-    "Validate Calling AE Hostname",boolean,"Validate Calling AE Hostname or IP Address of Association requestors; disabled if absent","
+    "Validate Calling AE Hostname",boolean,"Validate Calling AE Hostname or IP Address of Association requestors. May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmValidateCallingAEHostname:
 
     dcmValidateCallingAEHostname_"
-    "Person Name Component Order Insensitive Matching",boolean,"Indicates if name component order insensitive matching is performed on fuzzy semantic matching of person names; disabled if absent","
+    "Person Name Component Order Insensitive Matching",boolean,"Indicates if name component order insensitive matching is performed on fuzzy semantic matching of person names. May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmPersonNameComponentOrderInsensitiveMatching:
 
     dcmPersonNameComponentOrderInsensitiveMatching_"
-    "Send Pending C-Get",boolean,"Enables pending C-GET responses; disabled if absent","
+    "Send Pending C-Get",boolean,"Enables pending C-GET responses. May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmSendPendingCGet:
 
     dcmSendPendingCGet_"
@@ -91,11 +91,11 @@ DICOM Archive Device related information
     .. _dcmWadoSR2TextTemplateURI:
 
     dcmWadoSR2TextTemplateURI_"
-    "Query Fetch Size",integer,"Number of rows fetched from the database at once by the Query Service. 100 if absent","
+    "Query Fetch Size",integer,"Number of rows fetched from the database at once by the Query Service.","
     .. _dcmQueryFetchSize:
 
     dcmQueryFetchSize_"
-    "Qido Max Number Of Results",integer,"Maximal number of return results by QIDO-RS Service. 0 (=unlimited) if absent","
+    "Qido Max Number Of Results",integer,"Maximal number of return results by QIDO-RS Service. 0 = no limitation. May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmQidoMaxNumberOfResults:
 
     dcmQidoMaxNumberOfResults_"
@@ -115,7 +115,7 @@ DICOM Archive Device related information
     .. _dcmIanTimeout:
 
     dcmIanTimeout_"
-    "IAN On Timeout",boolean,"Specifies if the IAN is sent if the timeout for waiting on receive of instances referenced is exceeded; just stop check for completeness on timeout if absent","
+    "IAN On Timeout",boolean,"Specifies if the IAN is sent if the timeout for waiting on receive of instances referenced is exceeded. May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmIanOnTimeout:
 
     dcmIanOnTimeout_"
@@ -123,7 +123,7 @@ DICOM Archive Device related information
     .. _dcmIanTaskPollingInterval:
 
     dcmIanTaskPollingInterval_"
-    "IAN Task Fetch Size",integer,"Maximal number of IAN Tasks scheduled in one transaction; 100 if absent","
+    "IAN Task Fetch Size",integer,"Maximal number of IAN Tasks scheduled in one transaction.","
     .. _dcmIanTaskFetchSize:
 
     dcmIanTaskFetchSize_"
@@ -143,7 +143,7 @@ DICOM Archive Device related information
     .. _dcmFallbackCMoveSCPLeadingCFindSCP:
 
     dcmFallbackCMoveSCPLeadingCFindSCP_"
-    "Fallback C-Move SCP Retries",integer,"Maximal number of retries to retrieve not available objects from C-MOVE SCP configured by dcmFallbackCMoveSCP. -1 = forever. 0 if absent","
+    "Fallback C-Move SCP Retries",integer,"Maximal number of retries to retrieve not available objects from C-MOVE SCP configured by dcmFallbackCMoveSCP. -1 = forever.","
     .. _dcmFallbackCMoveSCPRetries:
 
     dcmFallbackCMoveSCPRetries_"
@@ -159,7 +159,7 @@ DICOM Archive Device related information
     .. _dcmExportTaskPollingInterval:
 
     dcmExportTaskPollingInterval_"
-    "Export Task Fetch Size",integer,"Maximal number of Export Tasks scheduled in one transaction; 5 if absent","
+    "Export Task Fetch Size",integer,"Maximal number of Export Tasks scheduled in one transaction.","
     .. _dcmExportTaskFetchSize:
 
     dcmExportTaskFetchSize_"
@@ -167,15 +167,15 @@ DICOM Archive Device related information
     .. _dcmPurgeStoragePollingInterval:
 
     dcmPurgeStoragePollingInterval_"
-    "Purge Storage Fetch Size",integer,"Maximal number of objects to delete in one task; 100 if absent","
+    "Purge Storage Fetch Size",integer,"Maximal number of objects to delete in one task.","
     .. _dcmPurgeStorageFetchSize:
 
     dcmPurgeStorageFetchSize_"
-    "Delete Study Batch Size",integer,"number of studies to delete from the Storage System, if the usable space fall below configured Usable Space, before checking the usable space again; 10 if absent","
+    "Delete Study Batch Size",integer,"number of studies to delete from the Storage System, if the usable space fall below configured Usable Space, before checking the usable space again.","
     .. _dcmDeleteStudyBatchSize:
 
     dcmDeleteStudyBatchSize_"
-    "Delete Patient On Delete Last Study",boolean,"Specifies if a Patient shall be deleted on deletion of its last study; disabled if absent.","
+    "Delete Patient On Delete Last Study",boolean,"Specifies if a Patient shall be deleted on deletion of its last study.","
     .. _dcmDeletePatientOnDeleteLastStudy:
 
     dcmDeletePatientOnDeleteLastStudy_"
@@ -183,11 +183,11 @@ DICOM Archive Device related information
     .. _dcmDeleteRejectedPollingInterval:
 
     dcmDeleteRejectedPollingInterval_"
-    "Delete Rejected Fetch Size",integer,"Maximal number of rejected instances to delete from the DB in one task; 100 if absent","
+    "Delete Rejected Fetch Size",integer,"Maximal number of rejected instances to delete from the DB in one task.","
     .. _dcmDeleteRejectedFetchSize:
 
     dcmDeleteRejectedFetchSize_"
-    "Maximum Access Time Staleness",string,"Maximal staleness of recorded study accession time in ISO-8601 duration format PnDTnHnMn.nS. update of the access time disabled, if absent.","
+    "Maximum Access Time Staleness",string,"Maximal staleness of recorded study accession time in ISO-8601 duration format PnDTnHnMn.nS. Update of the access time disabled, if absent.","
     .. _dcmMaxAccessTimeStaleness:
 
     dcmMaxAccessTimeStaleness_"
@@ -199,11 +199,11 @@ DICOM Archive Device related information
     .. _dcmLeadingCFindSCPQueryCacheStaleTimeout:
 
     dcmLeadingCFindSCPQueryCacheStaleTimeout_"
-    "Leading C-Find SCP Query Cache Size",integer,"Maximum number of cached Patient and Study attributes fetched from leading C-Find SCP; 10 if absent","
+    "Leading C-Find SCP Query Cache Size",integer,"Maximum number of cached Patient and Study attributes fetched from leading C-Find SCP.","
     .. _dcmLeadingCFindSCPQueryCacheSize:
 
     dcmLeadingCFindSCPQueryCacheSize_"
-    "Audit Spool Directory",string,"Path to Audit Service Spool Directory used to aggregate Audit Messages. If absent, audit messages written to temporary location in server","
+    "Audit Spool Directory",string,"Path to Audit Service Spool Directory.","
     .. _dcmAuditSpoolDirectory:
 
     dcmAuditSpoolDirectory_"
@@ -215,19 +215,19 @@ DICOM Archive Device related information
     .. _dcmAuditAggregateDuration:
 
     dcmAuditAggregateDuration_"
-    "Audit Unknown Study Instance UID",string,"Indicates study instance uid value to be sent in audit message when not known. If absent, '1.2.40.0.13.1.15.110.3.165.1' will be applied.","
+    "Audit Unknown Study Instance UID",string,"Indicates study instance uid value to be sent in audit message when not known.","
     .. _dcmAuditUnknownStudyInstanceUID:
 
     dcmAuditUnknownStudyInstanceUID_"
-    "Audit Unknown Patient ID",string,"Indicates patient id value to be sent in audit message when not known. If absent, '<none>' will be applied.","
+    "Audit Unknown Patient ID",string,"Indicates patient id value to be sent in audit message when not known.","
     .. _dcmAuditUnknownPatientID:
 
     dcmAuditUnknownPatientID_"
-    "Show Patient Info In System Log",string,"Specifies if Patient Information is shown as plain text or hashed in system logs. Enumerated values. PLAIN_TEXT, HASH_NAME, HASH_NAME_AND_ID. PLAIN_TEXT if absent.","
+    "Show Patient Info In System Log",string,"Specifies if Patient Information is shown as plain text or hashed in system logs. Enumerated values: PLAIN_TEXT, HASH_NAME or HASH_NAME_AND_ID","
     .. _dcmShowPatientInfoInSystemLog:
 
     dcmShowPatientInfoInSystemLog_"
-    "Show Patient Info In Audit Log",string,"Specifies if Patient Information is shown as plain text or hashed in emitted audit messages. Enumerated values. PLAIN_TEXT, HASH_NAME, HASH_NAME_AND_ID. PLAIN_TEXT if absent.","
+    "Show Patient Info In Audit Log",string,"Specifies if Patient Information is shown as plain text or hashed in emitted audit messages. Enumerated values: PLAIN_TEXT, HASH_NAME or HASH_NAME_AND_ID","
     .. _dcmShowPatientInfoInAuditLog:
 
     dcmShowPatientInfoInAuditLog_"
@@ -247,11 +247,11 @@ DICOM Archive Device related information
     .. _hl7ScheduleProcedureTemplateURI:
 
     hl7ScheduleProcedureTemplateURI_"
-    "HL7 Schedule Protocol Code in Order",string,"Specifies location of Scheduled Protocol Code in received HL7 Order message. Enumerated values: OBR_4_1, OBR_4_4. If absent, OBR_4_4 will be applied.","
+    "HL7 Schedule Protocol Code in Order",string,"Specifies location of Scheduled Protocol Code in received HL7 Order message. May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: OBR_4_1 or OBR_4_4","
     .. _hl7ScheduledProtocolCodeInOrder:
 
     hl7ScheduledProtocolCodeInOrder_"
-    "HL7 Schedule Station AET in Order",string,"Specifies location of Scheduled Station AE Title in received HL7 Order message. Enumerated values: ORC_18. Not effective for HL7 v2.5.1 OMI^O23 with IPC segment. If absent or no value is provided in the configured field, the Scheduled Station AE Title is selected according configured rules.","
+    "HL7 Schedule Station AET in Order",string,"Specifies location of Scheduled Station AE Title in received HL7 Order message. Not effective for HL7 v2.5.1 OMI^O23 with IPC segment. If absent or no value is provided in the configured field, the Scheduled Station AE Title is selected according configured rules. May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: ORC_18","
     .. _hl7ScheduledStationAETInOrder:
 
     hl7ScheduledStationAETInOrder_"
@@ -271,7 +271,7 @@ DICOM Archive Device related information
     .. _dcmPurgeQueueMessagePollingInterval:
 
     dcmPurgeQueueMessagePollingInterval_"
-    "Wado-RS Spool Directory",string,"Path to Wado-RS spool directory used to aggregate uncompressed frames. If absent, aggregation done in temp directory.","
+    "Wado-RS Spool Directory",string,"Path to Wado-RS spool directory used to aggregate uncompressed frames.","
     .. _dcmWadoSpoolDirectory:
 
     dcmWadoSpoolDirectory_"
@@ -307,7 +307,7 @@ DICOM Archive Device related information
     .. _dcmStorePermissionCacheStaleTimeout:
 
     dcmStorePermissionCacheStaleTimeout_"
-    "Store Permission Cache Size",integer,"Maximum number of cached responses from Storage Permission Service; 10 if absent","
+    "Store Permission Cache Size",integer,"Maximum number of cached responses from Storage Permission Service.","
     .. _dcmStorePermissionCacheSize:
 
     dcmStorePermissionCacheSize_"
@@ -315,23 +315,23 @@ DICOM Archive Device related information
     .. _dcmMergeMWLCacheStaleTimeout:
 
     dcmMergeMWLCacheStaleTimeout_"
-    "Merge MWL Cache Size",integer,"Maximum number of cached Request Attributes extracted from matching DICOM MWL items; 10 if absent","
+    "Merge MWL Cache Size",integer,"Maximum number of cached Request Attributes extracted from matching DICOM MWL items.","
     .. _dcmMergeMWLCacheSize:
 
     dcmMergeMWLCacheSize_"
-    "Store Update DB Maximum Number of Retries",integer,"Maximum number of retries to update the database on storage; 1 if absent","
+    "Store Update DB Maximum Number of Retries",integer,"Maximum number of retries to update the database on storage.","
     .. _dcmStoreUpdateDBMaxRetries:
 
     dcmStoreUpdateDBMaxRetries_"
-    "Store Update DB Maximum Delay of Retry",integer,"Maximum delay in ms of retry to update the database on storage; 1000 if absent","
+    "Store Update DB Maximum Delay of Retry",integer,"Maximum delay in ms of retry to update the database on storage.","
     .. _dcmStoreUpdateDBMaxRetryDelay:
 
     dcmStoreUpdateDBMaxRetryDelay_"
-    "Allow Rejection For Data Retention Policy Expired",string,"Allow Rejection For Data Retention Policy Expired : NEVER, ALWAYS, STUDY_RETENTION_POLICY. If absent, STUDY_RETENTION_POLICY will be applied.","
+    "Allow Rejection For Data Retention Policy Expired",string,"Allow Rejection For Data Retention Policy Expired. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: NEVER, ALWAYS or STUDY_RETENTION_POLICY","
     .. _dcmAllowRejectionForDataRetentionPolicyExpired:
 
     dcmAllowRejectionForDataRetentionPolicyExpired_"
-    "Allow Delete Study permanently",string,"Allow to delete Study permanently. Enumerated values: ALWAYS, REJECTED (= only already rejected Studies). If absent, REJECTED will be applied.","
+    "Allow Delete Study permanently",string,"Allow to delete Study permanently. REJECTED = only already rejected Studies. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: ALWAYS or REJECTED","
     .. _dcmAllowDeleteStudyPermanently:
 
     dcmAllowDeleteStudyPermanently_"
@@ -351,11 +351,11 @@ DICOM Archive Device related information
     .. _dcmDefaultCharacterSet:
 
     dcmDefaultCharacterSet_"
-    "Store Permission Service Error Comment Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract Error Comment. E.g. ""errorcomment""\s*:\s*""(.*)"". If absent, the Error Comment will be ""Storage denied"".","
+    "Store Permission Service Error Comment Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract Error Comment. E.g. ""errorcomment""\s*:\s*""(.*)"". If absent, ""Storage denied."" will be used as Error Comment. May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmStorePermissionServiceErrorCommentPattern:
 
     dcmStorePermissionServiceErrorCommentPattern_"
-    "Store Permission Service Error Code Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract Error Code in hexadecimal. E.g. ""errorcode""\s*:\s*""(\p{XDigit}{4})"". If absent, the Error Code will be 0124H (Not Authorized).","
+    "Store Permission Service Error Code Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract Error Code in hexadecimal. E.g. ""errorcode""\s*:\s*""(\p{XDigit}{4})"". If absent, the Error Code will be 0124H (Not Authorized). May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmStorePermissionServiceErrorCodePattern:
 
     dcmStorePermissionServiceErrorCodePattern_"
@@ -407,7 +407,7 @@ DICOM Archive Device related information
     .. _dcmInvokeImageDisplayStudyURL:
 
     dcmInvokeImageDisplayStudyURL_"
-    "Copy Move Update Policy",string,"Specifies update policy for attributes of the destination Study on Copy/Move of Instances from another Study. Enumerated values: SUPPLEMENT, OVERWRITE, MERGED, REPLACE. If absent, the attributes will not be updated.","
+    "Copy Move Update Policy",string,"Specifies update policy for attributes of the destination Study on Copy/Move of Instances from another Study. If absent, the attributes will not be updated. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: SUPPLEMENT, OVERWRITE, MERGED or REPLACE","
     .. _dcmCopyMoveUpdatePolicy:
 
     dcmCopyMoveUpdatePolicy_"
@@ -427,19 +427,19 @@ DICOM Archive Device related information
     .. _hl7PSUReceivingApplication:
 
     hl7PSUReceivingApplication_"
-    "HL7 Procedure Status Update Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which an HL7 Procedure Status Update for a received study is sent to configured HL7 receivers. If absent, HL7 Procedure Status Update is triggered by received MPPS.","
+    "HL7 Procedure Status Update Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which an HL7 Procedure Status Update for a received study is sent to configured HL7 receivers. If absent, HL7 Procedure Status Update is triggered by received MPPS. May be overwritten by configured values for particular Archive Network AEs.","
     .. _hl7PSUDelay:
 
     hl7PSUDelay_"
-    "HL7 Procedure Status Update MWL",boolean,"Specifies if the Status of MWL Items in the DB is updated to COMPLETED for a received study after the configured HL7 Procedure Status Update Delay. Disabled, if absent.","
+    "HL7 Procedure Status Update MWL",boolean,"Specifies if the Status of MWL Items in the DB is updated to COMPLETED for a received study after the configured HL7 Procedure Status Update Delay. May be overwritten by configured values for particular Archive Network AEs.","
     .. _hl7PSUMWL:
 
     hl7PSUMWL_"
-    "HL7 Procedure Status Update Timeout",string,"Timeout in ISO-8601 duration format PnDTnHnMn.nS for waiting on receive of instances referenced in MPPS; check for completeness forever if absent.","
+    "HL7 Procedure Status Update Timeout",string,"Timeout in ISO-8601 duration format PnDTnHnMn.nS for waiting on receive of instances referenced in MPPS; check for completeness forever if absent. May be overwritten by configured values for particular Archive Network AEs.","
     .. _hl7PSUTimeout:
 
     hl7PSUTimeout_"
-    "HL7 Procedure Status Update On Timeout",boolean,"Specifies if the HL7 Procedure Status Update is sent if the timeout for waiting on receive of instances referenced is exceeded; just stop check for completeness on timeout if absent.","
+    "HL7 Procedure Status Update On Timeout",boolean,"Specifies if the HL7 Procedure Status Update is sent if the timeout for waiting on receive of instances referenced is exceeded. May be overwritten by configured values for particular Archive Network AEs.","
     .. _hl7PSUOnTimeout:
 
     hl7PSUOnTimeout_"
@@ -447,11 +447,11 @@ DICOM Archive Device related information
     .. _hl7PSUTaskPollingInterval:
 
     hl7PSUTaskPollingInterval_"
-    "HL7 Procedure Status Update Tasks Fetch Size",integer,"Maximal number of HL7 Procedure Status Update Tasks fetched in one query; 100 if absent","
+    "HL7 Procedure Status Update Tasks Fetch Size",integer,"Maximal number of HL7 Procedure Status Update Tasks fetched in one query.","
     .. _hl7PSUTaskFetchSize:
 
     hl7PSUTaskFetchSize_"
-    "HL7 Track Changed Patient ID",boolean,"Enable to keep track of the prior Patient ID on a change of the Patient ID by HL7 ADT^A47 or by the RESTful Patient Update Service. Enabled if absent.","
+    "HL7 Track Changed Patient ID",boolean,"Enable to keep track of the prior Patient ID on a change of the Patient ID by HL7 ADT^A47 or by the RESTful Patient Update Service.","
     .. _hl7TrackChangedPatientID:
 
     hl7TrackChangedPatientID_"

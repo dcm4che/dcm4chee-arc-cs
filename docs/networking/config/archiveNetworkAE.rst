@@ -11,7 +11,7 @@ DICOM Archive Network AE related information
     .. _dcmObjectStorageID:
 
     dcmObjectStorageID_"
-    "Object Storage Count",integer,"Number of Storage Systems which are filled in parallel; 1 if absent.","
+    "Object Storage Count",integer,"Number of Storage Systems which are filled in parallel.","
     .. _dcmObjectStorageCount:
 
     dcmObjectStorageCount_"
@@ -43,15 +43,15 @@ DICOM Archive Network AE related information
     .. _dcmAcceptedMoveDestination:
 
     dcmAcceptedMoveDestination_"
-    "Overwrite Policy",string,"Overwrite Policy: NEVER, ALWAYS, SAME_SOURCE, SAME_SERIES or SAME_SOURCE_AND_SERIES. NEVER if absent.","
+    "Overwrite Policy",string,"Overwrite Policy for Objects received by this AE. Overwrites value specified on Device level. Enumerated values: NEVER, ALWAYS, SAME_SOURCE, SAME_SERIES or SAME_SOURCE_AND_SERIES","
     .. _dcmOverwritePolicy:
 
     dcmOverwritePolicy_"
-    "Accept Missing Patient ID",string,"Indicates if objects without Patient IDs shall be accepted and if a Patient ID shall be created. Enumerated values: YES, NO, CREATE. If absent, CREATE will be applied.","
+    "Accept Missing Patient ID",string,"Indicates if objects without Patient IDs shall be accepted and if a Patient ID shall be created. Overwrites value specified on Device level. Enumerated values: YES, NO or CREATE","
     .. _dcmAcceptMissingPatientID:
 
     dcmAcceptMissingPatientID_"
-    "Accept Conflicting Patient ID",string,"Indicates if objects with a Patient IDs which differs from the Patient ID in previous received objects of the Study shall be accepted. Enumerated values: YES, NO, MERGED(= accept prior Patient IDs). If absent, MERGED will be applied.","
+    "Accept Conflicting Patient ID",string,"Indicates if objects with a Patient IDs which differs from the Patient ID in previous received objects of the Study shall be accepted. Overwrites value specified on Device level. Enumerated values: YES, NO or MERGED","
     .. _dcmAcceptConflictingPatientID:
 
     dcmAcceptConflictingPatientID_"
@@ -59,7 +59,7 @@ DICOM Archive Network AE related information
     .. _dcmQueryRetrieveViewID:
 
     dcmQueryRetrieveViewID_"
-    "Bulk Data Spool Directory",string,"Path to Bulk Data Spool Directory","
+    "Bulk Data Spool Directory",string,"Path to Bulk Data Spool Directory. Overwrites value specified on Device level.","
     .. _dcmBulkDataSpoolDirectory:
 
     dcmBulkDataSpoolDirectory_"
@@ -67,15 +67,15 @@ DICOM Archive Network AE related information
     .. _dcmHideSPSWithStatusFromMWL:
 
     dcmHideSPSWithStatusFromMWL_"
-    "Validate Calling AE Hostname",boolean,"Validate Calling AE Hostname or IP Address of Association requestors for this AE; use value configured on Device level, if absent","
+    "Validate Calling AE Hostname",boolean,"Validate Calling AE Hostname or IP Address of Association requestors for this AE. Overwrites value specified on Device level.","
     .. _dcmValidateCallingAEHostname:
 
     dcmValidateCallingAEHostname_"
-    "Person Name Component Order Insensitive Matching",boolean,"Indicates if name component order insensitive matching is performed on fuzzy semantic matching of person names; disabled if absent","
+    "Person Name Component Order Insensitive Matching",boolean,"Indicates if name component order insensitive matching is performed on fuzzy semantic matching of person names by this AE. Overwrites value specified on Device level.","
     .. _dcmPersonNameComponentOrderInsensitiveMatching:
 
     dcmPersonNameComponentOrderInsensitiveMatching_"
-    "Send Pending C-Get",boolean,"Enables pending C-GET responses; disabled if absent","
+    "Send Pending C-Get",boolean,"Enables pending C-GET responses. Overwrites value specified on Device level.","
     .. _dcmSendPendingCGet:
 
     dcmSendPendingCGet_"
@@ -91,7 +91,7 @@ DICOM Archive Network AE related information
     .. _dcmWadoSR2TextTemplateURI:
 
     dcmWadoSR2TextTemplateURI_"
-    "Qido Max Number Of Results",integer,"Maximal number of return results by QIDO-RS Service. 0 (=unlimited) if absent","
+    "Qido Max Number Of Results",integer,"Maximal number of return results by QIDO-RS Service. 0 = unlimited. Overwrites value specified on Device level.","
     .. _dcmQidoMaxNumberOfResults:
 
     dcmQidoMaxNumberOfResults_"
@@ -111,7 +111,7 @@ DICOM Archive Network AE related information
     .. _dcmIanTimeout:
 
     dcmIanTimeout_"
-    "IAN On Timeout",boolean,"Specifies if the IAN is sent if the timeout for waiting on receive of instances referenced is exceeded; just stop check for completeness on timeout if absent","
+    "IAN On Timeout",boolean,"Specifies if the IAN is sent if the timeout for waiting on receive of instances referenced is exceeded. Overwrites value specified on Device level.","
     .. _dcmIanOnTimeout:
 
     dcmIanOnTimeout_"
@@ -151,7 +151,7 @@ DICOM Archive Network AE related information
     .. _dcmStorePermissionServiceResponsePattern:
 
     dcmStorePermissionServiceResponsePattern_"
-    "Allow Rejection For Data Retention Policy Expired",string,"Allow Rejection For Data Retention Policy Expired : NEVER, ALWAYS, STUDY_RETENTION_POLICY. If absent, STUDY_RETENTION_POLICY will be applied.","
+    "Allow Rejection For Data Retention Policy Expired",string,"Allow Rejection For Data Retention Policy Expired. Overwrites value specified on Device level. Enumerated values: NEVER, ALWAYS or STUDY_RETENTION_POLICY","
     .. _dcmAllowRejectionForDataRetentionPolicyExpired:
 
     dcmAllowRejectionForDataRetentionPolicyExpired_"
@@ -159,7 +159,7 @@ DICOM Archive Network AE related information
     .. _dcmAcceptedUserRole:
 
     dcmAcceptedUserRole_"
-    "Allow Delete Study permanently",string,"Allow to delete Study permanently. Enumerated values: ALWAYS, REJECTED (= only already rejected Studies). If absent, REJECTED will be applied.","
+    "Allow Delete Study permanently",string,"Allow to delete Study permanently. REJECTED = only already rejected Studies. Overwrites value specified on Device level. Enumerated values: ALWAYS or REJECTED","
     .. _dcmAllowDeleteStudyPermanently:
 
     dcmAllowDeleteStudyPermanently_"
@@ -171,11 +171,11 @@ DICOM Archive Network AE related information
     .. _dcmDefaultCharacterSet:
 
     dcmDefaultCharacterSet_"
-    "Store Permission Service Error Comment Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract Error Comment. E.g. ""errorcomment""\s*:\s*""(.*)"". If absent, the Error Comment will be ""Storage denied"".","
+    "Store Permission Service Error Comment Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract Error Comment. E.g. ""errorcomment""\s*:\s*""(.*)"". Overwrites value specified on Device level.","
     .. _dcmStorePermissionServiceErrorCommentPattern:
 
     dcmStorePermissionServiceErrorCommentPattern_"
-    "Store Permission Service Error Code Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract Error Code in hexadecimal. E.g. ""errorcode""\s*:\s*""(\p{XDigit}{4})"". If absent, the Error Code will be 0124H (Not Authorized).","
+    "Store Permission Service Error Code Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract Error Code in hexadecimal. E.g. ""errorcode""\s*:\s*""(\p{XDigit}{4})"". Overwrites value specified on Device level.","
     .. _dcmStorePermissionServiceErrorCodePattern:
 
     dcmStorePermissionServiceErrorCodePattern_"
@@ -195,7 +195,7 @@ DICOM Archive Network AE related information
     .. _dcmInvokeImageDisplayStudyURL:
 
     dcmInvokeImageDisplayStudyURL_"
-    "Copy Move Update Policy",string,"Specifies update policy for attributes of the destination Study on Copy/Move of Instances from another Study. Enumerated values: SUPPLEMENT, OVERWRITE, MERGED, REPLACE. If absent, the attributes will not be updated.","
+    "Copy Move Update Policy",string,"Specifies update policy for attributes of the destination Study on Copy/Move of Instances from another Study. If absent, the attributes will not be updated. Overwrites value specified on Device level. Enumerated values: SUPPLEMENT, OVERWRITE, MERGED or REPLACE","
     .. _dcmCopyMoveUpdatePolicy:
 
     dcmCopyMoveUpdatePolicy_"
@@ -207,19 +207,19 @@ DICOM Archive Network AE related information
     .. _hl7PSUReceivingApplication:
 
     hl7PSUReceivingApplication_"
-    "HL7 Procedure Status Update Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which an HL7 Procedure Status Update for a received study is sent to configured HL7 receivers. If absent, HL7 Procedure Status Update is triggered by received MPPS.","
+    "HL7 Procedure Status Update Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which an HL7 Procedure Status Update for a received study is sent to configured HL7 receivers. If absent, HL7 Procedure Status Update is triggered by received MPPS. Overwrites value specified on Device level.","
     .. _hl7PSUDelay:
 
     hl7PSUDelay_"
-    "HL7 Procedure Status Update MWL",boolean,"Specifies if the Status of MWL Items in the DB is updated to COMPLETED for a received study after the configured HL7 Procedure Status Update Delay. Disabled, if absent.","
+    "HL7 Procedure Status Update MWL",boolean,"Specifies if the Status of MWL Items in the DB is updated to COMPLETED for a received study after the configured HL7 Procedure Status Update Delay. Overwrites value specified on Device level.","
     .. _hl7PSUMWL:
 
     hl7PSUMWL_"
-    "HL7 Procedure Status Update Timeout",string,"Timeout in ISO-8601 duration format PnDTnHnMn.nS for waiting on receive of instances referenced in MPPS; check for completeness forever if absent.","
+    "HL7 Procedure Status Update Timeout",string,"Timeout in ISO-8601 duration format PnDTnHnMn.nS for waiting on receive of instances referenced in MPPS. Overwrites value specified on Device level.","
     .. _hl7PSUTimeout:
 
     hl7PSUTimeout_"
-    "HL7 Procedure Status Update On Timeout",boolean,"Specifies if the HL7 Procedure Status Update is sent if the timeout for waiting on receive of instances referenced is exceeded; just stop check for completeness on timeout if absent.","
+    "HL7 Procedure Status Update On Timeout",boolean,"Specifies if the HL7 Procedure Status Update is sent if the timeout for waiting on receive of instances referenced is exceeded. Overwrites value specified on Device level.","
     .. _hl7PSUOnTimeout:
 
     hl7PSUOnTimeout_"
@@ -243,12 +243,3 @@ DICOM Archive Network AE related information
     .. _dcmStudyRetentionPolicy:
 
     dcmStudyRetentionPolicy_"
-
-.. toctree::
-
-    storeAccessControlIDRule
-    exportRule
-    rsForwardRule
-    archiveCompressionRule
-    archiveAttributeCoercion
-    studyRetentionPolicy

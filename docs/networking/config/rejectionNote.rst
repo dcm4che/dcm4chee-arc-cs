@@ -7,19 +7,19 @@ Specifies behavior on Rejection Note Stored
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "**Rejection Note Label**",string,"Rejection Note Label","
+    "Rejection Note Label",string,"Rejection Note Label","
     .. _dcmRejectionNoteLabel:
 
     dcmRejectionNoteLabel_"
-    "Rejection Note Type",string,"Type of Rejection Note. Enumerated values: REJECTED_FOR_QUALITY_REASONS, REJECTED_FOR_PATIENT_SAFETY_REASONS, INCORRECT_MODALITY_WORKLIST_ENTRY, DATA_RETENTION_POLICY_EXPIRED, REVOKE_REJECTION.","
+    "Rejection Note Type",string,"Type of Rejection Note. Enumerated values: REJECTED_FOR_QUALITY_REASONS, REJECTED_FOR_PATIENT_SAFETY_REASONS, INCORRECT_MODALITY_WORKLIST_ENTRY, DATA_RETENTION_POLICY_EXPIRED or REVOKE_REJECTION","
     .. _dcmRejectionNoteType:
 
     dcmRejectionNoteType_"
-    "**Rejection Note Code**",string,"Specifies Document Title of Rejection Note in format (CV, CSD, 'CM')","
+    "Rejection Note Code",string,"Specifies Document Title of Rejection Note in format (CV, CSD, 'CM')","
     .. _dcmRejectionNoteCode:
 
     dcmRejectionNoteCode_"
-    "Accept Previous Rejected Instance",string,"Specifies behavior on subsequent occurrence of instances rejected by a particular Rejection Note. Enumerated values: REJECT, RESTORE, IGNORE. REJECT if absent.","
+    "Accept Previous Rejected Instance",string,"Specifies behavior on subsequent occurrence of instances rejected by a particular Rejection Note. Enumerated values: REJECT, RESTORE or IGNORE","
     .. _dcmAcceptPreviousRejectedInstance:
 
     dcmAcceptPreviousRejectedInstance_"

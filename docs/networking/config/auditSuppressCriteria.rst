@@ -7,7 +7,7 @@ Audit Suppress Criteria
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "**Name**",string,"Arbitrary/Meaningful name of the Audit Suppress Criteria","
+    "Name",string,"Arbitrary/Meaningful name of the Audit Suppress Criteria","
     .. _cn:
 
     cn_"
@@ -19,11 +19,11 @@ Audit Suppress Criteria
     .. _dcmAuditEventTypeCode:
 
     dcmAuditEventTypeCode_"
-    "Event Action Code(s)",string,"RFC 3881 Audit Event Action Type code. Enumerated values: C, R, U, D, E","
+    "Event Action Code(s)",string,"RFC 3881 Audit Event Action Type code.","
     .. _dcmAuditEventActionCode:
 
     dcmAuditEventActionCode_"
-    "Event Outcome Indicator(s)",string,"RFC 3881 Audit Event Outcome Indicator. Enumerated values: 0, 4, 8, 12","
+    "Event Outcome Indicator(s)",string,"RFC 3881 Audit Event Outcome Indicator.","
     .. _dcmAuditEventOutcomeIndicator:
 
     dcmAuditEventOutcomeIndicator_"

@@ -7,15 +7,15 @@ Archive Compression rule
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "**Name**",string,"Arbitrary/Meaningful name of the Archive Compression Rule","
+    "Name",string,"Arbitrary/Meaningful name of the Archive Compression Rule","
     .. _cn:
 
     cn_"
-    "**DICOM Transfer Syntax UID**",string,"A Transfer Syntax UID","
+    "DICOM Transfer Syntax UID",string,"A Transfer Syntax UID","
     .. _dicomTransferSyntax:
 
     dicomTransferSyntax_"
-    "Rule Priority",integer,"Rule Priority. 0 if absent.","
+    "Rule Priority",integer,"Rule Priority","
     .. _dcmRulePriority:
 
     dcmRulePriority_"

@@ -7,11 +7,11 @@ HL7 Forward Rule
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "**Name**",string,"Arbitrary/Meaningful name of the HL7 Forward Rule","
+    "Name",string,"Arbitrary/Meaningful name of the HL7 Forward Rule","
     .. _cn:
 
     cn_"
-    "**HL7 Forward Application Name(s)**",string,"HL7 Forward Destination Application and Facility name (Application^Facility)","
+    "HL7 Forward Application Name(s)",string,"HL7 Forward Destination Application and Facility name (Application^Facility)","
     .. _hl7FwdApplicationName:
 
     hl7FwdApplicationName_"

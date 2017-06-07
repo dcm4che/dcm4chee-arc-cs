@@ -7,19 +7,19 @@ Archive Attribute Coercion of received/sent DIMSE
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "**Name**",string,"Arbitrary/Meaningful name of the Archive Attribute Coercion","
+    "Name",string,"Arbitrary/Meaningful name of the Archive Attribute Coercion","
     .. _cn:
 
     cn_"
-    "**DIMSE**",string,"DIMSE: 'C_STORE_RQ', 'C_FIND_RQ', 'C_FIND_RSP'","
+    "DIMSE",string,"DICOM Message Element. Enumerated values: C_STORE_RQ, C_FIND_RQ or C_FIND_RSP","
     .. _dcmDIMSE:
 
     dcmDIMSE_"
-    "**DICOM Transfer Role**",string,"Transfer role (either 'SCU' or 'SCP')","
+    "DICOM Transfer Role",string,"DICOM Transfer Role. Enumerated values: SCU or SCP","
     .. _dicomTransferRole:
 
     dicomTransferRole_"
-    "Rule Priority",integer,"Rule Priority. 0 if absent.","
+    "Rule Priority",integer,"Rule Priority.","
     .. _dcmRulePriority:
 
     dcmRulePriority_"
@@ -39,11 +39,11 @@ Archive Attribute Coercion of received/sent DIMSE
     .. _dcmURI:
 
     dcmURI_"
-    "No Keywords",boolean,"Indicates if keywords shall be omitted in generated DICOM XML or JSON presentations; false if absent","
+    "No Keywords",boolean,"Indicates if keywords shall be omitted in generated DICOM XML or JSON presentations","
     .. _dcmNoKeywords:
 
     dcmNoKeywords_"
-    "Merge MWL Matching Key",string,"Specifies attribute of received object to lookup MWL Item used to coerce request attributes. Enumerated values: AccessionNumber, StudyInstanceUID, ScheduledProcedureStepID. If absent, request attributes of received objects will not be coerced.","
+    "Merge MWL Matching Key",string,"Specifies attribute of received object to lookup MWL Item used to coerce request attributes. If absent, request attributes of received objects will not be coerced. Enumerated values: AccessionNumber, StudyInstanceUID or ScheduledProcedureStepID","
     .. _dcmMergeMWLMatchingKey:
 
     dcmMergeMWLMatchingKey_"
@@ -59,7 +59,7 @@ Archive Attribute Coercion of received/sent DIMSE
     .. _dcmTag:
 
     dcmTag_"
-    "Attribute Update Policy",string,"Specifies how attributes shall be updated with attributes fetched from Leading C-FIND SCP. Enumerated values: SUPPLEMENT, MERGE, OVERWRITE. If absent, MERGE will be applied.","
+    "Attribute Update Policy",string,"Specifies how attributes shall be updated with attributes fetched from Leading C-FIND SCP. Enumerated values: SUPPLEMENT, MERGE or OVERWRITE","
     .. _dcmAttributeUpdatePolicy:
 
     dcmAttributeUpdatePolicy_"

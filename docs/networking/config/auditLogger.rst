@@ -7,11 +7,11 @@ Audit Logger related information
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "**Name**",string,"Arbitrary/Meaningful name for the Network Connection object","
+    "Name",string,"Arbitrary/Meaningful name for the Network Connection object","
     .. _cn:
 
     cn_"
-    "**Network Connection Reference(s)**",string,"The JSON Pointers to the Network Connection objects used by this Audit Logger","
+    "Network Connection Reference(s)",string,"The JSON Pointers to the Network Connection objects used by this Audit Logger","
     .. _dicomNetworkConnectionReference:
 
     dicomNetworkConnectionReference_"
@@ -31,23 +31,23 @@ Audit Logger related information
     .. _dcmAuditSourceTypeCode:
 
     dcmAuditSourceTypeCode_"
-    "Syslog Facility",string,"RFC 5424 Syslog Facility string value of audit message; 'authpriv' if absent","
+    "Syslog Facility",string,"RFC 5424 Syslog Facility string value of audit message. Enumerated values: kern, user, mail, daemon, auth, syslog, lpr, news, uucp, cron, authpriv, ftp, ntp, audit, console, cron2, local0, local1, local2, local3, local4, local5, local6 or local7","
     .. _dcmAuditFacility:
 
     dcmAuditFacility_"
-    "Syslog Severity - Success",string,"RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 0 (Success); 'notice' if absent","
+    "Syslog Severity - Success",string,"RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 0 (Success). Enumerated values: emerg, alert, crit, err, warning, notice, info or debug","
     .. _dcmAuditSuccessSeverity:
 
     dcmAuditSuccessSeverity_"
-    "Syslog Severity - Failure",string,"RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 4 (Minor failure); 'warning' if absent","
+    "Syslog Severity - Failure",string,"RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 4 (Minor failure). Enumerated values: emerg, alert, crit, err, warning, notice, info or debug","
     .. _dcmAuditMinorFailureSeverity:
 
     dcmAuditMinorFailureSeverity_"
-    "Syslog Severity - Failure",string,"RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 8 (Serious failure); 'err' if absent","
+    "Syslog Severity - Failure",string,"RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 8 (Serious failure). Enumerated values: emerg, alert, crit, err, warning, notice, info or debug","
     .. _dcmAuditSeriousFailureSeverity:
 
     dcmAuditSeriousFailureSeverity_"
-    "Syslog Severity - Major",string,"RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 12 (Major failure); 'crit' if absent","
+    "Syslog Severity - Major",string,"RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 12 (Major failure). Enumerated values: emerg, alert, crit, err, warning, notice, info or debug","
     .. _dcmAuditMajorFailureSeverity:
 
     dcmAuditMajorFailureSeverity_"
@@ -55,11 +55,11 @@ Audit Logger related information
     .. _dcmAuditApplicationName:
 
     dcmAuditApplicationName_"
-    "Syslog Message ID",string,"RFC 5424 Syslog MSGID of audit message; DICOM+RFC3881 if absent","
+    "Syslog Message ID",string,"RFC 5424 Syslog MSGID of audit message.","
     .. _dcmAuditMessageID:
 
     dcmAuditMessageID_"
-    "Message Encoding",string,"Character encoding of RFC 5424 Syslog MSG part of audit message; UTF-8 if absent","
+    "Message Encoding",string,"Character encoding of RFC 5424 Syslog MSG part of audit message.","
     .. _dcmAuditMessageEncoding:
 
     dcmAuditMessageEncoding_"
@@ -67,11 +67,11 @@ Audit Logger related information
     .. _dcmAuditMessageBOM:
 
     dcmAuditMessageBOM_"
-    "Timestamp in UTC",boolean,"Specify if RFC 5424 Syslog TIMESTAMP and the Event Date/Time of the audit message are specified in Coordinated Universal Time or in Local Time; use Local Time zone if absent","
+    "Timestamp in UTC",boolean,"Specify if RFC 5424 Syslog TIMESTAMP and the Event Date/Time of the audit message are specified in Coordinated Universal Time. Default indicates it will be in Local Time zone.","
     .. _dcmAuditTimestampInUTC:
 
     dcmAuditTimestampInUTC_"
-    "Message Format XML",boolean,"Specify whether or not the XML audit message is formatted with linefeeds and indentation; disabled if absent","
+    "Message Format XML",boolean,"Specify whether or not the XML audit message is formatted with line feeds and indentation.","
     .. _dcmAuditMessageFormatXML:
 
     dcmAuditMessageFormatXML_"
@@ -87,7 +87,7 @@ Audit Logger related information
     .. _dcmAuditLoggerSpoolDirectoryURI:
 
     dcmAuditLoggerSpoolDirectoryURI_"
-    "Retry Interval",string,"Retry interval in s to re-sent messages which could not delivered to the record repository; do no retry to re-sent messages if absent","
+    "Retry Interval",integer,"Retry interval in s to re-sent messages which could not delivered to the record repository; 0 = do no retry to re-sent messages","
     .. _dcmAuditLoggerRetryInterval:
 
     dcmAuditLoggerRetryInterval_"

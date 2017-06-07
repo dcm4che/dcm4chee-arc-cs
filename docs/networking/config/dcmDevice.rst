@@ -7,7 +7,7 @@ dcm4che proprietary Device Attributes
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Limit Open Associations",integer,"Limit open DICOM connections; rejects Association requests if the limit is exceeded; 0 (=no limit) if absent","
+    "Limit Open Associations",integer,"Limit open DICOM connections; rejects Association requests if the limit is exceeded. 0 = unlimited.","
     .. _dcmLimitOpenAssociations:
 
     dcmLimitOpenAssociations_"
@@ -15,7 +15,7 @@ dcm4che proprietary Device Attributes
     .. _dcmTrustStoreURL:
 
     dcmTrustStoreURL_"
-    "Trust Store Type",string,"Key Store Type of Trust Store specified by dcmTrustStoreURL. JKS or PKCS12","
+    "Trust Store Type",string,"Key Store Type of Trust Store specified by dcmTrustStoreURL. JKS or PKCS12 Enumerated values: JKS or PKCS12","
     .. _dcmTrustStoreType:
 
     dcmTrustStoreType_"
@@ -31,7 +31,7 @@ dcm4che proprietary Device Attributes
     .. _dcmKeyStoreURL:
 
     dcmKeyStoreURL_"
-    "Key Store Type",string,"Key Store Type of Key Store specified by Key Store URL. JKS or PKCS12","
+    "Key Store Type",string,"Key Store Type of Key Store specified by Key Store URL. JKS or PKCS12 Enumerated values: JKS or PKCS12","
     .. _dcmKeyStoreType:
 
     dcmKeyStoreType_"

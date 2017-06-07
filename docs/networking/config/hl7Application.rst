@@ -7,11 +7,11 @@ HL7 Application information
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "**HL7 Application name**",string,"HL7 Application and Facility name (Application|Facility)","
+    "HL7 Application name",string,"HL7 Application and Facility name (Application|Facility)","
     .. _hl7ApplicationName:
 
     hl7ApplicationName_"
-    "**Network Connection Reference(s)**",string,"The JSON Pointers to the Network Connection objects for this HL7 Application","
+    "Network Connection Reference(s)",string,"The JSON Pointers to the Network Connection objects for this HL7 Application","
     .. _dicomNetworkConnectionReference:
 
     dicomNetworkConnectionReference_"
@@ -23,7 +23,7 @@ HL7 Application information
     .. _hl7AcceptedMessageType:
 
     hl7AcceptedMessageType_"
-    "Default Character Set",string,"Character Set used to decode received messages if not specified by MSH-18, ASCII if absent","
+    "Default Character Set",string,"Character Set used to decode received messages if not specified by MSH-18.","
     .. _hl7DefaultCharacterSet:
 
     hl7DefaultCharacterSet_"

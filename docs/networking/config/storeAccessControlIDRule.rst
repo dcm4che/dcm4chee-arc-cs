@@ -7,15 +7,15 @@ Store Access Control ID Rule
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "**Name**",string,"Arbitrary/Meaningful name of the Store Access Control ID Rule","
+    "Name",string,"Arbitrary/Meaningful name of the Store Access Control ID Rule","
     .. _cn:
 
     cn_"
-    "**Store Access Control ID**",string,"Access Contol ID assigned to Studies which attributes match all conditions","
+    "Store Access Control ID",string,"Access Control ID assigned to Studies which attributes match all conditions","
     .. _dcmStoreAccessControlID:
 
     dcmStoreAccessControlID_"
-    "Rule Priority",integer,"Rule Priority. 0 if absent.","
+    "Rule Priority",integer,"Rule Priority.","
     .. _dcmRulePriority:
 
     dcmRulePriority_"

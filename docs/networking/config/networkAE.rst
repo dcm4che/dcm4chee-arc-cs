@@ -7,19 +7,19 @@ Application entity that provides services on a network
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "**AE Title**",string,"Unique AE title for this Network AE","
+    "AE Title",string,"Unique AE title for this Network AE","
     .. _dicomAETitle:
 
     dicomAETitle_"
-    "**Network Connection Reference(s)**",string,"JSON Pointers to the Network Connection objects for this AE","
+    "Network Connection Reference(s)",string,"JSON Pointers to the Network Connection objects for this AE","
     .. _dicomNetworkConnectionReference:
 
     dicomNetworkConnectionReference_"
-    "**Association Initiator**",boolean,"True if the Network AE can initiate associations, false otherwise","
+    "Association Initiator",boolean,"True if the Network AE can initiate associations.","
     .. _dicomAssociationInitiator:
 
     dicomAssociationInitiator_"
-    "**Association Acceptor**",boolean,"True if the Network AE can accept associations, false otherwise","
+    "Association Acceptor",boolean,"True if the Network AE can accept associations.","
     .. _dicomAssociationAcceptor:
 
     dicomAssociationAcceptor_"

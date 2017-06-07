@@ -7,11 +7,11 @@ Attributes stored in the database
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "**Attribute Entity**",string,"Entity of the Attribute Filter or Export Rule ('Patient', 'Study', 'Series', 'Instance', 'MPPS', 'MWL').","
+    "Attribute Entity",string,"Entity of the Attribute Filter or Export Rule ('Patient', 'Study', 'Series', 'Instance', 'MPPS', 'MWL'). Enumerated values: Patient, Study, Series, Instance, MPPS or MWL","
     .. _dcmEntity:
 
     dcmEntity_"
-    "**Attribute Tag(s)**",string,"DICOM Tag as hex string","
+    "Attribute Tag(s)",string,"DICOM Tag as hex string","
     .. _dcmTag:
 
     dcmTag_"
@@ -27,7 +27,7 @@ Attributes stored in the database
     .. _dcmCustomAttribute3:
 
     dcmCustomAttribute3_"
-    "Attribute Update Policy",string,"Specifies update policy for extracted attributes into the DB on Series, Study & Patient level on receive of further instance of the entity. Enumerated values: SUPPLEMENT, MERGE, OVERWRITE. If absent, the attributes will not be updated","
+    "Attribute Update Policy",string,"Specifies update policy for extracted attributes into the DB on Series, Study & Patient level on receive of further instance of the entity. If absent, the attributes will not be updated Enumerated values: SUPPLEMENT, MERGE or OVERWRITE","
     .. _dcmAttributeUpdatePolicy:
 
     dcmAttributeUpdatePolicy_"

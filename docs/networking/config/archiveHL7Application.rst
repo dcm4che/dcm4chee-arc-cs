@@ -19,11 +19,11 @@ DICOM Archive HL7 Application related information
     .. _hl7ScheduleProcedureTemplateURI:
 
     hl7ScheduleProcedureTemplateURI_"
-    "HL7 Schedule Protocol Code in Order",string,"Specifies location of Scheduled Protocol Code in received HL7 Order message. Enumerated values: OBR_4_1, OBR_4_4. If absent, OBR_4_4 will be applied.","
+    "HL7 Schedule Protocol Code in Order",string,"Specifies location of Scheduled Protocol Code in received HL7 Order message. Overwrites value specified on Device level. Enumerated values: OBR_4_1 or OBR_4_4","
     .. _hl7ScheduledProtocolCodeInOrder:
 
     hl7ScheduledProtocolCodeInOrder_"
-    "HL7 Schedule Station AET in Order",string,"Specifies location of Scheduled Station AE Title in received HL7 Order message. Enumerated values: ORC_18. Not effective for HL7 v2.5.1 OMI^O23 with IPC segment. If absent or no value is provided in the configured field, the Scheduled Station AE Title is selected according configured rules.","
+    "HL7 Schedule Station AET in Order",string,"Specifies location of Scheduled Station AE Title in received HL7 Order message. Not effective for HL7 v2.5.1 OMI^O23 with IPC segment. Overwrites value specified on Device level. Enumerated values: ORC_18","
     .. _hl7ScheduledStationAETInOrder:
 
     hl7ScheduledStationAETInOrder_"

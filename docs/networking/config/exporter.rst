@@ -7,15 +7,15 @@ Exporter Descriptor
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "**Exporter ID**",string,"Exporter ID","
+    "Exporter ID",string,"Exporter ID","
     .. _dcmExporterID:
 
     dcmExporterID_"
-    "**URI**",string,"RFC2079: Uniform Resource Identifier","
+    "URI",string,"RFC2079: Uniform Resource Identifier","
     .. _dcmURI:
 
     dcmURI_"
-    "**Queue Name**",string,"JMS Queue Name","
+    "Queue Name",string,"JMS Queue Name","
     .. _dcmQueueName:
 
     dcmQueueName_"
@@ -43,7 +43,7 @@ Exporter Descriptor
     .. _dcmRetrieveLocationUID:
 
     dcmRetrieveLocationUID_"
-    "Instance Availability",string,"Instance Availability: ONLINE, NEARLINE or OFFLINE. ONLINE if absent.","
+    "Instance Availability",string,"Instance Availability. Enumerated values: ONLINE, NEARLINE or OFFLINE","
     .. _dcmInstanceAvailability:
 
     dcmInstanceAvailability_"

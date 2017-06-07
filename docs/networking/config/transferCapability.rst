@@ -11,15 +11,15 @@ Each transfer capability specifies the SOP class that the Network AE can support
     .. _cn:
 
     cn_"
-    "**SOP Class**",string,"SOP Class UID","
+    "SOP Class",string,"SOP Class UID","
     .. _dicomSOPClass:
 
     dicomSOPClass_"
-    "**Transfer Role**",string,"Either SCU or SCP","
+    "DICOM Transfer Role",string,"DICOM Transfer Role. Enumerated values: SCP or SCU","
     .. _dicomTransferRole:
 
     dicomTransferRole_"
-    "**Transfer Syntax(s)**",string,"Transfer syntax(es) that may be requested as an SCU or that are offered as an SCP","
+    "Transfer Syntax(s)",string,"Transfer syntax(es) that may be requested as an SCU or that are offered as an SCP.","
     .. _dicomTransferSyntax:
 
     dicomTransferSyntax_"

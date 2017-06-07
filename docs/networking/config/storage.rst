@@ -7,23 +7,23 @@ Storage Descriptor
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "**Storage ID**",string,"Storage ID","
+    "Storage ID",string,"Storage ID","
     .. _dcmStorageID:
 
     dcmStorageID_"
-    "**Storage URI**",string,"RFC2079: Uniform Resource Identifier","
+    "Storage URI",string,"RFC2079: Uniform Resource Identifier","
     .. _dcmURI:
 
     dcmURI_"
-    "Digest Algorithm",string,"Algorithm for generation of check sums: 'MD5' or 'SHA-1'","
+    "Digest Algorithm",string,"Algorithm for generation of check sums: 'MD5' or 'SHA-1' Enumerated values: MD5 or SHA-1","
     .. _dcmDigestAlgorithm:
 
     dcmDigestAlgorithm_"
-    "Instance Availability",string,"Instance Availability: ONLINE, NEARLINE or OFFLINE. ONLINE if absent.","
+    "Instance Availability",string,"Instance Availability. Enumerated values: ONLINE, NEARLINE or OFFLINE","
     .. _dcmInstanceAvailability:
 
     dcmInstanceAvailability_"
-    "Read Only",boolean,"Indicates if a Storage System is read only; false if absent.","
+    "Read Only",boolean,"Indicates if a Storage System is read only.","
     .. _dcmReadOnly:
 
     dcmReadOnly_"

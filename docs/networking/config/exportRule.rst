@@ -7,19 +7,19 @@ Export Rule
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "**Name**",string,"Arbitrary/Meaningful name of the Export Rule","
+    "Name",string,"Arbitrary/Meaningful name of the Export Rule","
     .. _cn:
 
     cn_"
-    "**Attribute Entity**",string,"Entity of the Attribute Filter or Export Rule ('Patient', 'Study', 'Series', 'Instance', 'MPPS', 'MWL').","
+    "Attribute Entity",string,"Entity of the Attribute Filter or Export Rule ('Patient', 'Study', 'Series', 'Instance', 'MPPS', 'MWL'). Enumerated values: Patient, Study, Series, Instance, MPPS or MWL","
     .. _dcmEntity:
 
     dcmEntity_"
-    "**Exporter ID(s)**",string,"Exporter ID","
+    "Exporter ID(s)",string,"Exporter ID","
     .. _dcmExporterID:
 
     dcmExporterID_"
-    "Export Previous Entity",boolean,"Specifies if the previous Entity of a replaced Instance shall be also exported. Disabled if absent.","
+    "Export Previous Entity",boolean,"Specifies if the previous Entity of a replaced Instance shall be also exported.","
     .. _dcmExportPreviousEntity:
 
     dcmExportPreviousEntity_"

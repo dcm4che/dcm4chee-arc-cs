@@ -7,7 +7,7 @@ Specifies behavior on Rejection Note Stored
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "**Query/Retrieve View ID**",string,"Query/Retrieve View Identifier","
+    "Query/Retrieve View ID",string,"Query/Retrieve View Identifier","
     .. _dcmQueryRetrieveViewID:
 
     dcmQueryRetrieveViewID_"
@@ -19,7 +19,7 @@ Specifies behavior on Rejection Note Stored
     .. _dcmHideRejectionNoteWithCode:
 
     dcmHideRejectionNoteWithCode_"
-    "Hide Not Rejected Instances",boolean,"Indicates if the Q/R Services shall hide instances not rejected by any reason; disabled if absent","
+    "Hide Not Rejected Instances",boolean,"Indicates if the Q/R Services shall hide instances not rejected by any reason.","
     .. _dcmHideNotRejectedInstances:
 
     dcmHideNotRejectedInstances_"

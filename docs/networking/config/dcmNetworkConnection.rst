@@ -7,7 +7,7 @@ dcm4che proprietary Network Connection Attributes
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Protocol",string,"Protocol of Network Connection: DICOM, HL7, SYSLOG_TLS or SYSLOG_UDP; DICOM if absent","
+    "Protocol",string,"Protocol of Network Connection: DICOM, HL7, SYSLOG_TLS or SYSLOG_UDP. Enumerated values: DICOM, HL7, SYSLOG_TLS or SYSLOG_UDP","
     .. _dcmProtocol:
 
     dcmProtocol_"
@@ -15,15 +15,15 @@ dcm4che proprietary Network Connection Attributes
     .. _dcmHTTPProxy:
 
     dcmHTTPProxy_"
-    "TLS Need Client Auth",boolean,"Indicates if TLS client authentication is required; required if absent","
+    "TLS Need Client Auth",boolean,"Indicates if TLS client authentication is required.","
     .. _dcmTLSNeedClientAuth:
 
     dcmTLSNeedClientAuth_"
-    "TLS Protocol(s)",string,"The Supported TLS Protocols; TLSv1, SSLv3 if absent","
+    "TLS Protocol(s)",string,"The Supported TLS Protocols.","
     .. _dcmTLSProtocol:
 
     dcmTLSProtocol_"
-    "TCP Backlog",integer,"Maximum queue length for incoming TCP connections; 50 if absent","
+    "TCP Backlog",integer,"Maximum queue length for incoming TCP connections.","
     .. _dcmTCPBacklog:
 
     dcmTCPBacklog_"
@@ -31,7 +31,7 @@ dcm4che proprietary Network Connection Attributes
     .. _dcmTCPConnectTimeout:
 
     dcmTCPConnectTimeout_"
-    "TCP Close Delay",integer,"TCP socket close delay in ms after send of A-ASSOCIATE-RJ, A-RELEASE-RP or A-ABORT PDU; 50 ms if absent","
+    "TCP Close Delay",integer,"TCP socket close delay in ms after send of A-ASSOCIATE-RJ, A-RELEASE-RP or A-ABORT PDU.","
     .. _dcmTCPCloseDelay:
 
     dcmTCPCloseDelay_"
@@ -43,7 +43,7 @@ dcm4che proprietary Network Connection Attributes
     .. _dcmTCPReceiveBufferSize:
 
     dcmTCPReceiveBufferSize_"
-    "TCP No Delay",boolean,"Enable/disable TCP_NODELAY (disable/enable Nagle algorithm); disable Nagle algorithm if absent","
+    "TCP No Delay",boolean,"Enable/disable TCP_NODELAY (disable/enable Nagle algorithm).","
     .. _dcmTCPNoDelay:
 
     dcmTCPNoDelay_"
@@ -59,23 +59,23 @@ dcm4che proprietary Network Connection Attributes
     .. _dcmBlacklistedHostname:
 
     dcmBlacklistedHostname_"
-    "Send PDU Length",integer,"Maximal length of emitted PDUs; 16378 if absent","
+    "Send PDU Length",integer,"Maximal length of emitted PDUs.","
     .. _dcmSendPDULength:
 
     dcmSendPDULength_"
-    "Receive PDU Length",integer,"Maximal length of received PDUs; 16378 if absent","
+    "Receive PDU Length",integer,"Maximal length of received PDUs.","
     .. _dcmReceivePDULength:
 
     dcmReceivePDULength_"
-    "Max Ops Performed",integer,"Maximal number of operations to perform asynchronously; 0 = infinite; 1 (=synchronous) if absent","
+    "Max Ops Performed",integer,"Maximal number of operations to perform asynchronously; 0 = infinite.","
     .. _dcmMaxOpsPerformed:
 
     dcmMaxOpsPerformed_"
-    "Max Ops Invoked",integer,"Maximal number of operations to invoke asynchronously; 0 = infinite; 1 (=synchronous) if absent","
+    "Max Ops Invoked",integer,"Maximal number of operations to invoke asynchronously; 0 = infinite.","
     .. _dcmMaxOpsInvoked:
 
     dcmMaxOpsInvoked_"
-    "Pack PDV",boolean,"Enable/disable packing of command and data PDVs into one P-DATA-TF PDU; enabled if absent","
+    "Pack PDV",boolean,"Enable/disable packing of command and data PDVs into one P-DATA-TF PDU.","
     .. _dcmPackPDV:
 
     dcmPackPDV_"

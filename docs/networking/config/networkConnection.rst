@@ -11,7 +11,7 @@ Describes one TCP/UDP port on one network device.
     .. _cn:
 
     cn_"
-    "**Hostname**",string,"DNS name for this particular connection","
+    "Hostname",string,"DNS name for this particular connection","
     .. _dicomHostname:
 
     dicomHostname_"

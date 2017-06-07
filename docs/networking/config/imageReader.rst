@@ -7,11 +7,11 @@ Specifies Java Image IO Image Readers used for decompressing compressed DICOM im
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "**Transfer Syntax**",string,"Transfer Syntax of compressed DICOM image","
+    "Transfer Syntax",string,"Transfer Syntax of compressed DICOM image","
     .. _dicomTransferSyntax:
 
     dicomTransferSyntax_"
-    "**Image IO Reader Format Name**",string,"Image IO Reader Format Name","
+    "Image IO Reader Format Name",string,"Image IO Reader Format Name","
     .. _dcmIIOFormatName:
 
     dcmIIOFormatName_"
@@ -19,7 +19,7 @@ Specifies Java Image IO Image Readers used for decompressing compressed DICOM im
     .. _dcmJavaClassName:
 
     dcmJavaClassName_"
-    "Patch JPEG-LS",string,"Patch JPEG-LS before decompressing: JAI2ISO, ISO2JAI or ISO2JAI_IF_APP_OR_COM","
+    "Patch JPEG-LS",string,"Patch JPEG-LS before decompressing: JAI2ISO, ISO2JAI or ISO2JAI_IF_APP_OR_COM Enumerated values: JAI2ISO, ISO2JAI or ISO2JAI_IF_APP_OR_COM","
     .. _dcmPatchJPEGLS:
 
     dcmPatchJPEGLS_"

@@ -7,11 +7,11 @@ Managed JMS Queue
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "**Queue Name**",string,"JMS Queue Name","
+    "Queue Name",string,"JMS Queue Name","
     .. _dcmQueueName:
 
     dcmQueueName_"
-    "**JNDI Name**",string,"JNDI Name","
+    "JNDI Name",string,"JNDI Name","
     .. _dcmJndiName:
 
     dcmJndiName_"
@@ -19,11 +19,11 @@ Managed JMS Queue
     .. _dicomDescription:
 
     dicomDescription_"
-    "Maximum Number of Retries",integer,"Maximal number of retries to process tasks scheduled in a specific queue. 0 if absent.","
+    "Maximum Number of Retries",integer,"Maximal number of retries to process tasks scheduled in a specific queue.","
     .. _dcmMaxRetries:
 
     dcmMaxRetries_"
-    "Retry Delay",string,"Delay to retry to process tasks scheduled in a specific queue in ISO-8601 duration format PnDTnHnMn.nS. PT1M if absent.","
+    "Retry Delay",string,"Delay to retry to process tasks scheduled in a specific queue in ISO-8601 duration format PnDTnHnMn.nS.","
     .. _dcmRetryDelay:
 
     dcmRetryDelay_"
@@ -31,11 +31,11 @@ Managed JMS Queue
     .. _dcmMaxRetryDelay:
 
     dcmMaxRetryDelay_"
-    "Retry Delay Multiplier",integer,"Multiplier in % that will take effect on top of dcmRetryDelay with dcmMaxRetryDelay to be taken into account. 100 if absent.","
+    "Retry Delay Multiplier",integer,"Multiplier in % that will take effect on top of dcmRetryDelay with dcmMaxRetryDelay to be taken into account.","
     .. _dcmRetryDelayMultiplier:
 
     dcmRetryDelayMultiplier_"
-    "Retry on Warning",boolean,"Enables retries to process tasks not only on failure but also on a warning outcome status in a specific queue; disabled if absent.","
+    "Retry on Warning",boolean,"Enables retries to process tasks not only on failure but also on a warning outcome status in a specific queue.","
     .. _dcmRetryOnWarning:
 
     dcmRetryOnWarning_"

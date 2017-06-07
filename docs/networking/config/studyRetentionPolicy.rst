@@ -7,15 +7,15 @@ Study Retention Policy
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "**Name**",string,"Arbitrary/Meaningful name of the Study Retention Policy","
+    "Name",string,"Arbitrary/Meaningful name of the Study Retention Policy","
     .. _cn:
 
     cn_"
-    "**Study Retention Period**",string,"Study Retention Period in ISO-8601 period format PnYnMnD or PnW","
+    "Study Retention Period",string,"Study Retention Period in ISO-8601 period format PnYnMnD or PnW","
     .. _dcmRetentionPeriod:
 
     dcmRetentionPeriod_"
-    "Rule Priority",integer,"Rule Priority. 0 if absent.","
+    "Rule Priority",integer,"Rule Priority.","
     .. _dcmRulePriority:
 
     dcmRulePriority_"
@@ -23,7 +23,7 @@ Study Retention Policy
     .. _dcmProperty:
 
     dcmProperty_"
-    "Expire Series Individually",boolean,"Indicates if series should be expired individually or not. If absent, it is false.","
+    "Expire Series Individually",boolean,"Indicates if series should be expired individually or not.","
     .. _dcmExpireSeriesIndividually:
 
     dcmExpireSeriesIndividually_"
