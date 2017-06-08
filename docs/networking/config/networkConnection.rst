@@ -15,7 +15,7 @@ Describes one TCP/UDP port on one network device.
     .. _dicomHostname:
 
     dicomHostname_"
-    "Port",integer,"TCP/UDP port that a service is listening on. 0 = this network connection is only used for outbound connections","
+    "Port",integer,"TCP/UDP port that a service is listening on. May be missing if this network connection is only used for outbound connections","
     .. _dicomPort:
 
     dicomPort_"

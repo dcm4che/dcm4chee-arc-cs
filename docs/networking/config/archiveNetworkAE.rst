@@ -143,14 +143,26 @@ DICOM Archive Network AE related information
     .. _dcmDiffStudiesIncludefieldAll:
 
     dcmDiffStudiesIncludefieldAll_"
-    "Store Permission Service URL",string,"URL of Store Permission Service which will be invoked on receive of the first object of a study. {<dicomTag>} will be replaced by the value of the attribute in the object. E.g. http://host.name/storage-permission/study/{0020000D}?patientId={00100020}&patientIdIssuer={00100021}&studyDescription={00081030}","
+    "Store Permission Service URL",string,"URL of Store Permission Service which will be invoked on receive of the first object of a study. {<dicomTag>} will be replaced by the value of the attribute in the object. E.g. http://host.name/storage-permission/study/{0020000D}?patientId={00100020}&patientIdIssuer={00100021}&studyDescription={00081030,urlencoded}. Overwrites value specified on Device level.","
     .. _dcmStorePermissionServiceURL:
 
     dcmStorePermissionServiceURL_"
-    "Store Permission Service Response Pattern",string,"Regular Expression applied to responses from Store Permission Service to determine agreement for storage. E.g. ""validation""\s*:\s*""true"" . If absent, every success response will be treated as agreement for storage.","
+    "Store Permission Service Response Pattern",string,"Regular Expression applied to responses from Store Permission Service to determine agreement for storage. E.g. ""validation""\s*:\s*""true"". Overwrites value specified on Device level.","
     .. _dcmStorePermissionServiceResponsePattern:
 
     dcmStorePermissionServiceResponsePattern_"
+    "Store Permission Service Expiration Date Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract the initial Study Expiration Date. E.g. ""expirationdate""\s*:\s*""([0-9]{8})"". Overwrites value specified on Device level.","
+    .. _dcmStorePermissionServiceExpirationDatePattern:
+
+    dcmStorePermissionServiceExpirationDatePattern_"
+    "Store Permission Service Error Comment Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract Error Comment. E.g. ""errorcomment""\s*:\s*""(.*)"". Overwrites value specified on Device level.","
+    .. _dcmStorePermissionServiceErrorCommentPattern:
+
+    dcmStorePermissionServiceErrorCommentPattern_"
+    "Store Permission Service Error Code Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract Error Code in hexadecimal. E.g. ""errorcode""\s*:\s*""(\p{XDigit}{4})"". Overwrites value specified on Device level.","
+    .. _dcmStorePermissionServiceErrorCodePattern:
+
+    dcmStorePermissionServiceErrorCodePattern_"
     "Allow Rejection For Data Retention Policy Expired",string,"Allow Rejection For Data Retention Policy Expired. Overwrites value specified on Device level. Enumerated values: NEVER, ALWAYS or STUDY_RETENTION_POLICY","
     .. _dcmAllowRejectionForDataRetentionPolicyExpired:
 
@@ -163,27 +175,15 @@ DICOM Archive Network AE related information
     .. _dcmAllowDeleteStudyPermanently:
 
     dcmAllowDeleteStudyPermanently_"
-    "Store Permission Service Expiration Date Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract the initial Study Expiration Date. E.g. ""expirationdate""\s*:\s*""([0-9]{8})"". If absent, locally configured Study Retention Policy Rules will be applied.","
-    .. _dcmStorePermissionServiceExpirationDatePattern:
-
-    dcmStorePermissionServiceExpirationDatePattern_"
-    "Default Character Set",string,"Value of Specific Character Set (0008,0005) added to Data Sets without Specific Character Set (0008,0005) attribute received by this Network AE.","
+    "Default Character Set",string,"Value of Specific Character Set (0008,0005) added to Data Sets without Specific Character Set (0008,0005) attribute received by this Network AE. Overwrites value specified on Device level.","
     .. _dcmDefaultCharacterSet:
 
     dcmDefaultCharacterSet_"
-    "Store Permission Service Error Comment Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract Error Comment. E.g. ""errorcomment""\s*:\s*""(.*)"". Overwrites value specified on Device level.","
-    .. _dcmStorePermissionServiceErrorCommentPattern:
-
-    dcmStorePermissionServiceErrorCommentPattern_"
-    "Store Permission Service Error Code Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract Error Code in hexadecimal. E.g. ""errorcode""\s*:\s*""(\p{XDigit}{4})"". Overwrites value specified on Device level.","
-    .. _dcmStorePermissionServiceErrorCodePattern:
-
-    dcmStorePermissionServiceErrorCodePattern_"
     "Retrieve AE Title(s)",string,"Specifies Retrieve AE Titles associated with DICOM objects received by this Network AE. Overwrites value specified on Device level.","
     .. _dcmRetrieveAET:
 
     dcmRetrieveAET_"
-    "External Retrieve AE Destination",string,"AE Title of local C-STORE-SCP to be set as Move Destination in C-MOVE RQs forwarded to external retrieve AE.","
+    "External Retrieve AE Destination",string,"AE Title of local C-STORE-SCP to be set as Move Destination in C-MOVE RQs forwarded to external retrieve AE. Overwrites value specified on Device level.","
     .. _dcmExternalRetrieveAEDestination:
 
     dcmExternalRetrieveAEDestination_"
@@ -199,11 +199,11 @@ DICOM Archive Network AE related information
     .. _dcmCopyMoveUpdatePolicy:
 
     dcmCopyMoveUpdatePolicy_"
-    "HL7 Procedure Status Update Sending Application",string,"Application|Facility name of Sending Application for HL7 Procedure Status Update. HL7 Procedure Status Update disabled, if absent.","
+    "HL7 Procedure Status Update Sending Application",string,"Application|Facility name of Sending Application for HL7 Procedure Status Update. Overwrites value specified on Device level.","
     .. _hl7PSUSendingApplication:
 
     hl7PSUSendingApplication_"
-    "HL7 Procedure Status Update Receiving Application(s)",string,"Application|Facility name of Receiving Application for HL7 Procedure Status Update.","
+    "HL7 Procedure Status Update Receiving Application(s)",string,"Application|Facility name of Receiving Application for HL7 Procedure Status Update. Overwrites value specified on Device level.","
     .. _hl7PSUReceivingApplication:
 
     hl7PSUReceivingApplication_"

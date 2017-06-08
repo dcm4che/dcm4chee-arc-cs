@@ -27,7 +27,7 @@ dcm4che proprietary Network Connection Attributes
     .. _dcmTCPBacklog:
 
     dcmTCPBacklog_"
-    "TCP Connect Timeout",integer,"TCP connect timeout in ms; 0 = no timeout.","
+    "TCP Connect Timeout",integer,"TCP connect timeout in ms; no timeout if absent","
     .. _dcmTCPConnectTimeout:
 
     dcmTCPConnectTimeout_"
@@ -35,11 +35,11 @@ dcm4che proprietary Network Connection Attributes
     .. _dcmTCPCloseDelay:
 
     dcmTCPCloseDelay_"
-    "TCP Send Buffer Size",integer,"TCP send buffer size; 0 = use system defaults.","
+    "TCP Send Buffer Size",integer,"TCP send buffer size; use system defaults if absent","
     .. _dcmTCPSendBufferSize:
 
     dcmTCPSendBufferSize_"
-    "TCP Receive Buffer Size",integer,"TCP receive buffer size; 0 = use system defaults","
+    "TCP Receive Buffer Size",integer,"TCP receive buffer size; use system defaults if absent","
     .. _dcmTCPReceiveBufferSize:
 
     dcmTCPReceiveBufferSize_"
@@ -79,27 +79,27 @@ dcm4che proprietary Network Connection Attributes
     .. _dcmPackPDV:
 
     dcmPackPDV_"
-    "AA-RQ Timeout",integer,"Timeout in ms for receive of A-ASSOCIATE-RQ PDU after TCP connect; 0 = no timeout.","
+    "AA-RQ Timeout",integer,"Timeout in ms for receive of A-ASSOCIATE-RQ PDU after TCP connect; no timeout if absent","
     .. _dcmAARQTimeout:
 
     dcmAARQTimeout_"
-    "AA-AC Timeout",integer,"Timeout in ms for receive of A-ASSOCIATE-AC PDU after send of A-ASSOCIATE-RQ PDU; 0 = no timeout.","
+    "AA-AC Timeout",integer,"Timeout in ms for receive of A-ASSOCIATE-AC PDU after send of A-ASSOCIATE-RQ PDU; no timeout if absent","
     .. _dcmAAACTimeout:
 
     dcmAAACTimeout_"
-    "AR-RP Timeout",integer,"Timeout in ms for receive of A-RELEASE-RP PDU after send of A-RELEASE-RQ PDU; 0 = no timeout.","
+    "AR-RP Timeout",integer,"Timeout in ms for receive of A-RELEASE-RP PDU after send of A-RELEASE-RQ PDU; no timeout if absent","
     .. _dcmARRPTimeout:
 
     dcmARRPTimeout_"
-    "Response Timeout",integer,"Timeout in ms for receive of response message; 0 = no timeout.","
+    "Response Timeout",integer,"Timeout in ms for receive of response message; no timeout if absent","
     .. _dcmResponseTimeout:
 
     dcmResponseTimeout_"
-    "Retrieve Timeout",integer,"Timeout in ms for receive of C-GET-RSP or C-MOVE-RSP; 0 = no timeout.","
+    "Retrieve Timeout",integer,"Timeout in ms for receive of C-GET-RSP or C-MOVE-RSP; no timeout if absent","
     .. _dcmRetrieveTimeout:
 
     dcmRetrieveTimeout_"
-    "Idle Timeout",integer,"Indicates aborting of idle Associations after specified timeout in ms; 0 = no timeout.","
+    "Idle Timeout",integer,"Indicates aborting of idle Associations after specified timeout in ms; no timeout if absent","
     .. _dcmIdleTimeout:
 
     dcmIdleTimeout_"

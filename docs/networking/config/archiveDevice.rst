@@ -295,11 +295,11 @@ DICOM Archive Device related information
     .. _dcmRejectExpiredStudiesAETitle:
 
     dcmRejectExpiredStudiesAETitle_"
-    "Store Permission Service URL",string,"URL of Store Permission Service which will be invoked on receive of the first object of a study. {<dicomTag>} will be replaced by the value of the attribute in the object. E.g. http://host.name/storage-permission/study/{0020000D}?patientId={00100020}&patientIdIssuer={00100021}&studyDescription={00081030}","
+    "Store Permission Service URL",string,"URL of Store Permission Service which will be invoked on receive of the first object of a study by any AE. {<dicomTag>} will be replaced by the value of the attribute in the object. E.g. http://host.name/storage-permission/study/{0020000D}?patientId={00100020}&patientIdIssuer={00100021}&studyDescription={00081030,urlencoded}. May be overwritten by configured value for particular Archive Network AEs.","
     .. _dcmStorePermissionServiceURL:
 
     dcmStorePermissionServiceURL_"
-    "Store Permission Service Response Pattern",string,"Regular Expression applied to responses from Store Permission Service to determine agreement for storage. E.g. ""validation""\s*:\s*""true"" . If absent, every success response will be treated as agreement for storage.","
+    "Store Permission Service Response Pattern",string,"Regular Expression applied to responses from Store Permission Service to determine agreement for storage. E.g. ""validation""\s*:\s*""true"" . If absent, every success response will be treated as agreement for storage. May be overwritten by configured value for particular Archive Network AEs.","
     .. _dcmStorePermissionServiceResponsePattern:
 
     dcmStorePermissionServiceResponsePattern_"
@@ -335,7 +335,7 @@ DICOM Archive Device related information
     .. _dcmAllowDeleteStudyPermanently:
 
     dcmAllowDeleteStudyPermanently_"
-    "Store Permission Service Expiration Date Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract the initial Study Expiration Date. E.g. ""expirationdate""\s*:\s*""([0-9]{8})"". If absent, locally configured Study Retention Policy Rules will be applied.","
+    "Store Permission Service Expiration Date Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract the initial Study Expiration Date. E.g. ""expirationdate""\s*:\s*""([0-9]{8})"". If absent, locally configured Study Retention Policy Rules will be applied. May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmStorePermissionServiceExpirationDatePattern:
 
     dcmStorePermissionServiceExpirationDatePattern_"
@@ -347,7 +347,7 @@ DICOM Archive Device related information
     .. _dcmPurgeStgCmtPollingInterval:
 
     dcmPurgeStgCmtPollingInterval_"
-    "Default Character Set",string,"Value of Specific Character Set (0008,0005) added to Data Sets without Specific Character Set (0008,0005) attribute received by the Network AE.","
+    "Default Character Set",string,"Value of Specific Character Set (0008,0005) added to Data Sets without Specific Character Set (0008,0005) attribute received by any AE. May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmDefaultCharacterSet:
 
     dcmDefaultCharacterSet_"
@@ -419,11 +419,11 @@ DICOM Archive Device related information
     .. _hl7ADTReceivingApplication:
 
     hl7ADTReceivingApplication_"
-    "HL7 Procedure Status Update Sending Application",string,"Application|Facility name of Sending Application for HL7 Procedure Status Update. HL7 Procedure Status Update disabled, if absent.","
+    "HL7 Procedure Status Update Sending Application",string,"Application|Facility name of Sending Application for HL7 Procedure Status Update. HL7 Procedure Status Update disabled, if absent. May be overwritten by configured values for particular Archive Network AEs.","
     .. _hl7PSUSendingApplication:
 
     hl7PSUSendingApplication_"
-    "HL7 Procedure Status Update Receiving Application(s)",string,"Application|Facility name of Receiving Application for HL7 Procedure Status Update.","
+    "HL7 Procedure Status Update Receiving Application(s)",string,"Application|Facility name of Receiving Application for HL7 Procedure Status Update. May be overwritten by configured values for particular Archive Network AEs.","
     .. _hl7PSUReceivingApplication:
 
     hl7PSUReceivingApplication_"
