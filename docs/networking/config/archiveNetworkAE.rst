@@ -167,7 +167,7 @@ DICOM Archive Network AE related information
     .. _dcmStorePermissionServiceExpirationDatePattern:
 
     dcmStorePermissionServiceExpirationDatePattern_"
-    "Default Character Set",string,"Value of Specific Character Set (0008,0005) added to Data Sets without Specific Character Set (0008,0005) attribute received by the Network AE.","
+    "Default Character Set",string,"Value of Specific Character Set (0008,0005) added to Data Sets without Specific Character Set (0008,0005) attribute received by this Network AE.","
     .. _dcmDefaultCharacterSet:
 
     dcmDefaultCharacterSet_"
@@ -179,7 +179,7 @@ DICOM Archive Network AE related information
     .. _dcmStorePermissionServiceErrorCodePattern:
 
     dcmStorePermissionServiceErrorCodePattern_"
-    "Retrieve AE Title(s)",string,"AE Title associated with Network AE","
+    "Retrieve AE Title(s)",string,"Specifies Retrieve AE Titles associated with DICOM objects received by this Network AE. Overwrites value specified on Device level.","
     .. _dcmRetrieveAET:
 
     dcmRetrieveAET_"
@@ -187,11 +187,11 @@ DICOM Archive Network AE related information
     .. _dcmExternalRetrieveAEDestination:
 
     dcmExternalRetrieveAEDestination_"
-    "Invoke Image Display Patient URL",string,"URL to launch external Image Display for a Patient. {} will be replaced by the Patient ID formatted as HL7 CX data type. E.g.: http://display:8080/IHEInvokeImageDisplay?requestType=PATIENT&patientID={}","
+    "Invoke Image Display Patient URL",string,"URL to launch external Image Display for a Patient. {} will be replaced by the Patient ID formatted as HL7 CX data type. E.g.: http://display:8080/IHEInvokeImageDisplay?requestType=PATIENT&patientID={}. Overwrites value specified on Device level.","
     .. _dcmInvokeImageDisplayPatientURL:
 
     dcmInvokeImageDisplayPatientURL_"
-    "Invoke Image Display Study URL",string,"URL to launch external Image Display for a Study. {} will be replaced by the Study Instance UID. E.g.: http://display:8080/IHEInvokeImageDisplay?requestType=STUDY&studyUID={}","
+    "Invoke Image Display Study URL",string,"URL to launch external Image Display for a Study. {} will be replaced by the Study Instance UID. E.g.: http://display:8080/IHEInvokeImageDisplay?requestType=STUDY&studyUID={}. Overwrites value specified on Device level.","
     .. _dcmInvokeImageDisplayStudyURL:
 
     dcmInvokeImageDisplayStudyURL_"
@@ -223,23 +223,23 @@ DICOM Archive Network AE related information
     .. _hl7PSUOnTimeout:
 
     hl7PSUOnTimeout_"
-    ":doc:`exportRule` (s)",object,"Export Rule","
+    ":doc:`exportRule` (s)",object,"Export Rules. Supplements Export Rules specified on Device level.","
     .. _dcmExportRule:
 
     dcmExportRule_"
-    ":doc:`rsForwardRule` (s)",object,"RESTful Forward Rule","
+    ":doc:`rsForwardRule` (s)",object,"RESTful Forward Rules. Supplements RESTful Forward rules specified on Device level.","
     .. _dcmRSForwardRule:
 
     dcmRSForwardRule_"
-    ":doc:`archiveCompressionRule` (s)",object,"Archive Compression rule","
+    ":doc:`archiveCompressionRule` (s)",object,"Compression rules. Supplements Compression rules specified on Device level.","
     .. _dcmArchiveCompressionRule:
 
     dcmArchiveCompressionRule_"
-    ":doc:`archiveAttributeCoercion` (s)",object,"Archive Attribute Coercion of received/sent DIMSE","
+    ":doc:`archiveAttributeCoercion` (s)",object,"Attribute Coercion of received/sent DIMSE. Supplements Attribute Coercions specified on Device level.","
     .. _dcmArchiveAttributeCoercion:
 
     dcmArchiveAttributeCoercion_"
-    ":doc:`studyRetentionPolicy` (s)",object,"Study Retention Policy","
+    ":doc:`studyRetentionPolicy` (s)",object,"Study Retention Policies. Supplements Study Retention Policies specified on Device level.","
     .. _dcmStudyRetentionPolicy:
 
     dcmStudyRetentionPolicy_"

@@ -7,7 +7,7 @@ DICOM Archive Device related information
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Fuzzy Algorithm Class",string,"Specifies Fuzzy Algorithm Implementation Class: 'org.dcm4che3.soundex.Soundex', 'org.dcm4che3.soundex.ESoundex', 'org.dcm4che3.soundex.ESoundex9', 'org.dcm4che3.soundex.Metaphone', 'org.dcm4che3.soundex.KPhonetik', 'org.dcm4che3.soundex.Phonem Enumerated values: org.dcm4che3.soundex.Soundex, org.dcm4che3.soundex.ESoundex, org.dcm4che3.soundex.ESoundex9, org.dcm4che3.soundex.Metaphone, org.dcm4che3.soundex.KPhonetik or org.dcm4che3.soundex.Phonem","
+    "Fuzzy Algorithm Class",string,"Specifies Fuzzy Algorithm Implementation Class. Enumerated values: org.dcm4che3.soundex.Soundex, org.dcm4che3.soundex.ESoundex, org.dcm4che3.soundex.ESoundex9, org.dcm4che3.soundex.Metaphone, org.dcm4che3.soundex.KPhonetik or org.dcm4che3.soundex.Phonem","
     .. _dcmFuzzyAlgorithmClass:
 
     dcmFuzzyAlgorithmClass_"
@@ -235,15 +235,15 @@ DICOM Archive Device related information
     .. _dcmStowSpoolDirectory:
 
     dcmStowSpoolDirectory_"
-    "HL7 Patient Update Template URI",string,"Specifies URI for the style sheet used by HL7v2 Patient Update Service.","
+    "HL7 Patient Update Template URI",string,"Specifies URI for the style sheet used by HL7v2 Patient Update Service. May be overwritten by configured values for particular Archive HL7 Application.","
     .. _hl7PatientUpdateTemplateURI:
 
     hl7PatientUpdateTemplateURI_"
-    "HL7 Import Report Template URI",string,"Specifies URI for the style sheet to transcode received HL7 ORU^R01 to DICOM SR.","
+    "HL7 Import Report Template URI",string,"Specifies URI for the style sheet to transcode received HL7 ORU^R01 to DICOM SR. May be overwritten by configured values for particular Archive HL7 Application.","
     .. _hl7ImportReportTemplateURI:
 
     hl7ImportReportTemplateURI_"
-    "HL7 Schedule Procedure Template URI",string,"Specifies URI for the style sheet to transcode received HL7 ORM^O01, OMI^O23, OMG^O19 to DICOM MWL items.","
+    "HL7 Schedule Procedure Template URI",string,"Specifies URI for the style sheet to transcode received HL7 ORM^O01, OMI^O23, OMG^O19 to DICOM MWL items. May be overwritten by configured values for particular Archive HL7 Application.","
     .. _hl7ScheduleProcedureTemplateURI:
 
     hl7ScheduleProcedureTemplateURI_"
@@ -255,11 +255,11 @@ DICOM Archive Device related information
     .. _hl7ScheduledStationAETInOrder:
 
     hl7ScheduledStationAETInOrder_"
-    "HL7 Log File Pattern",string,"Path to HL7 messages which will be captured exactly as received. If absent, there is no logging.","
+    "HL7 Log File Pattern",string,"Path to HL7 messages which will be captured exactly as received. If absent, there is no logging. May be overwritten by configured values for particular Archive HL7 Application.","
     .. _hl7LogFilePattern:
 
     hl7LogFilePattern_"
-    "HL7 Error Log File Pattern",string,"Path to HL7 messages which will be captured exactly as received, when processing of HL7 messages fails. If absent, there is no logging.","
+    "HL7 Error Log File Pattern",string,"Path to HL7 messages which will be captured exactly as received, when processing of HL7 messages fails. If absent, there is no logging. May be overwritten by configured values for particular Archive HL7 Application.","
     .. _hl7ErrorLogFilePattern:
 
     hl7ErrorLogFilePattern_"
@@ -359,11 +359,11 @@ DICOM Archive Device related information
     .. _dcmStorePermissionServiceErrorCodePattern:
 
     dcmStorePermissionServiceErrorCodePattern_"
-    "Retrieve AE Title(s)",string,"AE Title associated with Network AE","
+    "Retrieve AE Title(s)",string,"Specifies Retrieve AE Titles associated with received DICOM objects. If absent, the Called AE Title of the receiving AE will be used. May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmRetrieveAET:
 
     dcmRetrieveAET_"
-    "External Retrieve AE Destination",string,"AE Title of local C-STORE-SCP to be set as Move Destination in C-MOVE RQs forwarded to external retrieve AE.","
+    "External Retrieve AE Destination",string,"AE Title of local C-STORE-SCP to be set as Move Destination in C-MOVE RQs forwarded to external retrieve AE. May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmExternalRetrieveAEDestination:
 
     dcmExternalRetrieveAEDestination_"
@@ -399,11 +399,11 @@ DICOM Archive Device related information
     .. _dcmAudit2XmlFhirTemplateURI:
 
     dcmAudit2XmlFhirTemplateURI_"
-    "Invoke Image Display Patient URL",string,"URL to launch external Image Display for a Patient. {} will be replaced by the Patient ID formatted as HL7 CX data type. E.g.: http://display:8080/IHEInvokeImageDisplay?requestType=PATIENT&patientID={}","
+    "Invoke Image Display Patient URL",string,"URL to launch external Image Display for a Patient. {} will be replaced by the Patient ID formatted as HL7 CX data type. E.g.: http://display:8080/IHEInvokeImageDisplay?requestType=PATIENT&patientID={}. May be overwritten by configured value for particular Archive Network AEs.","
     .. _dcmInvokeImageDisplayPatientURL:
 
     dcmInvokeImageDisplayPatientURL_"
-    "Invoke Image Display Study URL",string,"URL to launch external Image Display for a Study. {} will be replaced by the Study Instance UID. E.g.: http://display:8080/IHEInvokeImageDisplay?requestType=STUDY&studyUID={}","
+    "Invoke Image Display Study URL",string,"URL to launch external Image Display for a Study. {} will be replaced by the Study Instance UID. E.g.: http://display:8080/IHEInvokeImageDisplay?requestType=STUDY&studyUID={}. May be overwritten by configured value for particular Archive Network AEs.","
     .. _dcmInvokeImageDisplayStudyURL:
 
     dcmInvokeImageDisplayStudyURL_"
@@ -471,19 +471,19 @@ DICOM Archive Device related information
     .. _dcmExporter:
 
     dcmExporter_"
-    ":doc:`exportRule` (s)",object,"Export Rule","
+    ":doc:`exportRule` (s)",object,"Export Rules applied to DICOM objects received by any AE. May be supplemented by configured Export Rules for particular Archive Network AEs.","
     .. _dcmExportRule:
 
     dcmExportRule_"
-    ":doc:`rsForwardRule` (s)",object,"RESTful Forward Rule","
+    ":doc:`rsForwardRule` (s)",object,"RESTful Forward Rules. May be supplemented by configured RESTful Forward Rules for particular Archive Network AEs.","
     .. _dcmRSForwardRule:
 
     dcmRSForwardRule_"
-    ":doc:`archiveCompressionRule` (s)",object,"Archive Compression rule","
+    ":doc:`archiveCompressionRule` (s)",object,"Compression rules applied to DICOM objects received by any AE. May be supplemented by configured Compression Rules for particular Archive Network AEs.","
     .. _dcmArchiveCompressionRule:
 
     dcmArchiveCompressionRule_"
-    ":doc:`archiveAttributeCoercion` (s)",object,"Archive Attribute Coercion of received/sent DIMSE","
+    ":doc:`archiveAttributeCoercion` (s)",object,"Attribute Coercion applied to DIMSE received/sent by any AE. May be supplemented by configured Attribute Coercions for particular Archive Network AEs.","
     .. _dcmArchiveAttributeCoercion:
 
     dcmArchiveAttributeCoercion_"
@@ -491,11 +491,11 @@ DICOM Archive Device related information
     .. _dcmRejectionNote:
 
     dcmRejectionNote_"
-    ":doc:`studyRetentionPolicy` (s)",object,"Study Retention Policy","
+    ":doc:`studyRetentionPolicy` (s)",object,"Study Retention Policies applied to Studies received by any AE. May be supplemented by configured Study Retention Policies for particular Archive Network AEs.","
     .. _dcmStudyRetentionPolicy:
 
     dcmStudyRetentionPolicy_"
-    ":doc:`storeAccessControlIDRule` (s)",object,"Store Access Control Rules applied to Studies received by any AE","
+    ":doc:`storeAccessControlIDRule` (s)",object,"Store Access Control Rules applied to Studies received by any AE. May be supplemented by configured Store Access Control Rules for particular Archive Network AEs.","
     .. _dcmStoreAccessControlIDRule:
 
     dcmStoreAccessControlIDRule_"
@@ -503,15 +503,15 @@ DICOM Archive Device related information
     .. _dcmIDGenerator:
 
     dcmIDGenerator_"
-    ":doc:`hl7ForwardRule` (s)",object,"HL7 Forward Rule","
+    ":doc:`hl7ForwardRule` (s)",object,"HL7 Forward Rules for HL7 messages received by any HL7 Application. May be supplemented by configured HL7 Forward Rules for particular HL7 Applications.","
     .. _hl7ForwardRule:
 
     hl7ForwardRule_"
-    ":doc:`hl7OrderScheduledStation` (s)",object,"Scheduled Station selected on MWL HL7 Order Feed","
+    ":doc:`hl7OrderScheduledStation` (s)",object,"Scheduled Station selected on MWL HL7 Order Feed received by any HL7 Application. May be supplemented by configured values for particular HL7 Applications.","
     .. _hl7OrderScheduledStation:
 
     hl7OrderScheduledStation_"
-    ":doc:`hl7OrderSPSStatus` (s)",object,"Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages","
+    ":doc:`hl7OrderSPSStatus` (s)",object,"Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages. May be overwritten by configured values for particular Archive HL7 Application.","
     .. _hl7OrderSPSStatus:
 
     hl7OrderSPSStatus_"
