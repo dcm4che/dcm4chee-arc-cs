@@ -11,7 +11,7 @@ Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01,
     .. _dcmSPSStatus:
 
     dcmSPSStatus_"
-    "HL7 Order Control Status(s)",string,"HL7 Order Control Status Code combinations.","
+    "HL7 Order Control Status(s)",string,"HL7 Order Control Status Code combinations. Enumerated values: NW_SC, NW_IP, CA_CA, DC_CA, XO_SC, XO_CM, SC_CM, SC_DC, SC_IP or SC_A","
     .. _hl7OrderControlStatus:
 
     hl7OrderControlStatus_"

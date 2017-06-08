@@ -19,11 +19,11 @@ Audit Suppress Criteria
     .. _dcmAuditEventTypeCode:
 
     dcmAuditEventTypeCode_"
-    "Event Action Code(s)",string,"RFC 3881 Audit Event Action Type code.","
+    "Event Action Code(s)",string,"RFC 3881 Audit Event Action Type code. Enumerated values: C, R, U, D or E","
     .. _dcmAuditEventActionCode:
 
     dcmAuditEventActionCode_"
-    "Event Outcome Indicator(s)",string,"RFC 3881 Audit Event Outcome Indicator.","
+    "Event Outcome Indicator(s)",string,"RFC 3881 Audit Event Outcome Indicator. Enumerated values: 0, 4, 8 or 12","
     .. _dcmAuditEventOutcomeIndicator:
 
     dcmAuditEventOutcomeIndicator_"

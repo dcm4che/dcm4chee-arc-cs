@@ -59,7 +59,7 @@ DICOM Archive Device related information
     .. _dcmBulkDataSpoolDirectory:
 
     dcmBulkDataSpoolDirectory_"
-    "Hide SPS with Status(s)",string,"Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL SCP","
+    "Hide SPS with Status(s)",string,"Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL SCP Enumerated values: SCHEDULED, ARRIVED, READY, STARTED, DEPARTED, CANCELLED, DISCONTINUED or COMPLETED","
     .. _dcmHideSPSWithStatusFromMWL:
 
     dcmHideSPSWithStatusFromMWL_"
