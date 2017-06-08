@@ -39,6 +39,10 @@ DICOM Archive HL7 Application related information
     .. _hl7ErrorLogFilePattern:
 
     hl7ErrorLogFilePattern_"
+    "HL7 No Patient Create Message Type(s)",string,"Message Type(s) (MessageType^TriggerEvent) of HL7 messages which are only processed, if there is already a Patient record in the database, which Patient ID matches the Patient ID in the PID or MRG segment of the message. Thus no new Patient record will be created by messages of the specified types. Overwrites value specified on Device level.","
+    .. _hl7NoPatientCreateMessageType:
+
+    hl7NoPatientCreateMessageType_"
     ":doc:`hl7ForwardRule` (s)",object,"HL7 Forward Rule. Supplements values specified on Device level.","
     .. _hl7ForwardRule:
 

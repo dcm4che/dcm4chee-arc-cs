@@ -263,6 +263,10 @@ DICOM Archive Device related information
     .. _hl7ErrorLogFilePattern:
 
     hl7ErrorLogFilePattern_"
+    "HL7 No Patient Create Message Type(s)",string,"Message Type(s) (MessageType^TriggerEvent) of HL7 messages which are only processed, if there is already a Patient record in the database, which Patient ID matches the Patient ID in the PID or MRG segment of the message. Thus no new Patient record will be created by messages of the specified types. May be overwritten by configured values for particular Archive HL7 Application.","
+    .. _hl7NoPatientCreateMessageType:
+
+    hl7NoPatientCreateMessageType_"
     "Unzip Vendor Data To URI",string,"Specifies URI of directory into which ZIP stream in Device Vendor Data attribute will be extracted","
     .. _dcmUnzipVendorDataToURI:
 
