@@ -19,6 +19,10 @@ HL7 Application information
     .. _hl7AcceptedSendingApplication:
 
     hl7AcceptedSendingApplication_"
+    "Other HL7 Application Name(s)",string,"Additional HL7 Application and Facility name (Application|Facility) - will also accept HL7 messages with such Receiving Application and Facility name","
+    .. _hl7OtherApplicationName:
+
+    hl7OtherApplicationName_"
     "Accepted Message Type(s)",string,"Message Type(s) (MessageType^TriggerEvent) of accepted messages","
     .. _hl7AcceptedMessageType:
 
