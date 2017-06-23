@@ -15,7 +15,7 @@ RESTful Forward Rule
     .. _dcmURI:
 
     dcmURI_"
-    "RESTful Operation(s)",string,"Name of RESTful Operation which shall be forwarded to another archive instance. The value can be one of the following : 'CreatePatient', 'UpdatePatient', 'DeletePatient', 'ChangePatientID', 'MergePatient', 'MergePatients', 'UpdateStudy', 'DeleteStudy', 'CopyInstances', 'MoveInstances', 'RejectStudy', 'RejectSeries', 'RejectInstance', 'UpdateStudyExpirationDate', 'UpdateSeriesExpirationDate' Enumerated values: CreatePatient, UpdatePatient, DeletePatient, ChangePatientID, MergePatient, MergePatients, UpdateStudy, DeleteStudy, CopyInstances, MoveInstances, RejectStudy, RejectSeries, RejectInstance, UpdateStudyExpirationDate or UpdateSeriesExpirationDate","
+    "RESTful Operation(s)",string,"Name of RESTful Operation which shall be forwarded to another archive instance. Enumerated values: CreatePatient, UpdatePatient, DeletePatient, ChangePatientID, MergePatient, MergePatients, UpdateStudy, DeleteStudy, CopyInstances, MoveInstances, RejectStudy, RejectSeries, RejectInstance, UpdateStudyExpirationDate or UpdateSeriesExpirationDate","
     .. _dcmRSOperation:
 
     dcmRSOperation_"

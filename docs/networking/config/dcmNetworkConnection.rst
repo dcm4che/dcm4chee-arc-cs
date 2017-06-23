@@ -7,7 +7,7 @@ dcm4che proprietary Network Connection Attributes
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Protocol",string,"Protocol of Network Connection: DICOM, HL7, SYSLOG_TLS or SYSLOG_UDP. Enumerated values: DICOM, HL7, SYSLOG_TLS or SYSLOG_UDP","
+    "Protocol",string,"Protocol of Network Connection. Enumerated values: DICOM, HL7, SYSLOG_TLS or SYSLOG_UDP","
     .. _dcmProtocol:
 
     dcmProtocol_"

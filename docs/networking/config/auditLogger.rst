@@ -7,7 +7,7 @@ Audit Logger related information
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Name",string,"Arbitrary/Meaningful name for the Network Connection object","
+    "Name",string,"Arbitrary/Meaningful name for the Audit Logger object","
     .. _cn:
 
     cn_"
@@ -83,11 +83,11 @@ Audit Logger related information
     .. _dcmAuditIncludeInstanceUID:
 
     dcmAuditIncludeInstanceUID_"
-    "Spool Directory URI",string,"URI of spool directory used to store messages which could not delivered to the record repository; use system temporary directory if absent","
+    "Spool Directory URI",string,"URI of spool directory used to store messages which could not delivered to the record repository; use system temporary directory if absent.","
     .. _dcmAuditLoggerSpoolDirectoryURI:
 
     dcmAuditLoggerSpoolDirectoryURI_"
-    "Retry Interval",integer,"Retry interval in s to re-sent messages which could not delivered to the record repository; 0 = do no retry to re-sent messages","
+    "Retry Interval",integer,"Retry interval in s to re-sent messages which could not delivered to the record repository; do no retry to re-sent messages if absent","
     .. _dcmAuditLoggerRetryInterval:
 
     dcmAuditLoggerRetryInterval_"

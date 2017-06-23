@@ -19,7 +19,7 @@ Specifies Java Image IO Image Writer and Write Parameter used for compressing DI
     .. _dcmJavaClassName:
 
     dcmJavaClassName_"
-    "Patch JPEG-LS",string,"Patch JPEG-LS after compressing: JAI2ISO, ISO2JAI or ISO2JAI_IF_APP_OR_COM Enumerated values: JAI2ISO, ISO2JAI or ISO2JAI_IF_APP_OR_COM","
+    "Patch JPEG-LS",string,"Patch JPEG-LS after compressing Enumerated values: JAI2ISO, ISO2JAI or ISO2JAI_IF_APP_OR_COM","
     .. _dcmPatchJPEGLS:
 
     dcmPatchJPEGLS_"

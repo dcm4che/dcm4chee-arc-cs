@@ -151,7 +151,7 @@ DICOM Archive Device related information
     .. _dcmAltCMoveSCP:
 
     dcmAltCMoveSCP_"
-    "Diff Studies Attributes(s)",string,"DICOM Tag as hex string of Attributes beeing compared by the DIFF-RS service with Query Parameter includefield=all. Use QIDO-RS STUDY Returned Attributes, if absent.","
+    "Diff Studies Attributes(s)",string,"DICOM Tag as hex string of Attributes being compared by the DIFF-RS service with Query Parameter includefield=all. Use QIDO-RS STUDY Returned Attributes, if absent.","
     .. _dcmDiffStudiesIncludefieldAll:
 
     dcmDiffStudiesIncludefieldAll_"
@@ -379,10 +379,10 @@ DICOM Archive Device related information
     .. _dcmAttributeFilter:
 
     dcmAttributeFilter_"
-    ":doc:`metadataFilter` (s)",object,"Named Attribute Filter for WADO-RS Metadata requests.","
-    .. _dcmMetadataFilter:
+    ":doc:`attributeSet` (s)",object,"Named Attribute Set for Query Parameter 'comparefield' of DIFF-RS and Query Parameter 'includefields' of WADO-RS Metadata requests.","
+    .. _dcmAttributeSet:
 
-    dcmMetadataFilter_"
+    dcmAttributeSet_"
     "Remap Retrieve URL",string,"Remap Retrieve URL used in QIDO-RS and WADO-RS Metadata responses. Optionally prefixed with ""[<http-client-host>]"". E.g.: ""[cache-proxy]http://cache-proxy:8080"". If absent or if the specified <http-client-host> does not match, scheme and server authority of the QIDO-RS or WADO-RS request URL are used.","
     .. _dcmRemapRetrieveURL:
 
@@ -523,7 +523,7 @@ DICOM Archive Device related information
 .. toctree::
 
     attributeFilter
-    metadataFilter
+    attributeSet
     storage
     queryRetrieveView
     queue

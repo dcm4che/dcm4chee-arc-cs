@@ -19,7 +19,7 @@ Specifies Java Image IO Image Readers used for decompressing compressed DICOM im
     .. _dcmJavaClassName:
 
     dcmJavaClassName_"
-    "Patch JPEG-LS",string,"Patch JPEG-LS before decompressing: JAI2ISO, ISO2JAI or ISO2JAI_IF_APP_OR_COM Enumerated values: JAI2ISO, ISO2JAI or ISO2JAI_IF_APP_OR_COM","
+    "Patch JPEG-LS",string,"Patch JPEG-LS before decompressing Enumerated values: JAI2ISO, ISO2JAI or ISO2JAI_IF_APP_OR_COM","
     .. _dcmPatchJPEGLS:
 
     dcmPatchJPEGLS_"

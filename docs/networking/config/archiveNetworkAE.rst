@@ -139,7 +139,7 @@ DICOM Archive Network AE related information
     .. _dcmAltCMoveSCP:
 
     dcmAltCMoveSCP_"
-    "Diff Studies Attributes(s)",string,"DICOM Tag as hex string of Attributes beeing compared by the DIFF-RS service with Query Parameter includefield=all. Use value configured on Device level, if absent.","
+    "Diff Studies Attributes(s)",string,"DICOM Tag as hex string of Attributes being compared by the DIFF-RS service with Query Parameter includefield=all. Use value configured on Device level, if absent.","
     .. _dcmDiffStudiesIncludefieldAll:
 
     dcmDiffStudiesIncludefieldAll_"
