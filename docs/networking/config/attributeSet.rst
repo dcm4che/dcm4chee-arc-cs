@@ -1,13 +1,13 @@
-Attribute Tags
-==============
+Attribute Set
+=============
 Named Attribute Set for Query Parameter 'comparefield' of DIFF-RS and Query Parameter 'includefields' of WADO-RS Metadata requests.
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
-.. csv-table:: Attribute Tags Attributes (LDAP Object: dcmAttributeSet)
+.. csv-table:: Attribute Set Attributes (LDAP Object: dcmAttributeSet)
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
-    "Attribute Set  Description",string,"Unconstrained text description of this Attribute Set","
+    "Attribute Set Description",string,"Unconstrained text description of this Attribute Set","
     .. _dicomDescription:
 
     dicomDescription_"
