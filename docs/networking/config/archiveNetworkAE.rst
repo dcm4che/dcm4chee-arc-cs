@@ -91,10 +91,14 @@ DICOM Archive Network AE related information
     .. _dcmWadoSR2TextTemplateURI:
 
     dcmWadoSR2TextTemplateURI_"
-    "Qido Max Number Of Results",integer,"Maximal number of return results by QIDO-RS Service. 0 = unlimited. Overwrites value specified on Device level.","
-    .. _dcmQidoMaxNumberOfResults:
+    "Query Max Number Of Results",integer,"Maximal number of return results by C-FIND SCP. If the the number of matches extends the limit, the C-FIND request will be refused. 0 = no limitation. Overwrites value specified on Device level.","
+    .. _dcmQueryMaxNumberOfResults:
 
-    dcmQidoMaxNumberOfResults_"
+    dcmQueryMaxNumberOfResults_"
+    "Qido Max Number Of Results",integer,"Maximal number of return results by QIDO-RS Service. 0 = unlimited. Overwrites value specified on Device level.","
+    .. _Overwrites value specified on Device level.:
+
+    Overwrites value specified on Device level._"
     "Mpps Forward Destination(s)",string,"Destination to forward MPPS N-CREATE RQ and N-SET RQ","
     .. _dcmFwdMppsDestination:
 
