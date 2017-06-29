@@ -96,9 +96,9 @@ DICOM Archive Network AE related information
 
     dcmQueryMaxNumberOfResults_"
     "Qido Max Number Of Results",integer,"Maximal number of return results by QIDO-RS Service. 0 = unlimited. Overwrites value specified on Device level.","
-    .. _Overwrites value specified on Device level.:
+    .. _dcmQidoMaxNumberOfResults:
 
-    Overwrites value specified on Device level._"
+    dcmQidoMaxNumberOfResults_"
     "Mpps Forward Destination(s)",string,"Destination to forward MPPS N-CREATE RQ and N-SET RQ","
     .. _dcmFwdMppsDestination:
 
