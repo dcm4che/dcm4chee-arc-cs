@@ -95,7 +95,7 @@ DICOM Archive Device related information
     .. _dcmQueryFetchSize:
 
     dcmQueryFetchSize_"
-    "Query Max Number Of Results",integer,"Maximal number of return results by C-FIND SCP. If the the number of matches extends the limit, the C-FIND request will be refused. 0 = no limitation. May be overwritten by configured values for particular Archive Network AEs.","
+    "Query Max Number Of Results",integer,"Maximal number of return results by C-FIND SCP. If the number of matches extends the limit, the C-FIND request will be refused. 0 = no limitation. May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmQueryMaxNumberOfResults:
 
     dcmQueryMaxNumberOfResults_"

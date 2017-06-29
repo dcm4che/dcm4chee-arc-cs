@@ -91,7 +91,7 @@ DICOM Archive Network AE related information
     .. _dcmWadoSR2TextTemplateURI:
 
     dcmWadoSR2TextTemplateURI_"
-    "Query Max Number Of Results",integer,"Maximal number of return results by C-FIND SCP. If the the number of matches extends the limit, the C-FIND request will be refused. 0 = no limitation. Overwrites value specified on Device level.","
+    "Query Max Number Of Results",integer,"Maximal number of return results by C-FIND SCP. If the number of matches extends the limit, the C-FIND request will be refused. 0 = no limitation. Overwrites value specified on Device level.","
     .. _dcmQueryMaxNumberOfResults:
 
     dcmQueryMaxNumberOfResults_"
