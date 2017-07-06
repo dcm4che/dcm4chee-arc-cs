@@ -15,10 +15,18 @@ Named Attribute Set for Query Parameter 'comparefield' of DIFF-RS and Query Para
     .. _dcmAttributeSetType:
 
     dcmAttributeSetType_"
-    "Attribute Set Name",string,"Name used by Query Parameter 'comparefield' of DIFF-RS requests and by Query Parameter 'includefields' of WADO-RS Metadata requests to refer this Attribute Set.","
-    .. _dcmAttributeSetName:
+    "Attribute Set Number",integer,"Number used to order Attribute Sets.","
+    .. _dcmAttributeSetID:
 
-    dcmAttributeSetName_"
+    dcmAttributeSetID_"
+    "Attribute Set Title",string,"Title of this Attribute Set.","
+    .. _dcmAttributeSetTitle:
+
+    dcmAttributeSetTitle_"
+    "installed",boolean,"Boolean to indicate whether this Attribute Set is presently installed on the archive device","
+    .. _dicomInstalled:
+
+    dicomInstalled_"
     "Attribute Tag(s)",string,"DICOM Tag as hex string","
     .. _dcmTag:
 
