@@ -11,7 +11,7 @@ Message Structure
 
 .. csv-table:: Event
    :name: audit-general-message-event
-   :widths: 30, 5, 65, 65
+   :widths: 15, 5, 40, 40
    :header: "Field Name", "Opt", "Description", "Additional Conditions on Field Format/Value"
 
    "EventID", "M", "Identifier for a specific audited event.", "The identifier for the family of event. E.g., 'User Authentication'"
@@ -51,7 +51,7 @@ Message Structure
 
 .. csv-table:: Participant Object
    :name: audit-general-message-participant-object
-   :widths: 30, 5, 65, 65
+   :widths: 15, 5, 40, 40
    :header: "Field Name", "Opt", "Description", "Additional Conditions on Field Format/Value"
 
    "ParticipantObjectTypeCode", "U", "Code for the participant object type being audited. This value is distinct from the user's role or any user relationship to the participant object.", "'1'⇒'Person'"
