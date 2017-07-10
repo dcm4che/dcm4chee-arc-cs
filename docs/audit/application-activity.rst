@@ -21,7 +21,7 @@ Message Structure
 
          "EventID", "M", "EV (110100, DCM, 'Application Activity')"
          "EventActionCode", "M", "Enumerated Value E = Execute"
-         "EventDateTime", "M", "Enumerated Value E = Execute"
+         "EventDateTime", "M", "The time at which the event occurred"
          "EventOutcomeIndicator", "M", "'0'⇒'SUCCESS'"
          "EventTypeCode", "M", "DT (110120, DCM, 'Application Start')"
          "", "", "DT (110121, DCM, 'Application Stop')"
