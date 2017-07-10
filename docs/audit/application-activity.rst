@@ -11,7 +11,8 @@ Message Structure
 
 - :ref:`audit-application-activity-event`
 - :ref:`audit-application-activity-active-participant-app` (1)
-- :ref:`audit-application-activity-active-participant-person` (0..1)
+- :ref:`audit-application-activity-active-participant-person` (1) - This Active Participant is present only if archive
+  was started/stopped using RESTful service.
 - :ref:`audit-general-message-audit-source`
 
 .. csv-table:: Event: Application Activity
@@ -35,7 +36,8 @@ Message Structure
          "AlternativeUserID", "MC", "Process ID of Audit logger"
          "UserIsRequestor", "M", "false"
          "RoleIDCode", "M", "EV (110150, DCM, 'Application')"
-         "NetworkAccessPointID", "U", "Hostname of the connection referenced by Audit logger"
+         "NetworkAccessPointID", "U", "Hostname/IP Address of the connection referenced by Audit logger"
+         "NetworkAccessPointTypeCode", "U", "'1'⇒'NetworkAccessPointID is host name', '2'⇒'NetworkAccessPointID is an IP address'"
 
 .. csv-table:: Active Participant: Person who started the Application
    :name: audit-application-activity-active-participant-person
@@ -45,7 +47,8 @@ Message Structure
          "UserID", "M", "Remote IP address for unsecured version of archive; User name for secured version of archive"
          "UserIsRequestor", "M", "true"
          "RoleIDCode", "M", "EV (110151, DCM, 'ApplicationLauncher')"
-         "NetworkAccessPointID", "U", "Remote IP address of calling host"
+         "NetworkAccessPointID", "U", "Hostname/IP Address of calling host"
+         "NetworkAccessPointTypeCode", "U", "'1'⇒'NetworkAccessPointID is host name', '2'⇒'NetworkAccessPointID is an IP address'"
 
 Sample Message
 --------------
