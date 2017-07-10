@@ -11,7 +11,7 @@ Message Structure
 
 .. csv-table:: Event
    :name: audit-general-message-event
-   :widths: 30, 5, 65
+   :widths: 30, 5, 65, 65
    :header: "Field Name", "Opt", "Description", "Additional Conditions on Field Format/Value"
 
    "EventID", "M", "Identifier for a specific audited event.", "The identifier for the family of event. E.g., 'User Authentication'"
@@ -23,7 +23,7 @@ Message Structure
    "EventDateTime", "M", "Universal coordinated time (UTC), i.e., a date/time specification that is unambiguous as to local time zones.", "The time at which the audited event occurred"
    "EventOutcomeIndicator", "M", "Indicates whether the event succeeded or failed.", "'0'⇒'SUCCESS', '4'⇒'Minor failure'"
    "EventOutcomeDescription", "U", "In failure cases, indicates the exception or error message."
-   "EventTypeCode", "M", "Identifier for the category of event.", "The specific type(s) within the family applicable to the event, e.g., "User Login"."
+   "EventTypeCode", "M", "Identifier for the category of event.", "The specific type(s) within the family applicable to the event, e.g., 'User Login'."
 
 
 .. csv-table:: Active Participant
@@ -51,7 +51,7 @@ Message Structure
 
 .. csv-table:: Participant Object
    :name: audit-general-message-participant-object
-   :widths: 30, 5, 65
+   :widths: 30, 5, 65, 65
    :header: "Field Name", "Opt", "Description", "Additional Conditions on Field Format/Value"
 
    "ParticipantObjectTypeCode", "U", "Code for the participant object type being audited. This value is distinct from the user's role or any user relationship to the participant object.", "'1'⇒'Person'"
@@ -65,7 +65,7 @@ Message Structure
    "ParticipantObjectID", "M", "Identifies a specific instance of the participant object."
    "ParticipantObjectName", "U", "An instance-specific descriptor of the Participant Object ID audited, such as a person's name."
    "ParticipantObjectQuery", "U", "The actual query for a query-type participant object."
-   "ParticipantObjectDetail", "U", "Implementation-defined data about specific details of the object accessed or used.", "This element is a Type-value pair. The "type" attribute is an implementation-defined text string. The "value" attribute is base 64 encoded data. The value is suitable for conveying binary data."
+   "ParticipantObjectDetail", "U", "Implementation-defined data about specific details of the object accessed or used.", "This element is a Type-value pair. The 'type' attribute is an implementation-defined text string. The 'value' attribute is base 64 encoded data. The value is suitable for conveying binary data."
    "SOPClass", "MC", "", "The UIDs of SOP classes referred to in this participant object. Required if ParticipantObjectIDTypeCode is (110180, DCM, 'Study Instance UID') and any of the optional fields (AccessionNumber, ContainsMPPS, NumberOfInstances, ContainsSOPInstances,Encrypted,Anonymized) are present in this Participant Object. May be present if ParticipantObjectIDTypeCode is (110180, DCM, 'Study Instance UID') even though none of the optional fields are present."
    "Accession", "U", "", "An Accession Number(s) associated with this participant object."
    "MPPS", "U", "", "An MPPS Instance UID(s) associated with this participant object."
@@ -73,4 +73,4 @@ Message Structure
    "Instance", "U", "", "SOP Instance UID value(s)"
    "Encrypted", "U", "", "A single value of True or False indicating whether or not the data was encrypted."
    "Anonymized", "U", "", "A single value of True or False indicating whether or not all patient identifying information was removed from the data"
-   "ParticipantObjectContainsStudy", "U", "", "A Study Instance UID, which may be used when the ParticipantObjectIDTypeCode is not (110180, DCM, "Study Instance UID")."
+   "ParticipantObjectContainsStudy", "U", "", "A Study Instance UID, which may be used when the ParticipantObjectIDTypeCode is not (110180, DCM, 'Study Instance UID')."
