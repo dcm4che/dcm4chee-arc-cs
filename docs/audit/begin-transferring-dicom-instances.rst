@@ -11,6 +11,7 @@ This message is emitted by the archive in following cases :
 - Q/R Get : Objects of a study are retrieved using query/retrieve service and stored to the destination which is same as source
 - Export : Objects of a study are exported
 - WADO RS : Objects of a study are retrieved using WADO RESTful service
+- XDSI Retrieve Imaging Document Set RAD-69
 
 Message Structure
 -----------------
@@ -44,6 +45,7 @@ Message Structure
          "", "", "Q/R Get case ⇒ 'Application entity title of Archive Device used in the association'"
          "", "", "Export case ⇒ 'dicomAETitle configured in the Exporter of archive'"
          "", "", "WADO RS case ⇒ 'Invoked URL'"
+         "", "", "XDSI Retrieve Imaging Document Set RAD-69 case ⇒ 'Invoked URL'"
          "AlternativeUserID", "MC", "Process ID of Audit logger"
          "UserIsRequestor", "M", "false"
          "RoleIDCode", "M", "EV (110153, DCM, 'Source')"
@@ -58,7 +60,8 @@ Message Structure
          "UserID", "M", "Q/R Move case ⇒ 'Application entity title of destination system'"
          "", "", "Q/R Get case ⇒ 'Application entity title of initiating system'"
          "", "", "Export case ⇒ 'dicomAETitle of destination'"
-         "", "", "WADO RS case ⇒ 'Remote IP address for unsecured version of archive; User name for secured version of archive'"
+         "", "", "WADO RS case ⇒ 'Remote IP address' or 'User name of logged in user'"
+         "", "", "XDSI Retrieve Imaging Document Set RAD-69 case ⇒ 'Remote IP address' or 'User name of logged in user'"
          "UserIsRequestor", "M", "Q/R Move case ⇒ 'false'"
          "", "", "Q/R Get case ⇒ 'true'"
          "", "", "Export case ⇒ 'true'"
