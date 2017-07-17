@@ -24,7 +24,7 @@ Message Structure
 - :ref:`audit-instances-transferred-participant-object-patient` (1)
 - :ref:`audit-general-message-audit-source`
 
-.. csv-table:: Event: Begin Transferring DICOM Instances
+.. csv-table:: Event: DICOM Instances Transferred
    :name: audit-instances-transferred-event
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
