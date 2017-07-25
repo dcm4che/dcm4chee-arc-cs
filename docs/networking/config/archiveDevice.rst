@@ -67,6 +67,14 @@ DICOM Archive Device related information
     .. _dcmValidateCallingAEHostname:
 
     dcmValidateCallingAEHostname_"
+    "Supplement Objects",boolean,"Supplement received Composite Objects with Issuer Of Patient ID and other attributes from configuration for Source AE if available. May be overwritten by configured values for particular Archive Network AEs.","
+    .. _dcmSupplementObjects:
+
+    dcmSupplementObjects_"
+    "Supplement MPPS",boolean,"Supplement received Modality Performed Procedure Steps with Issuer Of Patient ID and other attributes from configuration for Source AE if available. May be overwritten by configured values for particular Archive Network AEs.","
+    .. _dcmSupplementMPPS:
+
+    dcmSupplementMPPS_"
     "Person Name Component Order Insensitive Matching",boolean,"Indicates if name component order insensitive matching is performed on fuzzy semantic matching of person names. May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmPersonNameComponentOrderInsensitiveMatching:
 
@@ -155,10 +163,6 @@ DICOM Archive Device related information
     .. _dcmAltCMoveSCP:
 
     dcmAltCMoveSCP_"
-    "Diff Studies Attributes(s)",string,"DICOM Tag as hex string of Attributes being compared by the DIFF-RS service with Query Parameter includefield=all. Use QIDO-RS STUDY Returned Attributes, if absent.","
-    .. _dcmDiffStudiesIncludefieldAll:
-
-    dcmDiffStudiesIncludefieldAll_"
     "Export Task Polling Interval",string,"Export Task Polling Interval in ISO-8601 duration format PnDTnHnMn.nS","
     .. _dcmExportTaskPollingInterval:
 
@@ -259,11 +263,11 @@ DICOM Archive Device related information
     .. _hl7ScheduledStationAETInOrder:
 
     hl7ScheduledStationAETInOrder_"
-    "HL7 Log File Pattern",string,"Path to HL7 messages which will be captured exactly as received. If absent, there is no logging. May be overwritten by configured values for particular Archive HL7 Application.","
+    "HL7 Log File Pattern",string,"Path to HL7 messages which will be captured exactly as received. If absent, there is no logging. May be overwritten by configured values for particular Archive HL7 Application. eg. ${jboss.server.data.dir}/hl7/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7","
     .. _hl7LogFilePattern:
 
     hl7LogFilePattern_"
-    "HL7 Error Log File Pattern",string,"Path to HL7 messages which will be captured exactly as received, when processing of HL7 messages fails. If absent, there is no logging. May be overwritten by configured values for particular Archive HL7 Application.","
+    "HL7 Error Log File Pattern",string,"Path to HL7 messages which will be captured exactly as received, when processing of HL7 messages fails. If absent, there is no logging. May be overwritten by configured values for particular Archive HL7 Application. eg. ${jboss.server.data.dir}/hl7-error/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7","
     .. _hl7ErrorLogFilePattern:
 
     hl7ErrorLogFilePattern_"
@@ -311,6 +315,18 @@ DICOM Archive Device related information
     .. _dcmStorePermissionServiceResponsePattern:
 
     dcmStorePermissionServiceResponsePattern_"
+    "Store Permission Service Expiration Date Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract the initial Study Expiration Date. E.g. ""expirationdate""\s*:\s*""([0-9]{8})"". If absent, locally configured Study Retention Policy Rules will be applied. May be overwritten by configured values for particular Archive Network AEs.","
+    .. _dcmStorePermissionServiceExpirationDatePattern:
+
+    dcmStorePermissionServiceExpirationDatePattern_"
+    "Store Permission Service Error Comment Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract Error Comment. E.g. ""errorcomment""\s*:\s*""(.*)"". If absent, ""Storage denied."" will be used as Error Comment. May be overwritten by configured values for particular Archive Network AEs.","
+    .. _dcmStorePermissionServiceErrorCommentPattern:
+
+    dcmStorePermissionServiceErrorCommentPattern_"
+    "Store Permission Service Error Code Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract Error Code in hexadecimal. E.g. ""errorcode""\s*:\s*""(\p{XDigit}{4})"". If absent, the Error Code will be 0124H (Not Authorized). May be overwritten by configured values for particular Archive Network AEs.","
+    .. _dcmStorePermissionServiceErrorCodePattern:
+
+    dcmStorePermissionServiceErrorCodePattern_"
     "Store Permission Cache Stale Timeout",string,"Maximal staleness of cached responses from Storage Permission Service in ISO-8601 duration format PnDTnHnMn.nS. If absent, cached responses are only removed on reaching the maximal cache size.","
     .. _dcmStorePermissionCacheStaleTimeout:
 
@@ -343,10 +359,6 @@ DICOM Archive Device related information
     .. _dcmAllowDeleteStudyPermanently:
 
     dcmAllowDeleteStudyPermanently_"
-    "Store Permission Service Expiration Date Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract the initial Study Expiration Date. E.g. ""expirationdate""\s*:\s*""([0-9]{8})"". If absent, locally configured Study Retention Policy Rules will be applied. May be overwritten by configured values for particular Archive Network AEs.","
-    .. _dcmStorePermissionServiceExpirationDatePattern:
-
-    dcmStorePermissionServiceExpirationDatePattern_"
     "Purge Storage Commitment Completed Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which results of completed Storage Commitment requests are purged. If absent, there is no deletion.","
     .. _dcmPurgeStgCmtCompletedDelay:
 
@@ -359,14 +371,6 @@ DICOM Archive Device related information
     .. _dcmDefaultCharacterSet:
 
     dcmDefaultCharacterSet_"
-    "Store Permission Service Error Comment Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract Error Comment. E.g. ""errorcomment""\s*:\s*""(.*)"". If absent, ""Storage denied."" will be used as Error Comment. May be overwritten by configured values for particular Archive Network AEs.","
-    .. _dcmStorePermissionServiceErrorCommentPattern:
-
-    dcmStorePermissionServiceErrorCommentPattern_"
-    "Store Permission Service Error Code Pattern",string,"Regular Expression applied to responses from Store Permission Service to extract Error Code in hexadecimal. E.g. ""errorcode""\s*:\s*""(\p{XDigit}{4})"". If absent, the Error Code will be 0124H (Not Authorized). May be overwritten by configured values for particular Archive Network AEs.","
-    .. _dcmStorePermissionServiceErrorCodePattern:
-
-    dcmStorePermissionServiceErrorCodePattern_"
     "Retrieve AE Title(s)",string,"Specifies Retrieve AE Titles associated with received DICOM objects. If absent, the Called AE Title of the receiving AE will be used. May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmRetrieveAET:
 

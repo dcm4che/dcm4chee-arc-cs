@@ -31,6 +31,14 @@ HL7 Application information
     .. _hl7DefaultCharacterSet:
 
     hl7DefaultCharacterSet_"
+    "HL7 Description",string,"Unconstrained text description of the HL7 Application","
+    .. _dicomDescription:
+
+    dicomDescription_"
+    "Application Cluster(s)",string,"Locally defined names for a subset of related applications","
+    .. _dicomApplicationCluster:
+
+    dicomApplicationCluster_"
     "installed",boolean,"True if the HL7 Application is installed on network. If not present, information about the installed status of the HL7 Application is inherited from the device","
     .. _dicomInstalled:
 

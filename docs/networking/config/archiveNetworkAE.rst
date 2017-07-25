@@ -71,6 +71,14 @@ DICOM Archive Network AE related information
     .. _dcmValidateCallingAEHostname:
 
     dcmValidateCallingAEHostname_"
+    "Supplement Objects",boolean,"Supplement received Composite Objects with Issuer Of Patient ID and other attributes from configuration for Source AE if available. Overwrites value specified on Device level.","
+    .. _dcmSupplementObjects:
+
+    dcmSupplementObjects_"
+    "Supplement MPPS",boolean,"Supplement received Modality Performed Procedure Steps with Issuer Of Patient ID and other attributes from configuration for Source AE if available. Overwrites value specified on Device level.","
+    .. _dcmSupplementMPPS:
+
+    dcmSupplementMPPS_"
     "Person Name Component Order Insensitive Matching",boolean,"Indicates if name component order insensitive matching is performed on fuzzy semantic matching of person names by this AE. Overwrites value specified on Device level.","
     .. _dcmPersonNameComponentOrderInsensitiveMatching:
 
@@ -143,10 +151,6 @@ DICOM Archive Network AE related information
     .. _dcmAltCMoveSCP:
 
     dcmAltCMoveSCP_"
-    "Diff Studies Attributes(s)",string,"DICOM Tag as hex string of Attributes being compared by the DIFF-RS service with Query Parameter includefield=all. Use value configured on Device level, if absent.","
-    .. _dcmDiffStudiesIncludefieldAll:
-
-    dcmDiffStudiesIncludefieldAll_"
     "Store Permission Service URL",string,"URL of Store Permission Service which will be invoked on receive of the first object of a study. {<dicomTag>} will be replaced by the value of the attribute in the object. E.g. http://host.name/storage-permission/study/{0020000D}?patientId={00100020}&patientIdIssuer={00100021}&studyDescription={00081030,urlencoded}. Overwrites value specified on Device level.","
     .. _dcmStorePermissionServiceURL:
 

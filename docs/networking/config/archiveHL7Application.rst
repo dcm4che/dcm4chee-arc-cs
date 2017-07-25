@@ -31,11 +31,11 @@ DICOM Archive HL7 Application related information
     .. _hl7ScheduledStationAETInOrder:
 
     hl7ScheduledStationAETInOrder_"
-    "HL7 Log File Pattern",string,"Path to HL7 messages which will be captured exactly as received. If absent, there is no logging. Overwrites value specified on Device level.","
+    "HL7 Log File Pattern",string,"Path to HL7 messages which will be captured exactly as received. If absent, there is no logging. Overwrites value specified on Device level. eg. ${jboss.server.data.dir}/hl7/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7","
     .. _hl7LogFilePattern:
 
     hl7LogFilePattern_"
-    "HL7 Error Log File Pattern",string,"Path to HL7 messages which will be captured exactly as received, when processing of HL7 messages fails. If absent, there is no logging. Overwrites value specified on Device level.","
+    "HL7 Error Log File Pattern",string,"Path to HL7 messages which will be captured exactly as received, when processing of HL7 messages fails. If absent, there is no logging. Overwrites value specified on Device level. eg. ${jboss.server.data.dir}/hl7-error/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7","
     .. _hl7ErrorLogFilePattern:
 
     hl7ErrorLogFilePattern_"
