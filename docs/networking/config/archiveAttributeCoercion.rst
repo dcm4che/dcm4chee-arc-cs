@@ -63,3 +63,7 @@ Archive Attribute Coercion of received/sent DIMSE
     .. _dcmAttributeUpdatePolicy:
 
     dcmAttributeUpdatePolicy_"
+    "Supplement from Device",string,"Name of Device from which Assigning Authorities and other information is taken to supplement received Composite Objects and MPPS.","
+    .. _dcmSupplementFromDeviceName:
+
+    dcmSupplementFromDeviceName_"
