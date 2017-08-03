@@ -51,14 +51,10 @@ Archive Attribute Coercion of received/sent DIMSE
     .. _dcmMergeMWLTemplateURI:
 
     dcmMergeMWLTemplateURI_"
-    "Leading C-FIND SCP",string,"AE Title of external C-FIND SCP for Attribute Coercion with Patient and Study attributes fetched from this AE.","
+    "Leading C-FIND SCP",string,"AE Title of external C-FIND SCP for Attribute Coercion with Patient and Study attributes fetched from this AE. If no particular Attribute Set is specified for the C-FIND SCP, all Attributes of the configured Patient and Study Attribute Filter will be fetched.","
     .. _dcmLeadingCFindSCP:
 
     dcmLeadingCFindSCP_"
-    "Leading C-FIND SCP return keys(s)",string,"DICOM Tag as hex string of attributes fetched from external C-FIND SCP for Attribute Coercion. If absent, all Patient and Study Attributes extracted into the DB - configured by the Patient and Study Attribute Filter - are fetched.","
-    .. _dcmTag:
-
-    dcmTag_"
     "Attribute Update Policy",string,"Specifies how attributes shall be updated with attributes fetched from Leading C-FIND SCP. Enumerated values: SUPPLEMENT, MERGE or OVERWRITE","
     .. _dcmAttributeUpdatePolicy:
 

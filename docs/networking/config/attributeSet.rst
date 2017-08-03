@@ -11,7 +11,7 @@ Named Attribute Set for Query Parameter 'comparefield' of DIFF-RS and Query Para
     .. _dicomDescription:
 
     dicomDescription_"
-    "Attribute Set Type",string,"Specifies if this Attribute Set is used by Query Parameter 'comparefield' of DIFF-RS or by Query Parameter 'includefields' of WADO-RS requests. Enumerated values: DIFF_RS or WADO_RS","
+    "Attribute Set Type",string,"Specifies if this Attribute Set is used by Query Parameter 'comparefield' of DIFF-RS or by Query Parameter 'includefields' of WADO-RS requests. Enumerated values: DIFF_RS, WADO_RS or LEADING_CFIND_SCP","
     .. _dcmAttributeSetType:
 
     dcmAttributeSetType_"
