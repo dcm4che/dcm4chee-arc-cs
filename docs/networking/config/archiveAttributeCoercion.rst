@@ -11,11 +11,11 @@ Archive Attribute Coercion of received/sent DIMSE
     .. _cn:
 
     cn_"
-    "DIMSE",string,"DICOM Message Element. Enumerated values: C_STORE_RQ, C_FIND_RQ or C_FIND_RSP","
+    "DIMSE",string,"DICOM Message Element on which this Attribute Coercion shall be applied Enumerated values: N_CREATE_RQ, C_STORE_RQ, C_FIND_RQ or C_FIND_RSP","
     .. _dcmDIMSE:
 
     dcmDIMSE_"
-    "DICOM Transfer Role",string,"DICOM Transfer Role. Enumerated values: SCU or SCP","
+    "DICOM Transfer Role",string,"DICOM Transfer Role of peer DICOM AE. Enumerated values: SCU or SCP","
     .. _dicomTransferRole:
 
     dicomTransferRole_"
@@ -23,23 +23,23 @@ Archive Attribute Coercion of received/sent DIMSE
     .. _dcmRulePriority:
 
     dcmRulePriority_"
-    "AE Title(s)",string,"Application Entity (AE) title","
+    "AE Title(s)",string,"Application Entity (AE) title of peer DICOM AE for which this Attribute Coercion shall be applied. Apply on any if absent.","
     .. _dcmAETitle:
 
     dcmAETitle_"
-    "Host Name(s)",string,"DNS hostname","
+    "Hostname(s)",string,"DNS hostname of peer DICOM AE for which this Attribute Coercion shall be applied. Apply on any if absent.","
     .. _dcmHostname:
 
     dcmHostname_"
-    "SOP Class UID(s)",string,"A SOP Class UID","
+    "SOP Class UID(s)",string,"UID of SOP Class for which this Attribute Coercion shall be applied. Apply on any if absent.","
     .. _dcmSOPClass:
 
     dcmSOPClass_"
-    "URI",string,"Specifies URI of the style sheet for Attribute Coercion","
+    "XSL Stylesheet URI",string,"Specifies URI of the XSL style sheet for Attribute Coercion","
     .. _dcmURI:
 
     dcmURI_"
-    "No Keywords",boolean,"Indicates if keywords shall be omitted in generated DICOM XML or JSON presentations","
+    "No Attribute Keyword",boolean,"Indicates if attribute keywords shall be omitted in DICOM XML passed to XSLT","
     .. _dcmNoKeywords:
 
     dcmNoKeywords_"
