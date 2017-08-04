@@ -31,10 +31,6 @@ DICOM Archive Network AE related information
     .. _dcmStoreAccessControlID:
 
     dcmStoreAccessControlID_"
-    ":doc:`storeAccessControlIDRule` (s)",object,"Store Access Control Rules applied to Studies received by this AE","
-    .. _dcmStoreAccessControlIDRule:
-
-    dcmStoreAccessControlIDRule_"
     "Access Control ID(s)",string,"Access Control IDs assigned to Query/Retrieve requests received by this AE","
     .. _dcmAccessControlID:
 
@@ -243,3 +239,7 @@ DICOM Archive Network AE related information
     .. _dcmStudyRetentionPolicy:
 
     dcmStudyRetentionPolicy_"
+    ":doc:`storeAccessControlIDRule` (s)",object,"Store Access Control Rules applied to Studies received by this AE. Supplements Store Access Control Rules specified on Device level","
+    .. _dcmStoreAccessControlIDRule:
+
+    dcmStoreAccessControlIDRule_"
