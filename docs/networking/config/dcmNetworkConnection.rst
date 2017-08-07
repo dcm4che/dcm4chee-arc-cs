@@ -1,9 +1,9 @@
-dcm4che Network Connection Attributes
-=====================================
+Network Connection Extension
+============================
 dcm4che proprietary Network Connection Attributes
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
-.. csv-table:: dcm4che Network Connection Attributes Attributes (LDAP Object: dcmDcmNetworkConnection)
+.. csv-table:: Network Connection Extension Attributes (LDAP Object: dcmDcmNetworkConnection)
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 

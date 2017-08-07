@@ -1,9 +1,9 @@
-dcm4che Network AE Attributes
-=============================
+Network AE Extension
+====================
 dcm4che proprietary Attributes of Network AE
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
-.. csv-table:: dcm4che Network AE Attributes Attributes (LDAP Object: dcmDcmNetworkAE)
+.. csv-table:: Network AE Extension Attributes (LDAP Object: dcmDcmNetworkAE)
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 

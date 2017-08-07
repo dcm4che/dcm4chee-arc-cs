@@ -1,9 +1,9 @@
-dcm4che Transfer Capability
-===========================
+Transfer Capability Extension
+=============================
 dcm4che proprietary Transfer Capability Attributes
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
-.. csv-table:: dcm4che Transfer Capability Attributes (LDAP Object: dcmDcmTransferCapability)
+.. csv-table:: Transfer Capability Extension Attributes (LDAP Object: dcmDcmTransferCapability)
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
