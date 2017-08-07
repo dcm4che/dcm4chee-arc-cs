@@ -55,13 +55,8 @@ Application entity that provides services on a network
     .. _dcmNetworkAE:
 
     dcmNetworkAE_"
-    ":doc:`archiveNetworkAE` ",object,"DICOM Archive Network AE related information","
-    .. _dcmArchiveNetworkAE:
-
-    dcmArchiveNetworkAE_"
 
 .. toctree::
 
     transferCapability
     dcmNetworkAE
-    archiveNetworkAE

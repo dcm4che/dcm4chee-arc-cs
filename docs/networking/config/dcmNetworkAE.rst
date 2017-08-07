@@ -19,3 +19,11 @@ dcm4che proprietary Attributes of Network AE
     .. _dcmMasqueradeCallingAETitle:
 
     dcmMasqueradeCallingAETitle_"
+    ":doc:`archiveNetworkAE` ",object,"DICOM Archive Network AE related information","
+    .. _dcmArchiveNetworkAE:
+
+    dcmArchiveNetworkAE_"
+
+.. toctree::
+
+    archiveNetworkAE

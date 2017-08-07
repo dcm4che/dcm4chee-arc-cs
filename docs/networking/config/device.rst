@@ -119,39 +119,9 @@ DICOM Device related information
     .. _dcmDevice:
 
     dcmDevice_"
-    ":doc:`hl7Application` (s)",object,"HL7 Applications provided by the Device","
-    .. _hl7Application:
-
-    hl7Application_"
-    ":doc:`imageWriter` (s)",object,"Specifies Java Image IO Image Writers with Write Parameters used for compressing DICOM images","
-    .. _dcmImageWriter:
-
-    dcmImageWriter_"
-    ":doc:`imageReader` (s)",object,"Specifies Java Image IO Image Readers used for decompressing compressed DICOM images","
-    .. _dcmImageReader:
-
-    dcmImageReader_"
-    ":doc:`auditLogger` (s)",object,"Audit Logger related information","
-    .. _dcmAuditLogger:
-
-    dcmAuditLogger_"
-    ":doc:`auditRecordRepository` ",object,"Audit Record Repository related information","
-    .. _dcmAuditRecordRepository:
-
-    dcmAuditRecordRepository_"
-    ":doc:`archiveDevice` ",object,"DICOM Archive Device related information","
-    .. _dcmArchiveDevice:
-
-    dcmArchiveDevice_"
 
 .. toctree::
 
     networkConnection
     networkAE
     dcmDevice
-    hl7Application
-    imageWriter
-    imageReader
-    auditLogger
-    auditRecordRepository
-    archiveDevice
