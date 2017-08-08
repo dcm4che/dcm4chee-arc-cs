@@ -31,7 +31,7 @@ DICOM Archive Network AE related information
     .. _dcmStoreAccessControlID:
 
     dcmStoreAccessControlID_"
-    "Access Control ID(s)",string,"Access Control IDs assigned to Query/Retrieve requests received by this AE","
+    "Access Control ID(s)",string,"Access Control IDs assigned to Query/Retrieve requests received by this AE.","
     .. _dcmAccessControlID:
 
     dcmAccessControlID_"
@@ -51,7 +51,7 @@ DICOM Archive Network AE related information
     .. _dcmAcceptConflictingPatientID:
 
     dcmAcceptConflictingPatientID_"
-    "Query/Retrieve View ID",string,"Query/Retrieve View Identifier","
+    "Query/Retrieve View ID",string,"Query/Retrieve View Identifier. Overwrites value specified on Device level.","
     .. _dcmQueryRetrieveViewID:
 
     dcmQueryRetrieveViewID_"
@@ -59,7 +59,7 @@ DICOM Archive Network AE related information
     .. _dcmBulkDataSpoolDirectory:
 
     dcmBulkDataSpoolDirectory_"
-    "Hide SPS with Status(s)",string,"Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL SCP Enumerated values: SCHEDULED, ARRIVED, READY, STARTED, DEPARTED, CANCELLED, DISCONTINUED or COMPLETED","
+    "Hide SPS with Status(s)",string,"Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL SCP. Overwrites value specified on Device level. Enumerated values: SCHEDULED, ARRIVED, READY, STARTED, DEPARTED, CANCELLED, DISCONTINUED or COMPLETED","
     .. _dcmHideSPSWithStatusFromMWL:
 
     dcmHideSPSWithStatusFromMWL_"
@@ -75,15 +75,15 @@ DICOM Archive Network AE related information
     .. _dcmSendPendingCGet:
 
     dcmSendPendingCGet_"
-    "Send Pending C-Move Interval",string,"Interval of pending C-MOVE responses in ISO-8601 duration format PnDTnHnMn.nS; disabled if absent","
+    "Send Pending C-Move Interval",string,"Interval of pending C-MOVE responses in ISO-8601 duration format PnDTnHnMn.nS. Overwrites value specified on Device level.","
     .. _dcmSendPendingCMoveInterval:
 
     dcmSendPendingCMoveInterval_"
-    "Wado SR2 Html Template URI",string,"Specifies URI for the style sheet used to render structured reports to html","
+    "Wado SR2Html Template URI",string,"Specifies URI for the style sheet used to render structured reports to html. Overwrites value specified on Device level.","
     .. _dcmWadoSR2HtmlTemplateURI:
 
     dcmWadoSR2HtmlTemplateURI_"
-    "Wado SR2 Text Template URI",string,"Specifies URI for the style sheet used to render structured reports to plain text","
+    "Wado SR2Text Template URI",string,"Specifies URI for the style sheet used to render structured reports to plain text. Overwrites value specified on Device level.","
     .. _dcmWadoSR2TextTemplateURI:
 
     dcmWadoSR2TextTemplateURI_"
@@ -95,19 +95,19 @@ DICOM Archive Network AE related information
     .. _dcmQidoMaxNumberOfResults:
 
     dcmQidoMaxNumberOfResults_"
-    "Mpps Forward Destination(s)",string,"Destination to forward MPPS N-CREATE RQ and N-SET RQ","
+    "Mpps Forward Destination(s)",string,"Destination to forward MPPS N-CREATE RQ and N-SET RQ. Overwrites value specified on Device level.","
     .. _dcmFwdMppsDestination:
 
     dcmFwdMppsDestination_"
-    "Ian Destination(s)",string,"Destination to send IAN N-CREATE RQ","
+    "Ian Destination(s)",string,"Destination to send IAN N-CREATE RQ. Overwrites value specified on Device level.","
     .. _dcmIanDestination:
 
     dcmIanDestination_"
-    "IAN Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which an IAN for a received study is sent to configured IAN destinations. If absent, IANs are triggered by received MPPS","
+    "IAN Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which an IAN for a received study is sent to configured IAN destinations. Overwrites value specified on Device level.","
     .. _dcmIanDelay:
 
     dcmIanDelay_"
-    "IAN Timeout",string,"Timeout in ISO-8601 duration format PnDTnHnMn.nS for waiting on receive of instances referenced in MPPS; check for completeness forever if absent","
+    "IAN Timeout",string,"Timeout in ISO-8601 duration format PnDTnHnMn.nS for waiting on receive of instances referenced in MPPS. Overwrites value specified on Device level.","
     .. _dcmIanTimeout:
 
     dcmIanTimeout_"
@@ -115,27 +115,35 @@ DICOM Archive Network AE related information
     .. _dcmIanOnTimeout:
 
     dcmIanOnTimeout_"
-    "Fallback C-Move SCP",string,"AE Title of external C-MOVE SCP to forward C-MOVE RQs if the requested Entities are not managed by this archive","
+    "Spanning C-Find SCP",string,"AE Title of external C-FIND SCP to forward C-FIND RQs and backward responses according configured Spanning C-Find SCP Policy. Overwrites value specified on Device level.","
+    .. _dcmSpanningCFindSCP:
+
+    dcmSpanningCFindSCP_"
+    "Spanning C-Find SCP Policy",string,"Specifies policy for combining matches returned from configured Spanning C-Find SCP with matching entries from the archive DB. Enumerated values: SUPPLEMENT, MERGE, REPLACE. Overwrites value specified on Device level. Enumerated values: SUPPLEMENT, MERGE or REPLACE","
+    .. _dcmSpanningCFindSCPPolicy:
+
+    dcmSpanningCFindSCPPolicy_"
+    "Fallback C-Move SCP",string,"AE Title of external C-MOVE SCP to forward C-MOVE RQs if the requested Entities are not managed by this archive. Overwrites value specified on Device level.","
     .. _dcmFallbackCMoveSCP:
 
     dcmFallbackCMoveSCP_"
-    "Fallback C-Move SCP Study Older Than",string,"Specifies threshold for Study Date in format YYYYMMDD for marking received Studies as (potential) incomplete to enforce the retrieve from configured dcmFallbackCMoveSCP","
+    "Fallback C-Move SCP Study Older Than",string,"Specifies threshold for Study Date in format YYYYMMDD for marking received Studies as (potential) incomplete to enforce the retrieve from configured dcmFallbackCMoveSCP. Overwrites value specified on Device level.","
     .. _dcmFallbackCMoveSCPStudyOlderThan:
 
     dcmFallbackCMoveSCPStudyOlderThan_"
-    "Fallback C-Move SCP Destination",string,"AE Title of local C-STORE-SCP to be set as Move Destination in C-MOVE RQs forwarded to the external C-MOVE SCP specified by dcmFallbackCMoveSCP","
+    "Fallback C-Move SCP Destination",string,"AE Title of local C-STORE-SCP to be set as Move Destination in C-MOVE RQs forwarded to the external C-MOVE SCP specified by dcmFallbackCMoveSCP. Overwrites value specified on Device level.","
     .. _dcmFallbackCMoveSCPDestination:
 
     dcmFallbackCMoveSCPDestination_"
-    "Fallback C-Move SCP Leading C-Find SCP",string,"AE Title of external C-FIND SCP for Verification of Number of Instances retrieved from external C-MOVE SCP specified by dcmFallbackCMoveSCP.","
+    "Fallback C-Move SCP Leading C-Find SCP",string,"AE Title of external C-FIND SCP for Verification of Number of Instances retrieved from external C-MOVE SCP specified by dcmFallbackCMoveSCP. Overwrites value specified on Device level.","
     .. _dcmFallbackCMoveSCPLeadingCFindSCP:
 
     dcmFallbackCMoveSCPLeadingCFindSCP_"
-    "Fallback C-Move SCP Retries",integer,"Maximal number of retries to retrieve not available objects from C-MOVE SCP configured by dcmFallbackCMoveSCP. -1 = forever. Use value configured on Device level, if absent","
+    "Fallback C-Move SCP Retries",integer,"Maximal number of retries to retrieve not available objects from C-MOVE SCP configured by dcmFallbackCMoveSCP. -1 = forever. Overwrites value specified on Device level.","
     .. _dcmFallbackCMoveSCPRetries:
 
     dcmFallbackCMoveSCPRetries_"
-    "Alternative C-Move SCP",string,"AE Title of alternative C-MOVE SCP to forward C-MOVE RQs if the requested Entities are not located on a local attached Storage","
+    "Alternative C-Move SCP",string,"AE Title of alternative C-MOVE SCP to forward C-MOVE RQs if the requested Entities are not located on a local attached Storage. Overwrites value specified on Device level.","
     .. _dcmAltCMoveSCP:
 
     dcmAltCMoveSCP_"

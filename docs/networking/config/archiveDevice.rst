@@ -59,7 +59,7 @@ DICOM Archive Device related information
     .. _dcmBulkDataSpoolDirectory:
 
     dcmBulkDataSpoolDirectory_"
-    "Hide SPS with Status(s)",string,"Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL SCP Enumerated values: SCHEDULED, ARRIVED, READY, STARTED, DEPARTED, CANCELLED, DISCONTINUED or COMPLETED","
+    "Hide SPS with Status(s)",string,"Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL SCP. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: SCHEDULED, ARRIVED, READY, STARTED, DEPARTED, CANCELLED, DISCONTINUED or COMPLETED","
     .. _dcmHideSPSWithStatusFromMWL:
 
     dcmHideSPSWithStatusFromMWL_"
@@ -75,7 +75,7 @@ DICOM Archive Device related information
     .. _dcmSendPendingCGet:
 
     dcmSendPendingCGet_"
-    "Send Pending C-Move Interval",string,"Interval of pending C-MOVE responses in ISO-8601 duration format PnDTnHnMn.nS; disabled if absent","
+    "Send Pending C-Move Interval",string,"Interval of pending C-MOVE responses in ISO-8601 duration format PnDTnHnMn.nS; disabled if absent. May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmSendPendingCMoveInterval:
 
     dcmSendPendingCMoveInterval_"
@@ -83,11 +83,11 @@ DICOM Archive Device related information
     .. _dcmWadoSupportedSRClasses:
 
     dcmWadoSupportedSRClasses_"
-    "Wado SR2 Html Template URI",string,"Specifies URI for the style sheet used to render structured reports to html","
+    "Wado SR2 Html Template URI",string,"Specifies URI for the style sheet used to render structured reports to html. May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmWadoSR2HtmlTemplateURI:
 
     dcmWadoSR2HtmlTemplateURI_"
-    "Wado SR2 Text Template URI",string,"Specifies URI for the style sheet used to render structured reports to plain text","
+    "Wado SR2 Text Template URI",string,"Specifies URI for the style sheet used to render structured reports to plain text. May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmWadoSR2TextTemplateURI:
 
     dcmWadoSR2TextTemplateURI_"
@@ -103,19 +103,19 @@ DICOM Archive Device related information
     .. _dcmQidoMaxNumberOfResults:
 
     dcmQidoMaxNumberOfResults_"
-    "Mpps Forward Destination(s)",string,"Destination to forward MPPS N-CREATE RQ and N-SET RQ","
+    "Mpps Forward Destination(s)",string,"Destination to forward MPPS N-CREATE RQ and N-SET RQ. May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmFwdMppsDestination:
 
     dcmFwdMppsDestination_"
-    "Ian Destination(s)",string,"Destination to send IAN N-CREATE RQ","
+    "Ian Destination(s)",string,"Destination to send IAN N-CREATE RQ. May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmIanDestination:
 
     dcmIanDestination_"
-    "IAN Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which an IAN for a received study is sent to configured IAN destinations. If absent, IANs are triggered by received MPPS","
+    "IAN Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which an IAN for a received study is sent to configured IAN destinations. If absent, IANs are triggered by received MPPS. May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmIanDelay:
 
     dcmIanDelay_"
-    "IAN Timeout",string,"Timeout in ISO-8601 duration format PnDTnHnMn.nS for waiting on receive of instances referenced in MPPS; check for completeness forever if absent","
+    "IAN Timeout",string,"Timeout in ISO-8601 duration format PnDTnHnMn.nS for waiting on receive of instances referenced in MPPS; check for completeness forever if absent. May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmIanTimeout:
 
     dcmIanTimeout_"
@@ -131,7 +131,15 @@ DICOM Archive Device related information
     .. _dcmIanTaskFetchSize:
 
     dcmIanTaskFetchSize_"
-    "Fallback C-Move SCP",string,"AE Title of external C-MOVE SCP to forward C-MOVE RQs if the requested Entities are not managed by this archive","
+    "Spanning C-Find SCP",string,"AE Title of external C-FIND SCP to forward C-FIND RQs and backward responses according configured Spanning C-Find SCP Policy. May be overwritten by configured values for particular Archive Network AEs.","
+    .. _dcmSpanningCFindSCP:
+
+    dcmSpanningCFindSCP_"
+    "Spanning C-Find SCP Policy",string,"Specifies policy for combining matches returned from configured Spanning C-Find SCP with matching entries from the archive DB. Enumerated values: SUPPLEMENT, MERGE, REPLACE. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: SUPPLEMENT, MERGE or REPLACE","
+    .. _dcmSpanningCFindSCPPolicy:
+
+    dcmSpanningCFindSCPPolicy_"
+    "Fallback C-Move SCP",string,"AE Title of external C-MOVE SCP to forward C-MOVE RQs if the requested Entities are not managed by this archive. May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmFallbackCMoveSCP:
 
     dcmFallbackCMoveSCP_"
