@@ -13,9 +13,9 @@ Message Structure
 - :ref:`audit-instances-accessed-event`
 - :ref:`audit-instances-accessed-active-participant-app` (1)
 - :ref:`audit-instances-accessed-active-participant-destination` (1)
+- :ref:`audit-general-message-audit-source`
 - :ref:`audit-instances-accessed-participant-object-study` (1)
 - :ref:`audit-instances-accessed-participant-object-patient` (1)
-- :ref:`audit-general-message-audit-source`
 
 .. csv-table:: Event: DICOM Instances Accessed
    :name: audit-instances-accessed-event
@@ -25,7 +25,7 @@ Message Structure
          "EventID", "M", "EV (110103, DCM, 'DICOM Instances Accessed')"
          "EventActionCode", "M", "'D' ⇒ 'Delete'"
          "EventDateTime", "M", "The time at which the event occurred"
-         "EventOutcomeIndicator", "M", "'0'⇒'SUCCESS', '4'⇒'Minor failure'"
+         "EventOutcomeIndicator", "M", "'0'⇒'Success', '4'⇒'Minor failure'"
          "EventOutcomeDescription", "M", "Type of Rejection"
 
 .. csv-table:: Active Participant: Archive application
@@ -133,4 +133,3 @@ Sample Message
         </ParticipantObjectIdentification>
 
     </AuditMessage>
-

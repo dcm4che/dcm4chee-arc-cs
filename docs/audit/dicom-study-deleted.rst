@@ -7,6 +7,7 @@ Trigger Events
 This message is emitted by the archive when :
 - All Rejected : all objects of a study are rejected using store association or from archive UI.
 - Deletion by scheduler : the whole study is deleted by the scheduler.
+- Deletion by RESTful service : the whole study is deleted using RESTful service.
 
 Message Structure
 -----------------
@@ -14,9 +15,9 @@ Message Structure
 - :ref:`audit-study-deleted-event`
 - :ref:`audit-study-deleted-active-participant-app` (1) - This active participant is present only in Rejection case
 - :ref:`audit-study-deleted-active-participant-destination` (1)
+- :ref:`audit-general-message-audit-source`
 - :ref:`audit-study-deleted-participant-object-study` (1)
 - :ref:`audit-study-deleted-participant-object-patient` (1)
-- :ref:`audit-general-message-audit-source`
 
 .. csv-table:: Event: DICOM Study Deleted
    :name: audit-study-deleted-event
@@ -138,4 +139,3 @@ Sample Message
         </ParticipantObjectIdentification>
 
     </AuditMessage>
-

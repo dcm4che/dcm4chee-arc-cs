@@ -9,7 +9,7 @@ Trigger Events
 This message is emitted by the archive in following cases :
 - Q/R Move : Objects of a study are retrieved using query/retrieve service and stored to external destination
 - Q/R Get : Objects of a study are retrieved using query/retrieve service and stored to the destination which is same as source
-- Export : Objects of a study are exported
+- Export : Objects of a study are exported by scheduler or synchronously or by queuing
 - WADO RS : Objects of a study are retrieved using WADO RESTful service
 - XDSI Retrieve Imaging Document Set RAD-69
 
@@ -20,9 +20,9 @@ Message Structure
 - :ref:`audit-begin-transferring-active-participant-app` (1)
 - :ref:`audit-begin-transferring-active-participant-destination` (1)
 - :ref:`audit-begin-transferring-active-participant-other` (1) - This active participant is present only in the Q/R Move case.
+- :ref:`audit-general-message-audit-source`
 - :ref:`audit-begin-transferring-participant-object-study` (0..1)
 - :ref:`audit-begin-transferring-participant-object-patient` (1)
-- :ref:`audit-general-message-audit-source`
 
 .. csv-table:: Event: Begin Transferring DICOM Instances
    :name: audit-begin-transferring-event
@@ -32,7 +32,7 @@ Message Structure
          "EventID", "M", "EV (110100, DCM, 'Begin Transferring DICOM Instances')"
          "EventActionCode", "M", "Enumerated Value E = Execute"
          "EventDateTime", "M", "The time at which the event occurred"
-         "EventOutcomeIndicator", "M", "'0'⇒'SUCCESS', '4'⇒'Minor failure'"
+         "EventOutcomeIndicator", "M", "'0'⇒'Success', '4'⇒'Minor failure'"
          "EventOutcomeDescription", "M", "Error/Exception message when 'EventOutcomeIndicator'⇒'4'"
 
 
@@ -170,4 +170,3 @@ Sample Message
         </ParticipantObjectIdentification>
 
     </AuditMessage>
-

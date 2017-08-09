@@ -20,9 +20,9 @@ Message Structure
 - :ref:`audit-instances-transferred-active-participant-app` (1)
 - :ref:`audit-instances-transferred-active-participant-destination` (1)
 - :ref:`audit-instances-transferred-active-participant-other` (1) - This active participant is present only in the Q/R Move case.
+- :ref:`audit-general-message-audit-source`
 - :ref:`audit-instances-transferred-participant-object-study` (0..1)
 - :ref:`audit-instances-transferred-participant-object-patient` (1)
-- :ref:`audit-general-message-audit-source`
 
 .. csv-table:: Event: DICOM Instances Transferred
    :name: audit-instances-transferred-event
@@ -33,7 +33,7 @@ Message Structure
          "EventActionCode", "M", "Store case : 'C' ⇒ 'Create' or 'U' ⇒ 'Update'"
          "", "", "For all other cases : 'R' ⇒ 'Read'"
          "EventDateTime", "M", "The time at which the event occurred"
-         "EventOutcomeIndicator", "M", "'0'⇒'SUCCESS', '4'⇒'Minor failure'"
+         "EventOutcomeIndicator", "M", "'0'⇒'Success', '4'⇒'Minor failure'"
          "EventOutcomeDescription", "M", "Error/Exception message when 'EventOutcomeIndicator'⇒'4'"
 
 

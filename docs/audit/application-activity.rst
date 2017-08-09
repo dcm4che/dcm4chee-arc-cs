@@ -12,7 +12,7 @@ Message Structure
 - :ref:`audit-application-activity-event`
 - :ref:`audit-application-activity-active-participant-app` (1)
 - :ref:`audit-application-activity-active-participant-person` (1) - This Active Participant is present only if archive
-  was started/stopped using RESTful service.
+  was started/stopped from UI.
 - :ref:`audit-general-message-audit-source`
 
 .. csv-table:: Event: Application Activity
@@ -23,7 +23,7 @@ Message Structure
          "EventID", "M", "EV (110100, DCM, 'Application Activity')"
          "EventActionCode", "M", "Enumerated Value E = Execute"
          "EventDateTime", "M", "The time at which the event occurred"
-         "EventOutcomeIndicator", "M", "'0'⇒'SUCCESS'"
+         "EventOutcomeIndicator", "M", "'0'⇒'Success'"
          "EventTypeCode", "M", "DT (110120, DCM, 'Application Start')"
          "", "", "DT (110121, DCM, 'Application Stop')"
 
@@ -77,4 +77,3 @@ Sample Message
         </AuditSourceIdentification>
 
     </AuditMessage>
-

@@ -28,7 +28,7 @@ one LDAP server and one database.
 
    Multi-host deployment
 
-System components of |product| are also available as Docker images to run within Docker containerns.
+System components of |product| are also available as Docker images to run within Docker containers.
 
 .. figure:: docker-deployment.svg
 
