@@ -39,11 +39,11 @@ DICOM Archive Device related information
     .. _dcmPurgeInstanceRecordsFetchSize:
 
     dcmPurgeInstanceRecordsFetchSize_"
-    "Query/Retrieve View ID",string,"Query/Retrieve View Identifier","
+    "Query/Retrieve View ID",string,"Query/Retrieve View Identifier. May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmQueryRetrieveViewID:
 
     dcmQueryRetrieveViewID_"
-    "Overwrite Policy",string,"Overwrite Policy for the whole Archive Device. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: NEVER, ALWAYS, SAME_SOURCE, SAME_SERIES or SAME_SOURCE_AND_SERIES","
+    "Overwrite Policy",string,"Overwrite Policy. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: NEVER, ALWAYS, SAME_SOURCE, SAME_SERIES or SAME_SOURCE_AND_SERIES","
     .. _dcmOverwritePolicy:
 
     dcmOverwritePolicy_"
@@ -135,10 +135,14 @@ DICOM Archive Device related information
     .. _dcmSpanningCFindSCP:
 
     dcmSpanningCFindSCP_"
-    "Spanning C-Find SCP Policy",string,"Specifies policy for combining matches returned from configured Spanning C-Find SCP with matching entries from the archive DB. Enumerated values: SUPPLEMENT, MERGE, REPLACE. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: SUPPLEMENT, MERGE or REPLACE","
+    "Spanning C-Find SCP Policy",string,"Specifies policy for combining matches returned from configured Spanning C-Find SCP with matching entries from the archive DB. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: SUPPLEMENT, MERGE or REPLACE","
     .. _dcmSpanningCFindSCPPolicy:
 
     dcmSpanningCFindSCPPolicy_"
+    "Spanning C-Find SCP Retrieve AE Title(s)",string,"Specifies Retrieve AE Title(s) in returned matches from Spanning C-Find SCP. Keep original Retrieve AE Title(s) returned by Spanning C-Find SCP if absent. May be overwritten by configured values for particular Archive Network AEs.","
+    .. _dcmSpanningCFindSCPRetrieveAET:
+
+    dcmSpanningCFindSCPRetrieveAET_"
     "Fallback C-Move SCP",string,"AE Title of external C-MOVE SCP to forward C-MOVE RQs if the requested Entities are not managed by this archive. May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmFallbackCMoveSCP:
 

@@ -119,10 +119,14 @@ DICOM Archive Network AE related information
     .. _dcmSpanningCFindSCP:
 
     dcmSpanningCFindSCP_"
-    "Spanning C-Find SCP Policy",string,"Specifies policy for combining matches returned from configured Spanning C-Find SCP with matching entries from the archive DB. Enumerated values: SUPPLEMENT, MERGE, REPLACE. Overwrites value specified on Device level. Enumerated values: SUPPLEMENT, MERGE or REPLACE","
+    "Spanning C-Find SCP Policy",string,"Specifies policy for combining matches returned from configured Spanning C-Find SCP with matching entries from the archive DB. Overwrites value specified on Device level. Enumerated values: SUPPLEMENT, MERGE or REPLACE","
     .. _dcmSpanningCFindSCPPolicy:
 
     dcmSpanningCFindSCPPolicy_"
+    "Spanning C-Find SCP Retrieve AE Title(s)",string,"Specifies Retrieve AE Title(s) in returned matches from Spanning C-Find SCP. Overwrites value specified on Device level.","
+    .. _dcmSpanningCFindSCPRetrieveAET:
+
+    dcmSpanningCFindSCPRetrieveAET_"
     "Fallback C-Move SCP",string,"AE Title of external C-MOVE SCP to forward C-MOVE RQs if the requested Entities are not managed by this archive. Overwrites value specified on Device level.","
     .. _dcmFallbackCMoveSCP:
 
