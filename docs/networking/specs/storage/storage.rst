@@ -329,7 +329,8 @@ OVERWRITE:
 The Storage Application Entity can be configured to compress uncompressed received Image SOP Instances, dependent on the Source Application
 Entity or HTTP client and dependent of DICOM Attribute values of received SOP Instances, using one of following Transfer Syntaxes:
 
-.. table:: Supported Transfer Syntaxes for Image Compression by Storage Application Entity
+.. csv-table:: Supported Transfer Syntaxes for Image Compression by Storage Application Entity
+   :name: SCPImageCompressionTS
    :header: "Transfer Syntax Name", "UID"
 
    "JPEG Baseline (Process 1)", "1.2.840.10008.1.2.4.50"
