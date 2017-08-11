@@ -1,0 +1,19 @@
+@startuml
+participant "Remote Storage\nCommitment\nSCU AE" as peer
+participant "Storage\nApplication\nEntity" as arc
+
+== Request ==
+peer -> arc: Initiate Association
+peer -> arc: Request Storage Commitment
+arc -> arc: Queue Request
+peer <-- arc: Confirm receive of Request
+peer -> arc: Release Association
+== Notification ==
+loop repeat after delay if Remote AE not reachable
+arc -> arc: Verify Checksum of\nstored Instances
+peer <- arc: Initiate Association
+peer <- arc: Send Storage Commitment Notification
+peer --> arc: Confirm receive of Notification
+peer <- arc: Release Association
+end
+@enduml

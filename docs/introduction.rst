@@ -9,7 +9,9 @@ Revision History
 .. csv-table:: Revision History
    :header: "Document Version", "Date of Issue", "Author", "Description"
 
-   |release|, |today|, gz, Initial Draft
+   5.0.0, "Dec 06, 2015", gz, Initial Draft
+   5.10.5, "Aug 11, 2017", gz, Correct Asynchronous Nature
+   |release|, |today|, Current Draft
 
 .. _audience:
 

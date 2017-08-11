@@ -43,13 +43,8 @@ All URI connections are limited to HTTP GET requests. The DCM4CHEE-WADO-SERVICE 
 
 Number Of Connections
 '''''''''''''''''''''
-DCM4CHEE-WADO-SERVICE limits the number of simultaneous HTTP connections.
+The maximal number of simultaneous HTTP Requests is configurable. It is unlimited by default.
 
 .. csv-table:: Number of HTTP Requests Supported
-   :file: common/qido-rs-stow-rs-wado-uri-wado-rs-number-of-connections.csv
 
-.. _wado-uri-asynchronous-nature:
-
-Asynchronous Nature
-'''''''''''''''''''
-DCM4CHEE-WADO-SERVICE supports HTTP pipelined requests and responses.
+   "Maximum number of simultaneous HTTP requests", "No Maximum Limit (Configurable)"

@@ -70,13 +70,8 @@ All standard RS connection policies apply. There are no extensions for RS option
 
 Number Of Connections
 '''''''''''''''''''''
-DCM4CHEE-WADO-SERVICE limits the number of simultaneous RS requests. Additional requests will be queued after the HTTP connection is accepted. When an earlier request completes, a pending request will proceed.
+The maximal number of simultaneous HTTP Requests is configurable. It is unlimited by default.
 
 .. csv-table:: Number of HTTP Requests Supported
-   :file: common/qido-rs-stow-rs-wado-uri-wado-rs-number-of-connections.csv
 
-.. _wado-rs-asynchronous-nature:
-
-Asynchronous Nature
-'''''''''''''''''''
-DCM4CHEE-WADO-SERVICE does not support RS asynchronous response.
+   "Maximum number of simultaneous HTTP requests", "No Maximum Limit (Configurable)"

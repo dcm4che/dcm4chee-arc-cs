@@ -24,94 +24,93 @@ Association Policies
 
 General
 '''''''
-The STORAGE-SCP AE can both accept and propose Association Requests. The STORAGE-SCP AE will accept Association Requests for the Verification, Storage, and Storage Commitment Push Model Services. It will propose Associations only for the Storage Commitment Push Model Service.
+The Storage Application Entity can both accept and propose Association Requests. The Storage Application Entity will
+accept Association Requests for the Verification, Storage, and Storage Commitment Push Model Services. It will propose
+Associations only for the Storage Commitment Push Model Service.
+
 The DICOM standard Application Context Name for DICOM 3.0 is always accepted and proposed:
 
-.. csv-table:: DICOM Application Context for STORAGE-SCP AE
-   :file: common/storage-query-retrieve-workflow-general.csv
+.. csv-table:: DICOM Application Context for Storage Application Entity
+
+  "Application Context Name", "1.2.840.10008.3.1.1.1"
 
 .. _storage-number-of-associations:
 
 Number of Associations
 ''''''''''''''''''''''
 
-The STORAGE-SCP AE can support multiple simultaneous Associations requested by peer AEs. Each time the STORAGE-SCP AE receives an Association, a child process will be spawned to process the Verification, Storage, or Storage Commitment Push Model Service requests. The maximum number of child processes, and thus the maximum number of simultaneous Associations that can be processed, is set by configuration. The default maximum number is 10 in total. This maximum number of simultaneous Associations can be either an absolute number or a maximum number for each requesting external Application Entity. The latter flexibility can be useful if communication with one external AE is unreliable and one does not wish 'hung' connections with this AE to prevent Associations with other client AEs.
-The STORAGE-SCP AE initiates one Association at a time for sending Storage Commitment Push Model N-EVENT-REPORTs to peer AEs.
+The Storage Application Entity can support multiple simultaneous Associations requested by peer AEs.
+The maximum total number of simultaneous Associations accepted from peer AEs is configurable. It is unlimited by default.
 
-.. csv-table:: Number of Simultaneous Associations as an SCP for STORAGE-SCP AE
-   :file: number-of-associations.csv
+The Storage Application Entity initiates up to 5 Associations at a time for sending Storage Commitment Push Model
+N-EVENT-REPORTs to peer AEs.
+
+.. csv-table:: Number of Simultaneous Associations as an SCP for the Storage Application Entity
+
+   "Maximum number of simultaneous Associations requested by peer AEs", "No Maximum Limit (Configurable)"
+   "Maximum number of simultaneous Associations initiated by the Storage Application Entity", "5"
 
 .. _storage-asynchrounous-nature:
 
 Asynchronous Nature
 '''''''''''''''''''
 
-The STORAGE-SCP AE does not support asynchronous communication (multiple outstanding transactions over a single Association). The STORAGE-SCP AE does permit an SCU to send multiple Storage Commitment Push Model Requests before it has sent back any N-EVENT-REPORT Notifications. However, the STORAGE-SCP AE must send an N-ACTION Response before permitting another N-ACTION Request to be received so the DICOM communication itself is not truly asynchronous.
+The Storage Application Entity supports asynchronous communication (multiple outstanding transactions over a single Association).
+The maximum number of outstanding asynchronous transactions is configurable. It is unlimited by default.
 
-.. csv-table:: Asynchronous Nature as a SCP for STORAGE-SCP AE
-   :file: asynchronous-nature.csv
+.. csv-table:: Asynchronous Nature as a SCP for the Storage Application Entity
 
-There is no limit on the number of outstanding Storage Commitment Push Model Requests that can be received and acknowledged before the STORAGE-SCP AE has responded with the corresponding N-EVENT-REPORT Notifications.
+   "Maximum number of outstanding asynchronous transactions", "No Maximum Limit (Configurable)"
 
-.. csv-table:: Outstanding Storage Commitment Push Model Requests for STORAGE-SCP AE
-   :file: outstanding-stgcmt-push-model-req.csv
+There is no limit on the number of outstanding Storage Commitment Push Model Requests that can be received and
+acknowledged before the Storage Application Entity has responded with the corresponding N-EVENT-REPORT Notifications.
 
 .. _storage-implementation-class-uid:
 
 Implementation Identifying Information
 ''''''''''''''''''''''''''''''''''''''
 
-The implementation information for this Application Entity is:
+The implementation information for the Storage Application Entity is:
 
-.. csv-table:: DICOM Implementation Class and Version for STORAGE-SCP AE
-   :file: common/storage-query-retrieve-implementation-identifying-information.csv
+.. csv-table:: DICOM Implementation Class and Version for the Storage Application Entity
 
-Note that the STORAGE-SCP AE specifies a different Implementation Class UID than that used by the other Application Entities. All DCM4CHEE archive AEs use the same Implementation Version Name. This Version Name is updated with each new release of the product software, as the different AE versions are never released independently.
+   "Implementation Class UID", "1.2.40.0.13.1.3"
+   "Implementation Version Name", "dcm4che-5.xx.yy"
+
+All Application Entities of |product| use the same Implementation Version Name. This Version Name is updated with each
+new release of the product software.
 
 .. _storage-association-initiation:
 
 Association Initiation Policies
 """""""""""""""""""""""""""""""
 
-.. _send-stgcmt-result:
-
 Activity - Send Storage Commitment Notification Over New Association
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-.. _send-stgcmt-result-seq:
 
 Description and Sequencing of Activity
 ......................................
 
-The STORAGE-SCP AE will initiate a new Association if a Storage Commitment Push Model Notification (N-EVENT-REPORT) cannot be sent back over the original Association used to send the corresponding request. A new Association will always be requested by the STORAGE-SCP AE in such cases even if the peer AE requests another Association after the original has been closed (i.e., A peer AE opens an Association and sends some Storage requests and a Storage Commitment Push Model request. Before the STORAGE-SCP AE can send the Storage Commitment Push Model N-EVEN-REPORT the Association is closed. The peer AE then opens another Association and begins to send Storage requests. In such a case the STORAGE-SCP AE will always initiate a new Association to send the N-EVENT-REPORT even though it could send the N-EVENT-REPORT over the new Association opened by the peer AE).
-An Association Request is sent to the peer AE that sent the Storage Commitment Push Model request and upon successful negotiation of the required Presentation Context the outstanding N-EVENT-REPORT is sent. If there are multiple outstanding N-EVENT-REPORTs to be sent to a single peer AE then the STORAGE-SCP AE will attempt to send them all over a single Association rather than requesting a new Association for each one. The Association will be released when all the N-EVENT-REPORTs for the peer AE have been sent. If any type of error occurs during transmission (either a communication failure or indicated by a Status Code returned by the peer AE) over an open Association then the transfer of N-EVENT-REPORTs is halted. A new Association will be opened to retry sending outstanding N-EVENT-REPORTs. The maximum number of times the STORAGE-SCP AE will attempt to resend an N-EVENT-REPORT is configurable, along with the amount of time to wait between attempts to resend.
-If the STORAGE-SCP AE sends a Notification request (N-EVENT-REPORT-RQ) over the original Association opened by the peer AE but receives a request to close the Association rather than a response to the Notification (N-EVENT-REPORT-RSP) then this is handled in the same way as if the request to close the Association had been received before trying to send the Notification request. Thus, the STORAGE-SCP AE will then open a new Association to resend the Notification request.
-The STORAGE-SCP AE can be configured to always open a new Association before sending a Storage Commitment Push Model Notifications (N-EVENT-REPORT), in which case the sequencing illustrated in figure below will always be followed.
+The Storage Application Entity does not support to send the Storage Commitment Notification over the same Association
+over which it received the Storage Commitment Push Model (N-ACTION) request from the remote AE. It always initiates a
+new Association to the remote AE that sent the Storage Commitment Push Model request for sending the corresponding
+Storage Commitment Notification (N-EVENT-REPORT).
 
-.. figure:: sequencing-of-activity-send-storage-commitment-notification-over-new-association.svg
+If any type of error occurs during transmission (either a communication failure or indicated by a Status Code returned
+by the remote AE), the Storage Application Entity will attempt to resend an N-EVENT-REPORT. The maximum number of
+attempts to resend an N-EVENT-REPORT is configurable, along with the amount of time to wait between attempts to
+resend.
 
-   Figure : Sequencing of Activity - Send Storage Commitment Notification Over New Association
+.. figure:: stgcmt-scp-seq-diagram.svg
 
-The following sequencing constraints illustrated in figure above apply to the STORAGE-SCP AE for handling Storage Commitment Push Model Requests using a new Association:
-
-1. Peer AE opens an Association with the STORAGE-SCP AE.
-2. Peer AE requests Storage Commitment of Composite SOP Instance(s) (peer sends N-ACTION-RQ and STORAGE-SCP AE responds with N-ACTION-RSP to indicate that it received the request).
-3. Peer AE closes the Association before the STORAGE-SCP AE can successfully send the Storage Commitment Push Model Notification (N-EVENT-REPORT-RQ).
-4. STORAGE-SCP AE opens an Association with the peer AE.
-5. STORAGE-SCP AE sends Storage Commitment Push Model Notification (N-EVENT-REPORT). More than one can be sent over a single Association if multiple Notifications are outstanding.
-6. STORAGE-SCP AE closes the Association with the peer AE.
-
-The Verification Service as an SCU is only supported as a utility function for Service staff. It is used only as a diagnostic tool when the STORAGE-SCP AE is failing to open new Associations to send N-EVENT-REPORTs to peer AEs.
-
-
-.. _send-stgcmt-result-proposed-pcs:
+   Remote AE Requests Storage Commitment
 
 Proposed Presentation Contexts
 ..............................
 
-The Storage Application Entity will propose Presentation Contexts for Verification and the Storage Commitment Push Model SOP Class.
-The list of proposed Transfer Syntaxes for the Storage Commitment Push Model SOP Class is configurable. By default, only the
-Transfer Syntax Implicit VR Little Endian will be proposed.
+The Storage Application Entity will propose Presentation Contexts for the Storage Commitment Push Model SOP Class.
+The list of proposed Transfer Syntaxes for the Storage Commitment Push Model SOP Class is configurable. By default,
+only the Transfer Syntax Implicit VR Little Endian will be proposed.
 
 .. table:: Proposed Presentation Contexts of Storage Application Entity by default configuration
 
@@ -122,8 +121,6 @@ Transfer Syntax Implicit VR Little Endian will be proposed.
    +-------------------------------+----------------------+---------------------------+---------------------+      |           |
    | Name                          | UID                  | Name                      | UID                 |      |           |
    +===============================+======================+===========================+=====================+======+===========+
-   | Verification                  | 1.2.840.10008.1.1    | Implicit VR Little Endian | 1.2.840.10008.1.2   | SCU  | None      |
-   +-------------------------------+----------------------+---------------------------+---------------------+------+-----------+
    | Storage Commitment Push Model | 1.2.840.10008.1.20.1 | Implicit VR Little Endian | 1.2.840.10008.1.2   | SCP  | None      |
    +-------------------------------+----------------------+---------------------------+---------------------+------+-----------+
 
@@ -132,16 +129,36 @@ Transfer Syntax Implicit VR Little Endian will be proposed.
 SOP Specific Conformance for Storage Commitment Push Model SOP Class
 ....................................................................
 
-The associated Activity with the Storage Commitment Push Model service is the communication by the STORAGE-SCP AE to peer AEs that it has committed to permanently store Composite SOP Instances that have been sent to it. It thus allows peer AEs to determine whether the DCM4CHEE archive has taken responsibility for the archiving of specific SOP Instances so that they can be flushed from the peer AE system.
+The Storage Application Entity only accepts Storage Commitment Push Model N-ACTION Requests from Remote AEs which
+AE Title is configured.
 
-The STORAGE-SCP AE will initiate a new Association to a peer AE that sent a Storage Commitment Push Model request if the original Association over which this was sent is no longer open. For a detailed explanation of the SOP specific Behavior of the STORAGE-SCP AE in this case please refer to 4.2.4.4.1.3.3, Storage Commitment Push Model as an SCP.
+The Storage Application Entity takes the list of Composite SOP Instance UIDs specified in a Storage Commitment Push
+Model N-ACTION Request and checks if they are present in the database. Each present Composite SOP Instance will be
+fetched from the storage recalculating its checksum. The Storage Application Entity will only commit to responsibility
+for SOP Instances which recalculated checksum matches the value from the database, which was calculated on receive of
+the SOP Instance.
 
-.. _stgcmt-conformance-verification:
+Once the Storage Application Entity has checked for the existence and matching of the checksum of the specified
+Composite SOP Instances, it will then attempt to send the Notification request (N-EVENT-REPORT-RQ) over a new
+Association. The Storage Application Entity will request a new Association with the peer AE that made the original
+N-ACTION Request.
 
-SOP Specific Conformance for Storage Commitment Verification SOP Class
-......................................................................
+The Storage Application Entity will not cache Storage Commitment Push Model N-ACTION Requests that specify
+Composite SOP Instances that have not yet been transferred to |product|. If a remote AE sends a Storage Commitment Push
+Model N-ACTION Request before the specified Composite SOP Instances, the Storage Application Entity will not commit to
+responsibility for such SOP Instances.
 
-Standard conformance is provided to the DICOM Verification Service Class as an SCU. The Verification Service as an SCU is actually only supported as a diagnostic service tool for network communication issues. It can be used to test whether Associations can actually be opened with a peer AE that is issuing Storage Commitment Push Model requests (i.e., to test whether the indicated TCP/IP port and AE Title for sending N-EVENT-REPORT Requests to the peer AE are truly functional).
+The amount of time to take responsibility for the safekeeping of an objects is independent of the successful
+commitment to store the object, but depends on other configuration options, particularly on the configured
+*Study Retention Policy*. It is even possible to accept storage commitment requests when acting as a cache archive,
+which deletes least recent accessed studies according configured thresholds of the storage backend.
+
+The Storage Application Entity does not support the optional Storage Media File-Set ID & UID attributes in the N-ACTION
+and in the N-EVENT-REPORT.
+
+The Storage Application Entity supports the optional Retrieve AE Title (0008,0054) Attribute in the N-EVENT-REPORT.
+
+The Storage Application Entity supports Storage Commitment Push Model requests for SOP Instances of any Storage SOP Class.
 
 .. _storage-association-acceptance:
 
@@ -158,31 +175,8 @@ Activity - Receive Images and Storage Commitment Requests
 Description and Sequencing of Activities
 ........................................
 
-The STORAGE-SCP AE accepts Associations only if they have valid Presentation Contexts. If none of the requested Presentation Contexts are accepted then the Association Request itself is rejected. It can be configured to only accept Associations with certain hosts (using TCP/IP address) and/or Application Entity Titles.
-The default behavior of the STORAGE-SCP AE is to always attempt to send a Storage Commitment Push Model Notification (N-EVENT-REPORT) over the same Association opened by the peer AE to send the request (N-ACTION). If the STORAGE-SCP AE receives a request to close the Association either before sending the Notification or before receiving the corresponding N-EVENT-REPORT-RSP then it will open a new Association to send the Notification. Refer to Section F.4.2.3.4.1.5 for the details.
-
-.. figure:: sequencing-of-activity-receive-images-and-storage-commitment-requests.svg
-
-   Figure : Sequencing of Activity - Receive Images and Storage Commitment Requests
-
-The following sequencing constraints illustrated in figure above apply to the STORAGE-SCP AE for handling Storage Commitment Push Model Requests over the original Association:
-
-1. Peer AE opens an Association with the STORAGE-SCP AE.
-2. Peer AE sends zero or more Composite SOP Instances.
-3. Peer AE requests Storage Commitment of Composite SOP Instance(s) (peer sends N-ACTION-RQ and STORAGE-SCP AE responds with N-ACTION-RSP to indicate that it received the request).
-4. STORAGE-SCP AE sends Storage Commitment Push Model Notification request (N-EVENT-REPORT-RQ) and successfully receives Notification response (N-EVENT-REPORT-RSP) from peer AE.
-5. Peer AE closes the Association.
-
-If the STORAGE-SCP AE receives a request to close the Association from the peer AE before sending the Notification request (N-EVENT-REPORT-RQ) or when expecting to receive a Notification response (N-EVENT-REPORT-RSP) then it will open a new Association to send (or resend) the Notification. Refer to 0 for the details. The STORAGE-SCP AE has a configurable timeout value for the maximum amount of time that it will wait on an open Association for a new request from a peer AE. A peer AE can reset this timer by sending a Verification request (C-ECHO-RQ). This can act as a useful mechanism for a peer AE to maintain an active Association if the length of time between sending Storage or Storage Commitment requests can be long (such as when using a single Association to send images as they are acquired during an ultrasound exam).
-The STORAGE-SCP AE may reject Association attempts as shown in the Table below. The Result, Source and Reason/Diag columns represent the values returned in the corresponding fields of an ASSOCIATE-RJ PDU. The following abbreviations are used in the Source column:
-
-a. 1 - DICOM UL service-user
-b. 2 - DICOM UL service-provider (ASCE related function)
-c. 3 - DICOM UL service-provider (Presentation related function)
-
-.. csv-table:: Association Rejection Reasons
-   :header: "Result", "Source", "Reason-Diag", "Explanation"
-   :file: common/storage-query-retrieve-association-rejection-reasons.csv
+The Storage Application Entity can be configured to only accept Associations with certain hosts (using TCP/IP address)
+and/or Application Entity Titles.
 
 .. _storage-receive-stgcmt-rq-accepted-pcs:
 
@@ -355,9 +349,9 @@ Association is detected then the Association is closed. In the above table, some
 Status is due to the fact that, when objects are rejected the rejection notes are stored in the database for further processing.
 
 
-The Behavior of STORAGE-SCP AE during communication failure is summarized in the following table:
+The Behavior of Storage Application Entity during communication failure is summarized in the following table:
 
-.. csv-table:: STORAGE-SCP AE Storage Service Communication Failure Reasons
+.. csv-table:: Storage Application Entity Storage Service Communication Failure Reasons
    :header: "Exception", "Reason"
    :file: storage-scp-communication-failure-reasons.csv
 
@@ -366,24 +360,24 @@ The Behavior of STORAGE-SCP AE during communication failure is summarized in the
 SOP Specific Conformance for Storage Commitment SOP Class
 .........................................................
 
-The associated Activity with the Storage Commitment Push Model service is the communication by the STORAGE-SCP AE to peer AEs that it has committed to permanently store Composite SOP Instances that have been sent to it. It thus allows peer AEs to determine whether the DCM4CHEE archive has taken responsibility for the archiving of specific SOP Instances so that they can be flushed from the peer AE system.
-The STORAGE-SCP AE takes the list of Composite SOP Instance UIDs specified in a Storage Commitment Push Model N-ACTION Request and checks if they are present in the DCM4CHEE archive database. As long as the Composite SOP Instance UIDs are present in the database, the STORAGE-SCP AE will consider those Composite SOP Instance UIDs to be successfully archived. The STORAGE-SCP AE does not require the Composite SOP Instances to actually be successfully written to archive media in order to commit to responsibility for maintaining these SOP Instances.
-Once the STORAGE-SCP AE has checked for the existence of the specified Composite SOP Instances, it will then attempt to send the Notification request (N-EVENT-REPORT-RQ). The default behavior is to attempt to send this Notification over the same Association that was used by the peer AE to send the original N-ACTION Request. If the Association has already been released or Message transfer fails for some reason then the STORAGE-SCP AE will attempt to send the N-EVENT-REPORT-RQ over a new Association. The STORAGE-SCP AE will request a new Association with the peer AE that made the original N-ACTION Request. The STORAGE-SCP AE can be configured to always open a new Association in order to send the Notification request.
-The STORAGE-SCP AE will not cache Storage Commitment Push Model N-ACTION Requests that specify Composite SOP Instances that have not yet been transferred to the DCM4CHEE archive. If a peer AE sends a Storage Commitment Push Model N-ACTION Request before the specified Composite SOP Instances are later sent over the same Association, the STORAGE-SCP AE will not commit to responsibility for such SOP Instances.
-The STORAGE-SCP AE does not support the optional Storage Media File-Set ID & UID attributes in the N-ACTION.
+The associated Activity with the Storage Commitment Push Model service is the communication by the Storage Application Entity to peer AEs that it has committed to permanently store Composite SOP Instances that have been sent to it. It thus allows peer AEs to determine whether the DCM4CHEE archive has taken responsibility for the archiving of specific SOP Instances so that they can be flushed from the peer AE system.
+The Storage Application Entity takes the list of Composite SOP Instance UIDs specified in a Storage Commitment Push Model N-ACTION Request and checks if they are present in the DCM4CHEE archive database. As long as the Composite SOP Instance UIDs are present in the database, the Storage Application Entity will consider those Composite SOP Instance UIDs to be successfully archived. The Storage Application Entity does not require the Composite SOP Instances to actually be successfully written to archive media in order to commit to responsibility for maintaining these SOP Instances.
+Once the Storage Application Entity has checked for the existence of the specified Composite SOP Instances, it will then attempt to send the Notification request (N-EVENT-REPORT-RQ). The default behavior is to attempt to send this Notification over the same Association that was used by the peer AE to send the original N-ACTION Request. If the Association has already been released or Message transfer fails for some reason then the Storage Application Entity will attempt to send the N-EVENT-REPORT-RQ over a new Association. The Storage Application Entity will request a new Association with the peer AE that made the original N-ACTION Request. The Storage Application Entity can be configured to always open a new Association in order to send the Notification request.
+The Storage Application Entity will not cache Storage Commitment Push Model N-ACTION Requests that specify Composite SOP Instances that have not yet been transferred to the DCM4CHEE archive. If a peer AE sends a Storage Commitment Push Model N-ACTION Request before the specified Composite SOP Instances are later sent over the same Association, the Storage Application Entity will not commit to responsibility for such SOP Instances.
+The Storage Application Entity does not support the optional Storage Media File-Set ID & UID attributes in the N-ACTION.
 The DCM4CHEE archive never automatically deletes Composite SOP Instances from the archive. The absolute persistence of SOP Instances and the maximum archiving capacity for such SOP Instances is dependent on the archiving media and capacity used by the DCM4CHEE archive and is dependent on the actual specifications of the purchased system. It is necessary to check the actual system specifications to determine these characteristics.
-The STORAGE-SCP AE will support Storage Commitment Push Model requests for SOP Instances of any of the Storage SOP Classes that are also supported by the STORAGE-SCP AE as given in 4.2.1.1-1.: SOP Classes for Storage Application Entity (SCP)
+The Storage Application Entity will support Storage Commitment Push Model requests for SOP Instances of any of the Storage SOP Classes that are also supported by the Storage Application Entity as given in 4.2.1.1-1.: SOP Classes for Storage Application Entity (SCP)
 
-The STORAGE-SCP AE will return the following Status Code values in N-ACTION Responses:
+The Storage Application Entity will return the following Status Code values in N-ACTION Responses:
 
-.. csv-table:: STORAGE-SCP AE Storage Commitment Push Model N-ACTION Response Status Return Behavior
+.. csv-table:: Storage Application Entity Storage Commitment Push Model N-ACTION Response Status Return Behavior
    :header: "Service Status", "Further Meaning", "Error Code", "Behaviour"
    :file: stgcmt-n-action-response-status-return-behaviour.csv
 
-The STORAGE-SCP AE will exhibit the following Behavior according to the Status Code value returned in an N-EVENT-REPORT Response from a destination Storage Commitment Push Model SCU:
+The Storage Application Entity will exhibit the following Behavior according to the Status Code value returned in an N-EVENT-REPORT Response from a destination Storage Commitment Push Model SCU:
 
-.. csv-table:: STORAGE-SCP AE N-EVENT-REPORT Response Status Handling Behavior
+.. csv-table:: Storage Application Entity N-EVENT-REPORT Response Status Handling Behavior
    :header: "Service Status", "Further Meaning", "Error Code", "Behaviour"
    :file: stgcmt-n-eventresponse-status-return-behaviour.csv
 
-All Status Codes indicating an error or refusal are treated as a permanent failure. The STORAGE-SCP AE can be configured to automatically reattempt the sending of Storage Commitment Push Model N-EVENT-REPORT Requests if an error Status Code is returned or a communication failure occurs. The maximum number of times to attempt sending as well as the time to wait between attempts is configurable.
+All Status Codes indicating an error or refusal are treated as a permanent failure. The Storage Application Entity can be configured to automatically reattempt the sending of Storage Commitment Push Model N-EVENT-REPORT Requests if an error Status Code is returned or a communication failure occurs. The maximum number of times to attempt sending as well as the time to wait between attempts is configurable.
