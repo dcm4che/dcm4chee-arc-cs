@@ -203,10 +203,14 @@ DICOM Archive Network AE related information
     .. _dcmInvokeImageDisplayStudyURL:
 
     dcmInvokeImageDisplayStudyURL_"
-    "Copy Move Update Policy",string,"Specifies update policy for attributes of the destination Study on Copy/Move of Instances from another Study. If absent, the attributes will not be updated. Overwrites value specified on Device level. Enumerated values: SUPPLEMENT, OVERWRITE, MERGED or REPLACE","
+    "Copy Move Update Policy",string,"Specifies update policy for attributes of the destination Study on Copy/Move of Instances from another Study. If absent, the attributes will not be updated. Overwrites value specified on Device level. Enumerated values: SUPPLEMENT, MERGE, OVERWRITE or REPLACE","
     .. _dcmCopyMoveUpdatePolicy:
 
     dcmCopyMoveUpdatePolicy_"
+    "Link MWL Entry Update Policy",string,"SSpecifies update policy for Study attributes on Link of Instances of another Study with a MWL Entry referring an existing Study. Overwrites value specified on Device level. Enumerated values: SUPPLEMENT, MERGE, OVERWRITE or REPLACE","
+    .. _dcmLinkMWLEntryUpdatePolicy:
+
+    dcmLinkMWLEntryUpdatePolicy_"
     "HL7 Procedure Status Update Sending Application",string,"Application|Facility name of Sending Application for HL7 Procedure Status Update. Overwrites value specified on Device level.","
     .. _hl7PSUSendingApplication:
 

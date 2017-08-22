@@ -423,10 +423,14 @@ DICOM Archive Device related information
     .. _dcmInvokeImageDisplayStudyURL:
 
     dcmInvokeImageDisplayStudyURL_"
-    "Copy Move Update Policy",string,"Specifies update policy for attributes of the destination Study on Copy/Move of Instances from another Study. If absent, the attributes will not be updated. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: SUPPLEMENT, OVERWRITE, MERGED or REPLACE","
+    "Copy Move Update Policy",string,"Specifies update policy for attributes of the destination Study on Copy/Move of Instances from another Study. If absent, the attributes will not be updated. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: SUPPLEMENT, MERGE, OVERWRITE or REPLACE","
     .. _dcmCopyMoveUpdatePolicy:
 
     dcmCopyMoveUpdatePolicy_"
+    "Link MWL Entry Update Policy",string,"Specifies update policy for Study attributes on Link of Instances of another Study with a MWL Entry referring an existing Study. If absent, the attributes will not be updated. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: SUPPLEMENT, MERGE, OVERWRITE or REPLACE","
+    .. _dcmLinkMWLEntryUpdatePolicy:
+
+    dcmLinkMWLEntryUpdatePolicy_"
     "HL7 ADT Sending Application",string,"Application|Facility name of Sending Application for HL7 ADT messages to synchronize external systems about performed Patient Information updates. If absent, synchronization of external systems by HL7 ADT messages is disabled.","
     .. _hl7ADTSendingApplication:
 
