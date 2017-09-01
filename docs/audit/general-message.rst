@@ -32,6 +32,8 @@ Message Structure
    :header: "Field Name", "Opt", "Description"
 
    "UserID", "M", "Unique identifier for the user actively participating in the event."
+   "UserIDTypeCode", "U", "Describes the identifier that is contained in User ID."
+   "UserTypeCode", "U", "Code for the type of the user. This value is distinct from the user's role(s)."
    "AlternativeUserID", "U", "Alternative unique identifier for the user."
    "UserName", "U", "The human-meaningful name for the user."
    "UserIsRequestor", "M", "Indicator that the user is or is not the requestor, or initiator, for the event being audited."

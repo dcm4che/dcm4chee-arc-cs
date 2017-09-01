@@ -35,6 +35,9 @@ Message Structure
 
          "UserID", "M", "Rejection triggered using association ⇒ 'Application entity title of Archive Device used in the association'"
          "", "", "Rejection triggered using archive UI ⇒ 'Invoked URL'"
+         "UserIDTypeCode", "U", "Rejection triggered using association : EV ("110118","DCM","Archive Device AE Titles")"
+         "", "", "Rejection triggered from UI : EV ("12", "RFC-3881", "URI")"
+         "UserTypeCode", "U", "'System' : '5'"
          "AlternativeUserID", "MC", "Process ID of Audit logger"
          "UserIsRequestor", "M", "false"
          "NetworkAccessPointID", "U", "Hostname/IP Address of the connection referenced by Audit logger"
@@ -47,6 +50,10 @@ Message Structure
 
          "UserID", "M", "Rejection triggered using association ⇒ 'Application entity title of initiating system'"
          "", "", "Rejection triggered using archive UI ⇒ 'Remote IP address' or 'User name of logged in user'"
+         "UserIDTypeCode", "U", "Rejection triggered using archive UI (Secured archive) : EV ("Cp1640-1","DCM","Local User ID")"
+         "", "", "Rejection triggered using archive UI (Unsecured archive) : EV ("110182","DCM","Node ID")"
+         "", "", "Rejection triggered using association : EV ("110119","DCM","Station AE Title")"
+         "UserTypeCode", "U", "'Person' : '1'"
          "UserIsRequestor", "M", "true"
          "NetworkAccessPointID", "U", "Hostname/IP Address of calling host"
          "NetworkAccessPointTypeCode", "U", "'1'⇒'NetworkAccessPointID is host name', '2'⇒'NetworkAccessPointID is an IP address'"
@@ -94,10 +101,18 @@ Sample Message
 
         </EventIdentification>
 
-        <ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2"/>
+        <ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+
+            <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
+
+        </ActiveParticipant>
 
         <ActiveParticipant UserID="/dcm4chee-arc/aets/DCM4CHEE/rs/studies/1.2.392.200036.9125.0.199402091242.1/series/1.2.392.200036.9125.0.199402091242.1/reject/113039%5EDCM"
-        AlternativeUserID="2716" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1"/>
+        AlternativeUserID="2716" UserIsRequestor="false" NetworkAccessPointID="localhost" UserTypeCode="5" NetworkAccessPointTypeCode="1">
+
+            <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
+
+        </ActiveParticipant>
 
         <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
 

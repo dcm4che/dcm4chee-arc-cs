@@ -10,7 +10,8 @@ Message Structure
 -----------------
 
 - :ref:`audit-data-export-event`
-- :ref:`audit-data-export-active-participant-app` (1)
+- :ref:`audit-data-export-active-participant-user` (1) - This active participant is present only if export is triggered by UI.
+- :ref:`audit-data-export-active-participant-source` (1)
 - :ref:`audit-data-export-active-participant-destination` (1)
 - :ref:`audit-general-message-audit-source`
 - :ref:`audit-data-export-participant-object-patient` (1)
@@ -28,13 +29,33 @@ Message Structure
          "EventOutcomeDescription", "M", "Error/Exception message when 'EventOutcomeIndicator':'4'"
 
 .. csv-table:: Active Participant: Archive application
+   :name: audit-data-export-active-participant-user
+   :widths: 30, 5, 65
+   :header: "Field Name", "Opt", "Description"
+
+         "UserID", "M", "Secured archive : User name for secured version of archive"
+         "", "", "Unsecured archive : Remote IP address for unsecured version of archive"
+         "UserIDTypeCode", "U", "Secured archive : EV ("Cp1640-1","DCM","Local User ID")"
+         "", "", "Unsecured archive : ("110182","DCM","Node ID")"
+         "UserTypeCode", "U", "'Person' : '1'"
+         "AlternativeUserID", "MC", "Process ID of Audit logger"
+         "UserIsRequestor", "M", "true"
+         "NetworkAccessPointID", "U", "Hostname/IP Address of calling host"
+         "NetworkAccessPointTypeCode", "U", "'1':'NetworkAccessPointID is host name', '2':'NetworkAccessPointID is an IP address'"
+
+.. csv-table:: Active Participant: Archive application
    :name: audit-data-export-active-participant-source
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
-         "UserID", "M", "Semicolon separated Application Entity Titles of the device"
+         "UserID", "M", "Triggered by scheduler : Semicolon separated Application Entity Titles of the device"
+         "", "", "Triggered from UI : Invoked URL"
+         "UserIDTypeCode", "U", "Triggered by scheduler : EV ("110118","DCM","Archive Device AE Titles")"
+         "", "", "Triggered from UI : EV ("12", "RFC-3881", "URI")"
+         "UserTypeCode", "U", "'System' : '5'"
          "AlternativeUserID", "MC", "Process ID of Audit logger"
-         "UserIsRequestor", "M", "true"
+         "UserIsRequestor", "M", "Triggered by scheduler : 'true'"
+         "", "", "Triggered by UI : 'false'"
          "RoleIDCode", "M", "EV (110153, DCM, 'Source')"
          "NetworkAccessPointID", "U", "Hostname/IP Address of the connection referenced by Audit logger"
          "NetworkAccessPointTypeCode", "U", "'1':'NetworkAccessPointID is host name', '2':'NetworkAccessPointID is an IP address'"
@@ -45,6 +66,8 @@ Message Structure
    :header: "Field Name", "Opt", "Description"
 
          "UserID", "M", "The URI configured in XDSI Exporter in archive configuration"
+         "UserIDTypeCode", "U", "EV ("12", "RFC-3881", "URI")"
+         "UserTypeCode", "U", "'System' : '5'"
          "UserIsRequestor", "M", "false"
          "RoleIDCode", "M", "EV (110152, DCM, 'Destination')"
          "NetworkAccessPointID", "U", "Hostname/IP Address present in the URI configured in XDSI Exporter in archive configuration"
@@ -86,15 +109,19 @@ Sample Message
 
         </EventIdentification>
 
-        <ActiveParticipant UserID="DCM4CHEE;DCM4CHEE_ADMIN;DCM4CHEE_TRASH" AlternativeUserID="60928" UserIsRequestor="true" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+        <ActiveParticipant UserID="DCM4CHEE;DCM4CHEE_ADMIN;DCM4CHEE_TRASH" UserTypeCode="5" AlternativeUserID="60928" UserIsRequestor="true" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
 
             <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source"/>
 
+            <UserIDTypeCode csd-code="110118" codeSystemName="DCM" originalText="Archive Device AE Titles"/>
+
         </ActiveParticipant>
 
-        <ActiveParticipant UserID="xds-i:http://localhost:8081/xdstools4/sim/pacs__rr/rep/prb" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+        <ActiveParticipant UserID="xds-i:http://localhost:8081/xdstools4/sim/pacs__rr/rep/prb" UserTypeCode="5" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
 
             <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination"/>
+
+            <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
 
         </ActiveParticipant>
 

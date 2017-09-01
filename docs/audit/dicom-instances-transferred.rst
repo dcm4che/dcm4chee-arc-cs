@@ -49,6 +49,13 @@ Message Structure
          "", "", "Export case ⇒ 'dicomAETitle configured in the Exporter of archive'"
          "", "", "WADO RS case ⇒ 'Invoked URL'"
          "", "", "XDSI Retrieve Imaging Document Set RAD-69 case ⇒ 'Invoked URL'"
+         "UserIDTypeCode", "U", "Q/R Move case : EV ("110118","DCM","Archive Device AE Titles")"
+         "", "", "Q/R Get case : EV ("110118","DCM","Archive Device AE Titles")"
+         "", "", "Export case triggered by scheduler : EV ("110118","DCM","Archive Device AE Titles")"
+         "", "", "Export case triggered from UI : EV ("12", "RFC-3881", "URI")"
+         "", "", "WADO RS case : EV ("12", "RFC-3881", "URI")"
+         "", "", "XDSI Retrieve Imaging Document Set RAD-69 case : EV ("12", "RFC-3881", "URI")"
+         "UserTypeCode", "U", "'System' : '5'"
          "AlternativeUserID", "MC", "Process ID of Audit logger"
          "UserIsRequestor", "M", "false"
          "RoleIDCode", "M", "EV (110153, DCM, 'Source')"
@@ -67,6 +74,13 @@ Message Structure
          "", "", "Export case ⇒ 'dicomAETitle of destination'"
          "", "", "WADO RS case ⇒ 'Remote IP address' or 'User name of logged in user'"
          "", "", "XDSI Retrieve Imaging Document Set RAD-69 case ⇒ 'Remote IP address' or 'User name of logged in user'"
+         "UserIDTypeCode", "U", "Q/R Move case : EV ("110119","DCM","Station AE Title")"
+         "", "", "Q/R Get case : EV ("110119","DCM","Station AE Title")"
+         "", "", "Export case : EV ("110119","DCM","Station AE Title")"
+         "", "", "WADO RS case secured archive : EV ("Cp1640-1","DCM","Local User ID")"
+         "", "", "WADO RS case unsecured archive : EV ("110182","DCM","Node ID")"
+         "UserTypeCode", "U", "WADO RS case'Person' : '1'"
+         "", "", "For all other cases : 'System' : '5'"
          "UserIsRequestor", "M", "'true' for all cases except Q/R Move case"
          "RoleIDCode", "M", "EV (110152, DCM, 'Destination')"
          "NetworkAccessPointID", "U", "Hostname/IP Address of calling host"
@@ -78,6 +92,8 @@ Message Structure
    :header: "Field Name", "Opt", "Description"
 
          "UserID", "M", "Application entity title of initiating system"
+         "UserIDTypeCode", "U", "EV ("110119","DCM","Station AE Title")"
+         "UserTypeCode", "U", "'System' : '5'"
          "UserIsRequestor", "M", "true"
          "NetworkAccessPointID", "U", "Hostname/IP Address of initiating system"
          "NetworkAccessPointTypeCode", "U", "'1'⇒'NetworkAccessPointID is host name', '2'⇒'NetworkAccessPointID is an IP address'"
@@ -122,15 +138,19 @@ Sample Message
 
         </EventIdentification>
 
-        <ActiveParticipant UserID="DCM4CHEE" AlternativeUserID="60928" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+        <ActiveParticipant UserID="DCM4CHEE" UserTypeCode="5" AlternativeUserID="60928" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
 
             <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source"/>
 
+            <UserIDTypeCode csd-code="110118" codeSystemName="DCM" originalText="Archive Device AE Titles"/>
+
         </ActiveParticipant>
 
-        <ActiveParticipant UserID="GETSCU" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+        <ActiveParticipant UserID="GETSCU" UserTypeCode="5" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
 
             <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination"/>
+
+            <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
 
         </ActiveParticipant>
 

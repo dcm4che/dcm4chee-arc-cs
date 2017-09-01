@@ -29,6 +29,9 @@ Message Structure
    :header: "Field Name", "Opt", "Description"
 
          "UserID", "M", "Remote IP Address or User name of logged in user"
+         "UserIDTypeCode", "U", "Secured Archive : EV ("Cp1640-1","DCM","Local User ID")"
+         "", "", "Unsecured Archive : EV ("110182","DCM","Node ID")"
+         "UserTypeCode", "U", "'Person' : '1'"
          "AlternativeUserID", "MC", "Process ID of Audit logger"
          "UserIsRequestor", "M", "true"
          "NetworkAccessPointID", "U", "Hostname/IP Address of the connection referenced by Audit logger"
@@ -58,7 +61,11 @@ Sample Message
 
         </EventIdentification>
 
-        <ActiveParticipant UserID="127.0.0.1" AlternativeUserID="5312" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2" />
+        <ActiveParticipant UserID="127.0.0.1" UserTypeCode="1" AlternativeUserID="5312" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+
+            <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
+
+        </ActiveParticipant>
 
         <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
 
