@@ -33,6 +33,8 @@ Message Structure
    :header: "Field Name", "Opt", "Description"
 
          "UserID", "M", "Remote socket address of calling host"
+         "UserIDTypeCode", "U", "EV ("110182","DCM","Node ID")"
+         "UserTypeCode", "U", "'Person' : '1'"
          "UserIsRequestor", "M", "true"
          "NetworkAccessPointID", "U", "Remote socket address of calling host"
          "NetworkAccessPointTypeCode", "U", "2"
@@ -43,6 +45,8 @@ Message Structure
    :header: "Field Name", "Opt", "Description"
 
          "UserID", "M", "Semicolon separated Application Entity Titles of the device"
+         "UserIDTypeCode", "U", "EV ("110118","DCM","Archive Device AE Titles")"
+         "UserTypeCode", "U", "'System' : '5'"
          "AlternativeUserID", "MC", "Process ID of Audit logger"
          "UserIsRequestor", "M", "false"
          "NetworkAccessPointID", "U", "Hostname/IP Address of the connection referenced by Audit logger"
@@ -72,9 +76,17 @@ Sample Message
 
         </EventIdentification>
 
-        <ActiveParticipant UserID="/127.0.0.1:54404" UserIsRequestor="true" NetworkAccessPointID="/127.0.0.1:54404" NetworkAccessPointTypeCode="2" />
+        <ActiveParticipant UserID="/127.0.0.1:54404" "UserTypeCode"="1" UserIsRequestor="true" NetworkAccessPointID="/127.0.0.1:54404" NetworkAccessPointTypeCode="2">
 
-        <ActiveParticipant UserID="DCM4CHEE;DCM4CHEE_ADMIN;DCM4CHEE_TRASH" AlternativeUserID="3390" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1" />
+            <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
+
+        </ActiveParticipant>
+
+        <ActiveParticipant UserID="DCM4CHEE;DCM4CHEE_ADMIN;DCM4CHEE_TRASH" "UserTypeCode"="5" AlternativeUserID="3390" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+
+            <UserIDTypeCode csd-code="110118" codeSystemName="DCM" originalText="Archive Device AE Titles"/>
+
+        </ActiveParticipant>
 
         <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
 

@@ -35,6 +35,8 @@ Message Structure
    :header: "Field Name", "Opt", "Description"
 
          "UserID", "M", "User name of logged in user"
+         "UserIDTypeCode", "U", "EV ("Cp1640-1","DCM","Local User ID")"
+         "UserTypeCode", "U", "'Person' : '1'"
          "UserIsRequestor", "M", "true"
          "NetworkAccessPointID", "U", "IP address of calling user"
          "NetworkAccessPointTypeCode", "U", "2"
@@ -45,6 +47,8 @@ Message Structure
    :header: "Field Name", "Opt", "Description"
 
          "UserID", "M", "Device name of the archive device"
+         "UserIDTypeCode", "U", "EV ("110117","DCM","Archive Device")"
+         "UserTypeCode", "U", "'System' : '5'"
          "AlternativeUserID", "MC", "Process ID of Audit logger"
          "UserIsRequestor", "M", "false"
          "NetworkAccessPointID", "U", "Hostname/IP Address of the connection referenced by Audit logger"
@@ -64,9 +68,17 @@ Sample Message
 
         </EventIdentification>
 
-        <ActiveParticipant UserID="admin" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2" />
+        <ActiveParticipant UserID="admin" "UserTypeCode"="1" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
 
-        <ActiveParticipant UserID="dcm4chee-arc" AlternativeUserID="3390" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1" />
+            <UserIDTypeCode csd-code="Cp1640-1" codeSystemName="DCM" originalText="Local User ID"/>
+
+        </ActiveParticipant>
+
+        <ActiveParticipant UserID="dcm4chee-arc" "UserTypeCode"="5" AlternativeUserID="3390" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+
+            <UserIDTypeCode csd-code="110117" codeSystemName="DCM" originalText="Archive Device"/>
+
+        </ActiveParticipant>
 
         <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
 

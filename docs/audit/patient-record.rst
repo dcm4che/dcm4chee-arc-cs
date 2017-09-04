@@ -41,6 +41,13 @@ Message Structure
          "UserID", "M", "HL7 messages : 'Sending Application and Facility'"
          "", "", "Triggered from UI : 'Remote IP address' or 'User name of logged in user'"
          "", "", "Triggered by object storage : 'Calling AE title in association'"
+         "UserIDTypeCode", "U", "HL7 messages : EV ("110116","DCM","Application and Facility")"
+         "", "", "Triggered from UI (secured archive) : EV ("Cp1640-1","DCM","Local User ID")"
+         "", "", "Triggered from UI (unsecured archive) : EV ("110182","DCM","Node ID")"
+         "", "", "Triggered by object storage : EV ("110119","DCM","Station AE Title")"
+         "UserTypeCode", "U", "HL7 messages : 'Organization' : '3'"
+         "", "", "Triggered from UI : 'Person' : '1'"
+         "", "", "Triggered by object storage : 'System' : '5'"
          "UserIsRequestor", "M", "true"
          "RoleIDCode", "M", "EV (110153, DCM, 'Source')"
          "NetworkAccessPointID", "U", "Hostname/IP Address of calling host"
@@ -55,6 +62,12 @@ Message Structure
          "", "", "Triggered from UI : 'Request URI'"
          "", "", "Triggered by object storage : 'Called AE title in association'"
          "", "", "Triggered by scheduler : 'Semicolon separated Application Entity Titles of the device'"
+         "UserIDTypeCode", "U", "HL7 messages : EV ("110116","DCM","Application and Facility")"
+         "", "", "Triggered from UI : EV ("12", "RFC-3881", "URI")"
+         "", "", "Triggered by object storage : EV ("110118","DCM","Archive Device AE Titles")"
+         "", "", "Triggered by scheduler : EV ("110118","DCM","Archive Device AE Titles")"
+         "UserTypeCode", "U", "HL7 messages : 'Organization' : '3'"
+         "", "", "All other cases : 'System' : '5'"
          "AlternativeUserID", "MC", "Process ID of Audit logger"
          "UserIsRequestor", "M", "Patient deletion triggered by scheduler : 'true'"
          "", "", "All other cases : 'false'"
@@ -88,15 +101,19 @@ Sample Message
 
         </EventIdentification>
 
-        <ActiveParticipant UserID="MESA_OF|XYZ_RADIOLOGY" UserIsRequestor="true" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+        <ActiveParticipant UserID="MESA_OF|XYZ_RADIOLOGY" UserTypeCode="3" UserIsRequestor="true" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
 
             <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source"/>
 
+            <UserIDTypeCode csd-code="110116" codeSystemName="DCM" originalText="Application and Facility"/>
+
         </ActiveParticipant>
 
-        <ActiveParticipant UserID="MESA_IM|XYZ_IMAGE_MANAGER" AlternativeUserID="16577" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+        <ActiveParticipant UserID="MESA_IM|XYZ_IMAGE_MANAGER" UserTypeCode="3" AlternativeUserID="16577" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
 
             <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination"/>
+
+            <UserIDTypeCode csd-code="110116" codeSystemName="DCM" originalText="Application and Facility"/>
 
         </ActiveParticipant>
 

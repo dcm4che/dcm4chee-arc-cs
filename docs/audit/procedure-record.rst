@@ -43,6 +43,13 @@ Message Structure
          "UserID", "M", "HL7 messages : 'Sending Application and Facility'"
          "", "", "Triggered from UI : 'Remote IP address' or 'User name of logged in user'"
          "", "", "Triggered by MPPS : 'Calling AE title in association'"
+         "UserIDTypeCode", "U", "HL7 messages : EV ("110116","DCM","Application and Facility")"
+         "", "", "Triggered from UI (secured archive) : EV ("Cp1640-1","DCM","Local User ID")"
+         "", "", "Triggered from UI (unsecured archive) : EV ("110182","DCM","Node ID")"
+         "", "", "Triggered by MPPS : EV ("110119","DCM","Station AE Title")"
+         "UserTypeCode", "U", "HL7 messages : 'Organization' : '3'"
+         "", "", "Triggered from UI : 'Person' : '1'"
+         "", "", "Triggered by MPPS : 'System' : '5'"
          "UserIsRequestor", "M", "true"
          "NetworkAccessPointID", "U", "Hostname/IP Address of calling host"
          "NetworkAccessPointTypeCode", "U", "'1':'NetworkAccessPointID is host name', '2':'NetworkAccessPointID is an IP address'"
@@ -55,6 +62,11 @@ Message Structure
          "UserID", "M", "HL7 messages : 'Receiving Application and Facility'"
          "", "", "Triggered from UI : 'Request URI'"
          "", "", "Triggered by MPPS : 'Called AE title in association'"
+         "UserIDTypeCode", "U", "HL7 messages : EV ("110116","DCM","Application and Facility")"
+         "", "", "Triggered from UI : EV ("12", "RFC-3881", "URI")"
+         "", "", "Triggered by MPPS : EV ("110118","DCM","Archive Device AE Titles")"
+         "UserTypeCode", "U", "HL7 messages : 'Organization' : '3'"
+         "", "", "All other cases : 'System' : '5'"
          "AlternativeUserID", "MC", "Process ID of Audit logger"
          "UserIsRequestor", "M", "false"
          "NetworkAccessPointID", "U", "Hostname/IP Address of the connection referenced by Audit logger"
@@ -102,9 +114,17 @@ Sample Message
 
         </EventIdentification>
 
-        <ActiveParticipant UserID="MESA_OF|XYZ_RADIOLOGY" UserIsRequestor="true" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1" />
+        <ActiveParticipant UserID="MESA_OF|XYZ_RADIOLOGY" UserTypeCode="3" UserIsRequestor="true" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
 
-        <ActiveParticipant UserID="MESA_IM|XYZ_IMAGE_MANAGER" AlternativeUserID="16577" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1" />
+            <UserIDTypeCode csd-code="110116" codeSystemName="DCM" originalText="Application and Facility"/>
+
+        </ActiveParticipant>
+
+        <ActiveParticipant UserID="MESA_IM|XYZ_IMAGE_MANAGER" UserTypeCode="3" AlternativeUserID="16577" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+
+            <UserIDTypeCode csd-code="110116" codeSystemName="DCM" originalText="Application and Facility"/>
+
+        </ActiveParticipant>
 
         <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
 

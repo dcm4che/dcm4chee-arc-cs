@@ -14,7 +14,7 @@ Message Structure
 
 - :ref:`audit-study-deleted-event`
 - :ref:`audit-study-deleted-active-participant-app` (1) - This active participant is present only in Rejection case
-- :ref:`audit-study-deleted-active-participant-destination` (1)
+- :ref:`audit-study-deleted-active-participant-user` (1)
 - :ref:`audit-general-message-audit-source`
 - :ref:`audit-study-deleted-participant-object-study` (1)
 - :ref:`audit-study-deleted-participant-object-patient` (1)
@@ -36,6 +36,9 @@ Message Structure
    :header: "Field Name", "Opt", "Description"
 
          "UserID", "M", "All Rejected using association ⇒ 'Application entity title of Archive Device used in the association'"
+         "UserIDTypeCode", "U", "Deletion triggered by scheduler : EV ("110118","DCM","Archive Device AE Titles")"
+         "", "", "Deletion triggered using RESTful service : EV ("12", "RFC-3881", "URI")"
+         "UserTypeCode", "U", "'System' : '5'"
          "", "", "All Rejected using archive UI ⇒ 'Invoked URL'"
          "", "", "Deletion by Scheduler case ⇒ 'AETs of archive device'"
          "AlternativeUserID", "MC", "Process ID of Audit logger"
@@ -45,12 +48,17 @@ Message Structure
          "NetworkAccessPointTypeCode", "U", "'1'⇒'NetworkAccessPointID is host name', '2'⇒'NetworkAccessPointID is an IP address'"
 
 .. csv-table:: Active Participant: Destination
-   :name: audit-study-deleted-active-participant-destination
+   :name: audit-study-deleted-active-participant-user
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
          "UserID", "M", "All Rejected using association ⇒ 'Application entity title of initiating system'"
          "", "", "All Rejected using archive UI ⇒ 'Remote IP address' or 'User name of logged in user'"
+         "UserIDTypeCode", "U", "Deletion triggered using archive UI (Secured archive) : EV ("Cp1640-1","DCM","Local User ID")"
+         "", "", "Deletion triggered using archive UI (Unsecured archive) : EV ("110182","DCM","Node ID")"
+         "", "", "Deletion triggered using association : EV ("110119","DCM","Station AE Title")"
+         "UserTypeCode", "U", "Deletion triggered using archive UI : 'Person' : '1'"
+         "", "", "Deletion triggered using association : 'System' : '5'"
          "UserIsRequestor", "M", "true"
          "NetworkAccessPointID", "U", "Hostname/IP Address of calling host"
          "NetworkAccessPointTypeCode", "U", "'1'⇒'NetworkAccessPointID is host name', '2'⇒'NetworkAccessPointID is an IP address'"
@@ -98,10 +106,18 @@ Sample Message
 
         </EventIdentification>
 
-        <ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2"/>
+        <ActiveParticipant UserID="127.0.0.1" UserTypeCode="1" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+
+            <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
+
+        </ActiveParticipant>
 
         <ActiveParticipant UserID="/dcm4chee-arc/aets/DCM4CHEE/rs/studies/2.25.118006535449293656175716160619600634776/reject/113039%5EDCM"
-        AlternativeUserID="2716" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1"/>
+        AlternativeUserID="2716" UserIsRequestor="false" NetworkAccessPointID="localhost" UserTypeCode="5" NetworkAccessPointTypeCode="1">
+
+            <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
+
+        </ActiveParticipant>
 
         <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
 
