@@ -116,17 +116,17 @@ Study Root Query/Retrieve Information Model - MOVE and of supported Storage SOP 
    | | Study Root Query/Retrieve   | 1.2.840.10008.5.1.4.1.2.2.2 | Implicit VR Little Endian          | 1.2.840.10008.1.2       | SCU  | None      |
    | | Information Model - MOVE    |                             |                                    |                         |      |           |
    +-------------------------------+-----------------------------+------------------------------------+-------------------------+------+-----------+
-   | | Image Storage SOP Class in :numref:`SOPClasses2`          | s. :numref:`SCUImageTS`                                      | SCU  | None      |
+   | | Image Storage SOP Class in :ref:`SOPClasses2`             | s. :ref:`SCUImageTS`                                         | SCU  | None      |
    +-------------------------------------------------------------+--------------------------------------------------------------+------+-----------+
-   | | Video Storage SOP Class in :numref:`SOPClasses2`          | s. :numref:`SCUVideoTS`                                      | SCU  | None      |
+   | | Video Storage SOP Class in :ref:`SOPClasses2`             | s. :ref:`SCUVideoTS`                                         | SCU  | None      |
    +-------------------------------------------------------------+------------------------------------+-------------------------+------+-----------+
-   | | SR Storage SOP Class in :numref:`SOPClasses2`             | Implicit VR Little Endian          | 1.2.840.10008.1.2       | SCU  | None      |
+   | | SR Storage SOP Class in :ref:`SOPClasses2`                | Implicit VR Little Endian          | 1.2.840.10008.1.2       | SCU  | None      |
    |                                                             +------------------------------------+-------------------------+      |           |
    |                                                             | Explicit VR Little Endian          | 1.2.840.10008.1.2.1     |      |           |
    |                                                             +------------------------------------+-------------------------+      |           |
    |                                                             | Deflated Explicit VR Little Endian | 1.2.840.10008.1.2.1.99  |      |           |
    +-------------------------------------------------------------+------------------------------------+-------------------------+------+-----------+
-   | | Other Storage SOP Class in :numref:`SOPClasses2`          | Implicit VR Little Endian          | 1.2.840.10008.1.2       | SCU  | None      |
+   | | Other Storage SOP Class in :ref:`SOPClasses2`             | Implicit VR Little Endian          | 1.2.840.10008.1.2       | SCU  | None      |
    |                                                             +------------------------------------+-------------------------+      |           |
    |                                                             | Explicit VR Little Endian          | 1.2.840.10008.1.2.1     |      |           |
    +-------------------------------------------------------------+------------------------------------+-------------------------+------+-----------+
@@ -243,18 +243,18 @@ The list of accepted Transfer Syntaxes for each accepted Abstract Syntax - as th
    | | Study Root Query/Retrieve     | 1.2.840.10008.5.1.4.1.2.2.3 | Implicit VR Little Endian          | 1.2.840.10008.1.2       | SCP  | - Relational |
    | | Information Model - GET       |                             |                                    |                         |      |              |
    +---------------------------------+-----------------------------+------------------------------------+-------------------------+------+--------------+
-   | | Image Storage SOP Class listed in :numref:`SOPClasses2`     | s. :numref:`SCUImageTS`                                      | SCU  | None         |
+   | | Image Storage SOP Class listed in :ref:`SOPClasses2`        | s. :ref:`SCUImageTS`                                         | SCU  | None         |
    +---------------------------------------------------------------+--------------------------------------------------------------+------+--------------+
-   | | Any Video Storage SOP Class listed in :numref:`SOPClasses2` | s. :numref:`SCUVideoTS`                                      | SCU  | None         |
+   | | Any Video Storage SOP Class listed in :ref:`SOPClasses2`    | s. :ref:`SCUVideoTS`                                         | SCU  | None         |
    +---------------------------------------------------------------+------------------------------------+-------------------------+------+--------------+
-   | | SR Storage SOP Class listed in :numref:`SOPClasses2`        | Implicit VR Little Endian          | 1.2.840.10008.1.2       | SCU  | None         |
+   | | SR Storage SOP Class listed in :ref:`SOPClasses2`           | Implicit VR Little Endian          | 1.2.840.10008.1.2       | SCU  | None         |
    |                                                               +------------------------------------+-------------------------+      |              |
    |                                                               | Explicit VR Little Endian          | 1.2.840.10008.1.2.1     |      |              |
    |                                                               +------------------------------------+-------------------------+      |              |
    |                                                               | Deflated Explicit VR               | 1.2.840.10008.1.2.1.99  |      |              |
    |                                                               | Little Endian                      |                         |      |              |
    +---------------------------------------------------------------+------------------------------------+-------------------------+------+--------------+
-   | | Other Storage SOP Class listed in :numref:`SOPClasses2`     | Implicit VR Little Endian          | 1.2.840.10008.1.2       | SCU  | None         |
+   | | Other Storage SOP Class listed in :ref:`SOPClasses2`        | Implicit VR Little Endian          | 1.2.840.10008.1.2       | SCU  | None         |
    |                                                               +------------------------------------+-------------------------+      |              |
    |                                                               | Explicit VR Little Endian          | 1.2.840.10008.1.2.1     |      |              |
    +---------------------------------------------------------------+------------------------------------+-------------------------+------+--------------+

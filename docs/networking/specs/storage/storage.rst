@@ -199,17 +199,17 @@ The list of accepted Transfer Syntaxes for each accepted Abstract Syntax - as th
    +-------------------------------+----------------------+------------------------------------+------------------------+------+-----------+
    | Storage Commitment Push Model | 1.2.840.10008.1.20.1 | Implicit VR Little Endian          | 1.2.840.10008.1.2      | SCP  | None      |
    +-------------------------------+----------------------+------------------------------------+------------------------+------+-----------+
-   | Image Storage SOP Classes in :numref:`SOPClasses`    | see :numref:`SCPImageTS`                                    | SCP  | None      |
+   | Image Storage SOP Classes in :ref:`SOPClasses`       | see :ref:`SCPImageTS`                                       | SCP  | None      |
    +------------------------------------------------------+-------------------------------------------------------------+------+-----------+
-   | Video Storage SOP Classes in :numref:`SOPClasses`    | see :numref:`SCPVideoTS`                                    | SCP  | None      |
+   | Video Storage SOP Classes in :ref:`SOPClasses`       | see :ref:`SCPVideoTS`                                       | SCP  | None      |
    +------------------------------------------------------+------------------------------------+------------------------+------+-----------+
-   | SR Storage SOP Classes in :numref:`SOPClasses`       | Implicit VR Little Endian          | 1.2.840.10008.1.2      | SCP  | None      |
+   | SR Storage SOP Classes in :ref:`SOPClasses`          | Implicit VR Little Endian          | 1.2.840.10008.1.2      | SCP  | None      |
    |                                                      +------------------------------------+------------------------+      |           |
    |                                                      | Explicit VR Little Endian          | 1.2.840.10008.1.2.1    |      |           |
    |                                                      +------------------------------------+------------------------+      |           |
    |                                                      | Deflated Explicit VR Little Endian | 1.2.840.10008.1.2.1.99 |      |           |
    +------------------------------------------------------+------------------------------------+------------------------+------+-----------+
-   | Other Storage SOP Classes in :numref:`SOPClasses`    | Implicit VR Little Endian          | 1.2.840.10008.1.2      | SCP  | None      |
+   | Other Storage SOP Classes in :ref:`SOPClasses`       | Implicit VR Little Endian          | 1.2.840.10008.1.2      | SCP  | None      |
    |                                                      +------------------------------------+------------------------+      |           |
    |                                                      | Explicit VR Little Endian          | 1.2.840.10008.1.2.1    |      |           |
    +------------------------------------------------------+------------------------------------+------------------------+------+-----------+
