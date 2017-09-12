@@ -128,66 +128,67 @@ Message Structure
 Sample Message
 --------------
 
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+.. code-block:: xml
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 
-    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+        <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
 
-        <EventIdentification EventActionCode="E" EventDateTime="2016-06-21T10:22:00.634+02:00" EventOutcomeIndicator="0">
+            <EventIdentification EventActionCode="E" EventDateTime="2016-06-21T10:22:00.634+02:00" EventOutcomeIndicator="0">
 
-            <EventID csd-code="110102" codeSystemName="DCM" originalText="Begin Transferring DICOM Instances"/>
+                <EventID csd-code="110102" codeSystemName="DCM" originalText="Begin Transferring DICOM Instances"/>
 
-        </EventIdentification>
+            </EventIdentification>
 
-        <ActiveParticipant UserID="DCM4CHEE" UserTypeCode="5" AlternativeUserID="60928" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <ActiveParticipant UserID="DCM4CHEE" UserTypeCode="5" AlternativeUserID="60928" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
 
-            <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source"/>
+                <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source"/>
 
-            <UserIDTypeCode csd-code="110118" codeSystemName="DCM" originalText="Archive Device AE Titles"/>
+                <UserIDTypeCode csd-code="110118" codeSystemName="DCM" originalText="Archive Device AE Titles"/>
 
-        </ActiveParticipant>
+            </ActiveParticipant>
 
-        <ActiveParticipant UserID="GETSCU" UserTypeCode="5" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+            <ActiveParticipant UserID="GETSCU" UserTypeCode="5" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
 
-            <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination"/>
+                <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination"/>
 
-            <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
+                <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
 
-        </ActiveParticipant>
+            </ActiveParticipant>
 
-        <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+            <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
 
-            <AuditSourceTypeCode csd-code="4"/>
+                <AuditSourceTypeCode csd-code="4"/>
 
-        </AuditSourceIdentification>
+            </AuditSourceIdentification>
 
-        <ParticipantObjectIdentification ParticipantObjectID="1.3.12.2.1107.5.2.33.37113.30000008060311320917100000013" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+            <ParticipantObjectIdentification ParticipantObjectID="1.3.12.2.1107.5.2.33.37113.30000008060311320917100000013" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
 
-            <ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM"/>
+                <ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM"/>
 
-            <ParticipantObjectDetail type="StudyDate" value="MjAwODA3MTY="/>
+                <ParticipantObjectDetail type="StudyDate" value="MjAwODA3MTY="/>
 
-            <ParticipantObjectDescription>
+                <ParticipantObjectDescription>
 
-                <SOPClass UID="1.2.840.10008.5.1.4.1.1.88.22" NumberOfInstances="4"/>
+                    <SOPClass UID="1.2.840.10008.5.1.4.1.1.88.22" NumberOfInstances="4"/>
 
-                <SOPClass UID="1.2.840.10008.5.1.4.1.1.4" NumberOfInstances="2"/>
+                    <SOPClass UID="1.2.840.10008.5.1.4.1.1.4" NumberOfInstances="2"/>
 
-                <ParticipantObjectContainsStudy>
+                    <ParticipantObjectContainsStudy>
 
-                    <StudyIDs UID="1.3.12.2.1107.5.2.33.37113.30000008060311320917100000013"/>
+                        <StudyIDs UID="1.3.12.2.1107.5.2.33.37113.30000008060311320917100000013"/>
 
-                </ParticipantObjectContainsStudy>
+                    </ParticipantObjectContainsStudy>
 
-            </ParticipantObjectDescription>
+                </ParticipantObjectDescription>
 
-        </ParticipantObjectIdentification>
+            </ParticipantObjectIdentification>
 
-        <ParticipantObjectIdentification ParticipantObjectID="P5^^^ISSUER" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+            <ParticipantObjectIdentification ParticipantObjectID="P5^^^ISSUER" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
 
-            <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
+                <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
 
-            <ParticipantObjectName>TEST^Name</ParticipantObjectName>
+                <ParticipantObjectName>TEST^Name</ParticipantObjectName>
 
-        </ParticipantObjectIdentification>
+            </ParticipantObjectIdentification>
 
-    </AuditMessage>
+        </AuditMessage>
