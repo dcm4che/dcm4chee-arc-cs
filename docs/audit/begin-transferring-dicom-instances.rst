@@ -129,6 +129,7 @@ Sample Message
 --------------
 
 .. code-block:: xml
+   :linenos: 133-195
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 
         <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
