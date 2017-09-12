@@ -128,5 +128,5 @@ Message Structure
 Sample XML Message
 ------------------
 
-.. include:: begin.xml
+.. include:: begin-transferring-dicom-instances.xml
    :code: xml

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+
+    <EventIdentification EventActionCode="E" EventDateTime="2017-07-10T10:30:17.651+02:00" EventOutcomeIndicator="0">
+
+        <EventID csd-code="110100" codeSystemName="DCM" originalText="Application Activity"/>
+
+        <EventTypeCode csd-code="110120" codeSystemName="DCM" originalText="Application Start"/>
+
+    </EventIdentification>
+
+    <ActiveParticipant UserID="DCM4CHEE;DCM4CHEE_ADMIN;DCM4CHEE_TRASH" UserTypeCode="5" AlternativeUserID="5289" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+
+        <RoleIDCode csd-code="110150" codeSystemName="DCM" originalText="Application"/>
+
+        <UserIDTypeCode csd-code="110118" codeSystemName="DCM" originalText="Archive Device AE Titles"/>
+
+    </ActiveParticipant>
+
+    <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+
+        <AuditSourceTypeCode csd-code="4"/>
+
+    </AuditSourceIdentification>
+
+</AuditMessage>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+
+    <EventIdentification EventActionCode="D" EventDateTime="2017-07-17T12:17:44.888+02:00" EventOutcomeIndicator="0">
+
+        <EventID csd-code="110105" codeSystemName="DCM" originalText="DICOM Study Deleted"/>
+
+        <EventOutcomeDescription>Data Retention Policy Expired</EventOutcomeDescription>
+
+    </EventIdentification>
+
+    <ActiveParticipant UserID="127.0.0.1" UserTypeCode="1" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+
+        <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
+
+    </ActiveParticipant>
+
+    <ActiveParticipant UserID="/dcm4chee-arc/aets/DCM4CHEE/rs/studies/2.25.118006535449293656175716160619600634776/reject/113039%5EDCM"
+                       AlternativeUserID="2716" UserIsRequestor="false" NetworkAccessPointID="localhost" UserTypeCode="5" NetworkAccessPointTypeCode="1">
+
+        <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
+
+    </ActiveParticipant>
+
+    <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+
+        <AuditSourceTypeCode csd-code="4"/>
+
+    </AuditSourceIdentification>
+
+    <ParticipantObjectIdentification ParticipantObjectID="2.25.118006535449293656175716160619600634776"
+                                     ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+
+        <ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM"/>
+
+        <ParticipantObjectDescription>
+
+            <Accession Number="2008/004113"/>
+
+            <SOPClass UID="1.2.840.10008.5.1.4.1.1.1" NumberOfInstances="1"/>
+
+            <ParticipantObjectContainsStudy>
+
+                <StudyIDs UID="2.25.118006535449293656175716160619600634776"/>
+
+            </ParticipantObjectContainsStudy>
+
+        </ParticipantObjectDescription>
+
+    </ParticipantObjectIdentification>
+
+    <ParticipantObjectIdentification ParticipantObjectID="P5^^^ISSUER" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+
+        <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
+
+        <ParticipantObjectName>TEST^Name</ParticipantObjectName>
+
+    </ParticipantObjectIdentification>
+
+</AuditMessage>

@@ -58,32 +58,5 @@ Message Structure
 Sample Message
 --------------
 
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-
-    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-
-        <EventIdentification EventActionCode="E" EventDateTime="2017-01-26T17:28:59.553+01:00" EventOutcomeIndicator="0">
-
-            <EventID csd-code="110122" codeSystemName="DCM" originalText="Login"/>
-
-        </EventIdentification>
-
-        <ActiveParticipant UserID="admin" "UserTypeCode"="1" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
-
-            <UserIDTypeCode csd-code="Cp1640-1" codeSystemName="DCM" originalText="Local User ID"/>
-
-        </ActiveParticipant>
-
-        <ActiveParticipant UserID="dcm4chee-arc" "UserTypeCode"="5" AlternativeUserID="3390" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-
-            <UserIDTypeCode csd-code="110117" codeSystemName="DCM" originalText="Archive Device"/>
-
-        </ActiveParticipant>
-
-        <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
-
-            <AuditSourceTypeCode csd-code="4"/>
-
-        </AuditSourceIdentification>
-
-    </AuditMessage>
+.. include:: user-authentication.xml
+   :code: xml

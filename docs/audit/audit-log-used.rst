@@ -51,34 +51,5 @@ Message Structure
 Sample Message
 --------------
 
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-
-    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-
-        <EventIdentification EventActionCode="R" EventDateTime="2017-01-27T14:46:32.670+01:00" EventOutcomeIndicator="0">
-
-            <EventID csd-code="110101" codeSystemName="DCM" originalText="Audit Log Used"/>
-
-        </EventIdentification>
-
-        <ActiveParticipant UserID="127.0.0.1" UserTypeCode="1" AlternativeUserID="5312" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
-
-            <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
-
-        </ActiveParticipant>
-
-        <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
-
-            <AuditSourceTypeCode csd-code="4"/>
-
-        </AuditSourceIdentification>
-
-        <ParticipantObjectIdentification ParticipantObjectID="http://archive2:5601" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="13">
-
-            <ParticipantObjectIDTypeCode csd-code="12" originalText="URI" codeSystemName="RFC-3881" />
-
-            <ParticipantObjectName>Security Audit Log</ParticipantObjectName>
-
-       </ParticipantObjectIdentification>
-
-    </AuditMessage>
+.. include:: audit-log-used.xml
+   :code: xml
