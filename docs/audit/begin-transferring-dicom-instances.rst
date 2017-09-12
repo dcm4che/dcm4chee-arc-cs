@@ -125,8 +125,8 @@ Message Structure
          "ParticipantObjectName", "U", "Patient Name"
 
 
-Sample XML Message
-------------------
+Sample Message
+--------------
 
 .. include:: begin-transferring-dicom-instances.xml
    :code: xml
