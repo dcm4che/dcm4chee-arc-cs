@@ -125,7 +125,8 @@ Message Structure
          "ParticipantObjectName", "U", "Patient Name"
 
 
-Sample Include
---------------
+Sample XML Message
+------------------
 
-.. include: begin.txt
+.. include:: begin.xml
+   :code: xml
