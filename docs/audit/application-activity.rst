@@ -33,9 +33,9 @@ Message Structure
    :header: "Field Name", "Opt", "Description"
 
          "UserID", "M", "Application entity titles of Archive Device as ; separated values"
-         "UserIDTypeCode", "U", "Application startup/shutdown or archive deploy/undeploy : EV ("110118","DCM","Archive Device AE Titles")"
+         "UserIDTypeCode", "U", "Application startup/shutdown or archive deploy/undeploy : EV ("113877","DCM","Device Name")"
          "", "", "Triggered from UI : EV ("12", "RFC-3881", "URI")"
-         "UserTypeCode", "U", "'System' : '5'"
+         "UserTypeCode", "U", "'Application' : '2'"
          "AlternativeUserID", "MC", "Process ID of Audit logger"
          "UserIsRequestor", "M", "false"
          "RoleIDCode", "M", "EV (110150, DCM, 'Application')"
@@ -48,7 +48,7 @@ Message Structure
    :header: "Field Name", "Opt", "Description"
 
          "UserID", "M", "Remote IP address for unsecured version of archive; User name for secured version of archive"
-         "UserIDTypeCode", "U", "Secured Archive : EV ("Cp1640-1","DCM","Local User ID")"
+         "UserIDTypeCode", "U", "Secured Archive : EV ("113871","DCM","Person ID")"
          "", "", "Unsecured Archive : EV ("110182","DCM","Node ID")"
          "UserTypeCode", "U", "'Person' : '1'"
          "UserIsRequestor", "M", "true"

@@ -44,9 +44,9 @@ Message Structure
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
-         "UserID", "M", "Semicolon separated Application Entity Titles of the device"
-         "UserIDTypeCode", "U", "EV ("110118","DCM","Archive Device AE Titles")"
-         "UserTypeCode", "U", "'System' : '5'"
+         "UserID", "M", "Archive device name"
+         "UserIDTypeCode", "U", "EV ("113877","DCM","Device Name")"
+         "UserTypeCode", "U", "'Application' : '2'"
          "AlternativeUserID", "MC", "Process ID of Audit logger"
          "UserIsRequestor", "M", "false"
          "NetworkAccessPointID", "U", "Hostname/IP Address of the connection referenced by Audit logger"

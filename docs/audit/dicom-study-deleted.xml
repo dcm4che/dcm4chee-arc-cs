@@ -17,7 +17,7 @@
     </ActiveParticipant>
 
     <ActiveParticipant UserID="/dcm4chee-arc/aets/DCM4CHEE/rs/studies/2.25.118006535449293656175716160619600634776/reject/113039%5EDCM"
-                       AlternativeUserID="2716" UserIsRequestor="false" NetworkAccessPointID="localhost" UserTypeCode="5" NetworkAccessPointTypeCode="1">
+                       AlternativeUserID="2716" UserIsRequestor="false" NetworkAccessPointID="localhost" UserTypeCode="2" NetworkAccessPointTypeCode="1">
 
         <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
 

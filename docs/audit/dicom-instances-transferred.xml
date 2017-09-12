@@ -8,15 +8,15 @@
 
     </EventIdentification>
 
-    <ActiveParticipant UserID="DCM4CHEE" UserTypeCode="5" AlternativeUserID="60928" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    <ActiveParticipant UserID="DCM4CHEE" UserTypeCode="2" AlternativeUserID="60928" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
 
         <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source"/>
 
-        <UserIDTypeCode csd-code="110118" codeSystemName="DCM" originalText="Archive Device AE Titles"/>
+        <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
 
     </ActiveParticipant>
 
-    <ActiveParticipant UserID="GETSCU" UserTypeCode="5" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+    <ActiveParticipant UserID="GETSCU" UserTypeCode="2" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
 
         <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination"/>
 

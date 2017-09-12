@@ -35,7 +35,7 @@ Message Structure
    :header: "Field Name", "Opt", "Description"
 
          "UserID", "M", "User name of logged in user"
-         "UserIDTypeCode", "U", "EV ("Cp1640-1","DCM","Local User ID")"
+         "UserIDTypeCode", "U", "EV ("113871","DCM","Person ID")"
          "UserTypeCode", "U", "'Person' : '1'"
          "UserIsRequestor", "M", "true"
          "NetworkAccessPointID", "U", "IP address of calling user"
@@ -47,8 +47,8 @@ Message Structure
    :header: "Field Name", "Opt", "Description"
 
          "UserID", "M", "Device name of the archive device"
-         "UserIDTypeCode", "U", "EV ("110117","DCM","Archive Device")"
-         "UserTypeCode", "U", "'System' : '5'"
+         "UserIDTypeCode", "U", "EV ("113877","DCM","Device Name")"
+         "UserTypeCode", "U", "'Application' : '2'"
          "AlternativeUserID", "MC", "Process ID of Audit logger"
          "UserIsRequestor", "M", "false"
          "NetworkAccessPointID", "U", "Hostname/IP Address of the connection referenced by Audit logger"

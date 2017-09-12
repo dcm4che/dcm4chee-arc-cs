@@ -29,11 +29,12 @@ Message Structure
 .. csv-table:: Active Participant
    :name: audit-general-message-active-participant
    :widths: 30, 5, 65
-   :header: "Field Name", "Opt", "Description"
+   :header: "Field Name", "Opt", "Description", "Additional Conditions on Field Format/Value"
 
    "UserID", "M", "Unique identifier for the user actively participating in the event."
    "UserIDTypeCode", "U", "Describes the identifier that is contained in User ID."
-   "UserTypeCode", "U", "Code for the type of the user. This value is distinct from the user's role(s)."
+   "UserTypeCode", "U", "Code for the type of the user. This value is distinct from the user's role(s).", "'1'⇒'Person'"
+   "", "", "", "'2'⇒'Application'"
    "AlternativeUserID", "U", "Alternative unique identifier for the user."
    "UserName", "U", "The human-meaningful name for the user."
    "UserIsRequestor", "M", "Indicator that the user is or is not the requestor, or initiator, for the event being audited."

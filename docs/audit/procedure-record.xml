@@ -8,15 +8,15 @@
 
     </EventIdentification>
 
-    <ActiveParticipant UserID="MESA_OF|XYZ_RADIOLOGY" UserTypeCode="3" UserIsRequestor="true" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    <ActiveParticipant UserID="MESA_OF|XYZ_RADIOLOGY" UserTypeCode="2" UserIsRequestor="true" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
 
-        <UserIDTypeCode csd-code="110116" codeSystemName="DCM" originalText="Application and Facility"/>
+        <UserIDTypeCode csd-code="HL7APP" codeSystemName="99DCM4CHEE" originalText="Application and Facility"/>
 
     </ActiveParticipant>
 
-    <ActiveParticipant UserID="MESA_IM|XYZ_IMAGE_MANAGER" UserTypeCode="3" AlternativeUserID="16577" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    <ActiveParticipant UserID="MESA_IM|XYZ_IMAGE_MANAGER" UserTypeCode="2" AlternativeUserID="16577" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
 
-        <UserIDTypeCode csd-code="110116" codeSystemName="DCM" originalText="Application and Facility"/>
+        <UserIDTypeCode csd-code="HL7APP" codeSystemName="99DCM4CHEE" originalText="Application and Facility"/>
 
     </ActiveParticipant>
 

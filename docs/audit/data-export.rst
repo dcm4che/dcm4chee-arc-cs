@@ -35,7 +35,7 @@ Message Structure
 
          "UserID", "M", "Secured archive : User name for secured version of archive"
          "", "", "Unsecured archive : Remote IP address for unsecured version of archive"
-         "UserIDTypeCode", "U", "Secured archive : EV ("Cp1640-1","DCM","Local User ID")"
+         "UserIDTypeCode", "U", "Secured archive : EV ("113871","DCM","Person ID")"
          "", "", "Unsecured archive : ("110182","DCM","Node ID")"
          "UserTypeCode", "U", "'Person' : '1'"
          "AlternativeUserID", "MC", "Process ID of Audit logger"
@@ -48,11 +48,11 @@ Message Structure
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
-         "UserID", "M", "Triggered by scheduler : Semicolon separated Application Entity Titles of the device"
+         "UserID", "M", "Triggered by scheduler : Archive device name"
          "", "", "Triggered from UI : Invoked URL"
-         "UserIDTypeCode", "U", "Triggered by scheduler : EV ("110118","DCM","Archive Device AE Titles")"
+         "UserIDTypeCode", "U", "Triggered by scheduler : EV ("113877","DCM","Device Name")"
          "", "", "Triggered from UI : EV ("12", "RFC-3881", "URI")"
-         "UserTypeCode", "U", "'System' : '5'"
+         "UserTypeCode", "U", "'Application' : '2'"
          "AlternativeUserID", "MC", "Process ID of Audit logger"
          "UserIsRequestor", "M", "Triggered by scheduler : 'true'"
          "", "", "Triggered by UI : 'false'"
@@ -67,7 +67,7 @@ Message Structure
 
          "UserID", "M", "The URI configured in XDSI Exporter in archive configuration"
          "UserIDTypeCode", "U", "EV ("12", "RFC-3881", "URI")"
-         "UserTypeCode", "U", "'System' : '5'"
+         "UserTypeCode", "U", "'Application' : '2'"
          "UserIsRequestor", "M", "false"
          "RoleIDCode", "M", "EV (110152, DCM, 'Destination')"
          "NetworkAccessPointID", "U", "Hostname/IP Address present in the URI configured in XDSI Exporter in archive configuration"

@@ -10,15 +10,15 @@
 
     </EventIdentification>
 
-    <ActiveParticipant UserID="DCM4CHEE;DCM4CHEE_ADMIN;DCM4CHEE_TRASH" UserTypeCode="5" AlternativeUserID="60928" UserIsRequestor="true" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    <ActiveParticipant UserID="dcm4chee-arc" UserTypeCode="2" AlternativeUserID="60928" UserIsRequestor="true" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
 
         <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source"/>
 
-        <UserIDTypeCode csd-code="110118" codeSystemName="DCM" originalText="Archive Device AE Titles"/>
+        <UserIDTypeCode csd-code="113877" codeSystemName="DCM" originalText="Device Name"/>
 
     </ActiveParticipant>
 
-    <ActiveParticipant UserID="xds-i:http://localhost:8081/xdstools4/sim/pacs__rr/rep/prb" UserTypeCode="5" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    <ActiveParticipant UserID="xds-i:http://localhost:8081/xdstools4/sim/pacs__rr/rep/prb" UserTypeCode="2" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
 
         <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination"/>
 

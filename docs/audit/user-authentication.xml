@@ -10,13 +10,13 @@
 
     <ActiveParticipant UserID="admin" UserTypeCode="1" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
 
-        <UserIDTypeCode csd-code="Cp1640-1" codeSystemName="DCM" originalText="Local User ID"/>
+        <UserIDTypeCode csd-code="113871" codeSystemName="DCM" originalText="Person ID"/>
 
     </ActiveParticipant>
 
-    <ActiveParticipant UserID="dcm4chee-arc" UserTypeCode="5" AlternativeUserID="3390" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    <ActiveParticipant UserID="dcm4chee-arc" UserTypeCode="2" AlternativeUserID="3390" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
 
-        <UserIDTypeCode csd-code="110117" codeSystemName="DCM" originalText="Archive Device"/>
+        <UserIDTypeCode csd-code="113877" codeSystemName="DCM" originalText="Device Name"/>
 
     </ActiveParticipant>
 

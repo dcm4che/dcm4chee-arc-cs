@@ -29,7 +29,7 @@ Message Structure
    :header: "Field Name", "Opt", "Description"
 
          "UserID", "M", "Remote IP Address or User name of logged in user"
-         "UserIDTypeCode", "U", "Secured Archive : EV ("Cp1640-1","DCM","Local User ID")"
+         "UserIDTypeCode", "U", "Secured Archive : EV ("113871","DCM","Person ID")"
          "", "", "Unsecured Archive : EV ("110182","DCM","Node ID")"
          "UserTypeCode", "U", "'Person' : '1'"
          "AlternativeUserID", "MC", "Process ID of Audit logger"
