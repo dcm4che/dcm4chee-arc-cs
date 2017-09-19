@@ -10,14 +10,16 @@ when establishing a secure communications channel.
 Message Structure
 -----------------
 
-- :ref:`audit-security-alert-event`
-- :ref:`audit-security-alert-active-participant-source` (1)
-- :ref:`audit-security-alert-active-participant-destination` (1)
-- :ref:`audit-general-message-audit-source`
-- :ref:`audit-security-alert-participant-object` (1)
+.. csv-table:: Supported Entities in Security Alert Audit Message
 
-.. csv-table:: Event: Security Alert
-   :name: audit-security-alert-event
+    :ref:`event-identification-security-alert`
+    :ref:`active-participant-initiator-security-alert`
+    :ref:`active-participant-archive-security-alert`
+    :ref:`audit-general-message-audit-source`
+    :ref:`participant-object-security-alert`
+
+.. csv-table:: Event Identification
+   :name: event-identification-security-alert
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
@@ -28,24 +30,24 @@ Message Structure
          "EventOutcomeDescription", "M", "Error/Exception message"
 
 .. csv-table:: Active Participant: Source
-   :name: audit-security-alert-active-participant-source
+   :name: active-participant-initiator-security-alert
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
          "UserID", "M", "Remote socket address of calling host"
-         "UserIDTypeCode", "U", "EV ("110182","DCM","Node ID")"
+         "UserIDTypeCode", "U", "EV (110182, DCM, 'Node ID')"
          "UserTypeCode", "U", "'Person' : '1'"
          "UserIsRequestor", "M", "true"
          "NetworkAccessPointID", "U", "Remote socket address of calling host"
          "NetworkAccessPointTypeCode", "U", "2"
 
 .. csv-table:: Active Participant: Archive application
-   :name: audit-security-alert-active-participant-destination
+   :name: active-participant-archive-security-alert
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
          "UserID", "M", "Archive device name"
-         "UserIDTypeCode", "U", "EV ("113877","DCM","Device Name")"
+         "UserIDTypeCode", "U", "EV (113877, DCM, 'Device Name')"
          "UserTypeCode", "U", "'Application' : '2'"
          "AlternativeUserID", "MC", "Process ID of Audit logger"
          "UserIsRequestor", "M", "false"
@@ -53,7 +55,7 @@ Message Structure
          "NetworkAccessPointTypeCode", "U", "'1':'NetworkAccessPointID is host name', '2':'NetworkAccessPointID is an IP address'"
 
 .. csv-table:: Participant Object Identification
-   :name: audit-security-alert-participant-object
+   :name: participant-object-security-alert
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
@@ -64,5 +66,30 @@ Message Structure
 Sample Message
 --------------
 
-.. include:: security-alert.xml
-   :code: xml
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+    
+        <EventIdentification EventActionCode="E" EventDateTime="2016-06-17T10:35:49.560+02:00" EventOutcomeIndicator="4">
+            <EventID csd-code="110113" codeSystemName="DCM" originalText="Node Authentication"/>
+            <EventOutcomeDescription>null cert chain</EventOutcomeDescription>
+        </EventIdentification>
+    
+        <ActiveParticipant UserID="/127.0.0.1:54404" UserTypeCode="1" UserIsRequestor="true" NetworkAccessPointID="/127.0.0.1:54404" NetworkAccessPointTypeCode="2">
+            <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
+        </ActiveParticipant>
+    
+        <ActiveParticipant UserID="dcm4chee-arc" UserTypeCode="2" AlternativeUserID="3390" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <UserIDTypeCode csd-code="113877" codeSystemName="DCM" originalText="Device Name"/>
+        </ActiveParticipant>
+    
+        <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+            <AuditSourceTypeCode csd-code="4"/>
+        </AuditSourceIdentification>
+    
+        <ParticipantObjectIdentification ParticipantObjectID="/127.0.0.1:54404" ParticipantObjectTypeCode="2">
+            <ParticipantObjectIDTypeCode csd-code="110182" originalText="Node ID" codeSystemName="DCM"/>
+        </ParticipantObjectIdentification>
+    
+    </AuditMessage>

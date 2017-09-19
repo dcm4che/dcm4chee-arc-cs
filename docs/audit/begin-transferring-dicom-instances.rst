@@ -16,16 +16,18 @@ This message is emitted by the archive in following cases :
 Message Structure
 -----------------
 
-- :ref:`audit-begin-transferring-event`
-- :ref:`audit-begin-transferring-active-participant-app` (1)
-- :ref:`audit-begin-transferring-active-participant-destination` (1)
-- :ref:`audit-begin-transferring-active-participant-other` (1) - This active participant is present only in the Q/R Move case.
-- :ref:`audit-general-message-audit-source`
-- :ref:`audit-begin-transferring-participant-object-study` (0..1)
-- :ref:`audit-begin-transferring-participant-object-patient` (1)
+.. csv-table:: Supported Entities in Begin Transferring DICOM Instances Audit Message
+
+    :ref:`event-identification-begin-transferring`
+    :ref:`active-participant-archive-begin-transferring`
+    :ref:`active-participant-destination-begin-transferring`
+    :ref:`active-participant-other-begin-transferring`
+    :ref:`audit-general-message-audit-source`
+    :ref:`participant-object-study-begin-transferring`
+    :ref:`participant-object-patient-begin-transferring`
 
 .. csv-table:: Event: Begin Transferring DICOM Instances
-   :name: audit-begin-transferring-event
+   :name: event-identification-begin-transferring
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
@@ -37,22 +39,22 @@ Message Structure
 
 
 .. csv-table:: Active Participant: Archive application
-   :name: audit-begin-transferring-active-participant-app
+   :name: active-participant-archive-begin-transferring
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
          "UserID", "M", "Q/R Move case ⇒ 'Application entity title of Archive Device used in the association'"
          "", "", "Q/R Get case ⇒ 'Application entity title of Archive Device used in the association'"
-         "", "", "Export case triggered by scheduler ⇒ 'dicomAETitle configured in the Exporter of archive'"
+         "", "", "Export case triggered by scheduler ⇒ 'Archive device name'"
          "", "", "Export case triggered from UI ⇒ 'Invoked URL'"
          "", "", "WADO RS case ⇒ 'Invoked URL'"
          "", "", "XDSI Retrieve Imaging Document Set RAD-69 case ⇒ 'Invoked URL'"
-         "UserIDTypeCode", "U", "Q/R Move case : EV ("110119","DCM","Station AE Title")"
-         "", "", "Q/R Get case : EV ("110119","DCM","Station AE Title")"
-         "", "", "Export case triggered by scheduler : EV ("113877","DCM","Device Name")"
-         "", "", "Export case triggered from UI : EV ("12", "RFC-3881", "URI")"
-         "", "", "WADO RS case : EV ("12", "RFC-3881", "URI")"
-         "", "", "XDSI Retrieve Imaging Document Set RAD-69 case : EV ("12", "RFC-3881", "URI")"
+         "UserIDTypeCode", "U", "Q/R Move case : EV (110119, DCM, 'Station AE Title')"
+         "", "", "Q/R Get case : EV (110119, DCM, 'Station AE Title')"
+         "", "", "Export case triggered by scheduler : EV (113877, DCM, 'Device Name')"
+         "", "", "Export case triggered from UI : EV (12, RFC-3881, 'URI')"
+         "", "", "WADO RS case : EV (12, RFC-3881, 'URI')"
+         "", "", "XDSI Retrieve Imaging Document Set RAD-69 case : EV (12, RFC-3881, 'URI')"
          "UserTypeCode", "U", "'Application' : '2'"
          "AlternativeUserID", "MC", "Process ID of Audit logger"
          "UserIsRequestor", "M", "false"
@@ -61,7 +63,7 @@ Message Structure
          "NetworkAccessPointTypeCode", "U", "'1'⇒'NetworkAccessPointID is host name', '2'⇒'NetworkAccessPointID is an IP address'"
 
 .. csv-table:: Active Participant: Destination
-   :name: audit-begin-transferring-active-participant-destination
+   :name: active-participant-destination-begin-transferring
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
@@ -74,31 +76,32 @@ Message Structure
          "", "", "Q/R Get case ⇒ 'true'"
          "", "", "Export case ⇒ 'true'"
          "", "", "WADO RS case ⇒ 'true'"
-         "UserIDTypeCode", "U", "Q/R Move case : EV ("110119","DCM","Station AE Title")"
-         "", "", "Q/R Get case : EV ("110119","DCM","Station AE Title")"
-         "", "", "Export case : EV ("110119","DCM","Station AE Title")"
-         "", "", "WADO RS case secured archive : EV ("113871","DCM","Person ID")"
-         "", "", "WADO RS case unsecured archive : EV ("110182","DCM","Node ID")"
-         "UserTypeCode", "U", "WADO RS case'Person' : '1'"
+         "UserIDTypeCode", "U", "Q/R Move case : EV (110119, DCM, 'Station AE Title')"
+         "", "", "Q/R Get case : EV (110119, DCM, 'Station AE Title')"
+         "", "", "Export case : EV (110119, DCM, 'Station AE Title')"
+         "", "", "WADO RS case secured archive : EV (113871, DCM, 'Person ID')"
+         "", "", "WADO RS case unsecured archive : EV (110182, DCM, 'Node ID')"
+         "UserTypeCode", "U", "WADO RS case : 'Person' : '1'"
          "", "", "For all other cases : 'Application' : '2'"
          "RoleIDCode", "M", "EV (110152, DCM, 'Destination')"
          "NetworkAccessPointID", "U", "Hostname/IP Address of calling host"
          "NetworkAccessPointTypeCode", "U", "'1'⇒'NetworkAccessPointID is host name', '2'⇒'NetworkAccessPointID is an IP address'"
 
 .. csv-table:: Active Participant: Other
-   :name: audit-begin-transferring-active-participant-other
+   :description: This active participant is present only in Q/R Move case
+   :name: active-participant-other-begin-transferring
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
          "UserID", "M", "Application entity title of initiating system"
-         "UserIDTypeCode", "U", "EV ("110119","DCM","Station AE Title")"
+         "UserIDTypeCode", "U", "EV (110119, DCM, 'Station AE Title')"
          "UserTypeCode", "U", "'Application' : '2'"
          "UserIsRequestor", "M", "true"
          "NetworkAccessPointID", "U", "Hostname/IP Address of initiating system"
          "NetworkAccessPointTypeCode", "U", "'1'⇒'NetworkAccessPointID is host name', '2'⇒'NetworkAccessPointID is an IP address'"
 
 .. csv-table:: Participant Object Identification: Study
-   :name: audit-begin-transferring-participant-object-study
+   :name: participant-object-study-begin-transferring
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
@@ -110,11 +113,9 @@ Message Structure
          "ParticipantObjectDescription", "U"
          "SOPClass", "MC", "Sop Class UID and Number of instances with this sop class. eg. <SOPClass UID='1.2.840.10008.5.1.4.1.1.88.22' NumberOfInstances='4'/>"
          "Accession", "U", "Accession Number"
-         "ParticipantObjectContainsStudy", "U"
-         "StudyIDs", "M", "Study Instance UID"
 
 .. csv-table:: Participant Object Identification: Patient
-   :name: audit-begin-transferring-participant-object-patient
+   :name: participant-object-patient-begin-transferring
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
@@ -128,5 +129,41 @@ Message Structure
 Sample Message
 --------------
 
-.. include:: begin-transferring-dicom-instances.xml
-   :code: xml
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+    
+        <EventIdentification EventActionCode="E" EventDateTime="2016-06-21T10:22:00.634+02:00" EventOutcomeIndicator="0">
+            <EventID csd-code="110102" codeSystemName="DCM" originalText="Begin Transferring DICOM Instances"/>
+        </EventIdentification>
+    
+        <ActiveParticipant UserID="DCM4CHEE" UserTypeCode="2" AlternativeUserID="60928" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source"/>
+            <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
+        </ActiveParticipant>
+    
+        <ActiveParticipant UserID="GETSCU" UserTypeCode="2" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+            <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination"/>
+            <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
+        </ActiveParticipant>
+    
+        <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+            <AuditSourceTypeCode csd-code="4"/>
+        </AuditSourceIdentification>
+    
+        <ParticipantObjectIdentification ParticipantObjectID="1.3.12.2.1107.5.2.33.37113.30000008060311320917100000013" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+            <ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM"/>
+            <ParticipantObjectDetail type="StudyDate" value="MjAwODA3MTY="/>
+            <ParticipantObjectDescription>
+                <SOPClass UID="1.2.840.10008.5.1.4.1.1.88.22" NumberOfInstances="4"/>
+                <SOPClass UID="1.2.840.10008.5.1.4.1.1.4" NumberOfInstances="2"/>
+            </ParticipantObjectDescription>
+        </ParticipantObjectIdentification>
+    
+        <ParticipantObjectIdentification ParticipantObjectID="P5^^^ISSUER" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+            <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
+            <ParticipantObjectName>TEST^Name</ParticipantObjectName>
+        </ParticipantObjectIdentification>
+    
+    </AuditMessage>

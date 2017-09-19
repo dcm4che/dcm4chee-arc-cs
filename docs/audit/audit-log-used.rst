@@ -9,12 +9,15 @@ This message is emitted by the archive when the audit record repository is acces
 Message Structure
 -----------------
 
-- :ref:`audit-audit-log-used-event`
-- :ref:`audit-audit-log-used-active-participant-source` (1)
-- :ref:`audit-audit-log-used-participant-object` (1)
+.. csv-table:: Supported Entities in Audit Log Used Audit Message
 
-.. csv-table:: Event: Audit Log Used
-   :name: audit-audit-log-used-event
+    :ref:`event-identification-audit-log-used`
+    :ref:`active-participant-user-audit-log-used`
+    :ref:`audit-general-message-audit-source`
+    :ref:`participant-object-audit-log-used`
+
+.. csv-table:: Event Identification
+   :name: event-identification-audit-log-used
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
@@ -23,14 +26,14 @@ Message Structure
          "EventDateTime", "M", "The time at which the event occurred"
          "EventOutcomeIndicator", "M", "'0':'Success'"
 
-.. csv-table:: Active Participant: Source
-   :name: audit-audit-log-used-active-participant-source
+.. csv-table:: Active Participant: User
+   :name: active-participant-user-audit-log-used
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
          "UserID", "M", "Remote IP Address or User name of logged in user"
-         "UserIDTypeCode", "U", "Secured Archive : EV ("113871","DCM","Person ID")"
-         "", "", "Unsecured Archive : EV ("110182","DCM","Node ID")"
+         "UserIDTypeCode", "U", "Secured Archive : EV (113871, DCM, 'Person ID')"
+         "", "", "Unsecured Archive : EV (110182, DCM, 'Node ID')"
          "UserTypeCode", "U", "'Person' : '1'"
          "AlternativeUserID", "MC", "Process ID of Audit logger"
          "UserIsRequestor", "M", "true"
@@ -38,7 +41,7 @@ Message Structure
          "NetworkAccessPointTypeCode", "U", "'1':'NetworkAccessPointID is host name', '2':'NetworkAccessPointID is an IP address'"
 
 .. csv-table:: Participant Object Identification
-   :name: audit-audit-log-used-participant-object
+   :name: participant-object-audit-log-used
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
@@ -51,5 +54,26 @@ Message Structure
 Sample Message
 --------------
 
-.. include:: audit-log-used.xml
-   :code: xml
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+
+        <EventIdentification EventActionCode="R" EventDateTime="2017-01-27T14:46:32.670+01:00" EventOutcomeIndicator="0">
+            <EventID csd-code="110101" codeSystemName="DCM" originalText="Audit Log Used"/>
+        </EventIdentification>
+
+        <ActiveParticipant UserID="127.0.0.1" UserTypeCode="1" AlternativeUserID="5312" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+            <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
+        </ActiveParticipant>
+
+        <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+            <AuditSourceTypeCode csd-code="4"/>
+        </AuditSourceIdentification>
+
+        <ParticipantObjectIdentification ParticipantObjectID="http://archive2:5601" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="13">
+            <ParticipantObjectIDTypeCode csd-code="12" originalText="URI" codeSystemName="RFC-3881" />
+            <ParticipantObjectName>Security Audit Log</ParticipantObjectName>
+        </ParticipantObjectIdentification>
+
+    </AuditMessage>

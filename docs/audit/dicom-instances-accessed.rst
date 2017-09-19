@@ -4,24 +4,30 @@ DICOM Instances Accessed
 Trigger Events
 --------------
 
-"DICOM Instances Accessed" message is emitted by the archive only when "some" objects of study are rejected using archive UI
-or Rejection Notes are stored to the archive using RAD-66 transaction. If the whole study is rejected, then "DICOM Study Deleted"
-message is sent.
+- "DICOM Instances Accessed" message is emitted by the archive only when "some" objects of study are rejected using RESTful services
+  `Reject Series <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/swagger.json#/IOCM-RS/RejectSeries>`_
+  or `Reject Instance <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/swagger.json#/IOCM-RS/RejectInstance>`_
+  or `Reject Series External <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/swagger.json#/DIMSE-RS/RejectSeriesExternal>`_
+  or `Reject Instance External <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/swagger.json#/DIMSE-RS/RejectInstanceExternal>`_
+- This message is also sent when Rejection Notes are stored to the archive using `RAD-66 <http://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf#page=234>`_ transaction.
+- "DICOM Study Deleted" message is sent when the whole study is rejected by storing Rejection Notes to the archive as mentioned above
+  or using RESTful services `Reject Study <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/swagger.json#/IOCM-RS/RejectStudy>`_
+  or `Reject Study External <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/swagger.json#/DIMSE-RS/RejectStudyExternal>`_
 
 Message Structure
 -----------------
 
 .. csv-table:: Supported Entities in DICOM Instances Accessed Audit Message
 
-    :ref:`event-identification`
-    :ref:`active-participant-archive`
-    :ref:`active-participant-initiator`
+    :ref:`event-identification-instances-accessed`
+    :ref:`active-participant-archive-instances-accessed`
+    :ref:`active-participant-initiator-instances-accessed`
     :ref:`audit-general-message-audit-source`
-    :ref:`participant-object-study`
-    :ref:`participant-object-patient`
+    :ref:`participant-object-study-instances-accessed`
+    :ref:`participant-object-patient-instances-accessed`
 
-.. csv-table:: Event Identification : DICOM Instances Accessed
-   :name: event-identification
+.. csv-table:: Event Identification
+   :name: event-identification-instances-accessed
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
@@ -32,7 +38,7 @@ Message Structure
          "EventOutcomeDescription", "M", "Code Meaning of Rejection Note"
 
 .. csv-table:: Active Participant : Archive application
-   :name: active-participant-archive
+   :name: active-participant-archive-instances-accessed
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
@@ -47,7 +53,7 @@ Message Structure
          "NetworkAccessPointTypeCode", "U", "'1'⇒'NetworkAccessPointID is host name', '2'⇒'NetworkAccessPointID is an IP address'"
 
 .. csv-table:: Active Participant : Initiator
-   :name: active-participant-initiator
+   :name: active-participant-initiator-instances-accessed
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
@@ -63,7 +69,7 @@ Message Structure
          "NetworkAccessPointTypeCode", "U", "'1'⇒'NetworkAccessPointID is host name', '2'⇒'NetworkAccessPointID is an IP address'"
 
 .. csv-table:: Participant Object Identification : Study
-   :name: participant-object-study
+   :name: participant-object-study-instances-accessed
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
@@ -75,11 +81,9 @@ Message Structure
          "ParticipantObjectDescription", "U"
          "SOPClass", "MC", "Sop Class UID and Number of instances with this sop class. eg. <SOPClass UID='1.2.840.10008.5.1.4.1.1.88.22' NumberOfInstances='4'/>"
          "Accession", "U", "Accession Number"
-         "ParticipantObjectContainsStudy", "U"
-         "StudyIDs", "M", "Study Instance UID"
 
 .. csv-table:: Participant Object Identification : Patient
-   :name: participant-object-patient
+   :name: participant-object-patient-instances-accessed
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 

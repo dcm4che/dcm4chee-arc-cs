@@ -9,14 +9,15 @@ emitted during archive startup or shutdown.
 Message Structure
 -----------------
 
-- :ref:`audit-application-activity-event`
-- :ref:`audit-application-activity-active-participant-app` (1)
-- :ref:`audit-application-activity-active-participant-person` (1) - This Active Participant is present only if archive
-  was started/stopped from UI.
-- :ref:`audit-general-message-audit-source`
+.. csv-table:: Supported Entities in Application Activity Audit Message
 
-.. csv-table:: Event: Application Activity
-   :name: audit-application-activity-event
+    :ref:`event-identification-application-activity`
+    :ref:`active-participant-archive-application-activity`
+    :ref:`active-participant-user-application-activity`
+    :ref:`audit-general-message-audit-source`
+
+.. csv-table:: Event Identification
+   :name: event-identification-application-activity
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
@@ -27,14 +28,14 @@ Message Structure
          "EventTypeCode", "M", "DT (110120, DCM, 'Application Start')"
          "", "", "DT (110121, DCM, 'Application Stop')"
 
-.. csv-table:: Active Participant: Application started
-   :name: audit-application-activity-active-participant-app
+.. csv-table:: Active Participant: Archive
+   :name: active-participant-archive-application-activity
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
          "UserID", "M", "Application entity titles of Archive Device as ; separated values"
-         "UserIDTypeCode", "U", "Application startup/shutdown or archive deploy/undeploy : EV ("113877","DCM","Device Name")"
-         "", "", "Triggered from UI : EV ("12", "RFC-3881", "URI")"
+         "UserIDTypeCode", "U", "Application startup/shutdown or archive deploy/undeploy : EV (113877, DCM, 'Device Name')"
+         "", "", "Triggered from UI : EV (12, RFC-3881, 'URI')"
          "UserTypeCode", "U", "'Application' : '2'"
          "AlternativeUserID", "MC", "Process ID of Audit logger"
          "UserIsRequestor", "M", "false"
@@ -42,14 +43,15 @@ Message Structure
          "NetworkAccessPointID", "U", "Hostname/IP Address of the connection referenced by Audit logger"
          "NetworkAccessPointTypeCode", "U", "'1'⇒'NetworkAccessPointID is host name', '2'⇒'NetworkAccessPointID is an IP address'"
 
-.. csv-table:: Active Participant: Person who started the Application
-   :name: audit-application-activity-active-participant-person
+.. csv-table:: Active Participant: User
+   :description: Person who started/stopped the Archive Application using UI
+   :name: active-participant-user-application-activity
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
          "UserID", "M", "Remote IP address for unsecured version of archive; User name for secured version of archive"
-         "UserIDTypeCode", "U", "Secured Archive : EV ("113871","DCM","Person ID")"
-         "", "", "Unsecured Archive : EV ("110182","DCM","Node ID")"
+         "UserIDTypeCode", "U", "Secured Archive : EV (113871, DCM, 'Person ID')"
+         "", "", "Unsecured Archive : EV (110182, DCM, 'Node ID')"
          "UserTypeCode", "U", "'Person' : '1'"
          "UserIsRequestor", "M", "true"
          "RoleIDCode", "M", "EV (110151, DCM, 'ApplicationLauncher')"
@@ -59,5 +61,23 @@ Message Structure
 Sample Message
 --------------
 
-.. include:: application-activity.xml
-   :code: xml
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+
+        <EventIdentification EventActionCode="E" EventDateTime="2017-07-10T10:30:17.651+02:00" EventOutcomeIndicator="0">
+            <EventID csd-code="110100" codeSystemName="DCM" originalText="Application Activity"/>
+            <EventTypeCode csd-code="110120" codeSystemName="DCM" originalText="Application Start"/>
+        </EventIdentification>
+
+        <ActiveParticipant UserID="dcm4chee-arc" UserTypeCode="2" AlternativeUserID="5289" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <RoleIDCode csd-code="110150" codeSystemName="DCM" originalText="Application"/>
+            <UserIDTypeCode csd-code="113877" codeSystemName="DCM" originalText="Device Name"/>
+        </ActiveParticipant>
+
+        <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+            <AuditSourceTypeCode csd-code="4"/>
+        </AuditSourceIdentification>
+
+    </AuditMessage>
