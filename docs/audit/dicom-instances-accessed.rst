@@ -26,7 +26,7 @@ Message Structure
    :header: "Field Name", "Opt", "Description"
 
          "EventID", "M", "EV (110103, DCM, 'DICOM Instances Accessed')"
-         "", "M", "'D' ⇒ 'Delete'"
+         "EventActionCode", "M", "'D' ⇒ 'Delete'"
          "EventDateTime", "M", "The time at which the event occurred"
          "EventOutcomeIndicator", "M", "'0'⇒'Success', '4'⇒'Minor failure'"
          "EventOutcomeDescription", "M", "Code Meaning of Rejection Note"
@@ -38,8 +38,8 @@ Message Structure
 
          "UserID", "M", "Rejection triggered using association ⇒ 'Application entity title of Archive Device used in the association'"
          "", "", "Rejection triggered using archive UI ⇒ 'Invoked URL'"
-         "UserIDTypeCode", "U", "Rejection triggered using association : EV ("110119","DCM","Station AE Title")"
-         "", "", "Rejection triggered from UI : EV ("12", "RFC-3881", "URI")"
+         "UserIDTypeCode", "U", "Rejection triggered using association : EV (110119, DCM, 'Station AE Title')"
+         "", "", "Rejection triggered from UI : EV (12, RFC-3881, 'URI')"
          "UserTypeCode", "U", "'Application' : '2'"
          "AlternativeUserID", "MC", "Process ID of Audit logger"
          "UserIsRequestor", "M", "false"
@@ -53,9 +53,9 @@ Message Structure
 
          "UserID", "M", "Rejection triggered using association ⇒ 'Application entity title of initiating system'"
          "", "", "Rejection triggered using archive UI ⇒ 'Remote IP address' or 'User name of logged in user'"
-         "UserIDTypeCode", "U", "Rejection triggered using archive UI (Secured archive) : EV ("113871","DCM","Person ID")"
-         "", "", "Rejection triggered using archive UI (Unsecured archive) : EV ("110182","DCM","Node ID")"
-         "", "", "Rejection triggered using association : EV ("110119","DCM","Station AE Title")"
+         "UserIDTypeCode", "U", "Rejection triggered using archive UI (Secured archive) : EV (113871, DCM, 'Person ID')"
+         "", "", "Rejection triggered using archive UI (Unsecured archive) : EV (110182, DCM, 'Node ID')"
+         "", "", "Rejection triggered using association : EV (110119, DCM, 'Station AE Title')"
          "UserTypeCode", "U", "Rejection triggered using archive UI : 'Person' : '1'"
          "", "", "Rejection triggered using association : 'Application' : '2'"
          "UserIsRequestor", "M", "true"
