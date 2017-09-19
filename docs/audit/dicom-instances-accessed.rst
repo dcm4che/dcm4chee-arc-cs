@@ -26,7 +26,7 @@ Message Structure
    :header: "Field Name", "Opt", "Description"
 
          "EventID", "M", "EV (110103, DCM, 'DICOM Instances Accessed')"
-         "EventActionCode", "M", "'D' ⇒ 'Delete'"
+         "", "M", "'D' ⇒ 'Delete'"
          "EventDateTime", "M", "The time at which the event occurred"
          "EventOutcomeIndicator", "M", "'0'⇒'Success', '4'⇒'Minor failure'"
          "EventOutcomeDescription", "M", "Code Meaning of Rejection Note"
@@ -57,7 +57,7 @@ Message Structure
          "", "", "Rejection triggered using archive UI (Unsecured archive) : EV ("110182","DCM","Node ID")"
          "", "", "Rejection triggered using association : EV ("110119","DCM","Station AE Title")"
          "UserTypeCode", "U", "Rejection triggered using archive UI : 'Person' : '1'"
-         "", "", "Rejection triggered using association : 'System' : '2'"
+         "", "", "Rejection triggered using association : 'Application' : '2'"
          "UserIsRequestor", "M", "true"
          "NetworkAccessPointID", "U", "Hostname/IP Address of calling host"
          "NetworkAccessPointTypeCode", "U", "'1'⇒'NetworkAccessPointID is host name', '2'⇒'NetworkAccessPointID is an IP address'"
