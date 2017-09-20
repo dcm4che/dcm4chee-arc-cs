@@ -17,7 +17,7 @@ Message Structure
 .. csv-table:: Entities in Patient Record Audit Message
 
     :ref:`event-identification-patient-record`
-    :ref:`active-participant-initiator-patient-record`
+    :ref:`active-participant-initiator-patient-record`, Not present when patient is deleted by the scheduler
     :ref:`active-participant-archive-patient-record`
     :ref:`audit-general-message-audit-source`
     :ref:`participant-object-patient-patient-record`
@@ -37,7 +37,6 @@ Message Structure
 
 .. csv-table:: Active Participant : Initiator
    :name: active-participant-initiator-patient-record
-   :description: This active participant is not present when patient is deleted by the scheduler
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
