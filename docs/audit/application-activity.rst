@@ -19,14 +19,14 @@ Message Structure
 .. csv-table:: Event Identification
    :name: event-identification-application-activity
    :widths: 30, 5, 65
-   :header: "Field Name", "Opt", "Description"
+   :header: Field Name, Opt, "Description"
 
-         "EventID", "M", "EV (110100, DCM, 'Application Activity')"
-         "EventActionCode", "M", "Enumerated Value E = Execute"
-         "EventDateTime", "M", "The time at which the event occurred"
-         "EventOutcomeIndicator", "M", "'0'⇒'Success'"
-         "EventTypeCode", "M", "DT (110120, DCM, 'Application Start')"
-         "", "", "DT (110121, DCM, 'Application Stop')"
+         EventID, M, "EV (110100, DCM, 'Application Activity')"
+         EventActionCode, M, "Enumerated Value E = Execute"
+         EventDateTime, M, "The time at which the event occurred"
+         EventOutcomeIndicator, M, "'0'⇒'Success'"
+         EventTypeCode, M, "| DT (110120, DCM, 'Application Start')
+         | "DT (110121, DCM, 'Application Stop')"
 
 .. csv-table:: Active Participant: Archive
    :name: active-participant-archive-application-activity
