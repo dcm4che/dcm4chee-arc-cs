@@ -44,8 +44,8 @@ Message Structure
          "NetworkAccessPointTypeCode", "U", "'1'⇒'NetworkAccessPointID is host name', '2'⇒'NetworkAccessPointID is an IP address'"
 
 .. csv-table:: Active Participant: User
-   :description: Person who started/stopped the Archive Application using UI
    :name: active-participant-user-application-activity
+   :description: Person who started/stopped the Archive Application using UI
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 

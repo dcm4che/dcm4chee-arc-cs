@@ -25,7 +25,7 @@ Message Structure
     :ref:`participant-object-patient-study-deleted`
 
 .. csv-table:: Event Identification
-   :name: audit-study-deleted-event
+   :name: event-identification-study-deleted
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
@@ -35,8 +35,8 @@ Message Structure
          "EventOutcomeIndicator", "M", "'0'⇒'SUCCESS', '4'⇒'Minor failure'"
          "EventOutcomeDescription", "M", "Type of Rejection"
 
-.. csv-table:: Active Participant: Archive application
-   :name: audit-study-deleted-active-participant-app
+.. csv-table:: Active Participant : Archive application
+   :name: active-participant-archive-study-deleted
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
@@ -52,8 +52,8 @@ Message Structure
          "NetworkAccessPointID", "U", "Hostname/IP Address of the connection referenced by Audit logger"
          "NetworkAccessPointTypeCode", "U", "'1'⇒'NetworkAccessPointID is host name', '2'⇒'NetworkAccessPointID is an IP address'"
 
-.. csv-table:: Active Participant: Destination
-   :name: audit-study-deleted-active-participant-user
+.. csv-table:: Active Participant : Initiator
+   :name: active-participant-initiator-study-deleted
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
@@ -68,8 +68,8 @@ Message Structure
          "NetworkAccessPointID", "U", "Hostname/IP Address of calling host"
          "NetworkAccessPointTypeCode", "U", "'1'⇒'NetworkAccessPointID is host name', '2'⇒'NetworkAccessPointID is an IP address'"
 
-.. csv-table:: Participant Object Identification: Study
-   :name: audit-study-deleted-participant-object-study
+.. csv-table:: Participant Object Identification : Study
+   :name: participant-object-study-study-deleted
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
@@ -82,8 +82,8 @@ Message Structure
          "SOPClass", "MC", "Sop Class UID and Number of instances with this sop class. eg. <SOPClass UID='1.2.840.10008.5.1.4.1.1.88.22' NumberOfInstances='4'/>"
          "Accession", "U", "Accession Number"
 
-.. csv-table:: Participant Object Identification: Patient
-   :name: audit-study-deleted-participant-object-patient
+.. csv-table:: Participant Object Identification : Patient
+   :name: participant-object-patient-study-deleted
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 

@@ -36,8 +36,8 @@ Message Structure
          "EventOutcomeDescription", "M", "Error/Exception message when 'EventOutcomeIndicator':'4'"
 
 .. csv-table:: Active Participant : Initiator
-   :description: This active participant is not present when patient is deleted by the scheduler
    :name: active-participant-initiator-patient-record
+   :description: This active participant is not present when patient is deleted by the scheduler
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
