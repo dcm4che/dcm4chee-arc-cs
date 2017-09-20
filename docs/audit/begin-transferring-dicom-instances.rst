@@ -16,7 +16,7 @@ This message is emitted by the archive in following cases :
 Message Structure
 -----------------
 
-.. csv-table:: Supported Entities in Begin Transferring DICOM Instances Audit Message
+.. csv-table:: Entities in Begin Transferring DICOM Instances Audit Message
 
     :ref:`event-identification-begin-transferring`
     :ref:`active-participant-archive-begin-transferring`

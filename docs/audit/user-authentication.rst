@@ -13,7 +13,7 @@ This message is sent if the archive is secured with Keycloak. The trigger events
 Message Structure
 -----------------
 
-.. csv-table:: Supported Entities in User Authentication Audit Message
+.. csv-table:: Entities in User Authentication Audit Message
 
     :ref:`event-identification-user-authentication`
     :ref:`active-participant-initiator-user-authentication`

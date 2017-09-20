@@ -17,7 +17,7 @@ Trigger Events
 Message Structure
 -----------------
 
-.. csv-table:: Supported Entities in DICOM Instances Accessed Audit Message
+.. csv-table:: Entities in DICOM Instances Accessed Audit Message
 
     :ref:`event-identification-instances-accessed`
     :ref:`active-participant-archive-instances-accessed`

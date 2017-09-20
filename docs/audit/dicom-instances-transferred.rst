@@ -16,7 +16,7 @@ This message is emitted by the archive in following cases :
 Message Structure
 -----------------
 
-.. csv-table:: Supported Entities in DICOM Instances Transferred Audit Message
+.. csv-table:: Entities in DICOM Instances Transferred Audit Message
 
     :ref:`event-identification-instances-transferred`
     :ref:`active-participant-archive-instances-transferred`

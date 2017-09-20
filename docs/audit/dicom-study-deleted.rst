@@ -15,7 +15,7 @@ This message is emitted by the archive when :
 Message Structure
 -----------------
 
-.. csv-table:: Supported Entities in DICOM Study Deleted Audit Message
+.. csv-table:: Entities in DICOM Study Deleted Audit Message
 
     :ref:`event-identification-study-deleted`
     :ref:`active-participant-archive-study-deleted`

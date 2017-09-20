@@ -9,7 +9,7 @@ This message is emitted by archive for XDSI `RAD-68 <http://www.ihe.net/uploaded
 Message Structure
 -----------------
 
-.. csv-table:: Supported Entities in Data Export Audit Message
+.. csv-table:: Entities in Data Export Audit Message
 
     :ref:`event-identification-data-export`
     :ref:`active-participant-user-data-export`

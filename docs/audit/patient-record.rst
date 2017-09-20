@@ -14,7 +14,7 @@ This message is emitted by the archive whenever :
 Message Structure
 -----------------
 
-.. csv-table:: Supported Entities in Patient Record Audit Message
+.. csv-table:: Entities in Patient Record Audit Message
 
     :ref:`event-identification-patient-record`
     :ref:`active-participant-initiator-patient-record`

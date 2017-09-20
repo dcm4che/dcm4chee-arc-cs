@@ -15,7 +15,7 @@ This message is emitted by the archive whenever :
 Message Structure
 -----------------
 
-.. csv-table:: Supported Entities in Procedure Record Audit Message
+.. csv-table:: Entities in Procedure Record Audit Message
 
     :ref:`event-identification-procedure-record`
     :ref:`active-participant-initiator-procedure-record`

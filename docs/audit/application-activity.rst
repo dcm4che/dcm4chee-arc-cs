@@ -9,7 +9,7 @@ emitted during archive startup or shutdown.
 Message Structure
 -----------------
 
-.. csv-table:: Supported Entities in Application Activity Audit Message
+.. csv-table:: Entities in Application Activity Audit Message
 
     :ref:`event-identification-application-activity`
     :ref:`active-participant-archive-application-activity`

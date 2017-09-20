@@ -15,7 +15,7 @@ This message is emitted by the archive for queries triggered by UI or by C-FIND 
 Message Structure
 -----------------
 
-.. csv-table:: Supported Entities in Query Audit Message
+.. csv-table:: Entities in Query Audit Message
 
     :ref:`event-identification-query`
     :ref:`active-participant-initiator-query`

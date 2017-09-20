@@ -10,7 +10,7 @@ when establishing a secure communications channel.
 Message Structure
 -----------------
 
-.. csv-table:: Supported Entities in Security Alert Audit Message
+.. csv-table:: Entities in Security Alert Audit Message
 
     :ref:`event-identification-security-alert`
     :ref:`active-participant-initiator-security-alert`

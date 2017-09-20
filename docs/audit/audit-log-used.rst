@@ -9,7 +9,7 @@ This message is emitted by the archive when the audit record repository is acces
 Message Structure
 -----------------
 
-.. csv-table:: Supported Entities in Audit Log Used Audit Message
+.. csv-table:: Entities in Audit Log Used Audit Message
 
     :ref:`event-identification-audit-log-used`
     :ref:`active-participant-user-audit-log-used`
