@@ -19,7 +19,7 @@ Message Structure
 .. csv-table:: Event Identification
    :name: event-identification-application-activity
    :widths: 30, 5, 65
-   :header: Field Name, Opt, "Description"
+   :header: Field Name1, Opt, "Description"
 
          EventID, M, "EV (110100, DCM, 'Application Activity')"
          EventActionCode, M, "Enumerated Value E = Execute"
