@@ -26,7 +26,7 @@ Message Structure
          EventDateTime, M, "The time at which the event occurred"
          EventOutcomeIndicator, M, "'0'⇒'Success'"
          EventTypeCode, M, "| DT (110120, DCM, 'Application Start')
-         | "DT (110121, DCM, 'Application Stop')"
+         | DT (110121, DCM, 'Application Stop')"
 
 .. csv-table:: Active Participant: Archive
    :name: active-participant-archive-application-activity
