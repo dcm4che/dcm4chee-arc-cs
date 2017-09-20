@@ -3,7 +3,7 @@ Application Activity
 
 Trigger Events
 --------------
-This audit message is emitted when the archive is started or stopped using the archive user interface. Its is also
+This audit message is emitted when the archive is started or stopped using the archive user interface. It is also
 emitted during archive startup or shutdown.
 
 Message Structure
@@ -13,7 +13,7 @@ Message Structure
 
     :ref:`event-identification-application-activity`
     :ref:`active-participant-archive-application-activity`
-    :ref:`active-participant-user-application-activity`
+    :ref:`active-participant-user-application-activity`, Present only if triggered using Archive UI
     :ref:`audit-general-message-audit-source`
 
 .. csv-table:: Event Identification
@@ -45,7 +45,6 @@ Message Structure
 
 .. csv-table:: Active Participant: User
    :name: active-participant-user-application-activity
-   :description: Person who started/stopped the Archive Application using UI
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 

@@ -21,7 +21,7 @@ Message Structure
     :ref:`event-identification-begin-transferring`
     :ref:`active-participant-archive-begin-transferring`
     :ref:`active-participant-destination-begin-transferring`
-    :ref:`active-participant-other-begin-transferring`
+    :ref:`active-participant-other-begin-transferring`, Present only in Query/Retrieve C-Move case
     :ref:`audit-general-message-audit-source`
     :ref:`participant-object-study-begin-transferring`
     :ref:`participant-object-patient-begin-transferring`
@@ -89,7 +89,6 @@ Message Structure
 
 .. csv-table:: Active Participant: Other
    :name: active-participant-other-begin-transferring
-   :description: This active participant is present only in Q/R Move case
    :widths: 30, 5, 65
    :header: "Field Name", "Opt", "Description"
 
