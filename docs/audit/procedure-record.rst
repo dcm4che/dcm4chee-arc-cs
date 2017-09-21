@@ -130,7 +130,7 @@ Sample Message
             </ParticipantObjectDescription>
         </ParticipantObjectIdentification>
     
-        <ParticipantObjectIdentification ParticipantObjectID="PID1^^^Site A&1.2.40.0.13.1.1.999.111.1111&ISO" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+        <ParticipantObjectIdentification ParticipantObjectID="PID1^^^Site A&amp;1.2.40.0.13.1.1.999.111.1111&amp;ISO" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
             <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
             <ParticipantObjectName>TEST^Name</ParticipantObjectName>
         </ParticipantObjectIdentification>

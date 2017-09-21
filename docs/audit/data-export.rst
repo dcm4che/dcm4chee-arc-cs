@@ -123,7 +123,7 @@ Sample Message
             <AuditSourceTypeCode csd-code="4"/>
         </AuditSourceIdentification>
     
-        <ParticipantObjectIdentification ParticipantObjectID="IDS-AD001-a^^^&1.3.6.1.4.1.21367.2005.13.20.1000&ISO" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+        <ParticipantObjectIdentification ParticipantObjectID="IDS-AD001-a^^^&amp;1.3.6.1.4.1.21367.2005.13.20.1000&amp;ISO" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
             <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
         </ParticipantObjectIdentification>
     
