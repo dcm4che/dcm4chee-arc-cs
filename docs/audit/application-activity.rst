@@ -21,10 +21,10 @@ Message Structure
    :widths: 30, 5, 65
    :header: Field Name, Opt, Description
 
-   EventID, M, "EV (110100, DCM, 'Application Activity')"
-   EventActionCode, M, Execute ⇒ 'E'
-   EventDateTime, M, The time at which the event occurred
-   EventOutcomeIndicator, M, Success ⇒ '0'
+   EventID, M, "| EV (110100, DCM, 'Application Activity')"
+   EventActionCode, M, | Execute ⇒ 'E'
+   EventDateTime, M, | The time at which the event occurred
+   EventOutcomeIndicator, M, | Success ⇒ '0'
    EventTypeCode, M, "| DT (110120, DCM, 'Application Start')
    | DT (110121, DCM, 'Application Stop')"
 
@@ -33,14 +33,14 @@ Message Structure
    :widths: 30, 5, 65
    :header: Field Name, Opt, Description
 
-   UserID, M, Application entity titles of Archive Device as ; separated values
+   UserID, M, | Application entity titles of Archive Device as ; separated values
    UserIDTypeCode, U, "| Application startup/shutdown or archive deploy/undeploy ⇒ EV (113877, DCM, 'Device Name')
    | Triggered from UI ⇒ EV (12, RFC-3881, 'URI')"
-   UserTypeCode, U, Application ⇒ '2'
-   AlternativeUserID, MC, Process ID of Audit logger
-   UserIsRequestor, M, false
-   RoleIDCode, M, "EV (110150, DCM, 'Application')"
-   NetworkAccessPointID, U, Hostname/IP Address of the connection referenced by Audit logger
+   UserTypeCode, U, | Application ⇒ '2'
+   AlternativeUserID, MC, | Process ID of Audit logger
+   UserIsRequestor, M, | false
+   RoleIDCode, M, "| EV (110150, DCM, 'Application')"
+   NetworkAccessPointID, U, | Hostname/IP Address of the connection referenced by Audit logger
    NetworkAccessPointTypeCode, U, "| NetworkAccessPointID is host name ⇒ '1'
    | NetworkAccessPointID is an IP address ⇒ '2'"
 
@@ -53,10 +53,10 @@ Message Structure
    | Secured version of archive ⇒ 'Logged in User name'"
    UserIDTypeCode, U, "| Secured Archive ⇒ EV (113871, DCM, 'Person ID')
    | Unsecured Archive ⇒ EV (110182, DCM, 'Node ID')"
-   UserTypeCode, U, Person ⇒ '1'
-   UserIsRequestor, M, true
-   RoleIDCode, M, "EV (110151, DCM, 'ApplicationLauncher')"
-   NetworkAccessPointID, U, Hostname/IP Address of calling host
+   UserTypeCode, U, | Person ⇒ '1'
+   UserIsRequestor, M, | true
+   RoleIDCode, M, "| EV (110151, DCM, 'ApplicationLauncher')"
+   NetworkAccessPointID, U, | Hostname/IP Address of calling host
    NetworkAccessPointTypeCode, U, "| NetworkAccessPointID is host name ⇒ '1'
    | NetworkAccessPointID is an IP address ⇒ '2'"
 
