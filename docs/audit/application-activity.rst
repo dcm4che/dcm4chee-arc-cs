@@ -19,7 +19,7 @@ Message Structure
 .. csv-table:: Event Identification
    :name: event-identification-application-activity
    :widths: 30, 5, 65
-   :header: Field Name, Opt, Description
+   :header: Field Name, Opt, | Description
 
    EventID, M, "| EV (110100, DCM, 'Application Activity')"
    EventActionCode, M, | Execute ⇒ 'E'
@@ -31,7 +31,7 @@ Message Structure
 .. csv-table:: Active Participant : Archive
    :name: active-participant-archive-application-activity
    :widths: 30, 5, 65
-   :header: Field Name, Opt, Description
+   :header: Field Name, Opt, | Description
 
    UserID, M, | Application entity titles of Archive Device as ; separated values
    UserIDTypeCode, U, "| Application startup/shutdown or archive deploy/undeploy ⇒ EV (113877, DCM, 'Device Name')
@@ -47,7 +47,7 @@ Message Structure
 .. csv-table:: Active Participant : User
    :name: active-participant-user-application-activity
    :widths: 30, 5, 65
-   :header: Field Name, Opt, Description
+   :header: Field Name, Opt, | Description
 
    UserID, M, "| Unsecured version of archive ⇒ 'Remote IP address'
    | Secured version of archive ⇒ 'Logged in User name'"
