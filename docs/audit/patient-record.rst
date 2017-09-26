@@ -88,7 +88,7 @@ Message Structure
    ParticipantObjectTypeCodeRole, M, Patient : '1'
    ParticipantObjectIDTypeCode, M,  "EV (2, RFC-3881, 'Patient Number')"
    ParticipantObjectName, U, Patient Name
-   ParticipantObjectDetail, U, Base-64 encoded HL7 message type if Patient record was created/updated/deleted by HL7 messages.
+   ParticipantObjectDetail, U, If Patient record created/updated/deleted by HL7 messages : 'type=HL7v2 value=<Base-64 encoded HL7 message>'
 
 
 Sample Message

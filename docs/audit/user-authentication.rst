@@ -25,13 +25,14 @@ Message Structure
    :widths: 30, 5, 65
    :header: Field Name, Opt, Description
 
-   EventID, M, "| For LOGIN events ⇒ EV (110122, DCM, 'Login')
-   | For LOGOUT events ⇒ EV (110123, DCM, 'Logout')"
+   EventID, M, "| EV (110114, DCM, 'User Authentication')"
    EventActionCode, M, | Execute ⇒ 'E'
    EventDateTime, M, | The time at which the event occurred
    EventOutcomeIndicator, M, "| Success ⇒ '0'
    | Minor failure ⇒ '4'"
    EventOutcomeDescription, M, | Error/Exception message when EventOutcomeIndicator ⇒ '4'
+   EventTypeCode, M, "| Login or Login error cases ⇒ EV (110122, DCM, 'Login')
+   | Logout or Logout error cases ⇒ EV (110123, DCM, 'Logout')"
 
 .. csv-table:: Active Participant: Source
    :name: active-participant-initiator-user-authentication

@@ -23,12 +23,14 @@ Message Structure
    :widths: 30, 5, 65
    :header: Field Name, Opt, Description
 
-   EventID, M, "| EV (110113, DCM, 'Node Authentication')"
-   EventActionCode, M, | Execute ⇒ 'E'
-   EventDateTime, M, | The time at which the event occurred
-   EventOutcomeIndicator, M, "| Success ⇒ '0'
+   EventID, M,"| EV (110113, DCM, 'Security Alert')"
+   EventActionCode, M,| Execute ⇒ 'E'
+   EventDateTime, M,| The time at which the event occurred
+   EventOutcomeIndicator, M,"| Success ⇒ '0'
    | Minor failure ⇒ '4'"
-   EventOutcomeDescription, M, | Error/Exception message when EventOutcomeIndicator ⇒ '4'
+   EventOutcomeDescription, M,| Error/Exception message when EventOutcomeIndicator ⇒ '4'
+   EventTypeCode, M,"| Node authentication failure case ⇒ DT (110126, DCM, 'Node Authentication')
+   | Software Configuration Changes case ⇒ DT (110131, DCM, 'Software Configuration')"
 
 .. csv-table:: Active Participant: Source
    :name: active-participant-initiator-security-alert
