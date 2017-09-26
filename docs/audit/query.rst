@@ -26,76 +26,80 @@ Message Structure
 .. csv-table:: Event Identification
    :name: event-identification-query
    :widths: 30, 5, 65
-   :header: "Field Name", "Opt", "Description"
+   :header: Field Name, Opt, Description
 
-         "EventID", "M", "EV (110112, DCM, 'Query')"
-         "EventActionCode", "M", "Enumerated Value E = Execute"
-         "EventDateTime", "M", "The time at which the event occurred"
-         "EventOutcomeIndicator", "M", "'0':'Success', '4':'Minor failure'"
-         "EventOutcomeDescription", "M", "Error/Exception message when 'EventOutcomeIndicator':'4'"
+   EventID, M, "| EV (110112, DCM, 'Query')"
+   EventActionCode, M, | Execute ⇒ 'E'
+   EventDateTime, M, | The time at which the event occurred
+   EventOutcomeIndicator, M, "| Success ⇒ '0'
+   | Minor failure ⇒ '4'"
+   EventOutcomeDescription, M, | Error/Exception message when EventOutcomeIndicator ⇒ '4'
 
 .. csv-table:: Active Participant : Initiator
    :name: active-participant-initiator-query
    :widths: 30, 5, 65
-   :header: "Field Name", "Opt", "Description"
+   :header: Field Name, Opt, Description
 
-         "UserID", "M", "Triggered by C-FIND : 'Calling AE title in association'"
-         "", "", "Triggered from UI : 'Remote IP address' or 'User name of logged in user'"
-         "UserIDTypeCode", "U", "Triggered by C-FIND : EV (110119, DCM, 'Station AE Title')"
-         "", "", "Triggered from UI (secured archive) : EV (113871, DCM, 'Person ID')"
-         "", "", "Triggered from UI (unsecured archive) : EV (110182, DCM, 'Node ID')"
-         "UserTypeCode", "U", "Triggered by C-FIND : 'Application' : '2'"
-         "", "", "Triggered from UI : 'Person' : '1'"
-         "UserIsRequestor", "M", "true"
-         "RoleIDCode", "M", "EV (110153, DCM, 'Source')"
-         "NetworkAccessPointID", "U", "Hostname/IP Address of calling host"
-         "NetworkAccessPointTypeCode", "U", "'1':'NetworkAccessPointID is host name', '2':'NetworkAccessPointID is an IP address'"
+   UserID, M, "| Triggered by C-FIND ⇒ 'Calling AE title in association'
+   | Triggered from UI : Secured Archive ⇒ 'User name of logged in user'
+   | Triggered from UI : Unsecured Archive ⇒ 'Remote IP address'"
+   UserIDTypeCode, U, "| Triggered by C-FIND ⇒ EV (110119, DCM, 'Station AE Title')
+   | Triggered from UI : Secured archive ⇒ EV (113871, DCM, 'Person ID')
+   | Triggered from UI : Unsecured archive ⇒ EV (110182, DCM, 'Node ID')"
+   UserTypeCode, U, "| Triggered by C-FIND : Application ⇒ '2'
+   | Triggered from UI : Person ⇒ '1'"
+   UserIsRequestor, M, | true
+   RoleIDCode, M, "| EV (110153, DCM, 'Source')"
+   NetworkAccessPointID, U, | Hostname/IP Address of calling host
+   NetworkAccessPointTypeCode, U, "| NetworkAccessPointID is host name ⇒ '1'
+   | NetworkAccessPointID is an IP address ⇒ '2'"
 
 .. csv-table:: Active Participant : Archive application
    :name: active-participant-archive-query
    :widths: 30, 5, 65
-   :header: "Field Name", "Opt", "Description"
+   :header: Field Name, Opt, Description
 
-         "UserID", "M", "Triggered by C-FIND : 'Called AE title in association'"
-         "", "", "Triggered from UI : 'Request URI'"
-         "UserIDTypeCode", "U", "Triggered by C-FIND : EV (110119, DCM, 'Station AE Title')"
-         "", "", "Triggered from UI : EV (12, RFC-3881, 'URI')"
-         "UserTypeCode", "U", "'Application' : '2'"
-         "AlternativeUserID", "MC", "Process ID of Audit logger"
-         "UserIsRequestor", "M", "false"
-         "RoleIDCode", "M", "EV (110152, DCM, 'Destination')"
-         "NetworkAccessPointID", "U", "Hostname/IP Address of the connection referenced by Audit logger"
-         "NetworkAccessPointTypeCode", "U", "'1':'NetworkAccessPointID is host name', '2':'NetworkAccessPointID is an IP address'"
+   UserID, M, "| Triggered by C-FIND ⇒ 'Called AE title in association'
+   | Triggered from UI ⇒ 'Request URI'"
+   UserIDTypeCode, U, "| Triggered by C-FIND ⇒ EV (110119, DCM, 'Station AE Title')
+   | Triggered from UI ⇒ EV (12, RFC-3881, 'URI')"
+   UserTypeCode, U, | Application ⇒ '2'
+   AlternativeUserID, MC, | Process ID of Audit logger
+   UserIsRequestor, M, | false
+   RoleIDCode, M, "| EV (110152, DCM, 'Destination')"
+   NetworkAccessPointID, U, | Hostname/IP Address of the connection referenced by Audit logger
+   NetworkAccessPointTypeCode, U, "| NetworkAccessPointID is host name ⇒ '1'
+   | NetworkAccessPointID is an IP address ⇒ '2'"
 
 .. csv-table:: Participant Object Identification : C-FIND Query
    :name: participant-object-c-find-query
    :widths: 30, 5, 65
-   :header: "Field Name", "Opt", "Description"
+   :header: Field Name, Opt, Description
 
-         "ParticipantObjectID", "M", "For patient query : '1.2.840.10008.5.1.4.1.2.1.1'"
-         "", "", "For study/series/instance query : '1.2.840.10008.5.1.4.1.2.2.1'"
-         "", "", "For MWL query : '1.2.840.10008.5.1.4.31'"
-         "ParticipantObjectTypeCode", "M", "'2' : 'SystemObject'"
-         "ParticipantObjectTypeCodeRole", "M", "Enumerated value '3' : 'Report'"
-         "ParticipantObjectIDTypeCode", "M", "EV (110181, DCM, 'SOP Class UID')"
-         "ParticipantObjectQuery", "M", "Base64 encoded value of Query keys"
-         "ParticipantObjectDetail", "MC", "Base64 encoded value for ImplicitVRLittleEndian '1.2.840.10008.1.2' : 'type=TransferSyntax value=MS4yLjg0MC4xMDAwOC4xLjI='"
+   ParticipantObjectID, M, "| For patient query ⇒ '1.2.840.10008.5.1.4.1.2.1.1'
+   | For study/series/instance query ⇒ '1.2.840.10008.5.1.4.1.2.2.1'
+   | For MWL query ⇒ '1.2.840.10008.5.1.4.31'"
+   ParticipantObjectTypeCode, M, | SystemObject ⇒ '2'
+   ParticipantObjectTypeCodeRole, M, | Report ⇒ '3'
+   ParticipantObjectIDTypeCode, M, "| EV (110181, DCM, 'SOP Class UID')"
+   ParticipantObjectQuery, M, | Base64 encoded value of Query keys
+   ParticipantObjectDetail, MC, | Base64 encoded value for ImplicitVRLittleEndian '1.2.840.10008.1.2' ⇒ 'type=TransferSyntax value=MS4yLjg0MC4xMDAwOC4xLjI='"
 
 .. csv-table:: Participant Object Identification : QIDO Query
    :name: participant-object-qido-query
    :widths: 30, 5, 65
-   :header: "Field Name", "Opt", "Description"
+   :header: Field Name, Opt, Description
 
-         "ParticipantObjectID", "M", "For patient query : 'SearchForPatients'"
-         "", "", "For study query : 'SearchForStudies'"
-         "", "", "For series query : 'SearchForStudySeries' or 'SearchForSeries'"
-         "", "", "For Instance query : 'SearchForInstances' or 'SearchForStudyInstances' or 'SearchForStudySeriesInstances'"
-         "", "", "For MWL query : 'SearchForSPS'"
-         "ParticipantObjectTypeCode", "M", "'2' : 'SystemObject'"
-         "ParticipantObjectTypeCodeRole", "M", "Enumerated value '24' : 'Query'"
-         "ParticipantObjectIDTypeCode", "M", "EV (QIDO, 99DCM4CHEE, 'QIDO_Query')"
-         "ParticipantObjectQuery", "M", "Base64 encoded value of Request URI plus the Query String"
-         "ParticipantObjectDetail", "MC", "Base64 encoded value for 'UTF-8' : 'type=QueryEncoding value=VVRGLTg='"
+   ParticipantObjectID, M, "| For patient query ⇒ 'SearchForPatients'
+   | For study query ⇒ 'SearchForStudies'
+   | For series query ⇒ 'SearchForStudySeries' or 'SearchForSeries'
+   | For Instance query ⇒ 'SearchForInstances' or 'SearchForStudyInstances' or 'SearchForStudySeriesInstances'
+   | For MWL query ⇒ 'SearchForSPS'"
+   ParticipantObjectTypeCode, M, | SystemObject ⇒ '2'
+   ParticipantObjectTypeCodeRole, M, | Query ⇒ '24'
+   ParticipantObjectIDTypeCode, M,  "| EV (QIDO, 99DCM4CHEE, 'QIDO_Query')"
+   ParticipantObjectQuery, M, | Base64 encoded value of Request URI plus the Query String
+   ParticipantObjectDetail, MC, | Base64 encoded value for 'UTF-8' ⇒ 'type=QueryEncoding value=VVRGLTg='
 
 Sample Message
 --------------

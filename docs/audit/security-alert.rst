@@ -21,47 +21,49 @@ Message Structure
 .. csv-table:: Event Identification
    :name: event-identification-security-alert
    :widths: 30, 5, 65
-   :header: "Field Name", "Opt", "Description"
+   :header: Field Name, Opt, Description
 
-         "EventID", "M", "EV (110113, DCM, 'Node Authentication')"
-         "EventActionCode", "M", "Enumerated Value E = Execute"
-         "EventDateTime", "M", "The time at which the event occurred"
-         "EventOutcomeIndicator", "M", "'4':'Minor failure'"
-         "EventOutcomeDescription", "M", "Error/Exception message"
+   EventID, M, "| EV (110113, DCM, 'Node Authentication')"
+   EventActionCode, M, | Execute ⇒ 'E'
+   EventDateTime, M, | The time at which the event occurred
+   EventOutcomeIndicator, M, "| Success ⇒ '0'
+   | Minor failure ⇒ '4'"
+   EventOutcomeDescription, M, | Error/Exception message when EventOutcomeIndicator ⇒ '4'
 
 .. csv-table:: Active Participant: Source
    :name: active-participant-initiator-security-alert
    :widths: 30, 5, 65
-   :header: "Field Name", "Opt", "Description"
+   :header: Field Name, Opt, Description
 
-         "UserID", "M", "Remote socket address of calling host"
-         "UserIDTypeCode", "U", "EV (110182, DCM, 'Node ID')"
-         "UserTypeCode", "U", "'Person' : '1'"
-         "UserIsRequestor", "M", "true"
-         "NetworkAccessPointID", "U", "Remote socket address of calling host"
-         "NetworkAccessPointTypeCode", "U", "2"
+   UserID, M, Remote socket address of calling host
+   UserIDTypeCode, U, "EV (110182, DCM, 'Node ID')"
+   UserTypeCode, U, Person ⇒ '1'
+   UserIsRequestor, M, true
+   NetworkAccessPointID, U, Remote socket address of calling host
+   NetworkAccessPointTypeCode, U, 2
 
 .. csv-table:: Active Participant: Archive application
    :name: active-participant-archive-security-alert
    :widths: 30, 5, 65
-   :header: "Field Name", "Opt", "Description"
+   :header: Field Name, Opt, Description
 
-         "UserID", "M", "Archive device name"
-         "UserIDTypeCode", "U", "EV (113877, DCM, 'Device Name')"
-         "UserTypeCode", "U", "'Application' : '2'"
-         "AlternativeUserID", "MC", "Process ID of Audit logger"
-         "UserIsRequestor", "M", "false"
-         "NetworkAccessPointID", "U", "Hostname/IP Address of the connection referenced by Audit logger"
-         "NetworkAccessPointTypeCode", "U", "'1':'NetworkAccessPointID is host name', '2':'NetworkAccessPointID is an IP address'"
+   UserID, M, | Archive device name
+   UserIDTypeCode, U, "| EV (113877, DCM, 'Device Name')"
+   UserTypeCode, U, | Application ⇒ '2'
+   AlternativeUserID, MC, | Process ID of Audit logger
+   UserIsRequestor, M, | false
+   NetworkAccessPointID, U, | Hostname/IP Address of the connection referenced by Audit logger
+   NetworkAccessPointTypeCode, U, "| NetworkAccessPointID is host name ⇒ '1'
+   | NetworkAccessPointID is an IP address ⇒ '2'"
 
 .. csv-table:: Participant Object Identification
    :name: participant-object-security-alert
    :widths: 30, 5, 65
-   :header: "Field Name", "Opt", "Description"
+   :header: Field Name, Opt, Description
 
-         "ParticipantObjectID", "M", "Remote socket address of calling host"
-         "ParticipantObjectTypeCode", "M", "'2' : 'SystemObject'"
-         "ParticipantObjectIDTypeCode", "M", "EV (110182, DCM, 'Node ID')"
+   ParticipantObjectID, M, Remote socket address of calling host
+   ParticipantObjectTypeCode, M, SystemObject ⇒ '2'
+   ParticipantObjectIDTypeCode, M, "EV (110182, DCM, 'Node ID')"
 
 Sample Message
 --------------

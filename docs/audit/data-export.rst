@@ -22,79 +22,83 @@ Message Structure
 .. csv-table:: Event Identification
    :name: event-identification-data-export
    :widths: 30, 5, 65
-   :header: "Field Name", "Opt", "Description"
+   :header: Field Name, Opt, Description
 
-         "EventID", "M", "EV (110106, DCM, 'Export')"
-         "EventActionCode", "M", "Enumerated Value R = Read"
-         "EventDateTime", "M", "The time at which the event occurred"
-         "EventOutcomeIndicator", "M", "'0':'Success', '4':'Minor failure'"
-         "EventOutcomeDescription", "M", "Error/Exception message when 'EventOutcomeIndicator':'4'"
+   EventID, M, "| EV (110106, DCM, 'Export')"
+   EventActionCode, M, | Read : 'R'
+   EventDateTime, M, | The time at which the event occurred
+   EventOutcomeIndicator, M, "| Success : '0'
+   | Minor failure : '4'"
+   EventOutcomeDescription, M, | Error/Exception message when EventOutcomeIndicator : '4'
 
 .. csv-table:: Active Participant: Archive application
    :name: active-participant-user-data-export
    :widths: 30, 5, 65
-   :header: "Field Name", "Opt", "Description"
+   :header: Field Name, Opt, Description
 
-         "UserID", "M", "Secured archive : User name for secured version of archive"
-         "", "", "Unsecured archive : Remote IP address for unsecured version of archive"
-         "UserIDTypeCode", "U", "Secured archive : EV (113871, DCM, 'Person ID')"
-         "", "", "Unsecured archive : (110182, DCM, 'Node ID')"
-         "UserTypeCode", "U", "'Person' : '1'"
-         "AlternativeUserID", "MC", "Process ID of Audit logger"
-         "UserIsRequestor", "M", "true"
-         "NetworkAccessPointID", "U", "Hostname/IP Address of calling host"
-         "NetworkAccessPointTypeCode", "U", "'1':'NetworkAccessPointID is host name', '2':'NetworkAccessPointID is an IP address'"
+   UserID, M, "| Secured archive : 'User name of logged in user'
+   | Unsecured archive : 'Remote IP address'"
+   UserIDTypeCode, U, "| Secured archive : EV (113871, DCM, 'Person ID')
+   | Unsecured archive : (110182, DCM, 'Node ID')"
+   UserTypeCode, U, | Person : '1'
+   AlternativeUserID, MC, | Process ID of Audit logger
+   UserIsRequestor, M, | true
+   NetworkAccessPointID, U, | Hostname/IP Address of calling host
+   NetworkAccessPointTypeCode, U, "| NetworkAccessPointID is host name : '1'
+   | NetworkAccessPointID is an IP address : '2'"
 
 .. csv-table:: Active Participant: Archive application
    :name: active-participant-archive-data-export
    :widths: 30, 5, 65
-   :header: "Field Name", "Opt", "Description"
+   :header: Field Name, Opt, Description
 
-         "UserID", "M", "Triggered by scheduler : Archive device name"
-         "", "", "Triggered from UI : Invoked URL"
-         "UserIDTypeCode", "U", "Triggered by scheduler : EV (113877, DCM, 'Device Name')"
-         "", "", "Triggered from UI : EV (12, RFC-3881, 'URI')"
-         "UserTypeCode", "U", "'Application' : '2'"
-         "AlternativeUserID", "MC", "Process ID of Audit logger"
-         "UserIsRequestor", "M", "Triggered by scheduler : 'true'"
-         "", "", "Triggered by UI : 'false'"
-         "RoleIDCode", "M", "EV (110153, DCM, 'Source')"
-         "NetworkAccessPointID", "U", "Hostname/IP Address of the connection referenced by Audit logger"
-         "NetworkAccessPointTypeCode", "U", "'1':'NetworkAccessPointID is host name', '2':'NetworkAccessPointID is an IP address'"
+   UserID, M, "| Triggered by scheduler : 'Archive device name'
+   | Triggered from UI : 'Invoked URL'"
+   UserIDTypeCode, U, "| Triggered by scheduler : EV (113877, DCM, 'Device Name')
+   | Triggered from UI : EV (12, RFC-3881, 'URI')"
+   UserTypeCode, U, | Application : '2'
+   AlternativeUserID, MC, | Process ID of Audit logger
+   UserIsRequestor, M, "| Triggered by scheduler : 'true'"
+   | Triggered by UI : 'false'"
+   RoleIDCode, M, "| EV (110153, DCM, 'Source')"
+   NetworkAccessPointID, U, | Hostname/IP Address of the connection referenced by Audit logger
+   NetworkAccessPointTypeCode, U, "| NetworkAccessPointID is host name : '1'
+   | NetworkAccessPointID is an IP address : '2'"
 
 .. csv-table:: Active Participant: Destination
    :name: active-participant-destination-data-export
    :widths: 30, 5, 65
-   :header: "Field Name", "Opt", "Description"
+   :header: Field Name, Opt, Description
 
-         "UserID", "M", "The URI configured in XDSI Exporter in archive configuration"
-         "UserIDTypeCode", "U", "EV (12, RFC-3881, 'URI')"
-         "UserTypeCode", "U", "'Application' : '2'"
-         "UserIsRequestor", "M", "false"
-         "RoleIDCode", "M", "EV (110152, DCM, 'Destination')"
-         "NetworkAccessPointID", "U", "Hostname/IP Address present in the URI configured in XDSI Exporter in archive configuration"
-         "NetworkAccessPointTypeCode", "U", "'1':'NetworkAccessPointID is host name', '2':'NetworkAccessPointID is an IP address'"
+   UserID, M, | The URI configured in XDSI Exporter in archive configuration
+   UserIDTypeCode, U, "| EV (12, RFC-3881, 'URI')"
+   UserTypeCode, U, | Application : '2'
+   UserIsRequestor, M, | false
+   RoleIDCode, M, "| EV (110152, DCM, 'Destination')"
+   NetworkAccessPointID, U, | Hostname/IP Address present in the URI configured in XDSI Exporter in archive configuration
+   NetworkAccessPointTypeCode, U, "| NetworkAccessPointID is host name : '1'
+   | NetworkAccessPointID is an IP address : '2'"
 
 .. csv-table:: Participant Object Identification: Patient
    :name: participant-object-patient-data-export
    :widths: 30, 5, 65
-   :header: "Field Name", "Opt", "Description"
+   :header: Field Name, Opt, Description
 
-         "ParticipantObjectID", "M", "Patient ID"
-         "ParticipantObjectTypeCode", "M", "'1' : 'Person'"
-         "ParticipantObjectTypeCodeRole", "M", "'1' : 'Patient'"
-         "ParticipantObjectIDTypeCode", "M", "EV (2, RFC-3881, 'Patient Number')"
-         "ParticipantObjectName", "U", "Patient Name"
+   ParticipantObjectID, M, Patient ID
+   ParticipantObjectTypeCode, M, Person : '1'
+   ParticipantObjectTypeCodeRole, M, Patient : '1'
+   ParticipantObjectIDTypeCode, M,  "EV (2, RFC-3881, 'Patient Number')"
+   ParticipantObjectName, U, Patient Name
 
 .. csv-table:: Participant Object Identification: Submission Set
    :name: participant-object-submission-set-data-export
    :widths: 30, 5, 65
-   :header: "Field Name", "Opt", "Description"
+   :header: Field Name, Opt, Description
 
-         "ParticipantObjectID", "M", "System generated UID created for the submission set"
-         "ParticipantObjectTypeCode", "M", "'2' : 'SystemObject'"
-         "ParticipantObjectTypeCodeRole", "M", "'20' : 'Job'"
-         "ParticipantObjectIDTypeCode", "M", "EV (urn:uuid:a54d6aa5-d40d-43f9-88c5-b4633d873bdd, IHE XDS Metadata, 'submission set classificationNode')"
+   ParticipantObjectID, M, System generated UID created for the submission set
+   ParticipantObjectTypeCode, M, SystemObject : '2'
+   ParticipantObjectTypeCodeRole, M, Job : '20'
+   ParticipantObjectIDTypeCode, M,  "EV (urn:uuid:a54d6aa5-d40d-43f9-88c5-b4633d873bdd, IHE XDS Metadata, 'submission set classificationNode')"
 
 Sample Message
 --------------

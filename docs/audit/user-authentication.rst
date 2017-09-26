@@ -23,40 +23,41 @@ Message Structure
 .. csv-table:: Event Identification
    :name: event-identification-user-authentication
    :widths: 30, 5, 65
-   :header: "Field Name", "Opt", "Description"
+   :header: Field Name, Opt, Description
 
-         "EventID", "M", "For LOGIN events : EV (110122, DCM, 'Login')"
-         "", "", "For LOGOUT events : EV (110123, DCM, 'Logout')"
-         "EventActionCode", "M", "Enumerated Value E = Execute"
-         "EventDateTime", "M", "The time at which the event occurred"
-         "EventOutcomeIndicator", "M", "'0':'Success', '4':'Minor failure'"
-         "EventOutcomeDescription", "M", "Error/Exception message when 'EventOutcomeIndicator':'4'"
+   EventID, M, "| For LOGIN events ⇒ EV (110122, DCM, 'Login')"
+   | For LOGOUT events ⇒ EV (110123, DCM, 'Logout')"
+   EventActionCode, M, | Execute ⇒ 'E'
+   EventDateTime, M, | The time at which the event occurred
+   EventOutcomeIndicator, M, "| Success ⇒ '0'
+   | Minor failure ⇒ '4'"
+   EventOutcomeDescription, M, | Error/Exception message when EventOutcomeIndicator ⇒ '4'
 
 .. csv-table:: Active Participant: Source
    :name: active-participant-initiator-user-authentication
    :widths: 30, 5, 65
-   :header: "Field Name", "Opt", "Description"
+   :header: Field Name, Opt, Description
 
-         "UserID", "M", "User name of logged in user"
-         "UserIDTypeCode", "U", "EV (113871, DCM, 'Person ID')"
-         "UserTypeCode", "U", "'Person' : '1'"
-         "UserIsRequestor", "M", "true"
-         "NetworkAccessPointID", "U", "IP address of calling user"
-         "NetworkAccessPointTypeCode", "U", "2"
+   UserID, M, User name of logged in user
+   UserIDTypeCode, U, "EV (113871, DCM, 'Person ID')"
+   UserTypeCode, U, Person ⇒ '1'
+   UserIsRequestor, M, true
+   NetworkAccessPointID, U, IP address of calling user
+   NetworkAccessPointTypeCode, U, 2
 
 .. csv-table:: Active Participant: Archive application
    :name: active-participant-archive-user-authentication
    :widths: 30, 5, 65
-   :header: "Field Name", "Opt", "Description"
+   :header: Field Name, Opt, Description
 
-         "UserID", "M", "Device name of the archive device"
-         "UserIDTypeCode", "U", "EV (113877, DCM, 'Device Name')"
-         "UserTypeCode", "U", "'Application' : '2'"
-         "AlternativeUserID", "MC", "Process ID of Audit logger"
-         "UserIsRequestor", "M", "false"
-         "NetworkAccessPointID", "U", "Hostname/IP Address of the connection referenced by Audit logger"
-         "NetworkAccessPointTypeCode", "U", "'1':'NetworkAccessPointID is host name', '2':'NetworkAccessPointID is an IP address'"
-
+   UserID, M, | Device name of the archive device
+   UserIDTypeCode, U, "| EV (113877, DCM, 'Device Name')"
+   UserTypeCode, U, | Application ⇒ '2'
+   AlternativeUserID, MC, | Process ID of Audit logger
+   UserIsRequestor, M, | false
+   NetworkAccessPointID, U, | Hostname/IP Address of the connection referenced by Audit logger
+   NetworkAccessPointTypeCode, U, "| NetworkAccessPointID is host name ⇒ '1'
+   | NetworkAccessPointID is an IP address ⇒ '2'"
 
 Sample Message
 --------------

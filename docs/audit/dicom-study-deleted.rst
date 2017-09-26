@@ -19,7 +19,7 @@ Message Structure
 
     :ref:`event-identification-study-deleted`
     :ref:`active-participant-archive-study-deleted`
-    :ref:`active-participant-initiator-study-deleted`
+    :ref:`active-participant-initiator-study-deleted`, Not present in Study Deleted by Scheduler case
     :ref:`audit-general-message-audit-source`
     :ref:`participant-object-study-study-deleted`
     :ref:`participant-object-patient-study-deleted`
@@ -27,71 +27,83 @@ Message Structure
 .. csv-table:: Event Identification
    :name: event-identification-study-deleted
    :widths: 30, 5, 65
-   :header: "Field Name", "Opt", "Description"
+   :header: Field Name, Opt, Description
 
-         "EventID", "M", "EV (110105, DCM, 'DICOM Study Deleted')"
-         "EventActionCode", "M", "'D' ⇒ 'Delete'"
-         "EventDateTime", "M", "The time at which the event occurred"
-         "EventOutcomeIndicator", "M", "'0'⇒'SUCCESS', '4'⇒'Minor failure'"
-         "EventOutcomeDescription", "M", "Type of Rejection"
+   EventID, M, "EV (110105, DCM, 'DICOM Study Deleted')"
+   EventActionCode, M, Delete ⇒ 'D'
+   EventDateTime, M, The time at which the event occurred
+   EventOutcomeIndicator, M, "| Success ⇒ '0'
+   | Minor failure ⇒ '4'"
+   EventOutcomeDescription, M, "| Success ⇒ 'Rejection Code Meaning'
+   | Minor failure case ⇒ 'Rejection Code Meaning + Error/Exception message'"
 
 .. csv-table:: Active Participant : Archive application
    :name: active-participant-archive-study-deleted
    :widths: 30, 5, 65
-   :header: "Field Name", "Opt", "Description"
+   :header: Field Name, Opt, Description
 
-         "UserID", "M", "All Rejected using association ⇒ 'Application entity title of Archive Device used in the association'"
-         "", "", "All Rejected using archive UI ⇒ 'Invoked URL'"
-         "", "", "Deletion by Scheduler case ⇒ 'Archive device name'"
-         "UserIDTypeCode", "U", "Deletion triggered by scheduler : EV (113877, DCM, 'Device Name')"
-         "", "", "Deletion triggered using RESTful service : EV (12, RFC-3881, 'URI')"
-         "UserTypeCode", "U", "'Application' : '2'"
-         "AlternativeUserID", "MC", "Process ID of Audit logger"
-         "UserIsRequestor", "M", "All Rejected case ⇒ 'false'"
-         "", "", "Deletion by Scheduler case ⇒ 'true'"
-         "NetworkAccessPointID", "U", "Hostname/IP Address of the connection referenced by Audit logger"
-         "NetworkAccessPointTypeCode", "U", "'1'⇒'NetworkAccessPointID is host name', '2'⇒'NetworkAccessPointID is an IP address'"
+   UserID, M, "| Rejection triggered using association ⇒ 'Application entity title of Archive Device used in the association'
+   | Rejection triggered using archive UI ⇒ 'Invoked URL'
+   | Permanent Deletion of Study using RESTful service ⇒ 'Invoked URL'
+   | Permanent Deletion of Study by scheduler ⇒ 'Archive device name'"
+   UserIDTypeCode, U, "| Rejection triggered using association ⇒ EV (110119, DCM, 'Station AE Title')
+   | Rejection triggered from UI ⇒ EV (12, RFC-3881, 'URI')
+   | Permanent Deletion of Study using RESTful service ⇒ EV (12, RFC-3881, 'URI')
+   | Permanent Deletion of Study by scheduler ⇒ EV (113877, DCM, 'Device Name')"
+   UserTypeCode, U, | Application ⇒ '2'
+   AlternativeUserID, MC, | Process ID of Audit logger
+   UserIsRequestor, M, "| Permanent Deletion of Study by scheduler ⇒ 'true'
+   | All other cases ⇒ 'false'"
+   NetworkAccessPointID, U, | Hostname/IP Address of the connection referenced by Audit logger
+   NetworkAccessPointTypeCode, U, "| NetworkAccessPointID is host name ⇒ '1'
+   | NetworkAccessPointID is an IP address ⇒ '2'"
 
 .. csv-table:: Active Participant : Initiator
    :name: active-participant-initiator-study-deleted
    :widths: 30, 5, 65
-   :header: "Field Name", "Opt", "Description"
+   :header: Field Name, Opt, Description
 
-         "UserID", "M", "All Rejected using association ⇒ 'Application entity title of initiating system'"
-         "", "", "All Rejected using archive UI ⇒ 'Remote IP address' or 'User name of logged in user'"
-         "UserIDTypeCode", "U", "Deletion triggered using archive UI (Secured archive) : EV (113871, DCM, 'Person ID')"
-         "", "", "Deletion triggered using archive UI (Unsecured archive) : EV (110182, DCM, 'Node ID')"
-         "", "", "Deletion triggered using association : EV (110119, DCM, 'Station AE Title')"
-         "UserTypeCode", "U", "Deletion triggered using archive UI : 'Person' : '1'"
-         "", "", "Deletion triggered using association : 'Application' : '2'"
-         "UserIsRequestor", "M", "true"
-         "NetworkAccessPointID", "U", "Hostname/IP Address of calling host"
-         "NetworkAccessPointTypeCode", "U", "'1'⇒'NetworkAccessPointID is host name', '2'⇒'NetworkAccessPointID is an IP address'"
+   UserID, M, "| Rejection triggered using association ⇒ 'Application entity title of initiating system'
+   | Rejection triggered using UI : Secured Archive ⇒ 'User name of logged in user'
+   | Rejection triggered using UI : Unsecured archive ⇒ 'Remote IP address'
+   | Permanent Deletion using RESTful service : Secured archive ⇒ 'User name of logged in user'
+   | Permanent Deletion using RESTful service : Unsecured archive ⇒ 'Remote IP address'"
+   UserIDTypeCode, U, "| Rejection triggered using archive UI (Secured archive) ⇒ EV (113871, DCM, 'Person ID')
+   | Rejection triggered using archive UI (Unsecured archive) ⇒ EV (110182, DCM, 'Node ID')
+   | Rejection triggered using association ⇒ EV (110119, DCM, 'Station AE Title')
+   | Permanent Deletion using RESTful service : Secured archive ⇒ EV (113871, DCM, 'Person ID')
+   | Permanent Deletion using RESTful service : Unsecured archive ⇒ EV (110182, DCM, 'Node ID')"
+   UserTypeCode, U, "| Rejection triggered using association : Application ⇒ '2'
+   | All other cases : Person ⇒ '1'"
+   UserIsRequestor, M, | true
+   NetworkAccessPointID, U, | Hostname/IP Address of calling host
+   NetworkAccessPointTypeCode, U, "| NetworkAccessPointID is host name ⇒ '1'
+   | NetworkAccessPointID is an IP address ⇒ '2'"
 
 .. csv-table:: Participant Object Identification : Study
    :name: participant-object-study-study-deleted
    :widths: 30, 5, 65
-   :header: "Field Name", "Opt", "Description"
+   :header: Field Name, Opt, Description
 
-         "ParticipantObjectID", "M", "Study Instance UID"
-         "ParticipantObjectTypeCode", "M", "'2' ⇒ 'System'"
-         "ParticipantObjectTypeCodeRole", "M", "'3' ⇒ 'Report'"
-         "ParticipantObjectIDTypeCode", "M", "EV (110180, DCM, 'Study Instance UID')"
-         "ParticipantObjectDetail", "U", "Base-64 encoded study date if Study has StudyDate(0008,0020) attribute"
-         "ParticipantObjectDescription", "U"
-         "SOPClass", "MC", "Sop Class UID and Number of instances with this sop class. eg. <SOPClass UID='1.2.840.10008.5.1.4.1.1.88.22' NumberOfInstances='4'/>"
-         "Accession", "U", "Accession Number"
+   ParticipantObjectID, M, Study Instance UID
+   ParticipantObjectTypeCode, M, System ⇒ '2'
+   ParticipantObjectTypeCodeRole, M, Report ⇒ '3'
+   ParticipantObjectIDTypeCode, M, "EV (110180, DCM, 'Study Instance UID')"
+   ParticipantObjectDetail, U, "Base-64 encoded study date if Study has StudyDate(0008,0020) attribute"
+   ParticipantObjectDescription, U
+   SOPClass, MC, Sop Class UID and Number of instances with this sop class. eg. <SOPClass UID='1.2.840.10008.5.1.4.1.1.88.22' NumberOfInstances='4'/>
+   Accession, U, Accession Number
 
 .. csv-table:: Participant Object Identification : Patient
    :name: participant-object-patient-study-deleted
    :widths: 30, 5, 65
-   :header: "Field Name", "Opt", "Description"
+   :header: Field Name, Opt, Description
 
-         "ParticipantObjectID", "M", "Patient ID"
-         "ParticipantObjectTypeCode", "M", "'1' ⇒ 'Person'"
-         "ParticipantObjectTypeCodeRole", "M", "'1' ⇒ 'Patient'"
-         "ParticipantObjectIDTypeCode", "M", "EV (2, RFC-3881, 'Patient Number')"
-         "ParticipantObjectName", "U", "Patient Name"
+   ParticipantObjectID, M, Patient ID
+   ParticipantObjectTypeCode, M, Person ⇒ '1'
+   ParticipantObjectTypeCodeRole, M, Patient ⇒ '1'
+   ParticipantObjectIDTypeCode, M,  "EV (2, RFC-3881, 'Patient Number')"
+   ParticipantObjectName, U, Patient Name
 
 
 Sample Message
