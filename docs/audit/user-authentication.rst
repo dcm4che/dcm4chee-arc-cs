@@ -25,7 +25,7 @@ Message Structure
    :widths: 30, 5, 65
    :header: Field Name, Opt, Description
 
-   EventID, M, "| For LOGIN events ⇒ EV (110122, DCM, 'Login')"
+   EventID, M, "| For LOGIN events ⇒ EV (110122, DCM, 'Login')
    | For LOGOUT events ⇒ EV (110123, DCM, 'Logout')"
    EventActionCode, M, | Execute ⇒ 'E'
    EventDateTime, M, | The time at which the event occurred

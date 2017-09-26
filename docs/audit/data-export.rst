@@ -58,7 +58,7 @@ Message Structure
    | Triggered from UI : EV (12, RFC-3881, 'URI')"
    UserTypeCode, U, | Application : '2'
    AlternativeUserID, MC, | Process ID of Audit logger
-   UserIsRequestor, M, "| Triggered by scheduler : 'true'"
+   UserIsRequestor, M, "| Triggered by scheduler : 'true'
    | Triggered by UI : 'false'"
    RoleIDCode, M, "| EV (110153, DCM, 'Source')"
    NetworkAccessPointID, U, | Hostname/IP Address of the connection referenced by Audit logger

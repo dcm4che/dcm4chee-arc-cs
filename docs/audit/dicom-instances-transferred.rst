@@ -134,7 +134,7 @@ Message Structure
    :widths: 30, 5, 65
    :header: Field Name, Opt, Description
 
-   UserID, M, "Export case triggered from UI : Secured archive ⇒ 'User name of logged in user'
+   UserID, M, "| Export case triggered from UI : Secured archive ⇒ 'User name of logged in user'
    | Export case triggered from UI : Unsecured archive ⇒ 'Remote IP address'"
    UserIDTypeCode, U, "| Secured archive ⇒ EV (113871, DCM, 'Person ID')
    | Unsecured archive ⇒ EV (110182, DCM, 'Node ID')"

@@ -29,9 +29,9 @@ Message Structure
    :widths: 30, 5, 65
    :header: Field Name, Opt, Description
 
-   EventID, M, "EV (110105, DCM, 'DICOM Study Deleted')"
-   EventActionCode, M, Delete ⇒ 'D'
-   EventDateTime, M, The time at which the event occurred
+   EventID, M, "| EV (110105, DCM, 'DICOM Study Deleted')"
+   EventActionCode, M, | Delete ⇒ 'D'
+   EventDateTime, M, | The time at which the event occurred
    EventOutcomeIndicator, M, "| Success ⇒ '0'
    | Minor failure ⇒ '4'"
    EventOutcomeDescription, M, "| Success ⇒ 'Rejection Code Meaning'
