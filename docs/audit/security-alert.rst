@@ -45,9 +45,9 @@ Message Structure
    UserIDTypeCode, U, "| Node authentication failure case ⇒ EV (110182, DCM, 'Node ID')
    | Software configuration changes done over UI : Secured archive ⇒ EV (113871, DCM, 'Person ID')
    | Software configuration changes done over UI : Unsecured archive ⇒ EV (110182, DCM, 'Node ID')"
-   UserTypeCode, U, Person ⇒ '1'
-   UserIsRequestor, M, true
-   NetworkAccessPointID, U, Hostname/IP Address of calling host
+   UserTypeCode, U, | Person ⇒ '1'
+   UserIsRequestor, M, | true
+   NetworkAccessPointID, U, | Hostname/IP Address of calling host
    NetworkAccessPointTypeCode, U, "| NetworkAccessPointID is host name ⇒ '1'
    | NetworkAccessPointID is an IP address ⇒ '2'"
 
