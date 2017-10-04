@@ -35,3 +35,7 @@ Named Attribute Set for Query Parameter 'comparefield' of DIFF-RS and Query Para
     .. _dcmTag:
 
     dcmTag_"
+    "Property(s)",string,"Property in format <name>=<value>","
+    .. _dcmProperty:
+
+    dcmProperty_"

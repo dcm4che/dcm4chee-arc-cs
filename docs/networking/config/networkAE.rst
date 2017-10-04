@@ -47,7 +47,7 @@ Application entity that provides services on a network
     .. _dicomInstalled:
 
     dicomInstalled_"
-    ":doc:`transferCapability` (s)",object,"transfer capabilities provided by the application entity","
+    ":doc:`transferCapability` (s)",object,"Transfer capabilities provided by the application entity","
     .. _dicomTransferCapability:
 
     dicomTransferCapability_"

@@ -259,6 +259,10 @@ DICOM Archive Device related information
     .. _hl7ScheduleProcedureTemplateURI:
 
     hl7ScheduleProcedureTemplateURI_"
+    "HL7 Outgoing Patient Update Template URI",string,"Specifies URI for the style sheet to transcode DICOM object patient attributes to HL7 ADT messages.","
+    .. _hl7OutgoingPatientUpdateTemplateURI:
+
+    hl7OutgoingPatientUpdateTemplateURI_"
     "HL7 Schedule Protocol Code in Order",string,"Specifies location of Scheduled Protocol Code in received HL7 Order message. May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: OBR_4_1 or OBR_4_4","
     .. _hl7ScheduledProtocolCodeInOrder:
 
@@ -475,6 +479,10 @@ DICOM Archive Device related information
     .. _hl7TrackChangedPatientID:
 
     hl7TrackChangedPatientID_"
+    "Audit Software Configuration Verbose",boolean,"Specifies if Child Objects and Attributes of created Objects should be included in Software Configuration Audit Message.","
+    .. _dcmAuditSoftwareConfigurationVerbose:
+
+    dcmAuditSoftwareConfigurationVerbose_"
     ":doc:`storage` (s)",object,"Specifies Storage System","
     .. _dcmStorage:
 

@@ -31,6 +31,10 @@ HL7 Application information
     .. _hl7DefaultCharacterSet:
 
     hl7DefaultCharacterSet_"
+    "Sending Character Set",string,"Character Set used to encode HL7 messages sent from archive.","
+    .. _hl7SendingCharacterSet:
+
+    hl7SendingCharacterSet_"
     "HL7 Description",string,"Unconstrained text description of the HL7 Application","
     .. _dicomDescription:
 
