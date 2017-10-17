@@ -43,3 +43,7 @@ Managed JMS Queue
     .. _dcmPurgeQueueMessageCompletedDelay:
 
     dcmPurgeQueueMessageCompletedDelay_"
+    "Maximum Queue Size",integer,"Maximal number of scheduled tasks in the queue. If the number of scheduled tasks reaches the limit, an attempt to schedule another tasks will fail. 0 = no limitation.","
+    .. _dcmMaxQueueSize:
+
+    dcmMaxQueueSize_"
