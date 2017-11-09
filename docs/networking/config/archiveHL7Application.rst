@@ -27,7 +27,7 @@ DICOM Archive HL7 Application related information
     .. _hl7ScheduledProtocolCodeInOrder:
 
     hl7ScheduledProtocolCodeInOrder_"
-    "HL7 Schedule Station AET in Order",string,"Specifies location of Scheduled Station AE Title in received HL7 Order message. Not effective for HL7 v2.5.1 OMI^O23 with IPC segment. Overwrites value specified on Device level. Enumerated values: ORC_18","
+    "HL7 Schedule Station AET in Order",string,"Specifies location of Scheduled Station AE Title in received HL7 Order message. Should not be configured for HL7 v2.5.1 OMI^O23 with IPC segment. Overwrites value specified on Device level. Enumerated values: ORC_18","
     .. _hl7ScheduledStationAETInOrder:
 
     hl7ScheduledStationAETInOrder_"
@@ -43,6 +43,10 @@ DICOM Archive HL7 Application related information
     .. _hl7NoPatientCreateMessageType:
 
     hl7NoPatientCreateMessageType_"
+    "Use HL7 Null Value",boolean,"Specifies if HL7 v2 null values (|""""|) are used in sent HL7 messages for not present or empty entity attributes. Required to unset entity attributes at the remote HL7 Application. Overwrites value specified on Device level.","
+    .. _hl7UseNullValue:
+
+    hl7UseNullValue_"
     ":doc:`hl7ForwardRule` (s)",object,"HL7 Forward Rule. Supplements values specified on Device level.","
     .. _hl7ForwardRule:
 

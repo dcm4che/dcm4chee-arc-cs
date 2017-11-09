@@ -171,7 +171,7 @@ DICOM Archive Network AE related information
     .. _dcmStorePermissionServiceErrorCodePattern:
 
     dcmStorePermissionServiceErrorCodePattern_"
-    "Allow Rejection For Data Retention Policy Expired",string,"Allow Rejection For Data Retention Policy Expired. Overwrites value specified on Device level. Enumerated values: NEVER, ALWAYS or STUDY_RETENTION_POLICY","
+    "Allow Rejection For Data Retention Policy Expired",string,"Allow Rejection For Data Retention Policy Expired. Overwrites value specified on Device level. Enumerated values: NEVER, ALWAYS, EXPIRED_UNSET or ONLY_EXPIRED","
     .. _dcmAllowRejectionForDataRetentionPolicyExpired:
 
     dcmAllowRejectionForDataRetentionPolicyExpired_"

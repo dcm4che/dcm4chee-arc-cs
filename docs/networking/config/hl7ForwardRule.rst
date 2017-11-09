@@ -15,7 +15,7 @@ HL7 Forward Rule
     .. _hl7FwdApplicationName:
 
     hl7FwdApplicationName_"
-    "Property(s)",string,"Property in format <name>=<value>","
+    "Conditions(s)",string,"Conditions in format {attributeID}[!]={regEx} or MSH-#[!]={regEx}","
     .. _dcmProperty:
 
     dcmProperty_"

@@ -27,11 +27,11 @@ HL7 Application information
     .. _hl7AcceptedMessageType:
 
     hl7AcceptedMessageType_"
-    "Default Character Set",string,"Character Set used to decode received messages if not specified by MSH-18. Enumerated values: ASCII, GB 18030-2000, 8859/1, KS X 1001, 8859/2, CNS 11643-1992, 8859/3, 8859/4, ISO IR14, 8859/5, 8859/6, 8859/7, ISO IR87, 8859/8, UNICODE UTF-8, 8859/9, ISO IR159 or UNICODE","
+    "Default Character Set",string,"Character Set used to decode received messages if not specified by MSH-18.","
     .. _hl7DefaultCharacterSet:
 
     hl7DefaultCharacterSet_"
-    "Sending Character Set",string,"Character Set used to encode HL7 messages sent from archive. Enumerated values: ASCII, GB 18030-2000, 8859/1, KS X 1001, 8859/2, CNS 11643-1992, 8859/3, 8859/4, ISO IR14, 8859/5, 8859/6, 8859/7, ISO IR87, 8859/8, UNICODE UTF-8, 8859/9, ISO IR159 or UNICODE","
+    "Sending Character Set",string,"Character Set used to encode HL7 messages sent from archive.","
     .. _hl7SendingCharacterSet:
 
     hl7SendingCharacterSet_"

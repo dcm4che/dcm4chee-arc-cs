@@ -23,7 +23,7 @@ Export Rule
     .. _dcmExportPreviousEntity:
 
     dcmExportPreviousEntity_"
-    "Property(s)",string,"Property in format <name>=<value>","
+    "Conditions(s)",string,"Conditions in format {attributeID}[!]={regEx}","
     .. _dcmProperty:
 
     dcmProperty_"

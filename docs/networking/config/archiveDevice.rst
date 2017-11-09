@@ -267,7 +267,7 @@ DICOM Archive Device related information
     .. _hl7ScheduledProtocolCodeInOrder:
 
     hl7ScheduledProtocolCodeInOrder_"
-    "HL7 Schedule Station AET in Order",string,"Specifies location of Scheduled Station AE Title in received HL7 Order message. Not effective for HL7 v2.5.1 OMI^O23 with IPC segment. If absent or no value is provided in the configured field, the Scheduled Station AE Title is selected according configured rules. May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: ORC_18","
+    "HL7 Schedule Station AET in Order",string,"Specifies location of Scheduled Station AE Title in received HL7 Order message. Should not be configured for HL7 v2.5.1 OMI^O23 with IPC segment. If absent or no value is provided in the configured field, the Scheduled Station AE Title is selected according configured rules. May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: ORC_18","
     .. _hl7ScheduledStationAETInOrder:
 
     hl7ScheduledStationAETInOrder_"
@@ -347,7 +347,7 @@ DICOM Archive Device related information
     .. _dcmStoreUpdateDBMaxRetryDelay:
 
     dcmStoreUpdateDBMaxRetryDelay_"
-    "Allow Rejection For Data Retention Policy Expired",string,"Allow Rejection For Data Retention Policy Expired. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: NEVER, ALWAYS or STUDY_RETENTION_POLICY","
+    "Allow Rejection For Data Retention Policy Expired",string,"Allow Rejection For Data Retention Policy Expired. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: NEVER, ALWAYS, EXPIRED_UNSET or ONLY_EXPIRED","
     .. _dcmAllowRejectionForDataRetentionPolicyExpired:
 
     dcmAllowRejectionForDataRetentionPolicyExpired_"
@@ -367,7 +367,7 @@ DICOM Archive Device related information
     .. _dcmPurgeStgCmtPollingInterval:
 
     dcmPurgeStgCmtPollingInterval_"
-    "Default Character Set",string,"Value of Specific Character Set (0008,0005) added to Data Sets without Specific Character Set (0008,0005) attribute received by any AE. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: ISO_IR 100, ISO_IR 101, ISO_IR 109, ISO_IR 110, ISO_IR 144, ISO_IR 127, ISO_IR 126, ISO_IR 138, ISO_IR 148, ISO_IR 13, ISO_IR 166, ISO 2022 IR 6, ISO 2022 IR 100, ISO 2022 IR 101, ISO 2022 IR 109, ISO 2022 IR 110, ISO 2022 IR 144, ISO 2022 IR 127, ISO 2022 IR 126, ISO 2022 IR 138, ISO 2022 IR 148, ISO 2022 IR 13, ISO 2022 IR 166, ISO 2022 IR 87, ISO 2022 IR 159, ISO 2022 IR 149, ISO 2022 IR 58, ISO_IR 192, GB18030 or GBK","
+    "Default Character Set",string,"Value of Specific Character Set (0008,0005) added to Data Sets without Specific Character Set (0008,0005) attribute received by any AE. May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmDefaultCharacterSet:
 
     dcmDefaultCharacterSet_"
@@ -483,6 +483,10 @@ DICOM Archive Device related information
     .. _dcmAuditSoftwareConfigurationVerbose:
 
     dcmAuditSoftwareConfigurationVerbose_"
+    "Use HL7 Null Value",boolean,"Specifies if HL7 v2 null values (|""""|) are used in sent HL7 messages for not present or empty entity attributes. Required to unset entity attributes at the remote HL7 Application. May be overwritten by configured values for particular Archive HL7 Application.","
+    .. _hl7UseNullValue:
+
+    hl7UseNullValue_"
     ":doc:`storage` (s)",object,"Specifies Storage System","
     .. _dcmStorage:
 

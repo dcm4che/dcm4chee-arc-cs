@@ -11,10 +11,10 @@ Scheduled Station selected on MWL HL7 Order Feed
     .. _cn:
 
     cn_"
-    "Scheduled Station Device Reference",string,"The DN of a dicomDeviceObject referenced by hl7OrderScheduledStation","
-    .. _hl7OrderScheduledStationDeviceReference:
+    "Scheduled Station Device Name",string,"Device name of Scheduled Station used for HL7 Order Messages.","
+    .. _hl7OrderScheduledStationDeviceName:
 
-    hl7OrderScheduledStationDeviceReference_"
+    hl7OrderScheduledStationDeviceName_"
     "Mapping Priority",integer,"Mapping Priority.","
     .. _dcmRulePriority:
 
