@@ -19,6 +19,10 @@ Exporter Descriptor
     .. _dcmQueueName:
 
     dcmQueueName_"
+    "Export Priority",integer,"JMS Priority Level for processing the Export Task from 0 (lowest) to 9 (highest).","
+    .. _dcmExportPriority:
+
+    dcmExportPriority_"
     "Exporter Description",string,"Unconstrained text description of the exporter","
     .. _dicomDescription:
 
@@ -55,7 +59,3 @@ Exporter Descriptor
     .. _dcmProperty:
 
     dcmProperty_"
-    "Export Priority",integer,"JMS Priority Level for processing the Export Task from 0 (lowest) to 9 (highest).","
-    .. _dcmExportPriority:
-
-    dcmExportPriority_"
