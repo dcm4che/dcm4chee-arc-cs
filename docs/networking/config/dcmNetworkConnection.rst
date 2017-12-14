@@ -99,6 +99,10 @@ dcm4che proprietary Network Connection Attributes
     .. _dcmRetrieveTimeout:
 
     dcmRetrieveTimeout_"
+    "Retrieve Timeout Total",boolean,"Indicates if the timer with the specified timeout for outstanding C-GET and C-MOVE RSPs shall be restarted on receive of pending RSPs (=false) or not (=true).","
+    .. _dcmRetrieveTimeoutTotal:
+
+    dcmRetrieveTimeoutTotal_"
     "Idle Timeout",integer,"Indicates aborting of idle Associations after specified timeout in ms; no timeout if absent","
     .. _dcmIdleTimeout:
 
