@@ -79,6 +79,10 @@ dcm4che proprietary Device Attributes
     .. _dcmArchiveDevice:
 
     dcmArchiveDevice_"
+    ":doc:`uiConfig` (s)",object,"UI Configuration","
+    .. _dcmuiConfig:
+
+    dcmuiConfig_"
 
 .. toctree::
 
@@ -88,3 +92,4 @@ dcm4che proprietary Device Attributes
     auditLogger
     auditRecordRepository
     archiveDevice
+    uiConfig
