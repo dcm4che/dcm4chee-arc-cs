@@ -8,9 +8,9 @@ UI Diff Configuration
     :widths: 20, 7, 60, 13
 
     "UI Diff Configuration Name",string,"UI Diff Configuration Name","
-    .. _dcmuiConfigName:
+    .. _dcmuiDiffConfigName:
 
-    dcmuiConfigName_"
+    dcmuiDiffConfigName_"
     "Diff Calling AET",string,"Diff Calling AET","
     .. _dcmuiDiffCallingAET:
 
@@ -23,6 +23,10 @@ UI Diff Configuration
     .. _dcmuiDiffPrimaryCMoveSCP:
 
     dcmuiDiffPrimaryCMoveSCP_"
+    "UI Diff Primary C-STORE SCP",string,"UI Diff Primary C-STORE SCP","
+    .. _dcmuiDiffPrimaryCStoreSCP:
+
+    dcmuiDiffPrimaryCStoreSCP_"
     "UI Diff Secondary C-FIND SCP",string,"UI Diff Secondary C-FIND SCP","
     .. _dcmuiDiffSecondaryCFindSCP:
 
@@ -31,6 +35,10 @@ UI Diff Configuration
     .. _dcmuiDiffSecondaryCMoveSCP:
 
     dcmuiDiffSecondaryCMoveSCP_"
+    "UI Diff Secondary C-STORE SCP",string,"UI Diff Secondary C-STORE SCP","
+    .. _dcmuiDiffSecondaryCStoreSCP:
+
+    dcmuiDiffSecondaryCStoreSCP_"
     ":doc:`uiDiffCriteria` (s)",object,"UI Diff Criteria","
     .. _dcmuiDiffCriteria:
 
