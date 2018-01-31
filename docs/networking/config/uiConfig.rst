@@ -19,8 +19,13 @@ UI Configuration
     .. _dcmuiDiffConfig:
 
     dcmuiDiffConfig_"
+    ":doc:`uiDashboard` (s)",object,"UI Dashboard Configuration","
+    .. _dcmuiDashboardConfig:
+
+    dcmuiDashboardConfig_"
 
 .. toctree::
 
     uiPermission
     uiDiffConfig
+    uiDashboard

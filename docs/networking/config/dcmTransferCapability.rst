@@ -7,6 +7,10 @@ dcm4che proprietary Transfer Capability Attributes
     :header: Name, Type, Description, LDAP Attribute
     :widths: 20, 7, 60, 13
 
+    "PreferredTransferSyntax(s)",string,"Preferred Transfer Syntax for selection of Transfer Syntax within a Presentation Context, ordered by priority. Overwrites values specified on AE level.","
+    .. _dcmPreferredTransferSyntax:
+
+    dcmPreferredTransferSyntax_"
     "Relational Queries",boolean,"Enable/disable relational queries.","
     .. _dcmRelationalQueries:
 

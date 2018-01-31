@@ -391,6 +391,10 @@ DICOM Archive Device related information
     .. _dcmXDSiImagingDocumentSourceAETitle:
 
     dcmXDSiImagingDocumentSourceAETitle_"
+    "Queue Tasks Fetch Size",integer,"Maximal number of Tasks rescheduled or deleted or canceled in one transaction.","
+    .. _dcmQueueTasksFetchSize:
+
+    dcmQueueTasksFetchSize_"
     ":doc:`attributeFilter` (s)",object,"Specifies Attributes stored in the database","
     .. _dcmAttributeFilter:
 

@@ -19,6 +19,10 @@ dcm4che proprietary Attributes of Network AE
     .. _dcmMasqueradeCallingAETitle:
 
     dcmMasqueradeCallingAETitle_"
+    "PreferredTransferSyntax(s)",string,"Preferred Transfer Syntax for selection of Transfer Syntax within a Presentation Context, ordered by priority. If absent, the first acceptable Transfer Syntax in the offered Presentation Context will be selected. May be overwritten by configured values for particular Transfer Capabilities of this AE.","
+    .. _dcmPreferredTransferSyntax:
+
+    dcmPreferredTransferSyntax_"
     "HL7 Application name",string,"HL7 Application and Facility name (Application|Facility) associated with this AE","
     .. _hl7ApplicationName:
 
