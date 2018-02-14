@@ -19,7 +19,7 @@ dcm4che proprietary Attributes of Network AE
     .. _dcmMasqueradeCallingAETitle:
 
     dcmMasqueradeCallingAETitle_"
-    "PreferredTransferSyntax(s)",string,"Preferred Transfer Syntax for selection of Transfer Syntax within a Presentation Context, ordered by priority. If absent, the first acceptable Transfer Syntax in the offered Presentation Context will be selected. May be overwritten by configured values for particular Transfer Capabilities of this AE.","
+    "Preferred Transfer Syntax(s)",string,"Preferred Transfer Syntax for selection of Transfer Syntax within a Presentation Context, ordered by priority. If absent, the first acceptable Transfer Syntax in the offered Presentation Context will be selected. May be overwritten by configured values for particular Transfer Capabilities of this AE.","
     .. _dcmPreferredTransferSyntax:
 
     dcmPreferredTransferSyntax_"
