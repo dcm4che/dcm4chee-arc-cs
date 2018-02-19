@@ -543,6 +543,10 @@ DICOM Archive Device related information
     .. _dcmIDGenerator:
 
     dcmIDGenerator_"
+    "X-Road Property(s)",string,"Properties for accessing Estonian National Patient Registry in format <name>=<value>","
+    .. _dcmXRoadProperty:
+
+    dcmXRoadProperty_"
     ":doc:`hl7ForwardRule` (s)",object,"HL7 Forward Rules for HL7 messages received by any HL7 Application. May be supplemented by configured HL7 Forward Rules for particular HL7 Applications.","
     .. _hl7ForwardRule:
 
