@@ -35,6 +35,10 @@ Archive Attribute Coercion of received/sent DIMSE
     .. _dcmSOPClass:
 
     dcmSOPClass_"
+    "De-identification(s)",string,"De-identify objects according the Basic Application Level Confidentiality Profile specified in DICOM PS3.15. Selecting any Option implicitly includes the Basic Application Level Confidentiality Profile. Enumerated values: BasicApplicationConfidentialityProfile, RetainLongitudinalTemporalInformationFullDatesOption, RetainDeviceIdentityOption, RetainInstitutionIdentityOption or RetainUIDsOption","
+    .. _dcmDeIdentification:
+
+    dcmDeIdentification_"
     "XSL Stylesheet URI",string,"Specifies URI of the XSL style sheet for Attribute Coercion","
     .. _dcmURI:
 
