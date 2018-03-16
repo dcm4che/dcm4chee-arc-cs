@@ -15,7 +15,7 @@ HL7 Forward Rule
     .. _hl7FwdApplicationName:
 
     hl7FwdApplicationName_"
-    "Conditions(s)",string,"Conditions in format {attributeID}[!]={regEx} or MSH-#[!]={regEx}","
+    "Conditions(s)",string,"Conditions in format {attributeID}[!]={regEx} or MSH-#[!]={regEx} Examples: MSH-3=FORWARD or MSH-8=ADT\^A28\^ADT_A05","
     .. _dcmProperty:
 
     dcmProperty_"

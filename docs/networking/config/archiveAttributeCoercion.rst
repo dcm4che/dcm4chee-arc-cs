@@ -67,6 +67,14 @@ Archive Attribute Coercion of received/sent DIMSE
     .. _dcmNullifyTag:
 
     dcmNullifyTag_"
+    "Nullify Issuer of Patient ID",string,"Conditionally nullify Issuer of Patient ID (0010,0021) and Issuer of Patient ID Qualifiers Sequence (0010,0024) from received objects Enumerated values: ALWAYS, MATCHING or NOT_MATCHING","
+    .. _dcmNullifyIssuerOfPatientID:
+
+    dcmNullifyIssuerOfPatientID_"
+    "Issuer of Patient ID(s)",string,"Issuer of Patient ID (0010,0021), and optionally also values for the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Patient ID Qualifiers Sequence (0010,0024) against values in received objects are matched, if Nullify Issuer of Patient ID is set to MATCHING or NOT_MATCHING. Format: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].","
+    .. _dcmIssuerOfPatientID:
+
+    dcmIssuerOfPatientID_"
     "Supplement from Device",string,"Name of Device from which Assigning Authorities and other information is taken to supplement received Composite Objects and MPPS.","
     .. _dcmSupplementFromDeviceName:
 

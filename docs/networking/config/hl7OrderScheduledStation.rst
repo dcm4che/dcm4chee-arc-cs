@@ -19,7 +19,7 @@ Scheduled Station selected on MWL HL7 Order Feed
     .. _dcmRulePriority:
 
     dcmRulePriority_"
-    "Conditions(s)",string,"Conditions in format {attributeID}[!]={regEx} or MSH-#[!]={regEx}","
+    "Conditions(s)",string,"Conditions in format {attributeID}[!]={regEx} or MSH-#[!]={regEx} Examples: MSH-3=FORWARD or MSH-8=ADT\^A28\^ADT_A05","
     .. _dcmProperty:
 
     dcmProperty_"
