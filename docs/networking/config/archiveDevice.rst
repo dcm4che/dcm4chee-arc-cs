@@ -343,7 +343,7 @@ DICOM Archive Device related information
     .. _dcmStoreUpdateDBMaxRetries:
 
     dcmStoreUpdateDBMaxRetries_"
-    "Store Update DB Maximum Delay of Retry",integer,"Maximum delay in ms of retry to update the database on storage.","
+    "Store Update DB Delay of Retry",integer,"Delay in ms of retry to update the database on storage.","
     .. _dcmStoreUpdateDBMaxRetryDelay:
 
     dcmStoreUpdateDBMaxRetryDelay_"
