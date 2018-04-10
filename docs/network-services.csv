@@ -106,6 +106,7 @@
 "Implantation Plan SR Storage", "Yes", "Yes"
 "Encapsulated PDF Storage", "Yes", "Yes"
 "Encapsulated CDA Storage", "Yes", "Yes"
+"Encapsulated STL Storage", "Yes", "Yes"
 "Positron Emission Tomography Image Storage", "Yes", "Yes"
 "Legacy Converted Enhanced PET Image Storage", "Yes", "Yes"
 "Enhanced PET Image Storage", "Yes", "Yes"

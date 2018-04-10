@@ -147,6 +147,7 @@
 "BasicStructuredDisplayStorage", "1.2.840.10008.5.1.4.1.1.131", "Yes", "No"
 "Encapsulated PDF Storage", "1.2.840.10008.5.1.4.1.1.104.1", "Yes", "No"
 "Encapsulated CDA Storage", "1.2.840.10008.5.1.4.1.1.104.2", "Yes", "No"
+"Encapsulated STL Storage", "1.2.840.10008.5.1.4.1.1.104.3", "Yes", "No"
 "Standalone PET Curve Storage (Retired)", "1.2.840.10008.5.1.4.1.1.129", "Yes", "No"
 "Text SR Storage Trial (Retired)", "1.2.840.10008.5.1.4.1.1.88.1", "Yes", "No"
 "Audio SR Storage Trial (Retired)", "1.2.840.10008.5.1.4.1.1.88.2", "Yes", "No"
