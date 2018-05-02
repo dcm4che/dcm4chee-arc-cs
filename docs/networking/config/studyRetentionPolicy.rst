@@ -27,3 +27,7 @@ Study Retention Policy
     .. _dcmExpireSeriesIndividually:
 
     dcmExpireSeriesIndividually_"
+    "Start Retention Period on Study Date",boolean,"Indicates if retention period should be started on Study Date","
+    .. _dcmStartRetentionPeriodOnStudyDate:
+
+    dcmStartRetentionPeriodOnStudyDate_"

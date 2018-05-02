@@ -55,6 +55,10 @@ dcm4che proprietary Device Attributes
     .. _dcmTimeZoneOfDevice:
 
     dcmTimeZoneOfDevice_"
+    ":doc:`webApplication` (s)",object,"Web Applications provided by the Device","
+    .. _dcmWebApp:
+
+    dcmWebApp_"
     ":doc:`hl7Application` (s)",object,"HL7 Applications provided by the Device","
     .. _hl7Application:
 
@@ -86,6 +90,7 @@ dcm4che proprietary Device Attributes
 
 .. toctree::
 
+    webApplication
     hl7Application
     imageWriter
     imageReader

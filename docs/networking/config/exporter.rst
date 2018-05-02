@@ -15,7 +15,7 @@ Exporter Descriptor
     .. _dcmURI:
 
     dcmURI_"
-    "Queue Name",string,"JMS Queue Name","
+    "Queue Name",string,"JMS Queue Name Enumerated values: Export1, Export2, Export3, Export4 or Export5","
     .. _dcmQueueName:
 
     dcmQueueName_"

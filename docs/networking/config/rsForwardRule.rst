@@ -15,6 +15,10 @@ RESTful Forward Rule
     .. _dcmURI:
 
     dcmURI_"
+    "Keycloak Server ID",string,"Identifier of the Keycloak Server from which the access token shall be granted. If absent, no token will be sent.","
+    .. _dcmKeycloakServerID:
+
+    dcmKeycloakServerID_"
     "RESTful Operation(s)",string,"Name of RESTful Operation which shall be forwarded to another archive instance. Enumerated values: CreatePatient, UpdatePatient, DeletePatient, ChangePatientID, MergePatient, MergePatients, UpdateStudy, DeleteStudy, CopyInstances, MoveInstances, RejectStudy, RejectSeries, RejectInstance, UpdateStudyExpirationDate, UpdateSeriesExpirationDate, CreateMWL, UpdateMWL, DeleteMWL or LinkInstancesWithMWL","
     .. _dcmRSOperation:
 

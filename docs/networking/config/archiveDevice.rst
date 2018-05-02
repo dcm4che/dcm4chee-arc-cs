@@ -523,6 +523,10 @@ DICOM Archive Device related information
     .. _dcmRSForwardRule:
 
     dcmRSForwardRule_"
+    ":doc:`keycloakServer` (s)",object,"Keycloak Server","
+    .. _dcmKeycloakServer:
+
+    dcmKeycloakServer_"
     ":doc:`archiveCompressionRule` (s)",object,"Compression rules applied to DICOM objects received by any AE. May be supplemented by configured Compression Rules for particular Archive Network AEs.","
     .. _dcmArchiveCompressionRule:
 
@@ -574,6 +578,7 @@ DICOM Archive Device related information
     exporter
     exportRule
     rsForwardRule
+    keycloakServer
     archiveCompressionRule
     archiveAttributeCoercion
     rejectionNote
