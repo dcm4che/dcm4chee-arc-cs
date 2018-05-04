@@ -19,3 +19,7 @@ UI Dashboard Configuration
     .. _dicomuiDeviceName:
 
     dicomuiDeviceName_"
+    "Count Aet",string,"Selected Aet will be used to get the count of studies in the dashboard","
+    .. _dcmuiCountAET:
+
+    dcmuiCountAET_"

@@ -23,9 +23,14 @@ UI Configuration
     .. _dcmuiDashboardConfig:
 
     dcmuiDashboardConfig_"
+    ":doc:`uiElasticsearch` (s)",object,"Elasticsearch Configuration for the pro version","
+    .. _dcmuiElasticsearchConfig:
+
+    dcmuiElasticsearchConfig_"
 
 .. toctree::
 
     uiPermission
     uiDiffConfig
     uiDashboard
+    uiElasticsearch

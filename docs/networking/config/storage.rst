@@ -35,10 +35,14 @@ Storage Descriptor
     .. _dcmDeleterThreshold:
 
     dcmDeleterThreshold_"
-    "External Retrieve AET",string,"Constrain deletion of Studies, whose objects are retrievable using this AE from an external C-MOVE SCP, if usable space falls below configured threshold.","
+    "External Retrieve AET",string,"Constrain deletion of Studies, if usable space falls below the configured threshold, to Studies which objects are retrievable using this AE from an external C-MOVE SCP.","
     .. _dcmExternalRetrieveAET:
 
     dcmExternalRetrieveAET_"
+    "Export Storage ID",string,"Constrain deletion of Studies, if usable space falls below the configured threshold, to Studies which objects are also accessible from the specified other storage.","
+    .. _dcmExportStorageID:
+
+    dcmExportStorageID_"
     "Storage Property(s)",string,"Property in format <name>=<value>","
     .. _dcmProperty:
 

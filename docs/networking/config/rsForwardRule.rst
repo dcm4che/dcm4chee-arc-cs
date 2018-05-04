@@ -19,7 +19,15 @@ RESTful Forward Rule
     .. _dcmKeycloakServerID:
 
     dcmKeycloakServerID_"
-    "RESTful Operation(s)",string,"Name of RESTful Operation which shall be forwarded to another archive instance. Enumerated values: CreatePatient, UpdatePatient, DeletePatient, ChangePatientID, MergePatient, MergePatients, UpdateStudy, DeleteStudy, CopyInstances, MoveInstances, RejectStudy, RejectSeries, RejectInstance, UpdateStudyExpirationDate, UpdateSeriesExpirationDate, CreateMWL, UpdateMWL, DeleteMWL or LinkInstancesWithMWL","
+    "TLS Allow Any Hostname",boolean,"If the other server requires HTTPS and this config option is set to true the other server’s certificate is validated via the truststore, but host name validation is not done.","
+    .. _dcmTLSAllowAnyHostname:
+
+    dcmTLSAllowAnyHostname_"
+    "TLS Disable Trust Manager",boolean,"If the other server requires HTTPS and this config option is set to true you do not have to specify a truststore","
+    .. _dcmTLSDisableTrustManager:
+
+    dcmTLSDisableTrustManager_"
+    "RESTful Operation(s)",string,"Name of RESTful Operation which shall be forwarded to another archive instance. Enumerated values: CreatePatient, UpdatePatient, DeletePatient, ChangePatientID, MergePatient, MergePatients, UpdateStudy, DeleteStudy, RejectStudy, RejectSeries, RejectInstance, UpdateStudyExpirationDate, UpdateSeriesExpirationDate, CreateMWL, UpdateMWL or DeleteMWL","
     .. _dcmRSOperation:
 
     dcmRSOperation_"
