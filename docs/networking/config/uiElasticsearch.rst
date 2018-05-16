@@ -12,9 +12,9 @@ Elasticsearch Configuration for the pro version
 
     dcmuiElasticsearchConfigName_"
     ":doc:`uiElasticsearchURL` (s)",object,"UI Elasticsearch URL","
-    .. _dcmuiElasticsearchURLObject:
+    .. _dcmuiElasticsearchURLObjects:
 
-    dcmuiElasticsearchURLObject_"
+    dcmuiElasticsearchURLObjects_"
 
 .. toctree::
 

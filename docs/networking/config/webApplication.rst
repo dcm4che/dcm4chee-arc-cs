@@ -23,7 +23,7 @@ Web Application information
     .. _dcmWebServicePath:
 
     dcmWebServicePath_"
-    "Web Service Class(s)",string,"Web Service Classes provided by the Web application Enumerated values: QIDO_RS, STOW_RS, WADO_RS or WADO_URI","
+    "Web Service Class(s)",string,"Web Service Classes provided by the Web application Enumerated values: QIDO_RS, STOW_RS, WADO_RS, WADO_URI, UPS_RS or DCM4CHEE_ARC","
     .. _dcmWebServiceClass:
 
     dcmWebServiceClass_"

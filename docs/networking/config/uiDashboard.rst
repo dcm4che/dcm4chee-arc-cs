@@ -19,6 +19,10 @@ UI Dashboard Configuration
     .. _dicomuiDeviceName:
 
     dicomuiDeviceName_"
+    "Audit Events Ignore Parameters(s)",string,"Set Elasticsearch parameters that should be ignored in the Audit Events. E.g. Source.UserID=TESTVALUE","
+    .. _dicomuiIgnoreParams:
+
+    dicomuiIgnoreParams_"
     "Count Aet",string,"Selected Aet will be used to get the count of studies in the dashboard","
     .. _dcmuiCountAET:
 

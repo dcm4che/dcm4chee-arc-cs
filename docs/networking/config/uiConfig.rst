@@ -27,6 +27,14 @@ UI Configuration
     .. _dcmuiElasticsearchConfig:
 
     dcmuiElasticsearchConfig_"
+    ":doc:`uiDeviceURL` (s)",object,"Other UI Device URLs","
+    .. _dcmuiDeviceURLObject:
+
+    dcmuiDeviceURLObject_"
+    ":doc:`uiDeviceCluster` (s)",object,"Group Devices in Clusters","
+    .. _dcmuiDeviceClusterObject:
+
+    dcmuiDeviceClusterObject_"
 
 .. toctree::
 
@@ -34,3 +42,5 @@ UI Configuration
     uiDiffConfig
     uiDashboard
     uiElasticsearch
+    uiDeviceURL
+    uiDeviceCluster

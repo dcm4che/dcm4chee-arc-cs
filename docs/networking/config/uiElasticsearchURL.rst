@@ -15,3 +15,11 @@ Elasticsearch URL
     .. _dcmuiElasticsearchURL:
 
     dcmuiElasticsearchURL_"
+    "Is Default",boolean,"Set this URL to the default one. (Make sure that only one of the urls - siblings child is set to default).","
+    .. _dcmuiElasticsearchIsDefault:
+
+    dcmuiElasticsearchIsDefault_"
+    "Installed",boolean,"Use this URL in the UI","
+    .. _dcmuiElasticsearchInstalled:
+
+    dcmuiElasticsearchInstalled_"

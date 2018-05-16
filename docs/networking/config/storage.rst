@@ -43,6 +43,10 @@ Storage Descriptor
     .. _dcmExportStorageID:
 
     dcmExportStorageID_"
+    "No Deletion Constraint",boolean,"If no External Retrieve AET or Export Storage ID is configured on Storage Descriptor and deleter threshold is reached, by default studies will not be deleted.","
+    .. _dcmNoDeletionConstraint:
+
+    dcmNoDeletionConstraint_"
     "Storage Property(s)",string,"Property in format <name>=<value>","
     .. _dcmProperty:
 

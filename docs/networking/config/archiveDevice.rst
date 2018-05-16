@@ -27,15 +27,15 @@ DICOM Archive Device related information
     .. _dcmSeriesMetadataFetchSize:
 
     dcmSeriesMetadataFetchSize_"
-    "Remove Instance Records Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS for purging Instance Records from the DB. If absent, Instance Records will never be purged. May be overwritten by configured values for particular Archive Network AEs.","
+    "Purge Instance Records Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS for purging Instance Records from the DB. If absent, Instance Records will never be purged. May be overwritten by configured values for particular Archive Network AEs.","
     .. _dcmPurgeInstanceRecordsDelay:
 
     dcmPurgeInstanceRecordsDelay_"
-    "Remove Instance Records Polling Interval",string,"Polling Interval for Series scheduled for purging Instance Records from the DB in ISO-8601 duration format PnDTnHnMn.nS. If absent, Instance Records will not be purged.","
+    "Purge Instance Records Polling Interval",string,"Polling Interval for Series scheduled for purging Instance Records from the DB in ISO-8601 duration format PnDTnHnMn.nS. If absent, Instance Records will not be purged.","
     .. _dcmPurgeInstanceRecordsPollingInterval:
 
     dcmPurgeInstanceRecordsPollingInterval_"
-    "Remove Instance Records Fetch Size",integer,"Maximal number of Series scheduled for purging Instance Records from the DB fetched by one query.","
+    "Purge Instance Records Fetch Size",integer,"Maximal number of Series scheduled for purging Instance Records from the DB fetched by one query.","
     .. _dcmPurgeInstanceRecordsFetchSize:
 
     dcmPurgeInstanceRecordsFetchSize_"
@@ -411,10 +411,6 @@ DICOM Archive Device related information
     .. _dcmAuditRecordRepositoryURL:
 
     dcmAuditRecordRepositoryURL_"
-    "Elastic Search URL",string,"Access URL of Elastic Search. E.g. http://elasticsearch:9200","
-    .. _dcmElasticSearchURL:
-
-    dcmElasticSearchURL_"
     "Audit to json+fhir Template URI",string,"Specifies URI for the style sheet to transcode Audit Message to a FHIR JSON Resource Audit Event","
     .. _dcmAudit2JsonFhirTemplateURI:
 
