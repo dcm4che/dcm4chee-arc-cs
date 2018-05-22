@@ -6,104 +6,34 @@ Application Level Confidentiality Profile Specifications
 Attributes removed during protection
 """"""""""""""""""""""""""""""""""""
 
-//TODO
+.. csv-table:: Attributes removed during protection
+   :header: "Group", "Attributes"
+   :file: removed-attributes.csv
 
 .. _attributes-replaced-by-dummy-values:
 
-Attributes replaced by dummy values
-"""""""""""""""""""""""""""""""""""
+Attributes replaced by dummy values and dummy value generation
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-- Acquisition Device Processing Description (0018,1400)
-- Contrast Bolus Agent (0018,0010)
-- Dose Reference UID (300A,0013)
-- Operators Name (0008,1070)
-- Person Name (0040,A123)
-- Protocol Name (0018,1030)
-- Verifying Observer Name (0040,A075)
-- Verifying Organization (0040,A027)
-- Detector ID (0018,700A)
-- Device Serial Number (0018,1000)
-- Station Name (0008,1010)
-- Institution Name (0008,0080)
-- Acquisition Date Time (0008,002A)
-- Content Date (0008,0023)
-- Content Time (0008,0033)
-- Start Acquisition Date Time (0018,9516)
-- End Acquisition Date Time (0018,9517)
-- Verification Date Time (0040,A030)
-- Series Date (0008,0021)
-- Series Time (0008,0031)
+Following table lists attributes and the dummy values which are used to replace the attributes' values
 
-.. _dummy-values-generation:
-
-Dummy Values Generation
-"""""""""""""""""""""""
-
-Following table lists the dummy values which are used to replace the attributes' values
-
-.. table:: Dummy values used for replacement of attributes' values
-
-   +-----------------------------------------------------------------------------+
-   | VR | Dummy Value    | Attributes                                            |
-   +====+================+=======================================================+
-   | DA | 19991111       | Series Date (0008,0021)                               |
-   |    |                +-------------------------------------------------------+
-   |    |                | Content Date (0008,0023)                              |
-   +----+----------------+-------------------------------------------------------+
-   | DT | 19991111111111 | Acquisition Date Time (0008,002A)                     |
-   |    |                +-------------------------------------------------------+
-   |    |                | Start Acquisition Date Time (0018,9516)               |
-   |    |                +-------------------------------------------------------+
-   |    |                | End Acquisition Date Time (0018,9517)                 |
-   |    |                +-------------------------------------------------------+
-   |    |                | Verification Date Time (0040,A030)                    |
-   +----+----------------+-------------------------------------------------------+
-   | TM | 111111         | Series Time (0008,0031)                               |
-   |    |                +-------------------------------------------------------+
-   |    |                | Content Time (0008,0033)                              |
-   +----+----------------+-------------------------------------------------------+
-   | IS | 0              |                                                       |
-   +----+----------------+-------------------------------------------------------+
-   | DS | 0              |                                                       |
-   +----+----------------+-------------------------------------------------------+
-   | LO | REMOVED        | Acquisition Device Processing Description (0018,1400) |
-   |    |                +-------------------------------------------------------+
-   |    |                | Contrast Bolus Agent (0018,0010)                      |
-   |    |                +-------------------------------------------------------+
-   |    |                | Protocol Name (0018,1030)                             |
-   |    |                +-------------------------------------------------------+
-   |    |                | Verifying Organization (0040,A027)                    |
-   |    |                +-------------------------------------------------------+
-   |    |                | Device Serial Number (0018,1000)                      |
-   |    |                +-------------------------------------------------------+
-   |    |                | Institution Name (0008,0080)                          |
-   +----+----------------+-------------------------------------------------------+
-   | SH | REMOVED        | Detector ID (0018,700A)                               |
-   |    |                +-------------------------------------------------------+
-   |    |                | Station Name (0008,1010)                              |
-   +----+----------------+-------------------------------------------------------+
-   | UI | REMOVED        | Dose Reference UID (300A,0013)                        |
-   +----+----------------+-------------------------------------------------------+
-   | PN | REMOVED        | Operators Name (0008,1070)                            |
-   |    |                +-------------------------------------------------------+
-   |    |                | Person Name (0040,A123)                               |
-   |    |                +-------------------------------------------------------+
-   |    |                | Verifying Observer Name (0040,A075)                   |
-   +----+----------------+-------------------------------------------------------+
+.. csv-table:: Dummy values used to replace the attributes' values
+   :header: "VR", "Dummy Value", "Attributes"
+   :file: dummy-values.csv
 
 .. _encrypted-attributes-data-sets:
 
 Encrypted Attributes Data Sets
 """"""""""""""""""""""""""""""
 
-//TODO
+<TODO>
 
 .. _scope-ensuring-referential-integrity-replacement-instances:
 
 Scope ensuring Referential Integrity of Replacement Values
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-//TODO
+<TODO>
 
 
 .. _sop-instances-protection:
@@ -111,7 +41,7 @@ Scope ensuring Referential Integrity of Replacement Values
 SOP Instances Protection
 """"""""""""""""""""""""
 
-//TODO
+<TODO>
 
 
 .. _transfer-syntaxes-supported:
@@ -119,7 +49,7 @@ SOP Instances Protection
 Transfer Syntaxes Supported
 """""""""""""""""""""""""""
 
-//TODO
+<TODO>
 
 .. _options-supported:
 
@@ -137,4 +67,4 @@ Options Supported
 Additional Restrictions
 """""""""""""""""""""""
 
-//TODO
+<TODO>

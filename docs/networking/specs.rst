@@ -10,3 +10,4 @@ AE Specifications
    specs/qido-rs/qido-rs
    specs/wado-uri/wado-uri
    specs/wado-rs/wado-rs
+   specs/deidentification/deidentification
