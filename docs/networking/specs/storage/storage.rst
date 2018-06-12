@@ -340,6 +340,7 @@ By default, no image compression is configured.
 
 .. csv-table:: Storage Application C-STORE Response Status Return Reasons
     :header-rows: 1
+    :widths: 10, 10, 10, 10, 10
     :file: c-store-response-status-return-reasons.csv
 
 Note : If a failure condition does occur when handling an Association then all images previously received successfully over the Association
