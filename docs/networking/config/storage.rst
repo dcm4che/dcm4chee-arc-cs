@@ -43,6 +43,14 @@ Storage Descriptor
     .. _dcmExportStorageID:
 
     dcmExportStorageID_"
+    "Retrieve Cache Storage ID",string,"Specifies another Storage to which objects are copied in parallel on retrieve to increase the performance on accessing storage systems which provides more bandwidth using multiple connections in parallel.","
+    .. _dcmRetrieveCacheStorageID:
+
+    dcmRetrieveCacheStorageID_"
+    "Retrieve Cache Max Parallel",integer,"Maximal number of parallel copies to cache storage on retrieve. Only effective if a Retrieve Cache Storage ID is configured.","
+    .. _dcmRetrieveCacheMaxParallel:
+
+    dcmRetrieveCacheMaxParallel_"
     "No Deletion Constraint",boolean,"If no External Retrieve AET or Export Storage ID is configured on Storage Descriptor and deleter threshold is reached, by default studies will not be deleted.","
     .. _dcmNoDeletionConstraint:
 

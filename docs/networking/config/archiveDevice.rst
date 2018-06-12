@@ -27,15 +27,19 @@ DICOM Archive Device related information
     .. _dcmSeriesMetadataFetchSize:
 
     dcmSeriesMetadataFetchSize_"
-    "Purge Instance Records Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS for purging Instance Records from the DB. If absent, Instance Records will never be purged. May be overwritten by configured values for particular Archive Network AEs.","
+    "Purge Instance Records",boolean,"Indicates that Instance Records may be purged from the DB.","
+    .. _dcmPurgeInstanceRecords:
+
+    dcmPurgeInstanceRecords_"
+    "Purge Instance Records Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS for purging Instance Records from the DB. May be overwritten by configured values for particular Archive Network AEs. Only effective, if Purge Instance Records = true.","
     .. _dcmPurgeInstanceRecordsDelay:
 
     dcmPurgeInstanceRecordsDelay_"
-    "Purge Instance Records Polling Interval",string,"Polling Interval for Series scheduled for purging Instance Records from the DB in ISO-8601 duration format PnDTnHnMn.nS. If absent, Instance Records will not be purged.","
+    "Purge Instance Records Polling Interval",string,"Polling Interval for Series scheduled for purging Instance Records from the DB in ISO-8601 duration format PnDTnHnMn.nS. Only effective, if Purge Instance Records = true.","
     .. _dcmPurgeInstanceRecordsPollingInterval:
 
     dcmPurgeInstanceRecordsPollingInterval_"
-    "Purge Instance Records Fetch Size",integer,"Maximal number of Series scheduled for purging Instance Records from the DB fetched by one query.","
+    "Purge Instance Records Fetch Size",integer,"Maximal number of Series scheduled for purging Instance Records from the DB fetched by one query. Only effective, if Purge Instance Records = true.","
     .. _dcmPurgeInstanceRecordsFetchSize:
 
     dcmPurgeInstanceRecordsFetchSize_"

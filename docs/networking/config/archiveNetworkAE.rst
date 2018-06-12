@@ -23,7 +23,7 @@ DICOM Archive Network AE related information
     .. _dcmSeriesMetadataDelay:
 
     dcmSeriesMetadataDelay_"
-    "Purge Instance Records Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS for purging Instance Records from the DB received by this AE. Overwrites value specified on Device level.","
+    "Purge Instance Records Delay",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS for purging Instance Records from the DB received by this AE. Overwrites value specified on Device level. Only effective, if Purge Instance Records on Device Level = true.","
     .. _dcmPurgeInstanceRecordsDelay:
 
     dcmPurgeInstanceRecordsDelay_"

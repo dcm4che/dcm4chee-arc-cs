@@ -27,3 +27,11 @@ UI Dashboard Configuration
     .. _dcmuiCountAET:
 
     dcmuiCountAET_"
+    ":doc:`uiCompareSide` (s)",object,"Compare Sides","
+    .. _dcmuiCompareSideObjects:
+
+    dcmuiCompareSideObjects_"
+
+.. toctree::
+
+    uiCompareSide
