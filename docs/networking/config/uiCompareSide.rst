@@ -4,26 +4,36 @@ Compare Side
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|
 .. csv-table:: Compare Side Attributes (LDAP Object: dcmUiCompareSide)
-    :header: Name (LDAP Attribute), Type, Description
+    :header: Name, Type, Description (LDAP Attribute)
     :widths: 23, 7, 70
 
     "
     .. _dcmuiCompareSideName:
 
-    :ref:`Name (dcmuiCompareSideName) <dcmuiCompareSideName>`",string,"Compare Side Name"
+    :ref:`Name <dcmuiCompareSideName>`",string,"Compare Side Name
+
+    (dcmuiCompareSideName)"
     "
     .. _dcmuiCompareSideDescription:
 
-    :ref:`Description (dcmuiCompareSideDescription) <dcmuiCompareSideDescription>`",string,"A short description about this Group"
+    :ref:`Description <dcmuiCompareSideDescription>`",string,"A short description about this Group
+
+    (dcmuiCompareSideDescription)"
     "
     .. _dcmuiCompareSideCluster:
 
-    :ref:`Cluster (dcmuiCompareSideCluster) <dcmuiCompareSideCluster>`",string,"Select a Cluster"
+    :ref:`Cluster <dcmuiCompareSideCluster>`",string,"Select a Cluster
+
+    (dcmuiCompareSideCluster)"
     "
     .. _dcmuiCompareSideElasticsearch:
 
-    :ref:`Elasticsearch (dcmuiCompareSideElasticsearch) <dcmuiCompareSideElasticsearch>`",string,"Select an Elasticsearch URL"
+    :ref:`Elasticsearch <dcmuiCompareSideElasticsearch>`",string,"Select an Elasticsearch URL
+
+    (dcmuiCompareSideElasticsearch)"
     "
     .. _dcmuiCompareSideInstalled:
 
-    :ref:`Installed (dcmuiCompareSideInstalled) <dcmuiCompareSideInstalled>`",boolean,"If true this Compare side is active in the dashboard"
+    :ref:`Installed <dcmuiCompareSideInstalled>`",boolean,"If true this Compare side is active in the dashboard
+
+    (dcmuiCompareSideInstalled)"

@@ -4,42 +4,60 @@ UI Diff Configuration
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|
 .. csv-table:: UI Diff Configuration Attributes (LDAP Object: dcmUiDiffConfig)
-    :header: Name (LDAP Attribute), Type, Description
+    :header: Name, Type, Description (LDAP Attribute)
     :widths: 23, 7, 70
 
     "
     .. _dcmuiDiffConfigName:
 
-    :ref:`UI Diff Configuration Name (dcmuiDiffConfigName) <dcmuiDiffConfigName>`",string,"UI Diff Configuration Name"
+    :ref:`UI Diff Configuration Name <dcmuiDiffConfigName>`",string,"UI Diff Configuration Name
+
+    (dcmuiDiffConfigName)"
     "
     .. _dcmuiDiffCallingAET:
 
-    :ref:`Diff Calling AET (dcmuiDiffCallingAET) <dcmuiDiffCallingAET>`",string,"Diff Calling AET"
+    :ref:`Diff Calling AET <dcmuiDiffCallingAET>`",string,"Diff Calling AET
+
+    (dcmuiDiffCallingAET)"
     "
     .. _dcmuiDiffPrimaryCFindSCP:
 
-    :ref:`UI Diff Primary C-FIND SCP (dcmuiDiffPrimaryCFindSCP) <dcmuiDiffPrimaryCFindSCP>`",string,"UI Diff Primary C-FIND SCP"
+    :ref:`UI Diff Primary C-FIND SCP <dcmuiDiffPrimaryCFindSCP>`",string,"UI Diff Primary C-FIND SCP
+
+    (dcmuiDiffPrimaryCFindSCP)"
     "
     .. _dcmuiDiffPrimaryCMoveSCP:
 
-    :ref:`UI Diff Primary C-MOVE SCP (dcmuiDiffPrimaryCMoveSCP) <dcmuiDiffPrimaryCMoveSCP>`",string,"UI Diff Primary C-MOVE SCP"
+    :ref:`UI Diff Primary C-MOVE SCP <dcmuiDiffPrimaryCMoveSCP>`",string,"UI Diff Primary C-MOVE SCP
+
+    (dcmuiDiffPrimaryCMoveSCP)"
     "
     .. _dcmuiDiffPrimaryCStoreSCP:
 
-    :ref:`UI Diff Primary C-STORE SCP (dcmuiDiffPrimaryCStoreSCP) <dcmuiDiffPrimaryCStoreSCP>`",string,"UI Diff Primary C-STORE SCP"
+    :ref:`UI Diff Primary C-STORE SCP <dcmuiDiffPrimaryCStoreSCP>`",string,"UI Diff Primary C-STORE SCP
+
+    (dcmuiDiffPrimaryCStoreSCP)"
     "
     .. _dcmuiDiffSecondaryCFindSCP:
 
-    :ref:`UI Diff Secondary C-FIND SCP (dcmuiDiffSecondaryCFindSCP) <dcmuiDiffSecondaryCFindSCP>`",string,"UI Diff Secondary C-FIND SCP"
+    :ref:`UI Diff Secondary C-FIND SCP <dcmuiDiffSecondaryCFindSCP>`",string,"UI Diff Secondary C-FIND SCP
+
+    (dcmuiDiffSecondaryCFindSCP)"
     "
     .. _dcmuiDiffSecondaryCMoveSCP:
 
-    :ref:`UI Diff Secondary C-MOVE SCP (dcmuiDiffSecondaryCMoveSCP) <dcmuiDiffSecondaryCMoveSCP>`",string,"UI Diff Secondary C-MOVE SCP"
+    :ref:`UI Diff Secondary C-MOVE SCP <dcmuiDiffSecondaryCMoveSCP>`",string,"UI Diff Secondary C-MOVE SCP
+
+    (dcmuiDiffSecondaryCMoveSCP)"
     "
     .. _dcmuiDiffSecondaryCStoreSCP:
 
-    :ref:`UI Diff Secondary C-STORE SCP (dcmuiDiffSecondaryCStoreSCP) <dcmuiDiffSecondaryCStoreSCP>`",string,"UI Diff Secondary C-STORE SCP"
-    ":doc:`uiDiffCriteria` (s)",object,"UI Diff Criteria"
+    :ref:`UI Diff Secondary C-STORE SCP <dcmuiDiffSecondaryCStoreSCP>`",string,"UI Diff Secondary C-STORE SCP
+
+    (dcmuiDiffSecondaryCStoreSCP)"
+    ":doc:`uiDiffCriteria` (s)",object,"UI Diff Criteria
+
+    (dcmuiDiffCriteria)"
 
 .. toctree::
 

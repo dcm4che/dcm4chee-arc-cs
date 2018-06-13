@@ -4,30 +4,42 @@ Configuration of Device URL to use beside the main UI URL
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|
 .. csv-table:: UI Cluster Configuration Attributes (LDAP Object: dcmUiDeviceCluster)
-    :header: Name (LDAP Attribute), Type, Description
+    :header: Name, Type, Description (LDAP Attribute)
     :widths: 23, 7, 70
 
     "
     .. _dcmuiDeviceClusterName:
 
-    :ref:`Name (dcmuiDeviceClusterName) <dcmuiDeviceClusterName>`",string,"Cluster Name"
+    :ref:`Name <dcmuiDeviceClusterName>`",string,"Cluster Name
+
+    (dcmuiDeviceClusterName)"
     "
     .. _dcmuiDeviceClusterDescription:
 
-    :ref:`Description (dcmuiDeviceClusterDescription) <dcmuiDeviceClusterDescription>`",string,"Cluster Description"
+    :ref:`Description <dcmuiDeviceClusterDescription>`",string,"Cluster Description
+
+    (dcmuiDeviceClusterDescription)"
     "
     .. _dcmuiDeviceClusterLoadBalancer:
 
-    :ref:`Load Balancer (dcmuiDeviceClusterLoadBalancer) <dcmuiDeviceClusterLoadBalancer>`",string,"Select the Load Balancer"
+    :ref:`Load Balancer <dcmuiDeviceClusterLoadBalancer>`",string,"Select the Load Balancer
+
+    (dcmuiDeviceClusterLoadBalancer)"
     "
     .. _dcmuiDeviceClusterKeycloakServer:
 
-    :ref:`Keycloak Server (dcmuiDeviceClusterKeycloakServer) <dcmuiDeviceClusterKeycloakServer>`",string,"If this cluster doesn't use the same Keycloak select the configured Keycloak"
+    :ref:`Keycloak Server <dcmuiDeviceClusterKeycloakServer>`",string,"If this cluster doesn't use the same Keycloak select the configured Keycloak
+
+    (dcmuiDeviceClusterKeycloakServer)"
     "
     .. _dcmuiDeviceClusterDevices:
 
-    :ref:`Device(s) (dcmuiDeviceClusterDevices) <dcmuiDeviceClusterDevices>`",string,"Add the name of the configured devices"
+    :ref:`Device(s) <dcmuiDeviceClusterDevices>`",string,"Add the name of the configured devices
+
+    (dcmuiDeviceClusterDevices)"
     "
     .. _dcmuiDeviceClusterInstalled:
 
-    :ref:`Installed (dcmuiDeviceClusterInstalled) <dcmuiDeviceClusterInstalled>`",boolean,"Use this URL in the UI"
+    :ref:`Installed <dcmuiDeviceClusterInstalled>`",boolean,"Use this URL in the UI
+
+    (dcmuiDeviceClusterInstalled)"

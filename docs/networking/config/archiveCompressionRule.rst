@@ -4,26 +4,36 @@ Archive Compression rule
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|
 .. csv-table:: Archive Compression rule Attributes (LDAP Object: dcmArchiveCompressionRule)
-    :header: Name (LDAP Attribute), Type, Description
+    :header: Name, Type, Description (LDAP Attribute)
     :widths: 23, 7, 70
 
     "
     .. _cn:
 
-    :ref:`Name (cn) <cn>`",string,"Arbitrary/Meaningful name of the Archive Compression Rule"
+    :ref:`Name <cn>`",string,"Arbitrary/Meaningful name of the Archive Compression Rule
+
+    (cn)"
     "
     .. _dicomTransferSyntax:
 
-    :ref:`DICOM Transfer Syntax UID (dicomTransferSyntax) <dicomTransferSyntax>`",string,"A Transfer Syntax UID"
+    :ref:`DICOM Transfer Syntax UID <dicomTransferSyntax>`",string,"A Transfer Syntax UID
+
+    (dicomTransferSyntax)"
     "
     .. _dcmRulePriority:
 
-    :ref:`Rule Priority (dcmRulePriority) <dcmRulePriority>`",integer,"Rule Priority"
+    :ref:`Rule Priority <dcmRulePriority>`",integer,"Rule Priority
+
+    (dcmRulePriority)"
     "
     .. _dcmProperty:
 
-    :ref:`Conditions(s) (dcmProperty) <dcmProperty>`",string,"Conditions in format {attributeID}[!]={regEx}"
+    :ref:`Conditions(s) <dcmProperty>`",string,"Conditions in format {attributeID}[!]={regEx}
+
+    (dcmProperty)"
     "
     .. _dcmImageWriteParam:
 
-    :ref:`Image Write Param(s) (dcmImageWriteParam) <dcmImageWriteParam>`",string,"Image Write Parameter(s) (name=value) set at on Image Writer before compression"
+    :ref:`Image Write Param(s) <dcmImageWriteParam>`",string,"Image Write Parameter(s) (name=value) set at on Image Writer before compression
+
+    (dcmImageWriteParam)"

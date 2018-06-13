@@ -4,26 +4,36 @@ Each transfer capability specifies the SOP class that the Network AE can support
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|
 .. csv-table:: Transfer Capability Attributes (LDAP Object: dcmTransferCapability)
-    :header: Name (LDAP Attribute), Type, Description
+    :header: Name, Type, Description (LDAP Attribute)
     :widths: 23, 7, 70
 
     "
     .. _cn:
 
-    :ref:`Name (cn) <cn>`",string,"Arbitrary/Meaningful name for the Transfer Capability object"
+    :ref:`Name <cn>`",string,"Arbitrary/Meaningful name for the Transfer Capability object
+
+    (cn)"
     "
     .. _dicomSOPClass:
 
-    :ref:`SOP Class (dicomSOPClass) <dicomSOPClass>`",string,"SOP Class UID"
+    :ref:`SOP Class <dicomSOPClass>`",string,"SOP Class UID
+
+    (dicomSOPClass)"
     "
     .. _dicomTransferRole:
 
-    :ref:`DICOM Transfer Role (dicomTransferRole) <dicomTransferRole>`",string,"DICOM Transfer Role. Enumerated values: SCP or SCU"
+    :ref:`DICOM Transfer Role <dicomTransferRole>`",string,"DICOM Transfer Role. Enumerated values: SCP or SCU.
+
+    (dicomTransferRole)"
     "
     .. _dicomTransferSyntax:
 
-    :ref:`Transfer Syntax(s) (dicomTransferSyntax) <dicomTransferSyntax>`",string,"Transfer syntax(es) that may be requested as an SCU or that are offered as an SCP."
-    ":doc:`dcmTransferCapability` ",object,"dcm4che proprietary Transfer Capability Attributes"
+    :ref:`Transfer Syntax(s) <dicomTransferSyntax>`",string,"Transfer syntax(es) that may be requested as an SCU or that are offered as an SCP.
+
+    (dicomTransferSyntax)"
+    ":doc:`dcmTransferCapability` ",object,"dcm4che proprietary Transfer Capability Attributes
+
+    (dcmTransferCapability)"
 
 .. toctree::
 
