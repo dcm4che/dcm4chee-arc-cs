@@ -3,7 +3,7 @@ Device Extension
 dcm4che proprietary Device Attributes
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|
-.. csv-table:: Device Extension Attributes (LDAP Object: dcmDcmDevice)
+.. csv-table:: Device Extension Attributes (LDAP Object: dcmDevice)
     :header: Name, Type, Description (LDAP Attribute)
     :widths: 23, 7, 70
 
