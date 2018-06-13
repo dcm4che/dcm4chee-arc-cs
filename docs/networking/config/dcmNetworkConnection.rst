@@ -2,108 +2,108 @@ Network Connection Extension
 ============================
 dcm4che proprietary Network Connection Attributes
 
-.. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
+.. tabularcolumns:: |p{4cm}|l|p{8cm}|
 .. csv-table:: Network Connection Extension Attributes (LDAP Object: dcmDcmNetworkConnection)
-    :header: Name, Type, Description, LDAP Attribute
-    :widths: 20, 7, 60, 13
+    :header: Name (LDAP Attribute), Type, Description
+    :widths: 23, 7, 70
 
-    "Protocol",string,"Protocol of Network Connection. Enumerated values: DICOM, HL7, SYSLOG_TLS, SYSLOG_UDP or HTTP","
+    "
     .. _dcmProtocol:
 
-    dcmProtocol_"
-    "HTTP Proxy",string,"HTTP Proxy: [user:password@]host:port","
+    :ref:`Protocol (dcmProtocol) <dcmProtocol>`",string,"Protocol of Network Connection. Enumerated values: DICOM, HL7, SYSLOG_TLS, SYSLOG_UDP or HTTP"
+    "
     .. _dcmHTTPProxy:
 
-    dcmHTTPProxy_"
-    "TLS Need Client Auth",boolean,"Indicates if TLS client authentication is required.","
+    :ref:`HTTP Proxy (dcmHTTPProxy) <dcmHTTPProxy>`",string,"HTTP Proxy: [user:password@]host:port"
+    "
     .. _dcmTLSNeedClientAuth:
 
-    dcmTLSNeedClientAuth_"
-    "TLS Protocol(s)",string,"The Supported TLS Protocols. Enumerated values: TLSv1.2, TLSv1.1, TLSv1 or SSLv3","
+    :ref:`TLS Need Client Auth (dcmTLSNeedClientAuth) <dcmTLSNeedClientAuth>`",boolean,"Indicates if TLS client authentication is required."
+    "
     .. _dcmTLSProtocol:
 
-    dcmTLSProtocol_"
-    "TCP Backlog",integer,"Maximum queue length for incoming TCP connections. 0 = unlimited","
+    :ref:`TLS Protocol(s) (dcmTLSProtocol) <dcmTLSProtocol>`",string,"The Supported TLS Protocols. Enumerated values: TLSv1.2, TLSv1.1, TLSv1 or SSLv3"
+    "
     .. _dcmTCPBacklog:
 
-    dcmTCPBacklog_"
-    "TCP Connect Timeout",integer,"TCP connect timeout in ms; no timeout if absent","
+    :ref:`TCP Backlog (dcmTCPBacklog) <dcmTCPBacklog>`",integer,"Maximum queue length for incoming TCP connections. 0 = unlimited"
+    "
     .. _dcmTCPConnectTimeout:
 
-    dcmTCPConnectTimeout_"
-    "TCP Close Delay",integer,"TCP socket close delay in ms after send of A-ASSOCIATE-RJ, A-RELEASE-RP or A-ABORT PDU.","
+    :ref:`TCP Connect Timeout (dcmTCPConnectTimeout) <dcmTCPConnectTimeout>`",integer,"TCP connect timeout in ms; no timeout if absent"
+    "
     .. _dcmTCPCloseDelay:
 
-    dcmTCPCloseDelay_"
-    "TCP Send Buffer Size",integer,"TCP send buffer size; use system defaults if absent","
+    :ref:`TCP Close Delay (dcmTCPCloseDelay) <dcmTCPCloseDelay>`",integer,"TCP socket close delay in ms after send of A-ASSOCIATE-RJ, A-RELEASE-RP or A-ABORT PDU."
+    "
     .. _dcmTCPSendBufferSize:
 
-    dcmTCPSendBufferSize_"
-    "TCP Receive Buffer Size",integer,"TCP receive buffer size; use system defaults if absent","
+    :ref:`TCP Send Buffer Size (dcmTCPSendBufferSize) <dcmTCPSendBufferSize>`",integer,"TCP send buffer size; use system defaults if absent"
+    "
     .. _dcmTCPReceiveBufferSize:
 
-    dcmTCPReceiveBufferSize_"
-    "TCP No Delay",boolean,"Enable/disable TCP_NODELAY (disable/enable Nagle algorithm).","
+    :ref:`TCP Receive Buffer Size (dcmTCPReceiveBufferSize) <dcmTCPReceiveBufferSize>`",integer,"TCP receive buffer size; use system defaults if absent"
+    "
     .. _dcmTCPNoDelay:
 
-    dcmTCPNoDelay_"
-    "Bind Address",string,"Bind address of listening socket; use hostname of the connection if absent","
+    :ref:`TCP No Delay (dcmTCPNoDelay) <dcmTCPNoDelay>`",boolean,"Enable/disable TCP_NODELAY (disable/enable Nagle algorithm)."
+    "
     .. _dcmBindAddress:
 
-    dcmBindAddress_"
-    "Client Bind Address",string,"Bind address of outgoing connections; use hostname of the connection if absent","
+    :ref:`Bind Address (dcmBindAddress) <dcmBindAddress>`",string,"Bind address of listening socket; use hostname of the connection if absent"
+    "
     .. _dcmClientBindAddress:
 
-    dcmClientBindAddress_"
-    "Blacklisted Hostname(s)",string,"blacklisted DNS hostnames","
+    :ref:`Client Bind Address (dcmClientBindAddress) <dcmClientBindAddress>`",string,"Bind address of outgoing connections; use hostname of the connection if absent"
+    "
     .. _dcmBlacklistedHostname:
 
-    dcmBlacklistedHostname_"
-    "Send PDU Length",integer,"Maximal length of emitted PDUs.","
+    :ref:`Blacklisted Hostname(s) (dcmBlacklistedHostname) <dcmBlacklistedHostname>`",string,"blacklisted DNS hostnames"
+    "
     .. _dcmSendPDULength:
 
-    dcmSendPDULength_"
-    "Receive PDU Length",integer,"Maximal length of received PDUs.","
+    :ref:`Send PDU Length (dcmSendPDULength) <dcmSendPDULength>`",integer,"Maximal length of emitted PDUs."
+    "
     .. _dcmReceivePDULength:
 
-    dcmReceivePDULength_"
-    "Max Ops Performed",integer,"Maximal number of operations to perform asynchronously; 0 = infinite.","
+    :ref:`Receive PDU Length (dcmReceivePDULength) <dcmReceivePDULength>`",integer,"Maximal length of received PDUs."
+    "
     .. _dcmMaxOpsPerformed:
 
-    dcmMaxOpsPerformed_"
-    "Max Ops Invoked",integer,"Maximal number of operations to invoke asynchronously; 0 = infinite.","
+    :ref:`Max Ops Performed (dcmMaxOpsPerformed) <dcmMaxOpsPerformed>`",integer,"Maximal number of operations to perform asynchronously; 0 = infinite."
+    "
     .. _dcmMaxOpsInvoked:
 
-    dcmMaxOpsInvoked_"
-    "Pack PDV",boolean,"Enable/disable packing of command and data PDVs into one P-DATA-TF PDU.","
+    :ref:`Max Ops Invoked (dcmMaxOpsInvoked) <dcmMaxOpsInvoked>`",integer,"Maximal number of operations to invoke asynchronously; 0 = infinite."
+    "
     .. _dcmPackPDV:
 
-    dcmPackPDV_"
-    "AA-RQ Timeout",integer,"Timeout in ms for receive of A-ASSOCIATE-RQ PDU after TCP connect; no timeout if absent","
+    :ref:`Pack PDV (dcmPackPDV) <dcmPackPDV>`",boolean,"Enable/disable packing of command and data PDVs into one P-DATA-TF PDU."
+    "
     .. _dcmAARQTimeout:
 
-    dcmAARQTimeout_"
-    "AA-AC Timeout",integer,"Timeout in ms for receive of A-ASSOCIATE-AC PDU after send of A-ASSOCIATE-RQ PDU; no timeout if absent","
+    :ref:`AA-RQ Timeout (dcmAARQTimeout) <dcmAARQTimeout>`",integer,"Timeout in ms for receive of A-ASSOCIATE-RQ PDU after TCP connect; no timeout if absent"
+    "
     .. _dcmAAACTimeout:
 
-    dcmAAACTimeout_"
-    "AR-RP Timeout",integer,"Timeout in ms for receive of A-RELEASE-RP PDU after send of A-RELEASE-RQ PDU; no timeout if absent","
+    :ref:`AA-AC Timeout (dcmAAACTimeout) <dcmAAACTimeout>`",integer,"Timeout in ms for receive of A-ASSOCIATE-AC PDU after send of A-ASSOCIATE-RQ PDU; no timeout if absent"
+    "
     .. _dcmARRPTimeout:
 
-    dcmARRPTimeout_"
-    "Response Timeout",integer,"Timeout in ms for receive of response message; no timeout if absent","
+    :ref:`AR-RP Timeout (dcmARRPTimeout) <dcmARRPTimeout>`",integer,"Timeout in ms for receive of A-RELEASE-RP PDU after send of A-RELEASE-RQ PDU; no timeout if absent"
+    "
     .. _dcmResponseTimeout:
 
-    dcmResponseTimeout_"
-    "Retrieve Timeout",integer,"Timeout in ms for receive of C-GET-RSP or C-MOVE-RSP; no timeout if absent","
+    :ref:`Response Timeout (dcmResponseTimeout) <dcmResponseTimeout>`",integer,"Timeout in ms for receive of response message; no timeout if absent"
+    "
     .. _dcmRetrieveTimeout:
 
-    dcmRetrieveTimeout_"
-    "Retrieve Timeout Total",boolean,"Indicates if the timer with the specified timeout for outstanding C-GET and C-MOVE RSPs shall be restarted on receive of pending RSPs (=false) or not (=true).","
+    :ref:`Retrieve Timeout (dcmRetrieveTimeout) <dcmRetrieveTimeout>`",integer,"Timeout in ms for receive of C-GET-RSP or C-MOVE-RSP; no timeout if absent"
+    "
     .. _dcmRetrieveTimeoutTotal:
 
-    dcmRetrieveTimeoutTotal_"
-    "Idle Timeout",integer,"Indicates aborting of idle Associations after specified timeout in ms; no timeout if absent","
+    :ref:`Retrieve Timeout Total (dcmRetrieveTimeoutTotal) <dcmRetrieveTimeoutTotal>`",boolean,"Indicates if the timer with the specified timeout for outstanding C-GET and C-MOVE RSPs shall be restarted on receive of pending RSPs (=false) or not (=true)."
+    "
     .. _dcmIdleTimeout:
 
-    dcmIdleTimeout_"
+    :ref:`Idle Timeout (dcmIdleTimeout) <dcmIdleTimeout>`",integer,"Indicates aborting of idle Associations after specified timeout in ms; no timeout if absent"

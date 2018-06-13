@@ -2,123 +2,114 @@ Device
 ======
 DICOM Device related information
 
-.. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
+.. tabularcolumns:: |p{4cm}|l|p{8cm}|
 .. csv-table:: Device Attributes (LDAP Object: dcmDevice)
-    :header: Name, Type, Description, LDAP Attribute
-    :widths: 20, 7, 60, 13
+    :header: Name (LDAP Attribute), Type, Description
+    :widths: 23, 7, 70
 
-    "Device Name",string,"A unique name for this device","
+    "
     .. _dicomDeviceName:
 
-    dicomDeviceName_"
-    "Device Description",string,"Unconstrained text description of the device","
+    :ref:`Device Name (dicomDeviceName) <dicomDeviceName>`",string,"A unique name for this device"
+    "
     .. _dicomDescription:
 
-    dicomDescription_"
-    "Vendor Device Data",boolean,"Device specific vendor configuration information","
+    :ref:`Device Description (dicomDescription) <dicomDescription>`",string,"Unconstrained text description of the device"
+    "
     .. _dicomVendorData:
 
-    dicomVendorData_"
-    "Device UID",string,"Unique identifier of the device","
+    :ref:`Vendor Device Data (dicomVendorData) <dicomVendorData>`",boolean,"Device specific vendor configuration information"
+    "
     .. _dicomDeviceUID:
 
-    dicomDeviceUID_"
-    "Manufacturer",string,"Should be the same as the value of Manufacturer (0008,0070) in SOP instances created by this device","
+    :ref:`Device UID (dicomDeviceUID) <dicomDeviceUID>`",string,"Unique identifier of the device"
+    "
     .. _dicomManufacturer:
 
-    dicomManufacturer_"
-    "Manufacturer Model Name",string,"Should be the same as the value of Manufacturer Model Name (0008,1090) in SOP instances created by this device","
+    :ref:`Manufacturer (dicomManufacturer) <dicomManufacturer>`",string,"Should be the same as the value of Manufacturer (0008,0070) in SOP instances created by this device"
+    "
     .. _dicomManufacturerModelName:
 
-    dicomManufacturerModelName_"
-    "Software Version(s)",string,"Should be the same as the values of Software Versions (0018,1020) in SOP instances created by this device","
+    :ref:`Manufacturer Model Name (dicomManufacturerModelName) <dicomManufacturerModelName>`",string,"Should be the same as the value of Manufacturer Model Name (0008,1090) in SOP instances created by this device"
+    "
     .. _dicomSoftwareVersion:
 
-    dicomSoftwareVersion_"
-    "Station Name",string,"Should be the same as the value of Station Name (0008,1010) in SOP instances created by this device","
+    :ref:`Software Version(s) (dicomSoftwareVersion) <dicomSoftwareVersion>`",string,"Should be the same as the values of Software Versions (0018,1020) in SOP instances created by this device"
+    "
     .. _dicomStationName:
 
-    dicomStationName_"
-    "Device Serial Number",string,"Should be the same as the value of Device Serial Number (0018,1000) in SOP instances created by this device","
+    :ref:`Station Name (dicomStationName) <dicomStationName>`",string,"Should be the same as the value of Station Name (0008,1010) in SOP instances created by this device"
+    "
     .. _dicomDeviceSerialNumber:
 
-    dicomDeviceSerialNumber_"
-    "Primary Device Type(s)",string,"Represents the kind of device and is most applicable for acquisition modalities","
+    :ref:`Device Serial Number (dicomDeviceSerialNumber) <dicomDeviceSerialNumber>`",string,"Should be the same as the value of Device Serial Number (0018,1000) in SOP instances created by this device"
+    "
     .. _dicomPrimaryDeviceType:
 
-    dicomPrimaryDeviceType_"
-    "Institution Name(s)",string,"Should be the same as the value of Institution Name (0008,0080) in SOP Instances created by this device","
+    :ref:`Primary Device Type(s) (dicomPrimaryDeviceType) <dicomPrimaryDeviceType>`",string,"Represents the kind of device and is most applicable for acquisition modalities"
+    "
     .. _dicomInstitutionName:
 
-    dicomInstitutionName_"
-    "Institution Code(s)",string,"Institution Code(s) in format (CV, CSD, ""CM"")","
+    :ref:`Institution Name(s) (dicomInstitutionName) <dicomInstitutionName>`",string,"Should be the same as the value of Institution Name (0008,0080) in SOP Instances created by this device"
+    "
     .. _dicomInstitutionCode:
 
-    dicomInstitutionCode_"
-    "Institution Address(s)",string,"Should be the same as the value of Institution Address (0008,0081) attribute in SOP Instances created by this device","
+    :ref:`Institution Code(s) (dicomInstitutionCode) <dicomInstitutionCode>`",string,"Institution Code(s) in format (CV, CSD, ""CM"")"
+    "
     .. _dicomInstitutionAddress:
 
-    dicomInstitutionAddress_"
-    "Institution Department Name(s)",string,"Should be the same as the value of Institutional Department Name (0008,1040) in SOP Instances created by this device","
+    :ref:`Institution Address(s) (dicomInstitutionAddress) <dicomInstitutionAddress>`",string,"Should be the same as the value of Institution Address (0008,0081) attribute in SOP Instances created by this device"
+    "
     .. _dicomInstitutionDepartmentName:
 
-    dicomInstitutionDepartmentName_"
-    "Issuer of Patient ID",string,"Default value for the Issuer of Patient ID (0010,0021), and optionally also default values for the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Patient ID Qualifiers Sequence (0010,0024) for SOP Instances created or queried by this device. Format: <Issuer of Patient ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]","
+    :ref:`Institution Department Name(s) (dicomInstitutionDepartmentName) <dicomInstitutionDepartmentName>`",string,"Should be the same as the value of Institutional Department Name (0008,1040) in SOP Instances created by this device"
+    "
     .. _dicomIssuerOfPatientID:
 
-    dicomIssuerOfPatientID_"
-    "Issuer of Accession Number",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Accession Number Sequence (0008,0051) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]","
+    :ref:`Issuer of Patient ID (dicomIssuerOfPatientID) <dicomIssuerOfPatientID>`",string,"Default value for the Issuer of Patient ID (0010,0021), and optionally also default values for the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Patient ID Qualifiers Sequence (0010,0024) for SOP Instances created or queried by this device. Format: <Issuer of Patient ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]"
+    "
     .. _dicomIssuerOfAccessionNumber:
 
-    dicomIssuerOfAccessionNumber_"
-    "Order Placer Identifier",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Order Placer Identifier Sequence (0040,0026) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]","
+    :ref:`Issuer of Accession Number (dicomIssuerOfAccessionNumber) <dicomIssuerOfAccessionNumber>`",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Accession Number Sequence (0008,0051) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]"
+    "
     .. _dicomOrderPlacerIdentifier:
 
-    dicomOrderPlacerIdentifier_"
-    "Order Filler Identifier",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Order Filler Identifier Sequence (0040,0027) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]","
+    :ref:`Order Placer Identifier (dicomOrderPlacerIdentifier) <dicomOrderPlacerIdentifier>`",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Order Placer Identifier Sequence (0040,0026) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]"
+    "
     .. _dicomOrderFillerIdentifier:
 
-    dicomOrderFillerIdentifier_"
-    "Issuer of Admission ID",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Admission ID Sequence (0038,0014) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]","
+    :ref:`Order Filler Identifier (dicomOrderFillerIdentifier) <dicomOrderFillerIdentifier>`",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Order Filler Identifier Sequence (0040,0027) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]"
+    "
     .. _dicomIssuerOfAdmissionID:
 
-    dicomIssuerOfAdmissionID_"
-    "Issuer of Service Episode ID",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Service Episode ID Sequence (0038,0064) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]","
+    :ref:`Issuer of Admission ID (dicomIssuerOfAdmissionID) <dicomIssuerOfAdmissionID>`",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Admission ID Sequence (0038,0014) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]"
+    "
     .. _dicomIssuerOfServiceEpisodeID:
 
-    dicomIssuerOfServiceEpisodeID_"
-    "Issuer of Container Identifier",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Container Identifier Sequence (0040,0513) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]","
+    :ref:`Issuer of Service Episode ID (dicomIssuerOfServiceEpisodeID) <dicomIssuerOfServiceEpisodeID>`",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Service Episode ID Sequence (0038,0064) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]"
+    "
     .. _dicomIssuerOfContainerIdentifier:
 
-    dicomIssuerOfContainerIdentifier_"
-    "Issuer of Specimen Identifier",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Specimen Identifier Sequence (0040,0562) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]","
+    :ref:`Issuer of Container Identifier (dicomIssuerOfContainerIdentifier) <dicomIssuerOfContainerIdentifier>`",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Container Identifier Sequence (0040,0513) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]"
+    "
     .. _dicomIssuerOfSpecimenIdentifier:
 
-    dicomIssuerOfSpecimenIdentifier_"
-    "Authorized Node Certificate Reference(s)",string,"The DNs for the certificates of nodes that are authorized to connect to this device","
+    :ref:`Issuer of Specimen Identifier (dicomIssuerOfSpecimenIdentifier) <dicomIssuerOfSpecimenIdentifier>`",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Specimen Identifier Sequence (0040,0562) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]"
+    "
     .. _dicomAuthorizedNodeCertificateReference:
 
-    dicomAuthorizedNodeCertificateReference_"
-    "This Node Certificate Reference(s)",string,"The DNs of the public certificate(s) for this node","
+    :ref:`Authorized Node Certificate Reference(s) (dicomAuthorizedNodeCertificateReference) <dicomAuthorizedNodeCertificateReference>`",string,"The DNs for the certificates of nodes that are authorized to connect to this device"
+    "
     .. _dicomThisNodeCertificateReference:
 
-    dicomThisNodeCertificateReference_"
-    "installed",boolean,"Boolean to indicate whether this device is presently installed on the network","
+    :ref:`This Node Certificate Reference(s) (dicomThisNodeCertificateReference) <dicomThisNodeCertificateReference>`",string,"The DNs of the public certificate(s) for this node"
+    "
     .. _dicomInstalled:
 
-    dicomInstalled_"
-    ":doc:`networkConnection` (s)",object,"network connections of the device","
-    .. _dicomNetworkConnection:
-
-    dicomNetworkConnection_"
-    ":doc:`networkAE` (s)",object,"Application entity provided by the device","
-    .. _dicomNetworkAE:
-
-    dicomNetworkAE_"
-    ":doc:`dcmDevice` ",object,"dcm4che proprietary Device Attributes","
-    .. _dcmDevice:
-
-    dcmDevice_"
+    :ref:`installed (dicomInstalled) <dicomInstalled>`",boolean,"Boolean to indicate whether this device is presently installed on the network"
+    ":doc:`networkConnection` (s)",object,"network connections of the device"
+    ":doc:`networkAE` (s)",object,"Application entity provided by the device"
+    ":doc:`dcmDevice` ",object,"dcm4che proprietary Device Attributes"
 
 .. toctree::
 

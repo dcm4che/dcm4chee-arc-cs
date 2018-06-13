@@ -2,59 +2,53 @@ Network AE
 ==========
 Application entity that provides services on a network
 
-.. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
+.. tabularcolumns:: |p{4cm}|l|p{8cm}|
 .. csv-table:: Network AE Attributes (LDAP Object: dcmNetworkAE)
-    :header: Name, Type, Description, LDAP Attribute
-    :widths: 20, 7, 60, 13
+    :header: Name (LDAP Attribute), Type, Description
+    :widths: 23, 7, 70
 
-    "AE Title",string,"Unique AE title for this Network AE","
+    "
     .. _dicomAETitle:
 
-    dicomAETitle_"
-    "Network Connection Reference(s)",string,"JSON Pointers to the Network Connection objects for this AE","
+    :ref:`AE Title (dicomAETitle) <dicomAETitle>`",string,"Unique AE title for this Network AE"
+    "
     .. _dicomNetworkConnectionReference:
 
-    dicomNetworkConnectionReference_"
-    "Association Initiator",boolean,"True if the Network AE can initiate associations.","
+    :ref:`Network Connection Reference(s) (dicomNetworkConnectionReference) <dicomNetworkConnectionReference>`",string,"JSON Pointers to the Network Connection objects for this AE"
+    "
     .. _dicomAssociationInitiator:
 
-    dicomAssociationInitiator_"
-    "Association Acceptor",boolean,"True if the Network AE can accept associations.","
+    :ref:`Association Initiator (dicomAssociationInitiator) <dicomAssociationInitiator>`",boolean,"True if the Network AE can initiate associations."
+    "
     .. _dicomAssociationAcceptor:
 
-    dicomAssociationAcceptor_"
-    "AE Description",string,"Unconstrained text description of the application entity","
+    :ref:`Association Acceptor (dicomAssociationAcceptor) <dicomAssociationAcceptor>`",boolean,"True if the Network AE can accept associations."
+    "
     .. _dicomDescription:
 
-    dicomDescription_"
-    "Application Cluster(s)",string,"Locally defined names for a subset of related applications","
+    :ref:`AE Description (dicomDescription) <dicomDescription>`",string,"Unconstrained text description of the application entity"
+    "
     .. _dicomApplicationCluster:
 
-    dicomApplicationCluster_"
-    "Preferred Called AE Title(s)",string,"AE Title(s) that are preferred for initiating associations","
+    :ref:`Application Cluster(s) (dicomApplicationCluster) <dicomApplicationCluster>`",string,"Locally defined names for a subset of related applications"
+    "
     .. _dicomPreferredCalledAETitle:
 
-    dicomPreferredCalledAETitle_"
-    "Preferred Calling AE Title(s)",string,"AE Title(s) that are preferred for accepting associations","
+    :ref:`Preferred Called AE Title(s) (dicomPreferredCalledAETitle) <dicomPreferredCalledAETitle>`",string,"AE Title(s) that are preferred for initiating associations"
+    "
     .. _dicomPreferredCallingAETitle:
 
-    dicomPreferredCallingAETitle_"
-    "Supported Character Set(s)",string,"Character Set(s) supported by the Network AE for data sets it receives","
+    :ref:`Preferred Calling AE Title(s) (dicomPreferredCallingAETitle) <dicomPreferredCallingAETitle>`",string,"AE Title(s) that are preferred for accepting associations"
+    "
     .. _dicomSupportedCharacterSet:
 
-    dicomSupportedCharacterSet_"
-    "installed",boolean,"True if the AE is installed on network. If not present, information about the installed status of the AE is inherited from the device","
+    :ref:`Supported Character Set(s) (dicomSupportedCharacterSet) <dicomSupportedCharacterSet>`",string,"Character Set(s) supported by the Network AE for data sets it receives"
+    "
     .. _dicomInstalled:
 
-    dicomInstalled_"
-    ":doc:`transferCapability` (s)",object,"Transfer capabilities provided by the application entity","
-    .. _dicomTransferCapability:
-
-    dicomTransferCapability_"
-    ":doc:`dcmNetworkAE` ",object,"dcm4che proprietary Attributes of Network AE","
-    .. _dcmNetworkAE:
-
-    dcmNetworkAE_"
+    :ref:`installed (dicomInstalled) <dicomInstalled>`",boolean,"True if the AE is installed on network. If not present, information about the installed status of the AE is inherited from the device"
+    ":doc:`transferCapability` (s)",object,"Transfer capabilities provided by the application entity"
+    ":doc:`dcmNetworkAE` ",object,"dcm4che proprietary Attributes of Network AE"
 
 .. toctree::
 

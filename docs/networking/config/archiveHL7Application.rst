@@ -2,60 +2,51 @@ Archive HL7 Application
 =======================
 DICOM Archive HL7 Application related information
 
-.. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
+.. tabularcolumns:: |p{4cm}|l|p{8cm}|
 .. csv-table:: Archive HL7 Application Attributes (LDAP Object: dcmArchiveHL7Application)
-    :header: Name, Type, Description, LDAP Attribute
-    :widths: 20, 7, 60, 13
+    :header: Name (LDAP Attribute), Type, Description
+    :widths: 23, 7, 70
 
-    "AE Title",string,"Archive AE Title associated with this HL7 Application.","
+    "
     .. _dicomAETitle:
 
-    dicomAETitle_"
-    "HL7 Patient Update Template URI",string,"Specifies URI for the style sheet used by HL7v2 Patient Update Service. Overwrites value specified on Device level.","
+    :ref:`AE Title (dicomAETitle) <dicomAETitle>`",string,"Archive AE Title associated with this HL7 Application."
+    "
     .. _hl7PatientUpdateTemplateURI:
 
-    hl7PatientUpdateTemplateURI_"
-    "HL7 Import Report Template URI",string,"Specifies URI for the style sheet to transcode received HL7 ORU^R01 to DICOM SR. Overwrites value specified on Device level.","
+    :ref:`HL7 Patient Update Template URI (hl7PatientUpdateTemplateURI) <hl7PatientUpdateTemplateURI>`",string,"Specifies URI for the style sheet used by HL7v2 Patient Update Service. Overwrites value specified on Device level."
+    "
     .. _hl7ImportReportTemplateURI:
 
-    hl7ImportReportTemplateURI_"
-    "HL7 Schedule Procedure Template URI",string,"Specifies URI for the style sheet to transcode received HL7 ORM^O01, OMI^O23, OMG^O19 to DICOM MWL items. Overwrites value specified on Device level.","
+    :ref:`HL7 Import Report Template URI (hl7ImportReportTemplateURI) <hl7ImportReportTemplateURI>`",string,"Specifies URI for the style sheet to transcode received HL7 ORU^R01 to DICOM SR. Overwrites value specified on Device level."
+    "
     .. _hl7ScheduleProcedureTemplateURI:
 
-    hl7ScheduleProcedureTemplateURI_"
-    "HL7 Schedule Protocol Code in Order",string,"Specifies location of Scheduled Protocol Code in received HL7 Order message. Overwrites value specified on Device level. Enumerated values: OBR_4_1 or OBR_4_4","
+    :ref:`HL7 Schedule Procedure Template URI (hl7ScheduleProcedureTemplateURI) <hl7ScheduleProcedureTemplateURI>`",string,"Specifies URI for the style sheet to transcode received HL7 ORM^O01, OMI^O23, OMG^O19 to DICOM MWL items. Overwrites value specified on Device level."
+    "
     .. _hl7ScheduledProtocolCodeInOrder:
 
-    hl7ScheduledProtocolCodeInOrder_"
-    "HL7 Schedule Station AET in Order",string,"Specifies location of Scheduled Station AE Title in received HL7 Order message. Should not be configured for HL7 v2.5.1 OMI^O23 with IPC segment. Overwrites value specified on Device level. Enumerated values: ORC_18","
+    :ref:`HL7 Schedule Protocol Code in Order (hl7ScheduledProtocolCodeInOrder) <hl7ScheduledProtocolCodeInOrder>`",string,"Specifies location of Scheduled Protocol Code in received HL7 Order message. Overwrites value specified on Device level. Enumerated values: OBR_4_1 or OBR_4_4"
+    "
     .. _hl7ScheduledStationAETInOrder:
 
-    hl7ScheduledStationAETInOrder_"
-    "HL7 Log File Pattern",string,"Path to HL7 messages which will be captured exactly as received. If absent, there is no logging. Overwrites value specified on Device level. eg. ${jboss.server.data.dir}/hl7/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7","
+    :ref:`HL7 Schedule Station AET in Order (hl7ScheduledStationAETInOrder) <hl7ScheduledStationAETInOrder>`",string,"Specifies location of Scheduled Station AE Title in received HL7 Order message. Should not be configured for HL7 v2.5.1 OMI^O23 with IPC segment. Overwrites value specified on Device level. Enumerated values: ORC_18"
+    "
     .. _hl7LogFilePattern:
 
-    hl7LogFilePattern_"
-    "HL7 Error Log File Pattern",string,"Path to HL7 messages which will be captured exactly as received, when processing of HL7 messages fails. If absent, there is no logging. Overwrites value specified on Device level. eg. ${jboss.server.data.dir}/hl7-error/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7","
+    :ref:`HL7 Log File Pattern (hl7LogFilePattern) <hl7LogFilePattern>`",string,"Path to HL7 messages which will be captured exactly as received. If absent, there is no logging. Overwrites value specified on Device level. eg. ${jboss.server.data.dir}/hl7/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7"
+    "
     .. _hl7ErrorLogFilePattern:
 
-    hl7ErrorLogFilePattern_"
-    "HL7 No Patient Create Message Type(s)",string,"Message Type(s) (MessageType^TriggerEvent) of HL7 messages which are only processed, if there is already a Patient record in the database, which Patient ID matches the Patient ID in the PID or MRG segment of the message. Thus no new Patient record will be created by messages of the specified types. Overwrites value specified on Device level.","
+    :ref:`HL7 Error Log File Pattern (hl7ErrorLogFilePattern) <hl7ErrorLogFilePattern>`",string,"Path to HL7 messages which will be captured exactly as received, when processing of HL7 messages fails. If absent, there is no logging. Overwrites value specified on Device level. eg. ${jboss.server.data.dir}/hl7-error/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7"
+    "
     .. _hl7NoPatientCreateMessageType:
 
-    hl7NoPatientCreateMessageType_"
-    "Use HL7 Null Value",boolean,"Specifies if HL7 v2 null values (|""""|) are used in sent HL7 messages for not present or empty entity attributes. Required to unset entity attributes at the remote HL7 Application. Overwrites value specified on Device level.","
+    :ref:`HL7 No Patient Create Message Type(s) (hl7NoPatientCreateMessageType) <hl7NoPatientCreateMessageType>`",string,"Message Type(s) (MessageType^TriggerEvent) of HL7 messages which are only processed, if there is already a Patient record in the database, which Patient ID matches the Patient ID in the PID or MRG segment of the message. Thus no new Patient record will be created by messages of the specified types. Overwrites value specified on Device level."
+    "
     .. _hl7UseNullValue:
 
-    hl7UseNullValue_"
-    ":doc:`hl7ForwardRule` (s)",object,"HL7 Forward Rule. Supplements values specified on Device level.","
-    .. _hl7ForwardRule:
-
-    hl7ForwardRule_"
-    ":doc:`hl7OrderScheduledStation` (s)",object,"Scheduled Station selected on MWL HL7 Order Feed. Supplements values specified on Device level.","
-    .. _hl7OrderScheduledStation:
-
-    hl7OrderScheduledStation_"
-    ":doc:`hl7OrderSPSStatus` (s)",object,"Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages. Overwrites values specified on Device level.","
-    .. _hl7OrderSPSStatus:
-
-    hl7OrderSPSStatus_"
+    :ref:`Use HL7 Null Value (hl7UseNullValue) <hl7UseNullValue>`",boolean,"Specifies if HL7 v2 null values (|""""|) are used in sent HL7 messages for not present or empty entity attributes. Required to unset entity attributes at the remote HL7 Application. Overwrites value specified on Device level."
+    ":doc:`hl7ForwardRule` (s)",object,"HL7 Forward Rule. Supplements values specified on Device level."
+    ":doc:`hl7OrderScheduledStation` (s)",object,"Scheduled Station selected on MWL HL7 Order Feed. Supplements values specified on Device level."
+    ":doc:`hl7OrderSPSStatus` (s)",object,"Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages. Overwrites values specified on Device level."

@@ -2,20 +2,20 @@ HL7 Forward Rule
 ================
 HL7 Forward Rule
 
-.. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
+.. tabularcolumns:: |p{4cm}|l|p{8cm}|
 .. csv-table:: HL7 Forward Rule Attributes (LDAP Object: hl7ForwardRule)
-    :header: Name, Type, Description, LDAP Attribute
-    :widths: 20, 7, 60, 13
+    :header: Name (LDAP Attribute), Type, Description
+    :widths: 23, 7, 70
 
-    "Name",string,"Arbitrary/Meaningful name of the HL7 Forward Rule","
+    "
     .. _cn:
 
-    cn_"
-    "HL7 Forward Application Name(s)",string,"HL7 Forward Destination Application and Facility name (Application|Facility)","
+    :ref:`Name (cn) <cn>`",string,"Arbitrary/Meaningful name of the HL7 Forward Rule"
+    "
     .. _hl7FwdApplicationName:
 
-    hl7FwdApplicationName_"
-    "Conditions(s)",string,"Conditions in format {attributeID}[!]={regEx} or MSH-#[!]={regEx} Examples: MSH-3=FORWARD or MSH-8=ADT\^A28\^ADT_A05","
+    :ref:`HL7 Forward Application Name(s) (hl7FwdApplicationName) <hl7FwdApplicationName>`",string,"HL7 Forward Destination Application and Facility name (Application|Facility)"
+    "
     .. _dcmProperty:
 
-    dcmProperty_"
+    :ref:`Conditions(s) (dcmProperty) <dcmProperty>`",string,"Conditions in format {attributeID}[!]={regEx} or MSH-#[!]={regEx} Examples: MSH-3=FORWARD or MSH-8=ADT\^A28\^ADT_A05"

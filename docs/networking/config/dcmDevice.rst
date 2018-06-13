@@ -2,91 +2,67 @@ Device Extension
 ================
 dcm4che proprietary Device Attributes
 
-.. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
+.. tabularcolumns:: |p{4cm}|l|p{8cm}|
 .. csv-table:: Device Extension Attributes (LDAP Object: dcmDcmDevice)
-    :header: Name, Type, Description, LDAP Attribute
-    :widths: 20, 7, 60, 13
+    :header: Name (LDAP Attribute), Type, Description
+    :widths: 23, 7, 70
 
-    "Limit Open Associations",integer,"Limit open DICOM connections; rejects Association requests if the limit is exceeded. 0 = unlimited.","
+    "
     .. _dcmLimitOpenAssociations:
 
-    dcmLimitOpenAssociations_"
-    "Trust Store URL",string,"URL of Trust Store with Certificates for DICOM nodes that are authorized to connect to this node; overrides dicomAuthorizedNodeCertificateReference","
+    :ref:`Limit Open Associations (dcmLimitOpenAssociations) <dcmLimitOpenAssociations>`",integer,"Limit open DICOM connections; rejects Association requests if the limit is exceeded. 0 = unlimited."
+    "
     .. _dcmTrustStoreURL:
 
-    dcmTrustStoreURL_"
-    "Trust Store Type",string,"Key Store Type of Trust Store specified by dcmTrustStoreURL. Enumerated values: JKS or PKCS12","
+    :ref:`Trust Store URL (dcmTrustStoreURL) <dcmTrustStoreURL>`",string,"URL of Trust Store with Certificates for DICOM nodes that are authorized to connect to this node; overrides dicomAuthorizedNodeCertificateReference"
+    "
     .. _dcmTrustStoreType:
 
-    dcmTrustStoreType_"
-    "Trust Store Pin",string,"Key Store Password of Trust Store specified by Trust Store URL","
+    :ref:`Trust Store Type (dcmTrustStoreType) <dcmTrustStoreType>`",string,"Key Store Type of Trust Store specified by dcmTrustStoreURL. Enumerated values: JKS or PKCS12"
+    "
     .. _dcmTrustStorePin:
 
-    dcmTrustStorePin_"
-    "Trust Store Pin Property",string,"System property of Key Store Password of Trust Store specified by Trust Store URL","
+    :ref:`Trust Store Pin (dcmTrustStorePin) <dcmTrustStorePin>`",string,"Key Store Password of Trust Store specified by Trust Store URL"
+    "
     .. _dcmTrustStorePinProperty:
 
-    dcmTrustStorePinProperty_"
-    "Key Store URL",string,"URL of Key Store with private Key and certificate used to identify this DICOM node in TLS connections","
+    :ref:`Trust Store Pin Property (dcmTrustStorePinProperty) <dcmTrustStorePinProperty>`",string,"System property of Key Store Password of Trust Store specified by Trust Store URL"
+    "
     .. _dcmKeyStoreURL:
 
-    dcmKeyStoreURL_"
-    "Key Store Type",string,"Key Store Type of Key Store specified by Key Store URL. Enumerated values: JKS or PKCS12","
+    :ref:`Key Store URL (dcmKeyStoreURL) <dcmKeyStoreURL>`",string,"URL of Key Store with private Key and certificate used to identify this DICOM node in TLS connections"
+    "
     .. _dcmKeyStoreType:
 
-    dcmKeyStoreType_"
-    "Key Store Pin",string,"Key Store Password of Key Store specified by Key Store URL","
+    :ref:`Key Store Type (dcmKeyStoreType) <dcmKeyStoreType>`",string,"Key Store Type of Key Store specified by Key Store URL. Enumerated values: JKS or PKCS12"
+    "
     .. _dcmKeyStorePin:
 
-    dcmKeyStorePin_"
-    "Key Store Pin Property",string,"System property of Key Store Password of Key Store specified by Key Store URL","
+    :ref:`Key Store Pin (dcmKeyStorePin) <dcmKeyStorePin>`",string,"Key Store Password of Key Store specified by Key Store URL"
+    "
     .. _dcmKeyStorePinProperty:
 
-    dcmKeyStorePinProperty_"
-    "Key Store Key Pin",string,"Key Password of Key Store specified by Key Store URL","
+    :ref:`Key Store Pin Property (dcmKeyStorePinProperty) <dcmKeyStorePinProperty>`",string,"System property of Key Store Password of Key Store specified by Key Store URL"
+    "
     .. _dcmKeyStoreKeyPin:
 
-    dcmKeyStoreKeyPin_"
-    "Key Store Key Pin Property",string,"System property of Key Password of Key Store specified by Key Store URL","
+    :ref:`Key Store Key Pin (dcmKeyStoreKeyPin) <dcmKeyStoreKeyPin>`",string,"Key Password of Key Store specified by Key Store URL"
+    "
     .. _dcmKeyStoreKeyPinProperty:
 
-    dcmKeyStoreKeyPinProperty_"
-    "Time Zone of Device",string,"Time Zone ID of the Device; matches Java TimeZone ID","
+    :ref:`Key Store Key Pin Property (dcmKeyStoreKeyPinProperty) <dcmKeyStoreKeyPinProperty>`",string,"System property of Key Password of Key Store specified by Key Store URL"
+    "
     .. _dcmTimeZoneOfDevice:
 
-    dcmTimeZoneOfDevice_"
-    ":doc:`webApplication` (s)",object,"Web Applications provided by the Device","
-    .. _dcmWebApp:
-
-    dcmWebApp_"
-    ":doc:`hl7Application` (s)",object,"HL7 Applications provided by the Device","
-    .. _hl7Application:
-
-    hl7Application_"
-    ":doc:`imageWriter` (s)",object,"Specifies Java Image IO Image Writers with Write Parameters used for compressing DICOM images","
-    .. _dcmImageWriter:
-
-    dcmImageWriter_"
-    ":doc:`imageReader` (s)",object,"Specifies Java Image IO Image Readers used for decompressing compressed DICOM images","
-    .. _dcmImageReader:
-
-    dcmImageReader_"
-    ":doc:`auditLogger` (s)",object,"Audit Logger related information","
-    .. _dcmAuditLogger:
-
-    dcmAuditLogger_"
-    ":doc:`auditRecordRepository` ",object,"Audit Record Repository related information","
-    .. _dcmAuditRecordRepository:
-
-    dcmAuditRecordRepository_"
-    ":doc:`archiveDevice` ",object,"DICOM Archive Device related information","
-    .. _dcmArchiveDevice:
-
-    dcmArchiveDevice_"
-    ":doc:`uiConfig` (s)",object,"UI Configuration","
-    .. _dcmuiConfig:
-
-    dcmuiConfig_"
+    :ref:`Time Zone of Device (dcmTimeZoneOfDevice) <dcmTimeZoneOfDevice>`",string,"Time Zone ID of the Device; matches Java TimeZone ID"
+    ":doc:`webApplication` (s)",object,"Web Applications provided by the Device"
+    ":doc:`hl7Application` (s)",object,"HL7 Applications provided by the Device"
+    ":doc:`imageWriter` (s)",object,"Specifies Java Image IO Image Writers with Write Parameters used for compressing DICOM images"
+    ":doc:`imageReader` (s)",object,"Specifies Java Image IO Image Readers used for decompressing compressed DICOM images"
+    ":doc:`auditLogger` (s)",object,"Audit Logger related information"
+    ":doc:`auditRecordRepository` ",object,"Audit Record Repository related information"
+    ":doc:`archiveDevice` ",object,"DICOM Archive Device related information"
+    ":doc:`uiConfig` (s)",object,"UI Configuration"
 
 .. toctree::
 

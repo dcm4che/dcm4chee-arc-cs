@@ -2,24 +2,24 @@ Scheduled Station for HL7 Order
 ===============================
 Scheduled Station selected on MWL HL7 Order Feed
 
-.. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
+.. tabularcolumns:: |p{4cm}|l|p{8cm}|
 .. csv-table:: Scheduled Station for HL7 Order Attributes (LDAP Object: hl7OrderScheduledStation)
-    :header: Name, Type, Description, LDAP Attribute
-    :widths: 20, 7, 60, 13
+    :header: Name (LDAP Attribute), Type, Description
+    :widths: 23, 7, 70
 
-    "Name",string,"Arbitrary/Meaningful name for the Scheduled Station Order Mapping","
+    "
     .. _cn:
 
-    cn_"
-    "Scheduled Station Device Name",string,"Device name of Scheduled Station used for HL7 Order Messages.","
+    :ref:`Name (cn) <cn>`",string,"Arbitrary/Meaningful name for the Scheduled Station Order Mapping"
+    "
     .. _hl7OrderScheduledStationDeviceName:
 
-    hl7OrderScheduledStationDeviceName_"
-    "Mapping Priority",integer,"Mapping Priority.","
+    :ref:`Scheduled Station Device Name (hl7OrderScheduledStationDeviceName) <hl7OrderScheduledStationDeviceName>`",string,"Device name of Scheduled Station used for HL7 Order Messages."
+    "
     .. _dcmRulePriority:
 
-    dcmRulePriority_"
-    "Conditions(s)",string,"Conditions in format {attributeID}[!]={regEx} or MSH-#[!]={regEx} Examples: MSH-3=FORWARD or MSH-8=ADT\^A28\^ADT_A05","
+    :ref:`Mapping Priority (dcmRulePriority) <dcmRulePriority>`",integer,"Mapping Priority."
+    "
     .. _dcmProperty:
 
-    dcmProperty_"
+    :ref:`Conditions(s) (dcmProperty) <dcmProperty>`",string,"Conditions in format {attributeID}[!]={regEx} or MSH-#[!]={regEx} Examples: MSH-3=FORWARD or MSH-8=ADT\^A28\^ADT_A05"

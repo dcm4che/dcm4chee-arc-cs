@@ -2,36 +2,36 @@ Export Rule
 ===========
 Export Rule
 
-.. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
+.. tabularcolumns:: |p{4cm}|l|p{8cm}|
 .. csv-table:: Export Rule Attributes (LDAP Object: dcmExportRule)
-    :header: Name, Type, Description, LDAP Attribute
-    :widths: 20, 7, 60, 13
+    :header: Name (LDAP Attribute), Type, Description
+    :widths: 23, 7, 70
 
-    "Name",string,"Arbitrary/Meaningful name of the Export Rule","
+    "
     .. _cn:
 
-    cn_"
-    "Attribute Entity",string,"Entity of the Attribute Filter or Export Rule ('Patient', 'Study', 'Series', 'Instance', 'MPPS', 'MWL'). Enumerated values: Patient, Study, Series, Instance, MPPS or MWL","
+    :ref:`Name (cn) <cn>`",string,"Arbitrary/Meaningful name of the Export Rule"
+    "
     .. _dcmEntity:
 
-    dcmEntity_"
-    "Exporter ID(s)",string,"Exporter ID","
+    :ref:`Attribute Entity (dcmEntity) <dcmEntity>`",string,"Entity of the Attribute Filter or Export Rule ('Patient', 'Study', 'Series', 'Instance', 'MPPS', 'MWL'). Enumerated values: Patient, Study, Series, Instance, MPPS or MWL"
+    "
     .. _dcmExporterID:
 
-    dcmExporterID_"
-    "Export Previous Entity",boolean,"Specifies if the previous Entity of a replaced Instance shall be also exported.","
+    :ref:`Exporter ID(s) (dcmExporterID) <dcmExporterID>`",string,"Exporter ID"
+    "
     .. _dcmExportPreviousEntity:
 
-    dcmExportPreviousEntity_"
-    "Conditions(s)",string,"Conditions in format {attributeID}[!]={regEx}","
+    :ref:`Export Previous Entity (dcmExportPreviousEntity) <dcmExportPreviousEntity>`",boolean,"Specifies if the previous Entity of a replaced Instance shall be also exported."
+    "
     .. _dcmProperty:
 
-    dcmProperty_"
-    "Schedule(s)",string,"Schedule Expression in format 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)","
+    :ref:`Conditions(s) (dcmProperty) <dcmProperty>`",string,"Conditions in format {attributeID}[!]={regEx}"
+    "
     .. _dcmSchedule:
 
-    dcmSchedule_"
-    "Duration",string,"Duration in ISO-8601 duration format PnDTnHnMn.nS","
+    :ref:`Schedule(s) (dcmSchedule) <dcmSchedule>`",string,"Schedule Expression in format 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)"
+    "
     .. _dcmDuration:
 
-    dcmDuration_"
+    :ref:`Duration (dcmDuration) <dcmDuration>`",string,"Duration in ISO-8601 duration format PnDTnHnMn.nS"

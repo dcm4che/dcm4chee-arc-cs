@@ -2,24 +2,24 @@ Store Access Control ID Rule
 ============================
 Store Access Control ID Rule
 
-.. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
+.. tabularcolumns:: |p{4cm}|l|p{8cm}|
 .. csv-table:: Store Access Control ID Rule Attributes (LDAP Object: dcmStoreAccessControlIDRule)
-    :header: Name, Type, Description, LDAP Attribute
-    :widths: 20, 7, 60, 13
+    :header: Name (LDAP Attribute), Type, Description
+    :widths: 23, 7, 70
 
-    "Name",string,"Arbitrary/Meaningful name of the Store Access Control ID Rule","
+    "
     .. _cn:
 
-    cn_"
-    "Store Access Control ID",string,"Access Control ID assigned to Studies which attributes match all conditions","
+    :ref:`Name (cn) <cn>`",string,"Arbitrary/Meaningful name of the Store Access Control ID Rule"
+    "
     .. _dcmStoreAccessControlID:
 
-    dcmStoreAccessControlID_"
-    "Rule Priority",integer,"Rule Priority.","
+    :ref:`Store Access Control ID (dcmStoreAccessControlID) <dcmStoreAccessControlID>`",string,"Access Control ID assigned to Studies which attributes match all conditions"
+    "
     .. _dcmRulePriority:
 
-    dcmRulePriority_"
-    "Conditions(s)",string,"Conditions in format {attributeID}[!]={regEx}","
+    :ref:`Rule Priority (dcmRulePriority) <dcmRulePriority>`",integer,"Rule Priority."
+    "
     .. _dcmProperty:
 
-    dcmProperty_"
+    :ref:`Conditions(s) (dcmProperty) <dcmProperty>`",string,"Conditions in format {attributeID}[!]={regEx}"

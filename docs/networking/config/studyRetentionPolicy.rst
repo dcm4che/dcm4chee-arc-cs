@@ -2,32 +2,32 @@ Study Retention Policy
 ======================
 Study Retention Policy
 
-.. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
+.. tabularcolumns:: |p{4cm}|l|p{8cm}|
 .. csv-table:: Study Retention Policy Attributes (LDAP Object: dcmStudyRetentionPolicy)
-    :header: Name, Type, Description, LDAP Attribute
-    :widths: 20, 7, 60, 13
+    :header: Name (LDAP Attribute), Type, Description
+    :widths: 23, 7, 70
 
-    "Name",string,"Arbitrary/Meaningful name of the Study Retention Policy","
+    "
     .. _cn:
 
-    cn_"
-    "Study Retention Period",string,"Study Retention Period in ISO-8601 period format PnYnMnD or PnW","
+    :ref:`Name (cn) <cn>`",string,"Arbitrary/Meaningful name of the Study Retention Policy"
+    "
     .. _dcmRetentionPeriod:
 
-    dcmRetentionPeriod_"
-    "Rule Priority",integer,"Rule Priority.","
+    :ref:`Study Retention Period (dcmRetentionPeriod) <dcmRetentionPeriod>`",string,"Study Retention Period in ISO-8601 period format PnYnMnD or PnW"
+    "
     .. _dcmRulePriority:
 
-    dcmRulePriority_"
-    "Conditions(s)",string,"Conditions in format {attributeID}[!]={regEx}","
+    :ref:`Rule Priority (dcmRulePriority) <dcmRulePriority>`",integer,"Rule Priority."
+    "
     .. _dcmProperty:
 
-    dcmProperty_"
-    "Expire Series Individually",boolean,"Indicates if series should be expired individually or not.","
+    :ref:`Conditions(s) (dcmProperty) <dcmProperty>`",string,"Conditions in format {attributeID}[!]={regEx}"
+    "
     .. _dcmExpireSeriesIndividually:
 
-    dcmExpireSeriesIndividually_"
-    "Start Retention Period on Study Date",boolean,"Indicates if retention period should be started on Study Date","
+    :ref:`Expire Series Individually (dcmExpireSeriesIndividually) <dcmExpireSeriesIndividually>`",boolean,"Indicates if series should be expired individually or not."
+    "
     .. _dcmStartRetentionPeriodOnStudyDate:
 
-    dcmStartRetentionPeriodOnStudyDate_"
+    :ref:`Start Retention Period on Study Date (dcmStartRetentionPeriodOnStudyDate) <dcmStartRetentionPeriodOnStudyDate>`",boolean,"Indicates if retention period should be started on Study Date"

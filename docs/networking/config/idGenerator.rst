@@ -2,20 +2,20 @@ ID Generator
 ============
 ID Generator
 
-.. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
+.. tabularcolumns:: |p{4cm}|l|p{8cm}|
 .. csv-table:: ID Generator Attributes (LDAP Object: dcmIDGenerator)
-    :header: Name, Type, Description, LDAP Attribute
-    :widths: 20, 7, 60, 13
+    :header: Name (LDAP Attribute), Type, Description
+    :widths: 23, 7, 70
 
-    "ID Generator Name",string,"ID Generator Name. Enumerated values: PatientID, AccessionNumber, RequestedProcedureID or ScheduledProcedureStepID","
+    "
     .. _dcmIDGeneratorName:
 
-    dcmIDGeneratorName_"
-    "ID Generator Format",string,"Format string used by this ID Generator. %0<width>d will be replaced by a sequential number with leading zeros according the given width","
+    :ref:`ID Generator Name (dcmIDGeneratorName) <dcmIDGeneratorName>`",string,"ID Generator Name. Enumerated values: PatientID, AccessionNumber, RequestedProcedureID or ScheduledProcedureStepID"
+    "
     .. _dcmIDGeneratorFormat:
 
-    dcmIDGeneratorFormat_"
-    "ID Generator Initial Value",integer,"Initial value for sequence used by this ID Generator.","
+    :ref:`ID Generator Format (dcmIDGeneratorFormat) <dcmIDGeneratorFormat>`",string,"Format string used by this ID Generator. %0<width>d will be replaced by a sequential number with leading zeros according the given width"
+    "
     .. _dcmIDGeneratorInitialValue:
 
-    dcmIDGeneratorInitialValue_"
+    :ref:`ID Generator Initial Value (dcmIDGeneratorInitialValue) <dcmIDGeneratorInitialValue>`",integer,"Initial value for sequence used by this ID Generator."

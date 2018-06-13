@@ -2,24 +2,24 @@ UI Permission
 =============
 UI Permission
 
-.. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
+.. tabularcolumns:: |p{4cm}|l|p{8cm}|
 .. csv-table:: UI Permission Attributes (LDAP Object: dcmUiPermission)
-    :header: Name, Type, Description, LDAP Attribute
-    :widths: 20, 7, 60, 13
+    :header: Name (LDAP Attribute), Type, Description
+    :widths: 23, 7, 70
 
-    "UI Permission Name",string,"Name of Permission for UI Action","
+    "
     .. _dcmuiPermissionName:
 
-    dcmuiPermissionName_"
-    "UI Action",string,"UI Action Enumerated values: menu-studies, menu-dashboard, menu-correct_data, menu-lifecycle_management, menu-audit_record_repository, menu-configuration, menu-move_data, menu-statistics, menu-monitoring, tab-monitoring->queues, tab-monitoring->export, tab-monitoring->external_retrieve, tab-monitoring->control, tab-monitoring->associations, tab-monitoring->storage_commitments, tab-monitoring->storage_systems, tab-monitoring->diff, tab-statistics->statistics, tab-statistics->studies-stored, tab-configuration->devices, tab-configuration->ae_list, tab-configuration->hl7_applications, tab-correct_data->diff, tab-correct_data->patient_data, tab-move_data->retrieve, tab-move_data->export, tab-audit-record-repository->all, tab-audit-record-repository->audit_errors, tab-audit-record-repository->app_errors, action-devicelist-device_configuration, action-studies-patient, action-studies-mwl, action-studies-studie, action-studies-serie, action-studies-instance, action-studies-copy_merge_move, action-studies-more_function, action-studies-diff, action-studies-count, action-studies-size, action-studies-viewer, action-studies-verify_storage_commitment, action-studies-download, action-monitoring->queues-all_action, action-monitoring->export-all_action, action-monitoring->external_retrieve-all_action, action-monitoring->queues-single_action, action-monitoring->export-single_action, action-monitoring->diff_monitor-all_action or action-monitoring->external_retrieve-single_action","
+    :ref:`UI Permission Name (dcmuiPermissionName) <dcmuiPermissionName>`",string,"Name of Permission for UI Action"
+    "
     .. _dcmuiAction:
 
-    dcmuiAction_"
-    "UI Action Parameter(s)",string,"UI Action Parameter Enumerated values: edit, create, delete, export, accessible, visible, merge, upload, reject or restore","
+    :ref:`UI Action (dcmuiAction) <dcmuiAction>`",string,"UI Action Enumerated values: menu-studies, menu-dashboard, menu-correct_data, menu-lifecycle_management, menu-audit_record_repository, menu-configuration, menu-move_data, menu-statistics, menu-monitoring, tab-monitoring->queues, tab-monitoring->export, tab-monitoring->external_retrieve, tab-monitoring->control, tab-monitoring->associations, tab-monitoring->storage_commitments, tab-monitoring->storage_systems, tab-monitoring->diff, tab-statistics->statistics, tab-statistics->studies-stored, tab-configuration->devices, tab-configuration->ae_list, tab-configuration->hl7_applications, tab-correct_data->diff, tab-correct_data->patient_data, tab-move_data->retrieve, tab-move_data->export, tab-audit-record-repository->all, tab-audit-record-repository->audit_errors, tab-audit-record-repository->app_errors, action-devicelist-device_configuration, action-studies-patient, action-studies-mwl, action-studies-studie, action-studies-serie, action-studies-instance, action-studies-copy_merge_move, action-studies-more_function, action-studies-diff, action-studies-count, action-studies-size, action-studies-viewer, action-studies-verify_storage_commitment, action-studies-download, action-monitoring->queues-all_action, action-monitoring->export-all_action, action-monitoring->external_retrieve-all_action, action-monitoring->queues-single_action, action-monitoring->export-single_action, action-monitoring->diff_monitor-all_action or action-monitoring->external_retrieve-single_action"
+    "
     .. _dcmuiActionParam:
 
-    dcmuiActionParam_"
-    "Accepted User Role(s)",string,"Accepted User Role","
+    :ref:`UI Action Parameter(s) (dcmuiActionParam) <dcmuiActionParam>`",string,"UI Action Parameter Enumerated values: edit, create, delete, export, accessible, visible, merge, upload, reject or restore"
+    "
     .. _dcmAcceptedUserRole:
 
-    dcmAcceptedUserRole_"
+    :ref:`Accepted User Role(s) (dcmAcceptedUserRole) <dcmAcceptedUserRole>`",string,"Accepted User Role"

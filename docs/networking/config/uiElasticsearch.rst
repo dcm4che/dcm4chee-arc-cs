@@ -2,19 +2,16 @@ UI Elasticsearch Configuration
 ==============================
 Elasticsearch Configuration for the pro version
 
-.. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
+.. tabularcolumns:: |p{4cm}|l|p{8cm}|
 .. csv-table:: UI Elasticsearch Configuration Attributes (LDAP Object: dcmUiElasticsearch)
-    :header: Name, Type, Description, LDAP Attribute
-    :widths: 20, 7, 60, 13
+    :header: Name (LDAP Attribute), Type, Description
+    :widths: 23, 7, 70
 
-    "UI Elasticsearch Configuration Name",string,"UI Elasticsearch Configuration Name","
+    "
     .. _dcmuiElasticsearchConfigName:
 
-    dcmuiElasticsearchConfigName_"
-    ":doc:`uiElasticsearchURL` (s)",object,"UI Elasticsearch URL","
-    .. _dcmuiElasticsearchURLObjects:
-
-    dcmuiElasticsearchURLObjects_"
+    :ref:`UI Elasticsearch Configuration Name (dcmuiElasticsearchConfigName) <dcmuiElasticsearchConfigName>`",string,"UI Elasticsearch Configuration Name"
+    ":doc:`uiElasticsearchURL` (s)",object,"UI Elasticsearch URL"
 
 .. toctree::
 

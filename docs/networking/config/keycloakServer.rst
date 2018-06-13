@@ -2,48 +2,48 @@ Keycloak Server
 ===============
 Keycloak Server
 
-.. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
+.. tabularcolumns:: |p{4cm}|l|p{8cm}|
 .. csv-table:: Keycloak Server Attributes (LDAP Object: dcmKeycloakServer)
-    :header: Name, Type, Description, LDAP Attribute
-    :widths: 20, 7, 60, 13
+    :header: Name (LDAP Attribute), Type, Description
+    :widths: 23, 7, 70
 
-    "Keycloak Server ID",string,"Identifier for this Keycloak Server.","
+    "
     .. _dcmKeycloakServerID:
 
-    dcmKeycloakServerID_"
-    "Server URL",string,"The base URL of the Keycloak server.","
+    :ref:`Keycloak Server ID (dcmKeycloakServerID) <dcmKeycloakServerID>`",string,"Identifier for this Keycloak Server."
+    "
     .. _dcmURI:
 
-    dcmURI_"
-    "Keycloak Realm",string,"Name of the realm in token requests.","
+    :ref:`Server URL (dcmURI) <dcmURI>`",string,"The base URL of the Keycloak server."
+    "
     .. _dcmKeycloakRealm:
 
-    dcmKeycloakRealm_"
-    "OAuth 2.0 Client ID",string,"Client ID used in token requests.","
+    :ref:`Keycloak Realm (dcmKeycloakRealm) <dcmKeycloakRealm>`",string,"Name of the realm in token requests."
+    "
     .. _dcmKeycloakClientID:
 
-    dcmKeycloakClientID_"
-    "OAuth 2.0 grant type",string,"OAuth 2.0 grant type used in token requests. Enumerated values: client_credentials or password","
+    :ref:`OAuth 2.0 Client ID (dcmKeycloakClientID) <dcmKeycloakClientID>`",string,"Client ID used in token requests."
+    "
     .. _dcmKeycloakGrantType:
 
-    dcmKeycloakGrantType_"
-    "OAuth Client secret",string,"OAuth client secret. Required if grant type = client_credentials.","
+    :ref:`OAuth 2.0 grant type (dcmKeycloakGrantType) <dcmKeycloakGrantType>`",string,"OAuth 2.0 grant type used in token requests. Enumerated values: client_credentials or password"
+    "
     .. _dcmKeycloakClientSecret:
 
-    dcmKeycloakClientSecret_"
-    "TLS Allow Any Hostname",boolean,"If the other server requires HTTPS and this config option is set to true the other server’s certificate is validated via the truststore, but host name validation is not done.","
+    :ref:`OAuth Client secret (dcmKeycloakClientSecret) <dcmKeycloakClientSecret>`",string,"OAuth client secret. Required if grant type = client_credentials."
+    "
     .. _dcmTLSAllowAnyHostname:
 
-    dcmTLSAllowAnyHostname_"
-    "TLS Disable Trust Manager",boolean,"If the other server requires HTTPS and this config option is set to true you do not have to specify a truststore","
+    :ref:`TLS Allow Any Hostname (dcmTLSAllowAnyHostname) <dcmTLSAllowAnyHostname>`",boolean,"If the other server requires HTTPS and this config option is set to true the other server’s certificate is validated via the truststore, but host name validation is not done."
+    "
     .. _dcmTLSDisableTrustManager:
 
-    dcmTLSDisableTrustManager_"
-    "User ID",string,"User ID. Required if grant type = password.","
+    :ref:`TLS Disable Trust Manager (dcmTLSDisableTrustManager) <dcmTLSDisableTrustManager>`",boolean,"If the other server requires HTTPS and this config option is set to true you do not have to specify a truststore"
+    "
     .. _uid:
 
-    uid_"
-    "User Password",string,"User Password. Required if grant type = password.","
+    :ref:`User ID (uid) <uid>`",string,"User ID. Required if grant type = password."
+    "
     .. _userPassword:
 
-    userPassword_"
+    :ref:`User Password (userPassword) <userPassword>`",string,"User Password. Required if grant type = password."

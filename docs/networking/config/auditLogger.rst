@@ -2,103 +2,100 @@ Audit Logger
 ============
 Audit Logger related information
 
-.. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
+.. tabularcolumns:: |p{4cm}|l|p{8cm}|
 .. csv-table:: Audit Logger Attributes (LDAP Object: dcmAuditLogger)
-    :header: Name, Type, Description, LDAP Attribute
-    :widths: 20, 7, 60, 13
+    :header: Name (LDAP Attribute), Type, Description
+    :widths: 23, 7, 70
 
-    "Name",string,"Arbitrary/Meaningful name for the Audit Logger object","
+    "
     .. _cn:
 
-    cn_"
-    "Network Connection Reference(s)",string,"The JSON Pointers to the Network Connection objects used by this Audit Logger","
+    :ref:`Name (cn) <cn>`",string,"Arbitrary/Meaningful name for the Audit Logger object"
+    "
     .. _dicomNetworkConnectionReference:
 
-    dicomNetworkConnectionReference_"
-    "Audit Record Repository Device Name",string,"Device Name of Audit Record Repository to which Audit Messages are sent","
+    :ref:`Network Connection Reference(s) (dicomNetworkConnectionReference) <dicomNetworkConnectionReference>`",string,"The JSON Pointers to the Network Connection objects used by this Audit Logger"
+    "
     .. _dcmAuditRecordRepositoryDeviceName:
 
-    dcmAuditRecordRepositoryDeviceName_"
-    "Source ID",string,"RFC 3881 Audit Source ID; device name if absent","
+    :ref:`Audit Record Repository Device Name (dcmAuditRecordRepositoryDeviceName) <dcmAuditRecordRepositoryDeviceName>`",string,"Device Name of Audit Record Repository to which Audit Messages are sent"
+    "
     .. _dcmAuditSourceID:
 
-    dcmAuditSourceID_"
-    "Enterprise Site ID",string,"RFC 3881 Audit Enterprise Site ID; value 'dicomInstitutionName' is replaced by the institution name of the DICOM device","
+    :ref:`Source ID (dcmAuditSourceID) <dcmAuditSourceID>`",string,"RFC 3881 Audit Source ID; device name if absent"
+    "
     .. _dcmAuditEnterpriseSiteID:
 
-    dcmAuditEnterpriseSiteID_"
-    "Source Type Code(s)",string,"RFC 3881 Audit Source Type Code; value 'dicomPrimaryDeviceType' is replaced by the primary type of the DICOM device","
+    :ref:`Enterprise Site ID (dcmAuditEnterpriseSiteID) <dcmAuditEnterpriseSiteID>`",string,"RFC 3881 Audit Enterprise Site ID; value 'dicomInstitutionName' is replaced by the institution name of the DICOM device"
+    "
     .. _dcmAuditSourceTypeCode:
 
-    dcmAuditSourceTypeCode_"
-    "Syslog Facility",string,"RFC 5424 Syslog Facility string value of audit message. Enumerated values: kern, user, mail, daemon, auth, syslog, lpr, news, uucp, cron, authpriv, ftp, ntp, audit, console, cron2, local0, local1, local2, local3, local4, local5, local6 or local7","
+    :ref:`Source Type Code(s) (dcmAuditSourceTypeCode) <dcmAuditSourceTypeCode>`",string,"RFC 3881 Audit Source Type Code; value 'dicomPrimaryDeviceType' is replaced by the primary type of the DICOM device"
+    "
     .. _dcmAuditFacility:
 
-    dcmAuditFacility_"
-    "Syslog Severity - Success",string,"RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 0 (Success). Enumerated values: emerg, alert, crit, err, warning, notice, info or debug","
+    :ref:`Syslog Facility (dcmAuditFacility) <dcmAuditFacility>`",string,"RFC 5424 Syslog Facility string value of audit message. Enumerated values: kern, user, mail, daemon, auth, syslog, lpr, news, uucp, cron, authpriv, ftp, ntp, audit, console, cron2, local0, local1, local2, local3, local4, local5, local6 or local7"
+    "
     .. _dcmAuditSuccessSeverity:
 
-    dcmAuditSuccessSeverity_"
-    "Syslog Severity - Failure",string,"RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 4 (Minor failure). Enumerated values: emerg, alert, crit, err, warning, notice, info or debug","
+    :ref:`Syslog Severity - Success (dcmAuditSuccessSeverity) <dcmAuditSuccessSeverity>`",string,"RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 0 (Success). Enumerated values: emerg, alert, crit, err, warning, notice, info or debug"
+    "
     .. _dcmAuditMinorFailureSeverity:
 
-    dcmAuditMinorFailureSeverity_"
-    "Syslog Severity - Failure",string,"RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 8 (Serious failure). Enumerated values: emerg, alert, crit, err, warning, notice, info or debug","
+    :ref:`Syslog Severity - Failure (dcmAuditMinorFailureSeverity) <dcmAuditMinorFailureSeverity>`",string,"RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 4 (Minor failure). Enumerated values: emerg, alert, crit, err, warning, notice, info or debug"
+    "
     .. _dcmAuditSeriousFailureSeverity:
 
-    dcmAuditSeriousFailureSeverity_"
-    "Syslog Severity - Major",string,"RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 12 (Major failure). Enumerated values: emerg, alert, crit, err, warning, notice, info or debug","
+    :ref:`Syslog Severity - Failure (dcmAuditSeriousFailureSeverity) <dcmAuditSeriousFailureSeverity>`",string,"RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 8 (Serious failure). Enumerated values: emerg, alert, crit, err, warning, notice, info or debug"
+    "
     .. _dcmAuditMajorFailureSeverity:
 
-    dcmAuditMajorFailureSeverity_"
-    "Syslog Application Name",string,"RFC 5424 Syslog APP-NAME of audit message; Audit Source ID if absent","
+    :ref:`Syslog Severity - Major (dcmAuditMajorFailureSeverity) <dcmAuditMajorFailureSeverity>`",string,"RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 12 (Major failure). Enumerated values: emerg, alert, crit, err, warning, notice, info or debug"
+    "
     .. _dcmAuditApplicationName:
 
-    dcmAuditApplicationName_"
-    "Syslog Message ID",string,"RFC 5424 Syslog MSGID of audit message.","
+    :ref:`Syslog Application Name (dcmAuditApplicationName) <dcmAuditApplicationName>`",string,"RFC 5424 Syslog APP-NAME of audit message; Audit Source ID if absent"
+    "
     .. _dcmAuditMessageID:
 
-    dcmAuditMessageID_"
-    "Message Encoding",string,"Character encoding of RFC 5424 Syslog MSG part of audit message.","
+    :ref:`Syslog Message ID (dcmAuditMessageID) <dcmAuditMessageID>`",string,"RFC 5424 Syslog MSGID of audit message."
+    "
     .. _dcmAuditMessageEncoding:
 
-    dcmAuditMessageEncoding_"
-    "Message BOM",boolean,"Enable/disable Unicode BOM prefix of RFC 5424 Syslog MSG part of audit message; include BOM if absent","
+    :ref:`Message Encoding (dcmAuditMessageEncoding) <dcmAuditMessageEncoding>`",string,"Character encoding of RFC 5424 Syslog MSG part of audit message."
+    "
     .. _dcmAuditMessageBOM:
 
-    dcmAuditMessageBOM_"
-    "Timestamp in UTC",boolean,"Specify if RFC 5424 Syslog TIMESTAMP and the Event Date/Time of the audit message are specified in Coordinated Universal Time. Default indicates it will be in Local Time zone.","
+    :ref:`Message BOM (dcmAuditMessageBOM) <dcmAuditMessageBOM>`",boolean,"Enable/disable Unicode BOM prefix of RFC 5424 Syslog MSG part of audit message; include BOM if absent"
+    "
     .. _dcmAuditTimestampInUTC:
 
-    dcmAuditTimestampInUTC_"
-    "Message Format XML",boolean,"Specify whether or not the XML audit message is formatted with line feeds and indentation.","
+    :ref:`Timestamp in UTC (dcmAuditTimestampInUTC) <dcmAuditTimestampInUTC>`",boolean,"Specify if RFC 5424 Syslog TIMESTAMP and the Event Date/Time of the audit message are specified in Coordinated Universal Time. Default indicates it will be in Local Time zone."
+    "
     .. _dcmAuditMessageFormatXML:
 
-    dcmAuditMessageFormatXML_"
-    "Message Schema URI",string,"URI of DICOM Audit Message Schema referenced in audit message","
+    :ref:`Message Format XML (dcmAuditMessageFormatXML) <dcmAuditMessageFormatXML>`",boolean,"Specify whether or not the XML audit message is formatted with line feeds and indentation."
+    "
     .. _dcmAuditMessageSchemaURI:
 
-    dcmAuditMessageSchemaURI_"
-    "Include Instance UIDs",boolean,"Indicates if Audit Log Message should contain optional Instance UIDs","
+    :ref:`Message Schema URI (dcmAuditMessageSchemaURI) <dcmAuditMessageSchemaURI>`",string,"URI of DICOM Audit Message Schema referenced in audit message"
+    "
     .. _dcmAuditIncludeInstanceUID:
 
-    dcmAuditIncludeInstanceUID_"
-    "Spool Directory URI",string,"URI of spool directory used to store messages which could not delivered to the record repository; use system temporary directory if absent.","
+    :ref:`Include Instance UIDs (dcmAuditIncludeInstanceUID) <dcmAuditIncludeInstanceUID>`",boolean,"Indicates if Audit Log Message should contain optional Instance UIDs"
+    "
     .. _dcmAuditLoggerSpoolDirectoryURI:
 
-    dcmAuditLoggerSpoolDirectoryURI_"
-    "Retry Interval",integer,"Retry interval in s to re-sent messages which could not delivered to the record repository; do no retry to re-sent messages if absent","
+    :ref:`Spool Directory URI (dcmAuditLoggerSpoolDirectoryURI) <dcmAuditLoggerSpoolDirectoryURI>`",string,"URI of spool directory used to store messages which could not delivered to the record repository; use system temporary directory if absent."
+    "
     .. _dcmAuditLoggerRetryInterval:
 
-    dcmAuditLoggerRetryInterval_"
-    "installed",boolean,"True if the Audit Logger is installed on network. If not present, information about the installed status of the Audit Logger is inherited from the device","
+    :ref:`Retry Interval (dcmAuditLoggerRetryInterval) <dcmAuditLoggerRetryInterval>`",integer,"Retry interval in s to re-sent messages which could not delivered to the record repository; do no retry to re-sent messages if absent"
+    "
     .. _dicomInstalled:
 
-    dicomInstalled_"
-    ":doc:`auditSuppressCriteria` (s)",object,"Audit Suppress Criteria","
-    .. _dcmAuditSuppressCriteria:
-
-    dcmAuditSuppressCriteria_"
+    :ref:`installed (dicomInstalled) <dicomInstalled>`",boolean,"True if the Audit Logger is installed on network. If not present, information about the installed status of the Audit Logger is inherited from the device"
+    ":doc:`auditSuppressCriteria` (s)",object,"Audit Suppress Criteria"
 
 .. toctree::
 

@@ -2,39 +2,21 @@ UI Configuration
 ================
 UI Configuration
 
-.. tabularcolumns:: |p{4cm}|l|p{8cm}|l|
+.. tabularcolumns:: |p{4cm}|l|p{8cm}|
 .. csv-table:: UI Configuration Attributes (LDAP Object: dcmUiConfig)
-    :header: Name, Type, Description, LDAP Attribute
-    :widths: 20, 7, 60, 13
+    :header: Name (LDAP Attribute), Type, Description
+    :widths: 23, 7, 70
 
-    "UI Configuration Name",string,"UI Configuration Name","
+    "
     .. _dcmuiConfigName:
 
-    dcmuiConfigName_"
-    ":doc:`uiPermission` (s)",object,"Permission","
-    .. _dcmuiPermission:
-
-    dcmuiPermission_"
-    ":doc:`uiDiffConfig` (s)",object,"Study Diff Configuration","
-    .. _dcmuiDiffConfig:
-
-    dcmuiDiffConfig_"
-    ":doc:`uiDashboard` (s)",object,"UI Dashboard Configuration","
-    .. _dcmuiDashboardConfig:
-
-    dcmuiDashboardConfig_"
-    ":doc:`uiElasticsearch` (s)",object,"Elasticsearch Configuration for the pro version","
-    .. _dcmuiElasticsearchConfig:
-
-    dcmuiElasticsearchConfig_"
-    ":doc:`uiDeviceURL` (s)",object,"Other UI Device URLs","
-    .. _dcmuiDeviceURLObject:
-
-    dcmuiDeviceURLObject_"
-    ":doc:`uiDeviceCluster` (s)",object,"Group Devices in Clusters","
-    .. _dcmuiDeviceClusterObject:
-
-    dcmuiDeviceClusterObject_"
+    :ref:`UI Configuration Name (dcmuiConfigName) <dcmuiConfigName>`",string,"UI Configuration Name"
+    ":doc:`uiPermission` (s)",object,"Permission"
+    ":doc:`uiDiffConfig` (s)",object,"Study Diff Configuration"
+    ":doc:`uiDashboard` (s)",object,"UI Dashboard Configuration"
+    ":doc:`uiElasticsearch` (s)",object,"Elasticsearch Configuration for the pro version"
+    ":doc:`uiDeviceURL` (s)",object,"Other UI Device URLs"
+    ":doc:`uiDeviceCluster` (s)",object,"Group Devices in Clusters"
 
 .. toctree::
 
