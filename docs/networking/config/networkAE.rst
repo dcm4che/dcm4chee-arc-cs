@@ -67,12 +67,8 @@ Application entity that provides services on a network
     :ref:`installed <dicomInstalled>`",boolean,"True if the AE is installed on network. If not present, information about the installed status of the AE is inherited from the device
 
     (dicomInstalled)"
-    ":doc:`transferCapability` (s)",object,"Transfer capabilities provided by the application entity
-
-    (dicomTransferCapability)"
-    ":doc:`dcmNetworkAE` ",object,"dcm4che proprietary Attributes of Network AE
-
-    (dcmNetworkAE)"
+    ":doc:`transferCapability` (s)",object,"Transfer capabilities provided by the application entity"
+    ":doc:`dcmNetworkAE` ",object,"dcm4che proprietary Attributes of Network AE"
 
 .. toctree::
 

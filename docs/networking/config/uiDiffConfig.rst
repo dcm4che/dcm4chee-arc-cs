@@ -55,9 +55,7 @@ UI Diff Configuration
     :ref:`UI Diff Secondary C-STORE SCP <dcmuiDiffSecondaryCStoreSCP>`",string,"UI Diff Secondary C-STORE SCP
 
     (dcmuiDiffSecondaryCStoreSCP)"
-    ":doc:`uiDiffCriteria` (s)",object,"UI Diff Criteria
-
-    (dcmuiDiffCriteria)"
+    ":doc:`uiDiffCriteria` (s)",object,"UI Diff Criteria"
 
 .. toctree::
 

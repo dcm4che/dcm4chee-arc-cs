@@ -13,24 +13,12 @@ UI Configuration
     :ref:`UI Configuration Name <dcmuiConfigName>`",string,"UI Configuration Name
 
     (dcmuiConfigName)"
-    ":doc:`uiPermission` (s)",object,"Permission
-
-    (dcmuiPermission)"
-    ":doc:`uiDiffConfig` (s)",object,"Study Diff Configuration
-
-    (dcmuiDiffConfig)"
-    ":doc:`uiDashboard` (s)",object,"UI Dashboard Configuration
-
-    (dcmuiDashboardConfig)"
-    ":doc:`uiElasticsearch` (s)",object,"Elasticsearch Configuration for the pro version
-
-    (dcmuiElasticsearchConfig)"
-    ":doc:`uiDeviceURL` (s)",object,"Other UI Device URLs
-
-    (dcmuiDeviceURLObject)"
-    ":doc:`uiDeviceCluster` (s)",object,"Group Devices in Clusters
-
-    (dcmuiDeviceClusterObject)"
+    ":doc:`uiPermission` (s)",object,"Permission"
+    ":doc:`uiDiffConfig` (s)",object,"Study Diff Configuration"
+    ":doc:`uiDashboard` (s)",object,"UI Dashboard Configuration"
+    ":doc:`uiElasticsearch` (s)",object,"Elasticsearch Configuration for the pro version"
+    ":doc:`uiDeviceURL` (s)",object,"Other UI Device URLs"
+    ":doc:`uiDeviceCluster` (s)",object,"Group Devices in Clusters"
 
 .. toctree::
 

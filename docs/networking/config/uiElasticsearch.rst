@@ -13,9 +13,7 @@ Elasticsearch Configuration for the pro version
     :ref:`UI Elasticsearch Configuration Name <dcmuiElasticsearchConfigName>`",string,"UI Elasticsearch Configuration Name
 
     (dcmuiElasticsearchConfigName)"
-    ":doc:`uiElasticsearchURL` (s)",object,"UI Elasticsearch URL
-
-    (dcmuiElasticsearchURLObjects)"
+    ":doc:`uiElasticsearchURL` (s)",object,"UI Elasticsearch URL"
 
 .. toctree::
 

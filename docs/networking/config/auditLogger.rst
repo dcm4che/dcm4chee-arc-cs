@@ -139,9 +139,7 @@ Audit Logger related information
     :ref:`installed <dicomInstalled>`",boolean,"True if the Audit Logger is installed on network. If not present, information about the installed status of the Audit Logger is inherited from the device
 
     (dicomInstalled)"
-    ":doc:`auditSuppressCriteria` (s)",object,"Audit Suppress Criteria
-
-    (dcmAuditSuppressCriteria)"
+    ":doc:`auditSuppressCriteria` (s)",object,"Audit Suppress Criteria"
 
 .. toctree::
 

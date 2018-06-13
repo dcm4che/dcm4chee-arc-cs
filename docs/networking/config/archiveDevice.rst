@@ -595,12 +595,8 @@ DICOM Archive Device related information
     :ref:`Queue Tasks Fetch Size <dcmQueueTasksFetchSize>`",integer,"Maximal number of Tasks rescheduled or deleted or canceled in one transaction.
 
     (dcmQueueTasksFetchSize)"
-    ":doc:`attributeFilter` (s)",object,"Specifies Attributes stored in the database
-
-    (dcmAttributeFilter)"
-    ":doc:`attributeSet` (s)",object,"Named Attribute Set for Query Parameter 'comparefield' of DIFF-RS and Query Parameter 'includefields' of WADO-RS Metadata requests.
-
-    (dcmAttributeSet)"
+    ":doc:`attributeFilter` (s)",object,"Specifies Attributes stored in the database"
+    ":doc:`attributeSet` (s)",object,"Named Attribute Set for Query Parameter 'comparefield' of DIFF-RS and Query Parameter 'includefields' of WADO-RS Metadata requests."
     "
     .. _dcmRemapRetrieveURL:
 
@@ -739,60 +735,28 @@ DICOM Archive Device related information
     :ref:`UI Configuration Device Name <dcmUIConfigurationDeviceName>`",string,"Specifies the device name containing the Archive UI Configuration.
 
     (dcmUIConfigurationDeviceName)"
-    ":doc:`storage` (s)",object,"Specifies Storage System
-
-    (dcmStorage)"
-    ":doc:`queryRetrieveView` (s)",object,"Specifies behavior on Rejection Note Stored
-
-    (dcmQueryRetrieveView)"
-    ":doc:`queue` (s)",object,"Managed JMS Queue
-
-    (dcmQueue)"
-    ":doc:`exporter` (s)",object,"Exporter Descriptor
-
-    (dcmExporter)"
-    ":doc:`exportRule` (s)",object,"Export Rules applied to DICOM objects received by any AE. May be supplemented by configured Export Rules for particular Archive Network AEs.
-
-    (dcmExportRule)"
-    ":doc:`rsForwardRule` (s)",object,"RESTful Forward Rules. May be supplemented by configured RESTful Forward Rules for particular Archive Network AEs.
-
-    (dcmRSForwardRule)"
-    ":doc:`keycloakServer` (s)",object,"Keycloak Server
-
-    (dcmKeycloakServer)"
-    ":doc:`archiveCompressionRule` (s)",object,"Compression rules applied to DICOM objects received by any AE. May be supplemented by configured Compression Rules for particular Archive Network AEs.
-
-    (dcmArchiveCompressionRule)"
-    ":doc:`archiveAttributeCoercion` (s)",object,"Attribute Coercion applied to DIMSE received/sent by any AE. May be supplemented by configured Attribute Coercions for particular Archive Network AEs.
-
-    (dcmArchiveAttributeCoercion)"
-    ":doc:`rejectionNote` (s)",object,"Specifies behavior on Rejection Note Stored
-
-    (dcmRejectionNote)"
-    ":doc:`studyRetentionPolicy` (s)",object,"Study Retention Policies applied to Studies received by any AE. May be supplemented by configured Study Retention Policies for particular Archive Network AEs.
-
-    (dcmStudyRetentionPolicy)"
-    ":doc:`storeAccessControlIDRule` (s)",object,"Store Access Control Rules applied to Studies received by any AE. May be supplemented by configured Store Access Control Rules for particular Archive Network AEs.
-
-    (dcmStoreAccessControlIDRule)"
-    ":doc:`idGenerator` (s)",object,"ID Generator
-
-    (dcmIDGenerator)"
+    ":doc:`storage` (s)",object,"Specifies Storage System"
+    ":doc:`queryRetrieveView` (s)",object,"Specifies behavior on Rejection Note Stored"
+    ":doc:`queue` (s)",object,"Managed JMS Queue"
+    ":doc:`exporter` (s)",object,"Exporter Descriptor"
+    ":doc:`exportRule` (s)",object,"Export Rules applied to DICOM objects received by any AE. May be supplemented by configured Export Rules for particular Archive Network AEs."
+    ":doc:`rsForwardRule` (s)",object,"RESTful Forward Rules. May be supplemented by configured RESTful Forward Rules for particular Archive Network AEs."
+    ":doc:`keycloakServer` (s)",object,"Keycloak Server"
+    ":doc:`archiveCompressionRule` (s)",object,"Compression rules applied to DICOM objects received by any AE. May be supplemented by configured Compression Rules for particular Archive Network AEs."
+    ":doc:`archiveAttributeCoercion` (s)",object,"Attribute Coercion applied to DIMSE received/sent by any AE. May be supplemented by configured Attribute Coercions for particular Archive Network AEs."
+    ":doc:`rejectionNote` (s)",object,"Specifies behavior on Rejection Note Stored"
+    ":doc:`studyRetentionPolicy` (s)",object,"Study Retention Policies applied to Studies received by any AE. May be supplemented by configured Study Retention Policies for particular Archive Network AEs."
+    ":doc:`storeAccessControlIDRule` (s)",object,"Store Access Control Rules applied to Studies received by any AE. May be supplemented by configured Store Access Control Rules for particular Archive Network AEs."
+    ":doc:`idGenerator` (s)",object,"ID Generator"
     "
     .. _dcmXRoadProperty:
 
     :ref:`X-Road Property(s) <dcmXRoadProperty>`",string,"Properties for accessing Estonian National Patient Registry in format <name>=<value>
 
     (dcmXRoadProperty)"
-    ":doc:`hl7ForwardRule` (s)",object,"HL7 Forward Rules for HL7 messages received by any HL7 Application. May be supplemented by configured HL7 Forward Rules for particular HL7 Applications.
-
-    (hl7ForwardRule)"
-    ":doc:`hl7OrderScheduledStation` (s)",object,"Scheduled Station selected on MWL HL7 Order Feed received by any HL7 Application. May be supplemented by configured values for particular HL7 Applications.
-
-    (hl7OrderScheduledStation)"
-    ":doc:`hl7OrderSPSStatus` (s)",object,"Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages. May be overwritten by configured values for particular Archive HL7 Application.
-
-    (hl7OrderSPSStatus)"
+    ":doc:`hl7ForwardRule` (s)",object,"HL7 Forward Rules for HL7 messages received by any HL7 Application. May be supplemented by configured HL7 Forward Rules for particular HL7 Applications."
+    ":doc:`hl7OrderScheduledStation` (s)",object,"Scheduled Station selected on MWL HL7 Order Feed received by any HL7 Application. May be supplemented by configured values for particular HL7 Applications."
+    ":doc:`hl7OrderSPSStatus` (s)",object,"Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages. May be overwritten by configured values for particular Archive HL7 Application."
 
 .. toctree::
 

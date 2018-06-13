@@ -157,15 +157,9 @@ DICOM Device related information
     :ref:`installed <dicomInstalled>`",boolean,"Boolean to indicate whether this device is presently installed on the network
 
     (dicomInstalled)"
-    ":doc:`networkConnection` (s)",object,"network connections of the device
-
-    (dicomNetworkConnection)"
-    ":doc:`networkAE` (s)",object,"Application entity provided by the device
-
-    (dicomNetworkAE)"
-    ":doc:`dcmDevice` ",object,"dcm4che proprietary Device Attributes
-
-    (dcmDevice)"
+    ":doc:`networkConnection` (s)",object,"network connections of the device"
+    ":doc:`networkAE` (s)",object,"Application entity provided by the device"
+    ":doc:`dcmDevice` ",object,"dcm4che proprietary Device Attributes"
 
 .. toctree::
 

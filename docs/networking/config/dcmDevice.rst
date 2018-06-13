@@ -79,30 +79,14 @@ dcm4che proprietary Device Attributes
     :ref:`Time Zone of Device <dcmTimeZoneOfDevice>`",string,"Time Zone ID of the Device; matches Java TimeZone ID
 
     (dcmTimeZoneOfDevice)"
-    ":doc:`webApplication` (s)",object,"Web Applications provided by the Device
-
-    (dcmWebApp)"
-    ":doc:`hl7Application` (s)",object,"HL7 Applications provided by the Device
-
-    (hl7Application)"
-    ":doc:`imageWriter` (s)",object,"Specifies Java Image IO Image Writers with Write Parameters used for compressing DICOM images
-
-    (dcmImageWriter)"
-    ":doc:`imageReader` (s)",object,"Specifies Java Image IO Image Readers used for decompressing compressed DICOM images
-
-    (dcmImageReader)"
-    ":doc:`auditLogger` (s)",object,"Audit Logger related information
-
-    (dcmAuditLogger)"
-    ":doc:`auditRecordRepository` ",object,"Audit Record Repository related information
-
-    (dcmAuditRecordRepository)"
-    ":doc:`archiveDevice` ",object,"DICOM Archive Device related information
-
-    (dcmArchiveDevice)"
-    ":doc:`uiConfig` (s)",object,"UI Configuration
-
-    (dcmuiConfig)"
+    ":doc:`webApplication` (s)",object,"Web Applications provided by the Device"
+    ":doc:`hl7Application` (s)",object,"HL7 Applications provided by the Device"
+    ":doc:`imageWriter` (s)",object,"Specifies Java Image IO Image Writers with Write Parameters used for compressing DICOM images"
+    ":doc:`imageReader` (s)",object,"Specifies Java Image IO Image Readers used for decompressing compressed DICOM images"
+    ":doc:`auditLogger` (s)",object,"Audit Logger related information"
+    ":doc:`auditRecordRepository` ",object,"Audit Record Repository related information"
+    ":doc:`archiveDevice` ",object,"DICOM Archive Device related information"
+    ":doc:`uiConfig` (s)",object,"UI Configuration"
 
 .. toctree::
 

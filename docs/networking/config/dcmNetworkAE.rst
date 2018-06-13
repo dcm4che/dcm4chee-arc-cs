@@ -37,9 +37,7 @@ dcm4che proprietary Attributes of Network AE
     :ref:`HL7 Application name <hl7ApplicationName>`",string,"HL7 Application and Facility name (Application|Facility) associated with this AE
 
     (hl7ApplicationName)"
-    ":doc:`archiveNetworkAE` ",object,"DICOM Archive Network AE related information
-
-    (dcmArchiveNetworkAE)"
+    ":doc:`archiveNetworkAE` ",object,"DICOM Archive Network AE related information"
 
 .. toctree::
 

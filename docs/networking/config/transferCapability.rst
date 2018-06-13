@@ -31,9 +31,7 @@ Each transfer capability specifies the SOP class that the Network AE can support
     :ref:`Transfer Syntax(s) <dicomTransferSyntax>`",string,"Transfer syntax(es) that may be requested as an SCU or that are offered as an SCP.
 
     (dicomTransferSyntax)"
-    ":doc:`dcmTransferCapability` ",object,"dcm4che proprietary Transfer Capability Attributes
-
-    (dcmTransferCapability)"
+    ":doc:`dcmTransferCapability` ",object,"dcm4che proprietary Transfer Capability Attributes"
 
 .. toctree::
 

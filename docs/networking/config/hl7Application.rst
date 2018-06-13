@@ -67,9 +67,7 @@ HL7 Application information
     :ref:`installed <dicomInstalled>`",boolean,"True if the HL7 Application is installed on network. If not present, information about the installed status of the HL7 Application is inherited from the device
 
     (dicomInstalled)"
-    ":doc:`archiveHL7Application` ",object,"DICOM Archive HL7 Application related information
-
-    (dcmArchiveHL7Application)"
+    ":doc:`archiveHL7Application` ",object,"DICOM Archive HL7 Application related information"
 
 .. toctree::
 

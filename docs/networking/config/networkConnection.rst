@@ -37,9 +37,7 @@ Describes one TCP/UDP port on one network device.
     :ref:`installed <dicomInstalled>`",boolean,"True if the Network Connection is installed on the network. If not present, information about the installed status of the Network Connection is inherited from the device
 
     (dicomInstalled)"
-    ":doc:`dcmNetworkConnection` ",object,"dcm4che proprietary Network Connection Attributes
-
-    (dcmNetworkConnection)"
+    ":doc:`dcmNetworkConnection` ",object,"dcm4che proprietary Network Connection Attributes"
 
 .. toctree::
 

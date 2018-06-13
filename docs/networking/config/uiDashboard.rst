@@ -37,9 +37,7 @@ UI Dashboard Configuration
     :ref:`Count Aet <dcmuiCountAET>`",string,"Selected Aet will be used to get the count of studies in the dashboard
 
     (dcmuiCountAET)"
-    ":doc:`uiCompareSide` (s)",object,"Compare Sides
-
-    (dcmuiCompareSideObjects)"
+    ":doc:`uiCompareSide` (s)",object,"Compare Sides"
 
 .. toctree::
 
