@@ -3,7 +3,7 @@ Device
 DICOM Device related information
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|
-.. csv-table:: Device Attributes (LDAP Object: dcmDevice)
+.. csv-table:: Device Attributes (LDAP Object: dicomDevice)
     :header: Name, Type, Description (LDAP Attribute)
     :widths: 23, 7, 70
 

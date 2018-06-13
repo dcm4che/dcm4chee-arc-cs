@@ -3,7 +3,7 @@ Transfer Capability
 Each transfer capability specifies the SOP class that the Network AE can support, the mode that it can utilize (SCP or SCU), and the Transfer Syntax(es) that it can utilize
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|
-.. csv-table:: Transfer Capability Attributes (LDAP Object: dcmTransferCapability)
+.. csv-table:: Transfer Capability Attributes (LDAP Object: dicomTransferCapability)
     :header: Name, Type, Description (LDAP Attribute)
     :widths: 23, 7, 70
 

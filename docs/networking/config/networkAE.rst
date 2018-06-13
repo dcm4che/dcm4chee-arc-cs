@@ -3,7 +3,7 @@ Network AE
 Application entity that provides services on a network
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|
-.. csv-table:: Network AE Attributes (LDAP Object: dcmNetworkAE)
+.. csv-table:: Network AE Attributes (LDAP Object: dicomNetworkAE)
     :header: Name, Type, Description (LDAP Attribute)
     :widths: 23, 7, 70
 

@@ -3,7 +3,7 @@ Network Connection
 Describes one TCP/UDP port on one network device.
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|
-.. csv-table:: Network Connection Attributes (LDAP Object: dcmNetworkConnection)
+.. csv-table:: Network Connection Attributes (LDAP Object: dicomNetworkConnection)
     :header: Name, Type, Description (LDAP Attribute)
     :widths: 23, 7, 70
 
