@@ -100,6 +100,7 @@ The Query/Retrieve Application Entity will propose Presentation Contexts for Ver
 Study Root Query/Retrieve Information Model - MOVE and of supported Storage SOP Classes.
 
 .. table:: Proposed Presentation Contexts by the Query/Retrieve Application Entity
+   :name: PresentationContext
 
    +-----------------------------------------------------------------------------------------------------------------------------------------------+
    | Presentation Context Table                                                                                                                    |
