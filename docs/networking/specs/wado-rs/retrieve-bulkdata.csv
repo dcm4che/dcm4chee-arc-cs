@@ -1,4 +1,0 @@
-"Data Types Supported (Accept Type)", "Restricted to application/octet-stream"
-"Transfer Syntaxes Supported (transfer-syntax Accept parameter)", "Any Transfer Syntax supported by the hosting DCM4CHEE ARCHIVE"
-"SOP Class restrictions", "Restricted to SOP classes supported by the hosting DCM4CHEE ARCHIVE"
-"Size restriction", "Restricted to size supported by the hosting DCM4CHEE ARCHIVE"

@@ -1,4 +1,0 @@
-"Transfer Syntaxes Supported", "Restricted to transfer syntaxes supported by the hosting DCM4CHEE ARCHIVE"
-"SOP Class restrictions", "Restricted to SOP classes supported by the hosting DCM4CHEE ARCHIVE"
-"Size restriction", "Restricted to sizes supported by the hosting DCM4CHEE ARCHIVE"
-"Anonymization", "Supports the DICOM Basic Application Level Confidentiality Profile plus the Retain Patient Characteristics option."
