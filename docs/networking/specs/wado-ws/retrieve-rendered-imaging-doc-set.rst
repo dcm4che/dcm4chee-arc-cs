@@ -10,7 +10,7 @@ Specification
    :header: "Parameter", "Support", "Restrictions"
    :widths: 15, 7, 30
 
-   "SOP Class", "YES", "See - :ref:`SOPClasses`"
+   "SOP Class", "YES", "See *Image Storage SOP Classes* in :ref:`SOPClasses`"
    "Rows", "YES", "Must be greater than 0"
    "Columns", "YES", "Must be greater than 0"
    "Region", "NO",
