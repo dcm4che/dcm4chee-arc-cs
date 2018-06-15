@@ -10,6 +10,5 @@ AE Specifications
    specs/qido-rs/qido-rs
    specs/wado-uri
    specs/wado-rs
-   specs/deidentification/deidentification
    specs/wado-ws-rad69
    specs/wado-ws-retrieve-rendered-imaging-doc-set

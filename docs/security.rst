@@ -108,6 +108,15 @@ Audit Trail Message Transmission Profile - SYSLOG-UDP
 
 .. _security-association-level-security:
 
+
+Deidentification Profile
+''''''''''''''''''''''''
+
+.. toctree::
+
+   deidentification/deidentification
+
+
 Association Level Security
 """"""""""""""""""""""""""
 
