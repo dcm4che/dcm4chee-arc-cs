@@ -11,7 +11,6 @@ Specification
    :widths: 15, 7, 30
 
    "SOP Class", "YES", "See - :ref:`SOPClasses`"
-   "Rendered formats available", "YES", "Supports JPEG."
    "Rows", "YES", "Must be greater than 0"
    "Columns", "YES", "Must be greater than 0"
    "Region", "NO",
