@@ -153,6 +153,6 @@ DCM4CHEE-QIDO-SERVICE shall provide a response message header containing the app
 Web Service Endpoint URL
 """"""""""""""""""""""""
 
-_**http://localhost:8080/dcm4chee-arc/aets/{AETitle}/rs**_
+*http://localhost:8080/dcm4chee-arc/aets/{AETitle}/rs*
 
 Replace *{AETitle}* in the URL with the configured AE title.

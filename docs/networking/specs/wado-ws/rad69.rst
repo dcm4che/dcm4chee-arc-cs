@@ -19,11 +19,18 @@ Web Service Endpoint URL
 
 .. _request-response:
 
-Sample Request Response Example
-"""""""""""""""""""""""""""""""
+Retrieve Imaging Document Set Example
+"""""""""""""""""""""""""""""""""""""
 
-.. literalinclude:: rad69-example.txt
+Sample Request
+''''''''''''''
 
+.. literalinclude:: rad69-request.txt
+
+Sample Response
+'''''''''''''''
+
+.. literalinclude:: rad69-response.txt
 
 Error Codes
 """""""""""

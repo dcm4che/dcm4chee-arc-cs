@@ -35,12 +35,19 @@ Web Service Endpoint URL
 
 .. _request-response:
 
-Sample Request Response Example
-"""""""""""""""""""""""""""""""
+Retrieve Rendered Imaging Document Set Example
+""""""""""""""""""""""""""""""""""""""""""""""
 
-.. toctree::
+Sample Request
+''''''''''''''
 
-   retrieve-rendered-imaging-doc-set-example
+.. literalinclude:: retrieve-rendered-imaging-doc-set-request.txt
+
+Sample Response
+'''''''''''''''
+
+.. literalinclude:: retrieve-rendered-imaging-doc-set-response.txt
+
 
 .. _error-codes:
 
