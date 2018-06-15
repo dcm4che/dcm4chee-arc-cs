@@ -28,7 +28,7 @@ to be removed.
 
 .. csv-table:: Attributes removed during protection
    :header: "Group", "Attributes"
-   :width: 15, 30
+   :widths: 15, 30
    :file: removed-attributes.csv
 
 .. _dummy-values:
@@ -40,7 +40,7 @@ Following table lists attributes and the dummy values which are used to replace 
 
 .. csv-table:: Dummy values used to replace the attributes' values
    :header: "VR", "Dummy Value", "Attributes"
-   :width: 4, 15, 30
+   :widths: 4, 15, 30
    :file: dummy-values.csv
 
 .. _encrypted-attributes-data-sets:
