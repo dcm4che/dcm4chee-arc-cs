@@ -3,9 +3,10 @@ WADO-WS Retrieve Imaging Document Set Specification
 
 .. csv-table:: WADO-WS Retrieve Imaging Document Set Specification
    :header: "Parameter", "Restrictions"
+   :widths: 15, 30
 
-   "Transfer Syntaxes Supported", "Same as Transfer Syntaxes listed in - :ref:`SCUImageTS`, :ref:`SCUVideoTS`, :ref:`SCUStructuredReportTS` and :ref:`SCUOtherTS`"
-   "SOP Class Restrictions", "Same as - :ref:`SOPClasses2`"
+   "Transfer Syntaxes Supported", "See - :ref:`SCUImageTS`, :ref:`SCUVideoTS`, :ref:`SCUStructuredReportTS` and :ref:`SCUOtherTS`"
+   "SOP Class Restrictions", "See - :ref:`SOPClasses`"
 
 
 .. _endpoint-url:
@@ -13,7 +14,7 @@ WADO-WS Retrieve Imaging Document Set Specification
 Web Service Endpoint URL
 """"""""""""""""""""""""
 
-_**http://localhost:8080/dcm4chee-arc/xdsi/ImagingDocumentSource**_
+*http://localhost:8080/dcm4chee-arc/xdsi/ImagingDocumentSource*
 
 
 .. _request-response:
@@ -21,9 +22,8 @@ _**http://localhost:8080/dcm4chee-arc/xdsi/ImagingDocumentSource**_
 Sample Request Response Example
 """""""""""""""""""""""""""""""
 
-.. toctree::
+.. literalinclude:: rad69-example.txt
 
-   rad69-example
 
 Error Codes
 """""""""""

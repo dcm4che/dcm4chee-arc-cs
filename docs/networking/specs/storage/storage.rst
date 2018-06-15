@@ -11,6 +11,7 @@ The Storage Application Entity provides Standard Conformance to the following SO
 .. csv-table:: SOP Classes for Storage Application Entity (SCP)
    :name: SOPClasses
    :header: "SOP Class Name", "SOP Class UID", "SCU", "SCP"
+   :widths: 30, 20, 3, 3
    :file: sop-classes.csv
 
 These are the default SOP Classes supported. By altering the configuration it is possible to support additional or fewer SOP Classes.
@@ -46,6 +47,7 @@ The Storage Application Entity initiates up to 5 Associations at a time for send
 N-EVENT-REPORTs to peer AEs.
 
 .. csv-table:: Number of Simultaneous Associations as an SCP for the Storage Application Entity
+   :widths: 30, 20
 
    "Maximum number of simultaneous Associations requested by peer AEs", "No Maximum Limit (Configurable)"
    "Maximum number of simultaneous Associations initiated by the Storage Application Entity", "5"
@@ -59,6 +61,7 @@ The Storage Application Entity supports asynchronous communication (multiple out
 The maximum number of outstanding asynchronous transactions is configurable. It is unlimited by default.
 
 .. csv-table:: Asynchronous Nature as a SCP for the Storage Application Entity
+   :widths: 30, 20
 
    "Maximum number of outstanding asynchronous transactions", "No Maximum Limit (Configurable)"
 
@@ -349,7 +352,7 @@ By default, no image compression is configured.
 
 .. csv-table:: Storage Application C-STORE Response Status Return Reasons
     :header-rows: 1
-    :widths: 10, 10, 5, 20, 20
+    :widths: 10, 15, 5, 20, 20
     :file: c-store-response-status-return-reasons.csv
 
 Note : If a failure condition does occur when handling an Association then all images previously received successfully over the Association
@@ -363,6 +366,7 @@ The Behavior of Storage Application Entity during communication failure is summa
 
 .. csv-table:: Storage Application Entity Storage Service Communication Failure Reasons
    :header: "Exception", "Reason"
+   :widths: 30, 30
    :file: storage-scp-communication-failure-reasons.csv
 
 .. _storage-stgcmt-conformance:
@@ -382,14 +386,14 @@ The Storage Application Entity will return the following Status Code values in N
 
 .. csv-table:: Storage Application Entity Storage Commitment Push Model N-ACTION Response Status Return Behavior
    :header: "Service Status", "Further Meaning", "Error Code", "Behaviour"
-   :widths: 10, 10, 5, 20
+   :widths: 8, 8, 5, 30
    :file: stgcmt-n-action-response-status-return-behaviour.csv
 
 The Storage Application Entity will exhibit the following Behavior according to the Status Code value returned in an N-EVENT-REPORT Response from a destination Storage Commitment Push Model SCU:
 
 .. csv-table:: Storage Application Entity N-EVENT-REPORT Response Status Handling Behavior
    :header: "Service Status", "Further Meaning", "Error Code", "Behaviour"
-   :widths: 10, 10, 5, 20
+   :widths: 8, 8, 5, 30
    :file: stgcmt-n-eventresponse-status-return-behaviour.csv
 
 All Status Codes indicating an error or refusal are treated as a permanent failure. The Storage Application Entity can be configured to automatically reattempt the sending of Storage Commitment Push Model N-EVENT-REPORT Requests if an error Status Code is returned or a communication failure occurs. The maximum number of times to attempt sending as well as the time to wait between attempts is configurable.

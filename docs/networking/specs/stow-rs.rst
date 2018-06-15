@@ -8,10 +8,11 @@ STOW-RS Store Instance
 
 .. csv-table:: STOW-RS Store Instances Specification
    :header: "Category", "Restrictions"
+   :widths: 15, 30
 
    "Media Types Supported (Accept header)", "Restricted to application/dicom or application/dicom+xml"
-   "Transfer Syntaxes Supported (Media Type parameter)", "Same as Transfer Syntaxes listed in - :ref:`SCPImageTS`, :ref:`SCPVideoTS`, :ref:`SCPStructuredReportTS` and :ref:`SCPOtherTS`"
-   "SOP Class Restrictions", "Same as - :ref:`SOPClasses`"
+   "Transfer Syntaxes Supported (Media Type parameter)", "See - :ref:`SCPImageTS`, :ref:`SCPVideoTS`, :ref:`SCPStructuredReportTS` and :ref:`SCPOtherTS`"
+   "SOP Class Restrictions", "See - :ref:`SOPClasses`"
 
 .. _stow-rs-connection-policies:
 
@@ -42,6 +43,7 @@ The DCM4CHEE-STOW-SERVICE response message header contains status codes indicati
 
 .. csv-table:: HTTP Standard Response Codes
    :header: "Service Status", "HTTP Status Code", "STOW-RS Description"
+   :widths: 10, 15, 30
 
    "Failure", "400 - Bad Request", "This indicates that the STOW-RS Service was unable to store any instances due to bad syntax."
    "", "401 - Unauthorized", "This indicates that the STOW-RS Service refused to create or append any instances because the client is not authenticated."
@@ -57,6 +59,6 @@ The DCM4CHEE-STOW-SERVICE response message header contains status codes indicati
 Web Service Endpoint URL
 ''''''''''''''''''''''''
 
-_**http://localhost:8080/dcm4chee-arc/aets/{AETitle}/rs**_
+*http://localhost:8080/dcm4chee-arc/aets/{AETitle}/rs*
 
-Replace _{AETitle}_ with the configured AE title.
+Replace *{AETitle}* in the URL with the configured AE title.

@@ -155,4 +155,4 @@ Web Service Endpoint URL
 
 _**http://localhost:8080/dcm4chee-arc/aets/{AETitle}/rs**_
 
-Replace _{AETitle}_ with the configured AE title.
+Replace *{AETitle}* in the URL with the configured AE title.

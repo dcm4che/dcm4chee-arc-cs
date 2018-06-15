@@ -11,6 +11,7 @@ The Query/Retrieve Application Entity provides Standard Conformance to the follo
 .. csv-table:: SOP Classes for Query/Retrieve Application Entity
    :name: SOPClasses2
    :header: "SOP Class Name", "SOP Class UID", "SCU", "SCP"
+   :widths: 30, 20, 3, 3
    :file: sop-classes.csv
 
 These are the default SOP Classes supported. By altering the configuration it is possible to support additional or fewer SOP Classes.
@@ -43,6 +44,7 @@ The Query/Retrieve Application Entity initiates multiple simultaneous Associatio
 each simultaneous processed MOVE Retrieve request, a new Association to the specified Move Destination is initiated.
 
 .. csv-table:: Number of Simultaneous Associations as an SCP for the Storage Application Entity
+   :widths: 30, 20
 
    "Maximum number of simultaneous Associations requested by peer AEs", "No Maximum Limit (Configurable)"
    "Maximum number of simultaneous Associations initiated by the Query/Retrieve Application Application Entity", "No Maximum Limit"
@@ -56,6 +58,7 @@ The Query/Retrieve Application Entity supports asynchronous communication (multi
 The maximum number of outstanding asynchronous transactions is configurable. It is unlimited by default.
 
 .. csv-table:: Asynchronous Nature for the Query/Retrieve Application Entity
+   :widths: 30, 20
 
    "Maximum number of outstanding asynchronous transactions", "No Maximum Limit (Configurable)"
 
@@ -186,12 +189,14 @@ SOP Specific Conformance for Image SOP Classes
 
 .. csv-table:: STORAGE-SCU AE C-STORE Response Status Handling Behavior
    :header: "Service Status", "Further Meaning", "Error Code", "Behaviour"
+   :widths: 8, 10, 5, 30
    :file: storage-scu-image-sop-conformance.csv
 
 All Status Codes indicating an error or refusal are treated as a permanent failure. The STORAGE-SCU AE never automatically resends images when an error Status Code is returned in a C-STORE Response. For specific behavior regarding Status Code values returned in C-MOVE Responses, refer to the Services Supported as an SCP by the DCM4CHEE SCP AE.
 
 .. csv-table:: STORAGE-SCU AE Communication Failure Behavior
    :header: "Exception", "Behaviour"
+   :widths: 20, 30
    :file: storage-scu-communication-failure-behaviour.csv
 
 .. _association-acceptance-policy:
@@ -275,10 +280,12 @@ All the required search keys on each of the three levels (Study, Series, and Ima
 
 .. csv-table:: Patient Root C-FIND SCP Supported Elements
    :header: "Level Name/Attribute Name", "Tag", "VR", "Types of Matching"
+   :widths: 20, 10, 3, 8
    :file: query-retrieve-scp-patient-root-c-find-elements.csv
 
 .. csv-table:: Study Root C-FIND SCP Supported Elements
    :header: "Level Name/Attribute Name", "Tag", "VR", "Types of Matching"
+   :widths: 20, 10, 3, 8
    :file: query-retrieve-study-root-c-find-elements.csv
 
 The tables should be read as follows:
@@ -299,6 +306,7 @@ The values in 'Types of Matching' column mean as follows :
 
 .. csv-table:: Query/Retrieve SCP AE C-FIND Response Status Return Behavior
    :header: "Service Status", "Further Meaning", "Error Code", "Behaviour"
+   :widths: 8, 10, 5, 30
    :file: query-retrieve-scp-c-find-response-status-behaviour.csv
 
 .. _retrieval-sop-class-conformance:
@@ -312,10 +320,12 @@ An initial C-MOVE Response is always sent after confirming that the C-MOVE Reque
 
 .. csv-table:: Query/Retrieve SCP AE C-MOVE Response Status Return Behavior
    :header: "Service Status", "Further Meaning", "Error Code", "Behaviour"
+   :widths: 8, 10, 5, 30
    :file: query-retrieve-scp-c-move-response-status-behaviour.csv
 
 Note that the Warning Status, B000 (Sub-operations complete - One or more Failures) is never returned. If a failure occurs during export to the C-MOVE Destination AE by the STORAGE-SCU AE then the entire task is aborted. Thus any remaining matches are not exported.
 
 .. csv-table:: Query/Retrieve SCP AE Communication Failure Behavior
    :header: "Exception", "Behaviour"
+   :widths: 20, 30
    :file: query-retrieve-scp-communication-failure-behaviour.csv

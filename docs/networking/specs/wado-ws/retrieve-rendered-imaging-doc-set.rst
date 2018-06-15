@@ -10,7 +10,7 @@ Specification
    :header: "Parameter", "Support", "Restrictions"
    :widths: 15, 7, 30
 
-   "SOP Class", "YES", "Same as - :ref:`SOPClasses`"
+   "SOP Class", "YES", "See - :ref:`SOPClasses`"
    "Rendered formats available", "YES", "Supports JPEG."
    "Rows", "YES", "Must be greater than 0"
    "Columns", "YES", "Must be greater than 0"
@@ -30,7 +30,7 @@ Specification
 Web Service Endpoint URL
 """"""""""""""""""""""""
 
-_**http://localhost:8080/dcm4chee-arc/xdsi/ImagingDocumentSource**_
+*http://localhost:8080/dcm4chee-arc/xdsi/ImagingDocumentSource*
 
 
 .. _request-response:
