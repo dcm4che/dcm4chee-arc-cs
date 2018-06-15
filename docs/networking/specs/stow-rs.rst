@@ -10,9 +10,8 @@ STOW-RS Store Instance
    :header: "Category", "Restrictions"
 
    "Media Types Supported (Accept header)", "Restricted to application/dicom or application/dicom+xml"
-   "Transfer Syntaxes Supported (Media Type parameter)", "Same as Transfer Syntaxes listed in - :ref:`PresentationContext`"
-   "SOP Class Restrictions", "Same as - :ref:`SOPClasses2`"
-   "Size restriction", "Restricted to size supported by the hosting DCM4CHEE ARCHIVE"
+   "Transfer Syntaxes Supported (Media Type parameter)", "Same as Transfer Syntaxes listed in - :ref:`SCPImageTS`, :ref:`SCPVideoTS`, :ref:`SCPStructuredReportTS` and :ref:`SCPOtherTS`"
+   "SOP Class Restrictions", "Same as - :ref:`SOPClasses`"
 
 .. _stow-rs-connection-policies:
 
@@ -51,3 +50,13 @@ The DCM4CHEE-STOW-SERVICE response message header contains status codes indicati
    "", "503 - Busy", "This indicates that the STOW-RS Service was unable to store any instances because it was out of resources."
    "Warning", "202 - Accepted", "This indicates that the STOW-RS Service stored some of the instances but warnings or failures exist for others. Additional information regarding this error can be found in the XML response message body."
    "Success", "200 - OK", "This indicates that the STOW-RS Service successfully stored all the instances."
+
+
+.. _endpoint-url:
+
+Web Service Endpoint URL
+''''''''''''''''''''''''
+
+_**http://localhost:8080/dcm4chee-arc/aets/{AETitle}/rs**_
+
+Replace _{AETitle}_ with the configured AE title.

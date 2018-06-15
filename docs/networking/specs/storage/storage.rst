@@ -202,17 +202,11 @@ The list of accepted Transfer Syntaxes for each accepted Abstract Syntax - as th
    | Image Storage SOP Classes in :ref:`SOPClasses`       | see :ref:`SCPImageTS`                                       | SCP  | None      |
    +------------------------------------------------------+-------------------------------------------------------------+------+-----------+
    | Video Storage SOP Classes in :ref:`SOPClasses`       | see :ref:`SCPVideoTS`                                       | SCP  | None      |
-   +------------------------------------------------------+------------------------------------+------------------------+------+-----------+
-   | SR Storage SOP Classes in :ref:`SOPClasses`          | Implicit VR Little Endian          | 1.2.840.10008.1.2      | SCP  | None      |
-   |                                                      +------------------------------------+------------------------+      |           |
-   |                                                      | Explicit VR Little Endian          | 1.2.840.10008.1.2.1    |      |           |
-   |                                                      +------------------------------------+------------------------+      |           |
-   |                                                      | Deflated Explicit VR Little Endian | 1.2.840.10008.1.2.1.99 |      |           |
-   +------------------------------------------------------+------------------------------------+------------------------+------+-----------+
-   | Other Storage SOP Classes in :ref:`SOPClasses`       | Implicit VR Little Endian          | 1.2.840.10008.1.2      | SCP  | None      |
-   |                                                      +------------------------------------+------------------------+      |           |
-   |                                                      | Explicit VR Little Endian          | 1.2.840.10008.1.2.1    |      |           |
-   +------------------------------------------------------+------------------------------------+------------------------+------+-----------+
+   +------------------------------------------------------+-------------------------------------------------------------+------+-----------+
+   | SR Storage SOP Classes in :ref:`SOPClasses`          | see :ref:`SCPStructuredReportTS`                            | SCP  | None      |
+   +------------------------------------------------------+-------------------------------------------------------------+------+-----------+
+   | Other Storage SOP Classes in :ref:`SOPClasses`       | see :ref:`SCPOtherTS`                                       | SCP  | None      |
+   +------------------------------------------------------+-------------------------------------------------------------+------+-----------+
 
 .. csv-table:: Transfer Syntaxes for Image Storage SOP Classes
    :name: SCPImageTS
@@ -245,6 +239,21 @@ The list of accepted Transfer Syntaxes for each accepted Abstract Syntax - as th
    "MPEG-4 AVC/H.264 High Profile / Level 4.2 For 2D Video", "1.2.840.10008.1.2.4.104"
    "MPEG-4 AVC/H.264 High Profile / Level 4.2 For 3D Video", "1.2.840.10008.1.2.4.105"
    "MPEG-4 AVC/H.264 Stereo High Profile / Level 4.2", "1.2.840.10008.1.2.4.106"
+
+.. csv-table:: Transfer Syntaxes for SR Storage SOP Classes
+   :name: SCPStructuredReportTS
+   :header: "Transfer Syntax Name", "UID"
+
+   "Implicit VR Little Endian", "1.2.840.10008.1.2"
+   "Explicit VR Little Endian", "1.2.840.10008.1.2.1"
+   "Deflated Explicit VR Little Endian", "1.2.840.10008.1.2.1.99"
+
+.. csv-table:: Transfer Syntaxes for Other Storage SOP Classes
+   :name: SCPOtherTS
+   :header: "Transfer Syntax Name", "UID"
+
+   "Implicit VR Little Endian", "1.2.840.10008.1.2"
+   "Explicit VR Little Endian", "1.2.840.10008.1.2.1"
 
 If multiple Transfer Syntaxes are proposed per Presentation Context the order of Transfer Syntax preference is defined by the order
 in the proposed Presentation Context.

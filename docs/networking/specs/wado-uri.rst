@@ -9,9 +9,8 @@ WADO-URI Retrieve Imaging Document Set
 .. csv-table:: WADO-URI Retrieve Imaging Documents Specification
    :header: "Parameter", "Restrictions"
 
-   "Transfer Syntaxes Supported", "Same as Transfer Syntaxes listed in - :ref:`PresentationContext`"
+   "Transfer Syntaxes Supported", "Same as Transfer Syntaxes listed in - :ref:`SCUImageTS`, :ref:`SCUVideoTS`, :ref:`SCUStructuredReportTS` and :ref:`SCUOtherTS`"
    "SOP Class Restrictions", "Same as - :ref:`SOPClasses2`"
-   "Size restriction", "Restricted to size supported by the hosting DCM4CHEE ARCHIVE"
 
 If the URI Retrieve specifies no transfer syntax that is supported by the archive, the SOP Instance will be returned using the Implicit VR Little Endian Transfer Syntax.
 
@@ -23,9 +22,8 @@ WADO-URI Retrieve Rendered Imaging Document Set
 .. csv-table:: WADO-URI Retrieve Rendered Imaging Documents Specification
    :header: "Parameter", "Restrictions"
 
-   "Transfer Syntaxes Supported", "Same as Transfer Syntaxes listed in - :ref:`PresentationContext`"
+   "Transfer Syntaxes Supported", "Same as Transfer Syntaxes listed in - :ref:`SCUImageTS`, :ref:`SCUVideoTS`, :ref:`SCUStructuredReportTS` and :ref:`SCUOtherTS`"
    "SOP Class restrictions", "Same as - :ref:`SOPClasses2`"
-   "Size restriction", "Restricted to sizes supported by the hosting DCM4CHEE ARCHIVE"
    "Rendered formats available", "Supports JPEG, GIF and PDF for IMAGE IODS, and PDF for non-IMAGE IODS."
    "Rows restrictions", "Must be greater than 0"
    "Columns restrictions", "Must be greater than 0"
@@ -64,3 +62,13 @@ The maximal number of simultaneous HTTP Requests is configurable. It is unlimite
 .. csv-table:: Number of HTTP Requests Supported
 
    "Maximum number of simultaneous HTTP requests", "No Maximum Limit (Configurable)"
+
+
+.. _endpoint-url:
+
+Web Service Endpoint URL
+""""""""""""""""""""""""
+
+_**http://localhost:8080/dcm4chee-arc/aets/{AETitle}/wado**_
+
+Replace _{AETitle}_ with the configured AE title.

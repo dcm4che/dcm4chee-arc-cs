@@ -146,3 +146,13 @@ DCM4CHEE-QIDO-SERVICE shall provide a response message header containing the app
 .. csv-table:: HTTP Standard Response Codes
    :header: "Code", "Name", "Description"
    :file: http-standard-response-codes.csv
+
+
+.. _endpoint-url:
+
+Web Service Endpoint URL
+""""""""""""""""""""""""
+
+_**http://localhost:8080/dcm4chee-arc/aets/{AETitle}/rs**_
+
+Replace _{AETitle}_ with the configured AE title.

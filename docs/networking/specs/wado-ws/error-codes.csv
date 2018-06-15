@@ -1,0 +1,8 @@
+"urn:dicom:wado:0002", "Web Server does not support anonymization."
+"urn:dicom:wado:0006", "Web Server does not support the requested format or transfer syntax."
+"urn:dicom:wado:0007", "The requested instance(s) cannot be provided in the requested format or transfer syntax."
+"urn:dicom:wado:0008", "Single image format is not available for multi-frame images."
+"urn:dicom:wado:0012", "Invalid parameter value in request."
+"urn:dicom:wado:0013", "Unsupported parameter in request."
+"urn:dicom:wado:0014", "Processing Failure."
+"urn:dicom:wado:0018", "Out of range Frame number"
