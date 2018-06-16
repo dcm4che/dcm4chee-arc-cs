@@ -60,6 +60,10 @@ AE Title, or one AE may have multiple instances identified by different AE Title
 
    Workflow Application Data Flow Diagram
 
-.. figure:: web-application-data-flow-diagram.svg
+.. figure:: stow-application-data-flow-diagram.svg
 
-   Web Application Data Flow Diagram
+   Web Storage Application Data Flow Diagram
+
+.. figure:: wado-application-data-flow-diagram.svg
+
+   Web Access Application Data Flow Diagram

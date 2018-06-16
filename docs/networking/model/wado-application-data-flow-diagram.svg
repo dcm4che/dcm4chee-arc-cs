@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="900">
+
+  <defs>
+    <style type="text/css">
+      text { font-family: Helvetica, Verdana, ArialUnicodeMS, san-serif }
+    </style>
+  </defs>
+  <text x="360" y="10" font-size="11" text-anchor="middle">DICOM HTTP Interface</text>
+  <line x1="360" y1="20" x2="360" y2="800" stroke="black" stroke-dasharray="2,4"/>
+
+  <rect x="220" y="70" width="120" height="60" fill="none" stroke="black" />
+  <text x="280" y="100" font-size="11" text-anchor="middle">QIDO-RS
+    <tspan x="280" dy="12" text-anchor="middle">Provider</tspan>
+  </text>
+
+  <line x1="150" y1="100" x2="220" y2="100" stroke="black" stroke-width="2" stroke-dasharray="8"/>
+  <circle cx="100" cy="100" r="50" fill="white" stroke="black"/>
+  <text x="100" y="105" font-size="11" text-anchor="middle">Query DB</text>
+
+  <circle cx="460" cy="100" r="50" fill="white" stroke="black"/>
+  <text x="460" y="80" font-size="11" text-anchor="middle">Web Client
+    <tspan x="460" dy="12" text-anchor="middle">Sends</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">QIDO-RS</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Request</tspan>
+  </text>
+  <line x1="340" y1="100" x2="410" y2="100" stroke="black" stroke-width="2"/>
+  <path d='M 340 100 l 12 -4 l 0 8' />
+
+  <rect x="220" y="180" width="120" height="60" fill="none" stroke="black" />
+  <text x="280" y="210" font-size="11" text-anchor="middle">WADO-URI
+    <tspan x="280" dy="12" text-anchor="middle">Provider</tspan>
+  </text>
+
+  <rect x="220" y="290" width="120" height="170" fill="none" stroke="black" />
+  <text x="280" y="370" font-size="11" text-anchor="middle">WADO-WS
+    <tspan x="280" dy="12" text-anchor="middle">Provider</tspan>
+  </text>
+
+  <line x1="150" y1="320" x2="220" y2="210" stroke="black" stroke-width="2" stroke-dasharray="8"/>
+  <line x1="150" y1="320" x2="220" y2="320" stroke="black" stroke-width="2" stroke-dasharray="8"/>
+  <circle cx="100" cy="320" r="50" fill="white" stroke="black"/>
+  <text x="100" y="320" font-size="11" text-anchor="middle">Render
+    <tspan x="100" dy="12" text-anchor="middle">Instance</tspan>
+  </text>
+
+  <line x1="150" y1="430" x2="220" y2="210" stroke="black" stroke-width="2" stroke-dasharray="8"/>
+  <line x1="150" y1="430" x2="220" y2="430" stroke="black" stroke-width="2" stroke-dasharray="8"/>
+  <line x1="150" y1="430" x2="220" y2="540" stroke="black" stroke-width="2" stroke-dasharray="8"/>
+  <circle cx="100" cy="430" r="50" fill="white" stroke="black"/>
+  <text x="100" y="430" font-size="11" text-anchor="middle">Load
+    <tspan x="100" dy="12" text-anchor="middle">Instance</tspan>
+  </text>
+
+  <circle cx="460" cy="210" r="50" fill="white" stroke="black"/>
+  <text x="460" y="200" font-size="11" text-anchor="middle">Web Client
+    <tspan x="460" dy="12" text-anchor="middle">Sends</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">WADO-URI</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Request</tspan>
+  </text>
+  <line x1="340" y1="210" x2="410" y2="210" stroke="black" stroke-width="2"/>
+  <path d='M 340 210 l 12 -4 l 0 8' />
+
+  <circle cx="460" cy="320" r="50" fill="white" stroke="black"/>
+  <text x="460" y="290" font-size="11" text-anchor="middle">Web Client
+    <tspan x="460" dy="12" text-anchor="middle">Sends</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">WADO-WS</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Retr.Rendered</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Imag.Document</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Set Request</tspan>
+  </text>
+  <line x1="340" y1="320" x2="410" y2="320" stroke="black" stroke-width="2"/>
+  <path d='M 340 320 l 12 -4 l 0 8' />
+
+  <circle cx="460" cy="430" r="50" fill="white" stroke="black"/>
+  <text x="460" y="410" font-size="11" text-anchor="middle">Web Client
+    <tspan x="460" dy="12" text-anchor="middle">Sends WADO-WS</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Retrieve Imaging</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Document Set</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Request</tspan>
+  </text>
+  <line x1="340" y1="430" x2="410" y2="430" stroke="black" stroke-width="2"/>
+  <path d='M 340 430 l 12 -4 l 0 8' />
+
+  <rect x="220" y="500" width="120" height="290" fill="none" stroke="black" />
+  <text x="280" y="640" font-size="11" text-anchor="middle">WADO-RS
+    <tspan x="280" dy="12" text-anchor="middle">Provider</tspan>
+  </text>
+
+  <line x1="150" y1="650" x2="220" y2="650" stroke="black" stroke-width="2" stroke-dasharray="8"/>
+  <circle cx="100" cy="650" r="50" fill="white" stroke="black"/>
+  <text x="100" y="650" font-size="11" text-anchor="middle">Extract
+    <tspan x="100" dy="12" text-anchor="middle">Bulk Data</tspan>
+  </text>
+
+  <line x1="150" y1="760" x2="220" y2="760" stroke="black" stroke-width="2" stroke-dasharray="8"/>
+  <circle cx="100" cy="760" r="50" fill="white" stroke="black"/>
+  <text x="100" y="760" font-size="11" text-anchor="middle">Load
+    <tspan x="100" dy="12" text-anchor="middle">Metadata</tspan>
+  </text>
+
+  <circle cx="460" cy="540" r="50" fill="white" stroke="black"/>
+  <text x="460" y="520" font-size="11" text-anchor="middle">Web Client
+    <tspan x="460" dy="12" text-anchor="middle">Sends WADO-RS</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Retrieve Study/</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Series/Instance</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Request</tspan>
+  </text>
+  <line x1="340" y1="540" x2="410" y2="540" stroke="black" stroke-width="2"/>
+  <path d='M 340 540 l 12 -4 l 0 8' />
+
+  <circle cx="460" cy="650" r="50" fill="white" stroke="black"/>
+  <text x="460" y="630" font-size="11" text-anchor="middle">Web Client
+    <tspan x="460" dy="12" text-anchor="middle">Sends WADO-RS</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Retrieve Frames/</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Bulk Data</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Request</tspan>
+  </text>
+  <line x1="340" y1="650" x2="410" y2="650" stroke="black" stroke-width="2"/>
+  <path d='M 340 650 l 12 -4 l 0 8' />
+
+  <circle cx="460" cy="760" r="50" fill="white" stroke="black"/>
+  <text x="460" y="740" font-size="11" text-anchor="middle">Web Client
+    <tspan x="460" dy="12" text-anchor="middle">Sends WADO-RS</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Retrieve</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Metadata</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Request</tspan>
+  </text>
+  <line x1="340" y1="760" x2="410" y2="760" stroke="black" stroke-width="2"/>
+  <path d='M 340 760 l 12 -4 l 0 8' />
+
+</svg>

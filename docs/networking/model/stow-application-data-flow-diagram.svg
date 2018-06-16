@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400">
+
+  <defs>
+    <style type="text/css">
+      text { font-family: Helvetica, Verdana, ArialUnicodeMS, san-serif }
+    </style>
+  </defs>
+  <text x="360" y="10" font-size="11" text-anchor="middle">DICOM HTTP Interface</text>
+  <line x1="360" y1="20" x2="360" y2="350" stroke="black" stroke-dasharray="2,4"/>
+
+  <rect x="220" y="50" width="120" height="280" fill="none" stroke="black" />
+  <text x="280" y="190" font-size="11" text-anchor="middle">STOW-RS
+    <tspan x="280" dy="12" text-anchor="middle">Provider</tspan>
+  </text>
+
+  <line x1="150" y1="80" x2="220" y2="80" stroke="black" stroke-width="2" stroke-dasharray="8"/>
+  <line x1="150" y1="80" x2="220" y2="190" stroke="black" stroke-width="2" stroke-dasharray="8"/>
+  <line x1="150" y1="80" x2="220" y2="300" stroke="black" stroke-width="2" stroke-dasharray="8"/>
+  <circle cx="100" cy="80" r="50" fill="white" stroke="black"/>
+  <text x="100" y="80" font-size="11" text-anchor="middle">Store
+    <tspan x="100" dy="12" text-anchor="middle">Instances</tspan>
+  </text>
+
+  <line x1="150" y1="190" x2="220" y2="190" stroke="black" stroke-width="2" stroke-dasharray="8"/>
+  <line x1="150" y1="190" x2="220" y2="300" stroke="black" stroke-width="2" stroke-dasharray="8"/>
+  <circle cx="100" cy="190" r="50" fill="white" stroke="black"/>
+  <text x="100" y="190" font-size="11" text-anchor="middle">Reject
+    <tspan x="100" dy="12" text-anchor="middle">Instances</tspan>
+  </text>
+
+  <line x1="150" y1="300" x2="220" y2="300" stroke="black" stroke-width="2" stroke-dasharray="8"/>
+  <circle cx="100" cy="300" r="50" fill="white" stroke="black"/>
+  <text x="100" y="280" font-size="11" text-anchor="middle">Create
+    <tspan x="100" dy="12" text-anchor="middle">Instances</tspan>
+    <tspan x="100" dy="12" text-anchor="middle">from Metadata</tspan>
+    <tspan x="100" dy="12" text-anchor="middle">and Bulk Data</tspan>
+  </text>
+
+  <circle cx="460" cy="80" r="50" fill="white" stroke="black"/>
+  <text x="460" y="70" font-size="11" text-anchor="middle">Web Client
+    <tspan x="460" dy="12" text-anchor="middle">Uploads</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Instances</tspan>
+  </text>
+  <line x1="340" y1="80" x2="410" y2="80" stroke="black" stroke-width="2"/>
+  <path d='M 340 80 l 12 -4 l 0 8' />
+
+  <circle cx="460" cy="190" r="50" fill="white" stroke="black"/>
+  <text x="460" y="180" font-size="11" text-anchor="middle">Web Client
+    <tspan x="460" dy="12" text-anchor="middle">Uploads</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Rejection Note</tspan>
+  </text>
+  <line x1="340" y1="190" x2="410" y2="190" stroke="black" stroke-width="2"/>
+  <path d='M 340 190 l 12 -4 l 0 8' />
+
+  <circle cx="460" cy="300" r="50" fill="white" stroke="black"/>
+  <text x="460" y="285" font-size="11" text-anchor="middle">Web Client
+    <tspan x="460" dy="12" text-anchor="middle">Uploads</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Metadata and</tspan>
+    <tspan x="460" dy="12" text-anchor="middle">Bulk Data</tspan>
+  </text>
+  <line x1="340" y1="300" x2="410" y2="300" stroke="black" stroke-width="2"/>
+  <path d='M 340 300 l 12 -4 l 0 8' />
+
+</svg>
