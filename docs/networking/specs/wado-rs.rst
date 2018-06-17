@@ -100,11 +100,9 @@ The maximal number of simultaneous HTTP Requests is configurable. It is unlimite
 
    "Maximum number of simultaneous HTTP requests", "No Maximum Limit (Configurable)"
 
-.. _endpoint-url:
-
 Web Service Endpoint URL
-""""""""""""""""""""""""
+''''''''''''''''''''''''
 
-*http://localhost:8080/dcm4chee-arc/aets/{AETitle}/rs*
+*http[s]://<host>:<port>/dcm4chee-arc/aets/{AETitle}/rs*
 
 Replace *{AETitle}* in the URL with the configured AE title.

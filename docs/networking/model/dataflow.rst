@@ -44,13 +44,15 @@ AE Title, or one AE may have multiple instances identified by different AE Title
 - :doc:`fktdefs/workflow`, which processes queries for Scheduled Procedure Steps, receives  Performed Procedure Step
   messages and optionally forwards them to any remote AE, and also notifies remote AEs about the availability of
   received instances.
-- :doc:`fktdefs/stow-rs`, which receives images and other Composite Object Instances via HTTP POST requests.
+- :doc:`fktdefs/stow-rs`, which receives DICOM Objects or metadata with bulkdata via HTTP POST requests.
 - :doc:`fktdefs/qido-rs`, which provides access to Patient, Study, Series, and Instance data of received objects via
   HTTP GET requests.
 - :doc:`fktdefs/wado-uri`, which provides access to individual DICOM Objects - as DICOM file or rendered to
   non-DICOM media types for display - via HTTP GET requests.
-- :doc:`fktdefs/wado-rs`, which provides access to the metadata, the bulk data or the whole DICOM Objects, of a Study
-  or Series via HTTP GET requests.
+- :doc:`fktdefs/wado-rs`, which provides access to the metadata, the bulk data or the whole DICOM Objects, of a
+  whole Study or Series or an individual object via HTTP GET requests.
+- :doc:`fktdefs/wado-ws`, which provides access to DICOM Objects - as DICOM file or rendered to non-DICOM media types
+  for display - via SOAP HTTP Requests.
 
 .. figure:: application-data-flow-diagram.svg
 

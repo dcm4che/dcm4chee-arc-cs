@@ -54,11 +54,9 @@ The DCM4CHEE-STOW-SERVICE response message header contains status codes indicati
    "Success", "200 - OK", "This indicates that the STOW-RS Service successfully stored all the instances."
 
 
-.. _endpoint-url:
-
 Web Service Endpoint URL
 ''''''''''''''''''''''''
 
-*http://localhost:8080/dcm4chee-arc/aets/{AETitle}/rs*
+*http[s]://<host>:<port>/dcm4chee-arc/aets/{AETitle}/rs*
 
 Replace *{AETitle}* in the URL with the configured AE title.

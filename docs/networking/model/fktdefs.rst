@@ -9,3 +9,4 @@ Functional Definitions of AEs
    fktdefs/qido-rs
    fktdefs/wado-uri
    fktdefs/wado-rs
+   fktdefs/wado-ws

@@ -195,7 +195,7 @@
 "QIDO-RS - Search for Series", "No", "Yes"
 "QIDO-RS - Search for Instances", "No", "Yes"
 "**STOW**",,
-"STOW-RS - Store Instances", "No", "Yes"
+"STOW-RS - Store Instances", "Yes", "Yes"
 "**WADO**",,
 "WADO-URI - Retrieve DICOM Persistent Object", "No", "Yes"
 "WADO-URI - Retrieve Rendered DICOM Persistent Object", "No", "Yes"
@@ -205,3 +205,5 @@
 "WADO-RS - Retrieve Frames", "No", "Yes"
 "WADO-RS - Retrieve Bulkdata", "No", "Yes"
 "WADO-RS - Retrieve Metadata", "No", "Yes"
+"WADO-WS - Retrieve Imaging Document Set", "No", "Yes"
+"WADO-WS - Retrieve Rendered Imaging Document Set", "No", "Yes"
