@@ -1,15 +1,15 @@
 WADO-WS Specifications
 ======================
 
-WADO-WS Retrieve Imaging Document Set Specification
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Supported request parameters
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. csv-table:: WADO-WS Retrieve Imaging Document Set Specification
+.. csv-table:: Supported request parameters
    :header: "Parameter", "Restrictions"
    :widths: 15, 30
 
-   "Transfer Syntaxes Supported", "See - :ref:`SCUImageTS`, :ref:`SCUVideoTS`, :ref:`SCUStructuredReportTS` and :ref:`SCUOtherTS`"
-   "SOP Class Restrictions", "See - :ref:`SOPClasses`"
+   "Transfer Syntax", "See - :ref:`SCUImageTS`, :ref:`SCUVideoTS`, :ref:`SCUStructuredReportTS` and :ref:`SCUOtherTS`"
+   "SOP Class", "See - :ref:`SOPClasses`"
 
 Web Service Endpoint URL
 """"""""""""""""""""""""
@@ -45,7 +45,7 @@ WADO-WS Retrieve Rendered Imaging Document Set Specification
 Supported request parameters
 """"""""""""""""""""""""""""
 
-.. csv-table:: WADO-WS Retrieve Rendered Imaging Document Set Specification
+.. csv-table:: Supported request parameters
    :header: "Parameter", "Support", "Restrictions"
    :widths: 15, 7, 30
 
