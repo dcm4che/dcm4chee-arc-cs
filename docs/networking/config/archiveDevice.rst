@@ -208,7 +208,7 @@ DICOM Archive Device related information
     "
     .. _dcmSpanningCFindSCPPolicy:
 
-    :ref:`Spanning C-Find SCP Policy <dcmSpanningCFindSCPPolicy>`",string,"Specifies policy for combining matches returned from configured Spanning C-Find SCP with matching entries from the archive DB. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: SUPPLEMENT, MERGE or REPLACE.
+    :ref:`Spanning C-Find SCP Policy <dcmSpanningCFindSCPPolicy>`",string,"Specifies policy for combining matches returned from configured Spanning C-Find SCP with matching entries from the archive DB. SUPPLEMENT (= returns local matches before additional matches from Spanning C-Find SCP ), MERGE (= returns matches from Spanning C-Find SCP before additional local matches), REPLACE (= returns only matches from Spanning C-Find SCP). May be overwritten by configured values for particular Archive Network AEs. Enumerated values: SUPPLEMENT, MERGE or REPLACE.
 
     (dcmSpanningCFindSCPPolicy)"
     "
@@ -535,6 +535,12 @@ DICOM Archive Device related information
     :ref:`Allow Delete Study permanently <dcmAllowDeleteStudyPermanently>`",string,"Allow to delete Study permanently. REJECTED = only already rejected Studies. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: ALWAYS or REJECTED.
 
     (dcmAllowDeleteStudyPermanently)"
+    "
+    .. _dcmAllowDeletePatient:
+
+    :ref:`Allow Delete Patient <dcmAllowDeletePatient>`",string,"Allow permanent deletion of Patients. Enumerated values: NEVER, ALWAYS, WITHOUT_STUDIES. If absent, WITHOUT_STUDIES will be applied. Enumerated values: NEVER, ALWAYS or WITHOUT_STUDIES.
+
+    (dcmAllowDeletePatient)"
     "
     .. _dcmStorePermissionServiceExpirationDatePattern:
 
