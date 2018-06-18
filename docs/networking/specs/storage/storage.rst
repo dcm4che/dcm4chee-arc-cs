@@ -223,12 +223,9 @@ The list of accepted Transfer Syntaxes for each accepted Abstract Syntax - as th
    "JPEG Lossless, Non-Hierarchical, First-Order Prediction (Process 14 [Selection Value 1])", "1.2.840.10008.1.2.4.70"
    "JPEG-LS Lossless", "1.2.840.10008.1.2.4.80"
    "JPEG-LS Lossy (Near-Lossless)", "1.2.840.10008.1.2.4.81"
-   "JPEG 2000 (Lossless Only) [#j2k1]_", "1.2.840.10008.1.2.4.90"
-   "JPEG 2000 [#j2k1]_", "1.2.840.10008.1.2.4.91"
+   "JPEG 2000 (Lossless Only)", "1.2.840.10008.1.2.4.90"
+   "JPEG 2000", "1.2.840.10008.1.2.4.91"
    "RLE Lossless", "1.2.840.10008.1.2.5"
-
-.. [#j2k1] Because of known issues of the JPEG 2000 implementation, acceptance of JPEG 2000 is only recommended for production, if all
-   Retrieve Destinations also accepts JPEG 2000, so the archive does not need to decompress JPEG 2000 images for retrieval.
 
 .. csv-table:: Transfer Syntax for Video Storage SOP Classes
    :name: SCPVideoTS
