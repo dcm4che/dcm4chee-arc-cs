@@ -49,18 +49,18 @@ Specification
    :header: "Parameter", "Support", "Restrictions"
    :widths: 15, 7, 30
 
-   "SOP Class", "YES", "See *Image Storage SOP Classes* in :ref:`SOPClasses`"
-   "Rows", "YES", "Must be greater than 0"
-   "Columns", "YES", "Must be greater than 0"
-   "Region", "NO",
-   "Window Center", "YES", "None"
-   "Window Width", "YES", "None"
-   "Image Quality", "YES", "None"
-   "Content Type", "YES", "image/jpeg"
-   "Annotation", "NO",
-   "Presentation UID", "NO",
-   "Presentation Series UID", "NO",
-   "Anonymize", "NO",
+   "SOP Class", "✓", "See *Image Storage SOP Classes* in :ref:`SOPClasses`"
+   "Rows", "✓", "None"
+   "Columns", "✓", "None"
+   "Region", "✗",
+   "Window Center", "✓", "None"
+   "Window Width", "✓", "None"
+   "Image Quality", "✓", "None"
+   "Content Type", "✓", "`image/jpeg`"
+   "Annotation", "✗",
+   "Presentation UID", "✗",
+   "Presentation Series UID", "✗",
+   "Anonymize", "✗",
 
 
 Web Service Endpoint URL
