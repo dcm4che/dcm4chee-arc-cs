@@ -133,8 +133,8 @@ which are missing in `Application Level Confidentiality Profile Attributes <http
 to be removed.
 
 .. csv-table:: Attributes removed during protection
-   :header: "Group", "Attributes"
-   :widths: 15, 30
+   :header: "Attributes"
+   :widths: 30
    :file: removed-attributes.csv
 
 Inserted dummy values
