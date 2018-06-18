@@ -115,6 +115,6 @@
 "Requesting Physician Identification Sequence (0032,1031)"
 "Requesting Service Code Sequence (0032,1034)"
 "Series Description Code Sequence (0008,103F)"
-"**X - Remove (missing in Part 15) if Retain Longitudinal Temporal Information Full Dates Option *not* configured**"
+"**X - Remove (missing in Part 15) if Retain Longitudinal Temporal Information Full Dates Option not configured**"
 "Instance Creation Date (0008,0012)"
 "Instance Creation Time (0008,0013)"
