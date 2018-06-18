@@ -42,8 +42,8 @@ The following errorCodes are used to report any of the associated error and warn
 WADO-WS Retrieve Rendered Imaging Document Set Specification
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Specification
-"""""""""""""
+Support of optional request elements
+""""""""""""""""""""""""""""""""""""
 
 .. csv-table:: WADO-WS Retrieve Rendered Imaging Document Set Specification
    :header: "Parameter", "Support", "Restrictions"
