@@ -128,6 +128,12 @@ DICOM Archive Network AE related information
 
     (dcmWadoSR2TextTemplateURI)"
     "
+    .. _dcmWadoZIPEntryNameFormat:
+
+    :ref:`Wado ZIP Entry Name Format <dcmWadoZIPEntryNameFormat>`",string,"Format of entry names in ZIP archive returned by WADO-RS. Overwrites value specified on Device level.
+
+    (dcmWadoZIPEntryNameFormat)"
+    "
     .. _dcmQueryMaxNumberOfResults:
 
     :ref:`Query Max Number Of Results <dcmQueryMaxNumberOfResults>`",integer,"Maximal number of return results by C-FIND SCP. If the number of matches extends the limit, the C-FIND request will be refused. 0 = no limitation. Overwrites value specified on Device level.

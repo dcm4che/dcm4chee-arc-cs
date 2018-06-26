@@ -140,6 +140,12 @@ DICOM Archive Device related information
 
     (dcmWadoSR2TextTemplateURI)"
     "
+    .. _dcmWadoZIPEntryNameFormat:
+
+    :ref:`Wado ZIP Entry Name Format <dcmWadoZIPEntryNameFormat>`",string,"Format of entry names in ZIP archive returned by WADO-RS. May be overwritten by configured value for particular Archive Network AEs.
+
+    (dcmWadoZIPEntryNameFormat)"
+    "
     .. _dcmQueryFetchSize:
 
     :ref:`Query Fetch Size <dcmQueryFetchSize>`",integer,"Number of rows fetched from the database at once by the Query Service.
@@ -760,6 +766,12 @@ DICOM Archive Device related information
     :ref:`X-Road Property(s) <dcmXRoadProperty>`",string,"Properties for accessing Estonian National Patient Registry in format <name>=<value>
 
     (dcmXRoadProperty)"
+    "
+    .. _dcmImpaxReportProperty:
+
+    :ref:`Impax Report Property(s) <dcmImpaxReportProperty>`",string,"Properties for accessing Agfa Impax Report Service in format <name>=<value>
+
+    (dcmImpaxReportProperty)"
     ":doc:`hl7ForwardRule` (s)",object,"HL7 Forward Rules for HL7 messages received by any HL7 Application. May be supplemented by configured HL7 Forward Rules for particular HL7 Applications."
     ":doc:`hl7OrderScheduledStation` (s)",object,"Scheduled Station selected on MWL HL7 Order Feed received by any HL7 Application. May be supplemented by configured values for particular HL7 Applications."
     ":doc:`hl7OrderSPSStatus` (s)",object,"Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages. May be overwritten by configured values for particular Archive HL7 Application."

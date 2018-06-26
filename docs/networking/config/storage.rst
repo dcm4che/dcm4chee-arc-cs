@@ -38,6 +38,12 @@ Storage Descriptor
 
     (dcmReadOnly)"
     "
+    .. _dcmStorageClusterID:
+
+    :ref:`Storage Cluster ID <dcmStorageClusterID>`",string,"Identifies a Storage to belong to a Storage Cluster. Objects of one Study may be distributed over Storage Systems of one Storage Cluster. Used by threshold triggered deletion.
+
+    (dcmStorageClusterID)"
+    "
     .. _dcmStorageThreshold:
 
     :ref:`Storage Threshold <dcmStorageThreshold>`",string,"Minimal Usable Space on Storage System. If the usable space fall below that value the Storage System will be removed from the list of configured Storage Systems of the Network AE requesting that Storage System. Format nnn(MB|GB|MiB|GiB)
