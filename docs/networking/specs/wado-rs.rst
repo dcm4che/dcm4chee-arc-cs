@@ -6,78 +6,220 @@ WADO-RS Specifications
 WADO-RS Retrieve Study
 """"""""""""""""""""""
 
-.. csv-table:: WADO-RS Retrieve Study
-   :header: "Options", "Restrictions"
-   :widths: 15, 30
+.. table:: WADO-RS Retrieve Study
 
-   "Data Types Supported (Accept Type)", "Restricted to application/dicom or application/octet-stream"
-   "Transfer Syntaxes Supported (transfer-syntax Accept parameter)", "See - :ref:`SCUImageTS`, :ref:`SCUVideoTS`, :ref:`SCUStructuredReportTS` and :ref:`SCUOtherTS`"
-   "SOP Class restrictions", "See - :ref:`SOPClasses`"
+   +----------------------------------------------------------------+----------------------------------------------------+
+   |                     Options                                    |               Restrictions                         |
+   +================================================================+====================================================+
+   |                                                                | multipart/related;type=application/dicom           |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=application/octet-stream    |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=application/pdf             |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=image/jpeg                  |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=image/jp2                   |
+   |            Data Types Supported (Accept Type)                  +----------------------------------------------------+
+   |                                                                | multipart/related;type=image/jpx                   |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=image/x-dicom+rle           |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=image/x-jls                 |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=text/xml                    |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=video/mpeg                  |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=video/mp4                   |
+   |                                                                +----------------------------------------------------+
+   |                                                                | application/zip                                    |
+   +----------------------------------------------------------------+----------------------------------------------------+
+   | Transfer Syntaxes Supported (transfer-syntax Accept parameter) | See - :ref:`SCUImageTS`, :ref:`SCUVideoTS`,        |
+   |                                                                | :ref:`SCUStructuredReportTS` and :ref:`SCUOtherTS` |
+   +----------------------------------------------------------------+----------------------------------------------------+
+   | SOP Class restrictions                                         | See - :ref:`SOPClasses`                            |
+   +----------------------------------------------------------------+----------------------------------------------------+
 
 .. _wado-rs-retrieve-series:
 
 WADO-RS Retrieve Series
 """""""""""""""""""""""
 
-.. csv-table:: WADO-RS Retrieve Series
-   :header: "Options", "Restrictions"
-   :widths: 15, 30
+.. table:: WADO-RS Retrieve Series
 
-   "Data Types Supported (Accept Type)", "Restricted to application/dicom or application/octet-stream"
-   "Transfer Syntaxes Supported (transfer-syntax Accept parameter)", "See - :ref:`SCUImageTS`, :ref:`SCUVideoTS`, :ref:`SCUStructuredReportTS` and :ref:`SCUOtherTS`"
-   "SOP Class restrictions", "See - :ref:`SOPClasses`"
+   +----------------------------------------------------------------+----------------------------------------------------+
+   |                     Options                                    |               Restrictions                         |
+   +================================================================+====================================================+
+   |                                                                | multipart/related;type=application/dicom           |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=application/octet-stream    |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=application/pdf             |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=image/jpeg                  |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=image/jp2                   |
+   |            Data Types Supported (Accept Type)                  +----------------------------------------------------+
+   |                                                                | multipart/related;type=image/jpx                   |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=image/x-dicom+rle           |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=image/x-jls                 |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=text/xml                    |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=video/mpeg                  |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=video/mp4                   |
+   |                                                                +----------------------------------------------------+
+   |                                                                | application/zip                                    |
+   +----------------------------------------------------------------+----------------------------------------------------+
+   | Transfer Syntaxes Supported (transfer-syntax Accept parameter) | See - :ref:`SCUImageTS`, :ref:`SCUVideoTS`,        |
+   |                                                                | :ref:`SCUStructuredReportTS` and :ref:`SCUOtherTS` |
+   +----------------------------------------------------------------+----------------------------------------------------+
+   | SOP Class restrictions                                         | See - :ref:`SOPClasses`                            |
+   +----------------------------------------------------------------+----------------------------------------------------+
 
 .. _wado-rs-retrieve-instance:
 
 WADO-RS Retrieve Instance
 """""""""""""""""""""""""
 
-.. csv-table:: WADO-RS Retrieve Instance
-   :header: "Options", "Restrictions"
-   :widths: 15, 30
+.. table:: WADO-RS Retrieve Instance
 
-   "Data Types Supported (Accept Type)", "Restricted to application/dicom or application/octet-stream"
-   "Transfer Syntaxes Supported (transfer-syntax Accept parameter)", "See - :ref:`SCUImageTS`, :ref:`SCUVideoTS`, :ref:`SCUStructuredReportTS` and :ref:`SCUOtherTS`"
-   "SOP Class restrictions", "See - :ref:`SOPClasses`"
+   +----------------------------------------------------------------+----------------------------------------------------+
+   |                     Options                                    |               Restrictions                         |
+   +================================================================+====================================================+
+   |                                                                | multipart/related;type=application/dicom           |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=application/octet-stream    |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=application/pdf             |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=image/jpeg                  |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=image/jp2                   |
+   |            Data Types Supported (Accept Type)                  +----------------------------------------------------+
+   |                                                                | multipart/related;type=image/jpx                   |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=image/x-dicom+rle           |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=image/x-jls                 |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=text/xml                    |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=video/mpeg                  |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=video/mp4                   |
+   |                                                                +----------------------------------------------------+
+   |                                                                | application/zip                                    |
+   +----------------------------------------------------------------+----------------------------------------------------+
+   | Transfer Syntaxes Supported (transfer-syntax Accept parameter) | See - :ref:`SCUImageTS`, :ref:`SCUVideoTS`,        |
+   |                                                                | :ref:`SCUStructuredReportTS` and :ref:`SCUOtherTS` |
+   +----------------------------------------------------------------+----------------------------------------------------+
+   | SOP Class restrictions                                         | See - :ref:`SOPClasses`                            |
+   +----------------------------------------------------------------+----------------------------------------------------+
 
 .. _wado-rs-retrieve-frames:
 
 WADO-RS Retrieve Frames
 """""""""""""""""""""""
 
-.. csv-table:: WADO-RS Retrieve Frames
-   :header: "Options", "Restrictions"
-   :widths: 15, 30
+.. table:: WADO-RS Retrieve Frames
 
-   "Data Types Supported (Accept Type)", "Restricted to application/octet-stream"
-   "Transfer Syntaxes Supported (transfer-syntax Accept parameter)", "See - :ref:`SCUImageTS`, :ref:`SCUVideoTS`, :ref:`SCUStructuredReportTS` and :ref:`SCUOtherTS`"
-   "SOP Class restrictions", "Restricted to Multi-Frame Image Objects"
+   +----------------------------------------------------------------+----------------------------------------------------+
+   |                     Options                                    |               Restrictions                         |
+   +================================================================+====================================================+
+   |                                                                | multipart/related;type=application/octet-stream    |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=application/pdf             |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=image/jpeg                  |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=image/jp2                   |
+   |            Data Types Supported (Accept Type)                  +----------------------------------------------------+
+   |                                                                | multipart/related;type=image/jpx                   |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=image/x-dicom+rle           |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=image/x-jls                 |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=text/xml                    |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=video/mpeg                  |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=video/mp4                   |
+   |                                                                +----------------------------------------------------+
+   |                                                                | application/zip                                    |
+   +----------------------------------------------------------------+----------------------------------------------------+
+   | Transfer Syntaxes Supported (transfer-syntax Accept parameter) | See - :ref:`SCUImageTS`, :ref:`SCUVideoTS`,        |
+   |                                                                | :ref:`SCUStructuredReportTS` and :ref:`SCUOtherTS` |
+   +----------------------------------------------------------------+----------------------------------------------------+
+   | SOP Class restrictions                                         | Restricted to Multi-Frame Image Objects            |
+   +----------------------------------------------------------------+----------------------------------------------------+
 
 .. _wado-rs-retrieve-bulkdata:
 
 WADO-RS Retrieve Bulk Data
 """"""""""""""""""""""""""
 
-.. csv-table:: WADO-RS Retrieve Bulk Data
-   :header: "Options", "Restrictions"
-   :widths: 15, 30
+.. table:: WADO-RS Retrieve Bulk Data
 
-   "Data Types Supported (Accept Type)", "Restricted to application/octet-stream"
-   "Transfer Syntaxes Supported (transfer-syntax Accept parameter)", "See - :ref:`SCUImageTS`, :ref:`SCUVideoTS`, :ref:`SCUStructuredReportTS` and :ref:`SCUOtherTS`"
-   "SOP Class restrictions", "See - :ref:`SOPClasses`"
+   +----------------------------------------------------------------+----------------------------------------------------+
+   |                     Options                                    |               Restrictions                         |
+   +================================================================+====================================================+
+   |                                                                | multipart/related;type=application/octet-stream    |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=application/pdf             |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=image/jpeg                  |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=image/jp2                   |
+   |            Data Types Supported (Accept Type)                  +----------------------------------------------------+
+   |                                                                | multipart/related;type=image/jpx                   |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=image/x-dicom+rle           |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=image/x-jls                 |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=text/xml                    |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=video/mpeg                  |
+   |                                                                +----------------------------------------------------+
+   |                                                                | multipart/related;type=video/mp4                   |
+   |                                                                +----------------------------------------------------+
+   |                                                                | application/zip                                    |
+   +----------------------------------------------------------------+----------------------------------------------------+
+   | Transfer Syntaxes Supported (transfer-syntax Accept parameter) | See - :ref:`SCUImageTS`, :ref:`SCUVideoTS`,        |
+   |                                                                | :ref:`SCUStructuredReportTS` and :ref:`SCUOtherTS` |
+   +----------------------------------------------------------------+----------------------------------------------------+
+   | SOP Class restrictions                                         | See - :ref:`SOPClasses`                            |
+   +----------------------------------------------------------------+----------------------------------------------------+
 
 .. _wado-rs-retrieve-metadata:
 
 WADO-RS Retrieve Metadata
 """""""""""""""""""""""""
 
-.. csv-table:: WADO-RS Retrieve Metadata
-   :header: "Options", "Restrictions"
-   :widths: 15, 30
+.. table:: WADO-RS Retrieve Metadata for Study or Series or Instance
 
-   "Data Types Supported (Accept Type)", "Restricted to application/dicom+xml"
-   "Accept-Encoding", "Restricted to gzip, deflate, or identity (the use of no transformation whatsoever). See `W3C RFC 2616 Protocol Parameters Section 3.5 <http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html>`_ for more information."
-   "SOP Class restrictions", "See - :ref:`SOPClasses`"
+   +----------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
+   |                     Options                                    |               Restrictions                                                                              |
+   +================================================================+=========================================================================================================+
+   |                                                                | multipart/related;type=application/dicom+xml                                                            |
+   |                                                                +---------------------------------------------------------------------------------------------------------+
+   |            Data Types Supported (Accept Type)                  | application/dicom+json                                                                                  |
+   |                                                                +---------------------------------------------------------------------------------------------------------+
+   |                                                                | application/json                                                                                        |
+   +----------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
+   |               Accept-Encoding                                  | Restricted to gzip, deflate, or identity (the use                                                       |
+   |                                                                | of no transformation whatsoever). See                                                                   |
+   |                                                                | `W3C RFC 2616 Protocol Parameters Section 3.5 <http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html>`_ |
+   |                                                                | for more information.                                                                                   |
+   +----------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
+   |              SOP Class restrictions                            | See - :ref:`SOPClasses`                                                                                 |
+   +----------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
 
 .. _wado-rs-connection-policies:
 
