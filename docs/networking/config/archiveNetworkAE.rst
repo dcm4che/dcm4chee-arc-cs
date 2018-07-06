@@ -128,6 +128,12 @@ DICOM Archive Network AE related information
 
     (dcmWadoSR2TextTemplateURI)"
     "
+    .. _dcmWadoCDA2HtmlTemplateURI:
+
+    :ref:`Wado CDA to HTML Template URI <dcmWadoCDA2HtmlTemplateURI>`",string,"URL to XSL style sheet inserted as <?xml-stylesheet type=""text/xsl"" href=""<url>"" > in CDA documents returned by WADO-URI service. If absent, the embedded CDI document is returned verbatim. Overwrites value specified on Device level.
+
+    (dcmWadoCDA2HtmlTemplateURI)"
+    "
     .. _dcmWadoZIPEntryNameFormat:
 
     :ref:`Wado ZIP Entry Name Format <dcmWadoZIPEntryNameFormat>`",string,"Format of entry names in ZIP archive returned by WADO-RS. Overwrites value specified on Device level.
@@ -325,6 +331,24 @@ DICOM Archive Network AE related information
     :ref:`Link MWL Entry Update Policy <dcmLinkMWLEntryUpdatePolicy>`",string,"SSpecifies update policy for Study attributes on Link of Instances of another Study with a MWL Entry referring an existing Study. Overwrites value specified on Device level. Enumerated values: SUPPLEMENT, MERGE, OVERWRITE or REPLACE.
 
     (dcmLinkMWLEntryUpdatePolicy)"
+    "
+    .. _dcmStgCmtPolicy:
+
+    :ref:`Storage Commitment Policy <dcmStgCmtPolicy>`",string,"DB_RECORD_EXISTS: only check for existence of DB records, OBJECT_EXISTS: check if object exists on Storage System, OBJECT_SIZE: check size of object on Storage System, OBJECT_FETCH: fetch object from Storage System), OBJECT_CHECKSUM: recalculate checksum of object on Storage System, S3_MD5SUM: check MD5 checksum of object on S3 Storage System. Overwrites value specified on Device level. Enumerated values: DB_RECORD_EXISTS, OBJECT_EXISTS, OBJECT_SIZE, OBJECT_FETCH, OBJECT_CHECKSUM or S3_MD5SUM.
+
+    (dcmStgCmtPolicy)"
+    "
+    .. _dcmStgCmtUpdateLocationStatus:
+
+    :ref:`Storage Commitment Update Location Status <dcmStgCmtUpdateLocationStatus>`",boolean,"Indicates if the Status of the Location DB record shall be updated on Storage Commitment accordingly. Not effective with Storage Commitment Policy: DB_RECORD_EXISTS. Overwrites value specified on Device level.
+
+    (dcmStgCmtUpdateLocationStatus)"
+    "
+    .. _dcmStgCmtStorageIDs:
+
+    :ref:`Storage Commitment Storage IDs(s) <dcmStgCmtStorageIDs>`",string,"Only accept Storage Commitment if the validation of the storage of the object on one of the specified Storage Systems is successful. If absent, validation of the storage of the object on any Storage System is sufficient to accept the Storage Commitment for that object. Not effective with Storage Commitment Policy: DB_RECORD_EXISTS. Overwrites values specified on Device level.
+
+    (dcmStgCmtStorageIDs)"
     "
     .. _hl7PSUSendingApplication:
 

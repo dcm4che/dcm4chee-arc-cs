@@ -32,6 +32,12 @@ Compare Side
 
     (dcmuiCompareSideElasticsearch)"
     "
+    .. _dcmuiCompareSideQueueName:
+
+    :ref:`Queue <dcmuiCompareSideQueueName>`",string,"Select the QueueName that should be used for the compare side
+
+    (dcmuiCompareSideQueueName)"
+    "
     .. _dcmuiCompareSideInstalled:
 
     :ref:`Installed <dcmuiCompareSideInstalled>`",boolean,"If true this Compare side is active in the dashboard

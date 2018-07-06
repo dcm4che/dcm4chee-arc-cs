@@ -140,6 +140,12 @@ DICOM Archive Device related information
 
     (dcmWadoSR2TextTemplateURI)"
     "
+    .. _dcmWadoCDA2HtmlTemplateURI:
+
+    :ref:`Wado CDA to HTML Template URI <dcmWadoCDA2HtmlTemplateURI>`",string,"URL to XSL style sheet inserted as <?xml-stylesheet type=""text/xsl"" href=""<url>"" > in CDA documents returned by WADO-URI service. If absent, the embedded CDI document is returned verbatim. May be overwritten by configured values for particular Archive Network AEs.
+
+    (dcmWadoCDA2HtmlTemplateURI)"
+    "
     .. _dcmWadoZIPEntryNameFormat:
 
     :ref:`Wado ZIP Entry Name Format <dcmWadoZIPEntryNameFormat>`",string,"Format of entry names in ZIP archive returned by WADO-RS. May be overwritten by configured value for particular Archive Network AEs.
@@ -607,8 +613,6 @@ DICOM Archive Device related information
     :ref:`Queue Tasks Fetch Size <dcmQueueTasksFetchSize>`",integer,"Maximal number of Tasks rescheduled or deleted or canceled in one transaction.
 
     (dcmQueueTasksFetchSize)"
-    ":doc:`attributeFilter` (s)",object,"Specifies Attributes stored in the database"
-    ":doc:`attributeSet` (s)",object,"Named Attribute Set for Query Parameter 'comparefield' of DIFF-RS and Query Parameter 'includefields' of WADO-RS Metadata requests."
     "
     .. _dcmRemapRetrieveURL:
 
@@ -657,6 +661,24 @@ DICOM Archive Device related information
     :ref:`Link MWL Entry Update Policy <dcmLinkMWLEntryUpdatePolicy>`",string,"Specifies update policy for Study attributes on Link of Instances of another Study with a MWL Entry referring an existing Study. If absent, the attributes will not be updated. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: SUPPLEMENT, MERGE, OVERWRITE or REPLACE.
 
     (dcmLinkMWLEntryUpdatePolicy)"
+    "
+    .. _dcmStgCmtPolicy:
+
+    :ref:`Storage Commitment Policy <dcmStgCmtPolicy>`",string,"DB_RECORD_EXISTS: only check for existence of DB records, OBJECT_EXISTS: check if object exists on Storage System, OBJECT_SIZE: check size of object on Storage System, OBJECT_FETCH: fetch object from Storage System), OBJECT_CHECKSUM: recalculate checksum of object on Storage System, S3_MD5SUM: check MD5 checksum of object on S3 Storage System. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: DB_RECORD_EXISTS, OBJECT_EXISTS, OBJECT_SIZE, OBJECT_FETCH, OBJECT_CHECKSUM or S3_MD5SUM.
+
+    (dcmStgCmtPolicy)"
+    "
+    .. _dcmStgCmtUpdateLocationStatus:
+
+    :ref:`Storage Commitment Update Location Status <dcmStgCmtUpdateLocationStatus>`",boolean,"Indicates if the Status of the Location DB record shall be updated on Storage Commitment accordingly. Not effective with Storage Commitment Policy: DB_RECORD_EXISTS. May be overwritten by configured values for particular Archive Network AEs.
+
+    (dcmStgCmtUpdateLocationStatus)"
+    "
+    .. _dcmStgCmtStorageIDs:
+
+    :ref:`Storage Commitment Storage IDs(s) <dcmStgCmtStorageIDs>`",string,"Only accept Storage Commitment if the validation of the storage of the object on one of the specified Storage Systems is successful. If absent, validation of the storage of the object on any Storage System is sufficient to accept the Storage Commitment for that object. Not effective with Storage Commitment Policy: DB_RECORD_EXISTS. May be overwritten by configured values for particular Archive Network AEs.
+
+    (dcmStgCmtStorageIDs)"
     "
     .. _hl7ADTSendingApplication:
 
@@ -747,6 +769,8 @@ DICOM Archive Device related information
     :ref:`UI Configuration Device Name <dcmUIConfigurationDeviceName>`",string,"Specifies the device name containing the Archive UI Configuration.
 
     (dcmUIConfigurationDeviceName)"
+    ":doc:`attributeFilter` (s)",object,"Specifies Attributes stored in the database"
+    ":doc:`attributeSet` (s)",object,"Named Attribute Set for Query Parameter 'comparefield' of DIFF-RS and Query Parameter 'includefields' of WADO-RS Metadata requests."
     ":doc:`storage` (s)",object,"Specifies Storage System"
     ":doc:`queryRetrieveView` (s)",object,"Specifies behavior on Rejection Note Stored"
     ":doc:`queue` (s)",object,"Managed JMS Queue"
