@@ -62,6 +62,42 @@ DICOM Archive Device related information
 
     (dcmPurgeInstanceRecordsFetchSize)"
     "
+    .. _dcmStorageVerificationInitialDelay:
+
+    :ref:`Storage Verification Initial Delay <dcmStorageVerificationInitialDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS of first Storage Verification of a Series after it was received.
+
+    (dcmStorageVerificationInitialDelay)"
+    "
+    .. _dcmStorageVerificationPeriod:
+
+    :ref:`Storage Verification Period <dcmStorageVerificationPeriod>`",string,"Period between successive Storage Verifications of one Series in ISO-8601 period format PnYnMnD or PnW
+
+    (dcmStorageVerificationPeriod)"
+    "
+    .. _dcmStorageVerificationSchedule:
+
+    :ref:`Storage Verification Schedule(s) <dcmStorageVerificationSchedule>`",string,"Limits hours a day Storage Verifications are performed
+
+    (dcmStorageVerificationSchedule)"
+    "
+    .. _dcmStorageVerificationPollingInterval:
+
+    :ref:`Storage Verification Polling Interval <dcmStorageVerificationPollingInterval>`",string,"Polling Interval for Series scheduled for Storage Verification in ISO-8601 duration format PnDTnHnMn.nS.
+
+    (dcmStorageVerificationPollingInterval)"
+    "
+    .. _dcmStorageVerificationFetchSize:
+
+    :ref:`Storage Verification Fetch Size <dcmStorageVerificationFetchSize>`",integer,"Maximal number of Series scheduled for Storage Verification fetched by one query.
+
+    (dcmStorageVerificationFetchSize)"
+    "
+    .. _dcmStorageVerificationMaxScheduled:
+
+    :ref:`Maximal scheduled Storage Verifications <dcmStorageVerificationMaxScheduled>`",integer,"Maximal number of scheduled Storage Verification tasks on this device. Recommended to be set to the expected number of Storage Verification tasks performed by this device in the configured Storage Verification Polling Interval. 0 = no limitation.
+
+    (dcmStorageVerificationMaxScheduled)"
+    "
     .. _dcmQueryRetrieveViewID:
 
     :ref:`Query/Retrieve View ID <dcmQueryRetrieveViewID>`",string,"Query/Retrieve View Identifier. May be overwritten by configured values for particular Archive Network AEs.
