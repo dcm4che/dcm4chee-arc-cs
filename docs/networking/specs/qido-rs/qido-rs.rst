@@ -43,7 +43,7 @@ QIDO-RS Search For Series
    "Matching Attributes", "Refer :ref:`StudyAttributesMatching` and :ref:`SeriesAttributesMatching`"
    "Return Attributes", "Refer :ref:`SeriesAttributesMatching`"
    "Limit and Offset supported", "Yes"
-   "Relational Queries Supported", "No"
+   "Relational Queries Supported", "Yes"
    "Person Name Matching", "Refer Person Name Matching Note"
 
 Types of Matching: As explained above in QIDO-RS Search For Studies
@@ -65,7 +65,7 @@ QIDO-RS Search For Instances
    "Matching Attributes", "Refer :ref:`StudyAttributesMatching`, :ref:`SeriesAttributesMatching` and :ref:`InstanceAttributesMatching`"
    "Return Attributes", "Refer :ref:`InstanceAttributesMatching`"
    "Limit and Offset supported", "Yes"
-   "Relational Queries Supported", "Series-level, only"
+   "Relational Queries Supported", "Yes"
    "Person Name Matching", "Refer Person Name Matching Note"
 
 Types of Matching: As explained above in QIDO-RS Search For Studies
