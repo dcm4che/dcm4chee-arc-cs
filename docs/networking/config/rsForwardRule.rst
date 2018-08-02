@@ -38,8 +38,14 @@ RESTful Forward Rule
 
     (dcmTLSDisableTrustManager)"
     "
+    .. _dcmURIPattern:
+
+    :ref:`Request URL Pattern <dcmURIPattern>`",string,"Only forward requests which match the given Regular Expression. If prefixed with !, only forward requests which does not match the given Regular Expression.
+
+    (dcmURIPattern)"
+    "
     .. _dcmRSOperation:
 
-    :ref:`RESTful Operation(s) <dcmRSOperation>`",string,"Name of RESTful Operation which shall be forwarded to another archive instance. Enumerated values: CreatePatient, UpdatePatient, DeletePatient, ChangePatientID, MergePatient, MergePatients, UpdateStudy, DeleteStudy, RejectStudy, RejectSeries, RejectInstance, UpdateStudyExpirationDate, UpdateSeriesExpirationDate, CreateMWL, UpdateMWL or DeleteMWL.
+    :ref:`RESTful Operation(s) <dcmRSOperation>`",string,"Name of RESTful Operation which shall be forwarded to another archive instance. Enumerated values: CreatePatient, UpdatePatient, DeletePatient, ChangePatientID, MergePatient, MergePatients, UpdateStudy, DeleteStudy, RejectStudy, RejectSeries, RejectInstance, UpdateStudyExpirationDate, UpdateSeriesExpirationDate, ApplyRetentionPolicy, CreateMWL, UpdateMWL or DeleteMWL.
 
     (dcmRSOperation)"
