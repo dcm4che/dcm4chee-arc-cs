@@ -13,7 +13,7 @@ QIDO-RS Search For Studies
    "Matching Attributes", "Refer :ref:`StudyAttributesMatching`"
    "Return Attributes", "Refer :ref:`StudyAttributesMatching`"
    "Limit and Offset supported", "Yes"
-   "Person Name Matching", "Literal, case insensitive. Refer Extended Negotiation"
+   "Person Name Matching", "Refer Person Name Matching Note"
 
 .. csv-table:: QIDO-RS Study Attribute Matching
    :name: StudyAttributesMatching
@@ -44,7 +44,7 @@ QIDO-RS Search For Series
    "Return Attributes", "Refer :ref:`SeriesAttributesMatching`"
    "Limit and Offset supported", "Yes"
    "Relational Queries Supported", "No"
-   "Person Name Matching", "Literal, case insensitive. Refer Extended Negotiation"
+   "Person Name Matching", "Refer Person Name Matching Note"
 
 Types of Matching: As explained above in QIDO-RS Search For Studies
 
@@ -66,7 +66,7 @@ QIDO-RS Search For Instances
    "Return Attributes", "Refer :ref:`InstanceAttributesMatching`"
    "Limit and Offset supported", "Yes"
    "Relational Queries Supported", "Series-level, only"
-   "Person Name Matching", "Literal, case insensitive. Refer Extended Negotiation"
+   "Person Name Matching", "Refer Person Name Matching Note"
 
 Types of Matching: As explained above in QIDO-RS Search For Studies
 
@@ -88,7 +88,7 @@ QIDO-RS Search For Patients
    "Return Attributes", "Refer :ref:`PatientAttributesMatching`"
    "Limit and Offset supported", "Yes"
    "Relational Queries Supported", "No"
-   "Person Name Matching", "Literal, case insensitive. Refer Extended Negotiation"
+   "Person Name Matching", "Refer Person Name Matching Note"
 
 Types of Matching: As explained above in QIDO-RS Search For Studies
 
@@ -97,10 +97,13 @@ Types of Matching: As explained above in QIDO-RS Search For Studies
    :header: "Attributes Names", "Tag", "Query Keys Matching (SCP)", "Return Attributes (SCP)"
    :file: patient-attribute-matching.csv
 
-Extended Negotiation :
 
-DCM4CHEE-QIDO-SERVICE does not support the "fuzzymatching" query key.
-DCM4CHEE-QIDO-SERVICE will perform case insensitive matching for PN VR attributes but will not perform other forms of fuzzy matching. This applies to the following attributes:
+Person Name Matching Note :
+
+- DCM4CHEE-QIDO-SERVICE supports "fuzzymatching" only for attributes having value representation as PN. If all characters
+of Person Name are in upper case, then the service performs case insensitive matching, else it shall perform case
+sensitive matching. The service also supports literal and wild card matching. It will not perform other forms of fuzzy matching.
+This applies to the following attributes:
 
    +--------------------------------------+------------------------------------------+
    | In :ref:`StudyAttributesMatching`    | Referring Physician's Name (0008,0090).  |
