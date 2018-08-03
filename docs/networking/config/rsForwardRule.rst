@@ -16,7 +16,7 @@ RESTful Forward Rule
     "
     .. _dcmURI:
 
-    :ref:`Target Base URL <dcmURI>`",string,"Target URL without operation specific part, eg. http://<host>:<port>/dcm4chee-arc/aets/<aet>/rs/
+    :ref:`Target Base URL <dcmURI>`",string,"Target URL without operation specific part, eg. http://<host>:<port>/dcm4chee-arc/aets/<aet>/
 
     (dcmURI)"
     "

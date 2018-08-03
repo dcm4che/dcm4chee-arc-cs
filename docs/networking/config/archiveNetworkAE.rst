@@ -332,23 +332,23 @@ DICOM Archive Network AE related information
 
     (dcmLinkMWLEntryUpdatePolicy)"
     "
-    .. _dcmStgCmtPolicy:
+    .. _dcmStorageVerificationPolicy:
 
-    :ref:`Storage Commitment Policy <dcmStgCmtPolicy>`",string,"DB_RECORD_EXISTS: only check for existence of DB records, OBJECT_EXISTS: check if object exists on Storage System, OBJECT_SIZE: check size of object on Storage System, OBJECT_FETCH: fetch object from Storage System), OBJECT_CHECKSUM: recalculate checksum of object on Storage System, S3_MD5SUM: check MD5 checksum of object on S3 Storage System. Overwrites value specified on Device level. Enumerated values: DB_RECORD_EXISTS, OBJECT_EXISTS, OBJECT_SIZE, OBJECT_FETCH, OBJECT_CHECKSUM or S3_MD5SUM.
+    :ref:`Storage Commitment Policy <dcmStorageVerificationPolicy>`",string,"DB_RECORD_EXISTS: only check for existence of DB records, OBJECT_EXISTS: check if object exists on Storage System, OBJECT_SIZE: check size of object on Storage System, OBJECT_FETCH: fetch object from Storage System), OBJECT_CHECKSUM: recalculate checksum of object on Storage System, S3_MD5SUM: check MD5 checksum of object on S3 Storage System. Overwrites value specified on Device level. Enumerated values: DB_RECORD_EXISTS, OBJECT_EXISTS, OBJECT_SIZE, OBJECT_FETCH, OBJECT_CHECKSUM or S3_MD5SUM.
 
-    (dcmStgCmtPolicy)"
+    (dcmStorageVerificationPolicy)"
     "
-    .. _dcmStgCmtUpdateLocationStatus:
+    .. _dcmStorageVerificationUpdateLocationStatus:
 
-    :ref:`Storage Commitment Update Location Status <dcmStgCmtUpdateLocationStatus>`",boolean,"Indicates if the Status of the Location DB record shall be updated on Storage Commitment accordingly. Not effective with Storage Commitment Policy: DB_RECORD_EXISTS. Overwrites value specified on Device level.
+    :ref:`Storage Commitment Update Location Status <dcmStorageVerificationUpdateLocationStatus>`",boolean,"Indicates if the Status of the Location DB record shall be updated on Storage Commitment accordingly. Not effective with Storage Commitment Policy: DB_RECORD_EXISTS. Overwrites value specified on Device level.
 
-    (dcmStgCmtUpdateLocationStatus)"
+    (dcmStorageVerificationUpdateLocationStatus)"
     "
-    .. _dcmStgCmtStorageID:
+    .. _dcmStorageVerificationStorageID:
 
-    :ref:`Storage Commitment Storage IDs(s) <dcmStgCmtStorageID>`",string,"Only accept Storage Commitment if the validation of the storage of the object on one of the specified Storage Systems is successful. If absent, validation of the storage of the object on any Storage System is sufficient to accept the Storage Commitment for that object. Not effective with Storage Commitment Policy: DB_RECORD_EXISTS. Overwrites values specified on Device level.
+    :ref:`Storage Commitment Storage IDs(s) <dcmStorageVerificationStorageID>`",string,"Only accept Storage Commitment if the validation of the storage of the object on one of the specified Storage Systems is successful. If absent, validation of the storage of the object on any Storage System is sufficient to accept the Storage Commitment for that object. Not effective with Storage Commitment Policy: DB_RECORD_EXISTS. Overwrites values specified on Device level.
 
-    (dcmStgCmtStorageID)"
+    (dcmStorageVerificationStorageID)"
     "
     .. _hl7PSUSendingApplication:
 

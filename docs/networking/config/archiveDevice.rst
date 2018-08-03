@@ -86,6 +86,12 @@ DICOM Archive Device related information
 
     (dcmStorageVerificationMaxScheduled)"
     "
+    .. _dcmStorageVerificationAETitle:
+
+    :ref:`Storage Verification AE Title <dcmStorageVerificationAETitle>`",string,"Archive AE Title used for scheduled Storage Verifications.
+
+    (dcmStorageVerificationAETitle)"
+    "
     .. _dcmStorageVerificationPollingInterval:
 
     :ref:`Storage Verification Polling Interval <dcmStorageVerificationPollingInterval>`",string,"Polling Interval for Series scheduled for Storage Verification in ISO-8601 duration format PnDTnHnMn.nS.
@@ -698,23 +704,23 @@ DICOM Archive Device related information
 
     (dcmLinkMWLEntryUpdatePolicy)"
     "
-    .. _dcmStgCmtPolicy:
+    .. _dcmStorageVerificationPolicy:
 
-    :ref:`Storage Commitment Policy <dcmStgCmtPolicy>`",string,"DB_RECORD_EXISTS: only check for existence of DB records, OBJECT_EXISTS: check if object exists on Storage System, OBJECT_SIZE: check size of object on Storage System, OBJECT_FETCH: fetch object from Storage System), OBJECT_CHECKSUM: recalculate checksum of object on Storage System, S3_MD5SUM: check MD5 checksum of object on S3 Storage System. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: DB_RECORD_EXISTS, OBJECT_EXISTS, OBJECT_SIZE, OBJECT_FETCH, OBJECT_CHECKSUM or S3_MD5SUM.
+    :ref:`Storage Verification Policy <dcmStorageVerificationPolicy>`",string,"DB_RECORD_EXISTS: only check for existence of DB records, OBJECT_EXISTS: check if object exists on Storage System, OBJECT_SIZE: check size of object on Storage System, OBJECT_FETCH: fetch object from Storage System), OBJECT_CHECKSUM: recalculate checksum of object on Storage System, S3_MD5SUM: check MD5 checksum of object on S3 Storage System. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: DB_RECORD_EXISTS, OBJECT_EXISTS, OBJECT_SIZE, OBJECT_FETCH, OBJECT_CHECKSUM or S3_MD5SUM.
 
-    (dcmStgCmtPolicy)"
+    (dcmStorageVerificationPolicy)"
     "
-    .. _dcmStgCmtUpdateLocationStatus:
+    .. _dcmStorageVerificationUpdateLocationStatus:
 
-    :ref:`Storage Commitment Update Location Status <dcmStgCmtUpdateLocationStatus>`",boolean,"Indicates if the Status of the Location DB record shall be updated on Storage Commitment accordingly. Not effective with Storage Commitment Policy: DB_RECORD_EXISTS. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`Storage Verification Update Location Status <dcmStorageVerificationUpdateLocationStatus>`",boolean,"Indicates if the Status of the Location DB record shall be updated on Storage Verification accordingly. Not effective with Storage Verification Policy: DB_RECORD_EXISTS. False if absent. May be overwritten by configured values for particular Archive Network AEs.
 
-    (dcmStgCmtUpdateLocationStatus)"
+    (dcmStorageVerificationUpdateLocationStatus)"
     "
-    .. _dcmStgCmtStorageID:
+    .. _dcmStorageVerificationStorageID:
 
-    :ref:`Storage Commitment Storage IDs(s) <dcmStgCmtStorageID>`",string,"Only accept Storage Commitment if the validation of the storage of the object on one of the specified Storage Systems is successful. If absent, validation of the storage of the object on any Storage System is sufficient to accept the Storage Commitment for that object. Not effective with Storage Commitment Policy: DB_RECORD_EXISTS. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`Storage Verification Storage IDs(s) <dcmStorageVerificationStorageID>`",string,"Indicates that for successful Storage Verification the object must be stored on (one of) the specified Storage System. If absent, successful verification of the storage on any Storage System is sufficient. Not effective with Storage Validation Policy: DB_RECORD_EXISTS. May be overwritten by configured values for particular Archive Network AEs.
 
-    (dcmStgCmtStorageID)"
+    (dcmStorageVerificationStorageID)"
     "
     .. _hl7ADTSendingApplication:
 
