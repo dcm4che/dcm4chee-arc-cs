@@ -698,12 +698,6 @@ DICOM Archive Device related information
 
     (dcmStorageVerificationPeriod)"
     "
-    .. _dcmStorageVerificationSchedule:
-
-    :ref:`Storage Verification Schedule(s) <dcmStorageVerificationSchedule>`",string,"Limits hours a day Storage Verifications are performed
-
-    (dcmStorageVerificationSchedule)"
-    "
     .. _dcmStorageVerificationMaxScheduled:
 
     :ref:`Maximal scheduled Storage Verifications <dcmStorageVerificationMaxScheduled>`",integer,"Maximal number of scheduled Storage Verification tasks on this device. Recommended to be set to the expected number of Storage Verification tasks performed by this device in the configured Storage Verification Polling Interval. 0 = no limitation.
@@ -715,6 +709,12 @@ DICOM Archive Device related information
     :ref:`Storage Verification Polling Interval <dcmStorageVerificationPollingInterval>`",string,"Polling Interval for Series scheduled for Storage Verification in ISO-8601 duration format PnDTnHnMn.nS.
 
     (dcmStorageVerificationPollingInterval)"
+    "
+    .. _dcmStorageVerificationPollingStartTime:
+
+    :ref:`Storage Verification Polling Start Time <dcmStorageVerificationPollingStartTime>`",string,"Time when the polling interval for Storage Verification starts in ISO-8601 time format [hh][mm][ss]. Archive start time if absent.
+
+    (dcmStorageVerificationPollingStartTime)"
     "
     .. _dcmStorageVerificationFetchSize:
 
