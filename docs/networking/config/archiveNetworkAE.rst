@@ -346,9 +346,15 @@ DICOM Archive Network AE related information
     "
     .. _dcmStorageVerificationStorageID:
 
-    :ref:`Storage Commitment Storage IDs(s) <dcmStorageVerificationStorageID>`",string,"Only accept Storage Commitment if the validation of the storage of the object on one of the specified Storage Systems is successful. If absent, validation of the storage of the object on any Storage System is sufficient to accept the Storage Commitment for that object. Not effective with Storage Commitment Policy: DB_RECORD_EXISTS. Overwrites values specified on Device level.
+    :ref:`Storage Commitment Storage IDs(s) <dcmStorageVerificationStorageID>`",string,"Only accept Storage Commitment if the validation of the storage of the object on one of the specified Storage Systems is successful. Not effective with Storage Commitment Policy: DB_RECORD_EXISTS. Overwrites values specified on Device level.
 
     (dcmStorageVerificationStorageID)"
+    "
+    .. _dcmStorageVerificationInitialDelay:
+
+    :ref:`Storage Verification Initial Delay <dcmStorageVerificationInitialDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS of first Storage Verification of a Series after it was received. Overwrites values specified on Device level.
+
+    (dcmStorageVerificationInitialDelay)"
     "
     .. _hl7PSUSendingApplication:
 

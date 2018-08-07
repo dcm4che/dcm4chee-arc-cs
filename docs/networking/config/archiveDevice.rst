@@ -686,9 +686,15 @@ DICOM Archive Device related information
 
     (dcmStorageVerificationAETitle)"
     "
+    .. _dcmStorageVerificationBatchID:
+
+    :ref:`Storage Verification Batch ID <dcmStorageVerificationBatchID>`",string,"Batch ID of Storage Verification Tasks triggered by scheduler.
+
+    (dcmStorageVerificationBatchID)"
+    "
     .. _dcmStorageVerificationInitialDelay:
 
-    :ref:`Storage Verification Initial Delay <dcmStorageVerificationInitialDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS of first Storage Verification of a Series after it was received.
+    :ref:`Storage Verification Initial Delay <dcmStorageVerificationInitialDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS of first Storage Verification of a Series after it was received. May be overwritten by configured values for particular Archive Network AEs.
 
     (dcmStorageVerificationInitialDelay)"
     "
