@@ -44,11 +44,11 @@ Rules for compression of stored images after a particular delay.
 
     (dcmStationName)"
     "
-    .. _dcmStationNameFlag:
+    .. _dcmStationNameUsageFlag:
 
-    :ref:`Station Name Usage Flag <dcmStationNameFlag>`",string,"Controls if the rules applies to Series which Station Name matches one or does not match any of the values specified by Station Name. Enumerated values: MATCH or NO_MATCH.
+    :ref:`Station Name Usage Flag <dcmStationNameUsageFlag>`",string,"Controls if the rules applies to Series which Station Name matches one or does not match any of the values specified by Station Name. Enumerated values: MATCH or NO_MATCH.
 
-    (dcmStationNameFlag)"
+    (dcmStationNameUsageFlag)"
     "
     .. _dcmDuration:
 
