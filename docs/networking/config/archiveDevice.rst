@@ -728,6 +728,30 @@ DICOM Archive Device related information
 
     (dcmStorageVerificationFetchSize)"
     "
+    .. _dcmCompressionPollingInterval:
+
+    :ref:`Compression Polling Interval <dcmCompressionPollingInterval>`",string,"Polling Interval for Series to be compressed in ISO-8601 duration format PnDTnHnMn.nS.
+
+    (dcmCompressionPollingInterval)"
+    "
+    .. _dcmCompressionFetchSize:
+
+    :ref:`Compression Fetch Size <dcmCompressionFetchSize>`",integer,"Maximal number of Series fetched for compression by one query.
+
+    (dcmCompressionFetchSize)"
+    "
+    .. _dcmCompressionSchedule:
+
+    :ref:`Compression Schedule(s) <dcmCompressionSchedule>`",string,"Limits compression to specified times in format 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)
+
+    (dcmCompressionSchedule)"
+    "
+    .. _dcmCompressionThreads:
+
+    :ref:`Compression Threads <dcmCompressionThreads>`",integer,"Number of Threads used for Compression.
+
+    (dcmCompressionThreads)"
+    "
     .. _hl7ADTSendingApplication:
 
     :ref:`HL7 ADT Sending Application <hl7ADTSendingApplication>`",string,"Application|Facility name of Sending Application for HL7 ADT messages to synchronize external systems about performed Patient Information updates. If absent, synchronization of external systems by HL7 ADT messages is disabled.
@@ -826,7 +850,7 @@ DICOM Archive Device related information
     ":doc:`exportRule` (s)",object,"Export Rules applied to DICOM objects received by any AE. May be supplemented by configured Export Rules for particular Archive Network AEs."
     ":doc:`rsForwardRule` (s)",object,"RESTful Forward Rules. May be supplemented by configured RESTful Forward Rules for particular Archive Network AEs."
     ":doc:`keycloakServer` (s)",object,"Keycloak Server"
-    ":doc:`archiveCompressionRule` (s)",object,"Compression rules applied to DICOM objects received by any AE. May be supplemented by configured Compression Rules for particular Archive Network AEs."
+    ":doc:`delayedCompressionRule` (s)",object,"Rules for compression of stored images after a particular delay."
     ":doc:`archiveAttributeCoercion` (s)",object,"Attribute Coercion applied to DIMSE received/sent by any AE. May be supplemented by configured Attribute Coercions for particular Archive Network AEs."
     ":doc:`rejectionNote` (s)",object,"Specifies behavior on Rejection Note Stored"
     ":doc:`studyRetentionPolicy` (s)",object,"Study Retention Policies applied to Studies received by any AE. May be supplemented by configured Study Retention Policies for particular Archive Network AEs."
@@ -859,7 +883,7 @@ DICOM Archive Device related information
     exportRule
     rsForwardRule
     keycloakServer
-    archiveCompressionRule
+    delayedCompressionRule
     archiveAttributeCoercion
     rejectionNote
     studyRetentionPolicy
