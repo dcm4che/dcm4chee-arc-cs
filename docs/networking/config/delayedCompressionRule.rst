@@ -50,6 +50,12 @@ Rules for compression of stored images after a particular delay.
 
     (dcmStationNameUsageFlag)"
     "
+    .. _dicomAETitle:
+
+    :ref:`Archive AE Title <dicomAETitle>`",string,"Title of Archive Application Entity used for storing the compressed object.
+
+    (dicomAETitle)"
+    "
     .. _dcmDuration:
 
     :ref:`Compression Delay <dcmDuration>`",string,"Compression delay in ISO-8601 duration format PnDTnHnMn.nS.

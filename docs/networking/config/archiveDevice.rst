@@ -706,7 +706,7 @@ DICOM Archive Device related information
     "
     .. _dcmStorageVerificationMaxScheduled:
 
-    :ref:`Maximal scheduled Storage Verifications <dcmStorageVerificationMaxScheduled>`",integer,"Maximal number of scheduled Storage Verification tasks on this device. Shall be set > 0 to distribute tasks over nodes of a clustered archive. Can also be used together with a Storage Verification Polling Interval of one day and a Storage Verification Polling Start Time on end of busy hours to schedule tasks outside of the busy hours.
+    :ref:`Maximal scheduled Storage Verifications <dcmStorageVerificationMaxScheduled>`",integer,"Maximal number of scheduled Storage Verification tasks on this device. Shall be set > 0 to distribute tasks over nodes of a clustered archive.
 
     (dcmStorageVerificationMaxScheduled)"
     "
