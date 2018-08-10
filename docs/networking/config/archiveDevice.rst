@@ -716,11 +716,11 @@ DICOM Archive Device related information
 
     (dcmStorageVerificationPollingInterval)"
     "
-    .. _dcmStorageVerificationPollingStartTime:
+    .. _dcmStorageVerificationSchedule:
 
-    :ref:`Storage Verification Polling Start Time <dcmStorageVerificationPollingStartTime>`",string,"Time when the polling interval for Storage Verification starts in ISO-8601 time format [hh][mm][ss]. Archive start time if absent.
+    :ref:`Storage Verification Schedule(s) <dcmStorageVerificationSchedule>`",string,"Limits Storage Verification to specified times in format 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday).
 
-    (dcmStorageVerificationPollingStartTime)"
+    (dcmStorageVerificationSchedule)"
     "
     .. _dcmStorageVerificationFetchSize:
 
@@ -850,6 +850,7 @@ DICOM Archive Device related information
     ":doc:`exportRule` (s)",object,"Export Rules applied to DICOM objects received by any AE. May be supplemented by configured Export Rules for particular Archive Network AEs."
     ":doc:`rsForwardRule` (s)",object,"RESTful Forward Rules. May be supplemented by configured RESTful Forward Rules for particular Archive Network AEs."
     ":doc:`keycloakServer` (s)",object,"Keycloak Server"
+    ":doc:`archiveCompressionRule` (s)",object,"Compression rules applied to DICOM objects received by any AE. May be supplemented by configured Compression Rules for particular Archive Network AEs."
     ":doc:`delayedCompressionRule` (s)",object,"Rules for compression of stored images after a particular delay."
     ":doc:`archiveAttributeCoercion` (s)",object,"Attribute Coercion applied to DIMSE received/sent by any AE. May be supplemented by configured Attribute Coercions for particular Archive Network AEs."
     ":doc:`rejectionNote` (s)",object,"Specifies behavior on Rejection Note Stored"
@@ -883,6 +884,7 @@ DICOM Archive Device related information
     exportRule
     rsForwardRule
     keycloakServer
+    archiveCompressionRule
     delayedCompressionRule
     archiveAttributeCoercion
     rejectionNote
