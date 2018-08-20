@@ -694,7 +694,7 @@ DICOM Archive Device related information
     "
     .. _dcmStorageVerificationInitialDelay:
 
-    :ref:`Storage Verification Initial Delay <dcmStorageVerificationInitialDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS of first Storage Verification of a Series after it was received. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`Storage Verification Initial Delay <dcmStorageVerificationInitialDelay>`",string,"Delay in ISO-8601 duration format PnYnMnD or PnW of first Storage Verification of a Series after it was received. May be overwritten by configured values for particular Archive Network AEs.
 
     (dcmStorageVerificationInitialDelay)"
     "
@@ -728,17 +728,23 @@ DICOM Archive Device related information
 
     (dcmStorageVerificationFetchSize)"
     "
+    .. _dcmCompressionAETitle:
+
+    :ref:`Compression AE Title <dcmCompressionAETitle>`",string,"Archive AE Title used for delayed Compression.
+
+    (dcmCompressionAETitle)"
+    "
     .. _dcmCompressionPollingInterval:
 
     :ref:`Compression Polling Interval <dcmCompressionPollingInterval>`",string,"Polling Interval for Series to be compressed in ISO-8601 duration format PnDTnHnMn.nS.
 
     (dcmCompressionPollingInterval)"
     "
-    .. _dcmCompressionFetchSize:
+    .. _dcmCompressionThreads:
 
-    :ref:`Compression Fetch Size <dcmCompressionFetchSize>`",integer,"Maximal number of Series fetched for compression by one query.
+    :ref:`Compression Threads <dcmCompressionThreads>`",integer,"Number of Threads used for Compression.
 
-    (dcmCompressionFetchSize)"
+    (dcmCompressionThreads)"
     "
     .. _dcmCompressionSchedule:
 
@@ -746,11 +752,11 @@ DICOM Archive Device related information
 
     (dcmCompressionSchedule)"
     "
-    .. _dcmCompressionThreads:
+    .. _dcmCompressionFetchSize:
 
-    :ref:`Compression Threads <dcmCompressionThreads>`",integer,"Number of Threads used for Compression.
+    :ref:`Compression Fetch Size <dcmCompressionFetchSize>`",integer,"Maximal number of Series fetched for compression by one query.
 
-    (dcmCompressionThreads)"
+    (dcmCompressionFetchSize)"
     "
     .. _hl7ADTSendingApplication:
 
@@ -851,7 +857,6 @@ DICOM Archive Device related information
     ":doc:`rsForwardRule` (s)",object,"RESTful Forward Rules. May be supplemented by configured RESTful Forward Rules for particular Archive Network AEs."
     ":doc:`keycloakServer` (s)",object,"Keycloak Server"
     ":doc:`archiveCompressionRule` (s)",object,"Compression rules applied to DICOM objects received by any AE. May be supplemented by configured Compression Rules for particular Archive Network AEs."
-    ":doc:`delayedCompressionRule` (s)",object,"Rules for compression of stored images after a particular delay."
     ":doc:`archiveAttributeCoercion` (s)",object,"Attribute Coercion applied to DIMSE received/sent by any AE. May be supplemented by configured Attribute Coercions for particular Archive Network AEs."
     ":doc:`rejectionNote` (s)",object,"Specifies behavior on Rejection Note Stored"
     ":doc:`studyRetentionPolicy` (s)",object,"Study Retention Policies applied to Studies received by any AE. May be supplemented by configured Study Retention Policies for particular Archive Network AEs."
@@ -885,7 +890,6 @@ DICOM Archive Device related information
     rsForwardRule
     keycloakServer
     archiveCompressionRule
-    delayedCompressionRule
     archiveAttributeCoercion
     rejectionNote
     studyRetentionPolicy

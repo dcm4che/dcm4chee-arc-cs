@@ -14,6 +14,7 @@ UI Configuration
 
     (dcmuiConfigName)"
     ":doc:`uiPermission` (s)",object,"Permission"
+    ":doc:`uiFilterTemplate` (s)",object,"Defined filter template"
     ":doc:`uiDiffConfig` (s)",object,"Study Diff Configuration"
     ":doc:`uiDashboard` (s)",object,"UI Dashboard Configuration"
     ":doc:`uiElasticsearch` (s)",object,"Elasticsearch Configuration for the pro version"
@@ -23,6 +24,7 @@ UI Configuration
 .. toctree::
 
     uiPermission
+    uiFilterTemplate
     uiDiffConfig
     uiDashboard
     uiElasticsearch

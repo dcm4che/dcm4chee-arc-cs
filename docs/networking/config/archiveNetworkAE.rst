@@ -352,7 +352,7 @@ DICOM Archive Network AE related information
     "
     .. _dcmStorageVerificationInitialDelay:
 
-    :ref:`Storage Verification Initial Delay <dcmStorageVerificationInitialDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS of first Storage Verification of a Series after it was received. Overwrites values specified on Device level.
+    :ref:`Storage Verification Initial Delay <dcmStorageVerificationInitialDelay>`",string,"Delay in ISO-8601 duration format PnYnMnD or PnW of first Storage Verification of a Series after it was received. Overwrites values specified on Device level.
 
     (dcmStorageVerificationInitialDelay)"
     "

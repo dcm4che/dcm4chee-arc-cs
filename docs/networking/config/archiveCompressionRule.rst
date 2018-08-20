@@ -14,6 +14,12 @@ Archive Compression rule
 
     (cn)"
     "
+    .. _dcmCompressionDelay:
+
+    :ref:`Compression Delay <dcmCompressionDelay>`",string,"Compression delay in ISO-8601 period format PnYnMnD or PnW.
+
+    (dcmCompressionDelay)"
+    "
     .. _dicomTransferSyntax:
 
     :ref:`DICOM Transfer Syntax UID <dicomTransferSyntax>`",string,"A Transfer Syntax UID
