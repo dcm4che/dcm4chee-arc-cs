@@ -14,12 +14,6 @@ Archive Compression rule
 
     (cn)"
     "
-    .. _dcmCompressionDelay:
-
-    :ref:`Compression Delay <dcmCompressionDelay>`",string,"Compression delay in ISO-8601 period format PnYnMnD or PnW.
-
-    (dcmCompressionDelay)"
-    "
     .. _dicomTransferSyntax:
 
     :ref:`DICOM Transfer Syntax UID <dicomTransferSyntax>`",string,"A Transfer Syntax UID
@@ -43,3 +37,9 @@ Archive Compression rule
     :ref:`Image Write Param(s) <dcmImageWriteParam>`",string,"Image Write Parameter(s) (name=value) set at on Image Writer before compression
 
     (dcmImageWriteParam)"
+    "
+    .. _dcmCompressionDelay:
+
+    :ref:`Compression Delay <dcmCompressionDelay>`",string,"Compression delay in ISO-8601 duration format PnDTnHnMn.nS. Compress on receive if absent.
+
+    (dcmCompressionDelay)"
