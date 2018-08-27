@@ -758,6 +758,12 @@ DICOM Archive Device related information
 
     (dcmCompressionFetchSize)"
     "
+    .. _dcmDiffTaskProgressUpdateInterval:
+
+    :ref:`Diff Task Progress Update Interval <dcmDiffTaskProgressUpdateInterval>`",string,"Interval of updating Diff Tasks in process for progress monitoring in ISO-8601 duration format PnDTnHnMn.nS; disabled if absent.
+
+    (dcmDiffTaskProgressUpdateInterval)"
+    "
     .. _hl7ADTSendingApplication:
 
     :ref:`HL7 ADT Sending Application <hl7ADTSendingApplication>`",string,"Application|Facility name of Sending Application for HL7 ADT messages to synchronize external systems about performed Patient Information updates. If absent, synchronization of external systems by HL7 ADT messages is disabled.
