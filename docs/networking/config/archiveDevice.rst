@@ -62,12 +62,6 @@ DICOM Archive Device related information
 
     (dcmPurgeInstanceRecordsFetchSize)"
     "
-    .. _dcmQueryRetrieveViewID:
-
-    :ref:`Query/Retrieve View ID <dcmQueryRetrieveViewID>`",string,"Query/Retrieve View Identifier. May be overwritten by configured values for particular Archive Network AEs.
-
-    (dcmQueryRetrieveViewID)"
-    "
     .. _dcmOverwritePolicy:
 
     :ref:`Overwrite Policy <dcmOverwritePolicy>`",string,"Overwrite Policy. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: NEVER, ALWAYS, SAME_SOURCE, SAME_SERIES or SAME_SOURCE_AND_SERIES.

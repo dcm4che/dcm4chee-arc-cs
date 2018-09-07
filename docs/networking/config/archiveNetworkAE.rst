@@ -76,7 +76,7 @@ DICOM Archive Network AE related information
     "
     .. _dcmQueryRetrieveViewID:
 
-    :ref:`Query/Retrieve View ID <dcmQueryRetrieveViewID>`",string,"Query/Retrieve View Identifier. Overwrites value specified on Device level.
+    :ref:`Query/Retrieve View ID <dcmQueryRetrieveViewID>`",string,"Query/Retrieve View Identifier.
 
     (dcmQueryRetrieveViewID)"
     "
