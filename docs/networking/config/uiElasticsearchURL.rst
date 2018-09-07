@@ -20,6 +20,12 @@ Elasticsearch URL
 
     (dcmuiElasticsearchURL)"
     "
+    .. _dcmuiElasticsearchURLKeycloakServer:
+
+    :ref:`Keycloak Server <dcmuiElasticsearchURLKeycloakServer>`",string,"Select Keycloak Server from where to get the bearer token for accessing the Elasticsearch
+
+    (dcmuiElasticsearchURLKeycloakServer)"
+    "
     .. _dcmuiElasticsearchIsDefault:
 
     :ref:`Is Default <dcmuiElasticsearchIsDefault>`",boolean,"Set this URL to the default one. (Make sure that only one of the urls - siblings child is set to default).

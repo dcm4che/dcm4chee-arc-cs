@@ -16,7 +16,7 @@ Export Rule
     "
     .. _dcmEntity:
 
-    :ref:`Attribute Entity <dcmEntity>`",string,"Entity of the Attribute Filter or Export Rule ('Patient', 'Study', 'Series', 'Instance', 'MPPS', 'MWL'). Enumerated values: Patient, Study, Series, Instance, MPPS or MWL.
+    :ref:`Export Entity <dcmEntity>`",string,"Entity of Export Enumerated values: Study, Series or Instance.
 
     (dcmEntity)"
     "
@@ -34,18 +34,18 @@ Export Rule
     "
     .. _dcmProperty:
 
-    :ref:`Conditions(s) <dcmProperty>`",string,"Conditions in format {attributeID}[!]={regEx}
+    :ref:`Attribute Conditions(s) <dcmProperty>`",string,"Attribute conditions in format {attributeID}[!]={regEx}.
 
     (dcmProperty)"
     "
     .. _dcmSchedule:
 
-    :ref:`Schedule(s) <dcmSchedule>`",string,"Schedule Expression in format 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)
+    :ref:`Time Conditions(s) <dcmSchedule>`",string,"Apply this rule only within specified time ranges.
 
     (dcmSchedule)"
     "
     .. _dcmDuration:
 
-    :ref:`Duration <dcmDuration>`",string,"Duration in ISO-8601 duration format PnDTnHnMn.nS
+    :ref:`Export Delay <dcmDuration>`",string,"Delay export of entities to accumulate multiple trigger events to one export task.
 
     (dcmDuration)"

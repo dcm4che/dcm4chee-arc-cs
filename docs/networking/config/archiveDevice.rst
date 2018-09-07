@@ -860,6 +860,7 @@ DICOM Archive Device related information
     ":doc:`queue` (s)",object,"Managed JMS Queue"
     ":doc:`exporter` (s)",object,"Exporter Descriptor"
     ":doc:`exportRule` (s)",object,"Export Rules applied to DICOM objects received by any AE. May be supplemented by configured Export Rules for particular Archive Network AEs."
+    ":doc:`prefetchRule` (s)",object,"Prefetch Rules applied to DICOM objects received by any AE. May be supplemented by configured Prefetch Rules for particular Archive Network AEs."
     ":doc:`rsForwardRule` (s)",object,"RESTful Forward Rules. May be supplemented by configured RESTful Forward Rules for particular Archive Network AEs."
     ":doc:`keycloakServer` (s)",object,"Keycloak Server"
     ":doc:`archiveCompressionRule` (s)",object,"Compression rules applied to DICOM objects received by any AE. May be supplemented by configured Compression Rules for particular Archive Network AEs."
@@ -893,6 +894,7 @@ DICOM Archive Device related information
     queue
     exporter
     exportRule
+    prefetchRule
     rsForwardRule
     keycloakServer
     archiveCompressionRule

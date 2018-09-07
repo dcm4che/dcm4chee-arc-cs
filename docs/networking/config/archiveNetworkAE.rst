@@ -391,7 +391,8 @@ DICOM Archive Network AE related information
     :ref:`HL7 Procedure Status Update On Timeout <hl7PSUOnTimeout>`",boolean,"Specifies if the HL7 Procedure Status Update is sent if the timeout for waiting on receive of instances referenced is exceeded. Overwrites value specified on Device level.
 
     (hl7PSUOnTimeout)"
-    ":doc:`exportRule` (s)",object,"Export Rules. Supplements Export Rules specified on Device level."
+    ":doc:`exportRule` (s)",object,"Export Rules applied to DICOM objects received by this AE. Supplements Export Rules specified on Device level."
+    ":doc:`prefetchRule` (s)",object,"Prefetch Rules applied to DICOM objects received by this AE. Supplements Prefetch Rules specified on Device level."
     ":doc:`rsForwardRule` (s)",object,"RESTful Forward Rules. Supplements RESTful Forward rules specified on Device level."
     ":doc:`archiveCompressionRule` (s)",object,"Compression rules. Supplements Compression rules specified on Device level."
     ":doc:`archiveAttributeCoercion` (s)",object,"Attribute Coercion of received/sent DIMSE. Supplements Attribute Coercions specified on Device level."

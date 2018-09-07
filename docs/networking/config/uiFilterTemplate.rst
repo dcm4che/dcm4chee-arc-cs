@@ -26,9 +26,21 @@ Defined filter template
 
     (dcmuiFilterTemplateDescription)"
     "
+    .. _dcmuiFilterTemplateUsername:
+
+    :ref:`Username <dcmuiFilterTemplateUsername>`",string,"Username that can use this template
+
+    (dcmuiFilterTemplateUsername)"
+    "
+    .. _dcmuiFilterTemplateRole:
+
+    :ref:`Role <dcmuiFilterTemplateRole>`",string,"Username role that can use this template
+
+    (dcmuiFilterTemplateRole)"
+    "
     .. _dcmuiFilterTemplateFilters:
 
-    :ref:`Filters(s) <dcmuiFilterTemplateFilters>`",string,"Default filters in this template, filter pare key=value (example LocalAET=DCM4CHEE). For date filter you can use the predefined keywords 'today' and 'yesterday' so the dynamic values of the filters can be generated.
+    :ref:`Filters(s) <dcmuiFilterTemplateFilters>`",string,"Default filters in this template, filter pare key=value (example LocalAET=DCM4CHEE). For date filter you can use the predefined keywords (today, yesterday, this_week, this_month, last_week, last_month, this_quarter, last_quarter, this_year, last_year) so the dynamic values of the filters can be generated.
 
     (dcmuiFilterTemplateFilters)"
     "
