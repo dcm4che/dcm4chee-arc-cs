@@ -22,7 +22,7 @@ Prefetch Rule
     "
     .. _dcmEntitySelector:
 
-    :ref:`Entity Selector(s) <dcmEntitySelector>`",string,"Specifies matching keys used to select entities to prefetch. Format: (study|series)[?{attributeID}={value}[&...][&priors=<n>]].
+    :ref:`Entity Selector(s) <dcmEntitySelector>`",string,"Specifies matching keys used to select entities to prefetch. Format: priors=<n>[&{attributeID}={value}]... .
 
     (dcmEntitySelector)"
     "
