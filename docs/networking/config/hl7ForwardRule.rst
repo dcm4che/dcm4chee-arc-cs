@@ -22,6 +22,6 @@ HL7 Forward Rule
     "
     .. _dcmProperty:
 
-    :ref:`Conditions(s) <dcmProperty>`",string,"Conditions in format {attributeID}[!]={regEx} or MSH-#[!]={regEx} Examples: MSH-3=FORWARD or MSH-8=ADT\^A28\^ADT_A05
+    :ref:`Conditions(s) <dcmProperty>`",string,"Conditions in format {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Examples: MSH-3=FORWARD or MSH-8=ADT\^A28\^ADT_A05
 
     (dcmProperty)"
