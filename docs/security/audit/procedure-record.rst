@@ -85,7 +85,8 @@ Message Structure
    ParticipantObjectTypeCodeRole, M, Report ⇒ '3'
    ParticipantObjectIDTypeCode, M, "EV (110180, DCM, 'Study Instance UID')"
    ParticipantObjectDetail, U, "Base-64 encoded study date if Study has StudyDate(0008,0020) attribute"
-   ParticipantObjectDetail, U, If Procedure record created/updated/deleted by HL7 messages : 'type=HL7v2 value=<Base-64 encoded HL7 message>'
+   ParticipantObjectDetail, U, If Procedure record created/updated by HL7 messages : 'type=HL7v2 value=<Base-64 encoded HL7 message>'
+   ParticipantObjectDetail, U, If Procedure record created/updated by HL7 messages : 'type=HL7v2 value=<Base-64 encoded HL7 response>'
    ParticipantObjectDescription, U
    SOPClass, MC, Sop Class UID and Number of instances with this sop class. eg. <SOPClass UID='1.2.840.10008.5.1.4.1.1.88.22' NumberOfInstances='4'/>
    Accession, U, Accession Number
