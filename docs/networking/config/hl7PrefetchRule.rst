@@ -1,9 +1,9 @@
-DICOM Prefetch Rule
-===================
-DICOM Prefetch Rule
+HL7 Prefetch Rule
+=================
+HL7 Prefetch Rule
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|
-.. csv-table:: DICOM Prefetch Rule Attributes (LDAP Object: dcmPrefetchRule)
+.. csv-table:: HL7 Prefetch Rule Attributes (LDAP Object: hl7PrefetchRule)
     :header: Name, Type, Description (LDAP Attribute)
     :widths: 23, 7, 70
 
@@ -28,15 +28,9 @@ DICOM Prefetch Rule
     "
     .. _dcmProperty:
 
-    :ref:`Attribute Conditions(s) <dcmProperty>`",string,"Attribute conditions in format {attributeID}[!]={regEx}.
+    :ref:`Conditions(s) <dcmProperty>`",string,"Conditions in format {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Examples: MSH-4=FORWARD or MSH-9=ADT\^A28\^ADT_A05
 
     (dcmProperty)"
-    "
-    .. _dcmSchedule:
-
-    :ref:`Time Conditions(s) <dcmSchedule>`",string,"Apply this rule only within specified time ranges.
-
-    (dcmSchedule)"
     "
     .. _dcmDuration:
 
