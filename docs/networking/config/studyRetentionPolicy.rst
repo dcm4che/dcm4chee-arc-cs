@@ -16,7 +16,7 @@ Study Retention Policy
     "
     .. _dcmRetentionPeriod:
 
-    :ref:`Study Retention Period <dcmRetentionPeriod>`",string,"Study Retention Period in ISO-8601 period format PnYnMnD or PnW
+    :ref:`Minimal Study Retention Period <dcmRetentionPeriod>`",string,"Minimal Study Retention Period in ISO-8601 period format PnYnMnD or PnW
 
     (dcmRetentionPeriod)"
     "
@@ -40,6 +40,6 @@ Study Retention Policy
     "
     .. _dcmStartRetentionPeriodOnStudyDate:
 
-    :ref:`Start Retention Period on Study Date <dcmStartRetentionPeriodOnStudyDate>`",boolean,"Indicates if retention period should be started on Study Date
+    :ref:`Start Retention Period on Study Date <dcmStartRetentionPeriodOnStudyDate>`",boolean,"Indicates if retention period should be started on Study Date instead on receive of an object of the Study
 
     (dcmStartRetentionPeriodOnStudyDate)"
