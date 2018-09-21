@@ -31,3 +31,9 @@ Specifies Java Image IO Image Readers used for decompressing compressed DICOM im
     :ref:`Patch JPEG-LS <dcmPatchJPEGLS>`",string,"Patch JPEG-LS before decompressing Enumerated values: JAI2ISO, ISO2JAI or ISO2JAI_IF_APP_OR_COM.
 
     (dcmPatchJPEGLS)"
+    "
+    .. _dcmImageReadParam:
+
+    :ref:`Image Read Param(s) <dcmImageReadParam>`",string,"Image Read Parameter(s) (name=value)
+
+    (dcmImageReadParam)"
