@@ -100,17 +100,17 @@ Sample Message
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
 
-        <EventIdentification EventActionCode="C" EventDateTime="2017-08-08T14:57:08.813+02:00" EventOutcomeIndicator="0">
+        <EventIdentification EventActionCode="C" EventDateTime="2018-09-11T11:43:05.007+02:00" EventOutcomeIndicator="0">
             <EventID csd-code="110110" codeSystemName="DCM" originalText="Patient Record"/>
         </EventIdentification>
 
-        <ActiveParticipant UserID="MESA_OF|XYZ_RADIOLOGY" UserTypeCode="2" UserIsRequestor="true" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-            <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source"/>
+        <ActiveParticipant UserID="DCM4CHEE|DCM4CHEE" AlternativeUserID="9132" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID"/>
             <UserIDTypeCode csd-code="HL7APP" codeSystemName="99DCM4CHEE" originalText="Application and Facility"/>
         </ActiveParticipant>
 
-        <ActiveParticipant UserID="MESA_IM|XYZ_IMAGE_MANAGER" UserTypeCode="2" AlternativeUserID="16577" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-            <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination"/>
+        <ActiveParticipant UserID="PAMSimulator|IHE" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID"/>
             <UserIDTypeCode csd-code="HL7APP" codeSystemName="99DCM4CHEE" originalText="Application and Facility"/>
         </ActiveParticipant>
 
@@ -118,9 +118,11 @@ Sample Message
             <AuditSourceTypeCode csd-code="4"/>
         </AuditSourceIdentification>
 
-        <ParticipantObjectIdentification ParticipantObjectID="PID1^^^Site A&amp;1.2.40.0.13.1.1.999.111.1111&amp;ISO" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+        <ParticipantObjectIdentification ParticipantObjectID="MEE4-54798^^^MEE4&1.3.6.1.4.1.12559.11.1.4.1.2&ISO^PI" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
             <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
-            <ParticipantObjectName>TEST^Name</ParticipantObjectName>
+            <ParticipantObjectName>Berger^Oliver^^^^^L</ParticipantObjectName>
+            <ParticipantObjectDetail type="HL7v2 Message" value="TVNIfF5+XCZ8UEFNU2ltdWxhdG9yfElIRXxEQ000Q0hFRXxEQ000Q0hFRXwyMDE2MDYwMjE0Mjg1Nnx8QURUXkEyOF5BRFRfQTA1fDIwMTYwNjAyMTQyODU2fFB8Mi41fHx8fHx8QVNDSUlbQ1JdDQpFVk58fDIwMTYwNjAyMTQyODU2DQpQSUR8fHxNRUU0LTU0Nzk4Xl5eTUVFNCYxLjMuNi4xLjQuMS4xMjU1OS4xMS4xLjQuMS4yJklTT15QSXx8QmVyZ2VyXk9saXZlcl5eXl5eTHxTY2h1c3Rlcl5eXl5eXk18MTk5NDEwMjV8TXx8fEdhc3RlaWd3ZWdeXkhhbGxlaW5eXjU0MDBeQVVUfHxeUFJOXlBIfHx8fENBVHwxMTIyOV5eXklIRVBBTSYxLjMuNi4xLjQuMS4xMjU1OS4xMS4xLjIuMi41JklTT15BTnx8fHx8fHx8fHx8fHxOW0NSXQ0KUFYxfHxO"/>
+            <ParticipantObjectDetail type="HL7v2 Message" value="TVNIfF5+XCZ8RENNNENIRUV8RENNNENIRUV8UEFNU2ltdWxhdG9yfElIRXwyMDE4MDkxMTExNDMwNC4yNzR8fEFDS15BMjheQUNLfDE2OTE3ODcwNTN8UHwyLjV8fHx8fHxBU0NJSVtDUl0NTVNBfEFBfDIwMTYwNjAyMTQyODU2fA=="/>
         </ParticipantObjectIdentification>
 
     </AuditMessage>
