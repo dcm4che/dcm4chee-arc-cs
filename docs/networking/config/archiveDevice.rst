@@ -688,13 +688,13 @@ DICOM Archive Device related information
     "
     .. _dcmStorageVerificationInitialDelay:
 
-    :ref:`Storage Verification Initial Delay <dcmStorageVerificationInitialDelay>`",string,"Delay in ISO-8601 duration format PnYnMnD or PnW of first Storage Verification of a Series after it was received. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`Storage Verification Initial Delay <dcmStorageVerificationInitialDelay>`",string,"Delay of first Storage Verification of a Series after it was received. May be overwritten by configured values for particular Archive Network AEs.
 
     (dcmStorageVerificationInitialDelay)"
     "
     .. _dcmStorageVerificationPeriod:
 
-    :ref:`Storage Verification Period <dcmStorageVerificationPeriod>`",string,"Period between successive Storage Verifications of one Series in ISO-8601 period format PnYnMnD or PnW
+    :ref:`Storage Verification Period <dcmStorageVerificationPeriod>`",string,"Period between successive Storage Verifications of one Series.
 
     (dcmStorageVerificationPeriod)"
     "
@@ -754,9 +754,57 @@ DICOM Archive Device related information
     "
     .. _dcmDiffTaskProgressUpdateInterval:
 
-    :ref:`Diff Task Progress Update Interval <dcmDiffTaskProgressUpdateInterval>`",string,"Interval of updating Diff Tasks in process for progress monitoring in ISO-8601 duration format PnDTnHnMn.nS; disabled if absent.
+    :ref:`Diff Task Progress Update Interval <dcmDiffTaskProgressUpdateInterval>`",string,"Interval of updating Diff Tasks in process for progress monitoring; disabled if absent.
 
     (dcmDiffTaskProgressUpdateInterval)"
+    "
+    .. _dcmPatientVerificationPDQServiceID:
+
+    :ref:`Patient Verification PDQ Service ID <dcmPatientVerificationPDQServiceID>`",string,"ID of PDQ Service used for Verification of Patient Demographic. If absent, no Patient Verification will be performed.
+
+    (dcmPatientVerificationPDQServiceID)"
+    "
+    .. _dcmPatientVerificationPollingInterval:
+
+    :ref:`Patient Verification Polling Interval <dcmPatientVerificationPollingInterval>`",string,"Patient Verification Polling Interval. If absent, no Patient Verification will be performed.
+
+    (dcmPatientVerificationPollingInterval)"
+    "
+    .. _dcmPatientVerificationFetchSize:
+
+    :ref:`Patient Verification Fetch Size <dcmPatientVerificationFetchSize>`",integer,"Maximal number of Patients fetched for Patient Verification in one query.
+
+    (dcmPatientVerificationFetchSize)"
+    "
+    .. _dcmPatientVerificationPeriod:
+
+    :ref:`Patient Verification Period <dcmPatientVerificationPeriod>`",string,"Period in which Patient Demographic will be verified. If absent, Patient Verification will not be renewed for Patients verified in the past.
+
+    (dcmPatientVerificationPeriod)"
+    "
+    .. _dcmPatientVerificationPeriodOnNotFound:
+
+    :ref:`Patient Verification Period Not Found <dcmPatientVerificationPeriodOnNotFound>`",string,"Period in which Patient Demographic will be retried for Patients which were not found by the configured PDQ Service on last attempt. If absent, Patient Verification will not be retried for Patients not found in the past.
+
+    (dcmPatientVerificationPeriodOnNotFound)"
+    "
+    .. _dcmPatientVerificationRetryInterval:
+
+    :ref:`Patient Verification Retry Interval <dcmPatientVerificationRetryInterval>`",string,"Patient Verification Retry Interval in which failed attempts to verify Patient Demographics against the PDQ Service configured by Patient Verification PDQ Service ID will be retried until the maximal number of retries specified by Patient Verification Max Retries is reached. If absent, failed Patient Verification attempts will not be retried.
+
+    (dcmPatientVerificationRetryInterval)"
+    "
+    .. _dcmPatientVerificationMaxRetries:
+
+    :ref:`Patient Verification Maximum Number of Retries <dcmPatientVerificationMaxRetries>`",integer,"Maximum number of retries to verify Patient Demographics against the PDQ Service configured by dcmPatientVerificationPDQServiceID. Only effective if Patient Verification Retry Interval is specified. -1 = forever.
+
+    (dcmPatientVerificationMaxRetries)"
+    "
+    .. _dcmPatientVerificationMaxStaleness:
+
+    :ref:`Patient Verification Maximum Staleness <dcmPatientVerificationMaxStaleness>`",string,"Indicates to renew the verification of Patient Demographics on receive of objects for a patient, if previous verification is longer ago as the specified Interval. If absent, Patient Verification on receive of objects is disabled.
+
+    (dcmPatientVerificationMaxStaleness)"
     "
     .. _hl7ADTSendingApplication:
 
@@ -852,6 +900,7 @@ DICOM Archive Device related information
     ":doc:`storage` (s)",object,"Specifies Storage System"
     ":doc:`queryRetrieveView` (s)",object,"Specifies behavior on Rejection Note Stored"
     ":doc:`queue` (s)",object,"Managed JMS Queue"
+    ":doc:`pdqService` (s)",object,"PDQ Service Descriptor"
     ":doc:`exporter` (s)",object,"Exporter Descriptor"
     ":doc:`exportRule` (s)",object,"Export Rules applied to DICOM objects received by any AE. May be supplemented by configured Export Rules for particular Archive Network AEs."
     ":doc:`prefetchRule` (s)",object,"Prefetch Rules applied to DICOM objects received by any AE. May be supplemented by configured Prefetch Rules for particular Archive Network AEs."
@@ -888,6 +937,7 @@ DICOM Archive Device related information
     storage
     queryRetrieveView
     queue
+    pdqService
     exporter
     exportRule
     prefetchRule
