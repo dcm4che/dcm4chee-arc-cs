@@ -31,7 +31,7 @@ Message Structure
    | Minor failure : '4'"
    EventOutcomeDescription, M, | Error/Exception message when EventOutcomeIndicator : '4'
 
-.. csv-table:: Active Participant: Archive application
+.. csv-table:: Active Participant: User
    :name: active-participant-user-data-export
    :widths: 30, 5, 65
    :header: Field Name, Opt, Description
@@ -103,6 +103,8 @@ Message Structure
 Sample Message
 --------------
 
+Scheduler Triggered
+
 .. code-block:: xml
 
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -135,4 +137,45 @@ Sample Message
             <ParticipantObjectIDTypeCode csd-code="urn:uuid:a54d6aa5-d40d-43f9-88c5-b4633d873bdd" originalText="submission set classificationNode" codeSystemName="IHE XDS Metadata"/>
         </ParticipantObjectIdentification>
     
+    </AuditMessage>
+
+User Triggered
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+
+        <EventIdentification EventActionCode="R" EventDateTime="2018-10-23T17:16:34.737+02:00" EventOutcomeIndicator="0">
+            <EventID csd-code="110106" codeSystemName="DCM" originalText="Export"/>
+            <EventTypeCode csd-code="ITI-41" codeSystemName="IHE Transactions" originalText="Provide and Register Document Set-b"/>
+        </EventIdentification>
+
+        <ActiveParticipant UserID="xds-i:https://localhost:9443/xdstools4/sim/default__rr/rep/prb" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID"/>
+            <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
+        </ActiveParticipant>
+
+        <ActiveParticipant UserID="/dcm4chee-arc/aets/DCM4CHEE/rs/studies/1.113654.1.2001.30/export/XDS-I" AlternativeUserID="11550" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID"/>
+            <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
+        </ActiveParticipant>
+
+        <ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+            <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
+        </ActiveParticipant>
+
+        <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+            <AuditSourceTypeCode csd-code="4"/>
+        </AuditSourceIdentification>
+
+        <ParticipantObjectIdentification ParticipantObjectID="CR3^^^Site A&amp;1.2.40.0.13.1.1.999.111.1111&amp;ISO" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+            <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
+            <ParticipantObjectName>CRTHREE^PAUL</ParticipantObjectName>
+        </ParticipantObjectIdentification>
+
+        <ParticipantObjectIdentification ParticipantObjectID="2.25.68523793252155806926226351648896230984" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="20">
+            <ParticipantObjectIDTypeCode csd-code="urn:uuid:a54d6aa5-d40d-43f9-88c5-b4633d873bdd" originalText="submission set classificationNode" codeSystemName="IHE XDS Metadata"/>
+        </ParticipantObjectIdentification>
+
     </AuditMessage>
