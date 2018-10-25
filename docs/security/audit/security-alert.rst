@@ -193,6 +193,10 @@ Software Configuration Changes
             <EventTypeCode csd-code="110131" codeSystemName="DCM" originalText="Software Configuration"/>
         </EventIdentification>
 
+        <ActiveParticipant UserID="/dcm4chee-arc/devices/dcm4chee-arc" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
+        </ActiveParticipant>
+
         <ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
             <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
         </ActiveParticipant>
