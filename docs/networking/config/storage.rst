@@ -56,6 +56,12 @@ Storage Descriptor
 
     (dcmDeleterThreshold)"
     "
+    .. _dcmDeleterThreads:
+
+    :ref:`Deleter Threads <dcmDeleterThreads>`",integer,"Number of Threads used for deletion of objects from the Storage System.
+
+    (dcmDeleterThreads)"
+    "
     .. _dcmExternalRetrieveAET:
 
     :ref:`External Retrieve AET <dcmExternalRetrieveAET>`",string,"Constrain deletion of Studies, if usable space falls below the configured threshold, to Studies which objects are retrievable using this AE from an external C-MOVE SCP.
