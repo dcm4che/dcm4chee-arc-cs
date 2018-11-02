@@ -38,6 +38,12 @@ DICOM Archive Device related information
 
     (dcmSeriesMetadataFetchSize)"
     "
+    .. _dcmSeriesMetadataThreads:
+
+    :ref:`Update Series Metadata Threads <dcmSeriesMetadataThreads>`",integer,"Number of Threads used for creation and update of Series Metadata.
+
+    (dcmSeriesMetadataThreads)"
+    "
     .. _dcmPurgeInstanceRecords:
 
     :ref:`Purge Instance Records <dcmPurgeInstanceRecords>`",boolean,"Indicates that Instance Records may be purged from the DB.
