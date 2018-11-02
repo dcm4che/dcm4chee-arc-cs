@@ -80,14 +80,15 @@ Message Structure
 
 .. csv-table:: Participant Object Identification : Patient
    :name: participant-object-patient-patient-record
-   :widths: 30, 5, 65
-   :header: Field Name, Opt, Description
+   :widths: 30, 5, 65, 10
+   :header: Field Name, Opt, Description, Note
 
-   ParticipantObjectID, M, Patient ID
-   ParticipantObjectTypeCode, M, Person : '1'
-   ParticipantObjectTypeCodeRole, M, Patient : '1'
-   ParticipantObjectIDTypeCode, M,  "EV (2, RFC-3881, 'Patient Number')"
-   ParticipantObjectName, U, Patient Name
+   ParticipantObjectID, M, Patient ID,
+   ParticipantObjectTypeCode, M, Person : '1',
+   ParticipantObjectTypeCodeRole, M, Patient : '1',
+   ParticipantObjectIDTypeCode, M,  "EV (2, RFC-3881, 'Patient Number')",
+   ParticipantObjectName, U, Patient Name,
+   ParticipantObjectDataLifeCycle, U, Verification ⇒ '4', Present only for audits triggered by PDQ Service
    ParticipantObjectDetail, U, If Patient record created/updated/deleted by HL7 messages : 'type=HL7v2 value=<Base-64 encoded HL7 message>'
    ParticipantObjectDetail, U, If Patient record created/updated/deleted by HL7 messages : 'type=HL7v2 value=<Base-64 encoded HL7 response>'
 
