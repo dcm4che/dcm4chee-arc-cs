@@ -782,6 +782,12 @@ DICOM Archive Device related information
 
     (dcmPatientVerificationFetchSize)"
     "
+    .. _dcmPatientVerificationAdjustIssuerOfPatientID:
+
+    :ref:`Patient Verification Fetch Size <dcmPatientVerificationAdjustIssuerOfPatientID>`",boolean,"Indicates if the Issuer Of Patient ID shall be adjusted to the value returned by the PDQ Service.
+
+    (dcmPatientVerificationAdjustIssuerOfPatientID)"
+    "
     .. _dcmPatientVerificationPeriod:
 
     :ref:`Patient Verification Period <dcmPatientVerificationPeriod>`",string,"Period in which Patient Demographic will be verified. If absent, Patient Verification will not be renewed for Patients verified in the past.
