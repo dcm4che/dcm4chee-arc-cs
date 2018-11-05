@@ -13,6 +13,7 @@ This message is emitted by the archive in following cases :
 - One or more task(s) were canceled, rescheduled or deleted using Monitoring page of Archive UI.
 - If a super user logs in or logs out of secured Archive UI.
 - If any user updates his/her password using secured Archive UI.
+- If any Keycloak admin user performs actions within admin console
 
 Message Structure
 -----------------
@@ -26,6 +27,7 @@ Message Structure
     :ref:`participant-object-ldap-security-alert`, Present only in Software Configuration changes case
     :ref:`participant-object-task-security-alert`, Present only in Cancel/Reschedule/Delete task case
     :ref:`participant-object-tasks-security-alert`, Present only in Cancel/Reschedule/Delete tasks case
+    :ref:`participant-object-keycloak-admin-event`, Present only if Keycloak admin user performs actions within admin console
 
 .. csv-table:: Event Identification
    :name: event-identification-security-alert
@@ -46,7 +48,10 @@ Message Structure
    | User Password update case ⇒ DT (110137, DCM, 'User security Attributes Changed')
    | Cancel Task(s) case ⇒ DT (CANCEL, 99DCM4CHEE, 'Cancel Task')
    | Reschedule Task(s) case ⇒ DT (RESCHEDULE, 99DCM4CHEE, 'Reschedule Task')
-   | Delete Task(s) case ⇒ DT (DELETE, 99DCM4CHEE, 'Delete Task')"
+   | Delete Task(s) case ⇒ DT (DELETE, 99DCM4CHEE, 'Delete Task')
+   | Keycloak admin event Operation Type as CREATE, UPDATE or DELETE ⇒ DT (110129, DCM, 'Security Configuration')
+   | Keycloak admin event Operation Type as CREATE and Resource Type as REALM_ROLE_MAPPING or CLIENT_ROLE_MAPPING ⇒ DT (110136, DCM, 'Security Roles Changed')
+   | Keycloak admin event Operation Type as UPDATE and Resource Type as USER ⇒ DT (110137, DCM, 'Security Attributes Changed')"
 
 .. csv-table:: Active Participant: Source
    :name: active-participant-initiator-security-alert
@@ -57,6 +62,7 @@ Message Structure
    | Association Events Failure case ⇒ 'AE title of remote side used in association'
    | Super user login or logout using Secured archive ⇒ 'User name of logged in user'
    | Password Update of User using Secured archive ⇒ 'User name of logged in user'
+   | Keycloak admin user performs any action in admin console ⇒ 'User name of logged in user'
    | Cancel, Reschedule or Delete Task(s) : Secured archive ⇒ 'User name of logged in user'
    | Cancel, Reschedule or Delete Task(s) : Unsecured archive ⇒ 'Remote IP address'
    | Software configuration changes done over UI : Secured archive ⇒ 'User name of logged in user'
@@ -82,6 +88,7 @@ Message Structure
 
    UserID, M, "| Association Events Failure case ⇒ AE title of Archive used in Association
    | Cancel, Reschedule or Delete Task(s) and Software Configuration Changes case ⇒ RESTful service invoked of Archive
+   | Keycloak admin user performs any action in admin console ⇒ Keycloak device name
    | For all other cases ⇒ Archive device name"
    UserIDTypeCode, U, "| Association Events Failure case ⇒ EV (110119, DCM, 'Station AE Title')
    | Cancel, Reschedule or Delete Task(s) and Software Configuration Changes case ⇒ EV (12, RFC-3881, 'URI')
@@ -108,7 +115,7 @@ Message Structure
    :widths: 30, 5, 65
    :header: Field Name, Opt, Description
 
-   ParticipantObjectID, M, Name of device being created/updated/deleted
+   ParticipantObjectID, M, JMS Message ID of the canceled/rescheduled/deleted task
    ParticipantObjectTypeCode, M, SystemObject ⇒ '2'
    ParticipantObjectIDTypeCode, M, "EV (TASK, 99DCM4CHEE, 'Archive Task')"
    ParticipantObjectDetail, M, 'type=Task value=<Base-64 encoded complete queue message>'
@@ -118,11 +125,22 @@ Message Structure
    :widths: 30, 5, 65
    :header: Field Name, Opt, Description
 
-   ParticipantObjectID, M, Name of device being created/updated/deleted
+   ParticipantObjectID, M, CancelTasks or RescheduleTasks or DeleteTasks
    ParticipantObjectTypeCode, M, SystemObject ⇒ '2'
    ParticipantObjectIDTypeCode, M, "EV (TASKS, 99DCM4CHEE, 'Archive Tasks')"
    ParticipantObjectDetail, M, "| 'type=Count value=<Base-64 encoded count of total Canceled/Rescheduled/Deleted tasks>'
    | If filter(s) set on service invoke ⇒ 'type=Filters value=<Base-64 encoded query params used for Cancel/Reschedule/Delete tasks service>'"
+
+.. csv-table:: Participant Object Identification
+   :name: participant-object-keycloak-admin-event
+   :widths: 30, 5, 65
+   :header: Field Name, Opt, Description
+
+   ParticipantObjectID, M, Name of Keycloak device
+   ParticipantObjectTypeCode, M, SystemObject ⇒ '2'
+   ParticipantObjectIDTypeCode, M, "EV (113877, DCM, 'Device Name')"
+   ParticipantObjectDetail, M, 'type=Alert Description value=<Base-64 encoded Representation and Resource Path changes returned by Keycloak>'
+
 
 Sample Message
 --------------
@@ -326,6 +344,38 @@ Delete Export Tasks
             <ParticipantObjectIDTypeCode csd-code="TASKS" originalText="Archive Tasks" codeSystemName="99DCM4CHEE"/>
             <ParticipantObjectDetail type="Filters" value="c3RhdHVzPUNPTVBMRVRFRA=="/>
             <ParticipantObjectDetail type="Count" value="Mg=="/>
+        </ParticipantObjectIdentification>
+
+    </AuditMessage>
+
+Keycloak Admin Event
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+
+        <EventIdentification EventActionCode="C" EventDateTime="2018-10-29T14:39:19.406+01:00" EventOutcomeIndicator="0">
+            <EventID csd-code="110113" codeSystemName="DCM" originalText="Security Alert"/>
+            <EventTypeCode csd-code="110129" codeSystemName="DCM" originalText="Security Configuration"/>
+            <EventOutcomeDescription>CLIENT</EventOutcomeDescription>
+        </EventIdentification>
+
+        <ActiveParticipant UserID="admin" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+            <UserIDTypeCode csd-code="113871" codeSystemName="DCM" originalText="Person ID"/>
+        </ActiveParticipant>
+
+        <ActiveParticipant UserID="keycloak" AlternativeUserID="17431" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <UserIDTypeCode csd-code="113877" codeSystemName="DCM" originalText="Device Name"/>
+        </ActiveParticipant>
+
+        <AuditSourceIdentification AuditSourceID="keycloak">
+            <AuditSourceTypeCode csd-code="4"/>
+        </AuditSourceIdentification>
+
+        <ParticipantObjectIdentification ParticipantObjectID="keycloak" ParticipantObjectTypeCode="2">
+            <ParticipantObjectIDTypeCode csd-code="113877" originalText="Device Name" codeSystemName="DCM"/>
+            <ParticipantObjectDetail type="Alert Description" value="UmVwcmVzZW50YXRpb246IHsiY2xpZW50SWQiOiJ0ZXN0IiwiZW5hYmxlZCI6dHJ1ZSwicmVkaXJlY3RVcmlzIjpbXSwicHJvdG9jb2wiOiJvcGVuaWQtY29ubmVjdCIsImF0dHJpYnV0ZXMiOnt9fQpSZXNvdXJjZVBhdGg6IGNsaWVudHMvYzIwZWFiMjEtY2FhNC00NjhjLThjNWMtNWU4YmY3N2RkNTIy"/>
         </ParticipantObjectIdentification>
 
     </AuditMessage>
