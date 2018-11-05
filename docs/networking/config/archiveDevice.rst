@@ -784,7 +784,7 @@ DICOM Archive Device related information
     "
     .. _dcmPatientVerificationAdjustIssuerOfPatientID:
 
-    :ref:`Patient Verification Fetch Size <dcmPatientVerificationAdjustIssuerOfPatientID>`",boolean,"Indicates if the Issuer Of Patient ID shall be adjusted to the value returned by the PDQ Service.
+    :ref:`Patient Verification Adjust Issuer of Patient ID <dcmPatientVerificationAdjustIssuerOfPatientID>`",boolean,"Indicates if the Issuer Of Patient ID shall be adjusted to the value returned by the PDQ Service.
 
     (dcmPatientVerificationAdjustIssuerOfPatientID)"
     "
