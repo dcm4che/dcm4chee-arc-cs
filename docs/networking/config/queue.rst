@@ -62,6 +62,24 @@ Managed JMS Queue
 
     (dcmPurgeQueueMessageCompletedDelay)"
     "
+    .. _dcmPurgeQueueMessageFailedDelay:
+
+    :ref:`Delay for purging failed queue messages <dcmPurgeQueueMessageFailedDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which failed queue messages are purged. If absent, there is no deletion for that particular queue
+
+    (dcmPurgeQueueMessageFailedDelay)"
+    "
+    .. _dcmPurgeQueueMessageWarningDelay:
+
+    :ref:`Delay for purging warning queue messages <dcmPurgeQueueMessageWarningDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which warning queue messages are purged. If absent, there is no deletion for that particular queue
+
+    (dcmPurgeQueueMessageWarningDelay)"
+    "
+    .. _dcmPurgeQueueMessageCanceledDelay:
+
+    :ref:`Delay for purging canceled queue messages <dcmPurgeQueueMessageCanceledDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which canceled queue messages are purged. If absent, there is no deletion for that particular queue
+
+    (dcmPurgeQueueMessageCanceledDelay)"
+    "
     .. _dcmMaxQueueSize:
 
     :ref:`Maximum Queue Size <dcmMaxQueueSize>`",integer,"Maximal number of scheduled tasks in the queue. If the number of scheduled tasks reaches the limit, an attempt to schedule another tasks will fail. 0 = no limitation.
