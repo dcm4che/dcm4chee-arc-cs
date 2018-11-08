@@ -915,7 +915,7 @@ DICOM Archive Device related information
     ":doc:`pdqService` (s)",object,"PDQ Service Descriptor"
     ":doc:`exporter` (s)",object,"Exporter Descriptor"
     ":doc:`exportRule` (s)",object,"Export Rules applied to DICOM objects received by any AE. May be supplemented by configured Export Rules for particular Archive Network AEs."
-    ":doc:`prefetchRule` (s)",object,"Prefetch Rules applied to DICOM objects received by any AE. May be supplemented by configured Prefetch Rules for particular Archive Network AEs."
+    ":doc:`exportPriorsRule` (s)",object,"Export Priors Rules applied to DICOM objects received by any AE. May be supplemented by configured Export Priors Rules for particular Archive Network AEs."
     ":doc:`rsForwardRule` (s)",object,"RESTful Forward Rules. May be supplemented by configured RESTful Forward Rules for particular Archive Network AEs."
     ":doc:`keycloakServer` (s)",object,"Keycloak Server"
     ":doc:`archiveCompressionRule` (s)",object,"Compression rules applied to DICOM objects received by any AE. May be supplemented by configured Compression Rules for particular Archive Network AEs."
@@ -925,7 +925,8 @@ DICOM Archive Device related information
     ":doc:`storeAccessControlIDRule` (s)",object,"Store Access Control Rules applied to Studies received by any AE. May be supplemented by configured Store Access Control Rules for particular Archive Network AEs."
     ":doc:`idGenerator` (s)",object,"ID Generator"
     ":doc:`hl7ForwardRule` (s)",object,"HL7 Forward Rules for HL7 messages received by any HL7 Application. May be supplemented by configured HL7 Forward Rules for particular HL7 Applications."
-    ":doc:`hl7PrefetchRule` (s)",object,"Prefetch Rules applied to HL7 messages received by any HL7 Application. May be supplemented by configured Prefetch Rules for particular HL7 Application."
+    ":doc:`hl7ExportRule` (s)",object,"Export Rules applied to HL7 messages received by any HL7 Application. May be supplemented by configured HL7 Export Rules for particular HL7 Application."
+    ":doc:`hl7PrefetchRule` (s)",object,"HL7 Prefetch Rules applied to HL7 messages received by any HL7 Application. May be supplemented by configured HL7 Prefetch Rules for particular HL7 Application."
     ":doc:`hl7StudyRetentionPolicy` (s)",object,"HL7 Study Retention Policies triggered by HL7 messages received by any HL7 Application. May be supplemented by configured Study Retention Policies for particular HL7 Applications."
     ":doc:`hl7OrderScheduledStation` (s)",object,"Scheduled Station selected on MWL HL7 Order Feed received by any HL7 Application. May be supplemented by configured values for particular HL7 Applications."
     ":doc:`hl7OrderSPSStatus` (s)",object,"Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages. May be overwritten by configured values for particular Archive HL7 Application."
@@ -952,7 +953,7 @@ DICOM Archive Device related information
     pdqService
     exporter
     exportRule
-    prefetchRule
+    exportPriorsRule
     rsForwardRule
     keycloakServer
     archiveCompressionRule
@@ -962,6 +963,7 @@ DICOM Archive Device related information
     storeAccessControlIDRule
     idGenerator
     hl7ForwardRule
+    hl7ExportRule
     hl7PrefetchRule
     hl7StudyRetentionPolicy
     hl7OrderScheduledStation
