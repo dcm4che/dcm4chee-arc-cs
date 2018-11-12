@@ -76,7 +76,7 @@ Exporter Descriptor
     "
     .. _dcmSchedule:
 
-    :ref:`Schedule(s) <dcmSchedule>`",string,"Schedule Expression in format 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)
+    :ref:`Export Schedule(s) <dcmSchedule>`",string,"Delay export to specified time periods. If no Export Schedule is specified, queue the export task for processing immediately. Format: 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)
 
     (dcmSchedule)"
     "

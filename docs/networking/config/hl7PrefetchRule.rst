@@ -34,7 +34,7 @@ HL7 Prefetch Rule
     "
     .. _dcmPrefetchCStoreSCP:
 
-    :ref:`Prefetch C-Store SCP <dcmPrefetchCStoreSCP>`",string,"AE Title of C-STORE SCP to which selected Studies are retrieved.
+    :ref:`Prefetch C-Store SCP(s) <dcmPrefetchCStoreSCP>`",string,"AE Title of C-STORE SCP to which selected Studies are retrieved.
 
     (dcmPrefetchCStoreSCP)"
     "
@@ -43,6 +43,24 @@ HL7 Prefetch Rule
     :ref:`Conditions(s) <dcmProperty>`",string,"Conditions in format {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Example: MSH-9=ORM\^O01
 
     (dcmProperty)"
+    "
+    .. _dcmSchedule:
+
+    :ref:`Prefetch Schedule(s) <dcmSchedule>`",string,"Delay prefetch to specified time periods. If no Prefetch Schedule is specified, queue a Prefetch Task for the selected Studies of the Patient immediately. Format: 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)
+
+    (dcmSchedule)"
+    "
+    .. _dcmNullifyIssuerOfPatientID:
+
+    :ref:`Ignore Assigning Authority of Patient ID <dcmNullifyIssuerOfPatientID>`",string,"Conditionally ignore Assigning Authority of Patient ID (PID-3.4) in received HL7 message which triggered the prefetch for selecting Studies of the Patient. Enumerated values: ALWAYS, MATCHING or NOT_MATCHING.
+
+    (dcmNullifyIssuerOfPatientID)"
+    "
+    .. _dcmIssuerOfPatientID:
+
+    :ref:`Assigning Authority of Patient ID(s) <dcmIssuerOfPatientID>`",string,"Assigning Authority of Patient ID against values in received HL7 message are matched, if Assigning Authority of Patient ID is set to MATCHING or NOT_MATCHING. Format: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].
+
+    (dcmIssuerOfPatientID)"
     "
     .. _dcmEntitySelector:
 
