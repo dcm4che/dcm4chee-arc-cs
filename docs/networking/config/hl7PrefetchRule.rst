@@ -44,11 +44,11 @@ HL7 Prefetch Rule
 
     (dcmProperty)"
     "
-    .. _dcmSchedule:
+    .. _dcmEntitySelector:
 
-    :ref:`Prefetch Schedule(s) <dcmSchedule>`",string,"Delay prefetch to specified time periods. If no Prefetch Schedule is specified, queue a Prefetch Task for the selected Studies of the Patient immediately. Format: 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)
+    :ref:`Entity Selector(s) <dcmEntitySelector>`",string,"Specifies matching keys used to select Studies to prefetch. Format: {key}={value}[&{key}={value)]..., with {key} = 'StudyAge' | {attributeID}. {value} in the format '$'{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]] are replaced by the value of the specified HL7 field from the received HL7 message which triggered the prefetch. If no Entity Selector is specified, all Studies for the Patient will be pre-fetched. Example: 'StudyInstanceUID=$ZDS-1.1' => select the Study with the Study Instance UID from ZDS-1.1.
 
-    (dcmSchedule)"
+    (dcmEntitySelector)"
     "
     .. _dcmNullifyIssuerOfPatientID:
 
@@ -62,14 +62,14 @@ HL7 Prefetch Rule
 
     (dcmIssuerOfPatientID)"
     "
-    .. _dcmEntitySelector:
-
-    :ref:`Entity Selector(s) <dcmEntitySelector>`",string,"Specifies matching keys used to select Studies to prefetch. Format: {key}={value}[&{key}={value)]..., with {key} = 'StudyAge' | {attributeID}. {value} in the format '$'{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]] are replaced by the value of the specified HL7 field from the received HL7 message which triggered the prefetch. If no Entity Selector is specified, all Studies for the Patient will be pre-fetched. Example: 'StudyInstanceUID=$ZDS-1.1' => select the Study with the Study Instance UID from ZDS-1.1.
-
-    (dcmEntitySelector)"
-    "
     .. _dcmDuration:
 
     :ref:`Suppress Duplicate Retrieve Interval <dcmDuration>`",string,"Suppress Retrieve of Studies already retrieved not earlier than the specified interval to avoid duplicate retrieves.
 
     (dcmDuration)"
+    "
+    .. _dcmSchedule:
+
+    :ref:`Prefetch Schedule(s) <dcmSchedule>`",string,"Delay prefetch to specified time periods. If no Prefetch Schedule is specified, queue a Prefetch Task for the selected Studies of the Patient immediately. Format: 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)
+
+    (dcmSchedule)"
