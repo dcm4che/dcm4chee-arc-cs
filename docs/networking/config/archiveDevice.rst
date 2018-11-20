@@ -22,13 +22,13 @@ DICOM Archive Device related information
     "
     .. _dcmSeriesMetadataDelay:
 
-    :ref:`Aggregate Series Metadata Delay <dcmSeriesMetadataDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS for storing aggregated Series Metadata on storage. If absent, no aggregated Series Metadata will be stored.
+    :ref:`Aggregate Series Metadata Delay <dcmSeriesMetadataDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMnS for storing aggregated Series Metadata on storage. If absent, no aggregated Series Metadata will be stored.
 
     (dcmSeriesMetadataDelay)"
     "
     .. _dcmSeriesMetadataPollingInterval:
 
-    :ref:`Update Series Metadata Polling Interval <dcmSeriesMetadataPollingInterval>`",string,"Polling Interval for Series scheduled for Metadata update in ISO-8601 duration format PnDTnHnMn.nS. If absent, no aggregated Series Metadata will be stored.
+    :ref:`Update Series Metadata Polling Interval <dcmSeriesMetadataPollingInterval>`",string,"Polling Interval for Series scheduled for Metadata update in ISO-8601 duration format PnDTnHnMnS. If absent, no aggregated Series Metadata will be stored.
 
     (dcmSeriesMetadataPollingInterval)"
     "
@@ -52,13 +52,13 @@ DICOM Archive Device related information
     "
     .. _dcmPurgeInstanceRecordsDelay:
 
-    :ref:`Purge Instance Records Delay <dcmPurgeInstanceRecordsDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS for purging Instance Records from the DB. May be overwritten by configured values for particular Archive Network AEs. Only effective, if Purge Instance Records = true.
+    :ref:`Purge Instance Records Delay <dcmPurgeInstanceRecordsDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMnS for purging Instance Records from the DB. May be overwritten by configured values for particular Archive Network AEs. Only effective, if Purge Instance Records = true.
 
     (dcmPurgeInstanceRecordsDelay)"
     "
     .. _dcmPurgeInstanceRecordsPollingInterval:
 
-    :ref:`Purge Instance Records Polling Interval <dcmPurgeInstanceRecordsPollingInterval>`",string,"Polling Interval for Series scheduled for purging Instance Records from the DB in ISO-8601 duration format PnDTnHnMn.nS. Only effective, if Purge Instance Records = true.
+    :ref:`Purge Instance Records Polling Interval <dcmPurgeInstanceRecordsPollingInterval>`",string,"Polling Interval for Series scheduled for purging Instance Records from the DB in ISO-8601 duration format PnDTnHnMnS. Only effective, if Purge Instance Records = true.
 
     (dcmPurgeInstanceRecordsPollingInterval)"
     "
@@ -118,7 +118,7 @@ DICOM Archive Device related information
     "
     .. _dcmSendPendingCMoveInterval:
 
-    :ref:`Send Pending C-Move Interval <dcmSendPendingCMoveInterval>`",string,"Interval of pending C-MOVE responses in ISO-8601 duration format PnDTnHnMn.nS; disabled if absent. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`Send Pending C-Move Interval <dcmSendPendingCMoveInterval>`",string,"Interval of pending C-MOVE responses in ISO-8601 duration format PnDTnHnMnS; disabled if absent. May be overwritten by configured values for particular Archive Network AEs.
 
     (dcmSendPendingCMoveInterval)"
     "
@@ -184,13 +184,13 @@ DICOM Archive Device related information
     "
     .. _dcmIanDelay:
 
-    :ref:`IAN Delay <dcmIanDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which an IAN for a received study is sent to configured IAN destinations. If absent, IANs are triggered by received MPPS. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`IAN Delay <dcmIanDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMnS after which an IAN for a received study is sent to configured IAN destinations. If absent, IANs are triggered by received MPPS. May be overwritten by configured values for particular Archive Network AEs.
 
     (dcmIanDelay)"
     "
     .. _dcmIanTimeout:
 
-    :ref:`IAN Timeout <dcmIanTimeout>`",string,"Timeout in ISO-8601 duration format PnDTnHnMn.nS for waiting on receive of instances referenced in MPPS; check for completeness forever if absent. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`IAN Timeout <dcmIanTimeout>`",string,"Timeout in ISO-8601 duration format PnDTnHnMnS for waiting on receive of instances referenced in MPPS; check for completeness forever if absent. May be overwritten by configured values for particular Archive Network AEs.
 
     (dcmIanTimeout)"
     "
@@ -202,7 +202,7 @@ DICOM Archive Device related information
     "
     .. _dcmIanTaskPollingInterval:
 
-    :ref:`IAN Task Polling Interval <dcmIanTaskPollingInterval>`",string,"Polling Interval for IAN Tasks in ISO-8601 duration format PnDTnHnMn.nS. IAN disabled, if absent
+    :ref:`IAN Task Polling Interval <dcmIanTaskPollingInterval>`",string,"Polling Interval for IAN Tasks in ISO-8601 duration format PnDTnHnMnS. IAN disabled, if absent
 
     (dcmIanTaskPollingInterval)"
     "
@@ -268,7 +268,7 @@ DICOM Archive Device related information
     "
     .. _dcmExportTaskPollingInterval:
 
-    :ref:`Export Task Polling Interval <dcmExportTaskPollingInterval>`",string,"Export Task Polling Interval in ISO-8601 duration format PnDTnHnMn.nS
+    :ref:`Export Task Polling Interval <dcmExportTaskPollingInterval>`",string,"Export Task Polling Interval in ISO-8601 duration format PnDTnHnMnS.
 
     (dcmExportTaskPollingInterval)"
     "
@@ -280,7 +280,7 @@ DICOM Archive Device related information
     "
     .. _dcmPurgeStoragePollingInterval:
 
-    :ref:`Purge Storage Polling Interval <dcmPurgeStoragePollingInterval>`",string,"Polling Interval for deleting objects in ISO-8601 duration format PnDTnHnMn.nS
+    :ref:`Purge Storage Polling Interval <dcmPurgeStoragePollingInterval>`",string,"Polling Interval for deleting objects in ISO-8601 duration format PnDTnHnMnS.
 
     (dcmPurgeStoragePollingInterval)"
     "
@@ -289,6 +289,18 @@ DICOM Archive Device related information
     :ref:`Purge Storage Fetch Size <dcmPurgeStorageFetchSize>`",integer,"Maximal number of objects to delete in one task.
 
     (dcmPurgeStorageFetchSize)"
+    "
+    .. _dcmFailedToDeletePollingInterval:
+
+    :ref:`Failed to delete Polling Interval <dcmFailedToDeletePollingInterval>`",string,"Polling Interval for resolving deletion failures in ISO-8601 duration format PnDTnHnMnS.
+
+    (dcmFailedToDeletePollingInterval)"
+    "
+    .. _dcmFailedToDeleteFetchSize:
+
+    :ref:`Failed to delete Fetch Size <dcmFailedToDeleteFetchSize>`",integer,"Maximal number of Location records fetched for resolving deletion failures in one query.
+
+    (dcmFailedToDeleteFetchSize)"
     "
     .. _dcmDeleteStudyBatchSize:
 
@@ -304,7 +316,7 @@ DICOM Archive Device related information
     "
     .. _dcmDeleteRejectedPollingInterval:
 
-    :ref:`Delete Rejected Polling Interval <dcmDeleteRejectedPollingInterval>`",string,"Polling Interval for deleting rejected instances from the DB in ISO-8601 duration format PnDTnHnMn.nS
+    :ref:`Delete Rejected Polling Interval <dcmDeleteRejectedPollingInterval>`",string,"Polling Interval for deleting rejected instances from the DB in ISO-8601 duration format PnDTnHnMnS.
 
     (dcmDeleteRejectedPollingInterval)"
     "
@@ -316,19 +328,19 @@ DICOM Archive Device related information
     "
     .. _dcmMaxAccessTimeStaleness:
 
-    :ref:`Maximum Access Time Staleness <dcmMaxAccessTimeStaleness>`",string,"Maximal staleness of recorded study accession time in ISO-8601 duration format PnDTnHnMn.nS. Update of the access time disabled, if absent.
+    :ref:`Maximum Access Time Staleness <dcmMaxAccessTimeStaleness>`",string,"Maximal staleness of recorded study accession time in ISO-8601 duration format PnDTnHnMnS. Update of the access time disabled, if absent.
 
     (dcmMaxAccessTimeStaleness)"
     "
     .. _dcmAECacheStaleTimeout:
 
-    :ref:`AE Cache Stale Timeout <dcmAECacheStaleTimeout>`",string,"Maximal staleness of cached AE in ISO-8601 duration format PnDTnHnMn.nS. If absent, cached AE entries will not be refetched from LDAP.
+    :ref:`AE Cache Stale Timeout <dcmAECacheStaleTimeout>`",string,"Maximal staleness of cached AE in ISO-8601 duration format PnDTnHnMnS. If absent, cached AE entries will not be refetched from LDAP.
 
     (dcmAECacheStaleTimeout)"
     "
     .. _dcmLeadingCFindSCPQueryCacheStaleTimeout:
 
-    :ref:`Leading C-Find SCP Query Cache Stale Timeout <dcmLeadingCFindSCPQueryCacheStaleTimeout>`",string,"Maximal staleness of cached Patient and Study attributes fetched from leading C-Find SCP in ISO-8601 duration format PnDTnHnMn.nS. If absent, cache Study attributes are only removed on reaching the maximal cache size.
+    :ref:`Leading C-Find SCP Query Cache Stale Timeout <dcmLeadingCFindSCPQueryCacheStaleTimeout>`",string,"Maximal staleness of cached Patient and Study attributes fetched from leading C-Find SCP in ISO-8601 duration format PnDTnHnMnS. If absent, cache Study attributes are only removed on reaching the maximal cache size.
 
     (dcmLeadingCFindSCPQueryCacheStaleTimeout)"
     "
@@ -346,13 +358,13 @@ DICOM Archive Device related information
     "
     .. _dcmAuditPollingInterval:
 
-    :ref:`Audit Polling Interval <dcmAuditPollingInterval>`",string,"Polling Interval for aggregating Audit Messages in ISO-8601 duration format PnDTnHnMn.nS. Audit Message aggregation disabled, if absent.
+    :ref:`Audit Polling Interval <dcmAuditPollingInterval>`",string,"Polling Interval for aggregating Audit Messages in ISO-8601 duration format PnDTnHnMnS. Audit Message aggregation disabled, if absent.
 
     (dcmAuditPollingInterval)"
     "
     .. _dcmAuditAggregateDuration:
 
-    :ref:`Audit Aggregate Duration <dcmAuditAggregateDuration>`",string,"Audit Message Aggregation Duration in ISO-8601 duration format PnDTnHnMn.nS. Audit Message aggregation disabled, if absent.
+    :ref:`Audit Aggregate Duration <dcmAuditAggregateDuration>`",string,"Audit Message Aggregation Duration in ISO-8601 duration format PnDTnHnMnS. Audit Message aggregation disabled, if absent.
 
     (dcmAuditAggregateDuration)"
     "
@@ -448,7 +460,7 @@ DICOM Archive Device related information
     "
     .. _dcmPurgeQueueMessagePollingInterval:
 
-    :ref:`Purge Queue Messages Polling Interval <dcmPurgeQueueMessagePollingInterval>`",string,"Polling Interval for purging queue messages in ISO-8601 duration format PnDTnHnMn.nS. If absent, there is no deletion
+    :ref:`Purge Queue Messages Polling Interval <dcmPurgeQueueMessagePollingInterval>`",string,"Polling Interval for purging queue messages in ISO-8601 duration format PnDTnHnMnS. If absent, there is no deletion
 
     (dcmPurgeQueueMessagePollingInterval)"
     "
@@ -460,7 +472,7 @@ DICOM Archive Device related information
     "
     .. _dcmRejectExpiredStudiesPollingInterval:
 
-    :ref:`Reject Expired Studies Polling Interval <dcmRejectExpiredStudiesPollingInterval>`",string,"Polling Interval for rejecting expired Studies and Series in ISO-8601 duration format PnDTnHnMn.nS. If absent, neither expired Studies nor Series will be rejected automatically
+    :ref:`Reject Expired Studies Polling Interval <dcmRejectExpiredStudiesPollingInterval>`",string,"Polling Interval for rejecting expired Studies and Series in ISO-8601 duration format PnDTnHnMnS. If absent, neither expired Studies nor Series will be rejected automatically
 
     (dcmRejectExpiredStudiesPollingInterval)"
     "
@@ -502,7 +514,7 @@ DICOM Archive Device related information
     "
     .. _dcmStorePermissionCacheStaleTimeout:
 
-    :ref:`Store Permission Cache Stale Timeout <dcmStorePermissionCacheStaleTimeout>`",string,"Maximal staleness of cached responses from Storage Permission Service in ISO-8601 duration format PnDTnHnMn.nS. If absent, cached responses are only removed on reaching the maximal cache size.
+    :ref:`Store Permission Cache Stale Timeout <dcmStorePermissionCacheStaleTimeout>`",string,"Maximal staleness of cached responses from Storage Permission Service in ISO-8601 duration format PnDTnHnMnS. If absent, cached responses are only removed on reaching the maximal cache size.
 
     (dcmStorePermissionCacheStaleTimeout)"
     "
@@ -514,7 +526,7 @@ DICOM Archive Device related information
     "
     .. _dcmMergeMWLCacheStaleTimeout:
 
-    :ref:`Merge MWL Cache Stale Timeout <dcmMergeMWLCacheStaleTimeout>`",string,"Maximal staleness of Request Attributes extracted from matching DICOM MWL items in ISO-8601 duration format PnDTnHnMn.nS. If absent, cached Request Attributes are only removed on reaching the maximal cache size.
+    :ref:`Merge MWL Cache Stale Timeout <dcmMergeMWLCacheStaleTimeout>`",string,"Maximal staleness of Request Attributes extracted from matching DICOM MWL items in ISO-8601 duration format PnDTnHnMnS. If absent, cached Request Attributes are only removed on reaching the maximal cache size.
 
     (dcmMergeMWLCacheStaleTimeout)"
     "
@@ -562,13 +574,13 @@ DICOM Archive Device related information
     "
     .. _dcmPurgeStgCmtCompletedDelay:
 
-    :ref:`Purge Storage Commitment Completed Delay <dcmPurgeStgCmtCompletedDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which results of completed Storage Commitment requests are purged. If absent, there is no deletion.
+    :ref:`Purge Storage Commitment Completed Delay <dcmPurgeStgCmtCompletedDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMnS after which results of completed Storage Commitment requests are purged. If absent, there is no deletion.
 
     (dcmPurgeStgCmtCompletedDelay)"
     "
     .. _dcmPurgeStgCmtPollingInterval:
 
-    :ref:`Purge Storage Commitment Polling Interval <dcmPurgeStgCmtPollingInterval>`",string,"Polling Interval for purging Storage Commitment Results in ISO-8601 duration format PnDTnHnMn.nS. If absent, there is no deletion
+    :ref:`Purge Storage Commitment Polling Interval <dcmPurgeStgCmtPollingInterval>`",string,"Polling Interval for purging Storage Commitment Results in ISO-8601 duration format PnDTnHnMnS. If absent, there is no deletion
 
     (dcmPurgeStgCmtPollingInterval)"
     "
@@ -712,7 +724,7 @@ DICOM Archive Device related information
     "
     .. _dcmStorageVerificationPollingInterval:
 
-    :ref:`Storage Verification Polling Interval <dcmStorageVerificationPollingInterval>`",string,"Polling Interval for Series scheduled for Storage Verification in ISO-8601 duration format PnDTnHnMn.nS.
+    :ref:`Storage Verification Polling Interval <dcmStorageVerificationPollingInterval>`",string,"Polling Interval for Series scheduled for Storage Verification in ISO-8601 duration format PnDTnHnMnS.
 
     (dcmStorageVerificationPollingInterval)"
     "
@@ -736,7 +748,7 @@ DICOM Archive Device related information
     "
     .. _dcmCompressionPollingInterval:
 
-    :ref:`Compression Polling Interval <dcmCompressionPollingInterval>`",string,"Polling Interval for Series to be compressed in ISO-8601 duration format PnDTnHnMn.nS.
+    :ref:`Compression Polling Interval <dcmCompressionPollingInterval>`",string,"Polling Interval for Series to be compressed in ISO-8601 duration format PnDTnHnMnS.
 
     (dcmCompressionPollingInterval)"
     "
@@ -844,7 +856,7 @@ DICOM Archive Device related information
     "
     .. _hl7PSUDelay:
 
-    :ref:`HL7 Procedure Status Update Delay <hl7PSUDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which an HL7 Procedure Status Update for a received study is sent to configured HL7 receivers. If absent, HL7 Procedure Status Update is triggered by received MPPS. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`HL7 Procedure Status Update Delay <hl7PSUDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMnS after which an HL7 Procedure Status Update for a received study is sent to configured HL7 receivers. If absent, HL7 Procedure Status Update is triggered by received MPPS. May be overwritten by configured values for particular Archive Network AEs.
 
     (hl7PSUDelay)"
     "
@@ -856,7 +868,7 @@ DICOM Archive Device related information
     "
     .. _hl7PSUTimeout:
 
-    :ref:`HL7 Procedure Status Update Timeout <hl7PSUTimeout>`",string,"Timeout in ISO-8601 duration format PnDTnHnMn.nS for waiting on receive of instances referenced in MPPS; check for completeness forever if absent. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`HL7 Procedure Status Update Timeout <hl7PSUTimeout>`",string,"Timeout in ISO-8601 duration format PnDTnHnMnS for waiting on receive of instances referenced in MPPS; check for completeness forever if absent. May be overwritten by configured values for particular Archive Network AEs.
 
     (hl7PSUTimeout)"
     "
@@ -868,7 +880,7 @@ DICOM Archive Device related information
     "
     .. _hl7PSUTaskPollingInterval:
 
-    :ref:`HL7 Procedure Status Update Task Polling Interval <hl7PSUTaskPollingInterval>`",string,"Polling Interval for HL7 Procedure Status Update Tasks in ISO-8601 duration format PnDTnHnMn.nS. Disabled, if absent.
+    :ref:`HL7 Procedure Status Update Task Polling Interval <hl7PSUTaskPollingInterval>`",string,"Polling Interval for HL7 Procedure Status Update Tasks in ISO-8601 duration format PnDTnHnMnS. Disabled, if absent.
 
     (hl7PSUTaskPollingInterval)"
     "
