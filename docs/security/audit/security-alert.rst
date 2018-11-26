@@ -5,6 +5,7 @@ Trigger Events
 --------------
 
 This message is emitted by the archive in following cases :
+
 - Connection Events Failure : Node authentication failure when establishing a secure communications channel.
 - Connection Events Failure : TCP Connection to remote hosts failure.
 - Association Events Failure : Associations rejected by Archive.
