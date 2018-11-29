@@ -16,13 +16,13 @@ Named Attribute Set for Query Parameter 'comparefield' of DIFF-RS and Query Para
     "
     .. _dcmAttributeSetType:
 
-    :ref:`Attribute Set Type <dcmAttributeSetType>`",string,"Specifies if this Attribute Set is used by Query Parameter 'comparefield' of DIFF-RS or by Query Parameter 'includefields' of WADO-RS requests. Enumerated values: DIFF_RS, WADO_RS or LEADING_CFIND_SCP.
+    :ref:`Attribute Set Type <dcmAttributeSetType>`",string,"Specifies if this Attribute Set is used by Query Parameter 'includefields' of QIDO-RS and WADO-RS or by Query Parameter 'comparefield' of DIFF-RS requests. Enumerated values: QIDO_RS, WADO_RS, DIFF_RS or LEADING_CFIND_SCP.
 
     (dcmAttributeSetType)"
     "
     .. _dcmAttributeSetID:
 
-    :ref:`Attribute Set ID <dcmAttributeSetID>`",string,"ID used by Query Parameter 'comparefield' of DIFF-RS requests and by Query Parameter 'includefields' of WADO-RS Metadata requests to refer this Attribute Set.
+    :ref:`Attribute Set ID <dcmAttributeSetID>`",string,"ID used by Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata requests and by Query Parameter 'comparefield' of DIFF-RS requests to refer this Attribute Set.
 
     (dcmAttributeSetID)"
     "

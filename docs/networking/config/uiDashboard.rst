@@ -44,6 +44,12 @@ UI Dashboard Configuration
 
     (dcmuiCountAET)"
     ":doc:`uiCompareSide` (s)",object,"Compare Sides"
+    "
+    .. _dicomuiDockerContainer:
+
+    :ref:`Archive Docker Containers(s) <dicomuiDockerContainer>`",string,"Names of the archive docker containers used in the hardware page
+
+    (dicomuiDockerContainer)"
 
 .. toctree::
 

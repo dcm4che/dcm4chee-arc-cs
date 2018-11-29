@@ -20,6 +20,12 @@ DICOM Archive Device related information
 
     (dcmSeriesMetadataStorageID)"
     "
+    .. _dcmSeriesMetadataSpoolDirectory:
+
+    :ref:`Series Metadata Spool Directory <dcmSeriesMetadataSpoolDirectory>`",string,"Path to Spool Directory used for buffering aggregated Metadata of all instances of a Series before storing it to the specified Storage System to reduce the storage/upload time. If absent, the Metadata is streamed to storage as part of the aggregation without buffering.
+
+    (dcmSeriesMetadataSpoolDirectory)"
+    "
     .. _dcmSeriesMetadataDelay:
 
     :ref:`Aggregate Series Metadata Delay <dcmSeriesMetadataDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMnS for storing aggregated Series Metadata on storage. If absent, no aggregated Series Metadata will be stored.
