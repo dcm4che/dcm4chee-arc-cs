@@ -10,9 +10,15 @@ dcm4che proprietary Device Attributes
     "
     .. _dcmLimitOpenAssociations:
 
-    :ref:`Limit Open Associations <dcmLimitOpenAssociations>`",integer,"Limit open DICOM connections; rejects Association requests if the limit is exceeded. 0 = unlimited.
+    :ref:`Association Limit <dcmLimitOpenAssociations>`",integer,"Maximal number of open DICOM connections; rejects Association requests if the limit is exceeded; 0 = unlimited.
 
     (dcmLimitOpenAssociations)"
+    "
+    .. _dcmLimitAssociationsInitiatedBy:
+
+    :ref:`Association Limit for AE(s) <dcmLimitAssociationsInitiatedBy>`",string,"Maximal number of open DICOM connections initiated by a particular Application Entity (AE) in format <ae-title>=<number>; rejects Association requests from that AE if the limit is exceeded.
+
+    (dcmLimitAssociationsInitiatedBy)"
     "
     .. _dcmTrustStoreURL:
 

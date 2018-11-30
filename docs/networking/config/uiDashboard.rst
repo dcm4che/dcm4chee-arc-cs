@@ -14,6 +14,12 @@ UI Dashboard Configuration
 
     (dcmuiDashboardConfigName)"
     "
+    .. _dcmuiShowStarBlock:
+
+    :ref:`Show Star Block <dcmuiShowStarBlock>`",boolean,"Show Star Block - tasks without defined deviceName
+
+    (dcmuiShowStarBlock)"
+    "
     .. _dcmuiQueueName:
 
     :ref:`Queues(s) <dcmuiQueueName>`",string,"Queue Names for UI Dashboard Configuration used in queue block
