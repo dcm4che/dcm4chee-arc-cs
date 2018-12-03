@@ -32,9 +32,15 @@ PDQ Service Descriptor
 
     (dcmTag)"
     "
+    .. _dcmEntity:
+
+    :ref:`Query Entity <dcmEntity>`",string,"Indicates if the C-FIND SCP is queried for a particular Patient or for Studies of a particular Patient. Only effective for DICOM PDQ Services (URI: pdq-dicom:{AETitle}). Enumerated values: Patient or Study.
+
+    (dcmEntity)"
+    "
     .. _dcmDefaultCharacterSet:
 
-    :ref:`Default Character Set <dcmDefaultCharacterSet>`",string,"Value of Specific Character Set (0008,0005) added to Data Sets without Specific Character Set (0008,0005) attribute received from the DICOM Patient Root Query C-FIND SCP. Only effective for DICOM PDQ Services (URI: pdq-dicom:{AETitle})
+    :ref:`Default Character Set <dcmDefaultCharacterSet>`",string,"Value of Specific Character Set (0008,0005) added to Data Sets without Specific Character Set (0008,0005) attribute received from the C-FIND SCP. Only effective for DICOM PDQ Services (URI: pdq-dicom:{AETitle}).
 
     (dcmDefaultCharacterSet)"
     "
