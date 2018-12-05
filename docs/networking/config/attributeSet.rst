@@ -1,6 +1,6 @@
 Attribute Set
 =============
-Named Attribute Set for Query Parameter 'comparefield' of DIFF-RS and Query Parameter 'includefields' of WADO-RS Metadata requests.
+Named Attribute Set for Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests.
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|
 .. csv-table:: Attribute Set Attributes (LDAP Object: dcmAttributeSet)
@@ -16,7 +16,7 @@ Named Attribute Set for Query Parameter 'comparefield' of DIFF-RS and Query Para
     "
     .. _dcmAttributeSetType:
 
-    :ref:`Attribute Set Type <dcmAttributeSetType>`",string,"Specifies if this Attribute Set is used by Query Parameter 'includefields' of QIDO-RS and WADO-RS or by Query Parameter 'comparefield' of DIFF-RS requests. Enumerated values: QIDO_RS, WADO_RS, DIFF_RS or LEADING_CFIND_SCP.
+    :ref:`Attribute Set Type <dcmAttributeSetType>`",string,"Specifies if this Attribute Set is used by Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests. Enumerated values: QIDO_RS, WADO_RS, DIFF_RS or LEADING_CFIND_SCP.
 
     (dcmAttributeSetType)"
     "

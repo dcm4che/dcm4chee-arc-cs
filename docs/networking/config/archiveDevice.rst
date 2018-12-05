@@ -20,12 +20,6 @@ DICOM Archive Device related information
 
     (dcmSeriesMetadataStorageID)"
     "
-    .. _dcmSeriesMetadataSpoolDirectory:
-
-    :ref:`Series Metadata Spool Directory <dcmSeriesMetadataSpoolDirectory>`",string,"Path to Spool Directory used for buffering aggregated Metadata of all instances of a Series before storing it to the specified Storage System to reduce the storage/upload time. If absent, the Metadata is streamed to storage as part of the aggregation without buffering.
-
-    (dcmSeriesMetadataSpoolDirectory)"
-    "
     .. _dcmSeriesMetadataDelay:
 
     :ref:`Aggregate Series Metadata Delay <dcmSeriesMetadataDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMnS for storing aggregated Series Metadata on storage. If absent, no aggregated Series Metadata will be stored.
@@ -49,6 +43,12 @@ DICOM Archive Device related information
     :ref:`Update Series Metadata Threads <dcmSeriesMetadataThreads>`",integer,"Number of Threads used for creation and update of Series Metadata.
 
     (dcmSeriesMetadataThreads)"
+    "
+    .. _dcmSeriesMetadataRetryInterval:
+
+    :ref:`Update Series Metadata Retry Interval <dcmSeriesMetadataRetryInterval>`",string,"Interval in ISO-8601 duration format PnDTnHnMnS in which failed attempts to create/update aggregated Series Metadata will be retried. If absent, failed attempts will not be retried.
+
+    (dcmSeriesMetadataRetryInterval)"
     "
     .. _dcmPurgeInstanceRecords:
 
@@ -926,7 +926,7 @@ DICOM Archive Device related information
 
     (dcmUIConfigurationDeviceName)"
     ":doc:`attributeFilter` (s)",object,"Specifies Attributes stored in the database"
-    ":doc:`attributeSet` (s)",object,"Named Attribute Set for Query Parameter 'comparefield' of DIFF-RS and Query Parameter 'includefields' of WADO-RS Metadata requests."
+    ":doc:`attributeSet` (s)",object,"Named Attribute Set for Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests."
     ":doc:`storage` (s)",object,"Specifies Storage System"
     ":doc:`queryRetrieveView` (s)",object,"Specifies behavior on Rejection Note Stored"
     ":doc:`queue` (s)",object,"Managed JMS Queue"
