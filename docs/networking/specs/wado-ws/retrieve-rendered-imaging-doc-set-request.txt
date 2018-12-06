@@ -1,5 +1,5 @@
 POST http://localhost:8080/dcm4chee-arc/xdsi/ImagingDocumentSource \
--H 'Content-Type: multipart/related; boundary="MIMEBoundary_4693e5ce87c3f1a8a06ebc9bbc9911b2e46e1863a7ac87ca"; type="application/xop+xml"; start="<0.5693e5ce87c3f1a8a06ebc9bbc9911b2e46e1863a7ac87ca@apache.org>"; start-info="application/soap+xml"; action="urn:dicom:ws:wado:2011:RetrieveRenderedImagingDocumentSet"' \
+-H 'Content-Type: multipart/related; boundary="MIMEBoundary_4693e5ce87c3f1a8a06ebc9bbc9911b2e46e1863a7ac87ca"; type="application/xop+xml"; start="<0.5693e5ce87c3f1a8a06ebc9bbc9911b2e46e1863a7ac87ca@apache.org>"; start-info="application/soap+xml"; action="urn:dicom:wado:ws:2011:RetrieveRenderedImagingDocumentSet"' \
 --data-binary '--MIMEBoundary_4693e5ce87c3f1a8a06ebc9bbc9911b2e46e1863a7ac87ca
 Content-Type: application/xop+xml; charset=UTF-8; type="application/soap+xml"
 Content-Transfer-Encoding: binary
@@ -10,7 +10,7 @@ Content-ID: <0.5693e5ce87c3f1a8a06ebc9bbc9911b2e46e1863a7ac87ca@apache.org>
   <soapenv:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
     <wsa:To soapenv:mustUnderstand="true">http://localhost:8080/dcm4chee-arc/xdsi/ImagingDocumentSource</wsa:To>
     <wsa:MessageID soapenv:mustUnderstand="true">urn:uuid:3FC3AA9541DB19A2CA1509719154150</wsa:MessageID>
-    <wsa:Action soapenv:mustUnderstand="true">urn:dicom:ws:wado:2011:RetrieveRenderedImagingDocumentSet</wsa:Action>
+    <wsa:Action soapenv:mustUnderstand="true">urn:dicom:wado:ws:2011:RetrieveRenderedImagingDocumentSet</wsa:Action>
   </soapenv:Header>
   <soapenv:Body>
     <wado:RetrieveRenderedImagingDocumentSetRequest xmlns:wado="urn:dicom:wado:ws:2011" xmlns:xdsb="urn:ihe:iti:xds-b:2007">

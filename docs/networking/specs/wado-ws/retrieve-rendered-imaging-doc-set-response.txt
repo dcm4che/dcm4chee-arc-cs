@@ -15,7 +15,7 @@ Content-ID: <root.message@cxf.apache.org>
 <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
     <soap:Header>
         <Action xmlns="http://www.w3.org/2005/08/addressing">
-            urn:dicom:ws:wado:2011:RetrieveRenderedImagingDocumentSetResponse
+            urn:dicom:wado:ws:2011:RetrieveRenderedImagingDocumentSetResponse
         </Action>
         <MessageID xmlns="http://www.w3.org/2005/08/addressing">
             urn:uuid:99e92a47-7d59-407f-a5e2-408cb76559c3
