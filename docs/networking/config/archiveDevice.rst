@@ -16,7 +16,7 @@ DICOM Archive Device related information
     "
     .. _dcmBulkDataDescriptorID:
 
-    :ref:`Bulk Data Descriptor ID <dcmBulkDataDescriptorID>`",string,"ID of Bulk Data Descriptor applied by all services providing Metadata of archived instances.  May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`Bulk Data Descriptor ID <dcmBulkDataDescriptorID>`",string,"ID of Bulk Data Descriptor applied by all services providing Metadata of archived instances. If absent, only Attributes specified by the Composite Instance Retrieve Without Bulk Data Service Class are treated as Bulk Data. May be overwritten by configured values for particular Archive Network AEs.
 
     (dcmBulkDataDescriptorID)"
     "
@@ -28,7 +28,7 @@ DICOM Archive Device related information
     "
     .. _dcmSeriesMetadataDelay:
 
-    :ref:`Aggregate Series Metadata Delay <dcmSeriesMetadataDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMnS for storing aggregated Series Metadata on storage. If absent, no aggregated Series Metadata will be stored.
+    :ref:`Aggregate Series Metadata Delay <dcmSeriesMetadataDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMnS for storing aggregated Series Metadata on storage. If absent, no aggregated Series Metadata will be stored. May be overwritten by configured values for particular Archive Network AEs.
 
     (dcmSeriesMetadataDelay)"
     "
