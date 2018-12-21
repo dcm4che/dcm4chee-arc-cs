@@ -13,6 +13,12 @@ UI Configuration
     :ref:`UI Configuration Name <dcmuiConfigName>`",string,"UI Configuration Name
 
     (dcmuiConfigName)"
+    "
+    .. _dcmuiModalities:
+
+    :ref:`Statistic Modalities(s) <dcmuiModalities>`",string,"Preselected Modalities that should show in the Statistic page
+
+    (dcmuiModalities)"
     ":doc:`uiAet` (s)",object,"Define which AETs should be visible in the drop-down lists in the UI"
     ":doc:`uiPermission` (s)",object,"Permission"
     ":doc:`uiFilterTemplate` (s)",object,"Defined filter template"

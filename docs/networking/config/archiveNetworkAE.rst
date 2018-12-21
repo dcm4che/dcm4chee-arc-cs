@@ -26,6 +26,12 @@ DICOM Archive Network AE related information
 
     (dcmMetadataStorageID)"
     "
+    .. _dcmBulkDataDescriptorID:
+
+    :ref:`Bulk Data Descriptor ID <dcmBulkDataDescriptorID>`",string,"ID of Bulk Data Descriptor applied by all services of this Archive Network AE providing Metadata of archived instances. Overwrites value specified on Device level.
+
+    (dcmBulkDataDescriptorID)"
+    "
     .. _dcmSeriesMetadataDelay:
 
     :ref:`Aggregate Series Metadata Delay <dcmSeriesMetadataDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS for storing aggregated Series Metadata on storage of objects received by this AE. Overwrites value specified on Device level.

@@ -14,6 +14,12 @@ DICOM Archive Device related information
 
     (dcmFuzzyAlgorithmClass)"
     "
+    .. _dcmBulkDataDescriptorID:
+
+    :ref:`Bulk Data Descriptor ID <dcmBulkDataDescriptorID>`",string,"ID of Bulk Data Descriptor applied by all services providing Metadata of archived instances.  May be overwritten by configured values for particular Archive Network AEs.
+
+    (dcmBulkDataDescriptorID)"
+    "
     .. _dcmSeriesMetadataStorageID:
 
     :ref:`Series Metadata Storage ID(s) <dcmSeriesMetadataStorageID>`",string,"ID of Storage on which ZIP archives with aggregated Metadata of all instances of a Series is stored. Multiple Storage Systems may be configured. If absent, no aggregated Series Metadata will be stored.
@@ -927,6 +933,7 @@ DICOM Archive Device related information
     (dcmUIConfigurationDeviceName)"
     ":doc:`attributeFilter` (s)",object,"Specifies Attributes stored in the database"
     ":doc:`attributeSet` (s)",object,"Named Attribute Set for Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests."
+    ":doc:`bulkData` (s)",object,"Specifies Bulk Data Descriptors applied by services providing Metadata of archived instances."
     ":doc:`storage` (s)",object,"Specifies Storage System"
     ":doc:`queryRetrieveView` (s)",object,"Specifies behavior on Rejection Note Stored"
     ":doc:`queue` (s)",object,"Managed JMS Queue"
@@ -965,6 +972,7 @@ DICOM Archive Device related information
 
     attributeFilter
     attributeSet
+    bulkData
     storage
     queryRetrieveView
     queue
