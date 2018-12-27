@@ -32,6 +32,12 @@ Storage Descriptor
 
     (dcmInstanceAvailability)"
     "
+    .. _dcmStorageDuration:
+
+    :ref:`Storage Duration <dcmStorageDuration>`",string,"Indicates if the Storage is used as permanent (=PERMANENT), cache (=CACHE) or temporary (=TEMPORARY) storage. Objects get purged from cache and temporary storage according configured deleter thresholds or - if no deleter threshold is specified - all objects on the Storage will get purged. In the case of temporary storage, the studies which objects were purged are also deleted from the database. Enumerated values: PERMANENT, CACHE or TEMPORARY.
+
+    (dcmStorageDuration)"
+    "
     .. _dcmReadOnly:
 
     :ref:`Read Only <dcmReadOnly>`",boolean,"Indicates if a Storage System is read only.
@@ -52,7 +58,7 @@ Storage Descriptor
     "
     .. _dcmDeleterThreshold:
 
-    :ref:`Deleter Threshold(s) <dcmDeleterThreshold>`",string,"Minimal Usable Space on Storage System to trigger deletion. If present, studies are deleted from the Storage System, if the usable space fall below that value. Format [nn'['<schedule>']']nnn(MB|GB|MiB|GiB)
+    :ref:`Deleter Threshold(s) <dcmDeleterThreshold>`",string,"Minimal Usable Space on Storage System to trigger deletion. If present, studies are deleted from the Storage System configured for cache (Storage Duration = CACHE) or temporary (Storage Duration = TEMPORARY) storage, if the usable space fall below that value. If absent all studies are deleted from cache/temporary storage. Format [nn'['<schedule>']']nnn(MB|GB|MiB|GiB).
 
     (dcmDeleterThreshold)"
     "
@@ -64,13 +70,13 @@ Storage Descriptor
     "
     .. _dcmExternalRetrieveAET:
 
-    :ref:`External Retrieve AET <dcmExternalRetrieveAET>`",string,"Constrain deletion of Studies, if usable space falls below the configured threshold, to Studies which objects are retrievable using this AE from an external C-MOVE SCP.
+    :ref:`External Retrieve AET <dcmExternalRetrieveAET>`",string,"Constrains deletion of Studies from the Storage System to Studies which objects are retrievable using this AE from an external C-MOVE SCP.
 
     (dcmExternalRetrieveAET)"
     "
     .. _dcmExportStorageID:
 
-    :ref:`Export Storage ID <dcmExportStorageID>`",string,"Constrain deletion of Studies, if usable space falls below the configured threshold, to Studies which objects are also accessible from the specified other storage.
+    :ref:`Export Storage ID <dcmExportStorageID>`",string,"Constrains deletion of Studies from the Storage System to Studies which objects are also accessible from the specified other storage.
 
     (dcmExportStorageID)"
     "
@@ -85,12 +91,6 @@ Storage Descriptor
     :ref:`Retrieve Cache Max Parallel <dcmRetrieveCacheMaxParallel>`",integer,"Maximal number of parallel copies to cache storage on retrieve. Only effective if a Retrieve Cache Storage ID is configured.
 
     (dcmRetrieveCacheMaxParallel)"
-    "
-    .. _dcmNoDeletionConstraint:
-
-    :ref:`No Deletion Constraint <dcmNoDeletionConstraint>`",boolean,"If no External Retrieve AET or Export Storage ID is configured on Storage Descriptor and deleter threshold is reached, by default studies will not be deleted.
-
-    (dcmNoDeletionConstraint)"
     "
     .. _dcmProperty:
 

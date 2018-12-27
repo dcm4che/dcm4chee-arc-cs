@@ -28,7 +28,7 @@ HL7 Study Retention Policy
     "
     .. _dcmMaxRetentionPeriod:
 
-    :ref:`Maximal Study Retention Period <dcmMaxRetentionPeriod>`",string,"Minimal Study Retention Period in ISO-8601 period format PnYnMnD or PnW
+    :ref:`Maximal Study Retention Period <dcmMaxRetentionPeriod>`",string,"Maximal Study Retention Period in ISO-8601 period format PnYnMnD or PnW
 
     (dcmMaxRetentionPeriod)"
     "
