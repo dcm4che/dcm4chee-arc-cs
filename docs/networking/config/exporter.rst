@@ -44,6 +44,12 @@ Exporter Descriptor
 
     (dicomAETitle)"
     "
+    .. _dcmDeleteStudyFromStorageID:
+
+    :ref:`Delete Study From Storage ID <dcmDeleteStudyFromStorageID>`",string,"ID of Storage System from which the objects of the exported Study shall be deleted. Only effective for Export Tasks on Study level.
+
+    (dcmDeleteStudyFromStorageID)"
+    "
     .. _dcmStgCmtSCP:
 
     :ref:`Storage Commitment SCP AE Title <dcmStgCmtSCP>`",string,"AE Title of external Storage Commitment SCP used to verify export to another archive.
