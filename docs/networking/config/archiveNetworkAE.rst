@@ -362,6 +362,12 @@ DICOM Archive Network AE related information
 
     (dcmStorageVerificationInitialDelay)"
     "
+    .. _dcmUpdateLocationStatusOnRetrieve:
+
+    :ref:`Update Location Status on Retrieve <dcmUpdateLocationStatusOnRetrieve>`",boolean,"Indicates if the Status of the Location DB record shall be updated for objects failed to get fetched from storage on retrieve to MISSING_OBJECT or FAILED_TO_FETCH_OBJECT. Overwrites value specified on Device level.
+
+    (dcmUpdateLocationStatusOnRetrieve)"
+    "
     .. _hl7PSUSendingApplication:
 
     :ref:`HL7 Procedure Status Update Sending Application <hl7PSUSendingApplication>`",string,"Application|Facility name of Sending Application for HL7 Procedure Status Update. Overwrites value specified on Device level.

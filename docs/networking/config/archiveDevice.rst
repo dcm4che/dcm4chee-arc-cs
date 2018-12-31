@@ -752,6 +752,12 @@ DICOM Archive Device related information
 
     (dcmStorageVerificationFetchSize)"
     "
+    .. _dcmUpdateLocationStatusOnRetrieve:
+
+    :ref:`Update Location Status on Retrieve <dcmUpdateLocationStatusOnRetrieve>`",boolean,"Indicates if the Status of the Location DB record shall be updated for objects failed to get fetched from storage on retrieve to MISSING_OBJECT or FAILED_TO_FETCH_OBJECT. May be overwritten by configured values for particular Archive Network AEs.
+
+    (dcmUpdateLocationStatusOnRetrieve)"
+    "
     .. _dcmCompressionAETitle:
 
     :ref:`Compression AE Title <dcmCompressionAETitle>`",string,"Archive AE Title used for delayed Compression.
