@@ -308,6 +308,12 @@ DICOM Archive Network AE related information
 
     (dcmRetrieveAET)"
     "
+    .. _dcmReturnRetrieveAET:
+
+    :ref:`Return Retrieve AE Title(s) <dcmReturnRetrieveAET>`",string,"Retrieve AE Title returned in C-FIND and QIDO responses. If absent, the Retrieve AET associated with the archived entity will be returned. Overwrites value specified on Device level.
+
+    (dcmReturnRetrieveAET)"
+    "
     .. _dcmExternalRetrieveAEDestination:
 
     :ref:`External Retrieve AE Destination <dcmExternalRetrieveAEDestination>`",string,"AE Title of local C-STORE-SCP to be set as Move Destination in C-MOVE RQs forwarded to external retrieve AE. Overwrites value specified on Device level.
