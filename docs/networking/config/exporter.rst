@@ -50,11 +50,11 @@ Exporter Descriptor
 
     (dcmDeleteStudyFromStorageID)"
     "
-    .. _dcmRejectionNoteCode:
+    .. _dcmRejectForDataRetentionExpiry:
 
-    :ref:`Reject Entity after export by Code <dcmRejectionNoteCode>`",string,"Reject entity after export for specified reason on completion of Export Task.
+    :ref:`Reject Entity for Data Retention Expiry <dcmRejectForDataRetentionExpiry>`",boolean,"Reject entity for Data Retention Expiry after export on completion of Export Task.
 
-    (dcmRejectionNoteCode)"
+    (dcmRejectForDataRetentionExpiry)"
     "
     .. _dcmStgCmtSCP:
 
