@@ -50,6 +50,12 @@ Exporter Descriptor
 
     (dcmDeleteStudyFromStorageID)"
     "
+    .. _dcmRejectionNoteCode:
+
+    :ref:`Reject Entity after export by Code <dcmRejectionNoteCode>`",string,"Reject entity after export for specified reason on completion of Export Task.
+
+    (dcmRejectionNoteCode)"
+    "
     .. _dcmStgCmtSCP:
 
     :ref:`Storage Commitment SCP AE Title <dcmStgCmtSCP>`",string,"AE Title of external Storage Commitment SCP used to verify export to another archive.
