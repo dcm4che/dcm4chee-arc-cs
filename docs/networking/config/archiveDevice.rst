@@ -488,11 +488,11 @@ DICOM Archive Device related information
 
     (dcmRejectExpiredStudiesPollingInterval)"
     "
-    .. _dcmRejectExpiredStudiesPollingStartTime:
+    .. _dcmRejectExpiredStudiesSchedule:
 
-    :ref:`Reject Expired Studies Polling Start Time <dcmRejectExpiredStudiesPollingStartTime>`",string,"Time when the polling interval for rejecting expired Studies and Series starts in ISO-8601 time format [hh][mm][ss]. Archive start time if absent.
+    :ref:`Reject Expired Studies Schedule(s) <dcmRejectExpiredStudiesSchedule>`",string,"Limits Rejection of Expired Studies to specified times in format 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday).
 
-    (dcmRejectExpiredStudiesPollingStartTime)"
+    (dcmRejectExpiredStudiesSchedule)"
     "
     .. _dcmRejectExpiredStudiesFetchSize:
 
