@@ -267,7 +267,7 @@ User Password Update
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
 
-        <EventIdentification EventActionCode="U" EventDateTime="2018-09-18T17:42:55.226+02:00" EventOutcomeIndicator="0">
+        <EventIdentification EventActionCode="E" EventDateTime="2018-09-18T17:42:55.226+02:00" EventOutcomeIndicator="0">
             <EventID csd-code="110113" codeSystemName="DCM" originalText="Security Alert"/>
             <EventTypeCode csd-code="110137" codeSystemName="DCM" originalText="User security Attributes Changed"/>
         </EventIdentification>
@@ -384,10 +384,10 @@ Keycloak Admin Event
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
 
-        <EventIdentification EventActionCode="C" EventDateTime="2018-10-29T14:39:19.406+01:00" EventOutcomeIndicator="0">
+        <EventIdentification EventActionCode="E" EventDateTime="2018-10-29T14:39:19.406+01:00" EventOutcomeIndicator="0">
             <EventID csd-code="110113" codeSystemName="DCM" originalText="Security Alert"/>
             <EventTypeCode csd-code="110129" codeSystemName="DCM" originalText="Security Configuration"/>
-            <EventOutcomeDescription>CLIENT</EventOutcomeDescription>
+            <EventOutcomeDescription>CREATE CLIENT</EventOutcomeDescription>
         </EventIdentification>
 
         <ActiveParticipant UserID="admin" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
