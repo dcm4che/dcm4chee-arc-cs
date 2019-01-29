@@ -598,7 +598,7 @@ DICOM Archive Device related information
     "
     .. _dcmDefaultCharacterSet:
 
-    :ref:`Default Character Set <dcmDefaultCharacterSet>`",string,"Value of Specific Character Set (0008,0005) added to Data Sets without Specific Character Set (0008,0005) attribute received by any AE. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`Default Character Set <dcmDefaultCharacterSet>`",string,"Value of Specific Character Set (0008,0005) added to Data Sets of C-STORE RQs and pending C-FIND RSPs without Specific Character Set (0008,0005) attribute received by any AE. May be overwritten by configured values for particular Archive Network AEs.
 
     (dcmDefaultCharacterSet)"
     "
@@ -763,6 +763,12 @@ DICOM Archive Device related information
     :ref:`Update Location Status on Retrieve <dcmUpdateLocationStatusOnRetrieve>`",boolean,"Indicates if the Status of the Location DB record shall be updated for objects failed to get fetched from storage on retrieve to MISSING_OBJECT or FAILED_TO_FETCH_OBJECT. May be overwritten by configured values for particular Archive Network AEs.
 
     (dcmUpdateLocationStatusOnRetrieve)"
+    "
+    .. _dcmStorageVerificationOnRetrieve:
+
+    :ref:`Storage Verification on Retrieve <dcmStorageVerificationOnRetrieve>`",boolean,"Indicates if failures to fetch an object from Storage on retrieve shall trigger a Storage Verification of the whole Series. May be overwritten by configured values for particular Archive Network AEs.
+
+    (dcmStorageVerificationOnRetrieve)"
     "
     .. _dcmCompressionAETitle:
 

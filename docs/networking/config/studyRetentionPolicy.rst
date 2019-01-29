@@ -43,3 +43,21 @@ Study Retention Policy
     :ref:`Start Retention Period on Study Date <dcmStartRetentionPeriodOnStudyDate>`",boolean,"Indicates if retention period should be started on Study Date instead on receive of an object of the Study
 
     (dcmStartRetentionPeriodOnStudyDate)"
+    "
+    .. _dcmExporterID:
+
+    :ref:`Export expired Study <dcmExporterID>`",string,"Export expired Study/Series using the specified Exporter
+
+    (dcmExporterID)"
+    "
+    .. _dcmFreezeExpirationDate:
+
+    :ref:`Freeze Expiration Date <dcmFreezeExpirationDate>`",boolean,"Indicate to disable changes of the Expiration Date by following events.
+
+    (dcmFreezeExpirationDate)"
+    "
+    .. _dcmRevokeExpiration:
+
+    :ref:`Revoke Expiration Date <dcmRevokeExpiration>`",boolean,"Indicate to revoke a previous set Expiration Date.
+
+    (dcmRevokeExpiration)"

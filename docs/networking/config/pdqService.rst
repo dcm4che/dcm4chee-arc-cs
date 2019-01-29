@@ -38,12 +38,6 @@ PDQ Service Descriptor
 
     (dcmEntity)"
     "
-    .. _dcmDefaultCharacterSet:
-
-    :ref:`Default Character Set <dcmDefaultCharacterSet>`",string,"Value of Specific Character Set (0008,0005) added to Data Sets without Specific Character Set (0008,0005) attribute received from the C-FIND SCP. Only effective for DICOM PDQ Services (URI: pdq-dicom:{AETitle}).
-
-    (dcmDefaultCharacterSet)"
-    "
     .. _dcmProperty:
 
     :ref:`PDQ Service Property(s) <dcmProperty>`",string,"Property in format <name>=<value>, e.g. 'LocalAET=DCM4CHEE'
