@@ -26,6 +26,12 @@ DICOM Archive HL7 Application related information
 
     (hl7ImportReportTemplateURI)"
     "
+    .. _hl7ImportReportTemplateParam:
+
+    :ref:`HL7 Import Report Template Parameter(s) <hl7ImportReportTemplateParam>`",string,"XSLT parameters passed to style sheet specified by HL7 Import Report Template URI. Format: {name}={value}. E.g.: 'langCodeValue=et', 'langCodingSchemeDesignator=RFC5646', 'langCodeMeaning=Estonian'. Overwrites value specified on Device level.
+
+    (hl7ImportReportTemplateParam)"
+    "
     .. _hl7ScheduleProcedureTemplateURI:
 
     :ref:`HL7 Schedule Procedure Template URI <hl7ScheduleProcedureTemplateURI>`",string,"Specifies URI for the style sheet to transcode received HL7 ORM^O01, OMI^O23, OMG^O19 to DICOM MWL items. Overwrites value specified on Device level.
@@ -67,6 +73,18 @@ DICOM Archive HL7 Application related information
     :ref:`Use HL7 Null Value <hl7UseNullValue>`",boolean,"Specifies if HL7 v2 null values (|""""|) are used in sent HL7 messages for not present or empty entity attributes. Required to unset entity attributes at the remote HL7 Application. Overwrites value specified on Device level.
 
     (hl7UseNullValue)"
+    "
+    .. _hl7OrderMissingStudyIUIDPolicy:
+
+    :ref:`HL7 Order Missing Study Instance UID Policy <hl7OrderMissingStudyIUIDPolicy>`",string,"Specifies policy for missing Study Instance UID in incoming HL7 Order messages. Enumerated values: REJECT, GENERATE or ACCESSION_BASED.
+
+    (hl7OrderMissingStudyIUIDPolicy)"
+    "
+    .. _hl7DicomCharacterSet:
+
+    :ref:`HL7 Dicom Character Set <hl7DicomCharacterSet>`",string,"Indicates to use specified Value of Specific Character Set (0008,0005) in Data Sets transcoded from received HL7 messages. Use Value corresponding to Character Set of the HL7 message specified by MSH-18 if absent.
+
+    (hl7DicomCharacterSet)"
     ":doc:`hl7ForwardRule` (s)",object,"HL7 Forward Rule. Supplements values specified on Device level."
     ":doc:`hl7ExportRule` (s)",object,"Export Rules applied to HL7 messages received by this HL7 Application. Supplements HL7 Export Rules specified on Device level."
     ":doc:`hl7PrefetchRule` (s)",object,"Prefetch Rules applied to HL7 messages received by this HL7 Application. Supplements HL7 Prefetch Rules specified on Device level."

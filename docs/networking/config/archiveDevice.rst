@@ -422,6 +422,12 @@ DICOM Archive Device related information
 
     (hl7ImportReportTemplateURI)"
     "
+    .. _hl7ImportReportTemplateParam:
+
+    :ref:`HL7 Import Report Template Parameter(s) <hl7ImportReportTemplateParam>`",string,"XSLT parameters passed to style sheet specified by HL7 Import Report Template URI. Format: {name}={value}. E.g.: 'langCodeValue=et', 'langCodingSchemeDesignator=RFC5646', 'langCodeMeaning=Estonian'. May be overwritten by configured values for particular Archive HL7 Application.
+
+    (hl7ImportReportTemplateParam)"
+    "
     .. _hl7ScheduleProcedureTemplateURI:
 
     :ref:`HL7 Schedule Procedure Template URI <hl7ScheduleProcedureTemplateURI>`",string,"Specifies URI for the style sheet to transcode received HL7 ORM^O01, OMI^O23, OMG^O19 to DICOM MWL items. May be overwritten by configured values for particular Archive HL7 Application.
@@ -682,13 +688,13 @@ DICOM Archive Device related information
     "
     .. _dcmCopyMoveUpdatePolicy:
 
-    :ref:`Copy Move Update Policy <dcmCopyMoveUpdatePolicy>`",string,"Specifies update policy for attributes of the destination Study on Copy/Move of Instances from another Study. If absent, the attributes will not be updated. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: SUPPLEMENT, MERGE, OVERWRITE or REPLACE.
+    :ref:`Copy Move Update Policy <dcmCopyMoveUpdatePolicy>`",string,"Specifies update policy for attributes of the destination Study on Copy/Move of Instances from another Study. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: PRESERVE, SUPPLEMENT, MERGE, OVERWRITE or REPLACE.
 
     (dcmCopyMoveUpdatePolicy)"
     "
     .. _dcmLinkMWLEntryUpdatePolicy:
 
-    :ref:`Link MWL Entry Update Policy <dcmLinkMWLEntryUpdatePolicy>`",string,"Specifies update policy for Study attributes on Link of Instances of another Study with a MWL Entry referring an existing Study. If absent, the attributes will not be updated. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: SUPPLEMENT, MERGE, OVERWRITE or REPLACE.
+    :ref:`Link MWL Entry Update Policy <dcmLinkMWLEntryUpdatePolicy>`",string,"Specifies update policy for Study attributes on Link of Instances of another Study with a MWL Entry referring an existing Study. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: PRESERVE, SUPPLEMENT, MERGE, OVERWRITE or REPLACE.
 
     (dcmLinkMWLEntryUpdatePolicy)"
     "
@@ -937,6 +943,18 @@ DICOM Archive Device related information
     :ref:`Use HL7 Null Value <hl7UseNullValue>`",boolean,"Specifies if HL7 v2 null values (|""""|) are used in sent HL7 messages for not present or empty entity attributes. Required to unset entity attributes at the remote HL7 Application. May be overwritten by configured values for particular Archive HL7 Application.
 
     (hl7UseNullValue)"
+    "
+    .. _hl7OrderMissingStudyIUIDPolicy:
+
+    :ref:`HL7 Order Missing Study Instance UID Policy <hl7OrderMissingStudyIUIDPolicy>`",string,"Specifies policy for missing Study Instance UID in incoming HL7 Order messages. Enumerated values: REJECT, GENERATE or ACCESSION_BASED.
+
+    (hl7OrderMissingStudyIUIDPolicy)"
+    "
+    .. _hl7DicomCharacterSet:
+
+    :ref:`HL7 Dicom Character Set <hl7DicomCharacterSet>`",string,"Indicates to use specified Value of Specific Character Set (0008,0005) in Data Sets transcoded from received HL7 messages. Use Value corresponding to Character Set of the HL7 message specified by MSH-18 if absent.
+
+    (hl7DicomCharacterSet)"
     "
     .. _dcmRejectionNoteStorageAET:
 
