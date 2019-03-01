@@ -94,7 +94,7 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmAttributeUpdatePolicy:
 
-    :ref:`Attribute Update Policy <dcmAttributeUpdatePolicy>`",string,"Specifies how attributes shall be updated with attributes fetched from Leading C-FIND SCP. SUPPLEMENT (= attributes not present in original dataset will be supplemented), REPLACE (= original dataset is completely replaced), MERGE (= attribute values will be written from new dataset), OVERWRITE (= attribute values if null in new dataset, will be nullified in original dataset) Enumerated values: SUPPLEMENT, MERGE, REPLACE or OVERWRITE.
+    :ref:`Attribute Update Policy <dcmAttributeUpdatePolicy>`",string,"Specifies how attributes shall be updated with attributes fetched from Leading C-FIND SCP. PRESERVE (= nullify attributes in the new dataset which are not present in the original dataset), SUPPLEMENT (= attributes not present in original dataset will be supplemented), REPLACE (= original dataset is completely replaced), MERGE (= attribute values will be written from new dataset), OVERWRITE (= attribute values if null in new dataset, will be nullified in original dataset) Enumerated values: PRESERVE, SUPPLEMENT, MERGE, REPLACE or OVERWRITE.
 
     (dcmAttributeUpdatePolicy)"
     "

@@ -40,6 +40,6 @@ Attributes stored in the database
     "
     .. _dcmAttributeUpdatePolicy:
 
-    :ref:`Attribute Update Policy <dcmAttributeUpdatePolicy>`",string,"Specifies update policy for extracted attributes into the DB on Series, Study & Patient level on receive of further instance of the entity. SUPPLEMENT (= attributes not present in original dataset will be supplemented), REPLACE (= original dataset is completely replaced), MERGE (= attribute values will be written from new dataset), OVERWRITE (= attribute values if null in new dataset, will be nullified in original dataset). If absent, the attributes will not be updated Enumerated values: SUPPLEMENT, MERGE, REPLACE or OVERWRITE.
+    :ref:`Attribute Update Policy <dcmAttributeUpdatePolicy>`",string,"Specifies update policy for extracted attributes into the DB on Series, Study & Patient level on receive of further instance of the entity. PRESERVE (= nullify attributes in the new dataset which are not present in the original dataset), SUPPLEMENT (= attributes not present in original dataset will be supplemented), REPLACE (= original dataset is completely replaced), MERGE (= attribute values will be written from new dataset), OVERWRITE (= attribute values if null in new dataset, will be nullified in original dataset). If absent, PRESERVE will be applied Enumerated values: PRESERVE, SUPPLEMENT, MERGE, OVERWRITE or REPLACE.
 
     (dcmAttributeUpdatePolicy)"
