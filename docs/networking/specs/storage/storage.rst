@@ -340,10 +340,8 @@ Entity or HTTP client and dependent of DICOM Attribute values of received SOP In
    "JPEG Extended (Process 2 & 4)", "1.2.840.10008.1.2.4.51"
    "JPEG Lossless, Non-Hierarchical, First-Order Prediction (Process 14 [Selection Value 1])", "1.2.840.10008.1.2.4.70"
    "JPEG-LS Lossless", "1.2.840.10008.1.2.4.80"
-   "JPEG 2000 (Lossless Only) [#j2k2]_", "1.2.840.10008.1.2.4.90"
-   "JPEG 2000 [#j2k2]_", "1.2.840.10008.1.2.4.91"
-
-.. [#j2k2] JPEG 2000 is not recommended for production because of known issues of the JPEG 2000 implementation
+   "JPEG 2000 (Lossless Only)", "1.2.840.10008.1.2.4.90"
+   "JPEG 2000", "1.2.840.10008.1.2.4.91"
 
 By default, no image compression is configured.
 
