@@ -19,6 +19,12 @@ UI Configuration
     :ref:`Statistic Modalities(s) <dcmuiModalities>`",string,"Preselected Modalities that should show in the Statistic page
 
     (dcmuiModalities)"
+    "
+    .. _dcmuiWidgetAets:
+
+    :ref:`Widget AETs(s) <dcmuiWidgetAets>`",string,"Select the AETs that you wan't to see in the AET widget, where you can select in which of them the newly added AET should be as `Accepted Calling AE Title`
+
+    (dcmuiWidgetAets)"
     ":doc:`uiAet` (s)",object,"Define which AETs should be visible in the drop-down lists in the UI"
     ":doc:`uiPermission` (s)",object,"Permission"
     ":doc:`uiFilterTemplate` (s)",object,"Defined filter template"
