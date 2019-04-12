@@ -86,6 +86,7 @@ dcm4che proprietary Device Attributes
 
     (dcmTimeZoneOfDevice)"
     ":doc:`webApplication` (s)",object,"Web Applications provided by the Device"
+    ":doc:`keycloakClient` (s)",object,"Keycloak Clients provided by the Device"
     ":doc:`hl7Application` (s)",object,"HL7 Applications provided by the Device"
     ":doc:`imageWriter` (s)",object,"Specifies Java Image IO Image Writers with Write Parameters used for compressing DICOM images"
     ":doc:`imageReader` (s)",object,"Specifies Java Image IO Image Readers used for decompressing compressed DICOM images"
@@ -97,6 +98,7 @@ dcm4che proprietary Device Attributes
 .. toctree::
 
     webApplication
+    keycloakClient
     hl7Application
     imageWriter
     imageReader

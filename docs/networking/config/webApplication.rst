@@ -38,6 +38,12 @@ Web Application information
 
     (dcmWebServiceClass)"
     "
+    .. _dcmKeycloakClientID:
+
+    :ref:`Keycloak Client ID <dcmKeycloakClientID>`",string,"Keycloak Client ID for the Web application
+
+    (dcmKeycloakClientID)"
+    "
     .. _dicomAETitle:
 
     :ref:`AE Title <dicomAETitle>`",string,"AE title of Network AE associated with this Web Application
