@@ -944,6 +944,12 @@ DICOM Archive Device related information
 
     (hl7UseNullValue)"
     "
+    .. _hl7VeterinaryUsePatientName:
+
+    :ref:`HL7 Veterinary use Patient Name <hl7VeterinaryUsePatientName>`",boolean,"Indicates to force veterinary use of Patient Names on mapping HL7 PID fields to DICOM attributes: only use the first two components of PID.5 as DICOM Patient Name; if PID.5 only contains one component, use that value as given name, and the first component of PID.9 as family name of the DICOM Patient Name. May be overwritten by configured values for particular Archive HL7 Application.
+
+    (hl7VeterinaryUsePatientName)"
+    "
     .. _hl7OrderMissingStudyIUIDPolicy:
 
     :ref:`HL7 Order Missing Study Instance UID Policy <hl7OrderMissingStudyIUIDPolicy>`",string,"Specifies policy for missing Study Instance UID in incoming HL7 Order messages. Enumerated values: REJECT, GENERATE or ACCESSION_BASED.

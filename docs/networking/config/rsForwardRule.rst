@@ -14,17 +14,11 @@ RESTful Forward Rule
 
     (cn)"
     "
-    .. _dcmURI:
+    .. _dcmWebAppName:
 
-    :ref:`Target Base URL <dcmURI>`",string,"Target URL without operation specific part, eg. http://<host>:<port>/dcm4chee-arc/aets/<aet>/
+    :ref:`Web Application name <dcmWebAppName>`",string,"Name of the Web Application
 
-    (dcmURI)"
-    "
-    .. _dcmKeycloakServerID:
-
-    :ref:`Keycloak Server ID <dcmKeycloakServerID>`",string,"Identifier of the Keycloak Server from which the access token shall be granted. If absent, no token will be sent.
-
-    (dcmKeycloakServerID)"
+    (dcmWebAppName)"
     "
     .. _dcmTLSAllowAnyHostname:
 

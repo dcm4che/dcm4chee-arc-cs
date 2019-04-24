@@ -26,6 +26,12 @@ Elasticsearch URL
 
     (dcmuiElasticsearchURLKeycloakServer)"
     "
+    .. _dcmuiAuditEnterpriseSiteID:
+
+    :ref:`Audit Enterprise SiteID <dcmuiAuditEnterpriseSiteID>`",string,"Set Audit Enterprise SiteID which should be used on Elasticsearch queries
+
+    (dcmuiAuditEnterpriseSiteID)"
+    "
     .. _dcmuiElasticsearchIsDefault:
 
     :ref:`Is Default <dcmuiElasticsearchIsDefault>`",boolean,"Set this URL to the default one. (Make sure that only one of the urls - siblings child is set to default).

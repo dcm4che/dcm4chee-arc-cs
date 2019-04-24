@@ -34,7 +34,7 @@ Web Application information
     "
     .. _dcmWebServiceClass:
 
-    :ref:`Web Service Class(s) <dcmWebServiceClass>`",string,"Web Service Classes provided by the Web application Enumerated values: QIDO_RS, STOW_RS, WADO_RS, WADO_URI, UPS_RS or DCM4CHEE_ARC.
+    :ref:`Web Service Class(s) <dcmWebServiceClass>`",string,"Web Service Classes provided by the Web application Enumerated values: QIDO_RS, STOW_RS, WADO_RS, WADO_URI, UPS_RS, DCM4CHEE_ARC or DCM4CHEE_ARC_AET.
 
     (dcmWebServiceClass)"
     "
