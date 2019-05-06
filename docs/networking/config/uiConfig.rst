@@ -25,6 +25,12 @@ UI Configuration
     :ref:`Widget AETs(s) <dcmuiWidgetAets>`",string,"Select the AETs that you wan't to see in the AET widget, where you can select in which of them the newly added AET should be as `Accepted Calling AE Title`
 
     (dcmuiWidgetAets)"
+    "
+    .. _dcmuiDefaultWidgetAets:
+
+    :ref:`Default Widget AETs(s) <dcmuiDefaultWidgetAets>`",string,"Select the AETs that should be preselected on Widget AETs
+
+    (dcmuiDefaultWidgetAets)"
     ":doc:`uiAet` (s)",object,"Define which AETs should be visible in the drop-down lists in the UI"
     ":doc:`uiPermission` (s)",object,"Permission"
     ":doc:`uiFilterTemplate` (s)",object,"Defined filter template"

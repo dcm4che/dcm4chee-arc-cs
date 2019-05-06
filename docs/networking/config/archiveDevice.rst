@@ -50,9 +50,15 @@ DICOM Archive Device related information
 
     (dcmSeriesMetadataThreads)"
     "
+    .. _dcmSeriesMetadataMaxRetries:
+
+    :ref:`Update Series Metadata Maximum Number of Retries <dcmSeriesMetadataMaxRetries>`",integer,"Maximum number of retries to create/update aggregated Series Metadata. Only effective if Update Series Metadata Retry Interval is specified. -1 = forever.
+
+    (dcmSeriesMetadataMaxRetries)"
+    "
     .. _dcmSeriesMetadataRetryInterval:
 
-    :ref:`Update Series Metadata Retry Interval <dcmSeriesMetadataRetryInterval>`",string,"Interval in ISO-8601 duration format PnDTnHnMnS in which failed attempts to create/update aggregated Series Metadata will be retried. If absent, failed attempts will not be retried.
+    :ref:`Update Series Metadata Retry Interval <dcmSeriesMetadataRetryInterval>`",string,"Interval in ISO-8601 duration format PnDTnHnMnS in which failed attempts to create/update aggregated Series Metadata will be retried. Only effective if Update Series Metadata Maximum Number of Retries != 0. If absent, failed attempts will not be retried.
 
     (dcmSeriesMetadataRetryInterval)"
     "
