@@ -979,6 +979,18 @@ DICOM Archive Device related information
     :ref:`UI Configuration Device Name <dcmUIConfigurationDeviceName>`",string,"Specifies the device name containing the Archive UI Configuration.
 
     (dcmUIConfigurationDeviceName)"
+    "
+    .. _dcmCSVUploadChunkSize:
+
+    :ref:`CSV Upload Chunk Size <dcmCSVUploadChunkSize>`",integer,"Number of CSV file upload tasks to be processed in one transaction.
+
+    (dcmCSVUploadChunkSize)"
+    "
+    .. _dcmValidateUID:
+
+    :ref:`Validate UID <dcmValidateUID>`",boolean,"Indicates if UIDs shall be validated or not.
+
+    (dcmValidateUID)"
     ":doc:`attributeFilter` (s)",object,"Specifies Attributes stored in the database"
     ":doc:`attributeSet` (s)",object,"Named Attribute Set for Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests."
     ":doc:`bulkData` (s)",object,"Specifies Bulk Data Descriptors applied by services providing Metadata of archived instances."

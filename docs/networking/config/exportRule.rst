@@ -49,3 +49,9 @@ Export Rule
     :ref:`Export Delay <dcmDuration>`",string,"Delay export of entities to accumulate multiple trigger events to one export task.
 
     (dcmDuration)"
+    "
+    .. _dcmExportReoccurredInstances:
+
+    :ref:`Export Reoccurred Instances <dcmExportReoccurredInstances>`",string,"Indicates if the entity shall be exported on subsequent occurrence of instances Enumerated values: NEVER, ALWAYS or REPLACE.
+
+    (dcmExportReoccurredInstances)"
