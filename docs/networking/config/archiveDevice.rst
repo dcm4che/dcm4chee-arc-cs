@@ -991,6 +991,12 @@ DICOM Archive Device related information
     :ref:`Validate UID <dcmValidateUID>`",boolean,"Indicates if UIDs shall be validated or not.
 
     (dcmValidateUID)"
+    "
+    .. _dcmRejectConflictingPatientAttribute:
+
+    :ref:`Reject Conflicting Patient Attribute(s) <dcmRejectConflictingPatientAttribute>`",string,"DICOM Tag of Patient Attribute which have to match in received objects with the value in previous received objects with equal Patient ID to be accepted.
+
+    (dcmRejectConflictingPatientAttribute)"
     ":doc:`attributeFilter` (s)",object,"Specifies Attributes stored in the database"
     ":doc:`attributeSet` (s)",object,"Named Attribute Set for Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests."
     ":doc:`bulkData` (s)",object,"Specifies Bulk Data Descriptors applied by services providing Metadata of archived instances."
