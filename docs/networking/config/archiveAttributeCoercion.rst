@@ -116,6 +116,12 @@ Archive Attribute Coercion of received/sent DIMSE
 
     (dcmIssuerOfPatientID)"
     "
+    .. _dcmIssuerOfPatientIDFormat:
+
+    :ref:`Issuer Of Patient ID Format <dcmIssuerOfPatientIDFormat>`",string,"Format of Issuer of Patient ID (0010,0021) derived from other attributes. E.g. ""{00100010,hash}-{00100030}"": use hash value of Patient Name and Birth Date separated by ""-"". For coercion of existing values of Issuer of Patient ID in received objects also dcmNullifyIssuerOfPatientID must be set accordingly.
+
+    (dcmIssuerOfPatientIDFormat)"
+    "
     .. _dcmSupplementFromDeviceName:
 
     :ref:`Supplement from Device <dcmSupplementFromDeviceName>`",string,"Name of Device from which Assigning Authorities and other information is taken to supplement received Composite Objects and MPPS.

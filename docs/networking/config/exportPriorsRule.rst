@@ -43,3 +43,9 @@ Export Priors Rule
     :ref:`Suppress Duplicate Export Interval <dcmDuration>`",string,"Suppress Export of Studies already exported not earlier than the specified interval to avoid duplicate exports.
 
     (dcmDuration)"
+    "
+    .. _dcmExportReoccurredInstances:
+
+    :ref:`Export Reoccurred Instances <dcmExportReoccurredInstances>`",string,"Indicates if the entity shall be exported on subsequent occurrence of instances Enumerated values: NEVER, ALWAYS or REPLACE.
+
+    (dcmExportReoccurredInstances)"
