@@ -58,9 +58,27 @@ Storage Descriptor
     "
     .. _dcmDeleterThreshold:
 
-    :ref:`Deleter Threshold(s) <dcmDeleterThreshold>`",string,"Minimal Usable Space on Storage System to trigger deletion. If present, studies are deleted from the Storage System configured for cache (Storage Duration = CACHE) or temporary (Storage Duration = TEMPORARY) storage, if the usable space fall below that value. If absent all studies are deleted from cache/temporary storage. Format [nn'['<schedule>']']nnn(MB|GB|MiB|GiB).
+    :ref:`Deleter Threshold(s) <dcmDeleterThreshold>`",string,"Minimal Usable Space on Storage System to trigger deletion. If present, studies are deleted from the Storage System configured for cache (Storage Duration = CACHE) or temporary (Storage Duration = TEMPORARY) storage, if the usable space fall below that value. Format [nn'['<schedule>']']nnn(MB|GB|MiB|GiB).
 
     (dcmDeleterThreshold)"
+    "
+    .. _dcmDeleteStudiesOlderThan:
+
+    :ref:`Delete Studies Older Than(s) <dcmDeleteStudiesOlderThan>`",string,"Delete Studies from the Storage System configured for cache (dcmStorageDuration=CACHE) or temporary (dcmStorageDuration=TEMPORARY) storage, if their Study Date is longer ago than the specified value in ISO-8601 period format. Format [nn""[""<schedule>""]""](PnYnMnD|PnW).
+
+    (dcmDeleteStudiesOlderThan)"
+    "
+    .. _dcmDeleteStudiesReceivedBefore:
+
+    :ref:`Delete Studies Received Before(s) <dcmDeleteStudiesReceivedBefore>`",string,"Delete Studies from the Storage System configured for cache (dcmStorageDuration=CACHE) or temporary (dcmStorageDuration=TEMPORARY) storage, if they were received longer ago than the specified value in ISO-8601 period format. Format [nn""[""<schedule>""]""](PnYnMnD|PnW).
+
+    (dcmDeleteStudiesReceivedBefore)"
+    "
+    .. _dcmDeleteStudiesNotUsedSince:
+
+    :ref:`Delete Studies Not Used Since(s) <dcmDeleteStudiesNotUsedSince>`",string,"Delete Studies from the Storage System configured for cache (dcmStorageDuration=CACHE) or temporary (dcmStorageDuration=TEMPORARY) storage, if they were last accessed longer ago than the specified value in ISO-8601 period format. Format [nn""[""<schedule>""]""](PnYnMnD|PnW).
+
+    (dcmDeleteStudiesNotUsedSince)"
     "
     .. _dcmDeleterThreads:
 
@@ -97,21 +115,3 @@ Storage Descriptor
     :ref:`Storage Property(s) <dcmProperty>`",string,"Property in format <name>=<value>
 
     (dcmProperty)"
-    "
-    .. _dcmDeleteStudiesOlderThan:
-
-    :ref:`Delete Studies Older Than(s) <dcmDeleteStudiesOlderThan>`",string,"Delete Studies from the Storage System configured for cache (dcmStorageDuration=CACHE) or temporary (dcmStorageDuration=TEMPORARY) storage, if their Study Date is longer ago than the specified value in ISO-8601 period format. Format [nn""[""<schedule>""]""](PnYnMnD|PnW).
-
-    (dcmDeleteStudiesOlderThan)"
-    "
-    .. _dcmDeleteStudiesReceivedBefore:
-
-    :ref:`Delete Studies Received Before(s) <dcmDeleteStudiesReceivedBefore>`",string,"Delete Studies from the Storage System configured for cache (dcmStorageDuration=CACHE) or temporary (dcmStorageDuration=TEMPORARY) storage, if they were received longer ago than the specified value in ISO-8601 period format. Format [nn""[""<schedule>""]""](PnYnMnD|PnW).
-
-    (dcmDeleteStudiesReceivedBefore)"
-    "
-    .. _dcmDeleteStudiesNotUsedSince:
-
-    :ref:`Delete Studies Not Used Since(s) <dcmDeleteStudiesNotUsedSince>`",string,"Delete Studies from the Storage System configured for cache (dcmStorageDuration=CACHE) or temporary (dcmStorageDuration=TEMPORARY) storage, if they were last accessed longer ago than the specified value in ISO-8601 period format. Format [nn""[""<schedule>""]""](PnYnMnD|PnW).
-
-    (dcmDeleteStudiesNotUsedSince)"
