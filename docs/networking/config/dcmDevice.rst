@@ -8,6 +8,12 @@ dcm4che proprietary Device Attributes
     :widths: 23, 7, 70
 
     "
+    .. _dcmRoleSelectionNegotiationLenient:
+
+    :ref:`Role Selection Negotiation Lenient <dcmRoleSelectionNegotiationLenient>`",boolean,"Indicates to disable check for required SCP/SCU role selection negotiation on sending of DIMSE-RQs. May be overwritten by configured value for particular Network AEs.
+
+    (dcmRoleSelectionNegotiationLenient)"
+    "
     .. _dcmLimitOpenAssociations:
 
     :ref:`Association Limit <dcmLimitOpenAssociations>`",integer,"Maximal number of open DICOM connections; rejects Association requests if the limit is exceeded; 0 = unlimited.

@@ -8,6 +8,12 @@ dcm4che proprietary Attributes of Network AE
     :widths: 23, 7, 70
 
     "
+    .. _dcmRoleSelectionNegotiationLenient:
+
+    :ref:`Role Selection Negotiation Lenient <dcmRoleSelectionNegotiationLenient>`",boolean,"Indicates to disable check for required SCP/SCU role selection negotiation on sending of DIMSE-RQs. Overwrites value specified on Device level.
+
+    (dcmRoleSelectionNegotiationLenient)"
+    "
     .. _dcmAcceptedCallingAETitle:
 
     :ref:`Accepted Calling AE Title(s) <dcmAcceptedCallingAETitle>`",string,"Prohibit accepting associations from unlisted AE. If not present, any AE will be accepted
