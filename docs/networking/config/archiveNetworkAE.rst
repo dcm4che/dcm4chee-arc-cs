@@ -416,6 +416,18 @@ DICOM Archive Network AE related information
 
     (hl7PSUOnTimeout)"
     "
+    .. _dcmRelationalQueryNegotiationLenient:
+
+    :ref:`Relational Query Negotiation Lenient <dcmRelationalQueryNegotiationLenient>`",boolean,"Indicates to accept C-FIND RQs without unique keys for levels above the query level also if support for relational-queries was not negotiated.
+
+    (dcmRelationalQueryNegotiationLenient)"
+    "
+    .. _dcmRelationalRetrieveNegotiationLenient:
+
+    :ref:`Relational Retrieve Negotiation Lenient <dcmRelationalRetrieveNegotiationLenient>`",boolean,"Indicates to accept C-MOVE and C-GET RQs without unique keys for levels above the query level also if support for relational-queries was not negotiated.
+
+    (dcmRelationalRetrieveNegotiationLenient)"
+    "
     .. _dcmRejectConflictingPatientAttribute:
 
     :ref:`Reject Conflicting Patient Attribute(s) <dcmRejectConflictingPatientAttribute>`",string,"DICOM Tag of Patient Attribute which have to match in received objects with the value in previous received objects with equal Patient ID to be accepted.

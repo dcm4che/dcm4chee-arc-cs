@@ -44,6 +44,12 @@ Storage Descriptor
 
     (dcmReadOnly)"
     "
+    .. _dcmNoDeletionConstraint:
+
+    :ref:`No Deletion Constraint <dcmNoDeletionConstraint>`",boolean,"Delete all Studies from cache/temporary Storage System, if no Deleter Threshold and no other deletion constraint is configured
+
+    (dcmNoDeletionConstraint)"
+    "
     .. _dcmStorageClusterID:
 
     :ref:`Storage Cluster ID <dcmStorageClusterID>`",string,"Identifies a Storage to belong to a Storage Cluster. Objects of one Study may be distributed over Storage Systems of one Storage Cluster. Used by threshold triggered deletion.

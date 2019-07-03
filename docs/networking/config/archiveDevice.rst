@@ -566,9 +566,15 @@ DICOM Archive Device related information
 
     (dcmStoreUpdateDBMaxRetries)"
     "
+    .. _dcmStoreUpdateDBMinRetryDelay:
+
+    :ref:`Minimal Store Update DB Delay of Retry <dcmStoreUpdateDBMinRetryDelay>`",integer,"Minimal Delay in ms between retries to update the database on storage.
+
+    (dcmStoreUpdateDBMinRetryDelay)"
+    "
     .. _dcmStoreUpdateDBMaxRetryDelay:
 
-    :ref:`Store Update DB Delay of Retry <dcmStoreUpdateDBMaxRetryDelay>`",integer,"Delay in ms of retry to update the database on storage.
+    :ref:`Maximal Store Update DB Delay of Retry <dcmStoreUpdateDBMaxRetryDelay>`",integer,"Maximal Delay in ms between retries to update the database on storage.
 
     (dcmStoreUpdateDBMaxRetryDelay)"
     "
@@ -992,6 +998,30 @@ DICOM Archive Device related information
 
     (dcmValidateUID)"
     "
+    .. _dcmRelationalQueryNegotiationLenient:
+
+    :ref:`Relational Query Negotiation Lenient <dcmRelationalQueryNegotiationLenient>`",boolean,"Indicates to accept C-FIND RQs without unique keys for levels above the query level also if support for relational-queries was not negotiated.
+
+    (dcmRelationalQueryNegotiationLenient)"
+    "
+    .. _dcmRelationalRetrieveNegotiationLenient:
+
+    :ref:`Relational Retrieve Negotiation Lenient <dcmRelationalRetrieveNegotiationLenient>`",boolean,"Indicates to accept C-MOVE and C-GET RQs without unique keys for levels above the query level also if support for relational-queries was not negotiated.
+
+    (dcmRelationalRetrieveNegotiationLenient)"
+    "
+    .. _dcmSchedulerMinStartDelay:
+
+    :ref:`Scheduler Minimum Start Delay <dcmSchedulerMinStartDelay>`",integer,"Minimal delay in ms to start schedulers on system start up.
+
+    (dcmSchedulerMinStartDelay)"
+    "
+    .. _dcmMetricsServices:
+
+    :ref:`Metrics Services(s) <dcmMetricsServices>`",string,"Metrics Services which can be used to get metrics
+
+    (dcmMetricsServices)"
+    "
     .. _dcmRejectConflictingPatientAttribute:
 
     :ref:`Reject Conflicting Patient Attribute(s) <dcmRejectConflictingPatientAttribute>`",string,"DICOM Tag of Patient Attribute which have to match in received objects with the value in previous received objects with equal Patient ID to be accepted.
@@ -1003,6 +1033,7 @@ DICOM Archive Device related information
     ":doc:`storage` (s)",object,"Specifies Storage System"
     ":doc:`queryRetrieveView` (s)",object,"Specifies behavior on Rejection Note Stored"
     ":doc:`queue` (s)",object,"Managed JMS Queue"
+    ":doc:`metrics` (s)",object,"Activated Metrics"
     ":doc:`pdqService` (s)",object,"PDQ Service Descriptor"
     ":doc:`exporter` (s)",object,"Exporter Descriptor"
     ":doc:`exportRule` (s)",object,"Export Rules applied to DICOM objects received by any AE. May be supplemented by configured Export Rules for particular Archive Network AEs."
@@ -1042,6 +1073,7 @@ DICOM Archive Device related information
     storage
     queryRetrieveView
     queue
+    metrics
     pdqService
     exporter
     exportRule
