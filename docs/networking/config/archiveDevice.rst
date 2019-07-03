@@ -1016,12 +1016,6 @@ DICOM Archive Device related information
 
     (dcmSchedulerMinStartDelay)"
     "
-    .. _dcmMetricsServices:
-
-    :ref:`Metrics Services(s) <dcmMetricsServices>`",string,"Metrics Services which can be used to get metrics
-
-    (dcmMetricsServices)"
-    "
     .. _dcmRejectConflictingPatientAttribute:
 
     :ref:`Reject Conflicting Patient Attribute(s) <dcmRejectConflictingPatientAttribute>`",string,"DICOM Tag of Patient Attribute which have to match in received objects with the value in previous received objects with equal Patient ID to be accepted.
