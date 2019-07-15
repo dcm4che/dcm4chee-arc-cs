@@ -100,7 +100,7 @@
 "Acquisition Context SR Storage", "1.2.840.10008.5.1.4.1.1.88.71", "Yes", "No"
 "Simplified Adult Echo SR Storage", "1.2.840.10008.5.1.4.1.1.88.72", "Yes", "No"
 "Patient Radiation Dose SR Storage", "1.2.840.10008.5.1.4.1.1.88.73", "Yes", "No"
-"Planned Imaging Agent Administration SR Storage, "1.2.840.10008.5.1.4.1.1.88.74", "Yes", "No"
+"Planned Imaging Agent Administration SR Storage", "1.2.840.10008.5.1.4.1.1.88.74", "Yes", "No"
 "Performed Imaging Agent Administration SR Storage", "1.2.840.10008.5.1.4.1.1.88.75", "Yes", "No"
 "**Other Storage SOP Classes:**"
 "Stored Print Storage SOP Class (Retired)", "1.2.840.10008.5.1.1.27", "Yes", "No"
