@@ -5,7 +5,7 @@
 "Study Root Query/Retrieve Information Model - FIND", "1.2.840.10008.5.1.4.1.2.2.1", "Yes", "Yes"
 "Study Root Query/Retrieve Information Model - MOVE", "1.2.840.10008.5.1.4.1.2.2.2", "Yes", "Yes"
 "Study Root Query/Retrieve Information Model - GET", "1.2.840.10008.5.1.4.1.2.2.3", "No", "Yes"
-"**Image Storage SOP Classes:**"
+"**Image Storage SOP Classes:**",,,
 "Computed Radiography Image Storage", "1.2.840.10008.5.1.4.1.1.1", "Yes", "No"
 "Digital X-Ray Image Storage - For Presentation", "1.2.840.10008.5.1.4.1.1.1.1", "Yes", "No"
 "Digital X-Ray Image Storage - For Processing", "1.2.840.10008.5.1.4.1.1.1.1.1", "Yes", "No"
@@ -77,11 +77,11 @@
 "Private PixelMed Legacy Converted Enhanced PET Image Storage", "1.3.6.1.4.1.5962.301.3", "Yes", "No"
 "Private PMOD Multi-frame Image Storage", "2.16.840.1.114033.5.1.4.1.1.130", "Yes", "No"
 "Private Toshiba US Image Storage", "1.2.392.200036.9116.7.8.1.1.1", "Yes", "No"
-"**Video Storage SOP Classes:**"
+"**Video Storage SOP Classes:**",,,
 "Video Endoscopic Image Storage", "1.2.840.10008.5.1.4.1.1.77.1.1.1", "Yes", "No"
 "Video Microscopic Image Storage", "1.2.840.10008.5.1.4.1.1.77.1.2.1", "Yes", "No"
 "Video Photographic Image Storage", "1.2.840.10008.5.1.4.1.1.77.1.4.1", "Yes", "No"
-"**Structured Report Storage SOP Classes:**"
+"**Structured Report Storage SOP Classes:**",,,
 "Spectacle Prescription Report Storage", "1.2.840.10008.5.1.4.1.1.78.6", "Yes", "No"
 "Macular Grid Thickness and Volume Report Storage", "1.2.840.10008.5.1.4.1.1.79.1", "Yes", "No"
 "Basic Text SR Storage", "1.2.840.10008.5.1.4.1.1.88.11", "Yes", "No"
@@ -102,7 +102,7 @@
 "Patient Radiation Dose SR Storage", "1.2.840.10008.5.1.4.1.1.88.73", "Yes", "No"
 "Planned Imaging Agent Administration SR Storage", "1.2.840.10008.5.1.4.1.1.88.74", "Yes", "No"
 "Performed Imaging Agent Administration SR Storage", "1.2.840.10008.5.1.4.1.1.88.75", "Yes", "No"
-"**Other Storage SOP Classes:**"
+"**Other Storage SOP Classes:**",,,
 "Stored Print Storage SOP Class (Retired)", "1.2.840.10008.5.1.1.27", "Yes", "No"
 "Hardcopy Grayscale Image Storage SOP Class (Retired)", "1.2.840.10008.5.1.1.29", "Yes", "No"
 "Hardcopy Color Image Storage SOP Class (Retired)", "1.2.840.10008.5.1.1.30", "Yes", "No"
