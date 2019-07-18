@@ -1012,7 +1012,7 @@ DICOM Archive Device related information
     "
     .. _dcmSchedulerMinStartDelay:
 
-    :ref:`Scheduler Minimum Start Delay <dcmSchedulerMinStartDelay>`",integer,"Minimal delay in ms to start schedulers on system start up.
+    :ref:`Scheduler Minimum Start Delay <dcmSchedulerMinStartDelay>`",integer,"Minimal delay in s to start schedulers on system start up.
 
     (dcmSchedulerMinStartDelay)"
     "
@@ -1021,6 +1021,12 @@ DICOM Archive Device related information
     :ref:`Reject Conflicting Patient Attribute(s) <dcmRejectConflictingPatientAttribute>`",string,"DICOM Tag of Patient Attribute which have to match in received objects with the value in previous received objects with equal Patient ID to be accepted.
 
     (dcmRejectConflictingPatientAttribute)"
+    "
+    .. _dcmStowRetiredTransferSyntax:
+
+    :ref:`STOW Retired Transfer Syntax <dcmStowRetiredTransferSyntax>`",boolean,"Store received JPEG Full Progression, Non-Hierarchical JPEG images in DICOM images with corresponding (retired) Transfer Syntax UID 1.2.840.10008.1.2.4.55. Otherwise set 1.2.840.10008.1.2.4.50 (= JPEG Baseline) or 1.2.840.10008.1.2.4.51 (= JPEG Extended) as Transfer Syntax UID of the stored DICOM image, without transcoding to JPEG Baseline or JPEG Extended, but including the JPEG image as received.
+
+    (dcmStowRetiredTransferSyntax)"
     ":doc:`attributeFilter` (s)",object,"Specifies Attributes stored in the database"
     ":doc:`attributeSet` (s)",object,"Named Attribute Set for Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests."
     ":doc:`bulkData` (s)",object,"Specifies Bulk Data Descriptors applied by services providing Metadata of archived instances."

@@ -16,7 +16,7 @@ Metrics Descriptor
     "
     .. _dicomDescription:
 
-    :ref:`Exporter Description <dicomDescription>`",string,"Unconstrained text description of the metrics
+    :ref:`Metrics Description <dicomDescription>`",string,"Unconstrained text description of the metrics
 
     (dicomDescription)"
     "
