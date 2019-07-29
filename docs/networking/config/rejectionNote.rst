@@ -38,6 +38,12 @@ Specifies behavior on Rejection Note Stored
 
     (dcmOverwritePreviousRejection)"
     "
+    .. _dcmAcceptRejectionBeforeStorage:
+
+    :ref:`Accept Rejection before Storage <dcmAcceptRejectionBeforeStorage>`",string,"Time interval in ISO-8601 duration format PnDTnHnMn.nS after receive of a Rejection Note, in which received object referenced by this Rejection Note are treated as rejected. Referenced objects received afterwards are treated as subsequent occurrence of an already rejected instance. If not present, Rejection Notes which refers not yet received objects will not be accepted.
+
+    (dcmAcceptRejectionBeforeStorage)"
+    "
     .. _dcmDeleteRejectedInstanceDelay:
 
     :ref:`Delete Rejected Instance Delay <dcmDeleteRejectedInstanceDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which instances rejected by a particular Rejection Note are deleted. Infinite if absent.
