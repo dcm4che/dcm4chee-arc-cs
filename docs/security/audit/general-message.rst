@@ -28,7 +28,7 @@ Message Structure
 
 .. csv-table:: Active Participant
    :name: audit-general-message-active-participant
-   :widths: 30, 5, 65
+   :widths: 30, 5, 65, 20
    :header: Field Name, Opt, Description, "Additional Conditions on Field Format/Value"
 
     UserID, M, "Unique identifier for the user actively participating in the event."
