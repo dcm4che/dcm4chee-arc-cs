@@ -47,7 +47,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'DICOM Conformance Statement dcm4che Archive 5'
-copyright = u'2017, Gunter Zeilinger'
+copyright = u'2019, Gunter Zeilinger'
 author = u'Gunter Zeilinger'
 
 # The version info for the project you're documenting, acts as replacement for
