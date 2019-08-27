@@ -5,9 +5,10 @@ Trigger Events
 --------------
 
 This message is emitted by the archive in following cases :
+
 - Query/Retrieve of objects using `RAD-16 <http://ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf#page=204>`_
-  C-Move : Objects of a study are retrieved using query/retrieve service and stored to external destination
-  C-Get : Objects of a study are retrieved using query/retrieve service and stored to the destination which is same as source
+- C-Move : Objects of a study are retrieved using query/retrieve service and stored to external destination
+- C-Get : Objects of a study are retrieved using query/retrieve service and stored to the destination which is same as source
 - Export : Objects of a study are exported to a destination
 - WADO : Objects of a study are retrieved using RESTful services `WADO-RS <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/swagger-dicom.json#/WADO-RS>`_
   or `WADO URI <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/swagger-dicom.json#/WADO-URI/getObject>`_
