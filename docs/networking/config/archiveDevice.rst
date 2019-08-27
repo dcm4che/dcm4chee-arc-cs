@@ -146,6 +146,12 @@ DICOM Archive Device related information
 
     (dcmWadoSupportedSRClasses)"
     "
+    .. _dcmWadoSupportedPRClasses:
+
+    :ref:`Wado Supported PR Classes(s) <dcmWadoSupportedPRClasses>`",string,"Supported PR SOP classes for WADO retrieval
+
+    (dcmWadoSupportedPRClasses)"
+    "
     .. _dcmWadoSR2HtmlTemplateURI:
 
     :ref:`Wado SR2 Html Template URI <dcmWadoSR2HtmlTemplateURI>`",string,"Specifies URI for the style sheet used to render structured reports to html. May be overwritten by configured values for particular Archive Network AEs.
@@ -163,6 +169,12 @@ DICOM Archive Device related information
     :ref:`Wado CDA to HTML Template URI <dcmWadoCDA2HtmlTemplateURI>`",string,"URL to XSL style sheet inserted as <?xml-stylesheet type=""text/xsl"" href=""<url>"" > in CDA documents returned by WADO-URI service. If absent, the embedded CDI document is returned verbatim. May be overwritten by configured values for particular Archive Network AEs.
 
     (dcmWadoCDA2HtmlTemplateURI)"
+    "
+    .. _dcmWadoThumbnailViewport:
+
+    :ref:`Wado Thumbnail Viewport <dcmWadoThumbnailViewport>`",string,"Dimension of Thumbnails returned by WADO retrieve of Instance Thumbnails, if no Viewport is specified in the request. Format: <width>,<height>. May be overwritten by configured values for particular Archive Network AEs.
+
+    (dcmWadoThumbnailViewport)"
     "
     .. _dcmWadoZIPEntryNameFormat:
 
@@ -968,6 +980,12 @@ DICOM Archive Device related information
 
     (hl7OrderMissingStudyIUIDPolicy)"
     "
+    .. _hl7ImportReportMissingStudyIUIDPolicy:
+
+    :ref:`HL7 Import Report Missing Study Instance UID Policy <hl7ImportReportMissingStudyIUIDPolicy>`",string,"Specifies policy for missing Study Instance UID in incoming HL7 Import Report (ORU) messages. Enumerated values: REJECT, GENERATE or ACCESSION_BASED.
+
+    (hl7ImportReportMissingStudyIUIDPolicy)"
+    "
     .. _hl7DicomCharacterSet:
 
     :ref:`HL7 Dicom Character Set <hl7DicomCharacterSet>`",string,"Indicates to use specified Value of Specific Character Set (0008,0005) in Data Sets transcoded from received HL7 messages. Use Value corresponding to Character Set of the HL7 message specified by MSH-18 if absent.
@@ -1027,6 +1045,18 @@ DICOM Archive Device related information
     :ref:`STOW Retired Transfer Syntax <dcmStowRetiredTransferSyntax>`",boolean,"Store received JPEG Full Progression, Non-Hierarchical JPEG images in DICOM images with corresponding (retired) Transfer Syntax UID 1.2.840.10008.1.2.4.55. Otherwise set 1.2.840.10008.1.2.4.50 (= JPEG Baseline) or 1.2.840.10008.1.2.4.51 (= JPEG Extended) as Transfer Syntax UID of the stored DICOM image, without transcoding to JPEG Baseline or JPEG Extended, but including the JPEG image as received.
 
     (dcmStowRetiredTransferSyntax)"
+    "
+    .. _dcmStowExcludeAPPMarkers:
+
+    :ref:`STOW Exclude Application Markers <dcmStowExcludeAPPMarkers>`",boolean,"Indicates if APP markers in JPEG images received in STOW-RS Metadata and Bulkdata requests shall be excluded from the JPEG bit streams encapsulated in created DICOM instances.
+
+    (dcmStowExcludeAPPMarkers)"
+    "
+    .. _dcmFallbackCMoveSCPCallingAET:
+
+    :ref:`Fallback C-Move SCP Calling AE title <dcmFallbackCMoveSCPCallingAET>`",string,"Calling AE Title used in A-ASSOCIATE-RQ to configured Fallback C-MOVE SCP. If absent, the AE Title of the external C-MOVE SCU is used.
+
+    (dcmFallbackCMoveSCPCallingAET)"
     ":doc:`attributeFilter` (s)",object,"Specifies Attributes stored in the database"
     ":doc:`attributeSet` (s)",object,"Named Attribute Set for Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests."
     ":doc:`bulkData` (s)",object,"Specifies Bulk Data Descriptors applied by services providing Metadata of archived instances."

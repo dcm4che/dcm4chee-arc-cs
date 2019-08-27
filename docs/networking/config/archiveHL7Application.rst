@@ -86,6 +86,12 @@ DICOM Archive HL7 Application related information
 
     (hl7OrderMissingStudyIUIDPolicy)"
     "
+    .. _hl7ImportReportMissingStudyIUIDPolicy:
+
+    :ref:`HL7 Import Report Missing Study Instance UID Policy <hl7ImportReportMissingStudyIUIDPolicy>`",string,"Specifies policy for missing Study Instance UID in incoming HL7 Import Report (ORU) messages. Enumerated values: REJECT, GENERATE or ACCESSION_BASED.
+
+    (hl7ImportReportMissingStudyIUIDPolicy)"
+    "
     .. _hl7DicomCharacterSet:
 
     :ref:`HL7 Dicom Character Set <hl7DicomCharacterSet>`",string,"Indicates to use specified Value of Specific Character Set (0008,0005) in Data Sets transcoded from received HL7 messages. Use Value corresponding to Character Set of the HL7 message specified by MSH-18 if absent.

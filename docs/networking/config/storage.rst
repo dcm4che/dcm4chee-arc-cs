@@ -46,7 +46,7 @@ Storage Descriptor
     "
     .. _dcmNoDeletionConstraint:
 
-    :ref:`No Deletion Constraint <dcmNoDeletionConstraint>`",boolean,"Delete all Studies from cache/temporary Storage System, if no Deleter Threshold and no other deletion constraint is configured
+    :ref:`No Deletion Constraint <dcmNoDeletionConstraint>`",boolean,"Delete Studies from cache/temporary Storage System, if no Deleter Threshold and no other deletion constraint is configured.
 
     (dcmNoDeletionConstraint)"
     "
@@ -94,13 +94,13 @@ Storage Descriptor
     "
     .. _dcmExternalRetrieveAET:
 
-    :ref:`External Retrieve AET <dcmExternalRetrieveAET>`",string,"Constrains deletion of Studies from the Storage System to Studies which objects are retrievable using this AE from an external C-MOVE SCP.
+    :ref:`External Retrieve AETs(s) <dcmExternalRetrieveAET>`",string,"Constrains deletion of Studies, additionally to configured deleter thresholds and/or deletion retention period constraints, from the Storage System to Studies which objects are retrievable using one of the AEs from an external C-MOVE SCP.
 
     (dcmExternalRetrieveAET)"
     "
     .. _dcmExportStorageID:
 
-    :ref:`Export Storage ID <dcmExportStorageID>`",string,"Constrains deletion of Studies from the Storage System to Studies which objects are also accessible from the specified other storage.
+    :ref:`Export Storage ID <dcmExportStorageID>`",string,"Constrains deletion of Studies, additionally to configured deleter thresholds and/or deletion retention period constraints, from the Storage System to Studies which objects are also accessible from the specified other storage.
 
     (dcmExportStorageID)"
     "

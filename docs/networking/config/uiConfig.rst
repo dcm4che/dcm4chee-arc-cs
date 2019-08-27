@@ -26,6 +26,12 @@ UI Configuration
 
     (dcmuiWidgetAets)"
     "
+    .. _dcmuiXDSInterfaceURL:
+
+    :ref:`XDS Interface URL <dcmuiXDSInterfaceURL>`",string,"Base URL used for the XDS Services. E.g. http://myXdsSever:8080
+
+    (dcmuiXDSInterfaceURL)"
+    "
     .. _dcmuiDefaultWidgetAets:
 
     :ref:`Default Widget AETs(s) <dcmuiDefaultWidgetAets>`",string,"Select the AETs that should be preselected on Widget AETs

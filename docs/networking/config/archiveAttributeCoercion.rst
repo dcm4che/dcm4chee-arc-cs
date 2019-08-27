@@ -98,6 +98,12 @@ Archive Attribute Coercion of received/sent DIMSE
 
     (dcmAttributeUpdatePolicy)"
     "
+    .. _dcmTrimISO2022CharacterSet:
+
+    :ref:`Trim ISO 2022 Character Set <dcmTrimISO2022CharacterSet>`",boolean,"Replace single code for Single-Byte Character Sets with Code Extensions by code for Single-Byte Character Sets without Code Extensions. Only effective with DIMSE = C_STORE_RQ and DICOM Transfer Role = SCU.
+
+    (dcmTrimISO2022CharacterSet)"
+    "
     .. _dcmNullifyTag:
 
     :ref:`Nullify Attribute Tag(s) <dcmNullifyTag>`",string,"DICOM Tag of Attribute to be nullified as hex string
