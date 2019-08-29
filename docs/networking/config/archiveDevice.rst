@@ -964,7 +964,7 @@ DICOM Archive Device related information
     "
     .. _hl7UseNullValue:
 
-    :ref:`Use HL7 Null Value <hl7UseNullValue>`",boolean,"Specifies if HL7 v2 null values `(|""""|)` are used in sent HL7 messages for not present or empty entity attributes. Required to unset entity attributes at the remote HL7 Application. May be overwritten by configured values for particular Archive HL7 Application.
+    :ref:`Use HL7 Null Value <hl7UseNullValue>`",boolean,"Specifies if HL7 v2 null values (|""""|) are used in sent HL7 messages for not present or empty entity attributes. Required to unset entity attributes at the remote HL7 Application. May be overwritten by configured values for particular Archive HL7 Application.
 
     (hl7UseNullValue)"
     "
@@ -1071,7 +1071,6 @@ DICOM Archive Device related information
     ":doc:`rsForwardRule` (s)",object,"RESTful Forward Rules. May be supplemented by configured RESTful Forward Rules for particular Archive Network AEs."
     ":doc:`keycloakServer` (s)",object,"Keycloak Server"
     ":doc:`archiveCompressionRule` (s)",object,"Compression rules applied to DICOM objects received by any AE. May be supplemented by configured Compression Rules for particular Archive Network AEs."
-    ":doc:`delayedCompressionRule` (s)",object,"Rules for compression of stored images after a particular delay. May be supplemented by configured Compression Rules for particular Archive Network AEs."
     ":doc:`archiveAttributeCoercion` (s)",object,"Attribute Coercion applied to DIMSE received/sent by any AE. May be supplemented by configured Attribute Coercions for particular Archive Network AEs."
     ":doc:`rejectionNote` (s)",object,"Specifies behavior on Rejection Note Stored"
     ":doc:`studyRetentionPolicy` (s)",object,"Study Retention Policies applied to Studies received by any AE. May be supplemented by configured Study Retention Policies for particular Archive Network AEs."
@@ -1112,7 +1111,6 @@ DICOM Archive Device related information
     rsForwardRule
     keycloakServer
     archiveCompressionRule
-    delayedCompressionRule
     archiveAttributeCoercion
     rejectionNote
     studyRetentionPolicy
