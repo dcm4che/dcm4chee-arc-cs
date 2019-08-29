@@ -5,6 +5,7 @@ Trigger Events
 --------------
 
 This message is emitted by the archive when :
+
 - All Instances of a Study are rejected using RESTful service
   `Reject Study <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/swagger.json#/IOCM-RS/RejectStudy>`_
   or `Reject Study External <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/swagger.json#/DIMSE-RS/RejectStudyExternal>`_

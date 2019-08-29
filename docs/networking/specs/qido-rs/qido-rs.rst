@@ -101,9 +101,9 @@ Types of Matching: As explained above in QIDO-RS Search For Studies
 Person Name Matching Note :
 
 - DCM4CHEE-QIDO-SERVICE supports "fuzzymatching" only for attributes having value representation as PN. If all characters
-of Person Name are in upper case, then the service performs case insensitive matching, else it shall perform case
-sensitive matching. The service also supports literal and wild card matching. It will not perform other forms of fuzzy matching.
-This applies to the following attributes:
+  of Person Name are in upper case, then the service performs case insensitive matching, else it shall perform case
+  sensitive matching. The service also supports literal and wild card matching. It will not perform other forms of fuzzy matching.
+  This applies to the following attributes:
 
    +--------------------------------------+------------------------------------------+
    | In :ref:`StudyAttributesMatching`    | Referring Physician's Name (0008,0090).  |

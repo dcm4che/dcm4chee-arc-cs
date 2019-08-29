@@ -42,7 +42,6 @@ UI Configuration
     ":doc:`uiFilterTemplate` (s)",object,"Defined filter template"
     ":doc:`uiDiffConfig` (s)",object,"Study Diff Configuration"
     ":doc:`uiDashboard` (s)",object,"UI Dashboard Configuration"
-    ":doc:`uiTable` (s)",object,"Configuration of table"
     ":doc:`uiElasticsearch` (s)",object,"Elasticsearch Configuration for the pro version"
     ":doc:`uiDeviceURL` (s)",object,"Other UI Device URLs"
     ":doc:`uiDeviceCluster` (s)",object,"Group Devices in Clusters"
@@ -54,7 +53,6 @@ UI Configuration
     uiFilterTemplate
     uiDiffConfig
     uiDashboard
-    uiTable
     uiElasticsearch
     uiDeviceURL
     uiDeviceCluster
