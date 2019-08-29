@@ -1071,6 +1071,7 @@ DICOM Archive Device related information
     ":doc:`rsForwardRule` (s)",object,"RESTful Forward Rules. May be supplemented by configured RESTful Forward Rules for particular Archive Network AEs."
     ":doc:`keycloakServer` (s)",object,"Keycloak Server"
     ":doc:`archiveCompressionRule` (s)",object,"Compression rules applied to DICOM objects received by any AE. May be supplemented by configured Compression Rules for particular Archive Network AEs."
+    ":doc:`delayedCompressionRule` (s)",object,"Rules for compression of stored images after a particular delay. May be supplemented by configured Compression Rules for particular Archive Network AEs."
     ":doc:`archiveAttributeCoercion` (s)",object,"Attribute Coercion applied to DIMSE received/sent by any AE. May be supplemented by configured Attribute Coercions for particular Archive Network AEs."
     ":doc:`rejectionNote` (s)",object,"Specifies behavior on Rejection Note Stored"
     ":doc:`studyRetentionPolicy` (s)",object,"Study Retention Policies applied to Studies received by any AE. May be supplemented by configured Study Retention Policies for particular Archive Network AEs."
@@ -1111,6 +1112,7 @@ DICOM Archive Device related information
     rsForwardRule
     keycloakServer
     archiveCompressionRule
+    delayedCompressionRule
     archiveAttributeCoercion
     rejectionNote
     studyRetentionPolicy
