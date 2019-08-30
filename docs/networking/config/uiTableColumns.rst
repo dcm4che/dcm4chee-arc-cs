@@ -1,9 +1,9 @@
-UI Elasticsearch URL Configuration
-==================================
-Elasticsearch URL
+UI Study Table Columns Configuration
+====================================
+Study Table Columns
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|
-.. csv-table:: UI Elasticsearch URL Configuration Attributes (LDAP Object: dcmUiTableColumns)
+.. csv-table:: UI Study Table Columns Configuration Attributes (LDAP Object: dcmUiTableColumns)
     :header: Name, Type, Description (LDAP Attribute)
     :widths: 23, 7, 70
 
