@@ -16,7 +16,7 @@ Configuration of Device URL to use beside the main UI URL
     "
     .. _dcmuiDeviceURL:
 
-    :ref:`Device URL <dcmuiDeviceURL>`",string,"Access URL of Device. E.g. http://myDevice:8080
+    :ref:`Device URL <dcmuiDeviceURL>`",string,"Access URL of Device. E.g. http(s)://<myDevice-host>:<myDevice-port>
 
     (dcmuiDeviceURL)"
     "

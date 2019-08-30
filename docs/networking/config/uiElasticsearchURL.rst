@@ -16,7 +16,7 @@ Elasticsearch URL
     "
     .. _dcmuiElasticsearchURL:
 
-    :ref:`Elasticsearch URL <dcmuiElasticsearchURL>`",string,"Access URL of Elastic Search. E.g. http://elasticsearch:9200
+    :ref:`Elasticsearch URL <dcmuiElasticsearchURL>`",string,"Access URL of Elastic Search. E.g. http(s)://<elasticsearch-host>:<elasticsearch-port>
 
     (dcmuiElasticsearchURL)"
     "

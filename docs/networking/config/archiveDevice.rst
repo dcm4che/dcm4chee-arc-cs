@@ -538,7 +538,7 @@ DICOM Archive Device related information
     "
     .. _dcmStorePermissionServiceURL:
 
-    :ref:`Store Permission Service URL <dcmStorePermissionServiceURL>`",string,"URL of Store Permission Service which will be invoked on receive of the first object of a study by any AE. {<dicomTag>} will be replaced by the value of the attribute in the object. E.g. http://host.name/storage-permission/study/{0020000D}?patientId={00100020}&patientIdIssuer={00100021}&studyDescription={00081030,urlencoded}. May be overwritten by configured value for particular Archive Network AEs.
+    :ref:`Store Permission Service URL <dcmStorePermissionServiceURL>`",string,"URL of Store Permission Service which will be invoked on receive of the first object of a study by any AE. {<dicomTag>} will be replaced by the value of the attribute in the object. E.g. http(s)://<store-permission-service-provider-host>:<store-permission-service-provider-port>/storage-permission/study/{0020000D}?patientId={00100020}&patientIdIssuer={00100021}&studyDescription={00081030,urlencoded}. May be overwritten by configured value for particular Archive Network AEs.
 
     (dcmStorePermissionServiceURL)"
     "
@@ -682,7 +682,7 @@ DICOM Archive Device related information
     "
     .. _dcmAuditRecordRepositoryURL:
 
-    :ref:`Audit Record Repository URL <dcmAuditRecordRepositoryURL>`",string,"Access URL of Audit Record Repository. E.g. http://kibana:5601
+    :ref:`Audit Record Repository URL <dcmAuditRecordRepositoryURL>`",string,"Access URL of Audit Record Repository. E.g. http(s)://<arr-host>:<arr-port>
 
     (dcmAuditRecordRepositoryURL)"
     "
@@ -700,13 +700,13 @@ DICOM Archive Device related information
     "
     .. _dcmInvokeImageDisplayPatientURL:
 
-    :ref:`Invoke Image Display Patient URL <dcmInvokeImageDisplayPatientURL>`",string,"URL to launch external Image Display for a Patient. {} will be replaced by the Patient ID formatted as HL7 CX data type. E.g.: http://display:8080/IHEInvokeImageDisplay?requestType=PATIENT&patientID={}. May be overwritten by configured value for particular Archive Network AEs.
+    :ref:`Invoke Image Display Patient URL <dcmInvokeImageDisplayPatientURL>`",string,"URL to launch external Image Display for a Patient. {} will be replaced by the Patient ID formatted as HL7 CX data type. E.g.: http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=PATIENT&patientID={}. May be overwritten by configured value for particular Archive Network AEs.
 
     (dcmInvokeImageDisplayPatientURL)"
     "
     .. _dcmInvokeImageDisplayStudyURL:
 
-    :ref:`Invoke Image Display Study URL <dcmInvokeImageDisplayStudyURL>`",string,"URL to launch external Image Display for a Study. {} will be replaced by the Study Instance UID. E.g.: http://display:8080/IHEInvokeImageDisplay?requestType=STUDY&studyUID={}. May be overwritten by configured value for particular Archive Network AEs.
+    :ref:`Invoke Image Display Study URL <dcmInvokeImageDisplayStudyURL>`",string,"URL to launch external Image Display for a Study. {} will be replaced by the Study Instance UID. E.g.: http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=STUDY&studyUID={}. May be overwritten by configured value for particular Archive Network AEs.
 
     (dcmInvokeImageDisplayStudyURL)"
     "

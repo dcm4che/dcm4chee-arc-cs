@@ -28,7 +28,7 @@ UI Configuration
     "
     .. _dcmuiXDSInterfaceURL:
 
-    :ref:`XDS Interface URL <dcmuiXDSInterfaceURL>`",string,"Base URL used for the XDS Services. E.g. http://myXdsSever:8080
+    :ref:`XDS Interface URL <dcmuiXDSInterfaceURL>`",string,"Base URL used for the XDS Services. E.g. http(s)://<xds-server-host>:<xds-server-port>
 
     (dcmuiXDSInterfaceURL)"
     "
