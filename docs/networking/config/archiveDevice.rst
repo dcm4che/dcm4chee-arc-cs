@@ -964,7 +964,7 @@ DICOM Archive Device related information
     "
     .. _hl7UseNullValue:
 
-    :ref:`Use HL7 Null Value <hl7UseNullValue>`",boolean,"Specifies if HL7 v2 null values `(|""""|)` are used in sent HL7 messages for not present or empty entity attributes. Required to unset entity attributes at the remote HL7 Application. May be overwritten by configured values for particular Archive HL7 Application.
+    :ref:`Use HL7 Null Value <hl7UseNullValue>`",boolean,"Specifies if HL7 v2 null values (specified as """") are used in sent HL7 messages for not present or empty entity attributes. Required to unset entity attributes at the remote HL7 Application. May be overwritten by configured values for particular Archive HL7 Application. Eg. For an empty Patient Name in entity attributes, send PID segment as PID|||PID^Issuer||""""||19531212|F|||
 
     (hl7UseNullValue)"
     "
