@@ -22,19 +22,19 @@ Attributes stored in the database
     "
     .. _dcmCustomAttribute1:
 
-    :ref:`Custom Attribute 1 <dcmCustomAttribute1>`",string,"Custom Attribute 1
+    :ref:`Custom Attribute 1 <dcmCustomAttribute1>`",string,"Configure any attribute from the DICOM object which shall be inserted in database as Custom Attribute 1. Eg. DicomAttribute[@tag=""00200070""]/Value[@number=""1""] or for a Private attribute DicomAttribute[@tag=""00E10024"" and @privateCreator=""ELSCINT1""]/Value[@number=""1""]
 
     (dcmCustomAttribute1)"
     "
     .. _dcmCustomAttribute2:
 
-    :ref:`Custom Attribute 2 <dcmCustomAttribute2>`",string,"Custom Attribute 2
+    :ref:`Custom Attribute 2 <dcmCustomAttribute2>`",string,"Configure any attribute from the DICOM object which shall be inserted in database as Custom Attribute 2. Eg. DicomAttribute[@tag=""00200070""]/Value[@number=""1""] or for a Private attribute DicomAttribute[@tag=""00E10024"" and @privateCreator=""ELSCINT1""]/Value[@number=""1""]
 
     (dcmCustomAttribute2)"
     "
     .. _dcmCustomAttribute3:
 
-    :ref:`Custom Attribute 3 <dcmCustomAttribute3>`",string,"Custom Attribute 3
+    :ref:`Custom Attribute 3 <dcmCustomAttribute3>`",string,"Configure any attribute from the DICOM object which shall be inserted in database as Custom Attribute 3. Eg. DicomAttribute[@tag=""00200070""]/Value[@number=""1""] or for a Private attribute DicomAttribute[@tag=""00E10024"" and @privateCreator=""ELSCINT1""]/Value[@number=""1""]
 
     (dcmCustomAttribute3)"
     "
