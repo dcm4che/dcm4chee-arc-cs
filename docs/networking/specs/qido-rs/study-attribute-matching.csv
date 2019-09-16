@@ -1,5 +1,5 @@
-"Study Instance UID", "0002000D", "UNIQUE", "UNIQUE"
-"Study ID", "00020010", "S,*,U", "S,*,U"
+"Study Instance UID", "0020000D", "UNIQUE", "UNIQUE"
+"Study ID", "00200010", "S,*,U", "S,*,U"
 "Study Date", "00080020", "S,*,U,R", "S,*,U,R"
 "Study Time", "00080030", "S,*,U,R", "S,*,U,R"
 "Study Description", "00081030", "S,*,U", "S,*,U"
