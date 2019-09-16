@@ -1,4 +1,4 @@
-"Series Instance UID", "0002000E", "UNIQUE", "UNIQUE"
+"Series Instance UID", "0020000E", "UNIQUE", "UNIQUE"
 "Series Number", "00200011", "S,*,U", "S,*,U"
 "Modality", "00080060", "S,*,U", "S,*,U"
 "Body Part Examined", "00180015", "S,*,U", "S,*,U"
