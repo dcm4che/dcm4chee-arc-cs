@@ -163,6 +163,8 @@
 "RT Ion Beams Treatment Record Storage", "1.2.840.10008.5.1.4.1.1.481.9", "No", "Yes"
 "RT Physician Intent Storage", "1.2.840.10008.5.1.4.1.1.481.10", "No", "Yes"
 "RT Segment Annotation Storage", "1.2.840.10008.5.1.4.1.1.481.11", "No", "Yes"
+"RT Radiation Set Storage", "1.2.840.10008.5.1.4.1.1.481.12", "No", "Yes"
+"RT C-Arm Photon-Electron Radiation Storage", "1.2.840.10008.5.1.4.1.1.481.13", "No", "Yes"
 "RT Beams Delivery Instruction Storage", "1.2.840.10008.5.1.4.34.7", "No", "Yes"
 "RT Brachy Application Setup Delivery Instruction Storage", "1.2.840.10008.5.1.4.34.10", "No", "Yes"
 "Private Agfa Arrival Transaction", "1.2.124.113532.3500.8.1", "No", "Yes"
