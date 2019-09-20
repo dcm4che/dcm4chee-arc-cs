@@ -1,3 +1,7 @@
 "Modality Performed Procedure Step", "1.2.840.10008.3.1.2.3.3", "Yes", "Yes"
 "Instance Availability Notification", "1.2.840.10008.5.1.4.33", "Yes", "No"
 "Modality Worklist", "1.2.840.10008.5.1.4.31", "No", "Yes"
+"Unified Procedure Step - Push SOP Class SCP", "1.2.840.10008.5.1.4.34.6.1", "No", "Yes"
+"Unified Procedure Step - Watch SOP Class SCP", "1.2.840.10008.5.1.4.34.6.2", "No", "Yes"
+"Unified Procedure Step - Pull SOP Class SCP", "1.2.840.10008.5.1.4.34.6.3", "No", "Yes"
+"Unified Procedure Step - Event SOP Class SCP", "1.2.840.10008.5.1.4.34.6.4", "No", "Yes"
