@@ -86,6 +86,30 @@ DICOM Archive Device related information
 
     (dcmPurgeInstanceRecordsFetchSize)"
     "
+    .. _dcmDeleteUPSPollingInterval:
+
+    :ref:`Delete UPS Polling Interval <dcmDeleteUPSPollingInterval>`",string,"Polling Interval for deleting Unified Procedure Steps (UPS) in ISO-8601 duration format PnDTnHnMnS.
+
+    (dcmDeleteUPSPollingInterval)"
+    "
+    .. _dcmDeleteUPSFetchSize:
+
+    :ref:`Delete UPS Fetch Size <dcmDeleteUPSFetchSize>`",integer,"Maximal number of Unified Procedure Steps (UPS) to delete in one transaction; 100 if absent.
+
+    (dcmDeleteUPSFetchSize)"
+    "
+    .. _dcmDeleteUPSCompletedDelay:
+
+    :ref:`Delete UPS Completed Delay <dcmDeleteUPSCompletedDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS for deleting completed Unified Procedure Steps without Deletion Lock. If absent, completed Unified Procedure Steps without Deletion Lock are deleted immediately.
+
+    (dcmDeleteUPSCompletedDelay)"
+    "
+    .. _dcmDeleteUPSCanceledDelay:
+
+    :ref:`Delete UPS Canceled Delay <dcmDeleteUPSCanceledDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS for deleting canceled Unified Procedure Steps without Deletion Lock. If absent, canceled Unified Procedure Steps without Deletion Lock are deleted immediately.
+
+    (dcmDeleteUPSCanceledDelay)"
+    "
     .. _dcmOverwritePolicy:
 
     :ref:`Overwrite Policy <dcmOverwritePolicy>`",string,"Overwrite Policy. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: NEVER, ALWAYS, SAME_SOURCE, SAME_SERIES or SAME_SOURCE_AND_SERIES.
@@ -542,11 +566,35 @@ DICOM Archive Device related information
 
     (dcmStorePermissionServiceURL)"
     "
+    .. _dcmStorePermissionServiceResponse:
+
+    :ref:`Store Permission Service Response <dcmStorePermissionServiceResponse>`",string,"Emulate Store Permission Service Response on receive of the first object of a study by any AE. {<dicomTag>} will be replaced by the value of the attribute in the object. Only effective if no Store Permission Service URL is configured. May be overwritten by configured value for particular Archive Network AEs.
+
+    (dcmStorePermissionServiceResponse)"
+    "
     .. _dcmStorePermissionServiceResponsePattern:
 
     :ref:`Store Permission Service Response Pattern <dcmStorePermissionServiceResponsePattern>`",string,"Regular Expression applied to responses from Store Permission Service to determine agreement for storage. E.g. ""validation""\s*:\s*""true"" . If absent, every success response will be treated as agreement for storage. May be overwritten by configured value for particular Archive Network AEs.
 
     (dcmStorePermissionServiceResponsePattern)"
+    "
+    .. _dcmStorePermissionServiceErrorCommentPattern:
+
+    :ref:`Store Permission Service Error Comment Pattern <dcmStorePermissionServiceErrorCommentPattern>`",string,"Regular Expression applied to responses from Store Permission Service to extract Error Comment. E.g. ""errorcomment""\s*:\s*""(.*)"". If absent, ""Storage denied."" will be used as Error Comment. May be overwritten by configured values for particular Archive Network AEs.
+
+    (dcmStorePermissionServiceErrorCommentPattern)"
+    "
+    .. _dcmStorePermissionServiceErrorCodePattern:
+
+    :ref:`Store Permission Service Error Code Pattern <dcmStorePermissionServiceErrorCodePattern>`",string,"Regular Expression applied to responses from Store Permission Service to extract Error Code in hexadecimal. E.g. ""errorcode""\s*:\s*""(\p{XDigit}{4})"". If absent, the Error Code will be 0124H (Not Authorized). May be overwritten by configured values for particular Archive Network AEs.
+
+    (dcmStorePermissionServiceErrorCodePattern)"
+    "
+    .. _dcmStorePermissionServiceExpirationDatePattern:
+
+    :ref:`Store Permission Service Expiration Date Pattern <dcmStorePermissionServiceExpirationDatePattern>`",string,"Regular Expression applied to responses from Store Permission Service to extract the initial Study Expiration Date. E.g. ""expirationdate""\s*:\s*""([0-9]{8})"". If absent, locally configured Study Retention Policy Rules will be applied. May be overwritten by configured values for particular Archive Network AEs.
+
+    (dcmStorePermissionServiceExpirationDatePattern)"
     "
     .. _dcmStorePermissionCacheStaleTimeout:
 
@@ -608,12 +656,6 @@ DICOM Archive Device related information
 
     (dcmAllowDeletePatient)"
     "
-    .. _dcmStorePermissionServiceExpirationDatePattern:
-
-    :ref:`Store Permission Service Expiration Date Pattern <dcmStorePermissionServiceExpirationDatePattern>`",string,"Regular Expression applied to responses from Store Permission Service to extract the initial Study Expiration Date. E.g. ""expirationdate""\s*:\s*""([0-9]{8})"". If absent, locally configured Study Retention Policy Rules will be applied. May be overwritten by configured values for particular Archive Network AEs.
-
-    (dcmStorePermissionServiceExpirationDatePattern)"
-    "
     .. _dcmPurgeStgCmtCompletedDelay:
 
     :ref:`Purge Storage Commitment Completed Delay <dcmPurgeStgCmtCompletedDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMnS after which results of completed Storage Commitment requests are purged. If absent, there is no deletion.
@@ -632,17 +674,17 @@ DICOM Archive Device related information
 
     (dcmDefaultCharacterSet)"
     "
-    .. _dcmStorePermissionServiceErrorCommentPattern:
+    .. _dcmDefaultWorklistLabel:
 
-    :ref:`Store Permission Service Error Comment Pattern <dcmStorePermissionServiceErrorCommentPattern>`",string,"Regular Expression applied to responses from Store Permission Service to extract Error Comment. E.g. ""errorcomment""\s*:\s*""(.*)"". If absent, ""Storage denied."" will be used as Error Comment. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`Default Worklist Label <dcmDefaultWorklistLabel>`",string,"Value of Worklist Label (0074,1202) added to Workitems of N-CREATE RQs without Worklist Label (0074,1202) attribute received by any AE. If absent, the AE Title of the receiving AE will be used. May be overwritten by configured values for particular Archive Network AEs.
 
-    (dcmStorePermissionServiceErrorCommentPattern)"
+    (dcmDefaultWorklistLabel)"
     "
-    .. _dcmStorePermissionServiceErrorCodePattern:
+    .. _dcmUPSEventSCU:
 
-    :ref:`Store Permission Service Error Code Pattern <dcmStorePermissionServiceErrorCodePattern>`",string,"Regular Expression applied to responses from Store Permission Service to extract Error Code in hexadecimal. E.g. ""errorcode""\s*:\s*""(\p{XDigit}{4})"". If absent, the Error Code will be 0124H (Not Authorized). May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`UPS Event SOP Class SCU(s) <dcmUPSEventSCU>`",string,"AE Title of UPS Event SOP Class SCU, to which UPS Event Reports are sent - independently if the subscription was created by the N-ACTION DIMSE service, or by a corresponding UPS RESTful service. May be overwritten by configured values for particular Archive Network AEs.
 
-    (dcmStorePermissionServiceErrorCodePattern)"
+    (dcmUPSEventSCU)"
     "
     .. _dcmRetrieveAET:
 
@@ -1018,15 +1060,21 @@ DICOM Archive Device related information
     "
     .. _dcmRelationalQueryNegotiationLenient:
 
-    :ref:`Relational Query Negotiation Lenient <dcmRelationalQueryNegotiationLenient>`",boolean,"Indicates to accept C-FIND RQs without unique keys for levels above the query level also if support for relational-queries was not negotiated.
+    :ref:`Relational Query Negotiation Lenient <dcmRelationalQueryNegotiationLenient>`",boolean,"Indicates to accept C-FIND RQs without unique keys for levels above the query level also if support for relational-queries was not negotiated. May be overwritten by configured value for particular Archive Network AEs.
 
     (dcmRelationalQueryNegotiationLenient)"
     "
     .. _dcmRelationalRetrieveNegotiationLenient:
 
-    :ref:`Relational Retrieve Negotiation Lenient <dcmRelationalRetrieveNegotiationLenient>`",boolean,"Indicates to accept C-MOVE and C-GET RQs without unique keys for levels above the query level also if support for relational-queries was not negotiated.
+    :ref:`Relational Retrieve Negotiation Lenient <dcmRelationalRetrieveNegotiationLenient>`",boolean,"Indicates to accept C-MOVE and C-GET RQs without unique keys for levels above the query level also if support for relational-queries was not negotiated. May be overwritten by configured value for particular Archive Network AEs.
 
     (dcmRelationalRetrieveNegotiationLenient)"
+    "
+    .. _dcmRestrictRetrieveAccordingTransferCapabilities:
+
+    :ref:`Restrict Retrieve According Transfer Capabilities <dcmRestrictRetrieveAccordingTransferCapabilities>`",string,"Indicates if the set of requested objects to retrieve shall be restricted according the Transfer Capabilities of the Retrieve Destination. CONFIGURATION - consider configured Transfer Capabilities of the Destination AE, but treat a non accepted Presentation Context as failure. May be overwritten by configured value for particular Archive Network AEs. Enumerated values: NO, YES or CONFIGURATION.
+
+    (dcmRestrictRetrieveAccordingTransferCapabilities)"
     "
     .. _dcmSchedulerMinStartDelay:
 
@@ -1036,25 +1084,25 @@ DICOM Archive Device related information
     "
     .. _dcmRejectConflictingPatientAttribute:
 
-    :ref:`Reject Conflicting Patient Attribute(s) <dcmRejectConflictingPatientAttribute>`",string,"DICOM Tag of Patient Attribute which have to match in received objects with the value in previous received objects with equal Patient ID to be accepted.
+    :ref:`Reject Conflicting Patient Attribute(s) <dcmRejectConflictingPatientAttribute>`",string,"DICOM Tag of Patient Attribute which have to match in received objects with the value in previous received objects with equal Patient ID to be accepted. May be overwritten by configured value for particular Archive Network AEs.
 
     (dcmRejectConflictingPatientAttribute)"
     "
     .. _dcmStowRetiredTransferSyntax:
 
-    :ref:`STOW Retired Transfer Syntax <dcmStowRetiredTransferSyntax>`",boolean,"Store received JPEG Full Progression, Non-Hierarchical JPEG images in DICOM images with corresponding (retired) Transfer Syntax UID 1.2.840.10008.1.2.4.55. Otherwise set 1.2.840.10008.1.2.4.50 (= JPEG Baseline) or 1.2.840.10008.1.2.4.51 (= JPEG Extended) as Transfer Syntax UID of the stored DICOM image, without transcoding to JPEG Baseline or JPEG Extended, but including the JPEG image as received.
+    :ref:`STOW Retired Transfer Syntax <dcmStowRetiredTransferSyntax>`",boolean,"Store received JPEG Full Progression, Non-Hierarchical JPEG images in DICOM images with corresponding (retired) Transfer Syntax UID 1.2.840.10008.1.2.4.55. Otherwise set 1.2.840.10008.1.2.4.50 (= JPEG Baseline) or 1.2.840.10008.1.2.4.51 (= JPEG Extended) as Transfer Syntax UID of the stored DICOM image, without transcoding to JPEG Baseline or JPEG Extended, but including the JPEG image as received. May be overwritten by configured value for particular Archive Network AEs.
 
     (dcmStowRetiredTransferSyntax)"
     "
     .. _dcmStowExcludeAPPMarkers:
 
-    :ref:`STOW Exclude Application Markers <dcmStowExcludeAPPMarkers>`",boolean,"Indicates if APP markers in JPEG images received in STOW-RS Metadata and Bulkdata requests shall be excluded from the JPEG bit streams encapsulated in created DICOM instances.
+    :ref:`STOW Exclude Application Markers <dcmStowExcludeAPPMarkers>`",boolean,"Indicates if APP markers in JPEG images received in STOW-RS Metadata and Bulkdata requests shall be excluded from the JPEG bit streams encapsulated in created DICOM instances. May be overwritten by configured value for particular Archive Network AEs.
 
     (dcmStowExcludeAPPMarkers)"
     "
     .. _dcmFallbackCMoveSCPCallingAET:
 
-    :ref:`Fallback C-Move SCP Calling AE title <dcmFallbackCMoveSCPCallingAET>`",string,"Calling AE Title used in A-ASSOCIATE-RQ to configured Fallback C-MOVE SCP. If absent, the AE Title of the external C-MOVE SCU is used.
+    :ref:`Fallback C-Move SCP Calling AE title <dcmFallbackCMoveSCPCallingAET>`",string,"Calling AE Title used in A-ASSOCIATE-RQ to configured Fallback C-MOVE SCP. If absent, the AE Title of the external C-MOVE SCU is used. May be overwritten by configured value for particular Archive Network AEs.
 
     (dcmFallbackCMoveSCPCallingAET)"
     ":doc:`attributeFilter` (s)",object,"Specifies Attributes stored in the database"

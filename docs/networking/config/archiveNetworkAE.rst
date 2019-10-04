@@ -254,17 +254,17 @@ DICOM Archive Network AE related information
 
     (dcmStorePermissionServiceURL)"
     "
+    .. _dcmStorePermissionServiceResponse:
+
+    :ref:`Store Permission Service Response <dcmStorePermissionServiceResponse>`",string,"Emulate Store Permission Service Response on receive of the first object of a study. {<dicomTag>} will be replaced by the value of the attribute in the object. Only effective if no Store Permission Service Response is configured. Overwrites value specified on Device level.
+
+    (dcmStorePermissionServiceResponse)"
+    "
     .. _dcmStorePermissionServiceResponsePattern:
 
     :ref:`Store Permission Service Response Pattern <dcmStorePermissionServiceResponsePattern>`",string,"Regular Expression applied to responses from Store Permission Service to determine agreement for storage. E.g. ""validation""\s*:\s*""true"". Overwrites value specified on Device level.
 
     (dcmStorePermissionServiceResponsePattern)"
-    "
-    .. _dcmStorePermissionServiceExpirationDatePattern:
-
-    :ref:`Store Permission Service Expiration Date Pattern <dcmStorePermissionServiceExpirationDatePattern>`",string,"Regular Expression applied to responses from Store Permission Service to extract the initial Study Expiration Date. E.g. ""expirationdate""\s*:\s*""([0-9]{8})"". Overwrites value specified on Device level.
-
-    (dcmStorePermissionServiceExpirationDatePattern)"
     "
     .. _dcmStorePermissionServiceErrorCommentPattern:
 
@@ -277,6 +277,12 @@ DICOM Archive Network AE related information
     :ref:`Store Permission Service Error Code Pattern <dcmStorePermissionServiceErrorCodePattern>`",string,"Regular Expression applied to responses from Store Permission Service to extract Error Code in hexadecimal. E.g. ""errorcode""\s*:\s*""(\p{XDigit}{4})"". Overwrites value specified on Device level.
 
     (dcmStorePermissionServiceErrorCodePattern)"
+    "
+    .. _dcmStorePermissionServiceExpirationDatePattern:
+
+    :ref:`Store Permission Service Expiration Date Pattern <dcmStorePermissionServiceExpirationDatePattern>`",string,"Regular Expression applied to responses from Store Permission Service to extract the initial Study Expiration Date. E.g. ""expirationdate""\s*:\s*""([0-9]{8})"". Overwrites value specified on Device level.
+
+    (dcmStorePermissionServiceExpirationDatePattern)"
     "
     .. _dcmAllowRejectionForDataRetentionPolicyExpired:
 
@@ -307,6 +313,18 @@ DICOM Archive Network AE related information
     :ref:`Default Character Set <dcmDefaultCharacterSet>`",string,"Value of Specific Character Set (0008,0005) added to Data Sets of C-STORE RQs and pending C-FIND RSPs without Specific Character Set (0008,0005) attribute received by this Network AE. Overwrites value specified on Device level.
 
     (dcmDefaultCharacterSet)"
+    "
+    .. _dcmDefaultWorklistLabel:
+
+    :ref:`Default Worklist Label <dcmDefaultWorklistLabel>`",string,"Value of Worklist Label (0074,1202) added to Workitems of N-CREATE RQs without Worklist Label (0074,1202) attribute received by this Network AE. Overwrites value specified on Device level.
+
+    (dcmDefaultWorklistLabel)"
+    "
+    .. _dcmUPSEventSCU:
+
+    :ref:`UPS Event SOP Class SCU(s) <dcmUPSEventSCU>`",string,"AE Title of UPS Event SOP Class SCU, to which UPS Event Reports are sent for subscriptions created on this Network AE  - independently if the subscription was created by the N-ACTION DIMSE service, or by a corresponding UPS RESTful service. Overwrites value specified on Device level.
+
+    (dcmUPSEventSCU)"
     "
     .. _dcmRetrieveAET:
 
@@ -424,37 +442,43 @@ DICOM Archive Network AE related information
     "
     .. _dcmRelationalQueryNegotiationLenient:
 
-    :ref:`Relational Query Negotiation Lenient <dcmRelationalQueryNegotiationLenient>`",boolean,"Indicates to accept C-FIND RQs without unique keys for levels above the query level also if support for relational-queries was not negotiated.
+    :ref:`Relational Query Negotiation Lenient <dcmRelationalQueryNegotiationLenient>`",boolean,"Indicates to accept C-FIND RQs without unique keys for levels above the query level also if support for relational-queries was not negotiated. Overwrites value specified on Device level.
 
     (dcmRelationalQueryNegotiationLenient)"
     "
     .. _dcmRelationalRetrieveNegotiationLenient:
 
-    :ref:`Relational Retrieve Negotiation Lenient <dcmRelationalRetrieveNegotiationLenient>`",boolean,"Indicates to accept C-MOVE and C-GET RQs without unique keys for levels above the query level also if support for relational-queries was not negotiated.
+    :ref:`Relational Retrieve Negotiation Lenient <dcmRelationalRetrieveNegotiationLenient>`",boolean,"Indicates to accept C-MOVE and C-GET RQs without unique keys for levels above the query level also if support for relational-queries was not negotiated. Overwrites value specified on Device level. Overwrites value specified on Device level.
 
     (dcmRelationalRetrieveNegotiationLenient)"
     "
+    .. _dcmRestrictRetrieveAccordingTransferCapabilities:
+
+    :ref:`Restrict Retrieve According Transfer Capabilities <dcmRestrictRetrieveAccordingTransferCapabilities>`",string,"Indicates if the set of requested objects to retrieve shall be restricted according the Transfer Capabilities of the Retrieve Destination. CONFIGURATION - consider configured Transfer Capabilities of the Destination AE, but treat a non accepted Presentation Context as failure. Overwrites value specified on Device level. Enumerated values: NO, YES or CONFIGURATION.
+
+    (dcmRestrictRetrieveAccordingTransferCapabilities)"
+    "
     .. _dcmRejectConflictingPatientAttribute:
 
-    :ref:`Reject Conflicting Patient Attribute(s) <dcmRejectConflictingPatientAttribute>`",string,"DICOM Tag of Patient Attribute which have to match in received objects with the value in previous received objects with equal Patient ID to be accepted.
+    :ref:`Reject Conflicting Patient Attribute(s) <dcmRejectConflictingPatientAttribute>`",string,"DICOM Tag of Patient Attribute which have to match in received objects with the value in previous received objects with equal Patient ID to be accepted. Overwrites value specified on Device level.
 
     (dcmRejectConflictingPatientAttribute)"
     "
     .. _dcmStowRetiredTransferSyntax:
 
-    :ref:`STOW Retired Transfer Syntax <dcmStowRetiredTransferSyntax>`",boolean,"Store received JPEG Full Progression, Non-Hierarchical JPEG images in DICOM images with corresponding (retired) Transfer Syntax UID 1.2.840.10008.1.2.4.55. Otherwise set 1.2.840.10008.1.2.4.50 (= JPEG Baseline) or 1.2.840.10008.1.2.4.51 (= JPEG Extended) as Transfer Syntax UID of the stored DICOM image, without transcoding to JPEG Baseline or JPEG Extended, but including the JPEG image as received.
+    :ref:`STOW Retired Transfer Syntax <dcmStowRetiredTransferSyntax>`",boolean,"Store received JPEG Full Progression, Non-Hierarchical JPEG images in DICOM images with corresponding (retired) Transfer Syntax UID 1.2.840.10008.1.2.4.55. Otherwise set 1.2.840.10008.1.2.4.50 (= JPEG Baseline) or 1.2.840.10008.1.2.4.51 (= JPEG Extended) as Transfer Syntax UID of the stored DICOM image, without transcoding to JPEG Baseline or JPEG Extended, but including the JPEG image as received. Overwrites value specified on Device level.
 
     (dcmStowRetiredTransferSyntax)"
     "
     .. _dcmStowExcludeAPPMarkers:
 
-    :ref:`STOW Exclude Application Markers <dcmStowExcludeAPPMarkers>`",boolean,"Indicates if APP markers in JPEG images received in STOW-RS Metadata and Bulkdata requests shall be excluded from the JPEG bit streams encapsulated in created DICOM instances.
+    :ref:`STOW Exclude Application Markers <dcmStowExcludeAPPMarkers>`",boolean,"Indicates if APP markers in JPEG images received in STOW-RS Metadata and Bulkdata requests shall be excluded from the JPEG bit streams encapsulated in created DICOM instances. Overwrites value specified on Device level.
 
     (dcmStowExcludeAPPMarkers)"
     "
     .. _dcmFallbackCMoveSCPCallingAET:
 
-    :ref:`Fallback C-Move SCP Calling AE title <dcmFallbackCMoveSCPCallingAET>`",string,"Calling AE Title used in A-ASSOCIATE-RQ to configured Fallback C-MOVE SCP. If absent, the AE Title of the external C-MOVE SCU is used.
+    :ref:`Fallback C-Move SCP Calling AE title <dcmFallbackCMoveSCPCallingAET>`",string,"Calling AE Title used in A-ASSOCIATE-RQ to configured Fallback C-MOVE SCP. If absent, the AE Title of the external C-MOVE SCU is used. Overwrites value specified on Device level.
 
     (dcmFallbackCMoveSCPCallingAET)"
     ":doc:`exportRule` (s)",object,"Export Rules applied to DICOM objects received by this AE. Supplements Export Rules specified on Device level."
