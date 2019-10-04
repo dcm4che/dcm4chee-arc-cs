@@ -674,11 +674,11 @@ DICOM Archive Device related information
 
     (dcmDefaultCharacterSet)"
     "
-    .. _dcmDefaultWorklistLabel:
+    .. _dcmUPSWorklistLabel:
 
-    :ref:`Default Worklist Label <dcmDefaultWorklistLabel>`",string,"Value of Worklist Label (0074,1202) added to Workitems of N-CREATE RQs without Worklist Label (0074,1202) attribute received by any AE. If absent, the AE Title of the receiving AE will be used. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`UPS Worklist Label <dcmUPSWorklistLabel>`",string,"Value of Worklist Label (0074,1202) of created UPS by any Network AE, if the UPS Push SCU or UPS-RS User Agent does not provide a value for this attribute. If absent, the AE Title of the receiving AE will be used. May be overwritten by configured values for particular Archive Network AEs.
 
-    (dcmDefaultWorklistLabel)"
+    (dcmUPSWorklistLabel)"
     "
     .. _dcmUPSEventSCU:
 
