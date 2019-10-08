@@ -104,11 +104,11 @@ Archive Attribute Coercion of received/sent DIMSE
 
     (dcmTrimISO2022CharacterSet)"
     "
-    .. _dcmCallingAETAsScheduledStationAET:
+    .. _dcmUseCallingAETitleAs:
 
-    :ref:`Calling AET as Scheduled Station AET <dcmCallingAETAsScheduledStationAET>`",boolean,"Use Calling AET as matching Key of Scheduled Station AE Title (0040,0001) in item of Scheduled Procedure Step Sequence (0040,0100). Only effective with DIMSE = C_FIND_RQ, DICOM Transfer Role = SCU and SOP Class UID = 1.2.840.10008.5.1.4.31 (= Modality Worklist Information Model - FIND).
+    :ref:`Use Calling AE Title as <dcmUseCallingAETitleAs>`",string,"Identifies the attribute which is set to the value of the Calling AET if it is absent or empty. ScheduledStationAETitle (= Scheduled Station AE Title (0040,0001) in item of Scheduled Procedure Step Sequence (0040,0100)), SendingApplicationEntityTitleOfSeries (= Sending Application Entity Title of Series (7777,xx37)). Enumerated values: ScheduledStationAETitle or SendingApplicationEntityTitleOfSeries.
 
-    (dcmCallingAETAsScheduledStationAET)"
+    (dcmUseCallingAETitleAs)"
     "
     .. _dcmNullifyTag:
 
