@@ -682,9 +682,15 @@ DICOM Archive Device related information
     "
     .. _dcmUPSEventSCU:
 
-    :ref:`UPS Event SOP Class SCU(s) <dcmUPSEventSCU>`",string,"AE Title of UPS Event SOP Class SCU, to which UPS Event Reports are sent - independently if the subscription was created by the N-ACTION DIMSE service, or by a corresponding UPS RESTful service. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`UPS Event SCU(s) <dcmUPSEventSCU>`",string,"AE Title of UPS Event SOP Class SCU, to which UPS Event Reports are sent - independently if the subscription was created by the N-ACTION DIMSE service, or by a corresponding UPS RESTful service. May be overwritten by configured values for particular Archive Network AEs.
 
     (dcmUPSEventSCU)"
+    "
+    .. _dcmUPSEventSCUKeepAlive:
+
+    :ref:`UPS Event SCU Keep Alive <dcmUPSEventSCUKeepAlive>`",integer,"Timeout in ms to keep associations to UPS Event SCUs alive. If absent, associations will not be reused for sending multiple UPS Event Reports to one UPS Event SCU. May be overwritten by configured values for particular Archive Network AEs.
+
+    (dcmUPSEventSCUKeepAlive)"
     "
     .. _dcmRetrieveAET:
 

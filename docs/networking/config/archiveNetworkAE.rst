@@ -322,9 +322,15 @@ DICOM Archive Network AE related information
     "
     .. _dcmUPSEventSCU:
 
-    :ref:`UPS Event SOP Class SCU(s) <dcmUPSEventSCU>`",string,"AE Title of UPS Event SOP Class SCU, to which UPS Event Reports are sent for subscriptions created on this Network AE  - independently if the subscription was created by the N-ACTION DIMSE service, or by a corresponding UPS RESTful service. Overwrites value specified on Device level.
+    :ref:`UPS Event SCU(s) <dcmUPSEventSCU>`",string,"AE Title of UPS Event SOP Class SCU, to which UPS Event Reports are sent for subscriptions created on this Network AE  - independently if the subscription was created by the N-ACTION DIMSE service, or by a corresponding UPS RESTful service. Overwrites value specified on Device level.
 
     (dcmUPSEventSCU)"
+    "
+    .. _dcmUPSEventSCUKeepAlive:
+
+    :ref:`UPS Event SCU Keep Alive <dcmUPSEventSCUKeepAlive>`",integer,"Timeout in ms to keep associations to UPS Event SCUs alive. If absent, associations will not be reused for sending multiple UPS Event Reports to one UPS Event SCU. Overwrites value specified on Device level.
+
+    (dcmUPSEventSCUKeepAlive)"
     "
     .. _dcmRetrieveAET:
 
