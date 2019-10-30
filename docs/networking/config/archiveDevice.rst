@@ -328,7 +328,7 @@ DICOM Archive Device related information
     "
     .. _dcmExportTaskFetchSize:
 
-    :ref:`Export Task Fetch Size <dcmExportTaskFetchSize>`",integer,"Maximal number of Export Tasks scheduled in one transaction.
+    :ref:`Export Task Fetch Size <dcmExportTaskFetchSize>`",integer,"Limit result set of DB query for Export Tasks ready for processing.
 
     (dcmExportTaskFetchSize)"
     "
@@ -703,6 +703,12 @@ DICOM Archive Device related information
     :ref:`Return Retrieve AE Title(s) <dcmReturnRetrieveAET>`",string,"Retrieve AE Title returned in C-FIND and QIDO responses. If absent, the Retrieve AET associated with the archived entity will be returned. May be overwritten by configured values for particular Archive Network AEs.
 
     (dcmReturnRetrieveAET)"
+    "
+    .. _dcmMultipleStoreAssociations:
+
+    :ref:`Multiple Store Associations(s) <dcmMultipleStoreAssociations>`",string,"Number of Storage Associations used for retrieve of Composite Objects. C-STORE SCP specific numbers can be specified by prefix '<AETitle>:'. If absent, only one Association will be used. May be supplemented by configured Multiple Store Associations for particular Archive Network AEs.
+
+    (dcmMultipleStoreAssociations)"
     "
     .. _dcmExternalRetrieveAEDestination:
 

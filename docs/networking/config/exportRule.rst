@@ -34,7 +34,7 @@ Export Rule
     "
     .. _dcmProperty:
 
-    :ref:`Attribute Conditions(s) <dcmProperty>`",string,"Attribute conditions in format {attributeID}[!]={regEx}.
+    :ref:`Attribute Conditions(s) <dcmProperty>`",string,"Attribute Conditions in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{attributeID})[!]={regEx}.
 
     (dcmProperty)"
     "

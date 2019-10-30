@@ -14,6 +14,12 @@ Archive Attribute Coercion of received/sent DIMSE
 
     (cn)"
     "
+    .. _dcmRulePriority:
+
+    :ref:`Rule Priority <dcmRulePriority>`",integer,"Rule Priority.
+
+    (dcmRulePriority)"
+    "
     .. _dcmDIMSE:
 
     :ref:`DIMSE <dcmDIMSE>`",string,"DICOM Message Element on which this Attribute Coercion shall be applied Enumerated values: N_CREATE_RQ, C_STORE_RQ, C_FIND_RQ or C_FIND_RSP.
@@ -26,29 +32,17 @@ Archive Attribute Coercion of received/sent DIMSE
 
     (dicomTransferRole)"
     "
-    .. _dcmRulePriority:
-
-    :ref:`Rule Priority <dcmRulePriority>`",integer,"Rule Priority.
-
-    (dcmRulePriority)"
-    "
-    .. _dcmAETitle:
-
-    :ref:`AE Title(s) <dcmAETitle>`",string,"Application Entity (AE) title of peer DICOM AE for which this Attribute Coercion shall be applied. Apply on any if absent.
-
-    (dcmAETitle)"
-    "
-    .. _dcmHostname:
-
-    :ref:`Hostname(s) <dcmHostname>`",string,"DNS hostname of peer DICOM AE for which this Attribute Coercion shall be applied. Apply on any if absent.
-
-    (dcmHostname)"
-    "
     .. _dcmSOPClass:
 
     :ref:`SOP Class UID(s) <dcmSOPClass>`",string,"UID of SOP Class for which this Attribute Coercion shall be applied. Apply on any if absent.
 
     (dcmSOPClass)"
+    "
+    .. _dcmProperty:
+
+    :ref:`Conditions(s) <dcmProperty>`",string,"Conditions in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{attributeID})[!]={regEx}
+
+    (dcmProperty)"
     "
     .. _dcmRetrieveAsReceived:
 

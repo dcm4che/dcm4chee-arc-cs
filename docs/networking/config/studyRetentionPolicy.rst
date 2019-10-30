@@ -28,7 +28,7 @@ Study Retention Policy
     "
     .. _dcmProperty:
 
-    :ref:`Conditions(s) <dcmProperty>`",string,"Conditions in format {attributeID}[!]={regEx}
+    :ref:`Conditions(s) <dcmProperty>`",string,"Conditions in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{attributeID})[!]={regEx}
 
     (dcmProperty)"
     "
