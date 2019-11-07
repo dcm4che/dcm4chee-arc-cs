@@ -110,6 +110,12 @@ Archive Attribute Coercion of received/sent DIMSE
 
     (dcmNullifyTag)"
     "
+    .. _dcmMergeAttribute:
+
+    :ref:`Merge Attribute(s) <dcmMergeAttribute>`",string,"Merge DICOM Attribute in format {attributeID}={value}. {attributeID} inside of {value} will be replaced by the value of that attribute in the original dataset.
+
+    (dcmMergeAttribute)"
+    "
     .. _dcmNullifyIssuerOfPatientID:
 
     :ref:`Nullify Issuer of Patient ID <dcmNullifyIssuerOfPatientID>`",string,"Conditionally nullify Issuer of Patient ID (0010,0021) and Issuer of Patient ID Qualifiers Sequence (0010,0024) from received objects Enumerated values: ALWAYS, MATCHING or NOT_MATCHING.

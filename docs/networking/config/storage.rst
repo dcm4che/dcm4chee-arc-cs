@@ -44,12 +44,6 @@ Storage Descriptor
 
     (dcmReadOnly)"
     "
-    .. _dcmNoDeletionConstraint:
-
-    :ref:`No Deletion Constraint <dcmNoDeletionConstraint>`",boolean,"Delete Studies from cache/temporary Storage System, if no Deleter Threshold and no other deletion constraint is configured.
-
-    (dcmNoDeletionConstraint)"
-    "
     .. _dcmStorageClusterID:
 
     :ref:`Storage Cluster ID <dcmStorageClusterID>`",string,"Identifies a Storage to belong to a Storage Cluster. Objects of one Study may be distributed over Storage Systems of one Storage Cluster. Used by threshold triggered deletion.
@@ -58,9 +52,27 @@ Storage Descriptor
     "
     .. _dcmStorageThreshold:
 
-    :ref:`Storage Threshold <dcmStorageThreshold>`",string,"Minimal Usable Space on Storage System. If the usable space fall below that value the Storage System will be removed from the list of configured Storage Systems of the Network AE requesting that Storage System. Format nnn(MB|GB|MiB|GiB)
+    :ref:`Storage Threshold <dcmStorageThreshold>`",string,"Minimal Usable Space on Storage System. If the usable space falls below that value the Storage System will be marked as full by setting Storage Threshold Exceeds to the current time and - if Storage Threshold Exceeds Permanently is true - the Storage System will be removed from the list of configured Storage Systems of the Network AE requesting that Storage System. Format nnn(MB|GB|MiB|GiB)
 
     (dcmStorageThreshold)"
+    "
+    .. _dcmStorageThresholdExceedsPermanently:
+
+    :ref:`Storage Threshold Exceeds Permanently <dcmStorageThresholdExceedsPermanently>`",boolean,"Indicates to removed the Storage System from the list of configured Storage Systems of the Network AE requesting that Storage System when the Storage Threshold exceeds.
+
+    (dcmStorageThresholdExceedsPermanently)"
+    "
+    .. _dcmStorageThresholdExceeds:
+
+    :ref:`Storage Threshold Exceeds <dcmStorageThresholdExceeds>`",string,"Date and time in format YYYYMMDDHHMMSS.FFFFFF when the Storage Threshold exceeded.
+
+    (dcmStorageThresholdExceeds)"
+    "
+    .. _dcmNoDeletionConstraint:
+
+    :ref:`No Deletion Constraint <dcmNoDeletionConstraint>`",boolean,"Delete Studies from cache/temporary Storage System, if no Deleter Threshold and no other deletion constraint is configured.
+
+    (dcmNoDeletionConstraint)"
     "
     .. _dcmDeleterThreshold:
 
