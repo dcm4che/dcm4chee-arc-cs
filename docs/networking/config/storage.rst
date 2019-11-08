@@ -56,17 +56,17 @@ Storage Descriptor
 
     (dcmStorageThreshold)"
     "
+    .. _dcmStorageThresholdExceeded:
+
+    :ref:`Storage Threshold Exceeded <dcmStorageThresholdExceeded>`",string,"Date and time in format YYYYMMDDHHMMSS.FFFFFF when the Storage Threshold exceeded.
+
+    (dcmStorageThresholdExceeded)"
+    "
     .. _dcmStorageThresholdExceedsPermanently:
 
     :ref:`Storage Threshold Exceeds Permanently <dcmStorageThresholdExceedsPermanently>`",boolean,"Indicates to removed the Storage System from the list of configured Storage Systems of the Network AE requesting that Storage System when the Storage Threshold exceeds.
 
     (dcmStorageThresholdExceedsPermanently)"
-    "
-    .. _dcmStorageThresholdExceeds:
-
-    :ref:`Storage Threshold Exceeds <dcmStorageThresholdExceeds>`",string,"Date and time in format YYYYMMDDHHMMSS.FFFFFF when the Storage Threshold exceeded.
-
-    (dcmStorageThresholdExceeds)"
     "
     .. _dcmNoDeletionConstraint:
 
