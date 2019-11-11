@@ -356,18 +356,6 @@ DICOM Archive Network AE related information
 
     (dcmExternalRetrieveAEDestination)"
     "
-    .. _dcmInvokeImageDisplayPatientURL:
-
-    :ref:`Invoke Image Display Patient URL <dcmInvokeImageDisplayPatientURL>`",string,"URL to launch external Image Display for a Patient. {} will be replaced by the Patient ID formatted as HL7 CX data type. E.g.: http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=PATIENT&patientID={}. Overwrites value specified on Device level.
-
-    (dcmInvokeImageDisplayPatientURL)"
-    "
-    .. _dcmInvokeImageDisplayStudyURL:
-
-    :ref:`Invoke Image Display Study URL <dcmInvokeImageDisplayStudyURL>`",string,"URL to launch external Image Display for a Study. {} will be replaced by the Study Instance UID. E.g.: http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=STUDY&studyUID={}. Overwrites value specified on Device level.
-
-    (dcmInvokeImageDisplayStudyURL)"
-    "
     .. _dcmCopyMoveUpdatePolicy:
 
     :ref:`Copy Move Update Policy <dcmCopyMoveUpdatePolicy>`",string,"Specifies update policy for attributes of the destination Study on Copy/Move of Instances from another Study. If absent, the attributes will not be updated. Overwrites value specified on Device level. Enumerated values: SUPPLEMENT, MERGE, OVERWRITE or REPLACE.

@@ -56,6 +56,12 @@ Web Application information
 
     (dicomApplicationCluster)"
     "
+    .. _dcmProperty:
+
+    :ref:`Property(s) <dcmProperty>`",string,"Property in format <name>=<value>. E.g.: IID_PATIENT_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=PATIENT&patientID={} or IID_STUDY_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=STUDY&studyUID={}
+
+    (dcmProperty)"
+    "
     .. _dicomInstalled:
 
     :ref:`installed <dicomInstalled>`",boolean,"True if the Web Application is installed on network. If not present, information about the installed status of the Web Application is inherited from the device
