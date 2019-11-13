@@ -134,15 +134,27 @@ dcm4che proprietary Network Connection Attributes
 
     (dcmARRPTimeout)"
     "
+    .. _dcmSendTimeout:
+
+    :ref:`Send Timeout <dcmSendTimeout>`",integer,"Timeout in ms for sending other DIMSE RQs than C-STORE RQs; no timeout if absent
+
+    (dcmSendTimeout)"
+    "
+    .. _dcmStoreTimeout:
+
+    :ref:`Store Timeout <dcmStoreTimeout>`",integer,"Timeout in ms for sending C-STORE RQs; no timeout if absent
+
+    (dcmStoreTimeout)"
+    "
     .. _dcmResponseTimeout:
 
-    :ref:`Response Timeout <dcmResponseTimeout>`",integer,"Timeout in ms for receive of response message; no timeout if absent
+    :ref:`Response Timeout <dcmResponseTimeout>`",integer,"Timeout in ms for receive of other outstanding DIMSE RSPs than C-MOVE  or C-GET RSPs; no timeout if absent
 
     (dcmResponseTimeout)"
     "
     .. _dcmRetrieveTimeout:
 
-    :ref:`Retrieve Timeout <dcmRetrieveTimeout>`",integer,"Timeout in ms for receive of C-GET-RSP or C-MOVE-RSP; no timeout if absent
+    :ref:`Retrieve Timeout <dcmRetrieveTimeout>`",integer,"Timeout in ms for receive of outstanding C-GET or C-MOVE RSPs; no timeout if absent
 
     (dcmRetrieveTimeout)"
     "
