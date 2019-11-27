@@ -46,7 +46,7 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
     "
     .. _dcmUPSInputReadinessState:
 
-    :ref:`Priority <dcmUPSInputReadinessState>`",string,"Value of Input Readiness State (0040,4041) of created UPS Enumerated values: INCOMPLETE, UNAVAILABLE or READY.
+    :ref:`Input Readiness State <dcmUPSInputReadinessState>`",string,"Value of Input Readiness State (0040,4041) of created UPS Enumerated values: INCOMPLETE, UNAVAILABLE or READY.
 
     (dcmUPSInputReadinessState)"
     "
