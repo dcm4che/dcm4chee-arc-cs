@@ -28,7 +28,7 @@ dcm4che proprietary Network Connection Attributes
     "
     .. _dcmTLSProtocol:
 
-    :ref:`TLS Protocol(s) <dcmTLSProtocol>`",string,"The Supported TLS Protocols. Enumerated values: TLSv1.2, TLSv1.1, TLSv1 or SSLv3.
+    :ref:`TLS Protocol(s) <dcmTLSProtocol>`",string,"The Supported TLS Protocols. Enumerated values: TLSv1.3, TLSv1.2, TLSv1.1, TLSv1 or SSLv3.
 
     (dcmTLSProtocol)"
     "

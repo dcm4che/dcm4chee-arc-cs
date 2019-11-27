@@ -364,7 +364,7 @@ DICOM Archive Network AE related information
     "
     .. _dcmLinkMWLEntryUpdatePolicy:
 
-    :ref:`Link MWL Entry Update Policy <dcmLinkMWLEntryUpdatePolicy>`",string,"SSpecifies update policy for Study attributes on Link of Instances of another Study with a MWL Entry referring an existing Study. Overwrites value specified on Device level. Enumerated values: SUPPLEMENT, MERGE, OVERWRITE or REPLACE.
+    :ref:`Link MWL Entry Update Policy <dcmLinkMWLEntryUpdatePolicy>`",string,"Specifies update policy for Study attributes on Link of Instances of another Study with a MWL Entry referring an existing Study. Overwrites value specified on Device level. Enumerated values: SUPPLEMENT, MERGE, OVERWRITE or REPLACE.
 
     (dcmLinkMWLEntryUpdatePolicy)"
     "
@@ -488,3 +488,4 @@ DICOM Archive Network AE related information
     ":doc:`archiveAttributeCoercion` (s)",object,"Attribute Coercion of received/sent DIMSE. Supplements Attribute Coercions specified on Device level."
     ":doc:`studyRetentionPolicy` (s)",object,"Study Retention Policies. Supplements Study Retention Policies specified on Device level."
     ":doc:`storeAccessControlIDRule` (s)",object,"Store Access Control Rules applied to Studies received by this AE. Supplements Store Access Control Rules specified on Device level."
+    ":doc:`upsOnStore` (s)",object,"UPS on Store Rules applied to DICOM objects received by this AE. Supplements UPS on Store Rules specified on Device level."
