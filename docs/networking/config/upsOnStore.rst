@@ -28,37 +28,43 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
     "
     .. _dcmUPSLabel:
 
-    :ref:`Procedure Step Label <dcmUPSLabel>`",string,"Value of Procedure Step Label (0074,1204) of created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.
+    :ref:`Procedure Step Label <dcmUPSLabel>`",string,"Value of Procedure Step Label (0074,1204) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.
 
     (dcmUPSLabel)"
     "
     .. _dcmUPSWorklistLabel:
 
-    :ref:`Worklist Label <dcmUPSWorklistLabel>`",string,"Value of Worklist Label (0074,1202) of created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.
+    :ref:`Worklist Label <dcmUPSWorklistLabel>`",string,"Value of Worklist Label (0074,1202) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.
 
     (dcmUPSWorklistLabel)"
     "
     .. _dcmUPSPriority:
 
-    :ref:`Priority <dcmUPSPriority>`",string,"Value of Scheduled Procedure Step Priority (0074,1200) of created UPS. Enumerated Values: HIGH, MEDIUM, LOW. If absent, MEDIUM will be applied. Enumerated values: HIGH, MEDIUM or LOW.
+    :ref:`Priority <dcmUPSPriority>`",string,"Value of Scheduled Procedure Step Priority (0074,1200) in created UPS. Enumerated Values: HIGH, MEDIUM, LOW. If absent, MEDIUM will be applied. Enumerated values: HIGH, MEDIUM or LOW.
 
     (dcmUPSPriority)"
     "
     .. _dcmUPSInputReadinessState:
 
-    :ref:`Input Readiness State <dcmUPSInputReadinessState>`",string,"Value of Input Readiness State (0040,4041) of created UPS Enumerated values: INCOMPLETE, UNAVAILABLE or READY.
+    :ref:`Input Readiness State <dcmUPSInputReadinessState>`",string,"Value of Input Readiness State (0040,4041) in created UPS Enumerated values: INCOMPLETE, UNAVAILABLE or READY.
 
     (dcmUPSInputReadinessState)"
     "
-    .. _dcmDuration:
+    .. _dcmUPSStartDateAndTimeDelay:
 
-    :ref:`Schedule Delay <dcmDuration>`",string,"Delay of Scheduled Procedure Step Start DateTime (0040,4005) of created UPS from receive time in format PnDTnHnMn.nS. No delay if absent.
+    :ref:`Scheduled Procedure Step Start Date and Time Delay <dcmUPSStartDateAndTimeDelay>`",string,"Delay of Scheduled Procedure Step Start Date and Time (0040,4005) in created UPS from receive time in format PnDTnHnMn.nS. No delay if absent.
 
-    (dcmDuration)"
+    (dcmUPSStartDateAndTimeDelay)"
+    "
+    .. _dcmUPSCompletionDateAndTimeDelay:
+
+    :ref:`Completion Date and Time Delay <dcmUPSCompletionDateAndTimeDelay>`",string,"Delay of Expected Completion Date and Time (0040,4011) in created UPS from receive time in format PnDTnHnMn.nS. If absent, no Expected Completion Date and Time will be set.
+
+    (dcmUPSCompletionDateAndTimeDelay)"
     "
     .. _dcmUPSInstanceUIDBasedOnName:
 
-    :ref:`UPS Instance UID based on name <dcmUPSInstanceUIDBasedOnName>`",string,"Value used to generate name based SOP Instance UID (0008,0018) of created UPS. Typically, the value will include {StudyInstanceUID}, {SeriesInstanceUID} or {SOPInstanceUID} to create a different UPS for each received Study, Series or Object. If absent, a random generated SOP Instance UID (0008,0018) will be used.
+    :ref:`UPS Instance UID based on name <dcmUPSInstanceUIDBasedOnName>`",string,"Value used to generate name based SOP Instance UID (0008,0018) in created UPS. Typically, the value will include {StudyInstanceUID}, {SeriesInstanceUID} or {SOPInstanceUID} to create a different UPS for each received Study, Series or Object. If absent, a random generated SOP Instance UID (0008,0018) will be used.
 
     (dcmUPSInstanceUIDBasedOnName)"
     "
@@ -70,51 +76,87 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
     "
     .. _dcmUPSIncludeInputInformation:
 
-    :ref:`Include Input Information <dcmUPSIncludeInputInformation>`",string,"Indicates if received objects shall be referenced in the Input Information Sequence (0040,4021) of created UPS. SINGLE (= do not updating existing UPS), APPEND (= update existing UPS in state SCHEDULED), SINGLE_OR_CREATE (= if UPS already exists, create new UPS with derived UID), APPEND_OR_CREATE (= if existing UPS is no longer in state SCHEDULED, create new UPS with derived UID). Enumerated values: NO, SINGLE, APPEND, SINGLE_OR_CREATE or APPEND_OR_CREATE.
+    :ref:`Include Input Information <dcmUPSIncludeInputInformation>`",string,"Indicates if received objects shall be referenced in the Input Information Sequence (0040,4021) in created UPS. SINGLE (= do not updating existing UPS), APPEND (= update existing UPS in state SCHEDULED), SINGLE_OR_CREATE (= if UPS already exists, create new UPS with derived UID), APPEND_OR_CREATE (= if existing UPS is no longer in state SCHEDULED, create new UPS with derived UID). Enumerated values: NO, SINGLE, APPEND, SINGLE_OR_CREATE or APPEND_OR_CREATE.
 
     (dcmUPSIncludeInputInformation)"
     "
     .. _dcmUPSScheduledWorkitemCode:
 
-    :ref:`Scheduled Workitem Code <dcmUPSScheduledWorkitemCode>`",string,"Item of Scheduled Workitem Code Sequence (0040,4018) of created UPS in format (CV, CSD, ""CM"").
+    :ref:`Scheduled Workitem Code <dcmUPSScheduledWorkitemCode>`",string,"Item of Scheduled Workitem Code Sequence (0040,4018) in created UPS in format (CV, CSD, ""CM"").
 
     (dcmUPSScheduledWorkitemCode)"
     "
     .. _dcmUPSScheduledStationNameCode:
 
-    :ref:`Scheduled Station Name Code <dcmUPSScheduledStationNameCode>`",string,"Item of Scheduled Station Name Code Sequence (0040,4025) of created UPS in format (CV, CSD, ""CM"").
+    :ref:`Scheduled Station Name Code <dcmUPSScheduledStationNameCode>`",string,"Item of Scheduled Station Name Code Sequence (0040,4025) in created UPS in format (CV, CSD, ""CM"").
 
     (dcmUPSScheduledStationNameCode)"
     "
     .. _dcmUPSScheduledStationClassCode:
 
-    :ref:`Scheduled Station Class Code Seence <dcmUPSScheduledStationClassCode>`",string,"Item of Scheduled Station Class Code Sequence (0040,4026) of created UPS in format (CV, CSD, ""CM"").
+    :ref:`Scheduled Station Class Code Seence <dcmUPSScheduledStationClassCode>`",string,"Item of Scheduled Station Class Code Sequence (0040,4026) in created UPS in format (CV, CSD, ""CM"").
 
     (dcmUPSScheduledStationClassCode)"
     "
     .. _dcmUPSScheduledStationLocationCode:
 
-    :ref:`Scheduled Station Geographic Location Code <dcmUPSScheduledStationLocationCode>`",string,"Item of Scheduled Station Geographic Location Code Sequence (0040,4027) of created UPS in format (CV, CSD, ""CM"").
+    :ref:`Scheduled Station Geographic Location Code <dcmUPSScheduledStationLocationCode>`",string,"Item of Scheduled Station Geographic Location Code Sequence (0040,4027) in created UPS in format (CV, CSD, ""CM"").
 
     (dcmUPSScheduledStationLocationCode)"
     "
     .. _dcmUPSScheduledHumanPerformerCode:
 
-    :ref:`Scheduled Human Performer Code <dcmUPSScheduledHumanPerformerCode>`",string,"Item of Human Performer Code Sequence (0040,4009) of Item of Scheduled Human Performers Sequence (0040,4034) of created UPS in format (CV, CSD, ""CM"").
+    :ref:`Scheduled Human Performer Code <dcmUPSScheduledHumanPerformerCode>`",string,"Item of Human Performer Code Sequence (0040,4009) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS in format (CV, CSD, ""CM"").
 
     (dcmUPSScheduledHumanPerformerCode)"
     "
     .. _dcmUPSScheduledHumanPerformerName:
 
-    :ref:`Scheduled Human Performer Name <dcmUPSScheduledHumanPerformerName>`",string,"Value of Human Performer's Name (0040,4037) of Item of Scheduled Human Performers Sequence (0040,4034) of created UPS.
+    :ref:`Scheduled Human Performer Name <dcmUPSScheduledHumanPerformerName>`",string,"Value of Human Performer's Name (0040,4037) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.
 
     (dcmUPSScheduledHumanPerformerName)"
     "
     .. _dcmUPSScheduledHumanPerformerOrganization:
 
-    :ref:`Scheduled Human Performer Organization <dcmUPSScheduledHumanPerformerOrganization>`",string,"Value of Human Performer's Organization (0040,4036) of Item of Scheduled Human Performers Sequence (0040,4034) of created UPS.
+    :ref:`Scheduled Human Performer Organization <dcmUPSScheduledHumanPerformerOrganization>`",string,"Value of Human Performer's Organization (0040,4036) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.
 
     (dcmUPSScheduledHumanPerformerOrganization)"
+    "
+    .. _dcmAdmissionID:
+
+    :ref:`Admission Number <dcmAdmissionID>`",string,"Value of Admission ID (0038,0010) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.
+
+    (dcmAdmissionID)"
+    "
+    .. _dicomIssuerOfAdmissionID:
+
+    :ref:`Issuer of Admission ID <dicomIssuerOfAdmissionID>`",string,"Value of Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) and Universal Entity ID Type (0040,0033) of the Item of the Issuer of Admission ID Sequence (0038,0014) in created UPS. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]
+
+    (dicomIssuerOfAdmissionID)"
+    "
+    .. _dcmAccessionNumber:
+
+    :ref:`Accession Number <dcmAccessionNumber>`",string,"Value of Accession Number (0008,0050) in Item of Referenced Request Sequence (0040,A370) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.
+
+    (dcmAccessionNumber)"
+    "
+    .. _dicomIssuerOfAccessionNumber:
+
+    :ref:`Issuer of Accession Number <dicomIssuerOfAccessionNumber>`",string,"Value of Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) and Universal Entity ID Type (0040,0033) in Item of Issuer of Accession Number Sequence (0008,0051) in Item of Referenced Request Sequence (0040,A370) in created UPS. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]
+
+    (dicomIssuerOfAccessionNumber)"
+    "
+    .. _dcmRequestedProcedureID:
+
+    :ref:`Requested Procedure ID <dcmRequestedProcedureID>`",string,"Value of Requested Procedure ID (0040,1001) in Item of Referenced Request Sequence (0040,A370) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.
+
+    (dcmRequestedProcedureID)"
+    "
+    .. _dcmRequestingService:
+
+    :ref:`Requesting Service <dcmRequestingService>`",string,"Value of Requesting Service (0032,1033) in Item of Referenced Request Sequence (0040,A370) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.
+
+    (dcmRequestingService)"
     "
     .. _dcmURI:
 
