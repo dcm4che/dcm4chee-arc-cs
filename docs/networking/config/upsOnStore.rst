@@ -50,17 +50,17 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
 
     (dcmUPSInputReadinessState)"
     "
-    .. _dcmUPSStartDateAndTimeDelay:
+    .. _dcmUPSStartDateTimeDelay:
 
-    :ref:`Scheduled Procedure Step Start Date and Time Delay <dcmUPSStartDateAndTimeDelay>`",string,"Delay of Scheduled Procedure Step Start Date and Time (0040,4005) in created UPS from receive time in format PnDTnHnMn.nS. No delay if absent.
+    :ref:`Scheduled Procedure Step Start DateTime Delay <dcmUPSStartDateTimeDelay>`",string,"Delay of Scheduled Procedure Step Start DateTime (0040,4005) in created UPS from receive time in format PnDTnHnMn.nS. No delay if absent.
 
-    (dcmUPSStartDateAndTimeDelay)"
+    (dcmUPSStartDateTimeDelay)"
     "
-    .. _dcmUPSCompletionDateAndTimeDelay:
+    .. _dcmUPSCompletionDateTimeDelay:
 
-    :ref:`Completion Date and Time Delay <dcmUPSCompletionDateAndTimeDelay>`",string,"Delay of Expected Completion Date and Time (0040,4011) in created UPS from receive time in format PnDTnHnMn.nS. If absent, no Expected Completion Date and Time will be set.
+    :ref:`Completion DateTime Delay <dcmUPSCompletionDateTimeDelay>`",string,"Delay of Expected Completion DateTime (0040,4011) in created UPS from receive time in format PnDTnHnMn.nS. If absent, no Expected Completion Date and Time will be set.
 
-    (dcmUPSCompletionDateAndTimeDelay)"
+    (dcmUPSCompletionDateTimeDelay)"
     "
     .. _dcmUPSInstanceUIDBasedOnName:
 
