@@ -58,7 +58,7 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
     "
     .. _dcmUPSCompletionDateTimeDelay:
 
-    :ref:`Completion DateTime Delay <dcmUPSCompletionDateTimeDelay>`",string,"Delay of Expected Completion DateTime (0040,4011) in created UPS from receive time in format PnDTnHnMn.nS. If absent, no Expected Completion Date and Time will be set.
+    :ref:`Expected Completion DateTime Delay <dcmUPSCompletionDateTimeDelay>`",string,"Delay of Expected Completion DateTime (0040,4011) in created UPS from receive time in format PnDTnHnMn.nS. If absent, no Expected Completion Date and Time will be set.
 
     (dcmUPSCompletionDateTimeDelay)"
     "
