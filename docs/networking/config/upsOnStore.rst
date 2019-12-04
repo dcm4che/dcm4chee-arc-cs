@@ -68,12 +68,6 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
 
     (dcmUPSInstanceUIDBasedOnName)"
     "
-    .. _dcmUPSIncludeStudyInstanceUID:
-
-    :ref:`Include Study Instance UID <dcmUPSIncludeStudyInstanceUID>`",boolean,"Indicates if Study Instance UID (0020,000D) of the received object shall be included in the created UPS
-
-    (dcmUPSIncludeStudyInstanceUID)"
-    "
     .. _dcmUPSIncludeInputInformation:
 
     :ref:`Include Input Information <dcmUPSIncludeInputInformation>`",string,"Indicates if received objects shall be referenced in the Input Information Sequence (0040,4021) in created UPS. SINGLE (= do not updating existing UPS), APPEND (= update existing UPS in state SCHEDULED), SINGLE_OR_CREATE (= if UPS already exists, create new UPS with derived UID), APPEND_OR_CREATE (= if existing UPS is no longer in state SCHEDULED, create new UPS with derived UID). Enumerated values: NO, SINGLE, APPEND, SINGLE_OR_CREATE or APPEND_OR_CREATE.
@@ -133,6 +127,18 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
     :ref:`Issuer of Admission ID <dicomIssuerOfAdmissionID>`",string,"Value of Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) and Universal Entity ID Type (0040,0033) of the Item of the Issuer of Admission ID Sequence (0038,0014) in created UPS. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]
 
     (dicomIssuerOfAdmissionID)"
+    "
+    .. _dcmUPSIncludeStudyInstanceUID:
+
+    :ref:`Include Study Instance UID <dcmUPSIncludeStudyInstanceUID>`",boolean,"Indicates if Study Instance UID (0020,000D) of the received object shall be included in the created UPS
+
+    (dcmUPSIncludeStudyInstanceUID)"
+    "
+    .. _dcmUPSIncludeReferencedRequest:
+
+    :ref:`Include Referenced Request <dcmUPSIncludeReferencedRequest>`",boolean,"Indicates if the Study Instance UID (0020,000D) of the received object and the specified Accession Number (0008,0050), Requested Procedure ID (0040,1001) and Requesting Service (0032,1033) shall be included in the item of the Referenced Request Sequence (0040,A370) in the created UPS. Otherwise an empty Referenced Request Sequence (0040,A370) is included.
+
+    (dcmUPSIncludeReferencedRequest)"
     "
     .. _dcmAccessionNumber:
 
