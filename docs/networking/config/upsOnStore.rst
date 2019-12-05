@@ -116,18 +116,6 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
 
     (dcmUPSScheduledHumanPerformerOrganization)"
     "
-    .. _dcmAdmissionID:
-
-    :ref:`Admission Number <dcmAdmissionID>`",string,"Value of Admission ID (0038,0010) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.
-
-    (dcmAdmissionID)"
-    "
-    .. _dicomIssuerOfAdmissionID:
-
-    :ref:`Issuer of Admission ID <dicomIssuerOfAdmissionID>`",string,"Value of Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) and Universal Entity ID Type (0040,0033) of the Item of the Issuer of Admission ID Sequence (0038,0014) in created UPS. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]
-
-    (dicomIssuerOfAdmissionID)"
-    "
     .. _dcmUPSIncludeStudyInstanceUID:
 
     :ref:`Include Study Instance UID <dcmUPSIncludeStudyInstanceUID>`",boolean,"Indicates if Study Instance UID (0020,000D) of the received object shall be included in the created UPS
@@ -163,6 +151,18 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
     :ref:`Requesting Service <dcmRequestingService>`",string,"Value of Requesting Service (0032,1033) in Item of Referenced Request Sequence (0040,A370) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.
 
     (dcmRequestingService)"
+    "
+    .. _dcmAdmissionID:
+
+    :ref:`Admission Number <dcmAdmissionID>`",string,"Value of Admission ID (0038,0010) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.
+
+    (dcmAdmissionID)"
+    "
+    .. _dicomIssuerOfAdmissionID:
+
+    :ref:`Issuer of Admission ID <dicomIssuerOfAdmissionID>`",string,"Value of Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) and Universal Entity ID Type (0040,0033) of the Item of the Issuer of Admission ID Sequence (0038,0014) in created UPS. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]
+
+    (dicomIssuerOfAdmissionID)"
     "
     .. _dcmURI:
 
