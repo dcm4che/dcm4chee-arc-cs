@@ -88,7 +88,7 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
     "
     .. _dcmUPSScheduledStationClassCode:
 
-    :ref:`Scheduled Station Class Code Seence <dcmUPSScheduledStationClassCode>`",string,"Item of Scheduled Station Class Code Sequence (0040,4026) in created UPS in format (CV, CSD, ""CM"").
+    :ref:`Scheduled Station Class Code <dcmUPSScheduledStationClassCode>`",string,"Item of Scheduled Station Class Code Sequence (0040,4026) in created UPS in format (CV, CSD, ""CM"").
 
     (dcmUPSScheduledStationClassCode)"
     "
