@@ -1070,11 +1070,11 @@ DICOM Archive Device related information
 
     (dcmRelationalRetrieveNegotiationLenient)"
     "
-    .. _dcmRestrictRetrieveAccordingTransferCapabilities:
+    .. _dcmRestrictRetrieveSilently:
 
-    :ref:`Restrict Retrieve According Transfer Capabilities <dcmRestrictRetrieveAccordingTransferCapabilities>`",string,"Indicates if the set of requested objects to retrieve shall be restricted according the Transfer Capabilities of the Retrieve Destination. CONFIGURATION - consider configured Transfer Capabilities of the Destination AE, but treat a non accepted Presentation Context as failure. May be overwritten by configured value for particular Archive Network AEs. Enumerated values: NO, YES or CONFIGURATION.
+    :ref:`Restrict Retrieve Silently <dcmRestrictRetrieveSilently>`",boolean,"Indicates if the set of requested objects to retrieve shall be silently (=without counting not transferred object as failures) restricted according the Transfer Capabilities of the Retrieve Destination. Otherwise the number of requested objects for which no Transfer Capability is configured for the Retrieve Destination and therefore are not retrieved is counted as failures. Only effective, if the Retrieve Destination has configured at least one Transfer Capability with SCP role. May be overwritten by configured value for particular Archive Network AEs.
 
-    (dcmRestrictRetrieveAccordingTransferCapabilities)"
+    (dcmRestrictRetrieveSilently)"
     "
     .. _dcmSchedulerMinStartDelay:
 
