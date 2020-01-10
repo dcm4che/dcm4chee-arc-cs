@@ -56,6 +56,12 @@ Managed JMS Queue
 
     (dcmRetryOnWarning)"
     "
+    .. _dcmRetryInProcessOnStartup:
+
+    :ref:`Retry IN PROCESS on Startup <dcmRetryInProcessOnStartup>`",boolean,"Indicates to retry tasks left in status IN PROCESS on system start-up.
+
+    (dcmRetryInProcessOnStartup)"
+    "
     .. _dcmPurgeQueueMessageCompletedDelay:
 
     :ref:`Delay for purging completed queue messages <dcmPurgeQueueMessageCompletedDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which completed queue messages are purged. If absent, there is no deletion for that particular queue
