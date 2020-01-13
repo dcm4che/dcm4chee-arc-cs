@@ -332,6 +332,18 @@ DICOM Archive Device related information
 
     (dcmExportTaskFetchSize)"
     "
+    .. _dcmRetrieveTaskPollingInterval:
+
+    :ref:`Retrieve Task Polling Interval <dcmRetrieveTaskPollingInterval>`",string,"Retrieve Task Polling Interval in ISO-8601 duration format PnDTnHnMnS.
+
+    (dcmRetrieveTaskPollingInterval)"
+    "
+    .. _dcmRetrieveTaskFetchSize:
+
+    :ref:`Retrieve Task Fetch Size <dcmRetrieveTaskFetchSize>`",integer,"Limit result set of DB query for Retrieve Tasks ready for processing.
+
+    (dcmRetrieveTaskFetchSize)"
+    "
     .. _dcmPurgeStoragePollingInterval:
 
     :ref:`Purge Storage Polling Interval <dcmPurgeStoragePollingInterval>`",string,"Polling Interval for deleting objects in ISO-8601 duration format PnDTnHnMnS.
