@@ -422,6 +422,18 @@ DICOM Archive Network AE related information
 
     (hl7PSUDelay)"
     "
+    .. _hl7PSUOnlyIfMWL:
+
+    :ref:`HL7 Procedure Status Update only if MWL <hl7PSUOnlyIfMWL>`",boolean,"Only notify configured HL7 Procedure Status Update Receiving Applications about received studies, if there are MWL Items in the DB with matching Study Instance UID. Overwrites value specified on Device level.
+
+    (hl7PSUOnlyIfMWL)"
+    "
+    .. _hl7PSUPIDPV1:
+
+    :ref:`HL7 Procedure Status Update PID PV1 <hl7PSUPIDPV1>`",boolean,"Indicates to include a Patient Identification (PID) and a Patient Visit (PV1) segment in the HL7 Procedure Status Update message. Overwrites value specified on Device level.
+
+    (hl7PSUPIDPV1)"
+    "
     .. _hl7PSUMWL:
 
     :ref:`HL7 Procedure Status Update MWL <hl7PSUMWL>`",boolean,"Specifies if the Status of MWL Items in the DB is updated to COMPLETED for a received study after the configured HL7 Procedure Status Update Delay. Overwrites value specified on Device level.
