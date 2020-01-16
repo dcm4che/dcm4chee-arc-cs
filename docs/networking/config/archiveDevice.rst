@@ -974,11 +974,35 @@ DICOM Archive Device related information
 
     (hl7PSUDelay)"
     "
-    .. _hl7PSUOnlyIfMWL:
+    .. _hl7PSUForRequestedProcedure:
 
-    :ref:`HL7 Procedure Status Update only if MWL <hl7PSUOnlyIfMWL>`",boolean,"Only notify configured HL7 Procedure Status Update Receiving Applications about received studies, if there are MWL Items in the DB with matching Study Instance UID. May be overwritten by configured value for particular Archive Network AEs.
+    :ref:`HL7 Procedure Status Update for Requested Procedure <hl7PSUForRequestedProcedure>`",boolean,"Limit notification of Procedure Status Update of Requested Procedures to configured HL7 Procedure Status Update Receiving Applications about received studies, only if there are Scheduled Procedure Steps of Requested Procedure (MWL Items in the DB) with matching Study Instance UID. May be overwritten by configured value for particular Archive Network AEs.
 
-    (hl7PSUOnlyIfMWL)"
+    (hl7PSUForRequestedProcedure)"
+    "
+    .. _hl7PSURequestedProcedureID:
+
+    :ref:`HL7 Procedure Status Update Requested Procedure ID <hl7PSURequestedProcedureID>`",string,"Value for Requested Procedure ID in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of the received study. May be overwritten by configured value for particular Archive Network AEs.
+
+    (hl7PSURequestedProcedureID)"
+    "
+    .. _hl7PSUAccessionNumber:
+
+    :ref:`HL7 Procedure Status Accession Number <hl7PSUAccessionNumber>`",string,"Value for Accession Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of the received study. May be overwritten by configured value for particular Archive Network AEs.
+
+    (hl7PSUAccessionNumber)"
+    "
+    .. _hl7PSUFillerOrderNumber:
+
+    :ref:`HL7 Procedure Status Filler Order Number <hl7PSUFillerOrderNumber>`",string,"Value for Filler Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of the received study. May be overwritten by configured value for particular Archive Network AEs.
+
+    (hl7PSUFillerOrderNumber)"
+    "
+    .. _hl7PSUPlacerOrderNumber:
+
+    :ref:`HL7 Procedure Status Placer Order Number <hl7PSUPlacerOrderNumber>`",string,"Value for Placer Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of the received study. May be overwritten by configured value for particular Archive Network AEs.
+
+    (hl7PSUPlacerOrderNumber)"
     "
     .. _hl7PSUPIDPV1:
 
@@ -988,7 +1012,7 @@ DICOM Archive Device related information
     "
     .. _hl7PSUMWL:
 
-    :ref:`HL7 Procedure Status Update MWL <hl7PSUMWL>`",boolean,"Specifies if the Status of MWL Items in the DB is updated to COMPLETED for a received study after the configured HL7 Procedure Status Update Delay. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`HL7 Procedure Status Update MWL <hl7PSUMWL>`",boolean,"Specifies if the Status of MWL Items in the DB is updated to COMPLETED for a received study after the configured HL7 Procedure Status Update Delay only if no notification to HL7 receivers is configured. May be overwritten by configured values for particular Archive Network AEs.
 
     (hl7PSUMWL)"
     "
