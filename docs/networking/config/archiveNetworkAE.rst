@@ -430,25 +430,25 @@ DICOM Archive Network AE related information
     "
     .. _hl7PSURequestedProcedureID:
 
-    :ref:`HL7 Procedure Status Update Requested Procedure ID <hl7PSURequestedProcedureID>`",string,"Value for Requested Procedure ID in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of the received study. Overwrites value specified on Device level.
+    :ref:`HL7 Procedure Status Update Requested Procedure ID <hl7PSURequestedProcedureID>`",string,"Value for Requested Procedure ID in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. Overwrites value specified on Device level.
 
     (hl7PSURequestedProcedureID)"
     "
     .. _hl7PSUAccessionNumber:
 
-    :ref:`HL7 Procedure Status Accession Number <hl7PSUAccessionNumber>`",string,"Value for Accession Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of the received study. Overwrites value specified on Device level.
+    :ref:`HL7 Procedure Status Accession Number <hl7PSUAccessionNumber>`",string,"Value for Accession Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. Overwrites value specified on Device level.
 
     (hl7PSUAccessionNumber)"
     "
     .. _hl7PSUFillerOrderNumber:
 
-    :ref:`HL7 Procedure Status Filler Order Number <hl7PSUFillerOrderNumber>`",string,"Value for Filler Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of the received study. Overwrites value specified on Device level.
+    :ref:`HL7 Procedure Status Filler Order Number <hl7PSUFillerOrderNumber>`",string,"Value for Filler Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. Overwrites value specified on Device level.
 
     (hl7PSUFillerOrderNumber)"
     "
     .. _hl7PSUPlacerOrderNumber:
 
-    :ref:`HL7 Procedure Status Placer Order Number <hl7PSUPlacerOrderNumber>`",string,"Value for Placer Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of the received study. Overwrites value specified on Device level.
+    :ref:`HL7 Procedure Status Placer Order Number <hl7PSUPlacerOrderNumber>`",string,"Value for Placer Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. Overwrites value specified on Device level.
 
     (hl7PSUPlacerOrderNumber)"
     "
@@ -511,6 +511,12 @@ DICOM Archive Network AE related information
     :ref:`STOW Exclude Application Markers <dcmStowExcludeAPPMarkers>`",boolean,"Indicates if APP markers in JPEG images received in STOW-RS Metadata and Bulkdata requests shall be excluded from the JPEG bit streams encapsulated in created DICOM instances. Overwrites value specified on Device level.
 
     (dcmStowExcludeAPPMarkers)"
+    "
+    .. _dcmStowQuicktime2MP4:
+
+    :ref:`STOW Quicktime to MP4 <dcmStowQuicktime2MP4>`",boolean,"Indicates if QuickTime containers received in STOW-RS Metadata and Bulkdata requests shall be converted to MP4 containers encapsulated in created DICOM instances. Overwrites value specified on Device level.
+
+    (dcmStowQuicktime2MP4)"
     "
     .. _dcmFallbackCMoveSCPCallingAET:
 
