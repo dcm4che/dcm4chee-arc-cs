@@ -52,7 +52,7 @@ Create/Update Workitem in unified Worklist on receive of HL7v2 message
     "
     .. _dcmUPSStartDateTime:
 
-    :ref:`Scheduled Procedure Step Start DateTime <dcmUPSStartDateTime>`",string,"Scheduled Procedure Step Start DateTime (0040,4005) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Use receive time if absent and no Scheduled Procedure Step Start DateTime Delay is specified.
+    :ref:`Scheduled Procedure Step Start DateTime <dcmUPSStartDateTime>`",string,"Value of Scheduled Procedure Step Start DateTime (0040,4005) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Use receive time if absent and no Scheduled Procedure Step Start DateTime Delay is specified.
 
     (dcmUPSStartDateTime)"
     "
