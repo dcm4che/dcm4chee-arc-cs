@@ -34,7 +34,7 @@ Create/Update Workitem in unified Worklist on receive of HL7v2 message
     "
     .. _dcmUPSWorklistLabel:
 
-    :ref:`Worklist Label <dcmUPSWorklistLabel>`",string,"Value of Worklist Label (0074,1202) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.
+    :ref:`Worklist Label <dcmUPSWorklistLabel>`",string,"Value of Worklist Label (0074,1202) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. If absent or if value could not be found in HL7 Message, HL7 Application Name of the receiving HL7 Application will be used.
 
     (dcmUPSWorklistLabel)"
     "
@@ -50,15 +50,9 @@ Create/Update Workitem in unified Worklist on receive of HL7v2 message
 
     (dcmUPSInputReadinessState)"
     "
-    .. _dcmUPSStartDateTime:
-
-    :ref:`Scheduled Procedure Step Start DateTime <dcmUPSStartDateTime>`",string,"Value of Scheduled Procedure Step Start DateTime (0040,4005) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Use receive time if absent and no Scheduled Procedure Step Start DateTime Delay is specified.
-
-    (dcmUPSStartDateTime)"
-    "
     .. _dcmUPSStartDateTimeDelay:
 
-    :ref:`Scheduled Procedure Step Start DateTime Delay <dcmUPSStartDateTimeDelay>`",string,"Delay of Scheduled Procedure Step Start DateTime (0040,4005) in created UPS from receive time in format PnDTnHnMn.nS. Only effective, if no Scheduled Procedure Step Start DateTime is specified.
+    :ref:`Scheduled Procedure Step Start DateTime Delay <dcmUPSStartDateTimeDelay>`",string,"Delay of Scheduled Procedure Step Start DateTime (0040,4005) in created UPS from receive time in format PnDTnHnMn.nS. Only effective, if no Scheduled Procedure Step Start DateTime is found in HL7 Message.
 
     (dcmUPSStartDateTimeDelay)"
     "
@@ -116,54 +110,6 @@ Create/Update Workitem in unified Worklist on receive of HL7v2 message
 
     (dcmUPSScheduledHumanPerformerOrganization)"
     "
-    .. _dcmAdmissionID:
-
-    :ref:`Admission Number <dcmAdmissionID>`",string,"Value of Admission ID (0038,0010) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.
-
-    (dcmAdmissionID)"
-    "
-    .. _dicomIssuerOfAdmissionID:
-
-    :ref:`Issuer of Admission ID <dicomIssuerOfAdmissionID>`",string,"Value of Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) and Universal Entity ID Type (0040,0033) of the Item of the Issuer of Admission ID Sequence (0038,0014) in created UPS. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.
-
-    (dicomIssuerOfAdmissionID)"
-    "
-    .. _dcmStudyInstanceUID:
-
-    :ref:`Study Instance UID <dcmStudyInstanceUID>`",string,"Value of Study Instance UID (0020,000D) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.
-
-    (dcmStudyInstanceUID)"
-    "
-    .. _dcmAccessionNumber:
-
-    :ref:`Accession Number <dcmAccessionNumber>`",string,"Value of Accession Number (0008,0050) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.
-
-    (dcmAccessionNumber)"
-    "
-    .. _dicomIssuerOfAccessionNumber:
-
-    :ref:`Issuer of Accession Number <dicomIssuerOfAccessionNumber>`",string,"Value of Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) and Universal Entity ID Type (0040,0033) in Item of Issuer of Accession Number Sequence (0008,0051) in Item of Referenced Request Sequence (0040,A370) in created UPS. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.
-
-    (dicomIssuerOfAccessionNumber)"
-    "
-    .. _dcmRequestedProcedureID:
-
-    :ref:`Requested Procedure ID <dcmRequestedProcedureID>`",string,"Value of Requested Procedure ID (0040,1001) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.
-
-    (dcmRequestedProcedureID)"
-    "
-    .. _dcmRequestedProcedureDescription:
-
-    :ref:`Requested Procedure Description <dcmRequestedProcedureDescription>`",string,"Value of Requested Procedure Description (0032,1060) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.
-
-    (dcmRequestedProcedureDescription)"
-    "
-    .. _dcmRequestingPhysician:
-
-    :ref:`Requesting Physician <dcmRequestingPhysician>`",string,"Value of Requesting Physician (0032,1032) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.
-
-    (dcmRequestingPhysician)"
-    "
     .. _dcmRequestingService:
 
     :ref:`Requesting Service <dcmRequestingService>`",string,"Value of Requesting Service (0032,1033) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.
@@ -172,6 +118,6 @@ Create/Update Workitem in unified Worklist on receive of HL7v2 message
     "
     .. _dcmURI:
 
-    :ref:`XSL Stylesheet URI <dcmURI>`",string,"Specifies URI of the XSL style sheet to include additional attributes in created UPS.
+    :ref:`XSL Stylesheet URI <dcmURI>`",string,"Specifies URI of the XSL style sheet to to transcode received HL7 message to include attributes in created UPS.
 
     (dcmURI)"
