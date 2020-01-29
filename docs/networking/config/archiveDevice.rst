@@ -464,6 +464,12 @@ DICOM Archive Device related information
 
     (dcmStowSpoolDirectory)"
     "
+    .. _hl7ORUAction:
+
+    :ref:`HL7 ORU Action(s) <hl7ORUAction>`",string,"Specifies action on receive of HL7 ORU^R01 message: IMPORT_REPORT (= transcode received HL7 ORU^R01 to DICOM SR), MWL_COMPLETED (= set Status of matching MWL items to COMPLETED). May be overwritten by configured values for particular Archive HL7 Application.
+
+    (hl7ORUAction)"
+    "
     .. _hl7PatientUpdateTemplateURI:
 
     :ref:`HL7 Patient Update Template URI <hl7PatientUpdateTemplateURI>`",string,"Specifies URI for the style sheet used by HL7v2 Patient Update Service. May be overwritten by configured values for particular Archive HL7 Application.
