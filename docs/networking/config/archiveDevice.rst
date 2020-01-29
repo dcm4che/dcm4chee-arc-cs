@@ -86,15 +86,33 @@ DICOM Archive Device related information
 
     (dcmPurgeInstanceRecordsFetchSize)"
     "
+    .. _dcmDeleteMWLPollingInterval:
+
+    :ref:`Delete MWL Polling Interval <dcmDeleteMWLPollingInterval>`",string,"Polling Interval for deleting MWL items in ISO-8601 duration format PnDTnHnMnS. If absent, MWL Items will not get deleted.
+
+    (dcmDeleteMWLPollingInterval)"
+    "
+    .. _dcmDeleteMWLFetchSize:
+
+    :ref:`Delete MWL Fetch Size <dcmDeleteMWLFetchSize>`",integer,"Maximal number of MWL items to delete in one transaction.
+
+    (dcmDeleteMWLFetchSize)"
+    "
+    .. _dcmDeleteMWLDelay:
+
+    :ref:`Delete MWL Delay(s) <dcmDeleteMWLDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS for deleting MWL items. Status specific delays can be specified by prefix 'SCHEDULED:', 'ARRIVED:', 'READY:', 'STARTED:', 'DEPARTED:', 'CANCELLED:', 'DISCONTINUED:', 'COMPLETED:'. If absent, MWL Items will not get deleted.
+
+    (dcmDeleteMWLDelay)"
+    "
     .. _dcmDeleteUPSPollingInterval:
 
-    :ref:`Delete UPS Polling Interval <dcmDeleteUPSPollingInterval>`",string,"Polling Interval for deleting Unified Procedure Steps (UPS) in ISO-8601 duration format PnDTnHnMnS.
+    :ref:`Delete UPS Polling Interval <dcmDeleteUPSPollingInterval>`",string,"Polling Interval for deleting Unified Procedure Steps (UPS) in ISO-8601 duration format PnDTnHnMnS. If absent, Unified Procedure Steps will not get deleted.
 
     (dcmDeleteUPSPollingInterval)"
     "
     .. _dcmDeleteUPSFetchSize:
 
-    :ref:`Delete UPS Fetch Size <dcmDeleteUPSFetchSize>`",integer,"Maximal number of Unified Procedure Steps (UPS) to delete in one transaction; 100 if absent.
+    :ref:`Delete UPS Fetch Size <dcmDeleteUPSFetchSize>`",integer,"Maximal number of Unified Procedure Steps (UPS) to delete in one transaction.
 
     (dcmDeleteUPSFetchSize)"
     "
@@ -466,7 +484,7 @@ DICOM Archive Device related information
     "
     .. _hl7ORUAction:
 
-    :ref:`HL7 ORU Action(s) <hl7ORUAction>`",string,"Specifies action on receive of HL7 ORU^R01 message: IMPORT_REPORT (= transcode received HL7 ORU^R01 to DICOM SR), MWL_COMPLETED (= set Status of matching MWL items to COMPLETED). May be overwritten by configured values for particular Archive HL7 Application.
+    :ref:`HL7 ORU Action(s) <hl7ORUAction>`",string,"Specifies action on receive of HL7 ORU^R01 message: IMPORT_REPORT (= transcode received HL7 ORU^R01 to DICOM SR), MWL_COMPLETED (= set Status of matching MWL items to COMPLETED). May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: IMPORT_REPORT or MWL_COMPLETED.
 
     (hl7ORUAction)"
     "
@@ -1030,7 +1048,7 @@ DICOM Archive Device related information
     "
     .. _hl7PSUMWL:
 
-    :ref:`HL7 Procedure Status Update MWL <hl7PSUMWL>`",boolean,"Specifies if the Status of MWL Items in the DB is updated to COMPLETED for a received study after the configured HL7 Procedure Status Update Delay only if no notification to HL7 receivers is configured. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`HL7 Procedure Status Update MWL <hl7PSUMWL>`",boolean,"Specifies if the Status of MWL Items in the DB is updated to COMPLETED for a received study after the configured HL7 Procedure Status Update Delay. Implicitly set to true, if notification of HL7 receivers is configured. May be overwritten by configured values for particular Archive Network AEs.
 
     (hl7PSUMWL)"
     "
