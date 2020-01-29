@@ -290,12 +290,6 @@ DICOM Archive Network AE related information
 
     (dcmAllowRejectionForDataRetentionPolicyExpired)"
     "
-    .. _dcmAcceptedUserRole:
-
-    :ref:`Accepted User Role(s) <dcmAcceptedUserRole>`",string,"Roles of users from which web requests are accepted; any if absent.
-
-    (dcmAcceptedUserRole)"
-    "
     .. _dcmAllowDeleteStudyPermanently:
 
     :ref:`Allow Delete Study permanently <dcmAllowDeleteStudyPermanently>`",string,"Allow to delete Study permanently. REJECTED = only already rejected Studies. Overwrites value specified on Device level. Enumerated values: ALWAYS or REJECTED.
@@ -422,9 +416,15 @@ DICOM Archive Network AE related information
 
     (hl7PSUDelay)"
     "
+    .. _hl7PSUConditions:
+
+    :ref:`HL7 Procedure Status Update Attribute Conditions(s) <hl7PSUConditions>`",string,"Restrict notification of configured HL7 Procedure Status Update Receiving Applications about Procedure Status Update by conditions on attributes of received composite object in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{attributeID})[!]={regEx}. Overwrites value specified on Device level.
+
+    (hl7PSUConditions)"
+    "
     .. _hl7PSUForRequestedProcedure:
 
-    :ref:`HL7 Procedure Status Update for Requested Procedure <hl7PSUForRequestedProcedure>`",boolean,"Limit notification of Procedure Status Update of Requested Procedures to configured HL7 Procedure Status Update Receiving Applications about received studies, only if there are Scheduled Procedure Steps of Requested Procedure (MWL Items in the DB) with matching Study Instance UID. Overwrites value specified on Device level.
+    :ref:`HL7 Procedure Status Update for Requested Procedure <hl7PSUForRequestedProcedure>`",boolean,"Restrict notification of configured HL7 Procedure Status Update Receiving Applications about Procedure Status Update to existence of Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. Overwrites value specified on Device level.
 
     (hl7PSUForRequestedProcedure)"
     "
@@ -452,9 +452,15 @@ DICOM Archive Network AE related information
 
     (hl7PSUPlacerOrderNumber)"
     "
+    .. _hl7PSUMessageType:
+
+    :ref:`HL7 Procedure Status Message Type <hl7PSUMessageType>`",string,"Message Type of HL7 Procedure Status Update message. Overwrites value specified on Device level. Enumerated values: OMG_O19 or ORU_R01.
+
+    (hl7PSUMessageType)"
+    "
     .. _hl7PSUPIDPV1:
 
-    :ref:`HL7 Procedure Status Update PID PV1 <hl7PSUPIDPV1>`",boolean,"Indicates to include a Patient Identification (PID) and a Patient Visit (PV1) segment in the HL7 Procedure Status Update message. Overwrites value specified on Device level.
+    :ref:`HL7 Procedure Status Update PID PV1 <hl7PSUPIDPV1>`",boolean,"Indicates to include a Patient Identification (PID) and a Patient Visit (PV1) segment in the HL7 Procedure Status Update message. Implicitly set, if HL7 Procedure Status Message Type = ORU_R01. Overwrites value specified on Device level.
 
     (hl7PSUPIDPV1)"
     "

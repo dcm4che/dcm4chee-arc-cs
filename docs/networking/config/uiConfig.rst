@@ -38,6 +38,7 @@ UI Configuration
 
     (dcmuiDefaultWidgetAets)"
     ":doc:`uiAet` (s)",object,"Define which AETs should be visible in the drop-down lists in the UI"
+    ":doc:`uiWebApp` (s)",object,"Define which WebApps should be visible on the top of the drop-down list in the UI"
     ":doc:`uiPermission` (s)",object,"Permission"
     ":doc:`uiFilterTemplate` (s)",object,"Defined filter template"
     ":doc:`uiDiffConfig` (s)",object,"Study Diff Configuration"
@@ -50,6 +51,7 @@ UI Configuration
 .. toctree::
 
     uiAet
+    uiWebApp
     uiPermission
     uiFilterTemplate
     uiDiffConfig
