@@ -10,7 +10,7 @@ dcm4che proprietary Network Connection Attributes
     "
     .. _dcmProtocol:
 
-    :ref:`Protocol <dcmProtocol>`",string,"Protocol of Network Connection. Enumerated values: DICOM, HL7, SYSLOG_TLS, SYSLOG_UDP or HTTP.
+    :ref:`Protocol <dcmProtocol>`",string,"Protocol of Network Connection. Enumerated values: DICOM, HL7, HL7_MLLP2, SYSLOG_TLS, SYSLOG_UDP or HTTP.
 
     (dcmProtocol)"
     "
