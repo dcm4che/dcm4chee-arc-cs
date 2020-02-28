@@ -86,11 +86,11 @@ DICOM Archive Device related information
 
     (dcmPurgeInstanceRecordsFetchSize)"
     "
-    .. _dcmDeleteMWLPollingInterval:
+    .. _dcmMWLPollingInterval:
 
-    :ref:`Delete MWL Polling Interval <dcmDeleteMWLPollingInterval>`",string,"Polling Interval for deleting MWL items in ISO-8601 duration format PnDTnHnMnS. If absent, MWL Items will not get deleted.
+    :ref:`MWL Polling Interval <dcmMWLPollingInterval>`",string,"Polling Interval for updating the status of idle MWL items and deleting MWL items in ISO-8601 duration format PnDTnHnMnS. If absent, MWL Items will not get update or deleted.
 
-    (dcmDeleteMWLPollingInterval)"
+    (dcmMWLPollingInterval)"
     "
     .. _dcmMWLFetchSize:
 
