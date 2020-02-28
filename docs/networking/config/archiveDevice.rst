@@ -92,11 +92,11 @@ DICOM Archive Device related information
 
     (dcmDeleteMWLPollingInterval)"
     "
-    .. _dcmDeleteMWLFetchSize:
+    .. _dcmMWLFetchSize:
 
-    :ref:`Delete MWL Fetch Size <dcmDeleteMWLFetchSize>`",integer,"Maximal number of MWL items to delete in one transaction.
+    :ref:`MWL Fetch Size <dcmMWLFetchSize>`",integer,"Maximal number of MWL items to update or delete in one transaction.
 
-    (dcmDeleteMWLFetchSize)"
+    (dcmMWLFetchSize)"
     "
     .. _dcmDeleteMWLDelay:
 
@@ -1054,7 +1054,7 @@ DICOM Archive Device related information
     "
     .. _hl7PSUMWL:
 
-    :ref:`HL7 Procedure Status Update MWL <hl7PSUMWL>`",boolean,"Specifies if the Status of MWL Items in the DB is updated to COMPLETED for a received study after the configured HL7 Procedure Status Update Delay. Implicitly set to true, if notification of HL7 receivers is configured. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`HL7 Procedure Status Update MWL <hl7PSUMWL>`",boolean,"Specifies if the Status of MWL Items in the DB is updated to COMPLETED for a received study after the configured HL7 Procedure Status Update Delay or for received MPPS after configured HL7 Procedure Status Update Timeout. Implicitly set to true, if notification of HL7 receivers is configured. May be overwritten by configured values for particular Archive Network AEs.
 
     (hl7PSUMWL)"
     "
@@ -1222,6 +1222,7 @@ DICOM Archive Device related information
     ":doc:`upsOnStore` (s)",object,"UPS on Store Rules applied to DICOM objects received by any AE. May be supplemented by configured UPS on Store Rules for particular Archive Network AEs."
     ":doc:`upsOnHL7` (s)",object,"UPS on HL7 Rules applied to HL7 messages received by any HL7 Application. May be supplemented by configured UPS on HL7 Rules for particular HL7 Applications."
     ":doc:`idGenerator` (s)",object,"ID Generator"
+    ":doc:`mwlIdleTimeout` (s)",object,"MWL Idle Timeout"
     ":doc:`hl7ForwardRule` (s)",object,"HL7 Forward Rules for HL7 messages received by any HL7 Application. May be supplemented by configured HL7 Forward Rules for particular HL7 Applications."
     ":doc:`hl7ExportRule` (s)",object,"Export Rules applied to HL7 messages received by any HL7 Application. May be supplemented by configured HL7 Export Rules for particular HL7 Application."
     ":doc:`hl7PrefetchRule` (s)",object,"HL7 Prefetch Rules applied to HL7 messages received by any HL7 Application. May be supplemented by configured HL7 Prefetch Rules for particular HL7 Application."
@@ -1264,6 +1265,7 @@ DICOM Archive Device related information
     upsOnStore
     upsOnHL7
     idGenerator
+    mwlIdleTimeout
     hl7ForwardRule
     hl7ExportRule
     hl7PrefetchRule

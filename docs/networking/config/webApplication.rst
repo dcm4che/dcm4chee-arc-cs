@@ -34,7 +34,7 @@ Web Application information
     "
     .. _dcmWebServiceClass:
 
-    :ref:`Web Service Class(s) <dcmWebServiceClass>`",string,"Web Service Classes provided by the Web application Enumerated values: QIDO_RS, STOW_RS, WADO_RS, WADO_URI, UPS_RS, QIDO_COUNT, DCM4CHEE_ARC, DCM4CHEE_ARC_AET, DCM4CHEE_ARC_AET_DIFF, PAM, REJECT, MOVE, MOVE_MATCHING or ELASTICSEARCH.
+    :ref:`Web Service Class(s) <dcmWebServiceClass>`",string,"Web Service Classes provided by the Web application Enumerated values: QIDO_RS, STOW_RS, WADO_RS, WADO_URI, UPS_RS, MWL_RS, QIDO_COUNT, DCM4CHEE_ARC, DCM4CHEE_ARC_AET, DCM4CHEE_ARC_AET_DIFF, PAM, REJECT, MOVE, MOVE_MATCHING or ELASTICSEARCH.
 
     (dcmWebServiceClass)"
     "
@@ -58,7 +58,7 @@ Web Application information
     "
     .. _dcmProperty:
 
-    :ref:`Property(s) <dcmProperty>`",string,"Property in format <name>=<value>. E.g.: IID_PATIENT_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=PATIENT&patientID={} or IID_STUDY_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=STUDY&studyUID={}
+    :ref:`Property(s) <dcmProperty>`",string,"Property in format <name>=<value>. E.g.: roles=<accepted-user-role>[,...], IID_PATIENT_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=PATIENT&patientID={} or IID_STUDY_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=STUDY&studyUID={}
 
     (dcmProperty)"
     "
