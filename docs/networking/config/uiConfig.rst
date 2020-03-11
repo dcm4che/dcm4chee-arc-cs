@@ -19,6 +19,7 @@ UI Configuration
     :ref:`Statistic Modalities(s) <dcmuiModalities>`",string,"Preselected Modalities that should show in the Statistic page
 
     (dcmuiModalities)"
+    ":doc:`uiLanguage` (s)",object,"Config the languages of the UI"
     "
     .. _dcmuiWidgetAets:
 
@@ -31,6 +32,18 @@ UI Configuration
     :ref:`XDS Interface URL <dcmuiXDSInterfaceURL>`",string,"Base URL used for the XDS Services. E.g. http(s)://<xds-server-host>:<xds-server-port>
 
     (dcmuiXDSInterfaceURL)"
+    "
+    .. _dcmuiBackgroundURL:
+
+    :ref:`Background URL <dcmuiBackgroundURL>`",string,"Background URL for changing the background of the UI, it can be relative or absolute URL, the image should have the width of at least of 1024px 
+
+    (dcmuiBackgroundURL)"
+    "
+    .. _dcmuiLogoURL:
+
+    :ref:`Logo URL <dcmuiLogoURL>`",string,"Logo URL for changing the logo of the UI, it can be relative or absolute URL, the image should have the width of 140px
+
+    (dcmuiLogoURL)"
     "
     .. _dcmuiDefaultWidgetAets:
 
@@ -50,6 +63,7 @@ UI Configuration
 
 .. toctree::
 
+    uiLanguage
     uiAet
     uiWebApp
     uiPermission
