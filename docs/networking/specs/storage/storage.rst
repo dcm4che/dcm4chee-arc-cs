@@ -309,7 +309,7 @@ SAME_SOURCE_AND_SERIES:
   Only overwrite stored Instances by subsequently received Instances with equal SOP Instance UID, if the new Instance was sent from the same
   Source Application Entity or HTTP client as the previous received Instance, and if the new Instance belongs to the same Series as the
   previous received Instance (= if beside the SOP Instance UID, also Study and Series Instance UID are equal). Otherwise ignore the received
-  instance silently or store the received instance additionally to the previous received Instance, dependent if belongs to the same Series
+  instance silently or store the received instance additionally to the previous received Instance, dependent if it belongs to the same Series
   or not.
 
 The behavior for updating Patient, Study and Series Attributes in the archive database, if there values differs between received Instances of
