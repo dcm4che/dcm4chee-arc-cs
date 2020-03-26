@@ -16,7 +16,7 @@ Elasticsearch URL
     "
     .. _dcmDefaultLanguage:
 
-    :ref:`Default language <dcmDefaultLanguage>`",string,"Select default language for the UI
+    :ref:`Default language(s) <dcmDefaultLanguage>`",string,"Select default language for the UI
 
     (dcmDefaultLanguage)"
     "

@@ -41,7 +41,7 @@ UI Configuration
     "
     .. _dcmuiLogoURL:
 
-    :ref:`Logo URL <dcmuiLogoURL>`",string,"Logo URL for changing the logo of the UI, it can be relative or absolute URL, the image should have the width of 140px
+    :ref:`Logo URL <dcmuiLogoURL>`",string,"Logo URL for changing the logo of the UI, it can be relative or absolute URL, the image should have the width of 140px and should be in format png with the transparent background
 
     (dcmuiLogoURL)"
     "
