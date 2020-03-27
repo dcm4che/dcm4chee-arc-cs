@@ -346,13 +346,13 @@ DICOM Archive Device related information
     "
     .. _dcmUPSProcessingPollingInterval:
 
-    :ref:`Workitem Processing Polling Interval <dcmUPSProcessingPollingInterval>`",string,"Polling Interval for Workitems ready for processing in ISO-8601 duration format PnDTnHnMnS.
+    :ref:`UPS Processing Polling Interval <dcmUPSProcessingPollingInterval>`",string,"Polling Interval for Workitems ready for processing in ISO-8601 duration format PnDTnHnMnS.
 
     (dcmUPSProcessingPollingInterval)"
     "
     .. _dcmUPSProcessingFetchSize:
 
-    :ref:`Workitem Processing  Fetch Size <dcmUPSProcessingFetchSize>`",integer,"Limit result set of DB query for Workitems ready for processing.
+    :ref:`UPS Processing  Fetch Size <dcmUPSProcessingFetchSize>`",integer,"Limit result set of DB query for Workitems ready for processing.
 
     (dcmUPSProcessingFetchSize)"
     "
