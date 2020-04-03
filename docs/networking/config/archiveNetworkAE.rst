@@ -248,6 +248,18 @@ DICOM Archive Network AE related information
 
     (dcmFallbackCMoveSCPRetries)"
     "
+    .. _dcmFallbackWadoURIWebAppName:
+
+    :ref:`Fallback WADO-URI Web Application Name <dcmFallbackWadoURIWebAppName>`",string,"Name of external Web Application to redirect WADO URI requests if the requested Object is not available by this archive. Overwrites value specified on Device level.
+
+    (dcmFallbackWadoURIWebAppName)"
+    "
+    .. _dcmFallbackWadoURIHttpStatusCode:
+
+    :ref:`Fallback C-Move SCP Retries <dcmFallbackWadoURIHttpStatusCode>`",integer,"HTTP Status code of Redirect Response configured by Fallback WADO-URI Web Application Name. Overwrites value specified on Device level. Enumerated values: 301, 302, 303 or 307.
+
+    (dcmFallbackWadoURIHttpStatusCode)"
+    "
     .. _dcmAltCMoveSCP:
 
     :ref:`Alternative C-Move SCP <dcmAltCMoveSCP>`",string,"AE Title of alternative C-MOVE SCP to forward C-MOVE RQs if the requested Entities are not located on a local attached Storage. Overwrites value specified on Device level.
