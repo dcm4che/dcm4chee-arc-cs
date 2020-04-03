@@ -256,7 +256,7 @@ DICOM Archive Network AE related information
     "
     .. _dcmFallbackWadoURIHttpStatusCode:
 
-    :ref:`Fallback C-Move SCP Retries <dcmFallbackWadoURIHttpStatusCode>`",integer,"HTTP Status code of Redirect Response configured by Fallback WADO-URI Web Application Name. Overwrites value specified on Device level. Enumerated values: 301, 302, 303 or 307.
+    :ref:`Fallback WADO-URI HTTP Status Code <dcmFallbackWadoURIHttpStatusCode>`",integer,"HTTP Status code of Redirect Response configured by Fallback WADO-URI Web Application Name. Overwrites value specified on Device level. Enumerated values: 301, 302, 303 or 307.
 
     (dcmFallbackWadoURIHttpStatusCode)"
     "
