@@ -1132,15 +1132,21 @@ DICOM Archive Device related information
     "
     .. _hl7OrderMissingStudyIUIDPolicy:
 
-    :ref:`HL7 Order Missing Study Instance UID Policy <hl7OrderMissingStudyIUIDPolicy>`",string,"Specifies policy for missing Study Instance UID in incoming HL7 Order messages. Enumerated values: REJECT, GENERATE or ACCESSION_BASED.
+    :ref:`HL7 Order Missing Study Instance UID Policy <hl7OrderMissingStudyIUIDPolicy>`",string,"Specifies policy for missing Study Instance UID in incoming HL7 Order messages. May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: REJECT, GENERATE or ACCESSION_BASED.
 
     (hl7OrderMissingStudyIUIDPolicy)"
     "
     .. _hl7ImportReportMissingStudyIUIDPolicy:
 
-    :ref:`HL7 Import Report Missing Study Instance UID Policy <hl7ImportReportMissingStudyIUIDPolicy>`",string,"Specifies policy for missing Study Instance UID in incoming HL7 Import Report (ORU) messages. Enumerated values: REJECT, GENERATE or ACCESSION_BASED.
+    :ref:`HL7 Import Report Missing Study Instance UID Policy <hl7ImportReportMissingStudyIUIDPolicy>`",string,"Specifies policy for missing Study Instance UID in incoming HL7 Import Report (ORU) messages. May be overwritten by configured values for particular Archive HL7 Application."", Enumerated values: REJECT, GENERATE or ACCESSION_BASED.
 
     (hl7ImportReportMissingStudyIUIDPolicy)"
+    "
+    .. _hl7ReferredMergedPatientPolicy:
+
+    :ref:`HL7 Referred Merged Patient Policy <hl7ReferredMergedPatientPolicy>`",string,"Specifies policy on incoming HL7 messages referring an already merged Patient. REJECT: reject any such HL7 message, IGNORE: ignore any such HL7 message, IGNORE_DUPLICATE_MERGE: Ignore only duplicate HL7 Merge messages, Reject any other such Message. May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: REJECT, IGNORE or IGNORE_DUPLICATE_MERGE.
+
+    (hl7ReferredMergedPatientPolicy)"
     "
     .. _hl7DicomCharacterSet:
 
