@@ -542,6 +542,18 @@ DICOM Archive Network AE related information
 
     (dcmStowQuicktime2MP4)"
     "
+    .. _dcmRetrieveTaskWarningOnNoMatch:
+
+    :ref:`Retrieve Task Warning on no Match <dcmRetrieveTaskWarningOnNoMatch>`",boolean,"Indicates if the result status of Retrieve Tasks shall be set to WARNING if none of the requested objects was found on the C-MOVE SCP. Overwrites value specified on Device level.
+
+    (dcmRetrieveTaskWarningOnNoMatch)"
+    "
+    .. _dcmRetrieveTaskWarningOnWarnings:
+
+    :ref:`Retrieve Task Warning on Warnings <dcmRetrieveTaskWarningOnWarnings>`",boolean,"Indicates if the result status of Retrieve Tasks shall be set to WARNING if there are Warning Sub-Operations, even if the retrieve of all objects was successful. Overwrites value specified on Device level
+
+    (dcmRetrieveTaskWarningOnWarnings)"
+    "
     .. _dcmFallbackCMoveSCPCallingAET:
 
     :ref:`Fallback C-Move SCP Calling AE title <dcmFallbackCMoveSCPCallingAET>`",string,"Calling AE Title used in A-ASSOCIATE-RQ to configured Fallback C-MOVE SCP. If absent, the AE Title of the external C-MOVE SCU is used. Overwrites value specified on Device level.

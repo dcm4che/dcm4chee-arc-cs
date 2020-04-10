@@ -346,7 +346,7 @@ DICOM Archive Device related information
     "
     .. _dcmFallbackWadoURIHttpStatusCode:
 
-    :ref:`Fallback C-Move SCP Retries <dcmFallbackWadoURIHttpStatusCode>`",integer,"HTTP Status code of Redirect Response configured by Fallback WADO-URI Web Application Name. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: 301, 302, 303 or 307.
+    :ref:`Fallback Wado URI Http Status Code <dcmFallbackWadoURIHttpStatusCode>`",integer,"HTTP Status code of Redirect Response configured by Fallback WADO-URI Web Application Name. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: 301, 302, 303 or 307.
 
     (dcmFallbackWadoURIHttpStatusCode)"
     "
@@ -391,6 +391,18 @@ DICOM Archive Device related information
     :ref:`Retrieve Task Fetch Size <dcmRetrieveTaskFetchSize>`",integer,"Limit result set of DB query for Retrieve Tasks ready for processing.
 
     (dcmRetrieveTaskFetchSize)"
+    "
+    .. _dcmRetrieveTaskWarningOnNoMatch:
+
+    :ref:`Retrieve Task Warning on no Match <dcmRetrieveTaskWarningOnNoMatch>`",boolean,"Indicates if the result status of Retrieve Tasks shall be set to WARNING if none of the requested objects was found on the C-MOVE SCP. May be overwritten by configured values for particular Archive HL7 Application."",
+
+    (dcmRetrieveTaskWarningOnNoMatch)"
+    "
+    .. _dcmRetrieveTaskWarningOnWarnings:
+
+    :ref:`Retrieve Task Warning on Warnings <dcmRetrieveTaskWarningOnWarnings>`",boolean,"Indicates if the result status of Retrieve Tasks shall be set to WARNING if there are Warning Sub-Operations, even if the retrieve of all objects was successful. May be overwritten by configured values for particular Archive HL7 Application."",
+
+    (dcmRetrieveTaskWarningOnWarnings)"
     "
     .. _dcmPurgeStoragePollingInterval:
 
