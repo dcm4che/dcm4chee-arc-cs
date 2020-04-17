@@ -436,9 +436,15 @@ DICOM Archive Device related information
     "
     .. _dcmDeleteStudyBatchSize:
 
-    :ref:`Delete Study Batch Size <dcmDeleteStudyBatchSize>`",integer,"number of studies to delete from the Storage System, if the usable space fall below configured Usable Space, before checking the usable space again.
+    :ref:`Delete Study Batch Size <dcmDeleteStudyBatchSize>`",integer,"Number of Studies to delete from the Storage System, if the usable space fall below configured Usable Space, before checking the usable space again.
 
     (dcmDeleteStudyBatchSize)"
+    "
+    .. _dcmDeleteStudyChunkSize:
+
+    :ref:`Delete Study Chunk Size <dcmDeleteStudyChunkSize>`",integer,"Number of Instances deleted in one DB transaction on permanent deletion of Studies.
+
+    (dcmDeleteStudyChunkSize)"
     "
     .. _dcmDeletePatientOnDeleteLastStudy:
 
