@@ -26,6 +26,18 @@ Storage Descriptor
 
     (dcmDigestAlgorithm)"
     "
+    .. _dcmMaxRetries:
+
+    :ref:`Maximum Number of Retries <dcmMaxRetries>`",integer,"Maximum number of retries to store an object on the storage system.
+
+    (dcmMaxRetries)"
+    "
+    .. _dcmRetryDelay:
+
+    :ref:`Retry Delay <dcmRetryDelay>`",string,"Delay to retry to store an object on the storage system in ISO-8601 duration format PnDTnHnMn.nS. Retry immediately if absent.
+
+    (dcmRetryDelay)"
+    "
     .. _dcmInstanceAvailability:
 
     :ref:`Instance Availability <dcmInstanceAvailability>`",string,"Instance Availability. Enumerated values: ONLINE, NEARLINE or OFFLINE.
