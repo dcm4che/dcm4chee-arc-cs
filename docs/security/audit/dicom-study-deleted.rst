@@ -9,7 +9,7 @@ This message is emitted by the archive when :
 - Study is rejected using UI
 - Study in an external archive is rejected using UI
 - Rejection Notes for all objects of a study are stored to the archive using `RAD-66 <http://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf#page=40>`_ transaction
-- Study is deleted by the scheduler or `permanently deleted<http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/openapi.json#/IOCM-RS/DeleteStudy>`_
+- Study is deleted by the scheduler or `permanently deleted <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/openapi.json#/IOCM-RS/DeleteStudy>`_
   using UI
 - Study is deleted on subsequent receive of objects having same SOP IUID but different Study/Series IUID
 
