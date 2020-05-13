@@ -11,10 +11,11 @@ This message is emitted by the archive in following cases :
 - Association Events Failure : Associations rejected by Archive.
 - Association Events Failure : Association initiation to remote AEs failed.
 - Software Configuration changes done over the UI.
-- One or more task(s) were canceled, rescheduled or deleted using Monitoring page of Archive UI.
+- One or more task(s) or queue message(s) were canceled, rescheduled or deleted using Monitoring page of Archive UI.
+- One or more queue message(s) were purged/deleted using scheduler.
 - If a super user logs in or logs out of secured Archive UI.
 - If any user updates his/her password using secured Archive UI.
-- If any Keycloak admin user performs actions within admin console
+- If any user with administration rights performs actions within Keycloak admin console
 
 Message Structure
 -----------------

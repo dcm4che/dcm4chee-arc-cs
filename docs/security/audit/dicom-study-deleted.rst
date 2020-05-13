@@ -6,12 +6,12 @@ Trigger Events
 
 This message is emitted by the archive when :
 
-- All Instances of a Study are rejected using RESTful service
-  `Reject Study <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/swagger.json#/IOCM-RS/RejectStudy>`_
-  or `Reject Study External <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/swagger.json#/DIMSE-RS/RejectStudyExternal>`_
-- This message is also sent when Rejection Notes are stored to the archive using `RAD-66 <http://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf#page=234>`_ transaction.
-- The whole study is deleted by the scheduler.
-- The whole study is permanently deleted using `Delete Study Permanently <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/swagger.json#/IOCM-RS/DeleteStudy>`_ RESTful service.
+- Study is rejected using UI
+- Study in an external archive is rejected using UI
+- Rejection Notes for all objects of a study are stored to the archive using `RAD-66 <http://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf#page=40>`_ transaction
+- Study is deleted by the scheduler or `permanently deleted<http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/openapi.json#/IOCM-RS/DeleteStudy>`_
+  using UI
+- Study is deleted on subsequent receive of objects having same SOP IUID but different Study/Series IUID
 
 Message Structure
 -----------------

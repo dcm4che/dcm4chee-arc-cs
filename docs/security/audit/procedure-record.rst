@@ -6,11 +6,14 @@ Trigger Events
 
 This message is emitted by the archive whenever :
 
-- Modality worklist entry is created by UI or by HL7 messages.
-- Modality worklist entry is updated by UI or by HL7 message or by incoming MPPS.
-- Modality worklist entry is deleted by UI.
-- Study attributes are updated from UI.
-- Expiration date is set to study/series from UI.
+- Modality worklist entry is created by UI / HL7 Order messages
+- Modality worklist entry is updated by UI / HL7 Order messages / incoming MPPS
+- Modality worklist entry is deleted by UI
+- MPPS received by archive
+- MPPS forwarded by archive to external MPPS SCP
+- HL7 messages forwarded by archive to external HL7 receivers
+- HL7 Order messages accepted (= also not processed) by archive
+- Link Instances with MWL Entry using UI
 
 Message Structure
 -----------------

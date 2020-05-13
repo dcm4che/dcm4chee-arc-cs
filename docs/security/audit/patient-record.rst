@@ -6,10 +6,13 @@ Trigger Events
 
 This message is emitted by the archive whenever :
 
-- Patient is created by UI or by HL7 messages or by object storage.
-- Patient record is updated by UI or by HL7 message.
-- Patient records are deleted by UI or by scheduler.
-- One or more patients are merged by UI or by HL7 messages.
+- Patient is created by UI / HL7 messages / object storage
+- Patient record is updated by UI / HL7 message / PDQ Service
+- Patient records are deleted by UI / scheduler
+- One or more patients are merged by UI / HL7 messages
+- HL7 messages (ADT/Order/ORU) accepted (= also not processed) or processed by archive
+- HL7 messages (ADT/Order/ORU) forwarded by archive to external HL7 receivers
+- Patient created / updated / merged / changePatientID on external archive
 
 Message Structure
 -----------------

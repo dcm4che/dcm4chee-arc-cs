@@ -4,15 +4,15 @@ DICOM Instances Accessed
 Trigger Events
 --------------
 
-- "DICOM Instances Accessed" message is emitted by the archive only when "some" objects of study are rejected using RESTful services
-  `Reject Series <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/swagger.json#/IOCM-RS/RejectSeries>`_
-  or `Reject Instance <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/swagger.json#/IOCM-RS/RejectInstance>`_
-  or `Reject Series External <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/swagger.json#/DIMSE-RS/RejectSeriesExternal>`_
-  or `Reject Instance External <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/swagger.json#/DIMSE-RS/RejectInstanceExternal>`_
-- This message is also sent when Rejection Notes are stored to the archive using `RAD-66 <http://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf#page=234>`_ transaction.
-- "DICOM Study Deleted" message is sent when the whole study is rejected by storing Rejection Notes to the archive as mentioned above
-  or using RESTful services `Reject Study <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/swagger.json#/IOCM-RS/RejectStudy>`_
-  or `Reject Study External <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/swagger.json#/DIMSE-RS/RejectStudyExternal>`_
+This message is emitted by the archive in following cases :
+
+- Some objects / series of study are rejected using UI
+- Some objects / series of study are rejected in an external archive using UI
+- Rejection Notes for some objects of a study are stored to the archive using `RAD-66 <https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol3.pdf#page=159>`_ transaction.
+- Objects are retrieved from an external archive by HL7 Prefetch Scheduler
+- Update study/series expiration date using UI / Study Retention Policy / HL7 Study Retention Policy.
+- Update study attributes using UI.
+- Series/Instances of a study are deleted on subsequent receive of objects having same SOP IUID but different Series IUID
 
 Message Structure
 -----------------
