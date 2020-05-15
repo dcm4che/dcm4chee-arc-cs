@@ -92,6 +92,18 @@ Process matching Workitems in unified Worklist
 
     (dcmUPSScheduledStationLocationCode)"
     "
+    .. _dcmUPSPerformedWorkitemCode:
+
+    :ref:`Performed Workitem Code <dcmUPSPerformedWorkitemCode>`",string,"Item of Performed Workitem Code Sequence (0040,4019) in processed UPS in format (CV, CSD, ""CM"").
+
+    (dcmUPSPerformedWorkitemCode)"
+    "
+    .. _dcmUPSPerformedStationNameCode:
+
+    :ref:`Performed Station Name Code <dcmUPSPerformedStationNameCode>`",string,"Item of Performed Station Name Code Sequence (0040,4028) in processed UPS in format (CV, CSD, ""CM"").
+
+    (dcmUPSPerformedStationNameCode)"
+    "
     .. _dcmMaxRetries:
 
     :ref:`Maximum Number of Rescheduling <dcmMaxRetries>`",integer,"Maximal number a Workitem which processing failed is rescheduled.
