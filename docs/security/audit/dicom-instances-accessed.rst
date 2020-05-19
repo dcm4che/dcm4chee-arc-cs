@@ -12,7 +12,7 @@ This message is emitted by the archive in following cases :
 - Objects are retrieved from an external archive by HL7 Prefetch Scheduler
 - Update study/series expiration date using UI / Study Retention Policy / HL7 Study Retention Policy.
 - Update study attributes using UI.
-- Series/Instances of a study are deleted on subsequent receive of objects having same SOP IUID but different Series IUID
+- Previous series/instances of a study are deleted on subsequent receive of objects having same SOP IUID but different Series IUID
 
 Message Structure
 -----------------
@@ -32,22 +32,27 @@ Message Structure
    :header: Field Name, Opt, Description
 
    EventID, M, "| EV (110103, DCM, 'DICOM Instances Accessed')"
-   EventActionCode, M, | Delete ⇒ 'D'
+   EventActionCode, M, "| Rejection / Deletion case : Delete ⇒ 'D'
+   | Update study attributes / expiration date case : Update ⇒ 'U'
+   | Update expiration date for frozen study / series case : Read ⇒ 'R'"
    EventDateTime, M, | The time at which the event occurred
    EventOutcomeIndicator, M, "| Success ⇒ '0'
    | Minor failure ⇒ '4'"
-   EventOutcomeDescription, M, "| Success ⇒ 'Rejection Code Meaning'
-   | Minor failure case ⇒ 'Rejection Code Meaning + Error/Exception message'"
+   EventOutcomeDescription, M, "| Rejection / Deletion case : Success ⇒ 'Rejection Code Meaning'
+   | Rejection / Deletion case : Minor failure ⇒ 'Rejection Code Meaning + Error/Exception message'
+   | All other cases case : Minor failure ⇒ 'Error/Exception message'"
 
 .. csv-table:: Active Participant : Archive application
    :name: active-participant-archive-instances-accessed
    :widths: 30, 5, 65
    :header: Field Name, Opt, Description
 
-   UserID, M, "| Rejection triggered using association ⇒ 'Application entity title of Archive Device used in the association'
-   | Rejection triggered using archive UI ⇒ 'Invoked URL'"
-   UserIDTypeCode, U, "| Rejection triggered using association ⇒ EV (110119, DCM, 'Station AE Title')
-   | Rejection triggered from UI ⇒ EV (12, RFC-3881, 'URI')"
+   UserID, M, "| Action triggered using association ⇒ 'Application entity title of Archive Device used in the association'
+   | Action triggered using archive UI ⇒ 'Invoked URL'
+   | Action triggered using HL7 messages ⇒ 'Receiving Application and Facility'"
+   UserIDTypeCode, U, "| Action triggered using association ⇒ EV (110119, DCM, 'Station AE Title')
+   | Action triggered from UI ⇒ EV (12, RFC-3881, 'URI')
+   | Action triggered using HL7 messages ⇒ EV (HL7APP, 99DCM4CHEE, 'Application and Facility')"
    UserTypeCode, U, | Application ⇒ '2'
    AlternativeUserID, MC, | Process ID of Audit logger
    UserIsRequestor, M, | false
@@ -60,14 +65,16 @@ Message Structure
    :widths: 30, 5, 65
    :header: Field Name, Opt, Description
 
-   UserID, M, "| Rejection triggered using association ⇒ 'Application entity title of initiating system'
-   | Rejection triggered using UI : Secured Archive ⇒ 'User name of logged in user'
-   | Rejection triggered using UI : Unsecured archive ⇒ 'Remote IP address'"
-   UserIDTypeCode, U, "| Rejection triggered using archive UI (Secured archive) ⇒ EV (113871, DCM, 'Person ID')
-   | Rejection triggered using archive UI (Unsecured archive) ⇒ EV (110182, DCM, 'Node ID')
-   | Rejection triggered using association ⇒ EV (110119, DCM, 'Station AE Title')"
-   UserTypeCode, U, "| Rejection triggered using archive UI : Person ⇒ '1'
-   | Rejection triggered using association : Application ⇒ '2'"
+   UserID, M, "| Action triggered using association ⇒ 'Application entity title of initiating system'
+   | Action triggered using UI : Secured Archive ⇒ 'User name of logged in user'
+   | Action triggered using UI : Unsecured archive ⇒ 'Remote IP address'
+   | Action triggered using HL7 messages ⇒ 'Sending Application and Facility'"
+   UserIDTypeCode, U, "| Action triggered using archive UI (Secured archive) ⇒ EV (113871, DCM, 'Person ID')
+   | Action triggered using archive UI (Unsecured archive) ⇒ EV (110182, DCM, 'Node ID')
+   | Action triggered using association ⇒ EV (110119, DCM, 'Station AE Title')
+   | Action triggered using HL7 messages ⇒ EV (HL7APP, 99DCM4CHEE, 'Application and Facility')"
+   UserTypeCode, U, "| Action triggered using archive UI : Person ⇒ '1'
+   | Action triggered using association : Application ⇒ '2'"
    UserIsRequestor, M, | true
    NetworkAccessPointID, U, | Hostname/IP Address of calling host
    NetworkAccessPointTypeCode, U, "| NetworkAccessPointID is host name ⇒ '1'
@@ -82,9 +89,10 @@ Message Structure
    ParticipantObjectTypeCode, M, System ⇒ '2'
    ParticipantObjectTypeCodeRole, M, Report ⇒ '3'
    ParticipantObjectIDTypeCode, M, "EV (110180, DCM, 'Study Instance UID')"
-   ParticipantObjectDetail, U, "Base-64 encoded study date if Study has StudyDate(0008,0020) attribute"
+   ParticipantObjectDetail, U, "| All cases ⇒ 'Base-64 encoded study date if Study has StudyDate(0008,0020) attribute'
+   | Update study / series expiration date ⇒ 'Base-64 encoded expiration date (7777,1023)'"
    ParticipantObjectDescription, U
-   SOPClass, MC, Sop Class UID and Number of instances with this sop class. eg. <SOPClass UID='1.2.840.10008.5.1.4.1.1.88.22' NumberOfInstances='4'/>
+   SOPClass, MC, Rejection / Deletion case ⇒ Sop Class UID and Number of instances with this sop class. eg. <SOPClass UID='1.2.840.10008.5.1.4.1.1.88.22' NumberOfInstances='4'/>
    Accession, U, Accession Number
 
 .. csv-table:: Participant Object Identification : Patient
