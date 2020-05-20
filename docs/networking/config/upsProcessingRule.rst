@@ -127,9 +127,3 @@ Process matching Workitems in unified Worklist
     :ref:`Reschedule Delay Multiplier <dcmRetryDelayMultiplier>`",integer,"Multiplier in % that will take effect on top of Reschedule Delay with Maximum Reschedule Delay to be taken into account.
 
     (dcmRetryDelayMultiplier)"
-    "
-    .. _dcmRetryOnWarning:
-
-    :ref:`Reschedule on Warning <dcmRetryOnWarning>`",boolean,"Enables reschedule of Workitems not only on processing failure but also on a warning outcome status.
-
-    (dcmRetryOnWarning)"
