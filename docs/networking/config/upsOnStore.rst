@@ -8,11 +8,11 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
     :widths: 23, 7, 70
 
     "
-    .. _cn:
+    .. _dcmUPSOnStoreID:
 
-    :ref:`Name <cn>`",string,"Arbitrary/Meaningful name of UPS on Store Rule
+    :ref:`UPS on Store ID <dcmUPSOnStoreID>`",string,"ID of UPS on Store Rule
 
-    (cn)"
+    (dcmUPSOnStoreID)"
     "
     .. _dcmProperty:
 

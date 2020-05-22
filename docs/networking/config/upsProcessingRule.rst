@@ -8,11 +8,11 @@ Process matching Workitems in unified Worklist
     :widths: 23, 7, 70
 
     "
-    .. _cn:
+    .. _dcmUPSProcessingRuleID:
 
-    :ref:`Name <cn>`",string,"Arbitrary/Meaningful name of UPS Processing Rule
+    :ref:`UPS Processing Rule ID <dcmUPSProcessingRuleID>`",string,"ID of UPS Processing Rule
 
-    (cn)"
+    (dcmUPSProcessingRuleID)"
     "
     .. _dicomAETitle:
 

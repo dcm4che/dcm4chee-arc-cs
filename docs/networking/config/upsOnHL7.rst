@@ -8,11 +8,11 @@ Create/Update Workitem in unified Worklist on receive of HL7v2 message
     :widths: 23, 7, 70
 
     "
-    .. _cn:
+    .. _hl7UPSOnHL7ID:
 
-    :ref:`Name <cn>`",string,"Arbitrary/Meaningful name of UPS on HL7 Rule
+    :ref:`UPS on HL7 ID <hl7UPSOnHL7ID>`",string,"ID of UPS on HL7 Rule
 
-    (cn)"
+    (hl7UPSOnHL7ID)"
     "
     .. _dcmProperty:
 
