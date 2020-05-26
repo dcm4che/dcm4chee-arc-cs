@@ -68,6 +68,12 @@ Create/Update Workitem in unified Worklist on receive of HL7v2 message
 
     (dcmUPSInstanceUIDBasedOnName)"
     "
+    .. _dcmDestinationAE:
+
+    :ref:`Destination AE <dcmDestinationAE>`",string,"Title of a DICOM Application Entity to which Instances will be stored.
+
+    (dcmDestinationAE)"
+    "
     .. _dcmUPSScheduledWorkitemCode:
 
     :ref:`Scheduled Workitem Code <dcmUPSScheduledWorkitemCode>`",string,"Item of Scheduled Workitem Code Sequence (0040,4018) in created UPS in format (CV, CSD, ""CM"").
