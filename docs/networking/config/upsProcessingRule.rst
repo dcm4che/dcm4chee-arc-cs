@@ -104,6 +104,18 @@ Process matching Workitems in unified Worklist
 
     (dcmUPSPerformedStationNameCode)"
     "
+    .. _dcmUPSIgnoreDiscontinuationReasonCode:
+
+    :ref:`Ignore Discontinuation Reason Code(s) <dcmUPSIgnoreDiscontinuationReasonCode>`",string,"Specifies Discontinuation Reason Code in format (CV, CSD, ""CM"") to ignore and change UPS State to COMPLETED - instead to CANCELED.
+
+    (dcmUPSIgnoreDiscontinuationReasonCode)"
+    "
+    .. _dcmUPSRescheduleDiscontinuationReasonCode:
+
+    :ref:`Reschedule Discontinuation Reason Code(s) <dcmUPSRescheduleDiscontinuationReasonCode>`",string,"Specifies Discontinuation Reason Code in format (CV, CSD, ""CM"") to reschedule the canceled UPS. If absent, UPS canceled with any Discontinuation Reason Code with be rescheduled according specified Maximum Number of Rescheduling.
+
+    (dcmUPSRescheduleDiscontinuationReasonCode)"
+    "
     .. _dcmMaxRetries:
 
     :ref:`Maximum Number of Rescheduling <dcmMaxRetries>`",integer,"Maximal number a Workitem which processing failed is rescheduled.

@@ -80,6 +80,12 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
 
     (dcmDestinationAE)"
     "
+    .. _dcmEntity:
+
+    :ref:`Scope of Accumulation <dcmEntity>`",string,"Scope of Accumulation Enumerated values: Study, Series or MPPS.
+
+    (dcmEntity)"
+    "
     .. _dcmUPSScheduledWorkitemCode:
 
     :ref:`Scheduled Workitem Code <dcmUPSScheduledWorkitemCode>`",string,"Item of Scheduled Workitem Code Sequence (0040,4018) in created UPS in format (CV, CSD, ""CM"").
