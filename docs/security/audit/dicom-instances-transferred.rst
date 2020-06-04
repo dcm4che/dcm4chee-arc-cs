@@ -168,24 +168,24 @@ Message Structure
    :widths: 30, 5, 65
    :header: Field Name, Opt, Description
 
-   ParticipantObjectID, M, | Study Instance UID
-   ParticipantObjectTypeCode, M, | System ⇒ '2'
-   ParticipantObjectTypeCodeRole, M, | Report ⇒ '3'
-   ParticipantObjectIDTypeCode, M, "| EV (110180, DCM, 'Study Instance UID')"
-   ParticipantObjectDetail, U, "| Base-64 encoded study date if Study has StudyDate(0008,0020) attribute"
+   ParticipantObjectID, M, Study Instance UID or 1.2.40.0.13.1.15.110.3.165.1 if unknown
+   ParticipantObjectTypeCode, M, System ⇒ '2'
+   ParticipantObjectTypeCodeRole, M, Report ⇒ '3'
+   ParticipantObjectIDTypeCode, M, "EV (110180, DCM, 'Study Instance UID')"
+   ParticipantObjectDetail, U, "Base-64 encoded study date if Study has StudyDate(0008,0020) attribute"
    ParticipantObjectDataLifeCycle, U, "| Store object case : OriginationCreation ⇒ '1'
    | Storage Commitment case : Verification ⇒ '4'
    | For all other cases ⇒ This field is not present"
    ParticipantObjectDescription, U
-   SOPClass, MC, | Sop Class UID and Number of instances with this sop class. eg. <SOPClass UID='1.2.840.10008.5.1.4.1.1.88.22' NumberOfInstances='4'/>
-   Accession, U, | Accession Number
+   SOPClass, MC, Sop Class UID and Number of instances with this sop class. eg. <SOPClass UID='1.2.840.10008.5.1.4.1.1.88.22' NumberOfInstances='4'/>
+   Accession, U, Accession Number
 
 .. csv-table:: Participant Object Identification : Patient
    :name: participant-object-patient-instances-transferred
    :widths: 30, 5, 65
    :header: Field Name, Opt, Description
 
-   ParticipantObjectID, M, Patient ID
+   ParticipantObjectID, M, Patient ID or <none> if unknown
    ParticipantObjectTypeCode, M, Person ⇒ '1'
    ParticipantObjectTypeCodeRole, M, Patient ⇒ '1'
    ParticipantObjectIDTypeCode, M,  "EV (2, RFC-3881, 'Patient Number')"

@@ -84,10 +84,10 @@ Audit Messages
    audit/dicom-instances-transferred
    audit/dicom-study-deleted
    audit/query
-   audit/security-alert
-   audit/user-authentication
    audit/patient-record
    audit/procedure-record
+   audit/security-alert
+   audit/user-authentication
 
 Audit Trail Message Transmission Profile - SYSLOG-TLS
 -----------------------------------------------------

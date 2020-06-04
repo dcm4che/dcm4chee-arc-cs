@@ -84,7 +84,7 @@ Message Structure
    :widths: 30, 5, 65
    :header: Field Name, Opt, Description
 
-   ParticipantObjectID, M, Patient ID
+   ParticipantObjectID, M, Patient ID or <none> if unknown
    ParticipantObjectTypeCode, M, Person : '1'
    ParticipantObjectTypeCodeRole, M, Patient : '1'
    ParticipantObjectIDTypeCode, M,  "EV (2, RFC-3881, 'Patient Number')"

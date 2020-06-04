@@ -85,7 +85,7 @@ Message Structure
    :widths: 30, 5, 65
    :header: Field Name, Opt, Description
 
-   ParticipantObjectID, M, Study Instance UID
+   ParticipantObjectID, M, Study Instance UID or 1.2.40.0.13.1.15.110.3.165.1 if unknown
    ParticipantObjectTypeCode, M, System ⇒ '2'
    ParticipantObjectTypeCodeRole, M, Report ⇒ '3'
    ParticipantObjectIDTypeCode, M, "EV (110180, DCM, 'Study Instance UID')"
@@ -100,7 +100,7 @@ Message Structure
    :widths: 30, 5, 65
    :header: Field Name, Opt, Description
 
-   ParticipantObjectID, M, Patient ID
+   ParticipantObjectID, M, Patient ID or <none> if unknown
    ParticipantObjectTypeCode, M, Person ⇒ '1'
    ParticipantObjectTypeCodeRole, M, Patient ⇒ '1'
    ParticipantObjectIDTypeCode, M,  "EV (2, RFC-3881, 'Patient Number')"
