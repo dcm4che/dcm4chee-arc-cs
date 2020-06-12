@@ -28,7 +28,7 @@ Export Rule
     "
     .. _dicomDeviceName:
 
-    :ref:`Device Name <dicomDeviceName>`",string,"Specifies Device on which the Export Task shall be scheduled. If not specified, the Export Task is scheduled on the Device which received the objects. Attention: the specified Device must (also) have an Exporter with the specified ID configured!
+    :ref:`Exporter Device Name <dicomDeviceName>`",string,"Specifies Device on which the Export Task(s) shall be scheduled. If not specified, the Export Task(s) is/are scheduled on the Device which received the objects. Attention: the specified Device must (also) have Exporters with the specified IDs configured!
 
     (dicomDeviceName)"
     "
