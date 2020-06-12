@@ -26,6 +26,12 @@ Export Rule
 
     (dcmExporterID)"
     "
+    .. _dicomDeviceName:
+
+    :ref:`Device Name <dicomDeviceName>`",string,"Specifies Device on which the Export Task shall be scheduled. If not specified, the Export Task is scheduled on the Device which received the objects. Attention: the specified Device must (also) have an Exporter with the specified ID configured!
+
+    (dicomDeviceName)"
+    "
     .. _dcmExportPreviousEntity:
 
     :ref:`Export Previous Entity <dcmExportPreviousEntity>`",boolean,"Specifies if the previous Entity of a replaced Instance shall be also exported.
