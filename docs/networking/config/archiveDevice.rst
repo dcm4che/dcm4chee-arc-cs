@@ -892,7 +892,7 @@ DICOM Archive Device related information
     "
     .. _dcmStorageVerificationPeriod:
 
-    :ref:`Storage Verification Period <dcmStorageVerificationPeriod>`",string,"Period between successive Storage Verifications of one Series.
+    :ref:`Storage Verification Period <dcmStorageVerificationPeriod>`",string,"Period in which the storage of individual Series is verified. If absent, storage of individual Series are only verified once after configured Storage Verification Initial Delay.
 
     (dcmStorageVerificationPeriod)"
     "
