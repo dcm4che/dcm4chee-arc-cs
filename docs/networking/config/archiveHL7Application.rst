@@ -80,6 +80,12 @@ DICOM Archive HL7 Application related information
 
     (hl7NoPatientCreateMessageType)"
     "
+    .. _hl7PatientArrivalMessageType:
+
+    :ref:`HL7 Patient Arrival Message Type <hl7PatientArrivalMessageType>`",string,"Message Type of HL7 messages which triggers the change the status of Scheduled Procedure Steps associated with the Patient from SCHEDULED to ARRIVED. Overwrite value specified on Device level. Enumerated values: ADT^A10.
+
+    (hl7PatientArrivalMessageType)"
+    "
     .. _hl7UseNullValue:
 
     :ref:`Use HL7 Null Value <hl7UseNullValue>`",boolean,"Specifies if HL7 v2 null values (specified in segment field as `|""""|`) are used in sent HL7 messages for not present or empty entity attributes. Required to unset entity attributes at the remote HL7 Application. Overwrites value specified on Device level.

@@ -602,6 +602,12 @@ DICOM Archive Device related information
 
     (hl7NoPatientCreateMessageType)"
     "
+    .. _hl7PatientArrivalMessageType:
+
+    :ref:`HL7 Patient Arrival Message Type <hl7PatientArrivalMessageType>`",string,"Message Type of HL7 messages which triggers the change the status of Scheduled Procedure Steps associated with the Patient from SCHEDULED to ARRIVED. If absent, the status of Scheduled Procedure Steps will not be affected by HL7 ADT messages. May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: ADT^A10.
+
+    (hl7PatientArrivalMessageType)"
+    "
     .. _dcmUnzipVendorDataToURI:
 
     :ref:`Unzip Vendor Data To URI <dcmUnzipVendorDataToURI>`",string,"Specifies URI of directory into which ZIP stream in Device Vendor Data attribute will be extracted
