@@ -14,6 +14,7 @@ This message is emitted by the archive whenever :
 - HL7 messages forwarded by archive to external HL7 receivers
 - HL7 Order messages accepted (= also not processed) by archive
 - Link Instances with MWL Entry using UI
+- SPS Status of MWL items of a patient changed from SCHEDULED to ARRIVED on receive of Patient Arrival (ADT^A10) HL7 message.
 
 Message Structure
 -----------------
