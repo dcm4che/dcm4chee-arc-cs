@@ -40,9 +40,15 @@ Exporter Descriptor
     "
     .. _dicomAETitle:
 
-    :ref:`Application Entity (AE) title <dicomAETitle>`",string,"Application Entity (AE) title
+    :ref:`Archive Application Entity (AE) title <dicomAETitle>`",string,"Archive Application Entity (AE) title
 
     (dicomAETitle)"
+    "
+    .. _dcmExportAsSourceAE:
+
+    :ref:`Export as Source Application Entity (AE) <dcmExportAsSourceAE>`",boolean,"Mask the Archive Application Entity (AE) title by the title of the Application Entity (AE) from which a Series was received on establishing the Association to the Destination Application Entity (AE).
+
+    (dcmExportAsSourceAE)"
     "
     .. _dcmDeleteStudyFromStorageID:
 

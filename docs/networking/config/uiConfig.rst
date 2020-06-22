@@ -27,12 +27,6 @@ UI Configuration
 
     (dcmuiWidgetAets)"
     "
-    .. _dcmuiXDSInterfaceURL:
-
-    :ref:`XDS Interface URL <dcmuiXDSInterfaceURL>`",string,"Base URL used for the XDS Services. E.g. http(s)://<xds-server-host>:<xds-server-port>
-
-    (dcmuiXDSInterfaceURL)"
-    "
     .. _dcmuiBackgroundURL:
 
     :ref:`Background URL <dcmuiBackgroundURL>`",string,"Background URL for changing the background of the UI, it can be relative or absolute URL, the image should have the width of at least of 1024px 
