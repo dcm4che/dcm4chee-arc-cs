@@ -91,3 +91,9 @@ Managed JMS Queue
     :ref:`Maximum Queue Size <dcmMaxQueueSize>`",integer,"Maximal number of scheduled tasks in the queue. If the number of scheduled tasks reaches the limit, an attempt to schedule another tasks will fail. 0 = no limitation.
 
     (dcmMaxQueueSize)"
+    "
+    .. _dcmSchedule:
+
+    :ref:`Restrict Scheduling(s) <dcmSchedule>`",string,"Restrict Scheduling to specified time ranges. Use Maximum Queue Size to control maximal number of Tasks processed between specified time ranges. Only effective for scheduling Retrieve Tasks.
+
+    (dcmSchedule)"
