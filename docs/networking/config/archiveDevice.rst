@@ -770,6 +770,18 @@ DICOM Archive Device related information
 
     (dcmDefaultCharacterSet)"
     "
+    .. _dcmCharsetNameMapping:
+
+    :ref:`DICOM Character Set Name Mapping(s) <dcmCharsetNameMapping>`",string,"Customize mapping of value of DICOM Specific Character Set (0008,0005) to named charset in format <value>=<charset name>. E.g.: ""ISO_IR 100=windows-1252"".
+
+    (dcmCharsetNameMapping)"
+    "
+    .. _hl7CharsetNameMapping:
+
+    :ref:`HL7 Character Set Name Mapping(s) <hl7CharsetNameMapping>`",string,"Add mapping of value of HL7 MSH-18 to named charset in format <value>=<charset name>. E.g.: ""Windows-1252=windows-1252"". Typically you will also have to specify the HL7 DICOM Character Set of the Archive HL7 Application to use for received HL7 messages with such Character Set.
+
+    (hl7CharsetNameMapping)"
+    "
     .. _dcmUPSWorklistLabel:
 
     :ref:`UPS Worklist Label <dcmUPSWorklistLabel>`",string,"Value of Worklist Label (0074,1202) of created UPS by any Network AE, if the UPS Push SCU or UPS-RS User Agent does not provide a value for this attribute. If absent, the AE Title of the receiving AE will be used. May be overwritten by configured values for particular Archive Network AEs.
@@ -830,11 +842,11 @@ DICOM Archive Device related information
 
     (dcmRemapRetrieveURL)"
     "
-    .. _dcmAuditRecordRepositoryURL:
+    .. _dcmProxyUpstreamURL:
 
-    :ref:`Audit Record Repository URL <dcmAuditRecordRepositoryURL>`",string,"Access URL of Audit Record Repository. E.g. http(s)://<arr-host>:<arr-port>
+    :ref:`Proxy Upstream URL <dcmProxyUpstreamURL>`",string,"URL for the upstream endpoint that shall be proxied.
 
-    (dcmAuditRecordRepositoryURL)"
+    (dcmProxyUpstreamURL)"
     "
     .. _dcmAudit2JsonFhirTemplateURI:
 

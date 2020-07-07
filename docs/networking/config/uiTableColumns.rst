@@ -40,6 +40,6 @@ Study Table Columns
     "
     .. _dcmuiColumnOrder:
 
-    :ref:`Column width in weight <dcmuiColumnOrder>`",string,"Width of the column in weight ( x > 0.1 - x < infinite ) default 1
+    :ref:`Order of the Column <dcmuiColumnOrder>`",string,"Order of the Column
 
     (dcmuiColumnOrder)"
