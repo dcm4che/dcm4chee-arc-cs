@@ -34,13 +34,13 @@ dcm4che proprietary Network Connection Attributes
     "
     .. _dcmTCPBacklog:
 
-    :ref:`TCP Backlog <dcmTCPBacklog>`",integer,"Maximum queue length for incoming TCP connections. 0 = unlimited
+    :ref:`TCP Backlog <dcmTCPBacklog>`",integer,"Maximum queue length for incoming TCP connections.
 
     (dcmTCPBacklog)"
     "
     .. _dcmTCPConnectTimeout:
 
-    :ref:`TCP Connect Timeout <dcmTCPConnectTimeout>`",integer,"TCP connect timeout in ms; no timeout if absent
+    :ref:`TCP Connect Timeout <dcmTCPConnectTimeout>`",integer,"TCP connect timeout in ms; no timeout if absent.
 
     (dcmTCPConnectTimeout)"
     "
