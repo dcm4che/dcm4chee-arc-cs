@@ -14,6 +14,12 @@ UPS Template
 
     (dcmUPSTemplateID)"
     "
+    .. _dicomDescription:
+
+    :ref:`UPS Template Description <dicomDescription>`",string,"Unconstrained text description of the UPS Template
+
+    (dicomDescription)"
+    "
     .. _dcmUPSLabel:
 
     :ref:`Procedure Step Label <dcmUPSLabel>`",string,"Value of Procedure Step Label (0074,1204) in created UPS.
