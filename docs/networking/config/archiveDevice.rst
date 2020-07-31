@@ -1210,7 +1210,7 @@ DICOM Archive Device related information
     "
     .. _dcmCSVUploadChunkSize:
 
-    :ref:`CSV Upload Chunk Size <dcmCSVUploadChunkSize>`",integer,"Number of CSV file upload tasks to be processed in one transaction.
+    :ref:`CSV Upload Chunk Size <dcmCSVUploadChunkSize>`",integer,"Number of CSV file upload tasks to be processed in one chunk.
 
     (dcmCSVUploadChunkSize)"
     "
