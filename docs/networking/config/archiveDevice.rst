@@ -170,6 +170,12 @@ DICOM Archive Device related information
 
     (dcmValidateCallingAEHostname)"
     "
+    .. _dcmUserIdentityNegotiation:
+
+    :ref:`User Identity Negotiation <dcmUserIdentityNegotiation>`",string,"Usage of User Identity Negotiation Sub-Item in received Association requests. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: NOT_SUPPORTED, SUPPORTS or REQUIRED.
+
+    (dcmUserIdentityNegotiation)"
+    "
     .. _dcmPersonNameComponentOrderInsensitiveMatching:
 
     :ref:`Person Name Component Order Insensitive Matching <dcmPersonNameComponentOrderInsensitiveMatching>`",boolean,"Indicates if name component order insensitive matching is performed on fuzzy semantic matching of person names. May be overwritten by configured values for particular Archive Network AEs.
