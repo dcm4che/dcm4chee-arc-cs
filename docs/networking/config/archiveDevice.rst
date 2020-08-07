@@ -172,9 +172,21 @@ DICOM Archive Device related information
     "
     .. _dcmUserIdentityNegotiation:
 
-    :ref:`User Identity Negotiation <dcmUserIdentityNegotiation>`",string,"Usage of User Identity Negotiation Sub-Item in received Association requests. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: NOT_SUPPORTED, SUPPORTS or REQUIRED.
+    :ref:`User Identity Negotiation <dcmUserIdentityNegotiation>`",string,"Specifies to ignore User Identity Negotiation Sub-Item in Association requests (=NOT_SUPPORTED), to verify passed Username and password or JSON Web Token are against a Keycloak server (=SUPPORTS), or to reject Association requests without a valid Username and password or JSON Web Token in its Identity Negotiation Sub-Item (=REQUIRED). May be overwritten by configured values for particular Archive Network AEs. Enumerated values: NOT_SUPPORTED, SUPPORTS or REQUIRED.
 
     (dcmUserIdentityNegotiation)"
+    "
+    .. _dcmUserIdentityNegotiationRole:
+
+    :ref:`User Identity Negotiation Role <dcmUserIdentityNegotiationRole>`",string,"Constrain accepted User Identity Negotiation requests to users with specified role. If absent, only verify passed username and password or JSON Web Token. May be overwritten by configured values for particular Archive Network AEs.
+
+    (dcmUserIdentityNegotiationRole)"
+    "
+    .. _dcmUserIdentityNegotiationKeycloakClientID:
+
+    :ref:`User Identity Negotiation Keycloak Client ID <dcmUserIdentityNegotiationKeycloakClientID>`",string,"Keycloak Client ID referring Keycloak connection configuration for verifying passed username and password or JSON Web Token. If absent, System Properties ${auth-server-url}, ${realm-name:dcm4che}, ${ui-client-id:dcm4chee-arc-ui}, ${disable-trust-manager:false}, ${allow-any-hostname:true} will be applied. May be overwritten by configured values for particular Archive Network AEs.
+
+    (dcmUserIdentityNegotiationKeycloakClientID)"
     "
     .. _dcmPersonNameComponentOrderInsensitiveMatching:
 

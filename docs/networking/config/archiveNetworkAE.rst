@@ -112,9 +112,21 @@ DICOM Archive Network AE related information
     "
     .. _dcmUserIdentityNegotiation:
 
-    :ref:`User Identity Negotiation <dcmUserIdentityNegotiation>`",string,"Usage of User Identity Negotiation Sub-Item in received Association requests. Overwrites value specified on Device level. Enumerated values: NOT_SUPPORTED, SUPPORTS or REQUIRED.
+    :ref:`User Identity Negotiation <dcmUserIdentityNegotiation>`",string,"Specifies to ignore User Identity Negotiation Sub-Item in Association requests (=NOT_SUPPORTED), to verify passed Username and password or JSON Web Token are against a Keycloak server (=SUPPORTS), or to reject Association requests without a valid Username and password or JSON Web Token in its Identity Negotiation Sub-Item (=REQUIRED). Overwrites value specified on Device level. Enumerated values: NOT_SUPPORTED, SUPPORTS or REQUIRED.
 
     (dcmUserIdentityNegotiation)"
+    "
+    .. _dcmUserIdentityNegotiationRole:
+
+    :ref:`User Identity Negotiation Role <dcmUserIdentityNegotiationRole>`",string,"Constrain accepted User Identity Negotiation requests to users with specified role. Overwrites value specified on Device level.
+
+    (dcmUserIdentityNegotiationRole)"
+    "
+    .. _dcmUserIdentityNegotiationKeycloakClientID:
+
+    :ref:`User Identity Negotiation Keycloak Client ID <dcmUserIdentityNegotiationKeycloakClientID>`",string,"Keycloak Client ID referring Keycloak connection configuration for verifying passed username and password or JSON Web Token. Overwrites value specified on Device level.
+
+    (dcmUserIdentityNegotiationKeycloakClientID)"
     "
     .. _dcmPersonNameComponentOrderInsensitiveMatching:
 
