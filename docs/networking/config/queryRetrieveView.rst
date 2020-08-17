@@ -16,13 +16,13 @@ Specifies behavior on Rejection Note Stored
     "
     .. _dcmShowInstancesRejectedByCode:
 
-    :ref:`Show Instances Rejected By Code(s) <dcmShowInstancesRejectedByCode>`",string,"Indicates if the Q/R Services shall show instances rejected by the specified code in format (CV, CSD, 'CM'')
+    :ref:`Show Instances Rejected By Code(s) <dcmShowInstancesRejectedByCode>`",string,"Indicates if the Q/R Services shall show instances rejected by the specified code in format (CV, CSD, 'CM')
 
     (dcmShowInstancesRejectedByCode)"
     "
     .. _dcmHideRejectionNoteWithCode:
 
-    :ref:`Hide Rejection Note With Code(s) <dcmHideRejectionNoteWithCode>`",string,"Indicates if the Q/R Services shall hide Rejection Notes with the specified code in format (CV, CSD, 'CM'')
+    :ref:`Hide Rejection Note With Code(s) <dcmHideRejectionNoteWithCode>`",string,"Indicates if the Q/R Services shall hide Rejection Notes with the specified code in format (CV, CSD, 'CM')
 
     (dcmHideRejectionNoteWithCode)"
     "
