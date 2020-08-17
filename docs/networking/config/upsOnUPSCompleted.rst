@@ -8,11 +8,11 @@ Create Workitem in unified Worklist on previous UPS Completed
     :widths: 23, 7, 70
 
     "
-    .. _dcmUPSOnStoreID:
+    .. _dcmUPSOnUPSCompletedID:
 
-    :ref:`UPS on Store ID <dcmUPSOnStoreID>`",string,"ID of UPS on Store Rule
+    :ref:`UPS on UPS Completed Rule ID <dcmUPSOnUPSCompletedID>`",string,"ID of UPS on UPS Completed Rule
 
-    (dcmUPSOnStoreID)"
+    (dcmUPSOnUPSCompletedID)"
     "
     .. _dcmUPSPerformedWorkitemCode:
 
