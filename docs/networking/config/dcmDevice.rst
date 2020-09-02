@@ -34,7 +34,7 @@ dcm4che proprietary Device Attributes
     "
     .. _dcmTrustStoreType:
 
-    :ref:`Trust Store Type <dcmTrustStoreType>`",string,"Key Store Type of Trust Store specified by dcmTrustStoreURL. Enumerated values: JKS or PKCS12.
+    :ref:`Trust Store Type <dcmTrustStoreType>`",string,"Key Store Type of Trust Store specified by dcmTrustStoreURL. Enumerated values: JKS, PKCS12.
 
     (dcmTrustStoreType)"
     "
@@ -58,7 +58,7 @@ dcm4che proprietary Device Attributes
     "
     .. _dcmKeyStoreType:
 
-    :ref:`Key Store Type <dcmKeyStoreType>`",string,"Key Store Type of Key Store specified by Key Store URL. Enumerated values: JKS or PKCS12.
+    :ref:`Key Store Type <dcmKeyStoreType>`",string,"Key Store Type of Key Store specified by Key Store URL. Enumerated values: JKS, PKCS12.
 
     (dcmKeyStoreType)"
     "

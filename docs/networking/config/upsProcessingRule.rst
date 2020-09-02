@@ -112,9 +112,15 @@ Process matching Workitems in unified Worklist
     "
     .. _dcmUPSRescheduleDiscontinuationReasonCode:
 
-    :ref:`Reschedule Discontinuation Reason Code(s) <dcmUPSRescheduleDiscontinuationReasonCode>`",string,"Specifies Discontinuation Reason Code in format (CV, CSD, ""CM"") to reschedule the canceled UPS. If absent, UPS canceled with any Discontinuation Reason Code with be rescheduled according specified Maximum Number of Rescheduling.
+    :ref:`Reschedule Discontinuation Reason Code(s) <dcmUPSRescheduleDiscontinuationReasonCode>`",string,"Specifies Discontinuation Reason Code in format (CV, CSD, ""CM"") to reschedule the canceled UPS. If absent, UPS canceled with any Discontinuation Reason Code will be rescheduled according specified Maximum Number of Rescheduling.
 
     (dcmUPSRescheduleDiscontinuationReasonCode)"
+    "
+    .. _dcmUPSTemplateID:
+
+    :ref:`Create UPS on Cancel <dcmUPSTemplateID>`",string,"Specifies ID of UPS Template for creating an UPS if the processing failed and no retry is scheduled. If absent, no UPS will be created on failures.
+
+    (dcmUPSTemplateID)"
     "
     .. _dcmMaxRetries:
 
