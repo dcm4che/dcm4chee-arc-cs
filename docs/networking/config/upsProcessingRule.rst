@@ -118,7 +118,7 @@ Process matching Workitems in unified Worklist
     "
     .. _dcmUPSTemplateID:
 
-    :ref:`Create UPS on Cancel <dcmUPSTemplateID>`",string,"Specifies ID of UPS Template for creating an UPS if the processing failed and no retry is scheduled. If absent, no UPS will be created on failures.
+    :ref:`Create UPS on Cancel <dcmUPSTemplateID>`",string,"Specifies ID of UPS Template for creating an UPS if the processing failed and retry is not scheduled any more. If absent, no UPS will be created on failures.
 
     (dcmUPSTemplateID)"
     "
