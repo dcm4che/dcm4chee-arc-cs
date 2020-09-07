@@ -418,13 +418,13 @@ DICOM Archive Device related information
     "
     .. _dcmRetrieveTaskWarningOnNoMatch:
 
-    :ref:`Retrieve Task Warning on no Match <dcmRetrieveTaskWarningOnNoMatch>`",boolean,"Indicates if the result status of Retrieve Tasks shall be set to WARNING if none of the requested objects was found on the C-MOVE SCP. May be overwritten by configured values for particular Archive HL7 Application."",
+    :ref:`Retrieve Task Warning on no Match <dcmRetrieveTaskWarningOnNoMatch>`",boolean,"Indicates if the result status of Retrieve Tasks shall be set to WARNING if none of the requested objects was found on the C-MOVE SCP. May be overwritten by configured values for particular Archive Network AEs.
 
     (dcmRetrieveTaskWarningOnNoMatch)"
     "
     .. _dcmRetrieveTaskWarningOnWarnings:
 
-    :ref:`Retrieve Task Warning on Warnings <dcmRetrieveTaskWarningOnWarnings>`",boolean,"Indicates if the result status of Retrieve Tasks shall be set to WARNING if there are Warning Sub-Operations, even if the retrieve of all objects was successful. May be overwritten by configured values for particular Archive HL7 Application."",
+    :ref:`Retrieve Task Warning on Warnings <dcmRetrieveTaskWarningOnWarnings>`",boolean,"Indicates if the result status of Retrieve Tasks shall be set to WARNING if there are Warning Sub-Operations, even if the retrieve of all objects was successful. May be overwritten by configured values for particular Archive Network AEs.
 
     (dcmRetrieveTaskWarningOnWarnings)"
     "
@@ -1198,7 +1198,7 @@ DICOM Archive Device related information
     "
     .. _hl7ImportReportMissingStudyIUIDPolicy:
 
-    :ref:`HL7 Import Report Missing Study Instance UID Policy <hl7ImportReportMissingStudyIUIDPolicy>`",string,"Specifies policy for missing Study Instance UID in incoming HL7 Import Report (ORU) messages. May be overwritten by configured values for particular Archive HL7 Application."", Enumerated values: REJECT, GENERATE or ACCESSION_BASED.
+    :ref:`HL7 Import Report Missing Study Instance UID Policy <hl7ImportReportMissingStudyIUIDPolicy>`",string,"Specifies policy for missing Study Instance UID in incoming HL7 Import Report (ORU) messages. May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: REJECT, GENERATE or ACCESSION_BASED.
 
     (hl7ImportReportMissingStudyIUIDPolicy)"
     "

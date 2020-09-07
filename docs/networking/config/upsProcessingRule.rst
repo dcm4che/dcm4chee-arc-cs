@@ -106,7 +106,7 @@ Process matching Workitems in unified Worklist
     "
     .. _dcmUPSIgnoreDiscontinuationReasonCode:
 
-    :ref:`Ignore Discontinuation Reason Code(s) <dcmUPSIgnoreDiscontinuationReasonCode>`",string,"Specifies Discontinuation Reason Code in format (CV, CSD, ""CM"") to ignore and change UPS State to COMPLETED - instead to CANCELED.
+    :ref:`Ignore Discontinuation Reason Code(s) <dcmUPSIgnoreDiscontinuationReasonCode>`",string,"Specifies Discontinuation Reason Code in format (CV, CSD, ""CM"") to ignore and change UPS State to COMPLETED - instead of CANCELED.
 
     (dcmUPSIgnoreDiscontinuationReasonCode)"
     "
