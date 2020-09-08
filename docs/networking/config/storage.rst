@@ -124,7 +124,7 @@ Storage Descriptor
     "
     .. _dcmExportStorageID:
 
-    :ref:`Export Storage ID <dcmExportStorageID>`",string,"Constrains deletion of Studies, additionally to configured deleter thresholds and/or deletion retention period constraints, from the Storage System to Studies which objects are also accessible from the specified other storage.
+    :ref:`Export Storage ID(s) <dcmExportStorageID>`",string,"Constrains deletion of Studies, additionally to configured deleter thresholds and/or deletion retention period constraints, from the Storage System to Studies whose objects are also accessible from the specified other storages.
 
     (dcmExportStorageID)"
     "
