@@ -76,7 +76,7 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
     "
     .. _dcmUPSIncludePatient:
 
-    :ref:`UPS Include Patient <dcmUPSIncludePatient>`",string,"Indicates if patient (associated with created UPS) shall be created using patient attributes in received objects or not. Enumerated Values: NO (= create a dummy patient), YES (= create patient from patient attributes in received objects). If absent, YES will be applied. Enumerated values: NO or YES.
+    :ref:`UPS Include Patient <dcmUPSIncludePatient>`",boolean,"Indicates if patient (associated with created UPS) is created using patient attributes in received object; true if absent.
 
     (dcmUPSIncludePatient)"
     "
