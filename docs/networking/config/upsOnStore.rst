@@ -74,6 +74,12 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
 
     (dcmUPSIncludeInputInformation)"
     "
+    .. _dcmUPSIncludePatient:
+
+    :ref:`UPS Include Patient <dcmUPSIncludePatient>`",string,"Indicates if patient (associated with created UPS) shall be created using patient attributes in received objects or not. Enumerated Values: NO (= create a dummy patient), YES (= create patient from patient attributes in received objects). If absent, YES will be applied. Enumerated values: NO or YES.
+
+    (dcmUPSIncludePatient)"
+    "
     .. _dcmDestinationAE:
 
     :ref:`Destination AE <dcmDestinationAE>`",string,"Title of a DICOM Application Entity to which Instances will be stored.
