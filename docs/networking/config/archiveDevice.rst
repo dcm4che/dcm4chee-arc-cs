@@ -1312,7 +1312,6 @@ DICOM Archive Device related information
     ":doc:`upsOnStore` (s)",object,"UPS on Store Rules applied to DICOM objects received by any AE. May be supplemented by configured UPS on Store Rules for particular Archive Network AEs."
     ":doc:`upsOnHL7` (s)",object,"UPS on HL7 Rules applied to HL7 messages received by any HL7 Application. May be supplemented by configured UPS on HL7 Rules for particular HL7 Applications."
     ":doc:`upsOnUPSCompleted` (s)",object,"UPS on UPS Completed Rules applied to UPS managed by any AE. May be supplemented by configured UPS on Store Rules for particular Archive Network AEs."
-    ":doc:`upsTemplate` (s)",object,"UPS Templates."
     ":doc:`upsProcessingRule` (s)",object,"UPS Processing Rules."
     ":doc:`idGenerator` (s)",object,"ID Generator"
     ":doc:`mwlIdleTimeout` (s)",object,"MWL Idle Timeout"
@@ -1358,7 +1357,6 @@ DICOM Archive Device related information
     upsOnStore
     upsOnHL7
     upsOnUPSCompleted
-    upsTemplate
     upsProcessingRule
     idGenerator
     mwlIdleTimeout
