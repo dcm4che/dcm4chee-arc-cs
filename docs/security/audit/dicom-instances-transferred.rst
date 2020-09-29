@@ -179,7 +179,6 @@ Message Structure
    ParticipantObjectDescription, U
    SOPClass, MC, Sop Class UID and Number of instances with this sop class. eg. <SOPClass UID='1.2.840.10008.5.1.4.1.1.88.22' NumberOfInstances='4'/>
    Accession, U, Accession Number
-   ParticipantObjectQuery, U, WADO URI Case : Base64 encoded value of Request Query String
 
 .. csv-table:: Participant Object Identification : Patient
    :name: participant-object-patient-instances-transferred
