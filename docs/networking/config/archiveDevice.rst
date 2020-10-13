@@ -20,6 +20,30 @@ DICOM Archive Device related information
 
     (dcmBulkDataDescriptorID)"
     "
+    .. _dcmCalculateStudySizeDelay:
+
+    :ref:`Calculate Study Size Delay <dcmCalculateStudySizeDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMnS for eager calculation of Study Size and Query Attributes. If absent, no (minimal) delay for eager calculation of the Study Size and Query Attributes is applied.
+
+    (dcmCalculateStudySizeDelay)"
+    "
+    .. _dcmCalculateStudySizePollingInterval:
+
+    :ref:`Calculate Study Size Polling Interval <dcmCalculateStudySizePollingInterval>`",string,"Polling Interval for Studies with unknown size in ISO-8601 duration format PnDTnHnMnS. If absent, there is no eager calculation of the Study Size and Query Attributes.
+
+    (dcmCalculateStudySizePollingInterval)"
+    "
+    .. _dcmCalculateStudySizeFetchSize:
+
+    :ref:`Calculate Study Size Fetch Size <dcmCalculateStudySizeFetchSize>`",integer,"Maximal number of Studies with unknown size fetched by one query.
+
+    (dcmCalculateStudySizeFetchSize)"
+    "
+    .. _dcmCalculateQueryAttributesViewID:
+
+    :ref:`Calculate Query Attributes View ID(s) <dcmCalculateQueryAttributesViewID>`",string,"Indicates to eager calculate Query Attributes for specified Query/Retrieve Views according configured Calculate Study Size Delay and Calculate Study Size Polling Interval.
+
+    (dcmCalculateQueryAttributesViewID)"
+    "
     .. _dcmSeriesMetadataStorageID:
 
     :ref:`Series Metadata Storage ID(s) <dcmSeriesMetadataStorageID>`",string,"ID of Storage on which ZIP archives with aggregated Metadata of all instances of a Series is stored. Multiple Storage Systems may be configured. If absent, no aggregated Series Metadata will be stored.
