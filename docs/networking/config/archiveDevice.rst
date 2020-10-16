@@ -34,15 +34,15 @@ DICOM Archive Device related information
     "
     .. _dcmCalculateStudySizeFetchSize:
 
-    :ref:`Calculate Study Size Fetch Size <dcmCalculateStudySizeFetchSize>`",integer,"Maximal number of Studies with unknown size fetched by one query.
+    :ref:`Calculate Study Size Fetch Size <dcmCalculateStudySizeFetchSize>`",integer,"Limit result set of DB query for Studies with unknown size.
 
     (dcmCalculateStudySizeFetchSize)"
     "
-    .. _dcmCalculateQueryAttributesViewID:
+    .. _dcmCalculateQueryAttributes:
 
-    :ref:`Calculate Query Attributes View ID(s) <dcmCalculateQueryAttributesViewID>`",string,"Indicates to eager calculate Query Attributes for specified Query/Retrieve Views according configured Calculate Study Size Delay and Calculate Study Size Polling Interval.
+    :ref:`Calculate Query Attributes View ID <dcmCalculateQueryAttributes>`",boolean,"Indicates to eager calculate Query Attributes according configured Calculate Study Size Delay and Calculate Study Size Polling Interval.
 
-    (dcmCalculateQueryAttributesViewID)"
+    (dcmCalculateQueryAttributes)"
     "
     .. _dcmSeriesMetadataStorageID:
 
