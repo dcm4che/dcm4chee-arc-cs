@@ -40,7 +40,7 @@ DICOM Archive Device related information
     "
     .. _dcmCalculateQueryAttributes:
 
-    :ref:`Calculate Query Attributes View ID <dcmCalculateQueryAttributes>`",boolean,"Indicates to eager calculate Query Attributes according configured Calculate Study Size Delay and Calculate Study Size Polling Interval.
+    :ref:`Calculate Query Attributes <dcmCalculateQueryAttributes>`",boolean,"Indicates to eager calculate Query Attributes according configured Calculate Study Size Delay and Calculate Study Size Polling Interval.
 
     (dcmCalculateQueryAttributes)"
     "
@@ -790,7 +790,7 @@ DICOM Archive Device related information
     "
     .. _dcmAllowDeletePatient:
 
-    :ref:`Allow Delete Patient <dcmAllowDeletePatient>`",string,"Allow permanent deletion of Patients. Enumerated values: NEVER, ALWAYS, WITHOUT_STUDIES. If absent, WITHOUT_STUDIES will be applied. Enumerated values: NEVER, ALWAYS or WITHOUT_STUDIES.
+    :ref:`Allow Delete Patient <dcmAllowDeletePatient>`",string,"Allow permanent deletion of Patients. WITHOUT_STUDIES = only Patients without Studies. Enumerated values: NEVER, ALWAYS or WITHOUT_STUDIES.
 
     (dcmAllowDeletePatient)"
     "
