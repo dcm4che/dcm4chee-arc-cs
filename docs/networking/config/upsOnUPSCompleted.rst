@@ -14,11 +14,17 @@ Create Workitem in unified Worklist on previous UPS Completed
 
     (dcmUPSOnUPSCompletedID)"
     "
-    .. _dcmUPSPerformedWorkitemCode:
+    .. _dcmProperty:
 
-    :ref:`Previous Performed Workitem Code <dcmUPSPerformedWorkitemCode>`",string,"Performed Workitem Code of completed UPS triggering this rule in format (CV, CSD, ""CM"").
+    :ref:`Condition(s) <dcmProperty>`",string,"Conditions in format {attributeID[number]})[!]={regEx} or {sequenceAttributeID}[!]=(CV, CSD, ""CM""). More than one value can be specified for a given attribute by separating them with a | symbol.
 
-    (dcmUPSPerformedWorkitemCode)"
+    (dcmProperty)"
+    "
+    .. _dcmRequiresOtherUPSCompleted:
+
+    :ref:`Requires other UPS completed(s) <dcmRequiresOtherUPSCompleted>`",string,"Specifies Query Parameters for other UPS referring the same request (= Study Instance UID), which must be already be completed for creating this UPS. Format: {attributeID}={value}[&...]
+
+    (dcmRequiresOtherUPSCompleted)"
     "
     .. _dcmUPSLabel:
 
