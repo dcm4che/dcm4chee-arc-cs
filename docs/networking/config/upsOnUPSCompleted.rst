@@ -62,6 +62,24 @@ Create Workitem in unified Worklist on previous UPS Completed
 
     (dcmUPSCompletionDateTimeDelay)"
     "
+    .. _dcmUPSInstanceUIDBasedOnName:
+
+    :ref:`UPS Instance UID based on name <dcmUPSInstanceUIDBasedOnName>`",string,"Value to generate name based SOP Instance UID (0008,0018) in created UPS. If absent, a random generated SOP Instance UID (0008,0018) will be used.
+
+    (dcmUPSInstanceUIDBasedOnName)"
+    "
+    .. _dcmUPSIncludeInputInformation:
+
+    :ref:`Include Input Information <dcmUPSIncludeInputInformation>`",string,"Indicates if the Input Information Sequence (0040,4021) or/and the Output Information Sequence (0040,4033) in the Unified Procedure Step Performed Procedure Sequence (0074,1216) of the previous UPS is included in Input Information Sequence (0040,4021) of the in created UPS. Enumerated values: NO, COPY_INPUT, COPY_OUTPUT or MERGE_INPUT_OUTPUT.
+
+    (dcmUPSIncludeInputInformation)"
+    "
+    .. _dcmUPSIncludePatient:
+
+    :ref:`UPS Include Patient <dcmUPSIncludePatient>`",boolean,"Indicates if patient attributes are copied from the previous UPS.
+
+    (dcmUPSIncludePatient)"
+    "
     .. _dcmDestinationAE:
 
     :ref:`Destination AE <dcmDestinationAE>`",string,"Title of a DICOM Application Entity to which Instances will be stored.
