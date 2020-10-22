@@ -28,13 +28,13 @@ Create Workitem in unified Worklist on previous UPS Completed
     "
     .. _dcmUPSLabel:
 
-    :ref:`Procedure Step Label <dcmUPSLabel>`",string,"Value of Procedure Step Label (0074,1204) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset.
+    :ref:`Procedure Step Label <dcmUPSLabel>`",string,"Value of Procedure Step Label (0074,1204) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset. Example: {StudyDescription}
 
     (dcmUPSLabel)"
     "
     .. _dcmUPSWorklistLabel:
 
-    :ref:`Worklist Label <dcmUPSWorklistLabel>`",string,"Value of Worklist Label (0074,1202) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset.
+    :ref:`Worklist Label <dcmUPSWorklistLabel>`",string,"Value of Worklist Label (0074,1202) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset. Example: {StudyDescription}
 
     (dcmUPSWorklistLabel)"
     "
@@ -70,7 +70,7 @@ Create Workitem in unified Worklist on previous UPS Completed
     "
     .. _dcmUPSIncludeInputInformation:
 
-    :ref:`Include Input Information <dcmUPSIncludeInputInformation>`",string,"Indicates if the Input Information Sequence (0040,4021) or/and the Output Information Sequence (0040,4033) in the Unified Procedure Step Performed Procedure Sequence (0074,1216) of the previous UPS is included in Input Information Sequence (0040,4021) of the in created UPS. Enumerated values: NO, COPY_INPUT, COPY_OUTPUT or MERGE_INPUT_OUTPUT.
+    :ref:`Include Input Information <dcmUPSIncludeInputInformation>`",string,"Indicates if the Input Information Sequence (0040,4021) or/and the Output Information Sequence (0040,4033) in the Unified Procedure Step Performed Procedure Sequence (0074,1216) of the previous UPS is included in Input Information Sequence (0040,4021) of the in created UPS. Enumerated values: NO, COPY_INPUT or COPY_OUTPUT.
 
     (dcmUPSIncludeInputInformation)"
     "
@@ -124,19 +124,19 @@ Create Workitem in unified Worklist on previous UPS Completed
     "
     .. _dcmUPSScheduledHumanPerformerName:
 
-    :ref:`Scheduled Human Performer Name <dcmUPSScheduledHumanPerformerName>`",string,"Value of Human Performer's Name (0040,4037) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset.
+    :ref:`Scheduled Human Performer Name <dcmUPSScheduledHumanPerformerName>`",string,"Value of Human Performer's Name (0040,4037) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset. Example: {PerformingPhysicianName}
 
     (dcmUPSScheduledHumanPerformerName)"
     "
     .. _dcmUPSScheduledHumanPerformerOrganization:
 
-    :ref:`Scheduled Human Performer Organization <dcmUPSScheduledHumanPerformerOrganization>`",string,"Value of Human Performer's Organization (0040,4036) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset.
+    :ref:`Scheduled Human Performer Organization <dcmUPSScheduledHumanPerformerOrganization>`",string,"Value of Human Performer's Organization (0040,4036) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset. Example: {ResponsibleOrganization}
 
     (dcmUPSScheduledHumanPerformerOrganization)"
     "
     .. _dcmAdmissionID:
 
-    :ref:`Admission Number <dcmAdmissionID>`",string,"Value of Admission ID (0038,0010) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset.
+    :ref:`Admission Number <dcmAdmissionID>`",string,"Value of Admission ID (0038,0010) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset. Example: {AdmissionID}
 
     (dcmAdmissionID)"
     "
