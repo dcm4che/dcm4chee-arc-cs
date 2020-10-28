@@ -13,6 +13,7 @@ This message is emitted by the archive in following cases :
 - Update study/series expiration date using UI / Study Retention Policy / HL7 Study Retention Policy.
 - Update study attributes using UI.
 - Previous series/instances of a study are deleted on subsequent receive of objects having same SOP IUID but different Series IUID
+- Scheduler triggered study size & query attributes calculation
 
 Message Structure
 -----------------
@@ -20,7 +21,7 @@ Message Structure
 .. csv-table:: Entities in DICOM Instances Accessed Audit Message
 
     :ref:`event-identification-instances-accessed`
-    :ref:`active-participant-archive-instances-accessed`
+    :ref:`active-participant-archive-instances-accessed`, Not present in scheduler triggered study size & query attributes calculation
     :ref:`active-participant-initiator-instances-accessed`
     :ref:`audit-general-message-audit-source`
     :ref:`participant-object-study-instances-accessed`
@@ -34,6 +35,7 @@ Message Structure
    EventID, M, "| EV (110103, DCM, 'DICOM Instances Accessed')"
    EventActionCode, M, "| Rejection / Deletion case : Delete ⇒ 'D'
    | Update study attributes / expiration date case : Update ⇒ 'U'
+   | Scheduler triggered study size & query attributes calculation case : Read ⇒ 'R'
    | Update expiration date for frozen study / series case : Read ⇒ 'R'"
    EventDateTime, M, | The time at which the event occurred
    EventOutcomeIndicator, M, "| Success ⇒ '0'
@@ -68,13 +70,15 @@ Message Structure
    UserID, M, "| Action triggered using association ⇒ 'Application entity title of initiating system'
    | Action triggered using UI : Secured Archive ⇒ 'User name of logged in user'
    | Action triggered using UI : Unsecured archive ⇒ 'Remote IP address'
-   | Action triggered using HL7 messages ⇒ 'Sending Application and Facility'"
+   | Action triggered using HL7 messages ⇒ 'Sending Application and Facility'
+   | Scheduler triggered study size & query attributes calculation ⇒ 'Archive Device Name'"
    UserIDTypeCode, U, "| Action triggered using archive UI (Secured archive) ⇒ EV (113871, DCM, 'Person ID')
    | Action triggered using archive UI (Unsecured archive) ⇒ EV (110182, DCM, 'Node ID')
    | Action triggered using association ⇒ EV (110119, DCM, 'Station AE Title')
-   | Action triggered using HL7 messages ⇒ EV (HL7APP, 99DCM4CHEE, 'Application and Facility')"
+   | Action triggered using HL7 messages ⇒ EV (HL7APP, 99DCM4CHEE, 'Application and Facility')
+   | Scheduler triggered study size & query attributes calculation case ⇒ EV (113877, DCM, 'Device Name')"
    UserTypeCode, U, "| Action triggered using archive UI : Person ⇒ '1'
-   | Action triggered using association : Application ⇒ '2'"
+   | Action triggered using association or by device : Application ⇒ '2'"
    UserIsRequestor, M, | true
    NetworkAccessPointID, U, | Hostname/IP Address of calling host
    NetworkAccessPointTypeCode, U, "| NetworkAccessPointID is host name ⇒ '1'
@@ -82,18 +86,19 @@ Message Structure
 
 .. csv-table:: Participant Object Identification : Study
    :name: participant-object-study-instances-accessed
-   :widths: 30, 5, 65
-   :header: Field Name, Opt, Description
+   :widths: 30, 5, 65, 20
+   :header: Field Name, Opt, Description, Notes
 
-   ParticipantObjectID, M, Study Instance UID or 1.2.40.0.13.1.15.110.3.165.1 if unknown
-   ParticipantObjectTypeCode, M, System ⇒ '2'
-   ParticipantObjectTypeCodeRole, M, Report ⇒ '3'
-   ParticipantObjectIDTypeCode, M, "EV (110180, DCM, 'Study Instance UID')"
-   ParticipantObjectDetail, U, "| All cases ⇒ 'Base-64 encoded study date if Study has StudyDate(0008,0020) attribute'
-   | Update study / series expiration date ⇒ 'Base-64 encoded expiration date (7777,1023)'"
-   ParticipantObjectDescription, U
-   SOPClass, MC, Rejection / Deletion case ⇒ Sop Class UID and Number of instances with this sop class. eg. <SOPClass UID='1.2.840.10008.5.1.4.1.1.88.22' NumberOfInstances='4'/>
-   Accession, U, Accession Number
+   ParticipantObjectID, M, Study Instance UID or 1.2.40.0.13.1.15.110.3.165.1 if unknown,
+   ParticipantObjectTypeCode, M, System ⇒ '2',
+   ParticipantObjectTypeCodeRole, M, Report ⇒ '3',
+   ParticipantObjectIDTypeCode, M, "EV (110180, DCM, 'Study Instance UID')",
+   ParticipantObjectDetail, U, "| All cases ⇒ 'Base-64 encoded study date if Study has StudyDate(0008,0020) attribute', Not present for scheduler triggered study size & query attributes calculation
+   | Update study / series expiration date ⇒ 'Base-64 encoded expiration date (7777,1023)',"
+   ParticipantObjectDescription, U, , Not present for scheduler triggered study size & query attributes calculation
+   SOPClass, MC, Rejection / Deletion case ⇒ Sop Class UID and Number of instances with this sop class. eg. <SOPClass UID='1.2.840.10008.5.1.4.1.1.88.22' NumberOfInstances='4'/>, Not present for scheduler triggered study size & query attributes calculation
+   Accession, U, Accession Number, Not present for scheduler triggered study size & query attributes calculation
+   ParticipantObjectDataLifeCycle, U, "| Scheduler triggered study size & query attributes calculation case : AggregationSummarizationDerivation ⇒ '8'
 
 .. csv-table:: Participant Object Identification : Patient
    :name: participant-object-patient-instances-accessed

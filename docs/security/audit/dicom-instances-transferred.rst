@@ -25,7 +25,7 @@ Message Structure
 
     :ref:`event-identification-instances-transferred`
     :ref:`active-participant-archive-instances-transferred`
-    :ref:`active-participant-destination-instances-transferred`, Not present in in Store objects and storage commitment cases
+    :ref:`active-participant-destination-instances-transferred`, Not present in Store objects and storage commitment cases
     :ref:`active-participant-other-instances-transferred`, Present only in Query/Retrieve C-Move case
     :ref:`active-participant-user-instances-transferred`, Present only in Export case triggered from UI
     :ref:`active-participant-source-instances-transferred`, Present only in Store objects and Storage commitment cases
