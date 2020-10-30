@@ -28,13 +28,13 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
     "
     .. _dcmUPSLabel:
 
-    :ref:`Procedure Step Label <dcmUPSLabel>`",string,"Value of Procedure Step Label (0074,1204) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.
+    :ref:`Procedure Step Label <dcmUPSLabel>`",string,"Value of Procedure Step Label (0074,1204) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {StudyDescription}
 
     (dcmUPSLabel)"
     "
     .. _dcmUPSWorklistLabel:
 
-    :ref:`Worklist Label <dcmUPSWorklistLabel>`",string,"Value of Worklist Label (0074,1202) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.
+    :ref:`Worklist Label <dcmUPSWorklistLabel>`",string,"Value of Worklist Label (0074,1202) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {StudyDescription}
 
     (dcmUPSWorklistLabel)"
     "
@@ -124,19 +124,19 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
     "
     .. _dcmUPSScheduledHumanPerformerName:
 
-    :ref:`Scheduled Human Performer Name <dcmUPSScheduledHumanPerformerName>`",string,"Value of Human Performer's Name (0040,4037) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.
+    :ref:`Scheduled Human Performer Name <dcmUPSScheduledHumanPerformerName>`",string,"Value of Human Performer's Name (0040,4037) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {PerformingPhysicianName}
 
     (dcmUPSScheduledHumanPerformerName)"
     "
     .. _dcmUPSScheduledHumanPerformerOrganization:
 
-    :ref:`Scheduled Human Performer Organization <dcmUPSScheduledHumanPerformerOrganization>`",string,"Value of Human Performer's Organization (0040,4036) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.
+    :ref:`Scheduled Human Performer Organization <dcmUPSScheduledHumanPerformerOrganization>`",string,"Value of Human Performer's Organization (0040,4036) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {ResponsibleOrganization}
 
     (dcmUPSScheduledHumanPerformerOrganization)"
     "
     .. _dcmAdmissionID:
 
-    :ref:`Admission Number <dcmAdmissionID>`",string,"Value of Admission ID (0038,0010) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.
+    :ref:`Admission Number <dcmAdmissionID>`",string,"Value of Admission ID (0038,0010) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {AdmissionID}
 
     (dcmAdmissionID)"
     "
@@ -160,7 +160,7 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
     "
     .. _dcmAccessionNumber:
 
-    :ref:`Accession Number <dcmAccessionNumber>`",string,"Value of Accession Number (0008,0050) in Item of Referenced Request Sequence (0040,A370) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.
+    :ref:`Accession Number <dcmAccessionNumber>`",string,"Value of Accession Number (0008,0050) in Item of Referenced Request Sequence (0040,A370) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {AccessionNumber}
 
     (dcmAccessionNumber)"
     "
@@ -172,25 +172,25 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
     "
     .. _dcmRequestedProcedureID:
 
-    :ref:`Requested Procedure ID <dcmRequestedProcedureID>`",string,"Value of Requested Procedure ID (0040,1001) in Item of Referenced Request Sequence (0040,A370) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.
+    :ref:`Requested Procedure ID <dcmRequestedProcedureID>`",string,"Value of Requested Procedure ID (0040,1001) in Item of Referenced Request Sequence (0040,A370) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {StudyID}
 
     (dcmRequestedProcedureID)"
     "
     .. _dcmRequestedProcedureDescription:
 
-    :ref:`Requested Procedure Description <dcmRequestedProcedureDescription>`",string,"Value of Requested Procedure Description (0032,1060) in Item of Referenced Request Sequence (0040,A370) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.
+    :ref:`Requested Procedure Description <dcmRequestedProcedureDescription>`",string,"Value of Requested Procedure Description (0032,1060) in Item of Referenced Request Sequence (0040,A370) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {StudyDescription}
 
     (dcmRequestedProcedureDescription)"
     "
     .. _dcmRequestingPhysician:
 
-    :ref:`Requesting Physician <dcmRequestingPhysician>`",string,"Value of Requesting Physician (0032,1032) in Item of Referenced Request Sequence (0040,A370) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.
+    :ref:`Requesting Physician <dcmRequestingPhysician>`",string,"Value of Requesting Physician (0032,1032) in Item of Referenced Request Sequence (0040,A370) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {PerformingPhysicianName}
 
     (dcmRequestingPhysician)"
     "
     .. _dcmRequestingService:
 
-    :ref:`Requesting Service <dcmRequestingService>`",string,"Value of Requesting Service (0032,1033) in Item of Referenced Request Sequence (0040,A370) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.
+    :ref:`Requesting Service <dcmRequestingService>`",string,"Value of Requesting Service (0032,1033) in Item of Referenced Request Sequence (0040,A370) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {StudyDescription}
 
     (dcmRequestingService)"
     "

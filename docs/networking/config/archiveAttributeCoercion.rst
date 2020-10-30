@@ -112,7 +112,7 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmMergeAttribute:
 
-    :ref:`Merge Attribute(s) <dcmMergeAttribute>`",string,"Merge DICOM Attribute in format {attributeID}={value}. {attributeID} inside of {value} will be replaced by the value of that attribute in the original dataset.
+    :ref:`Merge Attribute(s) <dcmMergeAttribute>`",string,"Merge DICOM Attribute in format {attributeID}={value}. {attributeID} inside of {value} will be replaced by the value of that attribute in the original dataset. Example: InstitutionName=RegionalHospital or 00081040=XRay.
 
     (dcmMergeAttribute)"
     "

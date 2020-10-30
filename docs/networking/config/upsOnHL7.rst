@@ -28,13 +28,13 @@ Create/Update Workitem in unified Worklist on receive of HL7v2 message
     "
     .. _dcmUPSLabel:
 
-    :ref:`Procedure Step Label <dcmUPSLabel>`",string,"Value of Procedure Step Label (0074,1204) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.
+    :ref:`Procedure Step Label <dcmUPSLabel>`",string,"Value of Procedure Step Label (0074,1204) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]
 
     (dcmUPSLabel)"
     "
     .. _dcmUPSWorklistLabel:
 
-    :ref:`Worklist Label <dcmUPSWorklistLabel>`",string,"Value of Worklist Label (0074,1202) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. If absent or if value could not be found in HL7 Message, HL7 Application Name of the receiving HL7 Application will be used.
+    :ref:`Worklist Label <dcmUPSWorklistLabel>`",string,"Value of Worklist Label (0074,1202) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. If absent or if value could not be found in HL7 Message, HL7 Application Name of the receiving HL7 Application will be used. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]
 
     (dcmUPSWorklistLabel)"
     "
@@ -64,7 +64,7 @@ Create/Update Workitem in unified Worklist on receive of HL7v2 message
     "
     .. _dcmUPSInstanceUIDBasedOnName:
 
-    :ref:`UPS Instance UID based on name <dcmUPSInstanceUIDBasedOnName>`",string,"Value used to generate name based SOP Instance UID (0008,0018) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. If absent, a random generated SOP Instance UID (0008,0018) will be used.
+    :ref:`UPS Instance UID based on name <dcmUPSInstanceUIDBasedOnName>`",string,"Value used to generate name based SOP Instance UID (0008,0018) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. If absent, a random generated SOP Instance UID (0008,0018) will be used. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]
 
     (dcmUPSInstanceUIDBasedOnName)"
     "
@@ -106,13 +106,13 @@ Create/Update Workitem in unified Worklist on receive of HL7v2 message
     "
     .. _dcmUPSScheduledHumanPerformerName:
 
-    :ref:`Scheduled Human Performer Name <dcmUPSScheduledHumanPerformerName>`",string,"Value of Human Performer's Name (0040,4037) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.
+    :ref:`Scheduled Human Performer Name <dcmUPSScheduledHumanPerformerName>`",string,"Value of Human Performer's Name (0040,4037) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]
 
     (dcmUPSScheduledHumanPerformerName)"
     "
     .. _dcmUPSScheduledHumanPerformerOrganization:
 
-    :ref:`Scheduled Human Performer Organization <dcmUPSScheduledHumanPerformerOrganization>`",string,"Value of Human Performer's Organization (0040,4036) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.
+    :ref:`Scheduled Human Performer Organization <dcmUPSScheduledHumanPerformerOrganization>`",string,"Value of Human Performer's Organization (0040,4036) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]
 
     (dcmUPSScheduledHumanPerformerOrganization)"
     "
@@ -130,13 +130,13 @@ Create/Update Workitem in unified Worklist on receive of HL7v2 message
     "
     .. _dcmStudyInstanceUID:
 
-    :ref:`Study Instance UID <dcmStudyInstanceUID>`",string,"Value of Study Instance UID (0020,000D) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.
+    :ref:`Study Instance UID <dcmStudyInstanceUID>`",string,"Value of Study Instance UID (0020,000D) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]
 
     (dcmStudyInstanceUID)"
     "
     .. _dcmAdmissionID:
 
-    :ref:`Admission Number <dcmAdmissionID>`",string,"Value of Admission ID (0038,0010) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.
+    :ref:`Admission Number <dcmAdmissionID>`",string,"Value of Admission ID (0038,0010) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]
 
     (dcmAdmissionID)"
     "
@@ -148,7 +148,7 @@ Create/Update Workitem in unified Worklist on receive of HL7v2 message
     "
     .. _dcmAccessionNumber:
 
-    :ref:`Accession Number <dcmAccessionNumber>`",string,"Value of Accession Number (0008,0050) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.
+    :ref:`Accession Number <dcmAccessionNumber>`",string,"Value of Accession Number (0008,0050) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]
 
     (dcmAccessionNumber)"
     "
@@ -160,25 +160,25 @@ Create/Update Workitem in unified Worklist on receive of HL7v2 message
     "
     .. _dcmRequestedProcedureID:
 
-    :ref:`Requested Procedure ID <dcmRequestedProcedureID>`",string,"Value of Requested Procedure ID (0040,1001) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.
+    :ref:`Requested Procedure ID <dcmRequestedProcedureID>`",string,"Value of Requested Procedure ID (0040,1001) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]
 
     (dcmRequestedProcedureID)"
     "
     .. _dcmRequestedProcedureDescription:
 
-    :ref:`Requested Procedure Description <dcmRequestedProcedureDescription>`",string,"Value of Requested Procedure Description (0032,1060) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.
+    :ref:`Requested Procedure Description <dcmRequestedProcedureDescription>`",string,"Value of Requested Procedure Description (0032,1060) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]
 
     (dcmRequestedProcedureDescription)"
     "
     .. _dcmRequestingPhysician:
 
-    :ref:`Requesting Physician <dcmRequestingPhysician>`",string,"Value of Requesting Physician (0032,1032) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.
+    :ref:`Requesting Physician <dcmRequestingPhysician>`",string,"Value of Requesting Physician (0032,1032) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]
 
     (dcmRequestingPhysician)"
     "
     .. _dcmRequestingService:
 
-    :ref:`Requesting Service <dcmRequestingService>`",string,"Value of Requesting Service (0032,1033) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.
+    :ref:`Requesting Service <dcmRequestingService>`",string,"Value of Requesting Service (0032,1033) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]
 
     (dcmRequestingService)"
     "

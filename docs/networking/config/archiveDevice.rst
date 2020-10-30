@@ -124,7 +124,7 @@ DICOM Archive Device related information
     "
     .. _dcmDeleteMWLDelay:
 
-    :ref:`Delete MWL Delay(s) <dcmDeleteMWLDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS for deleting MWL items. Status specific delays can be specified by prefix 'SCHEDULED:', 'ARRIVED:', 'READY:', 'STARTED:', 'DEPARTED:', 'CANCELED:', 'DISCONTINUED:', 'COMPLETED:'. If absent, MWL Items will not get deleted.
+    :ref:`Delete MWL Delay(s) <dcmDeleteMWLDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS for deleting MWL items. Status specific delays can be specified by prefix 'SCHEDULED:', 'ARRIVED:', 'READY:', 'STARTED:', 'DEPARTED:', 'CANCELED:', 'DISCONTINUED:', 'COMPLETED:'. Examples: PT5M or CANCELED:PT10M. If absent, MWL Items will not get deleted.
 
     (dcmDeleteMWLDelay)"
     "
@@ -175,6 +175,12 @@ DICOM Archive Device related information
     :ref:`Accept Conflicting Patient ID <dcmAcceptConflictingPatientID>`",string,"Indicates if objects with a Patient IDs which differs from the Patient ID in previous received objects of the Study shall be accepted. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: YES, NO or MERGED.
 
     (dcmAcceptConflictingPatientID)"
+    "
+    .. _dcmIdentifyPatientByAllAttributes:
+
+    :ref:`Identify Patient by all Attributes <dcmIdentifyPatientByAllAttributes>`",boolean,"Indicates if all Patient attributes in received objects shall be used for associating an already existing Patient in the archive, if the Assigning Authority of the Patient ID is not specified by an Issuer of Patient ID or Universal Entity ID. Attention: disables the coercion of stale Patient attributes in received objects and breaks Patient Management functions relying on the unambiguousness of Patient IDs.
+
+    (dcmIdentifyPatientByAllAttributes)"
     "
     .. _dcmBulkDataSpoolDirectory:
 
@@ -706,13 +712,13 @@ DICOM Archive Device related information
     "
     .. _dcmStorePermissionServiceResponse:
 
-    :ref:`Store Permission Service Response <dcmStorePermissionServiceResponse>`",string,"Emulate Store Permission Service Response on receive of the first object of a study by any AE. {<dicomTag>} will be replaced by the value of the attribute in the object. Only effective if no Store Permission Service URL is configured. May be overwritten by configured value for particular Archive Network AEs.
+    :ref:`Store Permission Service Response <dcmStorePermissionServiceResponse>`",string,"Emulate Store Permission Service Response on receive of the first object of a study by any AE. {<dicomTag>} will be replaced by the value of the attribute in the object. Only effective if no Store Permission Service URL is configured. Example: patientID={00100020},patientName={00100010},errorCode=0110H,errorComment=errorMessage. May be overwritten by configured value for particular Archive Network AEs.
 
     (dcmStorePermissionServiceResponse)"
     "
     .. _dcmStorePermissionServiceResponsePattern:
 
-    :ref:`Store Permission Service Response Pattern <dcmStorePermissionServiceResponsePattern>`",string,"Regular Expression applied to responses from Store Permission Service to determine agreement for storage. E.g. ""validation""\s*:\s*""true"" . If absent, every success response will be treated as agreement for storage. May be overwritten by configured value for particular Archive Network AEs.
+    :ref:`Store Permission Service Response Pattern <dcmStorePermissionServiceResponsePattern>`",string,"Regular Expression applied to responses from Store Permission Service to determine agreement for storage. E.g. ""validation""\s*:\s*""true"" or '(?<=patientName=)[^null].*?(?=,)'. If absent, every success response will be treated as agreement for storage. May be overwritten by configured value for particular Archive Network AEs.
 
     (dcmStorePermissionServiceResponsePattern)"
     "
@@ -856,7 +862,7 @@ DICOM Archive Device related information
     "
     .. _dcmMultipleStoreAssociations:
 
-    :ref:`Multiple Store Associations(s) <dcmMultipleStoreAssociations>`",string,"Number of Storage Associations used for retrieve of Composite Objects. C-STORE SCP specific numbers can be specified by prefix '<AETitle>:'. If absent, only one Association will be used. May be supplemented by configured Multiple Store Associations for particular Archive Network AEs.
+    :ref:`Multiple Store Associations(s) <dcmMultipleStoreAssociations>`",string,"Number of Storage Associations used for retrieve of Composite Objects. C-STORE SCP specific numbers can be specified by prefix '<AETitle>:'. If absent, only one Association will be used. Examples : 2 or STORESCP:3 May be supplemented by configured Multiple Store Associations for particular Archive Network AEs.
 
     (dcmMultipleStoreAssociations)"
     "
@@ -1114,7 +1120,7 @@ DICOM Archive Device related information
     "
     .. _hl7PSUConditions:
 
-    :ref:`HL7 Procedure Status Update Attribute Conditions(s) <hl7PSUConditions>`",string,"Restrict notification of configured HL7 Procedure Status Update Receiving Applications about Procedure Status Update by conditions on attributes of received composite object in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{attributeID})[!]={regEx}. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`HL7 Procedure Status Update Attribute Conditions(s) <hl7PSUConditions>`",string,"Restrict notification of configured HL7 Procedure Status Update Receiving Applications about Procedure Status Update by conditions on attributes of received composite object in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER. May be overwritten by configured values for particular Archive Network AEs.
 
     (hl7PSUConditions)"
     "

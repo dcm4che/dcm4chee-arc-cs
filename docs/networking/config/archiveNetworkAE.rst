@@ -292,13 +292,13 @@ DICOM Archive Network AE related information
     "
     .. _dcmStorePermissionServiceResponse:
 
-    :ref:`Store Permission Service Response <dcmStorePermissionServiceResponse>`",string,"Emulate Store Permission Service Response on receive of the first object of a study. {<dicomTag>} will be replaced by the value of the attribute in the object. Only effective if no Store Permission Service Response is configured. Overwrites value specified on Device level.
+    :ref:`Store Permission Service Response <dcmStorePermissionServiceResponse>`",string,"Emulate Store Permission Service Response on receive of the first object of a study. {<dicomTag>} will be replaced by the value of the attribute in the object. Only effective if no Store Permission Service Response is configured. Example: patientID={00100020},patientName={00100010},errorCode=0110H,errorComment=errorMessage. Overwrites value specified on Device level.
 
     (dcmStorePermissionServiceResponse)"
     "
     .. _dcmStorePermissionServiceResponsePattern:
 
-    :ref:`Store Permission Service Response Pattern <dcmStorePermissionServiceResponsePattern>`",string,"Regular Expression applied to responses from Store Permission Service to determine agreement for storage. E.g. ""validation""\s*:\s*""true"". Overwrites value specified on Device level.
+    :ref:`Store Permission Service Response Pattern <dcmStorePermissionServiceResponsePattern>`",string,"Regular Expression applied to responses from Store Permission Service to determine agreement for storage. E.g. ""validation""\s*:\s*""true"" or '(?<=patientName=)[^null].*?(?=,)'. Overwrites value specified on Device level.
 
     (dcmStorePermissionServiceResponsePattern)"
     "
@@ -376,7 +376,7 @@ DICOM Archive Network AE related information
     "
     .. _dcmMultipleStoreAssociations:
 
-    :ref:`Multiple Store Associations(s) <dcmMultipleStoreAssociations>`",string,"Number of Storage Associations used for retrieve of Composite Objects. C-STORE SCP specific numbers can be specified by prefix '<AETitle>:'. Supplements Multiple Store Associations specified on Device level.
+    :ref:`Multiple Store Associations(s) <dcmMultipleStoreAssociations>`",string,"Number of Storage Associations used for retrieve of Composite Objects. C-STORE SCP specific numbers can be specified by prefix '<AETitle>:'. Examples : 2 or STORESCP:3 Supplements Multiple Store Associations specified on Device level.
 
     (dcmMultipleStoreAssociations)"
     "
@@ -454,7 +454,7 @@ DICOM Archive Network AE related information
     "
     .. _hl7PSUConditions:
 
-    :ref:`HL7 Procedure Status Update Attribute Conditions(s) <hl7PSUConditions>`",string,"Restrict notification of configured HL7 Procedure Status Update Receiving Applications about Procedure Status Update by conditions on attributes of received composite object in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{attributeID})[!]={regEx}. Overwrites value specified on Device level.
+    :ref:`HL7 Procedure Status Update Attribute Conditions(s) <hl7PSUConditions>`",string,"Restrict notification of configured HL7 Procedure Status Update Receiving Applications about Procedure Status Update by conditions on attributes of received composite object in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER. Overwrites value specified on Device level.
 
     (hl7PSUConditions)"
     "
@@ -466,25 +466,25 @@ DICOM Archive Network AE related information
     "
     .. _hl7PSURequestedProcedureID:
 
-    :ref:`HL7 Procedure Status Update Requested Procedure ID <hl7PSURequestedProcedureID>`",string,"Value for Requested Procedure ID in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. Overwrites value specified on Device level.
+    :ref:`HL7 Procedure Status Update Requested Procedure ID <hl7PSURequestedProcedureID>`",string,"Value for Requested Procedure ID in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. Example: {StudyInstanceUID,hash}. Overwrites value specified on Device level.
 
     (hl7PSURequestedProcedureID)"
     "
     .. _hl7PSUAccessionNumber:
 
-    :ref:`HL7 Procedure Status Accession Number <hl7PSUAccessionNumber>`",string,"Value for Accession Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. Overwrites value specified on Device level.
+    :ref:`HL7 Procedure Status Accession Number <hl7PSUAccessionNumber>`",string,"Value for Accession Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. Example: {StudyInstanceUID,hash}. Overwrites value specified on Device level.
 
     (hl7PSUAccessionNumber)"
     "
     .. _hl7PSUFillerOrderNumber:
 
-    :ref:`HL7 Procedure Status Filler Order Number <hl7PSUFillerOrderNumber>`",string,"Value for Filler Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. Overwrites value specified on Device level.
+    :ref:`HL7 Procedure Status Filler Order Number <hl7PSUFillerOrderNumber>`",string,"Value for Filler Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. Example: {StudyInstanceUID,hash}. Overwrites value specified on Device level.
 
     (hl7PSUFillerOrderNumber)"
     "
     .. _hl7PSUPlacerOrderNumber:
 
-    :ref:`HL7 Procedure Status Placer Order Number <hl7PSUPlacerOrderNumber>`",string,"Value for Placer Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. Overwrites value specified on Device level.
+    :ref:`HL7 Procedure Status Placer Order Number <hl7PSUPlacerOrderNumber>`",string,"Value for Placer Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. Example: {StudyInstanceUID,hash}. Overwrites value specified on Device level.
 
     (hl7PSUPlacerOrderNumber)"
     "
