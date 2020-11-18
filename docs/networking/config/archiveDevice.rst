@@ -1088,6 +1088,12 @@ DICOM Archive Device related information
 
     (dcmPatientVerificationMaxStaleness)"
     "
+    .. _dcmSupplementIssuerFetchSize:
+
+    :ref:`Supplement Issuer Fetch Size <dcmSupplementIssuerFetchSize>`",integer,"Limit result set of DB query for matching Patients by RESTful service for supplementing Issuer of Patient ID.
+
+    (dcmSupplementIssuerFetchSize)"
+    "
     .. _hl7ADTSendingApplication:
 
     :ref:`HL7 ADT Sending Application <hl7ADTSendingApplication>`",string,"Application|Facility name of Sending Application for HL7 ADT messages to synchronize external systems about performed Patient Information updates. If absent, synchronization of external systems by HL7 ADT messages is disabled.
