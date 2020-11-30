@@ -128,6 +128,12 @@ DICOM Archive Device related information
 
     (dcmDeleteMWLDelay)"
     "
+    .. _dcmSCPStatusChangeEventOnRestartDelay:
+
+    :ref:`SCP Status Change Event on restart Delay <dcmSCPStatusChangeEventOnRestartDelay>`",integer,"Delay in ms to send SCP State Change Events to subscribed UPS Event SCUs and UPS Web Clients on (re-)start of the archive; no delay if absent.
+
+    (dcmSCPStatusChangeEventOnRestartDelay)"
+    "
     .. _dcmDeleteUPSPollingInterval:
 
     :ref:`Delete UPS Polling Interval <dcmDeleteUPSPollingInterval>`",string,"Polling Interval for deleting Unified Procedure Steps (UPS) in ISO-8601 duration format PnDTnHnMnS. If absent, Unified Procedure Steps will not get deleted.
