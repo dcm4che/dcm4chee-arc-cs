@@ -128,12 +128,6 @@ DICOM Archive Device related information
 
     (dcmDeleteMWLDelay)"
     "
-    .. _dcmSCPStatusChangeEventOnRestartDelay:
-
-    :ref:`SCP Status Change Event on restart Delay <dcmSCPStatusChangeEventOnRestartDelay>`",integer,"Delay in ms to send SCP State Change Events to subscribed UPS Event SCUs and UPS Web Clients on (re-)start of the archive; no delay if absent.
-
-    (dcmSCPStatusChangeEventOnRestartDelay)"
-    "
     .. _dcmDeleteUPSPollingInterval:
 
     :ref:`Delete UPS Polling Interval <dcmDeleteUPSPollingInterval>`",string,"Polling Interval for deleting Unified Procedure Steps (UPS) in ISO-8601 duration format PnDTnHnMnS. If absent, Unified Procedure Steps will not get deleted.
@@ -853,6 +847,12 @@ DICOM Archive Device related information
     :ref:`UPS Event SCU Keep Alive <dcmUPSEventSCUKeepAlive>`",integer,"Timeout in ms to keep associations to UPS Event SCUs alive. If absent, associations will not be reused for sending multiple UPS Event Reports to one UPS Event SCU. May be overwritten by configured values for particular Archive Network AEs.
 
     (dcmUPSEventSCUKeepAlive)"
+    "
+    .. _dcmUPSEventWebSocketQueueSize:
+
+    :ref:`UPS Event Web Socket Queue Size(s) <dcmUPSEventWebSocketQueueSize>`",string,"Indicates to queue UPS events to be sent to a particular Web Client identified by its {SubscriberAET} in case there is no open Web Socket connection to that client at the time of the event. Format: {SubscriberAET}:{QueueSize}.
+
+    (dcmUPSEventWebSocketQueueSize)"
     "
     .. _dcmRetrieveAET:
 
