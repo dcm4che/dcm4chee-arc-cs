@@ -850,7 +850,7 @@ DICOM Archive Device related information
     "
     .. _dcmUPSEventWebSocketQueueSize:
 
-    :ref:`UPS Event Web Socket Queue Size(s) <dcmUPSEventWebSocketQueueSize>`",string,"Indicates to queue UPS events to be sent to a particular Web Client identified by its {SubscriberAET} in case there is no open Web Socket connection to that client at the time of the event. Format: {SubscriberAET}:{QueueSize}.
+    :ref:`UPS Event Web Socket Queue Size(s) <dcmUPSEventWebSocketQueueSize>`",string,"Indicates to queue UPS events to be sent to a particular Web Client identified by its Subscriber AET in case there is no open Web Socket connection to that client at the time of the event. Format: <aet>=<size>.
 
     (dcmUPSEventWebSocketQueueSize)"
     "
