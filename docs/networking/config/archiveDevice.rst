@@ -178,7 +178,7 @@ DICOM Archive Device related information
     "
     .. _dcmIdentifyPatientByAllAttributes:
 
-    :ref:`Identify Patient by all Attributes <dcmIdentifyPatientByAllAttributes>`",boolean,"Indicates if all Patient attributes in received objects shall be used for associating an already existing Patient in the archive, if the Assigning Authority of the Patient ID is not specified by an Issuer of Patient ID or Universal Entity ID. Attention: disables the coercion of stale Patient attributes in received objects and breaks Patient Management functions relying on the unambiguousness of Patient IDs.
+    :ref:`Identify Patient by all Attributes <dcmIdentifyPatientByAllAttributes>`",boolean,"Indicates if all Patient attributes in received objects shall be used for associating an already existing Patient in the archive, if the Assigning Authority of the Patient ID is not specified by an Issuer of Patient ID or Universal Entity ID. Attention: disables the coercion of stale Patient attributes in received objects and breaks Patient Management functions relying on the unambiguity of Patient IDs.
 
     (dcmIdentifyPatientByAllAttributes)"
     "
