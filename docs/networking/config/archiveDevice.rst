@@ -194,6 +194,12 @@ DICOM Archive Device related information
 
     (dcmHideSPSWithStatusFromMWL)"
     "
+    .. _dcmEncodeAsJSONNumber:
+
+    :ref:`Encode as JSON Number(s) <dcmEncodeAsJSONNumber>`",string,"VR encoded as JSON Number. If not listed, IS, DS, SV and UV values are encoded as JSON Strings. May be supplemented by configured values for particular Archive Network AEs. Enumerated values: DS, IS, SV or UV.
+
+    (dcmEncodeAsJSONNumber)"
+    "
     .. _dcmValidateCallingAEHostname:
 
     :ref:`Validate Calling AE Hostname <dcmValidateCallingAEHostname>`",boolean,"Validate Calling AE Hostname or IP Address of Association requestors. May be overwritten by configured values for particular Archive Network AEs.

@@ -104,6 +104,12 @@ DICOM Archive Network AE related information
 
     (dcmHideSPSWithStatusFromMWL)"
     "
+    .. _dcmEncodeAsJSONNumber:
+
+    :ref:`Encode as JSON Number(s) <dcmEncodeAsJSONNumber>`",string,"VR encoded as JSON Number. If not listed, IS, DS, SV and UV values are encoded as JSON Strings. Supplements values specified on Device level. Enumerated values: DS, IS, SV or UV.
+
+    (dcmEncodeAsJSONNumber)"
+    "
     .. _dcmValidateCallingAEHostname:
 
     :ref:`Validate Calling AE Hostname <dcmValidateCallingAEHostname>`",boolean,"Validate Calling AE Hostname or IP Address of Association requestors for this AE. Overwrites value specified on Device level.
@@ -586,3 +592,15 @@ DICOM Archive Network AE related information
     ":doc:`storeAccessControlIDRule` (s)",object,"Store Access Control Rules applied to Studies received by this AE. Supplements Store Access Control Rules specified on Device level."
     ":doc:`upsOnStore` (s)",object,"UPS on Store Rules applied to DICOM objects received by this AE. Supplements UPS on Store Rules specified on Device level."
     ":doc:`upsOnUPSCompleted` (s)",object,"UPS on UPS Completed Rules applied to UPS managed by this AE. Supplements UPS on UPS Completed Rules specified on Device level."
+
+.. toctree::
+
+    exportRule
+    exportPriorsRule
+    rsForwardRule
+    archiveCompressionRule
+    archiveAttributeCoercion
+    studyRetentionPolicy
+    storeAccessControlIDRule
+    upsOnStore
+    upsOnUPSCompleted
