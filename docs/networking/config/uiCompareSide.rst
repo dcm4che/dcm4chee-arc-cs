@@ -20,6 +20,12 @@ Compare Side
 
     (dcmuiCompareSideDescription)"
     "
+    .. _dcmuiCompareSideOrder:
+
+    :ref:`Order <dcmuiCompareSideOrder>`",integer,"Order of the Compare side Enumerated values: 0 or 1.
+
+    (dcmuiCompareSideOrder)"
+    "
     .. _dcmuiCompareSideCluster:
 
     :ref:`Cluster <dcmuiCompareSideCluster>`",string,"Select a Cluster

@@ -20,23 +20,17 @@ Configuration of Device URL to use beside the main UI URL
 
     (dcmuiDeviceClusterDescription)"
     "
-    .. _dcmuiDeviceClusterLoadBalancer:
-
-    :ref:`Load Balancer <dcmuiDeviceClusterLoadBalancer>`",string,"Select the Load Balancer
-
-    (dcmuiDeviceClusterLoadBalancer)"
-    "
-    .. _dcmuiDeviceClusterKeycloakServer:
-
-    :ref:`Keycloak Server <dcmuiDeviceClusterKeycloakServer>`",string,"If this cluster doesn't use the same Keycloak select the configured Keycloak
-
-    (dcmuiDeviceClusterKeycloakServer)"
-    "
     .. _dcmuiDeviceClusterDevices:
 
-    :ref:`Device(s) <dcmuiDeviceClusterDevices>`",string,"Add the name of the configured devices
+    :ref:`Web Application(s) <dcmuiDeviceClusterDevices>`",string,"Select configured WebApps to used to access the corresponding devices
 
     (dcmuiDeviceClusterDevices)"
+    "
+    .. _dcmuiClusterWebApp:
+
+    :ref:`Web Application <dcmuiClusterWebApp>`",string,"Web Application with the class QIDO-RS
+
+    (dcmuiClusterWebApp)"
     "
     .. _dcmuiDeviceClusterInstalled:
 

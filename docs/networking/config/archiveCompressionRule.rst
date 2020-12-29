@@ -16,13 +16,13 @@ Archive Compression rule
     "
     .. _dicomTransferSyntax:
 
-    :ref:`DICOM Transfer Syntax UID <dicomTransferSyntax>`",string,"A Transfer Syntax UID
+    :ref:`DICOM Transfer Syntax UID <dicomTransferSyntax>`",string,"Transfer Syntax to which received images shall be compressed
 
     (dicomTransferSyntax)"
     "
     .. _dcmRulePriority:
 
-    :ref:`Rule Priority <dcmRulePriority>`",integer,"Rule Priority
+    :ref:`Rule Priority <dcmRulePriority>`",integer,"If the condition of several Compression rules matches for a received image, the rule with the highest priority will get applied. If there are several matching rules with equal priority it is undefined which rule get applied.
 
     (dcmRulePriority)"
     "

@@ -44,11 +44,11 @@ UI Dashboard Configuration
 
     (dicomuiIgnoreParams)"
     "
-    .. _dcmuiCountAET:
+    .. _dcmuiCountWebApp:
 
-    :ref:`Count Aet <dcmuiCountAET>`",string,"Selected Aet will be used to get the count of studies in the dashboard
+    :ref:`Count Web App <dcmuiCountWebApp>`",string,"Selected Web App, It will be used to get the count of studies in the dashboard
 
-    (dcmuiCountAET)"
+    (dcmuiCountWebApp)"
     ":doc:`uiCompareSide` (s)",object,"Compare Sides"
     "
     .. _dicomuiDockerContainer:

@@ -14,17 +14,11 @@ Elasticsearch URL
 
     (dcmuiElasticsearchURLName)"
     "
-    .. _dcmuiElasticsearchURL:
+    .. _dcmuiElasticsearchWebApp:
 
-    :ref:`Elasticsearch URL <dcmuiElasticsearchURL>`",string,"Access URL of Elastic Search. E.g. http(s)://<elasticsearch-host>:<elasticsearch-port>
+    :ref:`Elasticsearch WebApp <dcmuiElasticsearchWebApp>`",string,"Access URL of Elastic Search. E.g. http(s)://<elasticsearch-host>:<elasticsearch-port>
 
-    (dcmuiElasticsearchURL)"
-    "
-    .. _dcmuiElasticsearchURLKeycloakServer:
-
-    :ref:`Keycloak Server <dcmuiElasticsearchURLKeycloakServer>`",string,"Select Keycloak Server from where to get the bearer token for accessing the Elasticsearch
-
-    (dcmuiElasticsearchURLKeycloakServer)"
+    (dcmuiElasticsearchWebApp)"
     "
     .. _dcmuiAuditEnterpriseSiteID:
 
