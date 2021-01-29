@@ -13,7 +13,7 @@ This message is emitted by the archive whenever :
 - HL7 messages (ADT/Order/ORU) accepted (= also not processed) or processed by archive
 - HL7 messages (ADT/Order/ORU) forwarded by archive to external HL7 receivers
 - Patient created / updated / merged / changePatientID on external archive
-- Patient record updated by `Supplement Issuer of PatientID<https://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/openapi.json#/PAM-RS/SupplementIssuerOfPatientID>`_ service.
+- Patient record updated by `Supplement Issuer of PatientID <https://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/openapi.json#/PAM-RS/SupplementIssuerOfPatientID>`_ service.
 - Patient record created / updated by `Change Patient associated to Study <https://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/openapi.json#/IOCM-RS/MoveStudyToPatient>`_ service.
 
 Message Structure
