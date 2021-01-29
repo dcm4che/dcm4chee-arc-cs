@@ -13,10 +13,12 @@ This message is emitted by the archive in following cases :
 - Invoking `WADO-RS <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/openapi.json#/WADO-RS>`_
   or `WADO URI <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/openapi.json#/WADO-URI>`_
   services
-- Objects of a study are stored to the archive by DICOM association / UI
+- Objects of a study are stored to the archive by DICOM C-STORE / `Web services<https://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/openapi.json#/STOW-RS>`_
 - Storage Commitment of objects of study by DICOM association / UI
 - Storage Verification of objects of study using UI / scheduler
 - XDSI Retrieve Imaging Document Set `RAD-69 <http://ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol3.pdf#page=185>`_ transaction.
+- `Import instances on Storage<https://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/openapi.json#/IMPORT-RS/ImportInstances>`_
+- `Study is re-imported<https://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/openapi.json#/IOCM-RS/ReimportStudy>`_
 
 Message Structure
 -----------------

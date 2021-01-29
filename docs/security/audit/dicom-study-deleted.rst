@@ -12,6 +12,7 @@ This message is emitted by the archive when :
 - Study is deleted by the scheduler or `permanently deleted <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/openapi.json#/IOCM-RS/DeleteStudy>`_
   using UI
 - Previous study is deleted on subsequent receive of objects having same SOP IUID but different Study/Series IUID
+- Study `deleted on reimport<https://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/openapi.json#/IOCM-RS/ReimportStudy>`_
 
 Message Structure
 -----------------
