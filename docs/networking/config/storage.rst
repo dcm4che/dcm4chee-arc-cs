@@ -122,6 +122,12 @@ Storage Descriptor
 
     (dcmExternalRetrieveAET)"
     "
+    .. _dcmExternalRetrieveInstanceAvailability:
+
+    :ref:`External Retrieve Instance Availability <dcmExternalRetrieveInstanceAvailability>`",string,"Updates instance availability on deletion of studies for instances available on external retrieve archive. Enumerated values: ONLINE, NEARLINE or OFFLINE.
+
+    (dcmExternalRetrieveInstanceAvailability)"
+    "
     .. _dcmExportStorageID:
 
     :ref:`Export Storage ID(s) <dcmExportStorageID>`",string,"Constrains deletion of Studies, additionally to configured deleter thresholds and/or deletion retention period constraints, from the Storage System to Studies whose objects are also accessible from the specified other storages.
