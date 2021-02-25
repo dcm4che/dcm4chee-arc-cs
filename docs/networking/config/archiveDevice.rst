@@ -1250,6 +1250,12 @@ DICOM Archive Device related information
 
     (hl7ImportReportMissingStudyIUIDPolicy)"
     "
+    .. _hl7ImportReportMissingStudyIUIDCFindSCP:
+
+    :ref:`HL7 Import Report Missing Study Instance UID C-FIND SCP <hl7ImportReportMissingStudyIUIDCFindSCP>`",string,"AE Title of external C-FIND SCP to query for missing Study Instance UID in incoming HL7 Import Report (ORU) messages by given Accession Number. May be overwritten by configured values for particular Archive HL7 Application.
+
+    (hl7ImportReportMissingStudyIUIDCFindSCP)"
+    "
     .. _hl7ReferredMergedPatientPolicy:
 
     :ref:`HL7 Referred Merged Patient Policy <hl7ReferredMergedPatientPolicy>`",string,"Specifies policy on incoming HL7 messages referring an already merged Patient. REJECT: reject any such HL7 message, IGNORE: ignore any such HL7 message, IGNORE_DUPLICATE_MERGE: Ignore only duplicate HL7 Merge messages, Reject any other such Message. May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: REJECT, IGNORE or IGNORE_DUPLICATE_MERGE.
