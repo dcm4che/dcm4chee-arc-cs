@@ -16,7 +16,7 @@ Elasticsearch URL
     "
     .. _dcmuiElasticsearchWebApp:
 
-    :ref:`Elasticsearch WebApp <dcmuiElasticsearchWebApp>`",string,"Access URL of Elastic Search. E.g. http(s)://<elasticsearch-host>:<elasticsearch-port>
+    :ref:`Elasticsearch WebApp <dcmuiElasticsearchWebApp>`",string,"Web Application that will be used te extract the Elasticsearch URL and access Elasticsearch
 
     (dcmuiElasticsearchWebApp)"
     "

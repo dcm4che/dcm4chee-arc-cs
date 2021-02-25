@@ -22,7 +22,7 @@ Configuration of Device URL to use beside the main UI URL
     "
     .. _dcmuiDeviceClusterDevices:
 
-    :ref:`Web Application(s) <dcmuiDeviceClusterDevices>`",string,"Select configured WebApps to used to access the corresponding devices
+    :ref:`Web Application for Devices(s) <dcmuiDeviceClusterDevices>`",string,"Select configured WebApps to used to access the corresponding devices
 
     (dcmuiDeviceClusterDevices)"
     "
