@@ -196,9 +196,15 @@ Message Structure
 Sample Message
 --------------
 
+Storage Verification triggered from UI
+
+.. code-block:: xml
+   :file: stgver-ui.xml
+
 C-GET
 
 .. code-block:: xml
+   :file: default-ae-characteristics.csv
 
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">

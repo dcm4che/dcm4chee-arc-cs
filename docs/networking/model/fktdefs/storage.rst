@@ -37,10 +37,10 @@ configured to only provide access to data and objects of studies, which associat
 of the *Access Control IDs* configured for that Query/Retrieve AE.
 
 If configured, the Storage AE will set the *Retention Period* of received studies according a configured
-*Study Retention Policy*. Individual series of a study may get a different *Rentention Period* than the whole study.
-If activated, studies - or individual series - will be deleted automatically after its *Rentention Period* expires.
+*Study Retention Policy*. Individual series of a study may get a different *Retention Period* than the whole study.
+If activated, studies - or individual series - will be deleted automatically after its *Retention Period* expires.
 On the other hand, |product| can be configured to prevent manual deletion of objects of studies which
-*Rentention Period* is not yet expired.
+*Retention Period* is not yet expired.
 
 The Storage AE can also be configured to act as a cache archive, which deletes least recent accessed studies
 according configured thresholds of the storage backend.
