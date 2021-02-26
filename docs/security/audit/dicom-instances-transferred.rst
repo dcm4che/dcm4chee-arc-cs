@@ -14,7 +14,8 @@ This message is emitted by the archive in following cases :
   or `WADO URI <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/openapi.json#/WADO-URI>`_
   services
 - Objects of a study are stored to the archive by DICOM C-STORE / `Web services <https://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/openapi.json#/STOW-RS>`_
-- Storage Commitment of objects of study by DICOM association / UI
+- Assume responsibility for reliable storage of received objects according IHE Transaction `Storage Commitment RAD-10 <https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf#page=177>`_
+- Verify reliable storage of received objects triggered by `Storage Verification RESTful services <https://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/openapi.json#/STGVER-RS>`_ - typically invoked by the Archive UI - or scheduler triggered periodical storage verification <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Storage-Verification>`_.
 - Storage Verification of objects of study using UI / scheduler
 - XDSI Retrieve Imaging Document Set `RAD-69 <http://ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol3.pdf#page=185>`_ transaction.
 - `Import instances on Storage <https://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/openapi.json#/IMPORT-RS/ImportInstances>`_
@@ -196,37 +197,397 @@ Message Structure
 Sample Message
 --------------
 
+Study stored using C-STORE
+
+.. code-block:: xml
+
+   <?xml version="1.0" encoding="UTF-8"?>
+   <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+      <EventIdentification EventActionCode="C" EventDateTime="2019-02-05T18:16:46+01:00" EventOutcomeIndicator="0">
+         <EventID csd-code="110104" codeSystemName="DCM" originalText="DICOM Instances Transferred" />
+      </EventIdentification>
+      <ActiveParticipant UserID="DCM4CHEE" AlternativeUserID="5726" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+         <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID" />
+         <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title" />
+      </ActiveParticipant>
+      <ActiveParticipant UserID="STORESCU" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+         <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID" />
+         <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title" />
+      </ActiveParticipant>
+      <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+         <AuditSourceTypeCode csd-code="4" />
+      </AuditSourceIdentification>
+      <ParticipantObjectIdentification ParticipantObjectID="1.113654.1.2001.30" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3" ParticipantObjectDataLifeCycle="1">
+         <ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM" />
+         <ParticipantObjectDetail type="StudyDate" value="MjAwMTA0MzA=" />
+         <ParticipantObjectDescription>
+            <Accession Number="2001C30" />
+            <SOPClass UID="1.2.840.10008.5.1.4.1.1.88.11" NumberOfInstances="1" />
+         </ParticipantObjectDescription>
+      </ParticipantObjectIdentification>
+      <ParticipantObjectIdentification ParticipantObjectID="CR3" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+         <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881" />
+         <ParticipantObjectName>CRTHREE^PAUL</ParticipantObjectName>
+      </ParticipantObjectIdentification>
+   </AuditMessage>
+
+Study stored using STOW-RS
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+       <EventIdentification EventActionCode="C" EventDateTime="2019-02-05T18:20:00+01:00" EventOutcomeIndicator="0">
+          <EventID csd-code="110104" codeSystemName="DCM" originalText="DICOM Instances Transferred" />
+       </EventIdentification>
+       <ActiveParticipant UserID="/dcm4chee-arc/aets/DCM4CHEE/rs/studies" AlternativeUserID="5726" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+          <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID" />
+          <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI" />
+       </ActiveParticipant>
+       <ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+          <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID" />
+          <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID" />
+       </ActiveParticipant>
+       <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+          <AuditSourceTypeCode csd-code="4" />
+       </AuditSourceIdentification>
+       <ParticipantObjectIdentification ParticipantObjectID="1.2.276.0.24.438.38523304.4.0.1" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3" ParticipantObjectDataLifeCycle="1">
+          <ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM" />
+          <ParticipantObjectDetail type="StudyDate" value="MjAxODEyMjg=" />
+          <ParticipantObjectDescription>
+             <MPPS UID="1.3.46.670589.30.1.6.1.963335255131.1545983251893.1" />
+             <Accession Number="38523304" />
+             <SOPClass UID="1.2.840.10008.5.1.4.1.1.1" NumberOfInstances="1" />
+          </ParticipantObjectDescription>
+       </ParticipantObjectIdentification>
+       <ParticipantObjectIdentification ParticipantObjectID="4785133^^^UKL" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+          <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881" />
+          <ParticipantObjectName>Fengler^Klaus</ParticipantObjectName>
+       </ParticipantObjectIdentification>
+    </AuditMessage>
+
+Reports stored using HL7 ORU^R01
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+       <EventIdentification EventActionCode="C" EventDateTime="2019-02-15T17:05:47+01:00" EventOutcomeIndicator="0">
+          <EventID csd-code="110104" codeSystemName="DCM" originalText="DICOM Instances Transferred" />
+       </EventIdentification>
+       <ActiveParticipant UserID="DCM4CHEE" AlternativeUserID="27673" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+          <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID" />
+          <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title" />
+       </ActiveParticipant>
+       <ActiveParticipant UserID="MESA_RPT_MGR|EAST_RADIOLOGY" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+          <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID" />
+          <UserIDTypeCode csd-code="HL7APP" codeSystemName="99DCM4CHEE" originalText="Application and Facility" />
+       </ActiveParticipant>
+       <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+          <AuditSourceTypeCode csd-code="4" />
+       </AuditSourceIdentification>
+       <ParticipantObjectIdentification ParticipantObjectID="2.25.185448987116626056864758237726880870790" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3" ParticipantObjectDataLifeCycle="1">
+          <ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM" />
+          <ParticipantObjectDescription>
+             <Accession Number="ACC1" />
+             <SOPClass UID="1.2.840.10008.5.1.4.1.1.88.11" NumberOfInstances="1" />
+          </ParticipantObjectDescription>
+       </ParticipantObjectIdentification>
+       <ParticipantObjectIdentification ParticipantObjectID="P3^^^MINIRIS" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+          <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881" />
+          <ParticipantObjectName>Miller^John</ParticipantObjectName>
+       </ParticipantObjectIdentification>
+    </AuditMessage>
+
+Export study triggered from UI
+
+.. code-block:: xml
+
+   <?xml version="1.0" encoding="UTF-8"?>
+   <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+      <EventIdentification EventActionCode="R" EventDateTime="2019-02-08T13:49:24+01:00" EventOutcomeIndicator="0">
+         <EventID csd-code="110104" codeSystemName="DCM" originalText="DICOM Instances Transferred" />
+      </EventIdentification>
+      <ActiveParticipant UserID="STORESCP" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+         <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID" />
+         <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title" />
+      </ActiveParticipant>
+      <ActiveParticipant UserID="/dcm4chee-arc/aets/DCM4CHEE/rs/studies/1.2.276.0.24.438.38523304.4.0.1/export/dicom:STORESCP" AlternativeUserID="9694" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+         <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID" />
+         <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI" />
+      </ActiveParticipant>
+      <ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+         <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID" />
+      </ActiveParticipant>
+      <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+         <AuditSourceTypeCode csd-code="4" />
+      </AuditSourceIdentification>
+      <ParticipantObjectIdentification ParticipantObjectID="1.2.276.0.24.438.38523304.4.0.1" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+         <ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM" />
+         <ParticipantObjectDetail type="StudyDate" value="Mzg1MjMzMDQ=" />
+         <ParticipantObjectDescription>
+            <Accession Number="38523304" />
+            <SOPClass UID="1.2.840.10008.5.1.4.1.1.1" NumberOfInstances="1" />
+         </ParticipantObjectDescription>
+      </ParticipantObjectIdentification>
+      <ParticipantObjectIdentification ParticipantObjectID="4785133^^^UKL" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+         <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881" />
+         <ParticipantObjectName>Fengler^Klaus</ParticipantObjectName>
+      </ParticipantObjectIdentification>
+   </AuditMessage>
+
+Export study triggered by scheduler
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+       <EventIdentification EventActionCode="R" EventDateTime="2019-02-08T15:14:37+01:00" EventOutcomeIndicator="0">
+          <EventID csd-code="110104" codeSystemName="DCM" originalText="DICOM Instances Transferred" />
+       </EventIdentification>
+       <ActiveParticipant UserID="STORESCP" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+          <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID" />
+          <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title" />
+       </ActiveParticipant>
+       <ActiveParticipant UserID="DCM4CHEE" AlternativeUserID="8368" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+          <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID" />
+          <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title" />
+       </ActiveParticipant>
+       <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+          <AuditSourceTypeCode csd-code="4" />
+       </AuditSourceIdentification>
+       <ParticipantObjectIdentification ParticipantObjectID="1.2.276.0.24.438.38523304.4.0.1" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+          <ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM" />
+          <ParticipantObjectDetail type="StudyDate" value="Mzg1MjMzMDQ=" />
+          <ParticipantObjectDescription>
+             <Accession Number="38523304" />
+             <SOPClass UID="1.2.840.10008.5.1.4.1.1.1" NumberOfInstances="1" />
+          </ParticipantObjectDescription>
+       </ParticipantObjectIdentification>
+       <ParticipantObjectIdentification ParticipantObjectID="4785133^^^UKL" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+          <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881" />
+          <ParticipantObjectName>Fengler^Klaus</ParticipantObjectName>
+       </ParticipantObjectIdentification>
+    </AuditMessage>
+
 Storage Verification triggered from UI
 
 .. code-block:: xml
-   :file: stgver-ui.xml
 
-C-GET
+   <?xml version="1.0" encoding="UTF-8"?>
+   <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+       <EventIdentification EventActionCode="R" EventDateTime="2019-02-06T17:10:14+01:00" EventOutcomeIndicator="0">
+           <EventID csd-code="110104" codeSystemName="DCM" originalText="DICOM Instances Transferred" />
+       </EventIdentification>
+       <ActiveParticipant UserID="/dcm4chee-arc/aets/DCM4CHEE/stgver/studies" AlternativeUserID="16541" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+           <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID" />
+           <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI" />
+       </ActiveParticipant>
+       <ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+           <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID" />
+           <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID" />
+       </ActiveParticipant>
+       <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+           <AuditSourceTypeCode csd-code="4" />
+       </AuditSourceIdentification>
+       <ParticipantObjectIdentification ParticipantObjectID="1.113654.1.2001.30" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3" ParticipantObjectDataLifeCycle="4">
+           <ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM" />
+           <ParticipantObjectDescription>
+               <SOPClass UID="1.2.840.10008.5.1.4.1.1.88.11" NumberOfInstances="1" />
+           </ParticipantObjectDescription>
+       </ParticipantObjectIdentification>
+       <ParticipantObjectIdentification ParticipantObjectID="CR3" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+           <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881" />
+           <ParticipantObjectName>CRTHREE^PAUL</ParticipantObjectName>
+       </ParticipantObjectIdentification>
+   </AuditMessage>
+
+Storage Verification triggered by scheduler
 
 .. code-block:: xml
-   :file: default-ae-characteristics.csv
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+       <EventIdentification EventActionCode="R" EventDateTime="2019-02-15T13:04:52+01:00" EventOutcomeIndicator="0">
+          <EventID csd-code="110104" codeSystemName="DCM" originalText="DICOM Instances Transferred" />
+       </EventIdentification>
+       <ActiveParticipant UserID="DCM4CHEE" AlternativeUserID="27673" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+          <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID" />
+          <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title" />
+       </ActiveParticipant>
+       <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+          <AuditSourceTypeCode csd-code="4" />
+       </AuditSourceIdentification>
+       <ParticipantObjectIdentification ParticipantObjectID="1.2.4.0.13.1.432252867.1552647.1" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3" ParticipantObjectDataLifeCycle="4">
+          <ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM" />
+          <ParticipantObjectDescription>
+             <SOPClass UID="1.2.840.10008.5.1.4.1.1.1" NumberOfInstances="1" />
+          </ParticipantObjectDescription>
+       </ParticipantObjectIdentification>
+       <ParticipantObjectIdentification ParticipantObjectID="M4001^^^ADT1" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+          <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881" />
+          <ParticipantObjectName>Fengler^Klaus</ParticipantObjectName>
+       </ParticipantObjectIdentification>
+    </AuditMessage>
+
+Storage Commitment triggered over DICOM association
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+       <EventIdentification EventActionCode="R" EventDateTime="2019-02-06T17:20:37+01:00" EventOutcomeIndicator="0">
+          <EventID csd-code="110104" codeSystemName="DCM" originalText="DICOM Instances Transferred" />
+       </EventIdentification>
+       <ActiveParticipant UserID="DCM4CHEE" AlternativeUserID="16541" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+          <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID" />
+          <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title" />
+       </ActiveParticipant>
+       <ActiveParticipant UserID="STGCMTSCU" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+          <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID" />
+          <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title" />
+       </ActiveParticipant>
+       <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+          <AuditSourceTypeCode csd-code="4" />
+       </AuditSourceIdentification>
+       <ParticipantObjectIdentification ParticipantObjectID="2.16.376.1.1.511752826.1.2.3390529.6263391" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3" ParticipantObjectDataLifeCycle="4">
+          <ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM" />
+          <ParticipantObjectDescription>
+             <SOPClass UID="1.2.840.10008.5.1.4.1.1.7" NumberOfInstances="5" />
+             <SOPClass UID="1.2.840.10008.5.1.4.1.1.2" NumberOfInstances="4" />
+          </ParticipantObjectDescription>
+       </ParticipantObjectIdentification>
+       <ParticipantObjectIdentification ParticipantObjectID="ALGO00003" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+          <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881" />
+          <ParticipantObjectName>PRITCHET^LAURIE</ParticipantObjectName>
+       </ParticipantObjectIdentification>
+    </AuditMessage>
+
+WADO-URI Retrieve Instance
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+       <EventIdentification EventActionCode="R" EventDateTime="2019-02-06T17:04:33+01:00" EventOutcomeIndicator="0">
+          <EventID csd-code="110104" codeSystemName="DCM" originalText="DICOM Instances Transferred" />
+       </EventIdentification>
+       <ActiveParticipant UserID="/dcm4chee-arc/aets/DCM4CHEE/wado" AlternativeUserID="16541" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+          <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID" />
+          <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI" />
+       </ActiveParticipant>
+       <ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+          <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID" />
+          <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID" />
+       </ActiveParticipant>
+       <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+          <AuditSourceTypeCode csd-code="4" />
+       </AuditSourceIdentification>
+       <ParticipantObjectIdentification ParticipantObjectID="1.2.840.113674.1118.54.200" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+          <ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM" />
+          <ParticipantObjectDetail type="StudyDate" value="MTk5NTA3MjU=" />
+          <ParticipantObjectDescription>
+             <Accession Number="GE0002" />
+             <SOPClass UID="1.2.840.10008.5.1.4.1.1.4" NumberOfInstances="1" />
+          </ParticipantObjectDescription>
+       </ParticipantObjectIdentification>
+       <ParticipantObjectIdentification ParticipantObjectID="GE1118" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+          <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881" />
+          <ParticipantObjectName>BUXTON^STEVEN</ParticipantObjectName>
+       </ParticipantObjectIdentification>
+    </AuditMessage>
+
+WADO-RS Retrieve Study
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+       <EventIdentification EventActionCode="R" EventDateTime="2019-02-08T13:54:34+01:00" EventOutcomeIndicator="0">
+          <EventID csd-code="110104" codeSystemName="DCM" originalText="DICOM Instances Transferred" />
+       </EventIdentification>
+       <ActiveParticipant UserID="/dcm4chee-arc/aets/DCM4CHEE/rs/studies/1.2.276.0.24.438.38523304.4.0.1" AlternativeUserID="9694" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+          <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID" />
+          <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI" />
+       </ActiveParticipant>
+       <ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+          <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID" />
+          <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID" />
+       </ActiveParticipant>
+       <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+          <AuditSourceTypeCode csd-code="4" />
+       </AuditSourceIdentification>
+       <ParticipantObjectIdentification ParticipantObjectID="1.2.276.0.24.438.38523304.4.0.1" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+          <ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM" />
+          <ParticipantObjectDetail type="StudyDate" value="Mzg1MjMzMDQ=" />
+          <ParticipantObjectDescription>
+             <Accession Number="38523304" />
+             <SOPClass UID="1.2.840.10008.5.1.4.1.1.1" NumberOfInstances="1" />
+          </ParticipantObjectDescription>
+       </ParticipantObjectIdentification>
+       <ParticipantObjectIdentification ParticipantObjectID="4785133^^^UKL" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+          <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881" />
+          <ParticipantObjectName>Fengler^Klaus</ParticipantObjectName>
+       </ParticipantObjectIdentification>
+    </AuditMessage>
+
+Retrieve study triggered using C-MOVE
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+       <EventIdentification EventActionCode="R" EventDateTime="2019-02-08T13:43:07+01:00" EventOutcomeIndicator="0">
+          <EventID csd-code="110104" codeSystemName="DCM" originalText="DICOM Instances Transferred" />
+       </EventIdentification>
+       <ActiveParticipant UserID="DCM4CHEE" AlternativeUserID="9694" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+          <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID" />
+          <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title" />
+       </ActiveParticipant>
+       <ActiveParticipant UserID="STORESCP" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+          <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID" />
+          <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title" />
+       </ActiveParticipant>
+       <ActiveParticipant UserID="MOVESCU" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+          <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title" />
+       </ActiveParticipant>
+       <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+          <AuditSourceTypeCode csd-code="4" />
+       </AuditSourceIdentification>
+       <ParticipantObjectIdentification ParticipantObjectID="1.2.276.0.24.438.38523304.4.0.1" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+          <ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM" />
+          <ParticipantObjectDetail type="StudyDate" value="Mzg1MjMzMDQ=" />
+          <ParticipantObjectDescription>
+             <Accession Number="38523304" />
+             <SOPClass UID="1.2.840.10008.5.1.4.1.1.1" NumberOfInstances="1" />
+          </ParticipantObjectDescription>
+       </ParticipantObjectIdentification>
+       <ParticipantObjectIdentification ParticipantObjectID="4785133^^^UKL" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+          <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881" />
+          <ParticipantObjectName>Fengler^Klaus</ParticipantObjectName>
+       </ParticipantObjectIdentification>
+    </AuditMessage>
+
+Retrieve study triggered using C-GET
+
+.. code-block:: xml
 
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-
         <EventIdentification EventActionCode="E" EventDateTime="2017-07-10T12:22:29.457+02:00" EventOutcomeIndicator="0">
             <EventID csd-code="110104" codeSystemName="DCM" originalText="DICOM Instances Transferred"/>
         </EventIdentification>
-
         <ActiveParticipant UserID="DCM4CHEE" UserTypeCode="2" AlternativeUserID="60928" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
             <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source"/>
             <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
         </ActiveParticipant>
-
         <ActiveParticipant UserID="GETSCU" UserTypeCode="2" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
             <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination"/>
             <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
         </ActiveParticipant>
-
         <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
             <AuditSourceTypeCode csd-code="4"/>
         </AuditSourceIdentification>
-
         <ParticipantObjectIdentification ParticipantObjectID="1.3.12.2.1107.5.2.33.37113.30000008060311320917100000013" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
             <ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM"/>
             <ParticipantObjectDetail type="StudyDate" value="MjAwODA3MTY="/>
@@ -235,12 +596,10 @@ C-GET
                 <SOPClass UID="1.2.840.10008.5.1.4.1.1.4" NumberOfInstances="2"/>
             </ParticipantObjectDescription>
         </ParticipantObjectIdentification>
-
         <ParticipantObjectIdentification ParticipantObjectID="P5^^^ISSUER" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
             <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
             <ParticipantObjectName>TEST^Name</ParticipantObjectName>
         </ParticipantObjectIdentification>
-
     </AuditMessage>
 
 
@@ -250,29 +609,23 @@ IMPAX Reports Import Service
 
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-
         <EventIdentification EventActionCode="C" EventDateTime="2018-10-22T12:51:49.332+02:00" EventOutcomeIndicator="0">
             <EventID csd-code="110104" codeSystemName="DCM" originalText="DICOM Instances Transferred"/>
         </EventIdentification>
-
         <ActiveParticipant UserID="testuser" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
             <UserIDTypeCode csd-code="113871" codeSystemName="DCM" originalText="Person"/>
         </ActiveParticipant>
-
         <ActiveParticipant UserID="https://aps1tln.pacs.ee/AgfaHC.Connectivity.Web.Services/ReportServiceCM.asmx" UserTypeCode="1" UserIsRequestor="true" NetworkAccessPointID="agfa-host" NetworkAccessPointTypeCode="1">
             <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source"/>
             <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
         </ActiveParticipant>
-
         <ActiveParticipant UserID="/dcm4chee-arc/aets/DCM4CHEE/rs/studies/1.113654.1.2001.30/impax/reports" UserTypeCode="2" AlternativeUserID="5373" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
             <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination"/>
             <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
         </ActiveParticipant>
-
         <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
             <AuditSourceTypeCode csd-code="4"/>
         </AuditSourceIdentification>
-
         <ParticipantObjectIdentification ParticipantObjectID="1.113654.1.2001.30" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3" ParticipantObjectDataLifeCycle="1">
             <ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM"/>
             <ParticipantObjectDetail type="StudyDate" value="MjAwMTA0MzA="/>
@@ -281,10 +634,42 @@ IMPAX Reports Import Service
                 <SOPClass UID="1.2.840.10008.5.1.4.1.1.88.11" NumberOfInstances="1"/>
             </ParticipantObjectDescription>
         </ParticipantObjectIdentification>
-
         <ParticipantObjectIdentification ParticipantObjectID="CR3^^^SiteA" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
             <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
             <ParticipantObjectName>CRTHREE^PAUL</ParticipantObjectName>
         </ParticipantObjectIdentification>
+    </AuditMessage>
 
+XDSI Retrieve Imaging Document Set RAD-69 transaction
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+       <EventIdentification EventActionCode="R" EventDateTime="2019-02-08T15:06:59+01:00" EventOutcomeIndicator="0">
+          <EventID csd-code="110104" codeSystemName="DCM" originalText="DICOM Instances Transferred" />
+       </EventIdentification>
+       <ActiveParticipant UserID="/dcm4chee-arc/xdsi/ImagingDocumentSource" AlternativeUserID="8368" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+          <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID" />
+          <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI" />
+       </ActiveParticipant>
+       <ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+          <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID" />
+          <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID" />
+       </ActiveParticipant>
+       <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+          <AuditSourceTypeCode csd-code="4" />
+       </AuditSourceIdentification>
+       <ParticipantObjectIdentification ParticipantObjectID="1.2.276.0.24.438.38523304.4.0.1" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+          <ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM" />
+          <ParticipantObjectDetail type="StudyDate" value="Mzg1MjMzMDQ=" />
+          <ParticipantObjectDescription>
+             <Accession Number="38523304" />
+             <SOPClass UID="1.2.840.10008.5.1.4.1.1.1" NumberOfInstances="1" />
+          </ParticipantObjectDescription>
+       </ParticipantObjectIdentification>
+       <ParticipantObjectIdentification ParticipantObjectID="4785133^^^UKL" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+          <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881" />
+          <ParticipantObjectName>Fengler^Klaus</ParticipantObjectName>
+       </ParticipantObjectIdentification>
     </AuditMessage>
