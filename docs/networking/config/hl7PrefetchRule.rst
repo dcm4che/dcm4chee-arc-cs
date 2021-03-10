@@ -20,6 +20,12 @@ HL7 Prefetch Rule
 
     (dcmQueueName)"
     "
+    .. _dcmPrefetchPriority:
+
+    :ref:`Prefetch Priority <dcmPrefetchPriority>`",integer,"JMS Priority Level for processing the retrieve tasks from 0 (lowest) to 9 (highest).
+
+    (dcmPrefetchPriority)"
+    "
     .. _dicomAETitle:
 
     :ref:`Archive AE title <dicomAETitle>`",string,"AE Title of Archive Application Entity used for retrieving selected Studies from Prefetch C-Move SCP.
