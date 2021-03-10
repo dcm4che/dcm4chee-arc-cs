@@ -22,7 +22,7 @@ HL7 Prefetch Rule
     "
     .. _dcmPrefetchPriority:
 
-    :ref:`Prefetch Priority <dcmPrefetchPriority>`",integer,"JMS Priority Level for processing the retrieve tasks from 0 (lowest) to 9 (highest).
+    :ref:`Prefetch Priority <dcmPrefetchPriority>`",integer,"JMS Priority Level of scheduled retrieve tasks from 0 (lowest) to 9 (highest).
 
     (dcmPrefetchPriority)"
     "
