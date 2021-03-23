@@ -74,6 +74,12 @@ HL7 Prefetch Rule
 
     (dcmIssuerOfPatientID)"
     "
+    .. _dcmPrefetchForIssuerOfPatientID:
+
+    :ref:`Prefetch for Assigning Authority of Patient ID <dcmPrefetchForIssuerOfPatientID>`",string,"Assigning Authority of Patient ID in received HL7 message used to search qualified patient identifier in list of identifiers in PID-3. Studies matching the specified Entity Selector of this qualified patient identifier shall be queried. If absent, by default the first qualified patient identifier in PID-3 shall be used. Format: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].
+
+    (dcmPrefetchForIssuerOfPatientID)"
+    "
     .. _dcmDuration:
 
     :ref:`Suppress Duplicate Retrieve Interval <dcmDuration>`",string,"Suppress Retrieve of Studies already retrieved not earlier than the specified interval to avoid duplicate retrieves.
