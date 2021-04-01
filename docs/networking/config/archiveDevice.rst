@@ -14,6 +14,12 @@ DICOM Archive Device related information
 
     (dcmFuzzyAlgorithmClass)"
     "
+    .. _dcmStoreImplementationVersionName:
+
+    :ref:`Store Implementation Version Name <dcmStoreImplementationVersionName>`",boolean,"Indicates to include Implementation Version Name (0002,0012) in the File Meta Information of stored DICOM objects.
+
+    (dcmStoreImplementationVersionName)"
+    "
     .. _dcmBulkDataDescriptorID:
 
     :ref:`Bulk Data Descriptor ID <dcmBulkDataDescriptorID>`",string,"ID of Bulk Data Descriptor applied by all services providing Metadata of archived instances. If absent, only Attributes specified by the Composite Instance Retrieve Without Bulk Data Service Class are treated as Bulk Data. May be overwritten by configured values for particular Archive Network AEs.
