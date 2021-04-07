@@ -14,6 +14,7 @@ This message is emitted by the archive in following cases :
 - Update study attributes using UI.
 - Previous series/instances of a study are deleted on subsequent receive of objects having same SOP IUID but different Series IUID
 - Scheduler triggered study size & query attributes calculation
+- Retrieve of objects from fallback C-MOVE SCP
 
 Message Structure
 -----------------
@@ -356,5 +357,33 @@ Study series size and query attributes calculated by scheduler
        </ParticipantObjectIdentification>
        <ParticipantObjectIdentification ParticipantObjectID="060750-1187^^^PSHP" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
           <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881" />
+       </ParticipantObjectIdentification>
+    </AuditMessage>
+
+Retrieve of objects from fallback C-MOVE SCP (only Fallback C-MOVE SCP is configured)
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+       <EventIdentification EventActionCode="R" EventDateTime="2021-04-07T12:23:11.084+02:00" EventOutcomeIndicator="0">
+          <EventID csd-code="110103" codeSystemName="DCM" originalText="DICOM Instances Accessed" />
+       </EventIdentification>
+       <ActiveParticipant UserID="MOVESCU" AlternativeUserID="129898" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+          <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title" />
+       </ActiveParticipant>
+       <ActiveParticipant UserID="DCM4CHEE2" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+          <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID" />
+          <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title" />
+       </ActiveParticipant>
+       <ActiveParticipant UserID="STORESCP" UserIsRequestor="false" UserTypeCode="2">
+          <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID" />
+          <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title" />
+       </ActiveParticipant>
+       <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+          <AuditSourceTypeCode csd-code="4" />
+       </AuditSourceIdentification>
+       <ParticipantObjectIdentification ParticipantObjectID="1.2.840.113674.514.212.200" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+          <ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM" />
        </ParticipantObjectIdentification>
     </AuditMessage>
