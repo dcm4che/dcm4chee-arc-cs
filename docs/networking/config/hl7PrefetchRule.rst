@@ -50,6 +50,12 @@ HL7 Prefetch Rule
 
     (dcmPrefetchCStoreSCP)"
     "
+    .. _dicomDeviceName:
+
+    :ref:`Prefetch Device Name <dicomDeviceName>`",string,"Specifies Device on which the Retrieve Task(s) shall be scheduled. If not specified, the Retrieve Task(s) is/are scheduled on the Device which received the HL7 messages.
+
+    (dicomDeviceName)"
+    "
     .. _dcmProperty:
 
     :ref:`Conditions(s) <dcmProperty>`",string,"Conditions in format {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Example: MSH-4=FORWARD or MSH-9=ORM\^O01 or PID-3[.3]=PIDIssuer or PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType
@@ -86,8 +92,20 @@ HL7 Prefetch Rule
 
     (dcmDuration)"
     "
+    .. _dcmPrefetchDateTimeField:
+
+    :ref:`Prefetch Date Time Field <dcmPrefetchDateTimeField>`",string,"Delay retrieve of selected Studies to time from referred HL7 TS field in format {SEG}-{Seq#}[.{Comp#}]. Example: TQ1-7 or SCH-11.4. Schedule retrieve of selected Studies immediate if absent.
+
+    (dcmPrefetchDateTimeField)"
+    "
+    .. _dcmPrefetchInAdvance:
+
+    :ref:`Prefetch In Advance <dcmPrefetchInAdvance>`",string,"Schedule retrieve of selected Studies in advance to the time from configured dcmPrefetchDateTimeField with given time span in ISO-8601 duration format PnDTnHnMn.nS. Not effective, if dcmPrefetchDateTimeField is absent.
+
+    (dcmPrefetchInAdvance)"
+    "
     .. _dcmSchedule:
 
-    :ref:`Prefetch Schedule(s) <dcmSchedule>`",string,"Delay prefetch to specified time periods. If no Prefetch Schedule is specified, queue a Prefetch Task for the selected Studies of the Patient immediately. Format: 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)
+    :ref:`Prefetch Schedule(s) <dcmSchedule>`",string,"Delay prefetch to specified time periods in addition to configured Prefetch Date Time field. If no Prefetch Schedule is specified, queue a Prefetch Task for the selected Studies of the Patient based on configured Prefetch Date Time field. Format: 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)
 
     (dcmSchedule)"
