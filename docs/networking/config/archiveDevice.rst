@@ -320,6 +320,12 @@ DICOM Archive Device related information
 
     (dcmIanDestination)"
     "
+    .. _dcmIANWebApplication:
+
+    :ref:`IAN Web Application(s) <dcmIANWebApplication>`",string,"IAN-RS Web Application Destination to send IAN N-CREATE attributes. May be overwritten by configured values for particular Archive Network AEs.
+
+    (dcmIANWebApplication)"
+    "
     .. _dcmIanDelay:
 
     :ref:`IAN Delay <dcmIanDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMnS after which an IAN for a received study is sent to configured IAN destinations. If absent, IANs are triggered by received MPPS. May be overwritten by configured values for particular Archive Network AEs.
