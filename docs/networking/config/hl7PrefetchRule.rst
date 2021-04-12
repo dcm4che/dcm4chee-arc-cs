@@ -50,6 +50,12 @@ HL7 Prefetch Rule
 
     (dcmPrefetchCStoreSCP)"
     "
+    .. _dcmDestinationCFindSCP:
+
+    :ref:`Destination C-FIND SCP <dcmDestinationCFindSCP>`",string,"Suppress retrieve of selected Studies from Prefetch C-Move SCP which are (already) available at specified Destination C-FIND SCP with equal or more Number of Study Related Instances as returned by Prefetch C-FIND SCP. Retrieve all selected Studies if absent.
+
+    (dcmDestinationCFindSCP)"
+    "
     .. _dicomDeviceName:
 
     :ref:`Prefetch Device Name <dicomDeviceName>`",string,"Specifies Device on which the Retrieve Task(s) shall be scheduled. If not specified, the Retrieve Task(s) is/are scheduled on the Device which received the HL7 messages.
