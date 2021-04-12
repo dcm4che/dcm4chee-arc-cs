@@ -206,12 +206,6 @@ DICOM Archive Network AE related information
 
     (dcmIanDestination)"
     "
-    .. _dcmIANWebApplication:
-
-    :ref:`IAN Web Application(s) <dcmIANWebApplication>`",string,"IAN-RS Web Application Destination to send IAN N-CREATE attributes. Overwrites value specified on Device level.
-
-    (dcmIANWebApplication)"
-    "
     .. _dcmIanDelay:
 
     :ref:`IAN Delay <dcmIanDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which an IAN for a received study is sent to configured IAN destinations. Overwrites value specified on Device level.
@@ -598,15 +592,3 @@ DICOM Archive Network AE related information
     ":doc:`storeAccessControlIDRule` (s)",object,"Store Access Control Rules applied to Studies received by this AE. Supplements Store Access Control Rules specified on Device level."
     ":doc:`upsOnStore` (s)",object,"UPS on Store Rules applied to DICOM objects received by this AE. Supplements UPS on Store Rules specified on Device level."
     ":doc:`upsOnUPSCompleted` (s)",object,"UPS on UPS Completed Rules applied to UPS managed by this AE. Supplements UPS on UPS Completed Rules specified on Device level."
-
-.. toctree::
-
-    exportRule
-    exportPriorsRule
-    rsForwardRule
-    archiveCompressionRule
-    archiveAttributeCoercion
-    studyRetentionPolicy
-    storeAccessControlIDRule
-    upsOnStore
-    upsOnUPSCompleted
