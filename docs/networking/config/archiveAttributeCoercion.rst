@@ -80,6 +80,12 @@ Archive Attribute Coercion of received/sent DIMSE
 
     (dcmMergeMWLTemplateURI)"
     "
+    .. _dcmMergeMWLSCP:
+
+    :ref:`Merge MWL SCP <dcmMergeMWLSCP>`",string,"AE Title of external MWL SCP to lookup MWL Item used to coerce request attributes of received objects.
+
+    (dcmMergeMWLSCP)"
+    "
     .. _dcmLeadingCFindSCP:
 
     :ref:`Leading C-FIND SCP <dcmLeadingCFindSCP>`",string,"AE Title of external C-FIND SCP for Attribute Coercion with Patient and Study attributes fetched from this AE. If no particular Attribute Set is specified for the C-FIND SCP, all Attributes of the configured Patient and Study Attribute Filter will be fetched.
