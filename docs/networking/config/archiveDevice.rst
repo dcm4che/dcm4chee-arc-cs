@@ -1357,6 +1357,12 @@ DICOM Archive Device related information
     :ref:`Assigning Authority of Patient ID for Audit <dcmAuditAssigningAuthorityOfPatientID>`",string,"Assigning Authority of Patient ID in received HL7 message used to search qualified patient identifier in list of identifiers in PID-3. This qualified patient identifier shall be used in the patient details participant object. If absent, by default the first qualified patient identifier in PID-3 shall be used. If none of the qualified patient identifiers in the list match with the configured issuer, archive server log shall contain a log INFO message and by default the first qualified patient identifier in PID-3 shall be used. Format: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].
 
     (dcmAuditAssigningAuthorityOfPatientID)"
+    "
+    .. _dcmWadoIgnorePresentationLUTShape:
+
+    :ref:`Wado Ignore Presentation LUT Shape <dcmWadoIgnorePresentationLUTShape>`",boolean,"Indicates to ignore (2050,0020) Presentation LUT Shape, but prioritize value of (0028,0004) Photometric Interpretation to determine if minimum sample value is intended to be displayed as white (=MONCHROME1) or as black (=MONCHROME2) on retrieve of rendered DICOM images by WADO-RS or WADO-URI services. May be overwritten by configured values for particular Archive Network AEs.
+
+    (dcmWadoIgnorePresentationLUTShape)"
     ":doc:`attributeFilter` (s)",object,"Specifies Attributes stored in the database"
     ":doc:`attributeSet` (s)",object,"Named Attribute Set for Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests."
     ":doc:`bulkData` (s)",object,"Specifies Bulk Data Descriptors applied by services providing Metadata of archived instances."
