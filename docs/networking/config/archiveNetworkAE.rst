@@ -182,6 +182,12 @@ DICOM Archive Network AE related information
 
     (dcmWadoZIPEntryNameFormat)"
     "
+    .. _dcmWadoIgnorePresentationLUTShape:
+
+    :ref:`Wado Ignore Presentation LUT Shape <dcmWadoIgnorePresentationLUTShape>`",boolean,"Indicates to ignore (2050,0020) Presentation LUT Shape, but prioritize value of (0028,0004) Photometric Interpretation to determine if minimum sample value is intended to be displayed as white (=MONCHROME1) or as black (=MONCHROME2) on retrieve of rendered DICOM images by WADO-RS or WADO-URI services. Overwrites value specified on Device level.
+
+    (dcmWadoIgnorePresentationLUTShape)"
+    "
     .. _dcmQueryMaxNumberOfResults:
 
     :ref:`Query Max Number Of Results <dcmQueryMaxNumberOfResults>`",integer,"Maximal number of return results by C-FIND SCP. If the number of matches extends the limit, the C-FIND request will be refused. 0 = no limitation. Overwrites value specified on Device level.
@@ -584,11 +590,11 @@ DICOM Archive Network AE related information
 
     (dcmFallbackCMoveSCPCallingAET)"
     "
-    .. _dcmWadoIgnorePresentationLUTShape:
+    .. _dcmChangeRequesterAET:
 
-    :ref:`Wado Ignore Presentation LUT Shape <dcmWadoIgnorePresentationLUTShape>`",boolean,"Indicates to ignore (2050,0020) Presentation LUT Shape, but prioritize value of (0028,0004) Photometric Interpretation to determine if minimum sample value is intended to be displayed as white (=MONCHROME1) or as black (=MONCHROME2) on retrieve of rendered DICOM images by WADO-RS or WADO-URI services. Overwrites value specified on Device level.
+    :ref:`Change Requester AET <dcmChangeRequesterAET>`",string,"Indicates change requester AET in rejections triggered by archive. Overwrites value specified on Device level.
 
-    (dcmWadoIgnorePresentationLUTShape)"
+    (dcmChangeRequesterAET)"
     ":doc:`exportRule` (s)",object,"Export Rules applied to DICOM objects received by this AE. Supplements Export Rules specified on Device level."
     ":doc:`exportPriorsRule` (s)",object,"Export Priors Rules applied to DICOM objects received by this AE. Supplements Export Priors Rules specified on Device level."
     ":doc:`rsForwardRule` (s)",object,"RESTful Forward Rules. Supplements RESTful Forward rules specified on Device level."

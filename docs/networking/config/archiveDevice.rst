@@ -290,6 +290,12 @@ DICOM Archive Device related information
 
     (dcmWadoZIPEntryNameFormat)"
     "
+    .. _dcmWadoIgnorePresentationLUTShape:
+
+    :ref:`Wado Ignore Presentation LUT Shape <dcmWadoIgnorePresentationLUTShape>`",boolean,"Indicates to ignore (2050,0020) Presentation LUT Shape, but prioritize value of (0028,0004) Photometric Interpretation to determine if minimum sample value is intended to be displayed as white (=MONCHROME1) or as black (=MONCHROME2) on retrieve of rendered DICOM images by WADO-RS or WADO-URI services. May be overwritten by configured values for particular Archive Network AEs.
+
+    (dcmWadoIgnorePresentationLUTShape)"
+    "
     .. _dcmQueryFetchSize:
 
     :ref:`Query Fetch Size <dcmQueryFetchSize>`",integer,"Number of rows fetched from the database at once by the Query Service.
@@ -1358,11 +1364,11 @@ DICOM Archive Device related information
 
     (dcmAuditAssigningAuthorityOfPatientID)"
     "
-    .. _dcmWadoIgnorePresentationLUTShape:
+    .. _dcmChangeRequesterAET:
 
-    :ref:`Wado Ignore Presentation LUT Shape <dcmWadoIgnorePresentationLUTShape>`",boolean,"Indicates to ignore (2050,0020) Presentation LUT Shape, but prioritize value of (0028,0004) Photometric Interpretation to determine if minimum sample value is intended to be displayed as white (=MONCHROME1) or as black (=MONCHROME2) on retrieve of rendered DICOM images by WADO-RS or WADO-URI services. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`Change Requester AET <dcmChangeRequesterAET>`",string,"Indicates change requester AET in rejections triggered by archive. May be overwritten by configured values for particular Archive Network AEs.
 
-    (dcmWadoIgnorePresentationLUTShape)"
+    (dcmChangeRequesterAET)"
     ":doc:`attributeFilter` (s)",object,"Specifies Attributes stored in the database"
     ":doc:`attributeSet` (s)",object,"Named Attribute Set for Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests."
     ":doc:`bulkData` (s)",object,"Specifies Bulk Data Descriptors applied by services providing Metadata of archived instances."
