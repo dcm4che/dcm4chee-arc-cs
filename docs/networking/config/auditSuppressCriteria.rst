@@ -52,7 +52,7 @@ Audit Suppress Criteria
     "
     .. _dcmAuditUserRoleIDCode:
 
-    :ref:`User Role ID Code(s) <dcmAuditUserRoleIDCode>`",string,"DICOM PS 3.15 A.5 Audit Active Participant User Role ID code in format (CV, CSD, ""CM""). Enumerated values: (110150, DCM, \Application\), (110151, DCM, \Application Launcher\), (110152, DCM, \Destination\), (110153, DCM, \Source\), (110154, DCM, \Destination Media\) or (110155, DCM, \Source Media\).
+    :ref:`User Role ID Code(s) <dcmAuditUserRoleIDCode>`",string,"DICOM PS 3.15 A.5 Audit Active Participant User Role ID code in format (CV, CSD, ""CM""). Enumerated values: (110150, DCM, \Application\), (110151, DCM, \Application Launcher\), (110152, DCM, \Destination Role ID\), (110153, DCM, \Source Role ID\), (110154, DCM, \Destination Media\) or (110155, DCM, \Source Media\).
 
     (dcmAuditUserRoleIDCode)"
     "

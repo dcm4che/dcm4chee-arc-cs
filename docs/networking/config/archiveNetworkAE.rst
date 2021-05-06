@@ -290,6 +290,12 @@ DICOM Archive Network AE related information
 
     (dcmFallbackWadoURIHttpStatusCode)"
     "
+    .. _dcmFallbackCMoveSCPCallingAET:
+
+    :ref:`Fallback C-Move SCP Calling AE title <dcmFallbackCMoveSCPCallingAET>`",string,"Calling AE Title used in A-ASSOCIATE-RQ to configured Fallback C-MOVE SCP. If absent, the AE Title of the external C-MOVE SCU is used. Overwrites value specified on Device level.
+
+    (dcmFallbackCMoveSCPCallingAET)"
+    "
     .. _dcmAltCMoveSCP:
 
     :ref:`Alternative C-Move SCP <dcmAltCMoveSCP>`",string,"AE Title of alternative C-MOVE SCP to forward C-MOVE RQs if the requested Entities are not located on a local attached Storage. Overwrites value specified on Device level.
@@ -584,12 +590,6 @@ DICOM Archive Network AE related information
 
     (dcmRetrieveTaskWarningOnWarnings)"
     "
-    .. _dcmFallbackCMoveSCPCallingAET:
-
-    :ref:`Fallback C-Move SCP Calling AE title <dcmFallbackCMoveSCPCallingAET>`",string,"Calling AE Title used in A-ASSOCIATE-RQ to configured Fallback C-MOVE SCP. If absent, the AE Title of the external C-MOVE SCU is used. Overwrites value specified on Device level.
-
-    (dcmFallbackCMoveSCPCallingAET)"
-    "
     .. _dcmChangeRequesterAET:
 
     :ref:`Change Requester AET <dcmChangeRequesterAET>`",string,"Indicates change requester AET in rejections triggered by archive. Overwrites value specified on Device level.
@@ -604,15 +604,3 @@ DICOM Archive Network AE related information
     ":doc:`storeAccessControlIDRule` (s)",object,"Store Access Control Rules applied to Studies received by this AE. Supplements Store Access Control Rules specified on Device level."
     ":doc:`upsOnStore` (s)",object,"UPS on Store Rules applied to DICOM objects received by this AE. Supplements UPS on Store Rules specified on Device level."
     ":doc:`upsOnUPSCompleted` (s)",object,"UPS on UPS Completed Rules applied to UPS managed by this AE. Supplements UPS on UPS Completed Rules specified on Device level."
-
-.. toctree::
-
-    exportRule
-    exportPriorsRule
-    rsForwardRule
-    archiveCompressionRule
-    archiveAttributeCoercion
-    studyRetentionPolicy
-    storeAccessControlIDRule
-    upsOnStore
-    upsOnUPSCompleted

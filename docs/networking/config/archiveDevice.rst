@@ -128,6 +128,12 @@ DICOM Archive Device related information
 
     (dcmMWLFetchSize)"
     "
+    .. _dcmMWLImportInterval:
+
+    :ref:`MWL Polling Interval <dcmMWLImportInterval>`",string,"Interval for import of Scheduled Procedure Steps from external MWL SCPs in ISO-8601 duration format PnDTnHnMn.nS; disabled if absent.
+
+    (dcmMWLImportInterval)"
+    "
     .. _dcmDeleteMWLDelay:
 
     :ref:`Delete MWL Delay(s) <dcmDeleteMWLDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS for deleting MWL items. Status specific delays can be specified by prefix 'SCHEDULED:', 'ARRIVED:', 'READY:', 'STARTED:', 'DEPARTED:', 'CANCELED:', 'DISCONTINUED:', 'COMPLETED:'. Examples: PT5M or CANCELED:PT10M. If absent, MWL Items will not get deleted.
@@ -416,6 +422,12 @@ DICOM Archive Device related information
 
     (dcmFallbackWadoURIHttpStatusCode)"
     "
+    .. _dcmFallbackCMoveSCPCallingAET:
+
+    :ref:`Fallback C-Move SCP Calling AE title <dcmFallbackCMoveSCPCallingAET>`",string,"Calling AE Title used in A-ASSOCIATE-RQ to configured Fallback C-MOVE SCP. If absent, the AE Title of the external C-MOVE SCU is used. May be overwritten by configured value for particular Archive Network AEs.
+
+    (dcmFallbackCMoveSCPCallingAET)"
+    "
     .. _dcmAltCMoveSCP:
 
     :ref:`Alternative C-Move SCP <dcmAltCMoveSCP>`",string,"AE Title of alternative C-MOVE SCP to forward C-MOVE RQs if the requested Entities are not located on a local attached Storage
@@ -583,6 +595,30 @@ DICOM Archive Device related information
     :ref:`Audit Unknown Patient ID <dcmAuditUnknownPatientID>`",string,"Indicates patient id value to be sent in audit message when not known.
 
     (dcmAuditUnknownPatientID)"
+    "
+    .. _dcmAudit2JsonFhirTemplateURI:
+
+    :ref:`Audit to json+fhir Template URI <dcmAudit2JsonFhirTemplateURI>`",string,"Specifies URI for the style sheet to transcode Audit Message to a FHIR JSON Resource Audit Event
+
+    (dcmAudit2JsonFhirTemplateURI)"
+    "
+    .. _dcmAudit2XmlFhirTemplateURI:
+
+    :ref:`Audit to xml+fhir Template URI <dcmAudit2XmlFhirTemplateURI>`",string,"Specifies URI for the style sheet to transcode Audit Message to a FHIR XML Resource Audit Event
+
+    (dcmAudit2XmlFhirTemplateURI)"
+    "
+    .. _dcmAuditSoftwareConfigurationVerbose:
+
+    :ref:`Audit Software Configuration Verbose <dcmAuditSoftwareConfigurationVerbose>`",boolean,"Specifies if Child Objects and Attributes of created Objects should be included in Software Configuration Audit Message.
+
+    (dcmAuditSoftwareConfigurationVerbose)"
+    "
+    .. _dcmAuditAssigningAuthorityOfPatientID:
+
+    :ref:`Assigning Authority of Patient ID for Audit <dcmAuditAssigningAuthorityOfPatientID>`",string,"Assigning Authority of Patient ID in received HL7 message used to search qualified patient identifier in list of identifiers in PID-3. This qualified patient identifier shall be used in the patient details participant object. If absent, by default the first qualified patient identifier in PID-3 shall be used. If none of the qualified patient identifiers in the list match with the configured issuer, archive server log shall contain a log INFO message and by default the first qualified patient identifier in PID-3 shall be used. Format: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].
+
+    (dcmAuditAssigningAuthorityOfPatientID)"
     "
     .. _dcmShowPatientInfoInSystemLog:
 
@@ -920,18 +956,6 @@ DICOM Archive Device related information
 
     (dcmProxyUpstreamURL)"
     "
-    .. _dcmAudit2JsonFhirTemplateURI:
-
-    :ref:`Audit to json+fhir Template URI <dcmAudit2JsonFhirTemplateURI>`",string,"Specifies URI for the style sheet to transcode Audit Message to a FHIR JSON Resource Audit Event
-
-    (dcmAudit2JsonFhirTemplateURI)"
-    "
-    .. _dcmAudit2XmlFhirTemplateURI:
-
-    :ref:`Audit to xml+fhir Template URI <dcmAudit2XmlFhirTemplateURI>`",string,"Specifies URI for the style sheet to transcode Audit Message to a FHIR XML Resource Audit Event
-
-    (dcmAudit2XmlFhirTemplateURI)"
-    "
     .. _dcmCopyMoveUpdatePolicy:
 
     :ref:`Copy Move Update Policy <dcmCopyMoveUpdatePolicy>`",string,"Specifies update policy for attributes of the destination Study on Copy/Move of Instances from another Study. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: PRESERVE, SUPPLEMENT, MERGE, OVERWRITE or REPLACE.
@@ -1232,12 +1256,6 @@ DICOM Archive Device related information
 
     (hl7TrackChangedPatientID)"
     "
-    .. _dcmAuditSoftwareConfigurationVerbose:
-
-    :ref:`Audit Software Configuration Verbose <dcmAuditSoftwareConfigurationVerbose>`",boolean,"Specifies if Child Objects and Attributes of created Objects should be included in Software Configuration Audit Message.
-
-    (dcmAuditSoftwareConfigurationVerbose)"
-    "
     .. _hl7UseNullValue:
 
     :ref:`Use HL7 Null Value <hl7UseNullValue>`",boolean,"Specifies if HL7 v2 null values (specified in segment field as `|""""|`) are used in sent HL7 messages for not present or empty entity attributes. Required to unset entity attributes at the remote HL7 Application. May be overwritten by configured values for particular Archive HL7 Application.
@@ -1352,18 +1370,6 @@ DICOM Archive Device related information
 
     (dcmStowQuicktime2MP4)"
     "
-    .. _dcmFallbackCMoveSCPCallingAET:
-
-    :ref:`Fallback C-Move SCP Calling AE title <dcmFallbackCMoveSCPCallingAET>`",string,"Calling AE Title used in A-ASSOCIATE-RQ to configured Fallback C-MOVE SCP. If absent, the AE Title of the external C-MOVE SCU is used. May be overwritten by configured value for particular Archive Network AEs.
-
-    (dcmFallbackCMoveSCPCallingAET)"
-    "
-    .. _dcmAuditAssigningAuthorityOfPatientID:
-
-    :ref:`Assigning Authority of Patient ID for Audit <dcmAuditAssigningAuthorityOfPatientID>`",string,"Assigning Authority of Patient ID in received HL7 message used to search qualified patient identifier in list of identifiers in PID-3. This qualified patient identifier shall be used in the patient details participant object. If absent, by default the first qualified patient identifier in PID-3 shall be used. If none of the qualified patient identifiers in the list match with the configured issuer, archive server log shall contain a log INFO message and by default the first qualified patient identifier in PID-3 shall be used. Format: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].
-
-    (dcmAuditAssigningAuthorityOfPatientID)"
-    "
     .. _dcmChangeRequesterAET:
 
     :ref:`Change Requester AET <dcmChangeRequesterAET>`",string,"Indicates change requester AET in rejections triggered by archive. May be overwritten by configured values for particular Archive Network AEs.
@@ -1391,6 +1397,7 @@ DICOM Archive Device related information
     ":doc:`upsOnUPSCompleted` (s)",object,"UPS on UPS Completed Rules applied to UPS managed by any AE. May be supplemented by configured UPS on Store Rules for particular Archive Network AEs."
     ":doc:`upsProcessingRule` (s)",object,"UPS Processing Rules."
     ":doc:`idGenerator` (s)",object,"ID Generator"
+    ":doc:`mwlImportRule` (s)",object,"MWL Import Rule"
     ":doc:`mwlIdleTimeout` (s)",object,"MWL Idle Timeout"
     ":doc:`hl7ForwardRule` (s)",object,"HL7 Forward Rules for HL7 messages received by any HL7 Application. May be supplemented by configured HL7 Forward Rules for particular HL7 Applications."
     ":doc:`hl7ExportRule` (s)",object,"Export Rules applied to HL7 messages received by any HL7 Application. May be supplemented by configured HL7 Export Rules for particular HL7 Application."
@@ -1435,6 +1442,7 @@ DICOM Archive Device related information
     upsOnUPSCompleted
     upsProcessingRule
     idGenerator
+    mwlImportRule
     mwlIdleTimeout
     hl7ForwardRule
     hl7ExportRule
