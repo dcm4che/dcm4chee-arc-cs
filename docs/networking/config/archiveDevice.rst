@@ -130,7 +130,7 @@ DICOM Archive Device related information
     "
     .. _dcmMWLImportInterval:
 
-    :ref:`MWL Polling Interval <dcmMWLImportInterval>`",string,"Interval for import of Scheduled Procedure Steps from external MWL SCPs in ISO-8601 duration format PnDTnHnMn.nS; disabled if absent.
+    :ref:`MWL Import Interval <dcmMWLImportInterval>`",string,"Interval for import of Scheduled Procedure Steps from external MWL SCPs in ISO-8601 duration format PnDTnHnMn.nS; disabled if absent.
 
     (dcmMWLImportInterval)"
     "

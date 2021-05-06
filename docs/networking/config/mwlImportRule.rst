@@ -10,7 +10,7 @@ Specifies import of Scheduled Procedure Step from external MWL SCP
     "
     .. _dcmMWLImportID:
 
-    :ref:`MWL Import Rule ID <dcmMWLImportID>`",string,"ID of MWL Import
+    :ref:`MWL Import Rule ID <dcmMWLImportID>`",string,"ID of MWL Import Rule
 
     (dcmMWLImportID)"
     "
