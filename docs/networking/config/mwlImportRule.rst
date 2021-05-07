@@ -34,13 +34,13 @@ Specifies import of Scheduled Procedure Step from external MWL SCP
     "
     .. _dcmDuration:
 
-    :ref:`Import not before <dcmDuration>`",string,"Restrict import of Scheduled Procedure Steps from external MWL SCP to Scheduled Procedure Steps scheduled earlier in the future than the specified Time interval in ISO-8601 duration format PnDTnHnMn.nS; if absent, import all Scheduled Procedure Steps which are scheduled in the future.
+    :ref:`Import not before <dcmDuration>`",string,"Import Scheduled Procedure Steps from external MWL SCP to Scheduled Procedure Steps scheduled earlier in the future than the specified Time interval in ISO-8601 duration format PnDTnHnMn.nS; if absent, import all Scheduled Procedure Steps which are scheduled in the future.
 
     (dcmDuration)"
     "
     .. _dcmMWLImportNotOlder:
 
-    :ref:`Import not older than <dcmMWLImportNotOlder>`",string,"Restrict import of Scheduled Procedure Steps from external MWL SCP to Scheduled Procedure Steps scheduled later in the past than the specified Time interval in ISO-8601 duration format PnDTnHnMn.nS; if absent, import all Scheduled Procedure Steps which are scheduled in the past.
+    :ref:`Import not older than <dcmMWLImportNotOlder>`",string,"Import Scheduled Procedure Steps from external MWL SCP to Scheduled Procedure Steps scheduled later in the past than the specified Time interval in ISO-8601 duration format PnDTnHnMn.nS; if absent, import all Scheduled Procedure Steps which are scheduled in the past.
 
     (dcmMWLImportNotOlder)"
     "

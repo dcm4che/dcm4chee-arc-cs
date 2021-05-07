@@ -100,9 +100,6 @@ dcm4che proprietary Device Attributes
     ":doc:`auditRecordRepository` ",object,"Audit Record Repository related information"
     ":doc:`archiveDevice` ",object,"DICOM Archive Device related information"
     ":doc:`uiConfig` (s)",object,"UI Configuration"
-    ":doc:`xdsAdministratorConfig` (s)",object,"XDS Administrator Configuration"
-    ":doc:`agfaMigrationConfig` ",object,"AGFA Migration Configuration"
-    ":doc:`studyUpdaterConfig` ",object,"Study Updater Configuration"
 
 .. toctree::
 
@@ -115,6 +112,3 @@ dcm4che proprietary Device Attributes
     auditRecordRepository
     archiveDevice
     uiConfig
-    xdsAdministratorConfig
-    agfaMigrationConfig
-    studyUpdaterConfig
