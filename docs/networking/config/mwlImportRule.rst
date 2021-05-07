@@ -28,7 +28,7 @@ Specifies import of Scheduled Procedure Step from external MWL SCP
     "
     .. _dcmDestinationAE:
 
-    :ref:`Destination MWL SCP(s) <dcmDestinationAE>`",string,"AE Title of local MWL SCP feeded/updated by Scheduled Procedure Steps returned by external MWL SCP.
+    :ref:`Destination MWL SCP <dcmDestinationAE>`",string,"AE Title of local MWL SCP feeded/updated by Scheduled Procedure Steps returned by external MWL SCP.
 
     (dcmDestinationAE)"
     "
