@@ -1,16 +1,16 @@
-MWL Import Rule
-===============
+MWL Import
+==========
 Specifies import of Scheduled Procedure Step from external MWL SCP
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|
-.. csv-table:: MWL Import Rule Attributes (LDAP Object: dcmMwlImportRule)
+.. csv-table:: MWL Import Attributes (LDAP Object: dcmMwlImport)
     :header: Name, Type, Description (LDAP Attribute)
     :widths: 23, 7, 70
 
     "
     .. _dcmMWLImportID:
 
-    :ref:`MWL Import Rule ID <dcmMWLImportID>`",string,"ID of MWL Import Rule
+    :ref:`MWL Import ID <dcmMWLImportID>`",string,"ID of MWL Import
 
     (dcmMWLImportID)"
     "

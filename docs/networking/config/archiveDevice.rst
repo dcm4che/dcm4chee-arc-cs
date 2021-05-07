@@ -1397,7 +1397,7 @@ DICOM Archive Device related information
     ":doc:`upsOnUPSCompleted` (s)",object,"UPS on UPS Completed Rules applied to UPS managed by any AE. May be supplemented by configured UPS on Store Rules for particular Archive Network AEs."
     ":doc:`upsProcessingRule` (s)",object,"UPS Processing Rules."
     ":doc:`idGenerator` (s)",object,"ID Generator"
-    ":doc:`mwlImportRule` (s)",object,"MWL Import Rule"
+    ":doc:`mwlImport` (s)",object,"MWL Import"
     ":doc:`mwlIdleTimeout` (s)",object,"MWL Idle Timeout"
     ":doc:`hl7ForwardRule` (s)",object,"HL7 Forward Rules for HL7 messages received by any HL7 Application. May be supplemented by configured HL7 Forward Rules for particular HL7 Applications."
     ":doc:`hl7ExportRule` (s)",object,"Export Rules applied to HL7 messages received by any HL7 Application. May be supplemented by configured HL7 Export Rules for particular HL7 Application."
@@ -1442,7 +1442,7 @@ DICOM Archive Device related information
     upsOnUPSCompleted
     upsProcessingRule
     idGenerator
-    mwlImportRule
+    mwlImport
     mwlIdleTimeout
     hl7ForwardRule
     hl7ExportRule
