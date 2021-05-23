@@ -320,6 +320,12 @@ DICOM Archive Device related information
 
     (dcmQidoMaxNumberOfResults)"
     "
+    .. _dcmQidoETag:
+
+    :ref:`Qido ETag <dcmQidoETag>`",boolean,"Indicates to return Last-Modified and ETag for Search Series or Instances of a Study; disabled if absent. May be overwritten by configured values for particular Archive Network AEs.
+
+    (dcmQidoETag)"
+    "
     .. _dcmFwdMppsDestination:
 
     :ref:`Mpps Forward Destination(s) <dcmFwdMppsDestination>`",string,"Destination to forward MPPS N-CREATE RQ and N-SET RQ. May be overwritten by configured values for particular Archive Network AEs.
