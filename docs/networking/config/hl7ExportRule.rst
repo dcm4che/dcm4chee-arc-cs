@@ -44,6 +44,12 @@ HL7 Export Rule
 
     (dcmIssuerOfPatientID)"
     "
+    .. _dcmPrefetchForIssuerOfPatientID:
+
+    :ref:`Export for Assigning Authority of Patient ID <dcmPrefetchForIssuerOfPatientID>`",string,"Assigning Authority of Patient ID in received HL7 message used to search qualified patient identifier in list of identifiers in PID-3. Studies matching the specified Entity Selector of this qualified patient identifier shall be queried. If absent, by default the first qualified patient identifier in PID-3 shall be used. Format: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].
+
+    (dcmPrefetchForIssuerOfPatientID)"
+    "
     .. _dcmDuration:
 
     :ref:`Suppress Duplicate Export Interval <dcmDuration>`",string,"Suppress Export of Studies already exported not earlier than the specified interval to avoid duplicate exports.
