@@ -1392,6 +1392,7 @@ DICOM Archive Device related information
     ":doc:`exporter` (s)",object,"Exporter Descriptor"
     ":doc:`exportRule` (s)",object,"Export Rules applied to DICOM objects received by any AE. May be supplemented by configured Export Rules for particular Archive Network AEs."
     ":doc:`exportPriorsRule` (s)",object,"Export Priors Rules applied to DICOM objects received by any AE. May be supplemented by configured Export Priors Rules for particular Archive Network AEs."
+    ":doc:`mppsForwardRule` (s)",object,"MPPS Forward Rules applied to MPPS received by any AE. May be supplemented by configured MPPS Forward Rules for particular Archive Network AEs."
     ":doc:`rsForwardRule` (s)",object,"RESTful Forward Rules. May be supplemented by configured RESTful Forward Rules for particular Archive Network AEs."
     ":doc:`archiveCompressionRule` (s)",object,"Compression rules applied to DICOM objects received by any AE. May be supplemented by configured Compression Rules for particular Archive Network AEs."
     ":doc:`archiveAttributeCoercion` (s)",object,"Attribute Coercion applied to DIMSE received/sent by any AE. May be supplemented by configured Attribute Coercions for particular Archive Network AEs."
@@ -1437,6 +1438,7 @@ DICOM Archive Device related information
     exporter
     exportRule
     exportPriorsRule
+    mppsForwardRule
     rsForwardRule
     archiveCompressionRule
     archiveAttributeCoercion
