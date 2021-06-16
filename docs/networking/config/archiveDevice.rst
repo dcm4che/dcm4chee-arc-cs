@@ -446,6 +446,18 @@ DICOM Archive Device related information
 
     (dcmCStoreSCUOfCMoveSCP)"
     "
+    .. _dcmTaskProcessingPollingInterval:
+
+    :ref:`Task Processing Polling Interval <dcmTaskProcessingPollingInterval>`",string,"Polling Interval for scheduled Tasks ready for processing in ISO-8601 duration format PnDTnHnMnS. If absent, Tasks will not get processed.
+
+    (dcmTaskProcessingPollingInterval)"
+    "
+    .. _dcmTaskProcessingFetchSize:
+
+    :ref:`Task Processing  Fetch Size <dcmTaskProcessingFetchSize>`",integer,"Limit result set of DB query for scheduled Tasks ready for processing.
+
+    (dcmTaskProcessingFetchSize)"
+    "
     .. _dcmUPSProcessingPollingInterval:
 
     :ref:`UPS Processing Polling Interval <dcmUPSProcessingPollingInterval>`",string,"Polling Interval for Workitems ready for processing in ISO-8601 duration format PnDTnHnMnS.

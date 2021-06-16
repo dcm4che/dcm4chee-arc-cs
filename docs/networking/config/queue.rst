@@ -14,17 +14,29 @@ Managed JMS Queue
 
     (dcmQueueName)"
     "
-    .. _dcmJndiName:
-
-    :ref:`JNDI Name <dcmJndiName>`",string,"JNDI Name
-
-    (dcmJndiName)"
-    "
     .. _dicomDescription:
 
-    :ref:`DICOM Description <dicomDescription>`",string,"Textual description of the DICOM entity
+    :ref:`Queue Description <dicomDescription>`",string,"Unconstrained text description of the Queue
 
     (dicomDescription)"
+    "
+    .. _dcmTaskProcessorName:
+
+    :ref:`Task Processor Name <dcmTaskProcessorName>`",string,"Name of Task Processor associated with the Queue. Enumerated values: EXPORTER, MOVE_SCU, MPPS_SCU, IAN_SCU, STGCMT_SCP, STGCMT_SCU, STG_VERIFIER, HL7_SENDER, REST_CLIENT, REJECT_SCU or DIFF_SCU.
+
+    (dcmTaskProcessorName)"
+    "
+    .. _dicomInstalled:
+
+    :ref:`installed <dicomInstalled>`",boolean,"If false, processing of tasks in this queue is paused.
+
+    (dicomInstalled)"
+    "
+    .. _dcmMaxTasksParallel:
+
+    :ref:`Maximum parallel Tasks <dcmMaxTasksParallel>`",integer,"Maximal number of tasks processed in parallel.
+
+    (dcmMaxTasksParallel)"
     "
     .. _dcmMaxRetries:
 
@@ -56,12 +68,6 @@ Managed JMS Queue
 
     (dcmRetryOnWarning)"
     "
-    .. _dcmRetryInProcessOnStartup:
-
-    :ref:`Retry IN PROCESS on Startup <dcmRetryInProcessOnStartup>`",boolean,"Indicates to retry tasks left in status IN PROCESS on system start-up.
-
-    (dcmRetryInProcessOnStartup)"
-    "
     .. _dcmPurgeQueueMessageCompletedDelay:
 
     :ref:`Delay for purging completed queue messages <dcmPurgeQueueMessageCompletedDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which completed queue messages are purged. If absent, there is no deletion for that particular queue
@@ -85,12 +91,6 @@ Managed JMS Queue
     :ref:`Delay for purging canceled queue messages <dcmPurgeQueueMessageCanceledDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which canceled queue messages are purged. If absent, there is no deletion for that particular queue
 
     (dcmPurgeQueueMessageCanceledDelay)"
-    "
-    .. _dcmMaxQueueSize:
-
-    :ref:`Maximum Queue Size <dcmMaxQueueSize>`",integer,"Maximal number of scheduled tasks in the queue. If the number of scheduled tasks reaches the limit, an attempt to schedule another tasks will fail. 0 = no limitation.
-
-    (dcmMaxQueueSize)"
     "
     .. _dcmSchedule:
 
