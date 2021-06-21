@@ -16,7 +16,7 @@ PDQ Service Descriptor
     "
     .. _dcmURI:
 
-    :ref:`PDQ Service URI <dcmURI>`",string,"PDQ Service URI, e.g. 'pdq-dicom:FINDSCP'.
+    :ref:`PDQ Service URI <dcmURI>`",string,"PDQ Service URI, e.g. 'pdq-dicom:FINDSCP' or 'pdq-hl7:SendingApplication/SendingFacility:ReceivingApplication/ReceivingFacility'.
 
     (dcmURI)"
     "
@@ -40,6 +40,6 @@ PDQ Service Descriptor
     "
     .. _dcmProperty:
 
-    :ref:`PDQ Service Property(s) <dcmProperty>`",string,"Property in format <name>=<value>, e.g. 'LocalAET=DCM4CHEE'
+    :ref:`PDQ Service Property(s) <dcmProperty>`",string,"Property in format <name>=<value>, e.g. 'LocalAET=DCM4CHEE' or 'XSLStylesheetURI=${jboss.server.temp.url}/dcm4chee-arc/hl7-adt2dcm.xsl'
 
     (dcmProperty)"
