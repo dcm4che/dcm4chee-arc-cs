@@ -158,13 +158,13 @@ Message Structure
    :widths: 30, 5, 65
    :header: Field Name, Opt, Description
 
-   ParticipantObjectID, M, Patient ID or <none> if unknown,
-   ParticipantObjectTypeCode, M, Person : '1',
-   ParticipantObjectTypeCodeRole, M, Patient : '1',
-   ParticipantObjectIDTypeCode, M,  "EV (2, RFC-3881, 'Patient Number')",
-   ParticipantObjectName, U, Patient Name,
-   ParticipantObjectDetail, U, 'type=HL7v2 Message value=<Base-64 encoded HL7 message>'
-   ParticipantObjectDetail, U, 'type=HL7v2 Message value=<Base-64 encoded HL7 response>'
+   ParticipantObjectID, M, Patient ID or <none> if unknown
+   ParticipantObjectTypeCode, M, Person : '1'
+   ParticipantObjectTypeCodeRole, M, Patient : '1'
+   ParticipantObjectIDTypeCode, M,  "EV (2, RFC-3881, 'Patient Number')"
+   ParticipantObjectName, U, Patient Name
+   ParticipantObjectDetail, U, 'type=HL7v2 Message value=<Base-64 encoded QBP^Q22 HL7 message>'
+   ParticipantObjectDetail, U, 'type=HL7v2 Message value=<Base-64 encoded RSP^K22 HL7 response>'
    ParticipantObjectDetail, U, 'type=MSH-9 value=<Base-64 encoded HL7 message type>'
    ParticipantObjectDetail, U, 'type=MSH-10 value=<Base-64 encoded HL7 message control ID>'
    ParticipantObjectDetail, U, 'type=MSH-9 value=<Base-64 encoded HL7 response message type>'
