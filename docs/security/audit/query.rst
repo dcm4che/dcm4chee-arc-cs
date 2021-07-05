@@ -154,7 +154,7 @@ Message Structure
    ParticipantObjectQuery, M, | Base64 encoded value of complete QBP^Q22 query message
    ParticipantObjectDetail, MC, | Base64 encoded value for 'UTF-8' ⇒ 'type=QueryEncoding value=VVRGLTg='
 
-.. csv-table:: Participant Object Identification : Patient Demographics Query
+.. csv-table:: Participant Object Identification : Patient Demographics Query - Patient
    :name: participant-object-pdq-patient-query
    :widths: 30, 5, 65
    :header: Field Name, Opt, Description
