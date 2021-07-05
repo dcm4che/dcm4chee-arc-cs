@@ -112,7 +112,7 @@ Message Structure
    UserTypeCode, U, "| WADO RS case : Person ⇒ '1'
    | XDSI Retrieve Imaging Document Set RAD-69 case : Person ⇒ '1'
    | For all other cases : Application ⇒ '2'"
-   RoleIDCode, M, "| EV (110152, DCM, 'Destination')"
+   RoleIDCode, M, "| EV (110152, DCM, 'Destination Role ID')"
    NetworkAccessPointID, U, | Hostname/IP Address of calling host
    NetworkAccessPointTypeCode, U, "| NetworkAccessPointID is host name ⇒ '1'
    | NetworkAccessPointID is an IP address ⇒ '2'"
@@ -151,17 +151,20 @@ Message Structure
    :header: Field Name, Opt, Description
 
    UserID, M, "| Store object case : Triggered by association ⇒ 'Application entity title of system storing study objects to archive'
+   | Triggered by HL7 ORU ⇒ 'HL7 Sending Application and Facility'
    | Store object case : Triggered from UI : Secured Archive ⇒ 'User name of logged in user'
    | Store object case : Triggered from UI : Unsecured Archive ⇒ 'Remote IP address'
    | Storage Commitment case : Triggered by association ⇒ 'Application entity title of association initiating system'
    | Store object case : Triggered from UI : Secured Archive ⇒ 'User name of logged in user'
    | Store object case : Triggered from UI : Unsecured Archive ⇒ 'Remote IP address'"
    UserIDTypeCode, U, "| Triggered by association ⇒ EV (110119, DCM, 'Station AE Title')
+   | Triggered by HL7 ORU ⇒ EV (HL7APP, 99DCM4CHEE, 'Application and Facility')
    | Triggered from UI : Secured archive ⇒ EV (113871, DCM, 'Person ID')
    | Triggered from UI : Unsecured archive ⇒ EV (110182, DCM, 'Node ID')"
    UserTypeCode, U, "| Triggered from UI : Person ⇒ '1'
    | Triggered by association : Application ⇒ '2'"
    UserIsRequestor, M, | true
+   RoleIDCode, M, "| EV (110153, DCM, 'Source Role ID')"
    NetworkAccessPointID, U, | Hostname/IP Address of initiating system
    NetworkAccessPointTypeCode, U, "| NetworkAccessPointID is host name ⇒ '1'
    | NetworkAccessPointID is an IP address ⇒ '2'"

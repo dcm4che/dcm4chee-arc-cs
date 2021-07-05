@@ -13,7 +13,7 @@ and `Annex B.3 <http://dicom.nema.org/medical/dicom/current/output/chtml/part15/
 
 By default configuration, TLS 1.0, TLS 1.1 and TLS 1.2 are enabled, use of TLS 1.2 is preferred.
 
-Also other cyphersuite options than the two in compliance with *AES TLS Secure Transport Connection Profile*:
+Also other cipher suite options than the two in compliance with *AES TLS Secure Transport Connection Profile*:
 
 - TLS_RSA_WITH_AES_128_CBC_SHA
 - TLS_RSA_WITH_3DES_EDE_CBC_SHA
@@ -26,7 +26,7 @@ IP ports on which an implementation accepts TLS connections are configurable.
 
 The private key and the Certificate used by an instance of |product| to identify itself in the TLS negotiation
 with remote applications has to be provided in a local keystore file in PKCS12 or JKS (Java Key Store) format
-on the application host. Certficates of Certificate Authorities (CA) to validate Certificates received
+on the application host. Certificates of Certificate Authorities (CA) to validate Certificates received
 from remote applications during the TLS negotiation can also be provided in a local keystore file in JKS format
 or at the central LDAP server, used as configuration backend for all instances of |product|.
 
@@ -238,6 +238,6 @@ Scope of Referential Integrity of Replacement Values for UIDs
 .............................................................
 
 Replacement UIDs are derived from the original UID by using the algorithm for Creating Name-Based UUIDs as specified in
-`RFC 4122: A Universally Unique IDentifier (UUID) URN Namespace <https://tools.ietf.org/html/rfc4122#section-4.3>`_,
+`RFC 4122: A Universally Unique Identifier (UUID) URN Namespace <https://tools.ietf.org/html/rfc4122#section-4.3>`_,
 encoded as UID according `Object Identifier (OID) Repository <http://oid-info.com/get/2.25>`_. Therefore equal original
-UIDs in different DICOM objects also accross Studies or Patients are replaced by equal new UIDs in resulting objects.
+UIDs in different DICOM objects also across Studies or Patients are replaced by equal new UIDs in resulting objects.

@@ -94,8 +94,12 @@ Message Structure
    ParticipantObjectIDTypeCode, M,  "EV (2, RFC-3881, 'Patient Number')",
    ParticipantObjectName, U, Patient Name,
    ParticipantObjectDataLifeCycle, U, Verification ⇒ '4', Present only for audits triggered by PDQ Service
-   ParticipantObjectDetail, U, If Patient record created/updated/deleted by HL7 messages : 'type=HL7v2 value=<Base-64 encoded HL7 message>'
-   ParticipantObjectDetail, U, If Patient record created/updated/deleted by HL7 messages : 'type=HL7v2 value=<Base-64 encoded HL7 response>'
+   ParticipantObjectDetail, U, If Patient record created/updated/deleted by HL7 messages : 'type=HL7v2 Message value=<Base-64 encoded HL7 message>'
+   ParticipantObjectDetail, U, If Patient record created/updated/deleted by HL7 messages : 'type=HL7v2 Message value=<Base-64 encoded HL7 response>'
+   ParticipantObjectDetail, U, 'type=MSH-9 value=<Base-64 encoded HL7 message type>'
+   ParticipantObjectDetail, U, 'type=MSH-10 value=<Base-64 encoded HL7 message control ID>'
+   ParticipantObjectDetail, U, 'type=MSH-9 value=<Base-64 encoded HL7 response message type>'
+   ParticipantObjectDetail, U, 'type=MSH-10 value=<Base-64 encoded HL7 response message control ID>'
 
 
 Sample Message
@@ -128,8 +132,8 @@ Patient created by HL7 ADT message
             <ParticipantObjectDetail type="HL7v2 Message" value="TVNIfF5+XCZ8RENNNENIRUV8RENNNENIRUV8UEFNU2ltdWxhdG9yfElIRXwyMDE4MDkxMTExNDMwNC4yNzR8fEFDS15BMjheQUNLfDE2OTE3ODcwNTN8UHwyLjV8fHx8fHxBU0NJSVtDUl0NTVNBfEFBfDIwMTYwNjAyMTQyODU2fA=="/>
             <ParticipantObjectDetail type="MSH-9" value="QURUXkEyOA=="/>
             <ParticipantObjectDetail type="MSH-10" value="MjAxNjA2MDIxNDI4NTY="/>
-            <ParticipantObjectDetail type="MSH2-9" value="QUNLXkEyOA=="/>
-            <ParticipantObjectDetail type="MSH2-10" value="MTY5MTc4NzA1Mw=="/>
+            <ParticipantObjectDetail type="MSH-9" value="QUNLXkEyOA=="/>
+            <ParticipantObjectDetail type="MSH-10" value="MTY5MTc4NzA1Mw=="/>
         </ParticipantObjectIdentification>
     </AuditMessage>
 
