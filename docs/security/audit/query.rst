@@ -152,7 +152,6 @@ Message Structure
    ParticipantObjectTypeCodeRole, M, | Query ⇒ '24'
    ParticipantObjectIDTypeCode, M,  "| EV (ITI-21, IHE Transactions, 'Patient Demographics Query')"
    ParticipantObjectQuery, M, | Base64 encoded value of complete QBP^Q22 query message
-   ParticipantObjectDetail, MC, | Base64 encoded value for 'UTF-8' ⇒ 'type=QueryEncoding value=VVRGLTg='
 
 .. csv-table:: Participant Object Identification : Patient Demographics Query - Patient
    :name: participant-object-pdq-patient-query
@@ -164,8 +163,8 @@ Message Structure
    ParticipantObjectTypeCodeRole, M, Patient : '1',
    ParticipantObjectIDTypeCode, M,  "EV (2, RFC-3881, 'Patient Number')",
    ParticipantObjectName, U, Patient Name,
-   ParticipantObjectDetail, U, 'type=HL7v2 Message value=<Base-64 encoded HL7 QBP^Q22 message>'
-   ParticipantObjectDetail, U, 'type=HL7v2 Message value=<Base-64 encoded HL7 RSP^Q22 response>'
+   ParticipantObjectDetail, U, 'type=HL7v2 Message value=<Base-64 encoded HL7 message>'
+   ParticipantObjectDetail, U, 'type=HL7v2 Message value=<Base-64 encoded HL7 response>'
    ParticipantObjectDetail, U, 'type=MSH-9 value=<Base-64 encoded HL7 message type>'
    ParticipantObjectDetail, U, 'type=MSH-10 value=<Base-64 encoded HL7 message control ID>'
    ParticipantObjectDetail, U, 'type=MSH-9 value=<Base-64 encoded HL7 response message type>'
