@@ -20,12 +20,6 @@ Managed JMS Queue
 
     (dicomDescription)"
     "
-    .. _dcmTaskProcessorName:
-
-    :ref:`Task Processor Name <dcmTaskProcessorName>`",string,"Name of Task Processor associated with the Queue. Enumerated values: EXPORTER, MOVE_SCU, MPPS_SCU, IAN_SCU, STGCMT_SCP, STGCMT_SCU, STG_VERIFIER, HL7_SENDER, REST_CLIENT, REJECT_SCU or DIFF_SCU.
-
-    (dcmTaskProcessorName)"
-    "
     .. _dicomInstalled:
 
     :ref:`installed <dicomInstalled>`",boolean,"If false, processing of tasks in this queue is paused.

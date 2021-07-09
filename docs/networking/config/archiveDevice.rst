@@ -302,6 +302,12 @@ DICOM Archive Device related information
 
     (dcmWadoIgnorePresentationLUTShape)"
     "
+    .. _dcmWadoMetadataExcludePrivate:
+
+    :ref:`Wado Metadata Exclude Private <dcmWadoMetadataExcludePrivate>`",boolean,"Indicates to exclude Private Data Elements from Metadata returned by WADO-RS Retrieve Transaction. May be overwritten by configured values for particular Archive Network AEs.
+
+    (dcmWadoMetadataExcludePrivate)"
+    "
     .. _dcmQueryFetchSize:
 
     :ref:`Query Fetch Size <dcmQueryFetchSize>`",integer,"Number of rows fetched from the database at once by the Query Service.
@@ -446,17 +452,17 @@ DICOM Archive Device related information
 
     (dcmCStoreSCUOfCMoveSCP)"
     "
-    .. _dcmTaskProcessingPollingInterval:
+    .. _dcmTaskPollingInterval:
 
-    :ref:`Task Processing Polling Interval <dcmTaskProcessingPollingInterval>`",string,"Polling Interval for scheduled Tasks ready for processing in ISO-8601 duration format PnDTnHnMnS. If absent, Tasks will not get processed.
+    :ref:`Task Polling Interval <dcmTaskPollingInterval>`",string,"Polling Interval for scheduled Tasks in ISO-8601 duration format PnDTnHnMnS. If absent, Tasks will not get processed.
 
-    (dcmTaskProcessingPollingInterval)"
+    (dcmTaskPollingInterval)"
     "
-    .. _dcmTaskProcessingFetchSize:
+    .. _dcmTaskFetchSize:
 
-    :ref:`Task Processing  Fetch Size <dcmTaskProcessingFetchSize>`",integer,"Limit result set of DB query for scheduled Tasks ready for processing.
+    :ref:`Task Fetch Size <dcmTaskFetchSize>`",integer,"Limit result set of DB query for scheduled Tasks.
 
-    (dcmTaskProcessingFetchSize)"
+    (dcmTaskFetchSize)"
     "
     .. _dcmUPSProcessingPollingInterval:
 
@@ -469,30 +475,6 @@ DICOM Archive Device related information
     :ref:`UPS Processing  Fetch Size <dcmUPSProcessingFetchSize>`",integer,"Limit result set of DB query for Workitems ready for processing.
 
     (dcmUPSProcessingFetchSize)"
-    "
-    .. _dcmExportTaskPollingInterval:
-
-    :ref:`Export Task Polling Interval <dcmExportTaskPollingInterval>`",string,"Export Task Polling Interval in ISO-8601 duration format PnDTnHnMnS.
-
-    (dcmExportTaskPollingInterval)"
-    "
-    .. _dcmExportTaskFetchSize:
-
-    :ref:`Export Task Fetch Size <dcmExportTaskFetchSize>`",integer,"Limit result set of DB query for Export Tasks ready for processing.
-
-    (dcmExportTaskFetchSize)"
-    "
-    .. _dcmRetrieveTaskPollingInterval:
-
-    :ref:`Retrieve Task Polling Interval <dcmRetrieveTaskPollingInterval>`",string,"Retrieve Task Polling Interval in ISO-8601 duration format PnDTnHnMnS.
-
-    (dcmRetrieveTaskPollingInterval)"
-    "
-    .. _dcmRetrieveTaskFetchSize:
-
-    :ref:`Retrieve Task Fetch Size <dcmRetrieveTaskFetchSize>`",integer,"Limit result set of DB query for Retrieve Tasks ready for processing.
-
-    (dcmRetrieveTaskFetchSize)"
     "
     .. _dcmRetrieveTaskWarningOnNoMatch:
 

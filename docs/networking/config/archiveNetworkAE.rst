@@ -188,6 +188,12 @@ DICOM Archive Network AE related information
 
     (dcmWadoIgnorePresentationLUTShape)"
     "
+    .. _dcmWadoMetadataExcludePrivate:
+
+    :ref:`Wado Metadata Exclude Private <dcmWadoMetadataExcludePrivate>`",boolean,"Indicates to exclude Private Data Elements from Metadata returned by WADO-RS Retrieve Transaction. Overwrites value specified on Device level.
+
+    (dcmWadoMetadataExcludePrivate)"
+    "
     .. _dcmQueryMaxNumberOfResults:
 
     :ref:`Query Max Number Of Results <dcmQueryMaxNumberOfResults>`",integer,"Maximal number of return results by C-FIND SCP. If the number of matches extends the limit, the C-FIND request will be refused. 0 = no limitation. Overwrites value specified on Device level.
