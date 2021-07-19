@@ -92,6 +92,12 @@ HL7 Prefetch Rule
 
     (dcmDuration)"
     "
+    .. _dcmHistorySize:
+
+    :ref:`Suppress Duplicate History Size <dcmHistorySize>`",integer,"Maximum number of HL7 messages with distinct PID-3 triggering this rule to remember on the history list.
+
+    (dcmHistorySize)"
+    "
     .. _dcmPrefetchDateTimeField:
 
     :ref:`Prefetch Date Time Field <dcmPrefetchDateTimeField>`",string,"Delay retrieve of selected Studies to time from referred HL7 TS field in format {SEG}-{Seq#}[.{Comp#}]. Example: TQ1-7 or SCH-11.4. Schedule retrieve of selected Studies immediate if absent.

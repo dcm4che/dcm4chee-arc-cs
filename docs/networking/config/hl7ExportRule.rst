@@ -55,3 +55,9 @@ HL7 Export Rule
     :ref:`Suppress Duplicate Export Interval <dcmDuration>`",string,"Suppress Export of Studies already exported not earlier than the specified interval to avoid duplicate exports.
 
     (dcmDuration)"
+    "
+    .. _dcmHistorySize:
+
+    :ref:`Suppress Duplicate History Size <dcmHistorySize>`",integer,"Maximum number of HL7 messages with distinct PID-3 triggering this rule to remember on the history list.
+
+    (dcmHistorySize)"
