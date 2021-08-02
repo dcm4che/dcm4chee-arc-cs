@@ -202,9 +202,15 @@ DICOM Archive Device related information
     "
     .. _dcmHideSPSWithStatusFromMWL:
 
-    :ref:`Hide SPS with Status(s) <dcmHideSPSWithStatusFromMWL>`",string,"Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL SCP. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: SCHEDULED, ARRIVED, READY, STARTED, DEPARTED, CANCELED, DISCONTINUED or COMPLETED.
+    :ref:`Hide SPS with Status by MWL SCP(s) <dcmHideSPSWithStatusFromMWL>`",string,"Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL SCP. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: SCHEDULED, ARRIVED, READY, STARTED, DEPARTED, CANCELED, DISCONTINUED or COMPLETED.
 
     (dcmHideSPSWithStatusFromMWL)"
+    "
+    .. _dcmHideSPSWithStatusFromMWLRS:
+
+    :ref:`Hide SPS with Status by MWL RS(s) <dcmHideSPSWithStatusFromMWLRS>`",string,"Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL RS. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: SCHEDULED, ARRIVED, READY, STARTED, DEPARTED, CANCELED, DISCONTINUED or COMPLETED.
+
+    (dcmHideSPSWithStatusFromMWLRS)"
     "
     .. _dcmEncodeAsJSONNumber:
 
@@ -718,7 +724,7 @@ DICOM Archive Device related information
     "
     .. _dcmPurgeQueueMessagePollingInterval:
 
-    :ref:`Purge Queue Messages Polling Interval <dcmPurgeQueueMessagePollingInterval>`",string,"Polling Interval for purging queue messages in ISO-8601 duration format PnDTnHnMnS. If absent, there is no deletion
+    :ref:`Purge Task Polling Interval <dcmPurgeQueueMessagePollingInterval>`",string,"Polling Interval for purging tasks in ISO-8601 duration format PnDTnHnMnS. If absent, there is no deletion
 
     (dcmPurgeQueueMessagePollingInterval)"
     "

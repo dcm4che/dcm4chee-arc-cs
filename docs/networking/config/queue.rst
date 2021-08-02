@@ -64,25 +64,25 @@ Managed JMS Queue
     "
     .. _dcmPurgeQueueMessageCompletedDelay:
 
-    :ref:`Delay for purging completed queue messages <dcmPurgeQueueMessageCompletedDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which completed queue messages are purged. If absent, there is no deletion for that particular queue
+    :ref:`Delay for purging completed tasks <dcmPurgeQueueMessageCompletedDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which completed tasks are purged. If absent, there is no deletion for that particular queue
 
     (dcmPurgeQueueMessageCompletedDelay)"
     "
     .. _dcmPurgeQueueMessageFailedDelay:
 
-    :ref:`Delay for purging failed queue messages <dcmPurgeQueueMessageFailedDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which failed queue messages are purged. If absent, there is no deletion for that particular queue
+    :ref:`Delay for purging failed tasks <dcmPurgeQueueMessageFailedDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which failed tasks are purged. If absent, there is no deletion for that particular queue
 
     (dcmPurgeQueueMessageFailedDelay)"
     "
     .. _dcmPurgeQueueMessageWarningDelay:
 
-    :ref:`Delay for purging warning queue messages <dcmPurgeQueueMessageWarningDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which warning queue messages are purged. If absent, there is no deletion for that particular queue
+    :ref:`Delay for purging warning tasks <dcmPurgeQueueMessageWarningDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which warning tasks are purged. If absent, there is no deletion for that particular queue
 
     (dcmPurgeQueueMessageWarningDelay)"
     "
     .. _dcmPurgeQueueMessageCanceledDelay:
 
-    :ref:`Delay for purging canceled queue messages <dcmPurgeQueueMessageCanceledDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which canceled queue messages are purged. If absent, there is no deletion for that particular queue
+    :ref:`Delay for purging canceled tasks <dcmPurgeQueueMessageCanceledDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which canceled tasks are purged. If absent, there is no deletion for that particular queue
 
     (dcmPurgeQueueMessageCanceledDelay)"
     "
