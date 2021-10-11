@@ -16,7 +16,7 @@ HL7 Prefetch Rule
     "
     .. _dcmQueueName:
 
-    :ref:`Queue Name <dcmQueueName>`",string,"Name of JMS Queue used for scheduling retrieve tasks triggered by this Prefetch Rule Enumerated values: Retrieve1, Retrieve2, Retrieve3, Retrieve4, Retrieve5, Retrieve6, Retrieve7, Retrieve8, Retrieve9, Retrieve10, Retrieve11, Retrieve12 or Retrieve13.
+    :ref:`Queue Name <dcmQueueName>`",string,"Name of Task Queue used for scheduling retrieve tasks triggered by this Prefetch Rule
 
     (dcmQueueName)"
     "

@@ -22,7 +22,7 @@ Exporter Descriptor
     "
     .. _dcmQueueName:
 
-    :ref:`Queue Name <dcmQueueName>`",string,"JMS Queue Name Enumerated values: Export1, Export2, Export3, Export4, Export5, Export6, Export7, Export8, Export9 or Export10.
+    :ref:`Queue Name <dcmQueueName>`",string,"Task Queue Name
 
     (dcmQueueName)"
     "

@@ -1,6 +1,6 @@
 Queue
 =====
-Managed JMS Queue
+Managed Task Queue
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|
 .. csv-table:: Queue Attributes (LDAP Object: dcmQueue)
@@ -10,7 +10,7 @@ Managed JMS Queue
     "
     .. _dcmQueueName:
 
-    :ref:`Queue Name <dcmQueueName>`",string,"JMS Queue Name
+    :ref:`Queue Name <dcmQueueName>`",string,"Task Queue Name
 
     (dcmQueueName)"
     "
