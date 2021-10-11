@@ -119,7 +119,7 @@ Message Structure
    :widths: 30, 5, 65
    :header: Field Name, Opt, Description
 
-   ParticipantObjectID, M, JMS Message ID of the canceled/rescheduled/deleted task
+   ParticipantObjectID, M, Task ID of the canceled/rescheduled/deleted task
    ParticipantObjectTypeCode, M, SystemObject ⇒ '2'
    ParticipantObjectIDTypeCode, M, "EV (TASK, 99DCM4CHEE, 'Archive Task')"
    ParticipantObjectDetail, M, 'type=Task value=<Base-64 encoded complete queue message>'
