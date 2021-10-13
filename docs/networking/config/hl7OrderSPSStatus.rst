@@ -10,7 +10,7 @@ Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01,
     "
     .. _dcmSPSStatus:
 
-    :ref:`Scheduled Procedure Step Status code <dcmSPSStatus>`",string,"Scheduled Procedure Step Status code Enumerated values: SCHEDULED, ARRIVED, READY, STARTED, DEPARTED, CANCELED, DISCONTINUED or COMPLETED.
+    :ref:`Scheduled Procedure Step Status code <dcmSPSStatus>`",string,"Scheduled Procedure Step Status code Enumerated values: SCHEDULED, CANCELED, DISCONTINUED or COMPLETED.
 
     (dcmSPSStatus)"
     "
