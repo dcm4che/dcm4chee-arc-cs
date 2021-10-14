@@ -10,7 +10,7 @@ ID Generator
     "
     .. _dcmIDGeneratorName:
 
-    :ref:`ID Generator Name <dcmIDGeneratorName>`",string,"ID Generator Name. Enumerated values: PatientID, AccessionNumber, RequestedProcedureID or ScheduledProcedureStepID.
+    :ref:`ID Generator Name <dcmIDGeneratorName>`",string,"ID Generator Name.
 
     (dcmIDGeneratorName)"
     "
