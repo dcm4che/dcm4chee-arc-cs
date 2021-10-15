@@ -20,6 +20,24 @@ DICOM Archive HL7 Application related information
 
     (dcmRecordAttributeModification)"
     "
+    .. _dcmMWLAccessionNumberGenerator:
+
+    :ref:`MWL Accession Number Generator <dcmMWLAccessionNumberGenerator>`",string,"Identifies ID Generator to supplement missing Accession Numbers of Scheduled Procedures Steps created on receive of HL7 Order messages or by RESTful service; default is ""AccessionNumber"". Overwrites value specified on Device level.
+
+    (dcmMWLAccessionNumberGenerator)"
+    "
+    .. _dcmMWLRequestedProcedureIDGenerator:
+
+    :ref:`MWL Requested Procedure ID Generator <dcmMWLRequestedProcedureIDGenerator>`",string,"Identifies ID Generator to supplement missing Requested Procedure IDs of Scheduled Procedures Steps created on receive of HL7 Order messages or by RESTful service; default is ""RequestedProcedureID"". Overwrites value specified on Device level.
+
+    (dcmMWLRequestedProcedureIDGenerator)"
+    "
+    .. _dcmMWLScheduledProcedureStepIDGenerator:
+
+    :ref:`MWL Scheduled Procedure Step ID Generator <dcmMWLScheduledProcedureStepIDGenerator>`",string,"Identifies ID Generator to supplement missing Scheduled Procedure Step IDs of Scheduled Procedures Steps created on receive of HL7 Order messages or by RESTful service; default is ""ScheduledProcedureStepID"". Overwrites value specified on Device level.
+
+    (dcmMWLScheduledProcedureStepIDGenerator)"
+    "
     .. _hl7ORUAction:
 
     :ref:`HL7 ORU Action(s) <hl7ORUAction>`",string,"Specifies action on receive of HL7 ORU^R01 message: IMPORT_REPORT (= transcode received HL7 ORU^R01 to DICOM SR), MWL_COMPLETED (= set Status of matching MWL items to COMPLETED). Overwrites value specified on Device level. Enumerated values: IMPORT_REPORT or MWL_COMPLETED.
@@ -134,3 +152,13 @@ DICOM Archive HL7 Application related information
     ":doc:`hl7StudyRetentionPolicy` (s)",object,"HL7 Study Retention Policies triggered by HL7 messages received by this HL7 Application. Supplements values specified on Device level."
     ":doc:`hl7OrderScheduledStation` (s)",object,"Scheduled Station selected on MWL HL7 Order Feed. Supplements values specified on Device level."
     ":doc:`hl7OrderSPSStatus` (s)",object,"Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages. Overwrites values specified on Device level."
+
+.. toctree::
+
+    hl7ForwardRule
+    hl7ExportRule
+    upsOnHL7
+    hl7PrefetchRule
+    hl7StudyRetentionPolicy
+    hl7OrderScheduledStation
+    hl7OrderSPSStatus

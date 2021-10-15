@@ -110,6 +110,24 @@ DICOM Archive Network AE related information
 
     (dcmHideSPSWithStatusFromMWLRS)"
     "
+    .. _dcmMWLAccessionNumberGenerator:
+
+    :ref:`MWL Accession Number Generator <dcmMWLAccessionNumberGenerator>`",string,"Identifies ID Generator to supplement missing Accession Numbers of Scheduled Procedures Steps created on receive of HL7 Order messages or by RESTful service; default is ""AccessionNumber"". Overwrites value specified on Device level.
+
+    (dcmMWLAccessionNumberGenerator)"
+    "
+    .. _dcmMWLRequestedProcedureIDGenerator:
+
+    :ref:`MWL Requested Procedure ID Generator <dcmMWLRequestedProcedureIDGenerator>`",string,"Identifies ID Generator to supplement missing Requested Procedure IDs of Scheduled Procedures Steps created on receive of HL7 Order messages or by RESTful service; default is ""RequestedProcedureID"". Overwrites value specified on Device level.
+
+    (dcmMWLRequestedProcedureIDGenerator)"
+    "
+    .. _dcmMWLScheduledProcedureStepIDGenerator:
+
+    :ref:`MWL Scheduled Procedure Step ID Generator <dcmMWLScheduledProcedureStepIDGenerator>`",string,"Identifies ID Generator to supplement missing Scheduled Procedure Step IDs of Scheduled Procedures Steps created on receive of HL7 Order messages or by RESTful service; default is ""ScheduledProcedureStepID"". Overwrites value specified on Device level.
+
+    (dcmMWLScheduledProcedureStepIDGenerator)"
+    "
     .. _dcmEncodeAsJSONNumber:
 
     :ref:`Encode as JSON Number(s) <dcmEncodeAsJSONNumber>`",string,"VR encoded as JSON Number. If not listed, IS, DS, SV and UV values are encoded as JSON Strings. Supplements values specified on Device level. Enumerated values: DS, IS, SV or UV.
@@ -488,11 +506,11 @@ DICOM Archive Network AE related information
 
     (hl7PSUDelay)"
     "
-    .. _hl7PSUConditions:
+    .. _hl7PSUCondition:
 
-    :ref:`HL7 Procedure Status Update Attribute Conditions(s) <hl7PSUConditions>`",string,"Restrict notification of configured HL7 Procedure Status Update Receiving Applications about Procedure Status Update by conditions on attributes of received composite object in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER. Overwrites value specified on Device level.
+    :ref:`HL7 Procedure Status Update Attribute Conditions(s) <hl7PSUCondition>`",string,"Restrict notification of configured HL7 Procedure Status Update Receiving Applications about Procedure Status Update by conditions on attributes of received composite object in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER. Overwrites value specified on Device level.
 
-    (hl7PSUConditions)"
+    (hl7PSUCondition)"
     "
     .. _hl7PSUForRequestedProcedure:
 
@@ -613,6 +631,12 @@ DICOM Archive Network AE related information
     :ref:`Change Requester AET <dcmChangeRequesterAET>`",string,"Indicates change requester AET in rejections triggered by archive. Overwrites value specified on Device level.
 
     (dcmChangeRequesterAET)"
+    "
+    .. _dcmFilterByIssuerOfPatientID:
+
+    :ref:`Filter by Issuer of Patient ID <dcmFilterByIssuerOfPatientID>`",boolean,"Filter by Issuer of Patient ID even if no matching key for Patient ID is specified. Overwrites value specified on Device level.
+
+    (dcmFilterByIssuerOfPatientID)"
     ":doc:`exportRule` (s)",object,"Export Rules applied to DICOM objects received by this AE. Supplements Export Rules specified on Device level."
     ":doc:`exportPriorsRule` (s)",object,"Export Priors Rules applied to DICOM objects received by this AE. Supplements Export Priors Rules specified on Device level."
     ":doc:`mppsForwardRule` (s)",object,"MPPS Forward Rules applied to MPPS received by this AE. Supplements MPPS Forward Rules specified on Device level."

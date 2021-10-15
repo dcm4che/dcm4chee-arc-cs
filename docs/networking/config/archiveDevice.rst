@@ -644,6 +644,24 @@ DICOM Archive Device related information
 
     (dcmStowSpoolDirectory)"
     "
+    .. _dcmMWLAccessionNumberGenerator:
+
+    :ref:`MWL Accession Number Generator <dcmMWLAccessionNumberGenerator>`",string,"Identifies ID Generator to supplement missing Accession Numbers of Scheduled Procedures Steps created on receive of HL7 Order messages or by RESTful service; default is ""AccessionNumber"". May be overwritten by configured values for particular Archive Network AEs or Archive HL7 Application.
+
+    (dcmMWLAccessionNumberGenerator)"
+    "
+    .. _dcmMWLRequestedProcedureIDGenerator:
+
+    :ref:`MWL Requested Procedure ID Generator <dcmMWLRequestedProcedureIDGenerator>`",string,"Identifies ID Generator to supplement missing Requested Procedure IDs of Scheduled Procedures Steps created on receive of HL7 Order messages or by RESTful service; default is ""RequestedProcedureID"". May be overwritten by configured values for particular Archive Network AEs or Archive HL7 Application.
+
+    (dcmMWLRequestedProcedureIDGenerator)"
+    "
+    .. _dcmMWLScheduledProcedureStepIDGenerator:
+
+    :ref:`MWL Scheduled Procedure Step ID Generator <dcmMWLScheduledProcedureStepIDGenerator>`",string,"Identifies ID Generator to supplement missing Scheduled Procedure Step IDs of Scheduled Procedures Steps created on receive of HL7 Order messages or by RESTful service; default is ""ScheduledProcedureStepID"". May be overwritten by configured values for particular Archive Network AEs or Archive HL7 Application.
+
+    (dcmMWLScheduledProcedureStepIDGenerator)"
+    "
     .. _hl7ORUAction:
 
     :ref:`HL7 ORU Action(s) <hl7ORUAction>`",string,"Specifies action on receive of HL7 ORU^R01 message: IMPORT_REPORT (= transcode received HL7 ORU^R01 to DICOM SR), MWL_COMPLETED (= set Status of matching MWL items to COMPLETED). May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: IMPORT_REPORT or MWL_COMPLETED.
