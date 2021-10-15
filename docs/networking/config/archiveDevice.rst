@@ -646,19 +646,19 @@ DICOM Archive Device related information
     "
     .. _dcmMWLAccessionNumberGenerator:
 
-    :ref:`MWL Accession Number Generator <dcmMWLAccessionNumberGenerator>`",string,"Identifies ID Generator to supplement missing Accession Numbers of Scheduled Procedures Steps created on receive of HL7 Order messages or by RESTful service; default is ""AccessionNumber"". May be overwritten by configured values for particular Archive Network AEs or Archive HL7 Application.
+    :ref:`MWL Accession Number Generator <dcmMWLAccessionNumberGenerator>`",string,"Identifies ID Generator to supplement missing Accession Numbers of Scheduled Procedures Steps created on receive of HL7 Order messages or by RESTful service. May be overwritten by configured values for particular Archive Network AEs or Archive HL7 Application.
 
     (dcmMWLAccessionNumberGenerator)"
     "
     .. _dcmMWLRequestedProcedureIDGenerator:
 
-    :ref:`MWL Requested Procedure ID Generator <dcmMWLRequestedProcedureIDGenerator>`",string,"Identifies ID Generator to supplement missing Requested Procedure IDs of Scheduled Procedures Steps created on receive of HL7 Order messages or by RESTful service; default is ""RequestedProcedureID"". May be overwritten by configured values for particular Archive Network AEs or Archive HL7 Application.
+    :ref:`MWL Requested Procedure ID Generator <dcmMWLRequestedProcedureIDGenerator>`",string,"Identifies ID Generator to supplement missing Requested Procedure IDs of Scheduled Procedures Steps created on receive of HL7 Order messages or by RESTful service. May be overwritten by configured values for particular Archive Network AEs or Archive HL7 Application.
 
     (dcmMWLRequestedProcedureIDGenerator)"
     "
     .. _dcmMWLScheduledProcedureStepIDGenerator:
 
-    :ref:`MWL Scheduled Procedure Step ID Generator <dcmMWLScheduledProcedureStepIDGenerator>`",string,"Identifies ID Generator to supplement missing Scheduled Procedure Step IDs of Scheduled Procedures Steps created on receive of HL7 Order messages or by RESTful service; default is ""ScheduledProcedureStepID"". May be overwritten by configured values for particular Archive Network AEs or Archive HL7 Application.
+    :ref:`MWL Scheduled Procedure Step ID Generator <dcmMWLScheduledProcedureStepIDGenerator>`",string,"Identifies ID Generator to supplement missing Scheduled Procedure Step IDs of Scheduled Procedures Steps created on receive of HL7 Order messages or by RESTful service. May be overwritten by configured values for particular Archive Network AEs or Archive HL7 Application.
 
     (dcmMWLScheduledProcedureStepIDGenerator)"
     "
