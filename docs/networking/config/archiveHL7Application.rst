@@ -152,13 +152,3 @@ DICOM Archive HL7 Application related information
     ":doc:`hl7StudyRetentionPolicy` (s)",object,"HL7 Study Retention Policies triggered by HL7 messages received by this HL7 Application. Supplements values specified on Device level."
     ":doc:`hl7OrderScheduledStation` (s)",object,"Scheduled Station selected on MWL HL7 Order Feed. Supplements values specified on Device level."
     ":doc:`hl7OrderSPSStatus` (s)",object,"Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages. Overwrites values specified on Device level."
-
-.. toctree::
-
-    hl7ForwardRule
-    hl7ExportRule
-    upsOnHL7
-    hl7PrefetchRule
-    hl7StudyRetentionPolicy
-    hl7OrderScheduledStation
-    hl7OrderSPSStatus

@@ -1166,6 +1166,12 @@ DICOM Archive Device related information
 
     (dcmSupplementIssuerFetchSize)"
     "
+    .. _dcmUpdateCharsetFetchSize:
+
+    :ref:`Update Charset Fetch Size <dcmUpdateCharsetFetchSize>`",integer,"Limit result set of DB query for matching Patients by RESTful service to update the character set of Patient Attributes in DB BLOB fields.
+
+    (dcmUpdateCharsetFetchSize)"
+    "
     .. _hl7ADTSendingApplication:
 
     :ref:`HL7 ADT Sending Application <hl7ADTSendingApplication>`",string,"Application|Facility name of Sending Application for HL7 ADT messages to synchronize external systems about performed Patient Information updates. If absent, synchronization of external systems by HL7 ADT messages is disabled.
@@ -1420,6 +1426,7 @@ DICOM Archive Device related information
     ":doc:`rsForwardRule` (s)",object,"RESTful Forward Rules. May be supplemented by configured RESTful Forward Rules for particular Archive Network AEs."
     ":doc:`archiveCompressionRule` (s)",object,"Compression rules applied to DICOM objects received by any AE. May be supplemented by configured Compression Rules for particular Archive Network AEs."
     ":doc:`archiveAttributeCoercion` (s)",object,"Attribute Coercion applied to DIMSE received/sent by any AE. May be supplemented by configured Attribute Coercions for particular Archive Network AEs."
+    ":doc:`archiveAttributeCoercion2` (s)",object,"Attribute Coercion applied to DIMSE received/sent by any AE. May be supplemented by configured Attribute Coercions for particular Archive Network AEs."
     ":doc:`rejectionNote` (s)",object,"Specifies behavior on Rejection Note Stored"
     ":doc:`studyRetentionPolicy` (s)",object,"Study Retention Policies applied to Studies received by any AE. May be supplemented by configured Study Retention Policies for particular Archive Network AEs."
     ":doc:`storeAccessControlIDRule` (s)",object,"Store Access Control Rules applied to Studies received by any AE. May be supplemented by configured Store Access Control Rules for particular Archive Network AEs."
@@ -1466,6 +1473,7 @@ DICOM Archive Device related information
     rsForwardRule
     archiveCompressionRule
     archiveAttributeCoercion
+    archiveAttributeCoercion2
     rejectionNote
     studyRetentionPolicy
     storeAccessControlIDRule
