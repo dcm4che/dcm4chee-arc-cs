@@ -82,7 +82,7 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmMergeMWLSCP:
 
-    :ref:`Merge MWL SCP <dcmMergeMWLSCP>`",string,"AE Title of external MWL SCP to lookup MWL Item used to coerce request attributes of received objects.
+    :ref:`Merge MWL SCP <dcmMergeMWLSCP>`",string,"AE Title of MWL SCP to lookup MWL Item used to coerce request attributes of received objects. If it refers a MWL SCP of the own Archive Device, the Archive DB is directly queried for a matching MWL item. If it refers an external MWL SCP, that is queried by invoking a C-FIND RQ of the DICOM MWL Service. If absent, the Archive DB is queried for a matching MWL item provided by any Archive MWL AE.
 
     (dcmMergeMWLSCP)"
     "
