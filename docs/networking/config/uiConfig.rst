@@ -53,6 +53,7 @@ UI Configuration
     ":doc:`uiElasticsearch` (s)",object,"Elasticsearch Configuration for the pro version"
     ":doc:`uiDeviceCluster` (s)",object,"Group Devices in Clusters"
     ":doc:`uiDashboard` (s)",object,"UI Dashboard Configuration"
+    ":doc:`uiDialogTemplate` (s)",object,"UI Create Dialog Templates Configuration"
 
 .. toctree::
 
@@ -66,3 +67,4 @@ UI Configuration
     uiElasticsearch
     uiDeviceCluster
     uiDashboard
+    uiDialogTemplate
