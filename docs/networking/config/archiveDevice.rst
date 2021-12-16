@@ -662,6 +662,12 @@ DICOM Archive Device related information
 
     (dcmMWLScheduledProcedureStepIDGenerator)"
     "
+    .. _dcmAuditHL7MsgLimit:
+
+    :ref:`Audit HL7 Message Limit <dcmAuditHL7MsgLimit>`",integer,"Limit length of HL7 messages included in emitted Audit Records. May be overwritten by configured values for particular Archive HL7 Application.
+
+    (dcmAuditHL7MsgLimit)"
+    "
     .. _hl7ORUAction:
 
     :ref:`HL7 ORU Action(s) <hl7ORUAction>`",string,"Specifies action on receive of HL7 ORU^R01 message: IMPORT_REPORT (= transcode received HL7 ORU^R01 to DICOM SR), MWL_COMPLETED (= set Status of matching MWL items to COMPLETED). May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: IMPORT_REPORT or MWL_COMPLETED.
