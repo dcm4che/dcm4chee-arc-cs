@@ -1417,6 +1417,12 @@ DICOM Archive Device related information
     :ref:`Filter by Issuer of Patient ID <dcmFilterByIssuerOfPatientID>`",boolean,"Filter by Issuer of Patient ID even if no matching key for Patient ID is specified. May be overwritten by configured value for particular Archive Network AEs.
 
     (dcmFilterByIssuerOfPatientID)"
+    "
+    .. _dcmMatchSOPClassOnInstanceLevel:
+
+    :ref:`Match SOP Class on Instance level <dcmMatchSOPClassOnInstanceLevel>`",boolean,"Indicates to consider the SOP Class UID on Instance level for calculation of matches with SOP Classes in Study (0008,0062); otherwise rely on stored SOP Class UID on Series level, which may result in missing matches if one Series includes Instances of different SOP Classes. May be overwritten by configured value for particular Archive Network AEs.
+
+    (dcmMatchSOPClassOnInstanceLevel)"
     ":doc:`attributeFilter` (s)",object,"Specifies Attributes stored in the database"
     ":doc:`attributeSet` (s)",object,"Named Attribute Set for Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests."
     ":doc:`bulkData` (s)",object,"Specifies Bulk Data Descriptors applied by services providing Metadata of archived instances."

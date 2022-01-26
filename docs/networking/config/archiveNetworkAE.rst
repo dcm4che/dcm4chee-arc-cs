@@ -637,6 +637,12 @@ DICOM Archive Network AE related information
     :ref:`Filter by Issuer of Patient ID <dcmFilterByIssuerOfPatientID>`",boolean,"Filter by Issuer of Patient ID even if no matching key for Patient ID is specified. Overwrites value specified on Device level.
 
     (dcmFilterByIssuerOfPatientID)"
+    "
+    .. _dcmMatchSOPClassOnInstanceLevel:
+
+    :ref:`Match SOP Class on Instance level <dcmMatchSOPClassOnInstanceLevel>`",boolean,"Indicates to consider the SOP Class UID on Instance level for calculation of matches with SOP Classes in Study (0008,0062); otherwise rely on stored SOP Class UID on Series level, which may result in missing matches if one Series includes Instances of different SOP Classes. Overwrites value specified on Device level.
+
+    (dcmMatchSOPClassOnInstanceLevel)"
     ":doc:`exportRule` (s)",object,"Export Rules applied to DICOM objects received by this AE. Supplements Export Rules specified on Device level."
     ":doc:`exportPriorsRule` (s)",object,"Export Priors Rules applied to DICOM objects received by this AE. Supplements Export Priors Rules specified on Device level."
     ":doc:`mppsForwardRule` (s)",object,"MPPS Forward Rules applied to MPPS received by this AE. Supplements MPPS Forward Rules specified on Device level."
@@ -648,3 +654,17 @@ DICOM Archive Network AE related information
     ":doc:`storeAccessControlIDRule` (s)",object,"Store Access Control Rules applied to Studies received by this AE. Supplements Store Access Control Rules specified on Device level."
     ":doc:`upsOnStore` (s)",object,"UPS on Store Rules applied to DICOM objects received by this AE. Supplements UPS on Store Rules specified on Device level."
     ":doc:`upsOnUPSCompleted` (s)",object,"UPS on UPS Completed Rules applied to UPS managed by this AE. Supplements UPS on UPS Completed Rules specified on Device level."
+
+.. toctree::
+
+    exportRule
+    exportPriorsRule
+    mppsForwardRule
+    rsForwardRule
+    archiveCompressionRule
+    archiveAttributeCoercion
+    archiveAttributeCoercion2
+    studyRetentionPolicy
+    storeAccessControlIDRule
+    upsOnStore
+    upsOnUPSCompleted
