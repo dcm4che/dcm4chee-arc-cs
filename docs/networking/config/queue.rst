@@ -14,12 +14,6 @@ Managed Task Queue
 
     (dcmQueueName)"
     "
-    .. _dicomDescription:
-
-    :ref:`Queue Description <dicomDescription>`",string,"Unconstrained text description of the Queue
-
-    (dicomDescription)"
-    "
     .. _dicomInstalled:
 
     :ref:`installed <dicomInstalled>`",boolean,"If false, processing of tasks in this queue is paused.
@@ -31,6 +25,12 @@ Managed Task Queue
     :ref:`Maximum parallel Tasks <dcmMaxTasksParallel>`",integer,"Maximal number of tasks processed in parallel.
 
     (dcmMaxTasksParallel)"
+    "
+    .. _dicomDescription:
+
+    :ref:`DICOM Description <dicomDescription>`",string,"Textual description of the DICOM entity
+
+    (dicomDescription)"
     "
     .. _dcmMaxRetries:
 
