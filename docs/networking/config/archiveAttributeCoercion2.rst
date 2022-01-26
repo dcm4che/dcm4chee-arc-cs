@@ -32,6 +32,12 @@ Archive Attribute Coercion of received/sent DIMSE
 
     (dcmCoercionSufficient)"
     "
+    .. _dcmCoercionOnFailure:
+
+    :ref:`Attribute Coercion on Failure <dcmCoercionOnFailure>`",string,"Behavior on failure applying this Attribute Coercion. RETHROW (= propagate failure to operation applying this Attribute Coercion), CONTINUE (= continue to apply other matching Attribute Coercions of lesser priority) or SUFFICIENT (= do not apply other matching Attribute Coercions of lesser priority). Enumerated values: RETHROW, CONTINUE or SUFFICIENT.
+
+    (dcmCoercionOnFailure)"
+    "
     .. _dcmRulePriority:
 
     :ref:`Attribute Coercion Priority <dcmRulePriority>`",integer,"Rule Priority.
@@ -58,7 +64,7 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmProperty:
 
-    :ref:`Attribute Coercion Conditions(s) <dcmProperty>`",string,"Conditions in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER
+    :ref:`Condition(s) <dcmProperty>`",string,"Conditions in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER
 
     (dcmProperty)"
     "
