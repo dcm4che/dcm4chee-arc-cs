@@ -169,3 +169,9 @@ dcm4che proprietary Network Connection Attributes
     :ref:`Idle Timeout <dcmIdleTimeout>`",integer,"Indicates aborting of idle Associations after specified timeout in ms; no timeout if absent
 
     (dcmIdleTimeout)"
+    "
+    .. _dcmAATimeout:
+
+    :ref:`A-ABORT Timeout <dcmAATimeout>`",integer,"Timeout in ms for waiting for finishing sending any DIMSE before sending an A-ABORT PDU, triggered by the application or by expiration of a configured other timeout of this Connection. If the timeout expires, the TCP connection will be closed without sending the A-ABORT.
+
+    (dcmAATimeout)"

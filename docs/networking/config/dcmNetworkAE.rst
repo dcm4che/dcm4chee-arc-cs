@@ -26,6 +26,12 @@ dcm4che proprietary Attributes of Network AE
 
     (dcmOtherAETitle)"
     "
+    .. _dcmNoAsyncModeCalledAETitle:
+
+    :ref:`No Async Mode Called AE Title(s) <dcmNoAsyncModeCalledAETitle>`",string,"Blacklist AE Title of peer Network AE as not capable to handle Asynchronous Operations Window Negotiation correctly. Suppress including corresponding User-data sub-Item in A-ASSOCIATE RQs to that Network AEs.
+
+    (dcmNoAsyncModeCalledAETitle)"
+    "
     .. _dcmMasqueradeCallingAETitle:
 
     :ref:`Masquerade Calling AE Title(s) <dcmMasqueradeCallingAETitle>`",string,"AE Title used for initiating network associations, masquerading the actual AE Title for this Network AE - optional prefix [<Called AE Title>] limits the masquerading to association to a particular AE Title
