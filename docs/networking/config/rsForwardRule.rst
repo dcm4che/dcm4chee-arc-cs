@@ -38,6 +38,18 @@ RESTful Forward Rule
 
     (dcmURIPattern)"
     "
+    .. _dcmHostnamePattern:
+
+    :ref:`Hostname Pattern <dcmHostnamePattern>`",string,"Only forward requests received from clients which hostname match the given Regular Expression. If prefixed with !, only forward requests from clients which hostname does not match the given Regular Expression.
+
+    (dcmHostnamePattern)"
+    "
+    .. _dcmIPAddressPattern:
+
+    :ref:`IP Address Pattern <dcmIPAddressPattern>`",string,"Only forward requests received from clients which match the given Regular Expression. If prefixed with !, only forward requests from clients which IP address does not match the given Regular Expression.
+
+    (dcmIPAddressPattern)"
+    "
     .. _dcmRSOperation:
 
     :ref:`RESTful Operation(s) <dcmRSOperation>`",string,"Name of RESTful Operation which shall be forwarded to another archive instance. Enumerated values: CreatePatient, UpdatePatient, DeletePatient, ChangePatientID, ChangePatientID2, MergePatient, MergePatient2, UnmergePatient, UpdateStudy, UpdateSeries, DeleteStudy, RejectStudy, RejectSeries, RejectInstance, ReimportStudy, UpdateStudyExpirationDate, UpdateSeriesExpirationDate, ApplyRetentionPolicy, CreateMWL, UpdateMWL, DeleteMWL, UpdateStudyAccessControlID, MoveStudyToPatient, SupplementIssuer or UpdateCharset.
