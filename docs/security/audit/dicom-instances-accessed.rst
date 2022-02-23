@@ -8,7 +8,7 @@ This message is emitted by the archive in following cases :
 
 - Some objects / series of study are rejected using UI
 - Some objects / series of study are rejected in an external archive using UI
-- Rejection Notes for some objects of a study are stored to the archive using `RAD-66 <https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol3.pdf#page=159>`_ transaction.
+- Rejection Notes for some objects of a study are stored to the archive using `RAD-66 <https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf#page=455>`_ transaction.
 - Objects are retrieved from an external archive by HL7 Prefetch Scheduler
 - Update study/series expiration date using UI / Study Retention Policy / HL7 Study Retention Policy.
 - Update study attributes using UI.
@@ -95,11 +95,11 @@ Message Structure
    ParticipantObjectTypeCodeRole, M, Report ⇒ '3',
    ParticipantObjectIDTypeCode, M, "EV (110180, DCM, 'Study Instance UID')",
    ParticipantObjectDetail, U, "| All cases ⇒ 'Base-64 encoded study date if Study has StudyDate(0008,0020) attribute', Not present for scheduler triggered study size & query attributes calculation
-   | Update study / series expiration date ⇒ 'Base-64 encoded expiration date (7777,1023)',"
+   | Update study / series expiration date ⇒ 'Base-64 encoded expiration date (7777,1023)'",
    ParticipantObjectDescription, U, , Not present for scheduler triggered study size & query attributes calculation
    SOPClass, MC, Rejection / Deletion case ⇒ Sop Class UID and Number of instances with this sop class. eg. <SOPClass UID='1.2.840.10008.5.1.4.1.1.88.22' NumberOfInstances='4'/>, Not present for scheduler triggered study size & query attributes calculation
    Accession, U, Accession Number, Not present for scheduler triggered study size & query attributes calculation
-   ParticipantObjectDataLifeCycle, U, "| Scheduler triggered study size & query attributes calculation case : AggregationSummarizationDerivation ⇒ '8'
+   ParticipantObjectDataLifeCycle, U, Scheduler triggered study size & query attributes calculation case : AggregationSummarizationDerivation ⇒ '8'
 
 .. csv-table:: Participant Object Identification : Patient
    :name: participant-object-patient-instances-accessed
@@ -149,7 +149,7 @@ Study partially rejected using UI
         </ParticipantObjectIdentification>
     </AuditMessage>
 
-Rejection Notes for some objects of a study are stored to the archive using `RAD-66 <http://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf#page=40>`_ transaction
+Rejection Notes for some objects of a study are stored to the archive using `RAD-66 <https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf#page=455>`_ transaction
 
 .. code-block:: xml
 

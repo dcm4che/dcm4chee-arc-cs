@@ -36,13 +36,13 @@ Message Structure
    :widths: 30, 5, 65
    :header: Field Name, Opt, Description
 
-   EventID, M, "| EV (110112, DCM, 'Query')"
-   EventActionCode, M, | Execute ⇒ 'E'
-   EventDateTime, M, | The time at which the event occurred
+   EventID, M, "EV (110112, DCM, 'Query')"
+   EventActionCode, M, Execute ⇒ 'E'
+   EventDateTime, M, The time at which the event occurred
    EventOutcomeIndicator, M, "| Success ⇒ '0'
    | Minor failure ⇒ '4'"
-   EventOutcomeDescription, M, | Error/Exception message when EventOutcomeIndicator ⇒ '4'
-   EventTypeCode, C, | Patient Demographics Query case ⇒ EV (ITI-21, IHE Transactions, 'Patient Demographics Query')
+   EventOutcomeDescription, M, Error/Exception message when EventOutcomeIndicator ⇒ '4'
+   EventTypeCode, C, "Patient Demographics Query case ⇒ EV (ITI-21, IHE Transactions, 'Patient Demographics Query')"
 
 .. csv-table:: Active Participant : Initiator
    :name: active-participant-initiator-query
