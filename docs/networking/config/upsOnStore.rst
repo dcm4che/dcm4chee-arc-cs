@@ -100,25 +100,25 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
     "
     .. _dcmUPSScheduledStationNameCode:
 
-    :ref:`Scheduled Station Name Code <dcmUPSScheduledStationNameCode>`",string,"Item of Scheduled Station Name Code Sequence (0040,4025) in created UPS in format (CV, CSD, ""CM"").
+    :ref:`Scheduled Station Name Code(s) <dcmUPSScheduledStationNameCode>`",string,"Item of Scheduled Station Name Code Sequence (0040,4025) in created UPS in format (CV, CSD, ""CM"").
 
     (dcmUPSScheduledStationNameCode)"
     "
     .. _dcmUPSScheduledStationClassCode:
 
-    :ref:`Scheduled Station Class Code <dcmUPSScheduledStationClassCode>`",string,"Item of Scheduled Station Class Code Sequence (0040,4026) in created UPS in format (CV, CSD, ""CM"").
+    :ref:`Scheduled Station Class Code(s) <dcmUPSScheduledStationClassCode>`",string,"Item of Scheduled Station Class Code Sequence (0040,4026) in created UPS in format (CV, CSD, ""CM"").
 
     (dcmUPSScheduledStationClassCode)"
     "
     .. _dcmUPSScheduledStationLocationCode:
 
-    :ref:`Scheduled Station Geographic Location Code <dcmUPSScheduledStationLocationCode>`",string,"Item of Scheduled Station Geographic Location Code Sequence (0040,4027) in created UPS in format (CV, CSD, ""CM"").
+    :ref:`Scheduled Station Geographic Location Code(s) <dcmUPSScheduledStationLocationCode>`",string,"Item of Scheduled Station Geographic Location Code Sequence (0040,4027) in created UPS in format (CV, CSD, ""CM"").
 
     (dcmUPSScheduledStationLocationCode)"
     "
     .. _dcmUPSScheduledHumanPerformerCode:
 
-    :ref:`Scheduled Human Performer Code <dcmUPSScheduledHumanPerformerCode>`",string,"Item of Human Performer Code Sequence (0040,4009) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS in format (CV, CSD, ""CM"").
+    :ref:`Scheduled Human Performer Code(s) <dcmUPSScheduledHumanPerformerCode>`",string,"Item of Human Performer Code Sequence (0040,4009) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS in format (CV, CSD, ""CM"").
 
     (dcmUPSScheduledHumanPerformerCode)"
     "

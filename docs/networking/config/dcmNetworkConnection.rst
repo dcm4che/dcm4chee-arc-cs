@@ -32,6 +32,12 @@ dcm4che proprietary Network Connection Attributes
 
     (dcmTLSProtocol)"
     "
+    .. _dcmTLSEndpointIdentificationAlgorithm:
+
+    :ref:`TLS Endpoint Identification Algorithm <dcmTLSEndpointIdentificationAlgorithm>`",string,"Indicates the endpoint identification or verification procedures during TLS handshaking. Enumerated values: HTTPS or LDAPS.
+
+    (dcmTLSEndpointIdentificationAlgorithm)"
+    "
     .. _dcmTCPBacklog:
 
     :ref:`TCP Backlog <dcmTCPBacklog>`",integer,"Maximum queue length for incoming TCP connections.

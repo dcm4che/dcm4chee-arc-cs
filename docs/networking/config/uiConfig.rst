@@ -39,6 +39,18 @@ UI Configuration
 
     (dcmuiLogoURL)"
     "
+    .. _dcmuiDateTimeFormat:
+
+    :ref:`Format Date Time <dcmuiDateTimeFormat>`",string,"Here you can format the date time in the UI by using 'yyyy' for the year, 'MM' for the Month, 'dd' for the date, 'HH' for the hour 'mm' for the minutes, 'ss' and 'SSS' for the seconds. To format Date, Time and Date-Time you should use `DATE`, `TIME` and `DATE-TIME` for example like this: `DATE=yyyy-MM-dd, TIME=HH:mm, DATE-TIME=yyyy-MM-dd HH:mm`
+
+    (dcmuiDateTimeFormat)"
+    "
+    .. _dcmuiPersonNameFormat:
+
+    :ref:`Format Person Name <dcmuiPersonNameFormat>`",string,"Here you can format the person Name in the UI by using:{FAMILY-NAME}, {GIVEN-NAME}, {MIDDLE-NAME}, {NAME-PREFIX}, {NAME-SUFFIX} for Alphabetic, or by appending 'I_' for the Ideographic and 'P_' for the Phonetic version like {P_FAMILY-NAME}, {I_NAME-SUFFIX}
+
+    (dcmuiPersonNameFormat)"
+    "
     .. _dcmuiDefaultWidgetAets:
 
     :ref:`Default Widget AETs(s) <dcmuiDefaultWidgetAets>`",string,"Select the AETs that should be preselected on Widget AETs
