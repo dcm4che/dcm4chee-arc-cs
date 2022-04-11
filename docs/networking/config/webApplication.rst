@@ -34,7 +34,7 @@ Web Application information
     "
     .. _dcmWebServiceClass:
 
-    :ref:`Web Service Class(s) <dcmWebServiceClass>`",string,"Web Service Classes provided by the Web application Enumerated values: QIDO_RS, STOW_RS, WADO_RS, WADO_URI, UPS_RS, MWL_RS, QIDO_COUNT, DCM4CHEE_ARC, DCM4CHEE_ARC_AET, DCM4CHEE_ARC_AET_DIFF, PAM, REJECT, MOVE, MOVE_MATCHING, UPS_MATCHING, ELASTICSEARCH, XDS_RS, AGFA_BLOB or J4C_ROUTER.
+    :ref:`Web Service Class(s) <dcmWebServiceClass>`",string,"Web Service Classes provided by the Web application Enumerated values: QIDO_RS, STOW_RS, WADO_RS, WADO_URI, UPS_RS, MWL_RS, QIDO_COUNT, DCM4CHEE_ARC, DCM4CHEE_ARC_AET, DCM4CHEE_ARC_AET_DIFF, PAM, REJECT, MOVE, MOVE_MATCHING, UPS_MATCHING, ELASTICSEARCH, XDS_RS, AGFA_BLOB, J4C_ROUTER or FHIR.
 
     (dcmWebServiceClass)"
     "
