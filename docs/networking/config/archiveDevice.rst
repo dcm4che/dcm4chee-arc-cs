@@ -1228,25 +1228,25 @@ DICOM Archive Device related information
     "
     .. _hl7PSUAccessionNumber:
 
-    :ref:`HL7 Procedure Status Accession Number <hl7PSUAccessionNumber>`",string,"Value for Accession Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. May be overwritten by configured value for particular Archive Network AEs.
+    :ref:`HL7 Procedure Status Update Accession Number <hl7PSUAccessionNumber>`",string,"Value for Accession Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. May be overwritten by configured value for particular Archive Network AEs.
 
     (hl7PSUAccessionNumber)"
     "
     .. _hl7PSUFillerOrderNumber:
 
-    :ref:`HL7 Procedure Status Filler Order Number <hl7PSUFillerOrderNumber>`",string,"Value for Filler Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. May be overwritten by configured value for particular Archive Network AEs.
+    :ref:`HL7 Procedure Status Update Filler Order Number <hl7PSUFillerOrderNumber>`",string,"Value for Filler Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. May be overwritten by configured value for particular Archive Network AEs.
 
     (hl7PSUFillerOrderNumber)"
     "
     .. _hl7PSUPlacerOrderNumber:
 
-    :ref:`HL7 Procedure Status Placer Order Number <hl7PSUPlacerOrderNumber>`",string,"Value for Placer Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. May be overwritten by configured value for particular Archive Network AEs.
+    :ref:`HL7 Procedure Status Update Placer Order Number <hl7PSUPlacerOrderNumber>`",string,"Value for Placer Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. May be overwritten by configured value for particular Archive Network AEs.
 
     (hl7PSUPlacerOrderNumber)"
     "
     .. _hl7PSUMessageType:
 
-    :ref:`HL7 Procedure Status Message Type <hl7PSUMessageType>`",string,"Message Type of HL7 Procedure Status Update message. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: OMG_O19 or ORU_R01.
+    :ref:`HL7 Procedure Status Update Message Type <hl7PSUMessageType>`",string,"Message Type of HL7 Procedure Status Update message. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: OMG_O19 or ORU_R01.
 
     (hl7PSUMessageType)"
     "
