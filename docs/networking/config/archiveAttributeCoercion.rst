@@ -70,7 +70,7 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmMergeMWLMatchingKey:
 
-    :ref:`Merge MWL Matching Key <dcmMergeMWLMatchingKey>`",string,"Specifies attribute of received object to lookup MWL Item used to coerce request attributes. If absent, request attributes of received objects will not be coerced. If PatientID is selected as matching key, Patient ID and Accession Number or Study Instance UID shall be considered in querying MWLs. If ScheduledProcedureStepID is selected as matching key, Scheduled Procedure Step ID and Study Instance UID  shall be considered in querying MWLs. Enumerated values: PatientID, AccessionNumber, StudyInstanceUID or ScheduledProcedureStepID.
+    :ref:`Merge MWL Matching Key <dcmMergeMWLMatchingKey>`",string,"Specifies attribute of received object to lookup MWL Item used to coerce request attributes. If absent, request attributes of received objects will not be coerced. PatientID - Patient ID and Accession Number considered for querying MWLs. If Accession Number not available in object attributes, only Patient ID considered for querying MWLs. PatientIDOnly - Only Patient ID considered for querying MWLs. PatientIDAccessionNumber - Patient ID and Accession Number considered for querying MWLs. If Accession Number not available in object attributes, fall back to Study Instance UID. AccessionNumber - Only Accession Number considered for querying MWLs. StudyInstanceUID - Only Study Instance UID considered for querying MWLs. ScheduledProcedureStepID - Scheduled Procedure Step ID and Study Instance UID considered for querying MWLs. Enumerated values: PatientID, PatientIDOnly, PatientIDAccessionNumber, AccessionNumber, StudyInstanceUID or ScheduledProcedureStepID.
 
     (dcmMergeMWLMatchingKey)"
     "
