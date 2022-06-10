@@ -16,7 +16,7 @@ Web Application information
     "
     .. _dicomNetworkConnectionReference:
 
-    :ref:`Web Application Network Connection(s)(s) <dicomNetworkConnectionReference>`",string,"Network Connection(s) on which the services of the Web application are available
+    :ref:`Web Application Network Connection(s) <dicomNetworkConnectionReference>`",string,"Network Connection(s) on which the services of the Web application are available
 
     (dicomNetworkConnectionReference)"
     "

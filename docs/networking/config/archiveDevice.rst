@@ -1162,7 +1162,7 @@ DICOM Archive Device related information
     "
     .. _dcmPatientVerificationMaxStaleness:
 
-    :ref:`Patient Verification Maximum Staleness <dcmPatientVerificationMaxStaleness>`",string,"Indicates to renew the verification of Patient Demographics on receive of objects for a patient, if previous verification is longer ago as the specified Interval. If absent, Patient Verification on receive of objects is disabled.
+    :ref:`Patient Verification Maximum Staleness <dcmPatientVerificationMaxStaleness>`",string,"Indicates to renew the verification of Patient Demographics on receive of objects for a patient, if previous executed verification is older than specified interval. If absent, Patient Verification on receive of objects is disabled.
 
     (dcmPatientVerificationMaxStaleness)"
     "

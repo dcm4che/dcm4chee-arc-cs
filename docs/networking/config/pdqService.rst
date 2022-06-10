@@ -28,7 +28,7 @@ PDQ Service Descriptor
     "
     .. _dcmTag:
 
-    :ref:`Patient Attributes(s) <dcmTag>`",string,"Queried Patient Attributes - if not specified all available Patient attributes will be queried
+    :ref:`Patient Attributes(s) <dcmTag>`",string,"Queried Patient Attributes - if not specified all available Patient attributes will be queried. Only applicable for 'pdq-dicom' PDQ Service
 
     (dcmTag)"
     "
