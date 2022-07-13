@@ -560,6 +560,12 @@ DICOM Archive Network AE related information
 
     (hl7PSUMWL)"
     "
+    .. _hl7PSUMWLMatchingKey:
+
+    :ref:`HL7 Procedure Status Update MWL Matching Key <hl7PSUMWLMatchingKey>`",string,"Specifies attribute of received object to lookup MWL Item whose status is to be updated to COMPLETED. Only applicable is 'HL7 Procedure Status Update MWL' is configured as or implicitly set to true. Overwrites value specified on Device level. Enumerated values: AccessionNumber or StudyInstanceUID.
+
+    (hl7PSUMWLMatchingKey)"
+    "
     .. _hl7PSUTimeout:
 
     :ref:`HL7 Procedure Status Update Timeout <hl7PSUTimeout>`",string,"Timeout in ISO-8601 duration format PnDTnHnMn.nS for waiting on receive of instances referenced in MPPS. Overwrites value specified on Device level.
@@ -654,3 +660,17 @@ DICOM Archive Network AE related information
     ":doc:`storeAccessControlIDRule` (s)",object,"Store Access Control Rules applied to Studies received by this AE. Supplements Store Access Control Rules specified on Device level."
     ":doc:`upsOnStore` (s)",object,"UPS on Store Rules applied to DICOM objects received by this AE. Supplements UPS on Store Rules specified on Device level."
     ":doc:`upsOnUPSCompleted` (s)",object,"UPS on UPS Completed Rules applied to UPS managed by this AE. Supplements UPS on UPS Completed Rules specified on Device level."
+
+.. toctree::
+
+    exportRule
+    exportPriorsRule
+    mppsForwardRule
+    rsForwardRule
+    archiveCompressionRule
+    archiveAttributeCoercion
+    archiveAttributeCoercion2
+    studyRetentionPolicy
+    storeAccessControlIDRule
+    upsOnStore
+    upsOnUPSCompleted

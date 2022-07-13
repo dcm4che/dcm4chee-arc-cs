@@ -1262,6 +1262,12 @@ DICOM Archive Device related information
 
     (hl7PSUMWL)"
     "
+    .. _hl7PSUMWLMatchingKey:
+
+    :ref:`HL7 Procedure Status Update MWL Matching Key <hl7PSUMWLMatchingKey>`",string,"Specifies attribute of received object to lookup MWL Item whose status is to be updated to COMPLETED. Only applicable is 'HL7 Procedure Status Update MWL' is configured as or implicitly set to true. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: AccessionNumber or StudyInstanceUID.
+
+    (hl7PSUMWLMatchingKey)"
+    "
     .. _hl7PSUTimeout:
 
     :ref:`HL7 Procedure Status Update Timeout <hl7PSUTimeout>`",string,"Timeout in ISO-8601 duration format PnDTnHnMnS for waiting on receive of instances referenced in MPPS; check for completeness forever if absent. May be overwritten by configured values for particular Archive Network AEs.
