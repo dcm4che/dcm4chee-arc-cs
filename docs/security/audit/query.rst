@@ -25,6 +25,9 @@ Message Structure
     :ref:`active-participant-archive-query`, Not present in Patient Demographics Query triggered by scheduler case
     :ref:`active-participant-pdq-consumer-query`, Present only in Patient Demographics Query case
     :ref:`active-participant-pdq-supplier-query`, Present only in Patient Demographics Query case
+    :ref:`active-participant-fhir-pdq-user-query`, Present only in FHIR Patient Demographics Query case
+    :ref:`active-participant-fhir-pdq-consumer-query`, Present only in FHIR Patient Demographics Query case
+    :ref:`active-participant-fhir-pdq-supplier-query`, Present only in FHIR Patient Demographics Query case
     :ref:`audit-general-message-audit-source`
     :ref:`participant-object-c-find-query`, Present only in Query by C-FIND
     :ref:`participant-object-qido-query`, Present only in QIDO Query
@@ -108,6 +111,52 @@ Message Structure
    UserIsRequestor, M, | false
    RoleIDCode, M, "| EV (110152, DCM, 'Destination Role ID')"
    NetworkAccessPointID, U, | Hostname/IP Address of calling host
+   NetworkAccessPointTypeCode, U, "| NetworkAccessPointID is host name ⇒ '1'
+   | NetworkAccessPointID is an IP address ⇒ '2'"
+
+.. csv-table:: Active Participant : FHIR Patient Demographics User
+   :name: active-participant-fhir-pdq-user-query
+   :widths: 30, 5, 65
+   :header: Field Name, Opt, Description
+
+   UserID, M, "| For secured archive ⇒ 'User name of logged in user'
+   | For unsecured archive ⇒ 'Remote IP address'"
+   UserIDTypeCode, U, "| For secured archive ⇒ EV (113871, DCM, 'Person ID')
+   | For unsecured archive ⇒ EV (110182, DCM, 'Node ID')"
+   UserTypeCode, U, | Person ⇒ '1'
+   UserIsRequestor, M, | true
+   NetworkAccessPointID, U, | Hostname/IP Address of calling host
+   NetworkAccessPointTypeCode, U, "| NetworkAccessPointID is host name ⇒ '1'
+   | NetworkAccessPointID is an IP address ⇒ '2'"
+
+.. csv-table:: Active Participant : FHIR Patient Demographics Consumer
+   :name: active-participant-fhir-pdq-consumer-query
+   :widths: 30, 5, 65
+   :header: Field Name, Opt, Description
+
+   UserID, M, "| For scheduler triggered PDQ ⇒ 'Archive Device Name'
+   | For REST triggered PDQ ⇒ 'Invoked URL of archive's PDQ REST service'"
+   UserIDTypeCode, U, "| For scheduler triggered PDQ ⇒ 'EV (113877, DCM, 'Device Name')''
+   | For REST triggered PDQ ⇒ 'EV (12, RFC-3881, 'URI')'"
+   UserTypeCode, U, | 2
+   UserIsRequestor, M, "| For scheduler triggered PDQ ⇒ true
+   | For REST triggered PDQ ⇒ false"
+   RoleIDCode, M, "| EV (110153, DCM, 'Source Role ID')"
+   NetworkAccessPointID, U, | Hostname/IP Address of calling host
+   NetworkAccessPointTypeCode, U, "| NetworkAccessPointID is host name ⇒ '1'
+   | NetworkAccessPointID is an IP address ⇒ '2'"
+
+.. csv-table:: Active Participant : FHIR Patient Demographics Supplier
+   :name: active-participant-fhir-pdq-supplier-query
+   :widths: 30, 5, 65
+   :header: Field Name, Opt, Description
+
+   UserID, M, "| 'Service URL of HL7 FHIR R4 PDQ Service Provider'"
+   UserIDTypeCode, U, "| EV (12, RFC-3881, 'URI')"
+   UserTypeCode, U, | 2
+   UserIsRequestor, M, | false
+   RoleIDCode, M, "| EV (110152, DCM, 'Destination Role ID')"
+   NetworkAccessPointID, U, | Hostname/IP Address of HL7 FHIR R4 PDQ Service Provider host
    NetworkAccessPointTypeCode, U, "| NetworkAccessPointID is host name ⇒ '1'
    | NetworkAccessPointID is an IP address ⇒ '2'"
 
