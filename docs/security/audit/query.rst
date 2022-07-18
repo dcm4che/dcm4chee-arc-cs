@@ -29,7 +29,8 @@ Message Structure
     :ref:`participant-object-c-find-query`, Present only in Query by C-FIND
     :ref:`participant-object-qido-query`, Present only in QIDO Query
     :ref:`participant-object-pdq-query`, Present only in Patient Demographics Query case
-    :ref:`participant-object-pdq-patient-query`, Present only in Patient Demographics Query case
+    :ref:`participant-object-pdq-patient-query`, Present only in HL7 Patient Demographics Query case
+    :ref:`participant-object-fhir-pdq-patient-query`, Present only in FHIR HL7 Patient Demographics Query case
 
 .. csv-table:: Event Identification
    :name: event-identification-query
@@ -42,7 +43,8 @@ Message Structure
    EventOutcomeIndicator, M, "| Success ⇒ '0'
    | Minor failure ⇒ '4'"
    EventOutcomeDescription, M, Error/Exception message when EventOutcomeIndicator ⇒ '4'
-   EventTypeCode, C, "Patient Demographics Query case ⇒ EV (ITI-21, IHE Transactions, 'Patient Demographics Query')"
+   EventTypeCode, C, "| HL7v2 Patient Demographics Query case ⇒ EV (ITI-21, IHE Transactions, 'Patient Demographics Query')
+   | HL7 FHIR R4 Patient Demographics Query case ⇒ EV (ITI-78, urn:ihe:event-type-code, 'Mobile Patient Demographics Query')"
 
 .. csv-table:: Active Participant : Initiator
    :name: active-participant-initiator-query
@@ -150,8 +152,10 @@ Message Structure
    | Patient Demographics Query triggered by Query Patient Demographics service ⇒ 'QueryPatientDemographics'"
    ParticipantObjectTypeCode, M, | SystemObject ⇒ '2'
    ParticipantObjectTypeCodeRole, M, | Query ⇒ '24'
-   ParticipantObjectIDTypeCode, M,  "| EV (ITI-21, IHE Transactions, 'Patient Demographics Query')"
-   ParticipantObjectQuery, M, | Base64 encoded value of complete QBP^Q22 query message
+   ParticipantObjectIDTypeCode, M,  "| For HL7v2 PDQ Service Provider ⇒ EV (ITI-21, IHE Transactions, 'Patient Demographics Query')
+   | For HL7 FHIR R4 PDQ Service Provider ⇒ EV (ITI-78, IHE Transactions, 'Mobile Patient Demographics Query')"
+   ParticipantObjectQuery, M,  "| For HL7v2 PDQ Service Provider ⇒ Base64 encoded value of complete QBP^Q22 query message
+   | For HL7 FHIR R4 PDQ Service Provider ⇒ Base64 encoded value of query params passed to HL7 FHIR R4 Service Provider"
 
 .. csv-table:: Participant Object Identification : Patient Demographics Query - Patient
    :name: participant-object-pdq-patient-query
@@ -169,6 +173,17 @@ Message Structure
    ParticipantObjectDetail, U, 'type=MSH-10 value=<Base-64 encoded HL7 message control ID>'
    ParticipantObjectDetail, U, 'type=MSH-9 value=<Base-64 encoded HL7 response message type>'
    ParticipantObjectDetail, U, 'type=MSH-10 value=<Base-64 encoded HL7 response message control ID>'
+
+.. csv-table:: Participant Object Identification : FHIR Patient Demographics Query - Patient
+   :name: participant-object-fhir-pdq-patient-query
+   :widths: 30, 5, 65
+   :header: Field Name, Opt, Description
+
+   ParticipantObjectID, M, Patient ID or <none> if unknown
+   ParticipantObjectTypeCode, M, Person : '1'
+   ParticipantObjectTypeCodeRole, M, Patient : '1'
+   ParticipantObjectIDTypeCode, M,  "EV (2, RFC-3881, 'Patient Number')"
+   ParticipantObjectName, U, Patient Name
 
 Sample Message
 --------------
@@ -270,5 +285,42 @@ Patient Demographics Query
             <ParticipantObjectDetail type="HL7v2 Message" value="TVNIfF5+XCZ8SEw3UkNWfERDTTRDSEVFfEhMN1NORHxEQ000Q0hFRXwyMDIxMDcwNTA5MTYyMC44MjB8fFJTUF5LMjJeUlNQX0syMXwxMDY0NjIyMjk0fFB8Mi41fHx8fHx8ODg1OS8xDU1TQXxBQXwyMTI2MTA5NTkzfA1RQUt8UVJZMjEyNjEwOTU5M3xPSw1RUER8SUhFIFBEUSBRdWVyeXxRUlkyMTI2MTA5NTkzfEBQSUQuMy4xXlBEUS00NzExfkBQSUQuMy40LjFeRENNNENIRS1URVNUfkBQSUQuMy40LjJeMS4yLjQwLjAuMTMuMS4xLjk5OX5AUElELjMuNC4zXklTT3wNUElEfHx8UERRLTQ3MTFeXl5EQ000Q0hFLVRFU1QmMS4yLjQwLjAuMTMuMS4xLjk5OSZJU098fERPRV5KT0hOfHwxOTQ3MTExMXxNfHx8U1RSRUVUXl5DSVRZXl40NzExfHx8fHx8fEFDQy00NzExXl5eRENNNENIRS1URVNUJjEuMi40MC4wLjEzLjEuMS45OTkmSVNP"/>
             <ParticipantObjectDetail type="MSH-9" value="UlNQXksyMg=="/>
             <ParticipantObjectDetail type="MSH-10" value="MTA2NDYyMjI5NA=="/>
+        </ParticipantObjectIdentification>
+    </AuditMessage>
+
+FHIR Patient Demographics Query
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+        <EventIdentification EventActionCode="E" EventDateTime="2022-07-18T13:20:56.601+02:00" EventOutcomeIndicator="0">
+            <EventID csd-code="110112" codeSystemName="DCM" originalText="Query"/>
+            <EventTypeCode csd-code="ITI-78" codeSystemName="urn:ihe:event-type-code" originalText="Mobile Patient Demographics Query"/>
+            <EventOutcomeDescription>Mobile Patient Demographics Query</EventOutcomeDescription>
+        </EventIdentification>
+        <ActiveParticipant UserID="http://localhost:8780/hapi-fhir-jpaserver/fhir/Patient" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID"/>
+            <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
+        </ActiveParticipant>
+        <ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+            <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
+        </ActiveParticipant>
+        <ActiveParticipant UserID="http://localhost:8880/dcm4chee-arc/pdq/testHAPI/patients/e925b0f3%2D8006%2D43f6%2Daa31%2D94bd215e55e7%5E%5E%5Ehttps%3A%2F%2Fgithub%2Ecom%2Fsynthetichealth%2Fsynthea" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID"/>
+            <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
+        </ActiveParticipant>
+        <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+            <AuditSourceTypeCode csd-code="4"/>
+        </AuditSourceIdentification>
+        <ParticipantObjectIdentification ParticipantObjectID="QueryPatientDemographics" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="24">
+            <ParticipantObjectIDTypeCode csd-code="ITI-78" originalText="Mobile Patient Demographics Query" codeSystemName="IHE Transactions"/>
+            <ParticipantObjectQuery>aWRlbnRpZmllcj1odHRwcyUzQSUyRiUyRmdpdGh1Yi5jb20lMkZzeW50aGV0aWNoZWFsdGglMkZzeW50aGVhJTdDZTkyNWIwZjMtODAwNi00M2Y2LWFhMzEtOTRiZDIxNWU1NWU3Jl9mb3JtYXQ9eG1s</ParticipantObjectQuery>
+            <ParticipantObjectDetail type="QueryEncoding" value="VVRGLTg="/>
+        </ParticipantObjectIdentification>
+        <ParticipantObjectIdentification ParticipantObjectID="e925b0f3-8006-43f6-aa31-94bd215e55e7^^^https://github.com/synthetichealth/synthea" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+            <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
+            <ParticipantObjectName>Koepp^Abdul^^Mr.</ParticipantObjectName>
         </ParticipantObjectIdentification>
     </AuditMessage>
