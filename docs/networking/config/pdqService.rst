@@ -1,6 +1,6 @@
 PDQ Service
 ===========
-PDQ Service Descriptor
+Patient Demographics Query Service Descriptor
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|
 .. csv-table:: PDQ Service Attributes (LDAP Object: dcmPdqService)
@@ -10,19 +10,19 @@ PDQ Service Descriptor
     "
     .. _dcmPDQServiceID:
 
-    :ref:`PDQ Service ID <dcmPDQServiceID>`",string,"PDQ Service ID
+    :ref:`PDQ Service ID <dcmPDQServiceID>`",string,"Patient Demographics Query Service ID
 
     (dcmPDQServiceID)"
     "
     .. _dcmURI:
 
-    :ref:`PDQ Service URI <dcmURI>`",string,"PDQ Service URI, e.g. 'pdq-dicom:FINDSCP' or 'pdq-hl7:SendingApplication/SendingFacility:ReceivingApplication/ReceivingFacility' or pdq-fhir:HL7-FHIR-R4-WebApplication.
+    :ref:`Patient Demographics Query Service URI <dcmURI>`",string,"PDQ Service URI, e.g. 'pdq-dicom:FINDSCP' or 'pdq-hl7:SendingApplication/SendingFacility:ReceivingApplication/ReceivingFacility' or pdq-fhir:HL7-FHIR-R4-WebApplication.
 
     (dcmURI)"
     "
     .. _dicomDescription:
 
-    :ref:`PDQ Service Description <dicomDescription>`",string,"Unconstrained text description of the PDQ Service
+    :ref:`PDQ Service Description <dicomDescription>`",string,"Unconstrained text description of the Patient Demographics Query Service
 
     (dicomDescription)"
     "

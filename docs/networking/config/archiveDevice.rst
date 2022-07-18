@@ -1114,7 +1114,7 @@ DICOM Archive Device related information
     "
     .. _dcmPatientVerificationPDQServiceID:
 
-    :ref:`Patient Verification PDQ Service ID <dcmPatientVerificationPDQServiceID>`",string,"ID of PDQ Service used for Verification of Patient Demographic. If absent, no Patient Verification will be performed.
+    :ref:`Patient Verification PDQ Service ID <dcmPatientVerificationPDQServiceID>`",string,"ID of Patient Demographics Query Service used for Verification of Patient Demographic. If absent, no Patient Verification will be performed.
 
     (dcmPatientVerificationPDQServiceID)"
     "
@@ -1436,7 +1436,7 @@ DICOM Archive Device related information
     ":doc:`queryRetrieveView` (s)",object,"Specifies behavior on Rejection Note Stored"
     ":doc:`queue` (s)",object,"Managed Task Queue"
     ":doc:`metrics` (s)",object,"Activated Metrics"
-    ":doc:`pdqService` (s)",object,"PDQ Service Descriptor"
+    ":doc:`pdqService` (s)",object,"Patient Demographics Query Service Descriptor"
     ":doc:`exporter` (s)",object,"Exporter Descriptor"
     ":doc:`exportRule` (s)",object,"Export Rules applied to DICOM objects received by any AE. May be supplemented by configured Export Rules for particular Archive Network AEs."
     ":doc:`exportPriorsRule` (s)",object,"Export Priors Rules applied to DICOM objects received by any AE. May be supplemented by configured Export Priors Rules for particular Archive Network AEs."
