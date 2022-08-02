@@ -649,6 +649,12 @@ DICOM Archive Network AE related information
     :ref:`Match SOP Class on Instance level <dcmMatchSOPClassOnInstanceLevel>`",boolean,"Indicates to consider the SOP Class UID on Instance level for calculation of matches with SOP Classes in Study (0008,0062); otherwise rely on stored SOP Class UID on Series level, which may result in missing matches if one Series includes Instances of different SOP Classes. Overwrites value specified on Device level.
 
     (dcmMatchSOPClassOnInstanceLevel)"
+    "
+    .. _dcmUPSUpdateWithoutTransactionUID:
+
+    :ref:`UPS Update Without Transaction UID <dcmUPSUpdateWithoutTransactionUID>`",boolean,"Indicates to permit an UPS Pull SCU or UPS-RS Web client to update or change the state of an UPS workitem in state IN PROCESS without specifying a Transaction UID. Overwrites value specified on Device level.
+
+    (dcmUPSUpdateWithoutTransactionUID)"
     ":doc:`exportRule` (s)",object,"Export Rules applied to DICOM objects received by this AE. Supplements Export Rules specified on Device level."
     ":doc:`exportPriorsRule` (s)",object,"Export Priors Rules applied to DICOM objects received by this AE. Supplements Export Priors Rules specified on Device level."
     ":doc:`mppsForwardRule` (s)",object,"MPPS Forward Rules applied to MPPS received by this AE. Supplements MPPS Forward Rules specified on Device level."
