@@ -1430,11 +1430,23 @@ DICOM Archive Device related information
 
     (dcmMatchSOPClassOnInstanceLevel)"
     "
-    .. _dcmUPSUpdateWithoutTransactionUID:
+    .. _dcmKeyValueRetentionPollingInterval:
 
-    :ref:`UPS Update Without Transaction UID <dcmUPSUpdateWithoutTransactionUID>`",boolean,"Indicates to permit an UPS Pull SCU or UPS-RS Web client to update or change the state of an UPS workitem in state IN PROCESS without specifying a Transaction UID. May be overwritten by configured value for particular Archive Network AEs.
+    :ref:`Key Value Retention Polling Interval <dcmKeyValueRetentionPollingInterval>`",string,"Polling Interval for Key Value pairs which retention period expired in ISO-8601 duration format PnDTnHnMnS. If absent, Key Value pairs will not get deleted automatically.
 
-    (dcmUPSUpdateWithoutTransactionUID)"
+    (dcmKeyValueRetentionPollingInterval)"
+    "
+    .. _dcmKeyValueRetentionFetchSize:
+
+    :ref:`Key Value Retention Fetch Size <dcmKeyValueRetentionFetchSize>`",integer,"Limit result set of DB query for Key Value pairs which retention period expired; 100 if absent
+
+    (dcmKeyValueRetentionFetchSize)"
+    "
+    .. _dcmKeyValueRetentionPeriod:
+
+    :ref:`Key Value Retention Period <dcmKeyValueRetentionPeriod>`",string,"Retention period in ISO-8601 duration format PnDTnHnMn.nS of stored Key Value pairs. If absent, Key Value pairs will not get deleted automatically.
+
+    (dcmKeyValueRetentionPeriod)"
     ":doc:`attributeFilter` (s)",object,"Specifies Attributes stored in the database"
     ":doc:`attributeSet` (s)",object,"Named Attribute Set for Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests."
     ":doc:`bulkData` (s)",object,"Specifies Bulk Data Descriptors applied by services providing Metadata of archived instances."
