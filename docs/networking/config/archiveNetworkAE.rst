@@ -380,6 +380,12 @@ DICOM Archive Network AE related information
 
     (dcmAllowRejectionForDataRetentionPolicyExpired)"
     "
+    .. _dcmAcceptedUserRole:
+
+    :ref:`Accepted User Role(s) <dcmAcceptedUserRole>`",string,"Roles of users from which web requests are accepted; any if absent.
+
+    (dcmAcceptedUserRole)"
+    "
     .. _dcmAllowDeleteStudyPermanently:
 
     :ref:`Allow Delete Study permanently <dcmAllowDeleteStudyPermanently>`",string,"Allow to delete Study permanently. REJECTED = only already rejected Studies. Overwrites value specified on Device level. Enumerated values: ALWAYS or REJECTED.
