@@ -76,7 +76,7 @@ DICOM Device related information
     "
     .. _dicomInstitutionCode:
 
-    :ref:`Institution Code(s) <dicomInstitutionCode>`",string,"Institution Code(s) in format (CV, CSD, ""CM"")
+    :ref:`Institution Code(s) <dicomInstitutionCode>`",string,"Should be the same as the value of Institution Code(s) in format (CV, CSD, ""CM"") in SOP Instances created by this device
 
     (dicomInstitutionCode)"
     "
