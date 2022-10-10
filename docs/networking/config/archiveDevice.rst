@@ -1318,7 +1318,7 @@ DICOM Archive Device related information
     "
     .. _hl7OrderMissingAdmissionIDPolicy:
 
-    :ref:`HL7 Order Missing Admission ID Policy <hl7OrderMissingAdmissionIDPolicy>`",string,"Specifies policy on incoming HL7 Order messages without a value for PID-18 Patient Account Number nor field PV1-19 Visit Number. May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: ACCEPT, REJECT or ACCESSION_BASED.
+    :ref:`HL7 Order Missing Admission ID Policy <hl7OrderMissingAdmissionIDPolicy>`",string,"Specifies policy on incoming HL7 Order messages without a value for PID-18 Patient Account Number nor field PV1-19 Visit Number. May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: ACCEPT, REJECT or ACCESSION_AS_ADMISSION.
 
     (hl7OrderMissingAdmissionIDPolicy)"
     "
