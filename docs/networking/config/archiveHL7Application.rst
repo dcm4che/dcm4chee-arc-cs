@@ -140,6 +140,12 @@ DICOM Archive HL7 Application related information
 
     (hl7ImportReportMissingStudyIUIDPolicy)"
     "
+    .. _hl7ImportReportMissingAdmissionIDPolicy:
+
+    :ref:`HL7 Import Report Missing Admission ID Policy <hl7ImportReportMissingAdmissionIDPolicy>`",string,"Specifies policy on incoming HL7 ImportReport (ORU) messages without a value for PID-18 Patient Account Number nor field PV1-19 Visit Number. Overwrites value specified on Device level. Enumerated values: ACCEPT, REJECT or ACCESSION_AS_ADMISSION.
+
+    (hl7ImportReportMissingAdmissionIDPolicy)"
+    "
     .. _hl7ImportReportMissingStudyIUIDCFindSCP:
 
     :ref:`HL7 Import Report Missing Study Instance UID C-FIND SCP <hl7ImportReportMissingStudyIUIDCFindSCP>`",string,"AE Title of external C-FIND SCP to query for missing Study Instance UID in incoming HL7 Import Report (ORU) messages by given Accession Number. Overwrites value specified on Device level.
