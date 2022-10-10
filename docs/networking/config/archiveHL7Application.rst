@@ -128,6 +128,12 @@ DICOM Archive HL7 Application related information
 
     (hl7OrderMissingStudyIUIDPolicy)"
     "
+    .. _hl7OrderMissingAdmissionIDPolicy:
+
+    :ref:`HL7 Order Missing Admission ID Policy <hl7OrderMissingAdmissionIDPolicy>`",string,"Specifies policy on incoming HL7 Order messages without a value for PID-18 Patient Account Number nor field PV1-19 Visit Number. Overwrites value specified on Device level. Enumerated values: ACCEPT, REJECT or ACCESSION_BASED.
+
+    (hl7OrderMissingAdmissionIDPolicy)"
+    "
     .. _hl7ImportReportMissingStudyIUIDPolicy:
 
     :ref:`HL7 Import Report Missing Study Instance UID Policy <hl7ImportReportMissingStudyIUIDPolicy>`",string,"Specifies policy for missing Study Instance UID in incoming HL7 Import Report (ORU) messages. Overwrites value specified on Device level. Enumerated values: REJECT, GENERATE or ACCESSION_BASED.
@@ -158,3 +164,13 @@ DICOM Archive HL7 Application related information
     ":doc:`hl7StudyRetentionPolicy` (s)",object,"HL7 Study Retention Policies triggered by HL7 messages received by this HL7 Application. Supplements values specified on Device level."
     ":doc:`hl7OrderScheduledStation` (s)",object,"Scheduled Station selected on MWL HL7 Order Feed. Supplements values specified on Device level."
     ":doc:`hl7OrderSPSStatus` (s)",object,"Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages. Overwrites values specified on Device level."
+
+.. toctree::
+
+    hl7ForwardRule
+    hl7ExportRule
+    upsOnHL7
+    hl7PrefetchRule
+    hl7StudyRetentionPolicy
+    hl7OrderScheduledStation
+    hl7OrderSPSStatus
