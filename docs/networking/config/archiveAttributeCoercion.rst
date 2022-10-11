@@ -16,7 +16,7 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmRulePriority:
 
-    :ref:`Rule Priority <dcmRulePriority>`",integer,"Rule Priority.
+    :ref:`Rule Priority <dcmRulePriority>`",integer,"Rule Priority. Higher priority rule applied.
 
     (dcmRulePriority)"
     "
