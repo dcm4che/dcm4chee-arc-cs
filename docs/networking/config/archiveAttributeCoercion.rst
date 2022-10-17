@@ -92,6 +92,12 @@ Archive Attribute Coercion of received/sent DIMSE
 
     (dcmMergeLocalMWLSCP)"
     "
+    .. _dcmMergeLocalMWLWithStatus:
+
+    :ref:`Merge Local MWL With Status(s) <dcmMergeLocalMWLWithStatus>`",string,"Only consider MWL items with one of the specified Scheduled Procedure Step Status codes. Enumerated values: SCHEDULED, ARRIVED, READY, STARTED, DEPARTED, CANCELED, DISCONTINUED, COMPLETED. If absent, MWL items with any Scheduled Procedure Step Status are considered. Enumerated values: SCHEDULED, ARRIVED, READY, STARTED, DEPARTED, CANCELED, DISCONTINUED or COMPLETED.
+
+    (dcmMergeLocalMWLWithStatus)"
+    "
     .. _dcmMWLImportFilterBySCU:
 
     :ref:`Merge MWL Filter by SCU <dcmMWLImportFilterBySCU>`",boolean,"Indicates to apply specified filter on matches returned by external MWL SCP.
