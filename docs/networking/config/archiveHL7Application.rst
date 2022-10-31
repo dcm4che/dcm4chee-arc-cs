@@ -16,7 +16,7 @@ DICOM Archive HL7 Application related information
     "
     .. _dcmDestinationAE:
 
-    :ref:`Destination AE <dcmDestinationAE>`",string,"AE Title of local MWL SCP fed/updated by HL7v2 Order message received by this HL7 Receiver. If no AE Title is specified, the created MWL item will be provided by all configured MWL SCPs of the archive.
+    :ref:`Destination MWL SCP <dcmDestinationAE>`",string,"AE Title of local MWL SCP fed/updated by HL7v2 Order message received by this HL7 Receiver. If no AE Title is specified, the created MWL item will be provided by all configured MWL SCPs of the archive.
 
     (dcmDestinationAE)"
     "
