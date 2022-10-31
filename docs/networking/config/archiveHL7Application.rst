@@ -14,6 +14,12 @@ DICOM Archive HL7 Application related information
 
     (dicomAETitle)"
     "
+    .. _dcmDestinationAE:
+
+    :ref:`Destination AE <dcmDestinationAE>`",string,"AE Title of local MWL SCP fed/updated by HL7v2 Order message received by this HL7 Receiver. If no AE Title is specified, the created MWL item will be provided by all configured MWL SCPs of the archive.
+
+    (dcmDestinationAE)"
+    "
     .. _dcmRecordAttributeModification:
 
     :ref:`Record Attribute Modification <dcmRecordAttributeModification>`",boolean,"Indicates if modifications of attributes of stored objects by this HL7 Application are recorded in Items of the Original Attributes Sequence. Overwrites value specified on Device level.
