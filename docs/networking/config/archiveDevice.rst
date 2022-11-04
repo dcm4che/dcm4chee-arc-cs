@@ -1276,7 +1276,7 @@ DICOM Archive Device related information
     "
     .. _hl7PSUMWL:
 
-    :ref:`HL7 Procedure Status Update MWL <hl7PSUMWL>`",boolean,"Specifies if the Status of MWL Items in the DB is updated to COMPLETED for a received study after the configured HL7 Procedure Status Update Delay or for received MPPS after configured HL7 Procedure Status Update Timeout. Implicitly set to true, if notification of HL7 receivers is configured. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`HL7 Procedure Status Update MWL <hl7PSUMWL>`",boolean,"Specifies if the Status of MWL Items in the DB is updated to COMPLETED for a received study after the configured HL7 Procedure Status Update Delay, or to COMPLETED or DISCONTINUED for received MPPS after configured HL7 Procedure Status Update Timeout. Implicitly set to true, if notification of HL7 receivers is configured. May be overwritten by configured values for particular Archive Network AEs.
 
     (hl7PSUMWL)"
     "
