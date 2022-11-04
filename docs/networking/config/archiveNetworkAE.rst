@@ -512,6 +512,30 @@ DICOM Archive Network AE related information
 
     (hl7PSUDelay)"
     "
+    .. _hl7PSUStudyTemplateURI:
+
+    :ref:`HL7 Procedure Status Update Study Template URI <hl7PSUStudyTemplateURI>`",string,"URL of XSL style sheet to create HL7v2 message to notify configured HL7 receivers about changes of the Status of requested Procedures triggered by received Study. Overwrites value specified on Device level.
+
+    (hl7PSUStudyTemplateURI)"
+    "
+    .. _hl7PSUTimeout:
+
+    :ref:`HL7 Procedure Status Update Timeout <hl7PSUTimeout>`",string,"Timeout in ISO-8601 duration format PnDTnHnMn.nS for waiting on receive of instances referenced in MPPS. Overwrites value specified on Device level.
+
+    (hl7PSUTimeout)"
+    "
+    .. _hl7PSUOnTimeout:
+
+    :ref:`HL7 Procedure Status Update On Timeout <hl7PSUOnTimeout>`",boolean,"Specifies if the HL7 Procedure Status Update is sent if the timeout for waiting on receive of instances referenced is exceeded. Overwrites value specified on Device level.
+
+    (hl7PSUOnTimeout)"
+    "
+    .. _hl7PSUMppsTemplateURI:
+
+    :ref:`HL7 Procedure Status Update MPPS Template URI <hl7PSUMppsTemplateURI>`",string,"URL of XSL style sheet to create HL7v2 message to notify configured HL7 receivers about changes of the Status of requested Procedures triggered by MPPS. Overwrites value specified on Device level.
+
+    (hl7PSUMppsTemplateURI)"
+    "
     .. _hl7PSUCondition:
 
     :ref:`HL7 Procedure Status Update Attribute Conditions(s) <hl7PSUCondition>`",string,"Restrict notification of configured HL7 Procedure Status Update Receiving Applications about Procedure Status Update by conditions on attributes of received composite object in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER. Overwrites value specified on Device level.
@@ -524,29 +548,11 @@ DICOM Archive Network AE related information
 
     (hl7PSUForRequestedProcedure)"
     "
-    .. _hl7PSURequestedProcedureID:
+    .. _hl7PSUParam:
 
-    :ref:`HL7 Procedure Status Update Requested Procedure ID <hl7PSURequestedProcedureID>`",string,"Value for Requested Procedure ID in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. Example: {StudyInstanceUID,hash}. Overwrites value specified on Device level.
+    :ref:`HL7 Procedure Status Update Parameters(s) <hl7PSUParam>`",string,"XSLT parameters in format {attributeID}={value} passed to style sheet specified by HL7 Procedure Status Update MPPS Template URI or HL7 Procedure Status Update Study Template URI. {attributeID} inside of {value} will be replaced by the value of that attribute in the original dataset. E.g.: 'RequestedProcedureID={StudyInstanceUID,hash}' or 'AccessionNumber={0020000D,hash}'. Overwrites value specified on Device level.
 
-    (hl7PSURequestedProcedureID)"
-    "
-    .. _hl7PSUAccessionNumber:
-
-    :ref:`HL7 Procedure Status Update Accession Number <hl7PSUAccessionNumber>`",string,"Value for Accession Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. Example: {StudyInstanceUID,hash}. Overwrites value specified on Device level.
-
-    (hl7PSUAccessionNumber)"
-    "
-    .. _hl7PSUFillerOrderNumber:
-
-    :ref:`HL7 Procedure Status Update Filler Order Number <hl7PSUFillerOrderNumber>`",string,"Value for Filler Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. Example: {StudyInstanceUID,hash}. Overwrites value specified on Device level.
-
-    (hl7PSUFillerOrderNumber)"
-    "
-    .. _hl7PSUPlacerOrderNumber:
-
-    :ref:`HL7 Procedure Status Update Placer Order Number <hl7PSUPlacerOrderNumber>`",string,"Value for Placer Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. Example: {StudyInstanceUID,hash}. Overwrites value specified on Device level.
-
-    (hl7PSUPlacerOrderNumber)"
+    (hl7PSUParam)"
     "
     .. _hl7PSUMessageType:
 
@@ -571,18 +577,6 @@ DICOM Archive Network AE related information
     :ref:`HL7 Procedure Status Update MWL Matching Key <hl7PSUMWLMatchingKey>`",string,"Specifies attribute of received object to lookup MWL Item whose status is to be updated to COMPLETED. Only applicable is 'HL7 Procedure Status Update MWL' is configured as or implicitly set to true. Overwrites value specified on Device level. Enumerated values: AccessionNumber or StudyInstanceUID.
 
     (hl7PSUMWLMatchingKey)"
-    "
-    .. _hl7PSUTimeout:
-
-    :ref:`HL7 Procedure Status Update Timeout <hl7PSUTimeout>`",string,"Timeout in ISO-8601 duration format PnDTnHnMn.nS for waiting on receive of instances referenced in MPPS. Overwrites value specified on Device level.
-
-    (hl7PSUTimeout)"
-    "
-    .. _hl7PSUOnTimeout:
-
-    :ref:`HL7 Procedure Status Update On Timeout <hl7PSUOnTimeout>`",boolean,"Specifies if the HL7 Procedure Status Update is sent if the timeout for waiting on receive of instances referenced is exceeded. Overwrites value specified on Device level.
-
-    (hl7PSUOnTimeout)"
     "
     .. _dcmRelationalQueryNegotiationLenient:
 

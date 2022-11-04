@@ -1202,11 +1202,47 @@ DICOM Archive Device related information
 
     (hl7PSUReceivingApplication)"
     "
+    .. _hl7PSUTaskPollingInterval:
+
+    :ref:`HL7 Procedure Status Update Task Polling Interval <hl7PSUTaskPollingInterval>`",string,"Polling Interval for HL7 Procedure Status Update Tasks in ISO-8601 duration format PnDTnHnMnS. Disabled, if absent.
+
+    (hl7PSUTaskPollingInterval)"
+    "
+    .. _hl7PSUTaskFetchSize:
+
+    :ref:`HL7 Procedure Status Update Tasks Fetch Size <hl7PSUTaskFetchSize>`",integer,"Maximal number of HL7 Procedure Status Update Tasks fetched in one query.
+
+    (hl7PSUTaskFetchSize)"
+    "
     .. _hl7PSUDelay:
 
     :ref:`HL7 Procedure Status Update Delay <hl7PSUDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMnS after which an HL7 Procedure Status Update for a received study is sent to configured HL7 receivers. If absent, HL7 Procedure Status Update is triggered by received MPPS. May be overwritten by configured values for particular Archive Network AEs.
 
     (hl7PSUDelay)"
+    "
+    .. _hl7PSUStudyTemplateURI:
+
+    :ref:`HL7 Procedure Status Update Study Template URI <hl7PSUStudyTemplateURI>`",string,"URL of XSL style sheet to create HL7v2 message to notify configured HL7 receivers about changes of the Status of requested Procedures triggered by received Study. May be overwritten by configured values for particular Archive Network AEs.
+
+    (hl7PSUStudyTemplateURI)"
+    "
+    .. _hl7PSUTimeout:
+
+    :ref:`HL7 Procedure Status Update Timeout <hl7PSUTimeout>`",string,"Timeout in ISO-8601 duration format PnDTnHnMnS for waiting on receive of instances referenced in MPPS; check for completeness forever if absent. May be overwritten by configured values for particular Archive Network AEs.
+
+    (hl7PSUTimeout)"
+    "
+    .. _hl7PSUOnTimeout:
+
+    :ref:`HL7 Procedure Status Update On Timeout <hl7PSUOnTimeout>`",boolean,"Specifies if the HL7 Procedure Status Update is sent if the timeout for waiting on receive of instances referenced is exceeded. May be overwritten by configured values for particular Archive Network AEs.
+
+    (hl7PSUOnTimeout)"
+    "
+    .. _hl7PSUMppsTemplateURI:
+
+    :ref:`HL7 Procedure Status Update MPPS Template URI <hl7PSUMppsTemplateURI>`",string,"URL of XSL style sheet to create HL7v2 message to notify configured HL7 receivers about changes of the Status of requested Procedures triggered by MPPS. May be overwritten by configured values for particular Archive Network AEs.
+
+    (hl7PSUMppsTemplateURI)"
     "
     .. _hl7PSUCondition:
 
@@ -1220,29 +1256,11 @@ DICOM Archive Device related information
 
     (hl7PSUForRequestedProcedure)"
     "
-    .. _hl7PSURequestedProcedureID:
+    .. _hl7PSUParam:
 
-    :ref:`HL7 Procedure Status Update Requested Procedure ID <hl7PSURequestedProcedureID>`",string,"Value for Requested Procedure ID in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. May be overwritten by configured value for particular Archive Network AEs.
+    :ref:`HL7 Procedure Status Update Parameters(s) <hl7PSUParam>`",string,"XSLT parameters in format {attributeID}={value} passed to style sheet specified by HL7 Procedure Status Update MPPS Template URI or HL7 Procedure Status Update Study Template URI. {attributeID} inside of {value} will be replaced by the value of that attribute in the original dataset. E.g.: 'RequestedProcedureID={StudyInstanceUID,hash}' or 'AccessionNumber={0020000D,hash}'. May be overwritten by configured values for particular Archive Network AEs.
 
-    (hl7PSURequestedProcedureID)"
-    "
-    .. _hl7PSUAccessionNumber:
-
-    :ref:`HL7 Procedure Status Update Accession Number <hl7PSUAccessionNumber>`",string,"Value for Accession Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. May be overwritten by configured value for particular Archive Network AEs.
-
-    (hl7PSUAccessionNumber)"
-    "
-    .. _hl7PSUFillerOrderNumber:
-
-    :ref:`HL7 Procedure Status Update Filler Order Number <hl7PSUFillerOrderNumber>`",string,"Value for Filler Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. May be overwritten by configured value for particular Archive Network AEs.
-
-    (hl7PSUFillerOrderNumber)"
-    "
-    .. _hl7PSUPlacerOrderNumber:
-
-    :ref:`HL7 Procedure Status Update Placer Order Number <hl7PSUPlacerOrderNumber>`",string,"Value for Placer Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. May be overwritten by configured value for particular Archive Network AEs.
-
-    (hl7PSUPlacerOrderNumber)"
+    (hl7PSUParam)"
     "
     .. _hl7PSUMessageType:
 
@@ -1267,30 +1285,6 @@ DICOM Archive Device related information
     :ref:`HL7 Procedure Status Update MWL Matching Key <hl7PSUMWLMatchingKey>`",string,"Specifies attribute of received object to lookup MWL Item whose status is to be updated to COMPLETED. Only applicable is 'HL7 Procedure Status Update MWL' is configured as or implicitly set to true. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: AccessionNumber or StudyInstanceUID.
 
     (hl7PSUMWLMatchingKey)"
-    "
-    .. _hl7PSUTimeout:
-
-    :ref:`HL7 Procedure Status Update Timeout <hl7PSUTimeout>`",string,"Timeout in ISO-8601 duration format PnDTnHnMnS for waiting on receive of instances referenced in MPPS; check for completeness forever if absent. May be overwritten by configured values for particular Archive Network AEs.
-
-    (hl7PSUTimeout)"
-    "
-    .. _hl7PSUOnTimeout:
-
-    :ref:`HL7 Procedure Status Update On Timeout <hl7PSUOnTimeout>`",boolean,"Specifies if the HL7 Procedure Status Update is sent if the timeout for waiting on receive of instances referenced is exceeded. May be overwritten by configured values for particular Archive Network AEs.
-
-    (hl7PSUOnTimeout)"
-    "
-    .. _hl7PSUTaskPollingInterval:
-
-    :ref:`HL7 Procedure Status Update Task Polling Interval <hl7PSUTaskPollingInterval>`",string,"Polling Interval for HL7 Procedure Status Update Tasks in ISO-8601 duration format PnDTnHnMnS. Disabled, if absent.
-
-    (hl7PSUTaskPollingInterval)"
-    "
-    .. _hl7PSUTaskFetchSize:
-
-    :ref:`HL7 Procedure Status Update Tasks Fetch Size <hl7PSUTaskFetchSize>`",integer,"Maximal number of HL7 Procedure Status Update Tasks fetched in one query.
-
-    (hl7PSUTaskFetchSize)"
     "
     .. _hl7TrackChangedPatientID:
 
