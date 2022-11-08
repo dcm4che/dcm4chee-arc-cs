@@ -1256,11 +1256,11 @@ DICOM Archive Device related information
 
     (hl7PSUForRequestedProcedure)"
     "
-    .. _hl7PSUParam:
+    .. _hl7PSUTemplateParam:
 
-    :ref:`HL7 Procedure Status Update Parameters(s) <hl7PSUParam>`",string,"XSLT parameters in format {attributeID}={value} passed to style sheet specified by HL7 Procedure Status Update MPPS Template URI or HL7 Procedure Status Update Study Template URI. {attributeID} inside of {value} will be replaced by the value of that attribute in the original dataset. E.g.: 'RequestedProcedureID={StudyInstanceUID,hash}' or 'AccessionNumber={0020000D,hash}'. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`HL7 Procedure Status Update Template Parameters(s) <hl7PSUTemplateParam>`",string,"XSLT parameters in format {attributeID}={value} passed to style sheet specified by HL7 Procedure Status Update MPPS Template URI or HL7 Procedure Status Update Study Template URI. {attributeID} inside of {value} will be replaced by the value of that attribute in the original dataset. E.g.: 'RequestedProcedureID={StudyInstanceUID,hash}' or 'AccessionNumber={0020000D,hash}'. May be overwritten by configured values for particular Archive Network AEs.
 
-    (hl7PSUParam)"
+    (hl7PSUTemplateParam)"
     "
     .. _hl7PSUMessageType:
 
