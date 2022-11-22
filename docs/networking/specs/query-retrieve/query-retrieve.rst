@@ -272,21 +272,52 @@ The list of accepted Transfer Syntaxes for each accepted Abstract Syntax - as th
 SOP Specific Conformance for Query SOP Classes
 ..............................................
 
-The Query/Retrieve SCP AE supports hierarchical queries and relational queries. There are no attributes always returned by default. Only those attributes requested in the query identifier are returned. Query responses always return values from the DCM4CHEE archive database. Exported SOP Instances are always updated with the latest values in the database prior to export. Thus, a change in Patient demographic information will be contained in both the C-FIND Responses and any Composite SOP Instances exported to a C-MOVE Destination AE.
+The Query/Retrieve SCP AE supports hierarchical queries and relational queries. There are no attributes always returned by default.
+Only those attributes requested in the query identifier are returned. Query responses always return values from the
+DCM4CHEE archive database. Exported SOP Instances are always updated with the latest values in the database prior to export.
+Thus, a change in Patient demographic information will be contained in both the C-FIND Responses and any Composite SOP
+Instances exported to a C-MOVE Destination AE.
+
 Patient Root Information Model
-All required search keys on each of the four levels (Patient, Study, Series, and Image) are supported. However, the Patient ID (0010,0020) key must have at least a partial value if the Patient's Name (0010,0010) is not present in a Patient Level query.
-Study Root Information Model
-All the required search keys on each of the three levels (Study, Series, and Image) are supported. If no partial values are specified for Study attributes then either the Patient ID (0010,0020) key or the Patient's Name (0010,0010) must have at least a partial value specified.
+All required search keys on each of the four levels (Patient, Study, Series, and Image) are supported. However, the
+Patient ID (0010,0020) key must have at least a partial value if the Patient's Name (0010,0010) is not present in a Patient Level query.
 
 .. csv-table:: Patient Root C-FIND SCP Supported Elements
    :header: "Level Name/Attribute Name", "Tag", "VR", "Types of Matching"
    :widths: 20, 10, 3, 8
    :file: query-retrieve-scp-patient-root-c-find-elements.csv
 
+Study Root Information Model
+All the required search keys on each of the three levels (Study, Series, and Image) are supported. If no partial values
+are specified for Study attributes then either the Patient ID (0010,0020) key or the Patient's Name (0010,0010) must have
+at least a partial value specified.
+
 .. csv-table:: Study Root C-FIND SCP Supported Elements
    :header: "Level Name/Attribute Name", "Tag", "VR", "Types of Matching"
    :widths: 20, 10, 3, 8
    :file: query-retrieve-study-root-c-find-elements.csv
+
+MWL Information Model
+
+.. csv-table:: Modality Worklist C-FIND SCP Supported Elements
+   :header: "Level Name/Attribute Name", "Tag", "VR", "Types of Matching"
+   :widths: 20, 10, 3, 8
+   :file: query-retrieve-mwl-c-find-elements.csv
+
+UWL Information Model
+
+.. csv-table:: Unified Worklist C-FIND SCP Supported Elements
+   :header: "Level Name/Attribute Name", "Tag", "VR", "Types of Matching"
+   :widths: 20, 10, 3, 8
+   :file: query-retrieve-uwl-c-find-elements.csv
+
+MPPS Information Model
+
+.. csv-table:: Modality Performed Procedure Step C-FIND SCP Supported Elements
+   :header: "Level Name/Attribute Name", "Tag", "VR", "Types of Matching"
+   :widths: 20, 10, 3, 8
+   :file: query-retrieve-mpps-c-find-elements.csv
+
 
 The tables should be read as follows:
 
@@ -297,12 +328,14 @@ The tables should be read as follows:
 
 The values in 'Types of Matching' column mean as follows :
 
-- "S" indicates the identifier attribute can specify Single Value Matching.
-- "R" will indicate Range Matching.
-- "*" will denote wild card matching.
-- "U" will indicate universal matching.
-- "L" will indicate that UID lists are supported for matching.
-- "NONE" indicates that no matching is supported, but that values for this Element in the database can be returned.
+- "S" indicates `Single Value Matching <https://dicom.nema.org/medical/dicom/current/output/html/part04.html#sect_C.2.2.2.1>`_ is supported for the attribute.
+- "R" indicates `Range Matching <https://dicom.nema.org/medical/dicom/current/output/html/part04.html#sect_C.2.2.2.5>`_ is supported for the attribute.
+- "*" indicates `Wild Card Matching <https://dicom.nema.org/medical/dicom/current/output/html/part04.html#sect_C.2.2.2.4>`_ is supported for the attribute.
+- "U" indicates `Universal Matching <https://dicom.nema.org/medical/dicom/current/output/html/part04.html#sect_C.2.2.2.3>`_ is supported for the attribute.
+- "M" indicates that `Multiple Value Matching <https://dicom.nema.org/medical/dicom/current/output/html/part04.html#sect_C.2.2.2.8>`_ is supported for the attribute.
+- "L" indicates `List of UID Matching <https://dicom.nema.org/medical/dicom/current/output/html/part04.html#sect_C.2.2.2.2>`_ is supported for the attribute.
+- "SQ" indicates that `Sequence Matching <https://dicom.nema.org/medical/dicom/current/output/html/part04.html#sect_C.2.2.2.6>`_ is supported for matching for the attribute.
+- "NONE" indicates that no matching is supported, but values for this attribute in the database can be returned.
 
 .. csv-table:: Query/Retrieve SCP AE C-FIND Response Status Return Behavior
    :header: "Service Status", "Further Meaning", "Error Code", "Behaviour"
