@@ -568,7 +568,7 @@ DICOM Archive Network AE related information
     "
     .. _hl7PSUMWL:
 
-    :ref:`HL7 Procedure Status Update MWL <hl7PSUMWL>`",boolean,"Specifies if the Status of MWL Items in the DB is updated to COMPLETED for a received study after the configured HL7 Procedure Status Update Delay, or to COMPLETED or DISCONTINUED for received MPPS after configured HL7 Procedure Status Update Timeout. Implicitly set to true, if notification of HL7 receivers is configured. Overwrites value specified on Device level.
+    :ref:`HL7 Procedure Status Update MWL <hl7PSUMWL>`",boolean,"Specifies if the Status of MWL Items in the DB is updated to COMPLETED for a received study after the configured HL7 Procedure Status Update Delay. Implicitly set to true, if notification to HL7 receivers is configured, triggered by received studies associated with MWL. Overwrites value specified on Device level.
 
     (hl7PSUMWL)"
     "
