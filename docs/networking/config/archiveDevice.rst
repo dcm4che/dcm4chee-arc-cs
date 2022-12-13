@@ -1418,6 +1418,12 @@ DICOM Archive Device related information
 
     (dcmStowQuicktime2MP4)"
     "
+    .. _dcmStowMaxFragmentLength:
+
+    :ref:`STOW Maximum Fragment Length <dcmStowMaxFragmentLength>`",integer,"Maximum length of data fragments of encapsulated JPEG/MPEG stream in stored DICOM object. If the received JPEG/MPEG stream exceeds that value, it will be split into several fragments, using a Fragmentable Encapsulated Transfer Syntax. Valid range: 1024..4294967294. May be overwritten by configured value for particular Archive Network AEs.
+
+    (dcmStowMaxFragmentLength)"
+    "
     .. _dcmChangeRequesterAET:
 
     :ref:`Change Requester AET <dcmChangeRequesterAET>`",string,"Indicates change requester AET in rejections triggered by archive. May be overwritten by configured values for particular Archive Network AEs.

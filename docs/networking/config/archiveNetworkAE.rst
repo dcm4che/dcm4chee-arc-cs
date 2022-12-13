@@ -620,6 +620,12 @@ DICOM Archive Network AE related information
 
     (dcmStowQuicktime2MP4)"
     "
+    .. _dcmStowMaxFragmentLength:
+
+    :ref:`STOW Maximum Fragment Length <dcmStowMaxFragmentLength>`",integer,"Maximum length of data fragments of encapsulated JPEG/MPEG stream in stored DICOM object. If the received JPEG/MPEG stream exceeds that value, it will be split into several fragments, using a Fragmentable Encapsulated Transfer Syntax. Valid range: 1024..4294967294. Overwrites value specified on Device level.
+
+    (dcmStowMaxFragmentLength)"
+    "
     .. _dcmRetrieveTaskWarningOnNoMatch:
 
     :ref:`Retrieve Task Warning on no Match <dcmRetrieveTaskWarningOnNoMatch>`",boolean,"Indicates if the result status of Retrieve Tasks shall be set to WARNING if none of the requested objects was found on the C-MOVE SCP. Overwrites value specified on Device level.
