@@ -158,6 +158,12 @@ DICOM Archive HL7 Application related information
 
     (hl7ImportReportMissingStudyIUIDCFindSCP)"
     "
+    .. _hl7ImportReportAdjustIUID:
+
+    :ref:`HL7 Import Report Adjust Instance UID <hl7ImportReportAdjustIUID>`",string,"Specifies adjustment of Series and SOP Instances UIDs returned by XSLT on incoming HL7 Import Report (ORU) messages. Overwrites value specified on Device level. Enumerated values: NONE or APPEND_HASH_OF_STUDY_INSTANCE_UID.
+
+    (hl7ImportReportAdjustIUID)"
+    "
     .. _hl7ReferredMergedPatientPolicy:
 
     :ref:`HL7 Referred Merged Patient Policy <hl7ReferredMergedPatientPolicy>`",string,"Specifies policy on incoming HL7 messages referring an already merged Patient. REJECT: reject any such HL7 message, IGNORE: ignore any such HL7 message, IGNORE_DUPLICATE_MERGE: Ignore only duplicate HL7 Merge messages, Reject any other such Message. Overwrites value specified on Device level. Enumerated values: REJECT, IGNORE or IGNORE_DUPLICATE_MERGE.
@@ -176,13 +182,3 @@ DICOM Archive HL7 Application related information
     ":doc:`hl7StudyRetentionPolicy` (s)",object,"HL7 Study Retention Policies triggered by HL7 messages received by this HL7 Application. Supplements values specified on Device level."
     ":doc:`hl7OrderScheduledStation` (s)",object,"Scheduled Station selected on MWL HL7 Order Feed. Supplements values specified on Device level."
     ":doc:`hl7OrderSPSStatus` (s)",object,"Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages. Overwrites values specified on Device level."
-
-.. toctree::
-
-    hl7ForwardRule
-    hl7ExportRule
-    upsOnHL7
-    hl7PrefetchRule
-    hl7StudyRetentionPolicy
-    hl7OrderScheduledStation
-    hl7OrderSPSStatus

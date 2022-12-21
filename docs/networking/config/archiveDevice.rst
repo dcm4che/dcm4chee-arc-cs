@@ -1334,6 +1334,12 @@ DICOM Archive Device related information
 
     (hl7ImportReportMissingStudyIUIDCFindSCP)"
     "
+    .. _hl7ImportReportAdjustIUID:
+
+    :ref:`HL7 Import Report Adjust Instance UID <hl7ImportReportAdjustIUID>`",string,"Specifies adjustment of Series and SOP Instances UIDs returned by XSLT on incoming HL7 Import Report (ORU) messages. May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: NONE or APPEND_HASH_OF_STUDY_INSTANCE_UID.
+
+    (hl7ImportReportAdjustIUID)"
+    "
     .. _hl7ReferredMergedPatientPolicy:
 
     :ref:`HL7 Referred Merged Patient Policy <hl7ReferredMergedPatientPolicy>`",string,"Specifies policy on incoming HL7 messages referring an already merged Patient. REJECT: reject any such HL7 message, IGNORE: ignore any such HL7 message, IGNORE_DUPLICATE_MERGE: Ignore only duplicate HL7 Merge messages, Reject any other such Message. May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: REJECT, IGNORE or IGNORE_DUPLICATE_MERGE.
