@@ -66,26 +66,29 @@ specific to the particular type of rejection.
 By default, the KOS Document Titles specified by `Imaging Object Change Management (IOCM)
 <http://wiki.ihe.net/index.php/Imaging_Object_Change_Management>`_ are configured:
 
-- (113001, DCM, "Rejected for Quality Reasons")
+**(113001, DCM, "Rejected for Quality Reasons")**
 
-  - Hide/Show rejected instances dependend on Query/Retrieve AE
-  - Show KOS Document
-  - Ignore subsequent occurrence of rejected instances
-- (113037, DCM, "Rejected for Patient Safety Reasons")
+- Hide/Show rejected instances dependend on Query/Retrieve AE
+- Show KOS Document
+- Ignore subsequent occurrence of rejected instances
 
-  - Hide rejected instances
-  - Show KOS Document
-  - Reject subsequent occurrence of rejected instances
-- (113038, DCM, "Incorrect Modality Worklist Entry")
+**(113037, DCM, "Rejected for Patient Safety Reasons")**
 
-  - Hide rejected instances
-  - Show KOS Document
-  - Reject subsequent occurrence of rejected instances
-- (113039, DCM, "Data Retention Rejected for Quality Reasons")
+- Hide rejected instances
+- Show KOS Document
+- Reject subsequent occurrence of rejected instances
 
-  - Hide rejected instances and KOS Document
-  - Subsequent occurrence of rejected instances reverts the rejection
-  - Delete rejected instances and KOS Document after delay
+**(113038, DCM, "Incorrect Modality Worklist Entry")**
+
+- Hide rejected instances
+- Show KOS Document
+- Reject subsequent occurrence of rejected instances
+
+**(113039, DCM, "Data Retention Rejected for Quality Reasons")**
+
+- Hide rejected instances and KOS Document
+- Subsequent occurrence of rejected instances reverts the rejection
+- Delete rejected instances and KOS Document after delay
 
 The Storage AE accepts requests for commitment for the storage of previous received instances - including KOS Documents
 acting as Rejection Notes. For each object, for which storage commitment is requested, the Storage AE does not only
