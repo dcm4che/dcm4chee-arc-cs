@@ -11,7 +11,7 @@ Revision History
 
    5.0.0, "Dec 06, 2015", gz, Initial Draft
    5.10.5, "Aug 11, 2017", gz, Correct Asynchronous Nature
-   |release|, |today|, Current Draft
+   5.29.2, "Jan 2, 2023", gz, Update Supported Storage SOP Classes and Transfer Syntaxes
 
 .. _audience:
 
