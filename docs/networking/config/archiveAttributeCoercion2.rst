@@ -74,11 +74,11 @@ Archive Attribute Coercion of received/sent DIMSE
 
     (dcmAttributeUpdatePolicy)"
     "
-    .. _dicomDeviceName:
+    .. _dcmSupplementFromDeviceReference:
 
-    :ref:`Device Name Coercion Parameter <dicomDeviceName>`",string,"Device Name Coercion Parameter. Only effective for particular Attribute Coercions.
+    :ref:`Device Name Coercion Parameter <dcmSupplementFromDeviceReference>`",string,"Device Name Coercion Parameter. Only effective for particular Attribute Coercions.
 
-    (dicomDeviceName)"
+    (dcmSupplementFromDeviceReference)"
     "
     .. _dcmMergeAttribute:
 
