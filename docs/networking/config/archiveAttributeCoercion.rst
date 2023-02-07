@@ -1,9 +1,9 @@
-Archive Attribute Coercion
-==========================
+Archive Attribute Coercion - Legacy
+===================================
 Archive Attribute Coercion of received/sent DIMSE
 
 .. tabularcolumns:: |p{4cm}|l|p{8cm}|
-.. csv-table:: Archive Attribute Coercion Attributes (LDAP Object: dcmArchiveAttributeCoercion)
+.. csv-table:: Archive Attribute Coercion - Legacy Attributes (LDAP Object: dcmArchiveAttributeCoercion)
     :header: Name, Type, Description (LDAP Attribute)
     :widths: 23, 7, 70
 
