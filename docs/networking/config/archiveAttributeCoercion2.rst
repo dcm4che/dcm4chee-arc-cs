@@ -70,7 +70,7 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmAttributeUpdatePolicy:
 
-    :ref:`Attribute Update Policy <dcmAttributeUpdatePolicy>`",string,"Applied Attribute Update Policy. PRESERVE (= nullify attributes in the new dataset which are not present in the original dataset), SUPPLEMENT (= attributes not present in original dataset will be supplemented), MERGE (= attribute values will be written from new dataset), OVERWRITE (= attribute values if null in new dataset, will be nullified in original dataset). Only effective for particular Attribute Coercions. Enumerated values: PRESERVE, SUPPLEMENT, MERGE or OVERWRITE.
+    :ref:`Attribute Update Policy <dcmAttributeUpdatePolicy>`",string,"Applied Attribute Update Policy. Only effective for coerce from Leading C-FIND SCP coercion type. Refer `Attribute Update Policies' meanings <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Attribute-Update-Policy>`_ Enumerated values: PRESERVE, SUPPLEMENT, MERGE or OVERWRITE.
 
     (dcmAttributeUpdatePolicy)"
     "
