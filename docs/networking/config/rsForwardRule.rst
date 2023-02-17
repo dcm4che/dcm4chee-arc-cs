@@ -52,6 +52,6 @@ RESTful Forward Rule
     "
     .. _dcmRSOperation:
 
-    :ref:`RESTful Operation(s) <dcmRSOperation>`",string,"Name of RESTful Operation which shall be forwarded to another archive instance. Enumerated values: CreatePatient, UpdatePatient, DeletePatient, ChangePatientID, ChangePatientID2, MergePatient, MergePatient2, UnmergePatient, UpdateStudy, UpdateSeries, DeleteStudy, RejectStudy, RejectSeries, RejectInstance, ReimportStudy, UpdateStudyExpirationDate, UpdateSeriesExpirationDate, ApplyRetentionPolicy, CreateMWL, UpdateMWL, DeleteMWL, UpdateStudyAccessControlID, MoveStudyToPatient, SupplementIssuer or UpdateCharset.
+    :ref:`RESTful Operation(s) <dcmRSOperation>`",string,"Name of RESTful Operation which shall be forwarded to another archive instance. Enumerated values: CreatePatient, UpdatePatient, DeletePatient, ChangePatientID, ChangePatientID2, MergePatient, MergePatient2, UnmergePatient, UpdateStudy, UpdateStudyRequest, UpdateSeries, UpdateSeriesRequest, DeleteStudy, RejectStudy, RejectSeries, RejectInstance, ReimportStudy, UpdateStudyExpirationDate, UpdateSeriesExpirationDate, ApplyRetentionPolicy, CreateMWL, UpdateMWL, DeleteMWL, UpdateStudyAccessControlID, MoveStudyToPatient, SupplementIssuer or UpdateCharset.
 
     (dcmRSOperation)"
