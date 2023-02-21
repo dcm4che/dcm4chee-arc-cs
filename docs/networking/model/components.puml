@@ -5,7 +5,7 @@ database Database as db
 storage Storage
 node "WildFly AS" {
 [Archive] as arc
-[Keycloack] as kc
+[Keycloak] as kc
 }
 storage "Elastic Stack" as elk
 () HTTP as http1
