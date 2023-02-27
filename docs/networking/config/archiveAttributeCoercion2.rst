@@ -22,7 +22,7 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmURI:
 
-    :ref:`Attribute Coercion URI <dcmURI>`",string,"Identifies Attribute Coercion by Uniform Resource Identifier (e.g. 'merge-mwl:${jboss.server.temp.url}/dcm4chee-arc/mwl2series.xsl')
+    :ref:`Attribute Coercion URI <dcmURI>`",string,"Identifies Attribute Coercion by Uniform Resource Identifier. Refer values you can set for `Attribute Coercion URI <https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#attribute-coercion-uri>`_ field depending on the coercion type.
 
     (dcmURI)"
     "
@@ -34,7 +34,7 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmCoercionOnFailure:
 
-    :ref:`Attribute Coercion on Failure <dcmCoercionOnFailure>`",string,"Behavior on failure applying this Attribute Coercion. RETHROW (= propagate failure to operation applying this Attribute Coercion), CONTINUE (= continue to apply other matching Attribute Coercions of lesser priority) or SUFFICIENT (= do not apply other matching Attribute Coercions of lesser priority). Enumerated values: RETHROW, CONTINUE or SUFFICIENT.
+    :ref:`Attribute Coercion on Failure <dcmCoercionOnFailure>`",string,"Behavior on failure applying this Attribute Coercion. Refer `Attribute Coercion on Failure meanings. <https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#attribute-coercion-on-failure>`_ Enumerated values: RETHROW, CONTINUE or SUFFICIENT.
 
     (dcmCoercionOnFailure)"
     "
@@ -46,7 +46,7 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmDIMSE:
 
-    :ref:`DIMSE <dcmDIMSE>`",string,"DICOM Message Element on which this Attribute Coercion shall be applied Enumerated values: N_CREATE_RQ, C_STORE_RQ, C_FIND_RQ or C_FIND_RSP.
+    :ref:`DIMSE <dcmDIMSE>`",string,"DICOM Message Element on which this Attribute Coercion shall be applied. Also `applicable if the requests are received over web <https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#dimse>`_ Enumerated values: N_CREATE_RQ, C_STORE_RQ, C_FIND_RQ or C_FIND_RSP.
 
     (dcmDIMSE)"
     "
@@ -76,18 +76,18 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmSupplementFromDeviceReference:
 
-    :ref:`Device Name Coercion Parameter <dcmSupplementFromDeviceReference>`",string,"Device Name Coercion Parameter. Only effective for particular Attribute Coercions.
+    :ref:`Device Name Coercion Parameter <dcmSupplementFromDeviceReference>`",string,"Device Name Coercion Parameter. Only effective for supplementing from device coercion type.
 
     (dcmSupplementFromDeviceReference)"
     "
     .. _dcmMergeAttribute:
 
-    :ref:`DICOM Attribute Coercion Parameter(s) <dcmMergeAttribute>`",string,"DICOM Attribute Coercion Parameters in format {attributeID}={value}. {attributeID} inside of {value} may be replaced by the value of that attribute in the original dataset. Only effective for particular Attribute Coercions.
+    :ref:`DICOM Attribute Coercion Parameters(s) <dcmMergeAttribute>`",string,"DICOM Attribute Coercion Parameters in format {attributeID}={value}. {attributeID} inside of {value} may be replaced by the value of that attribute in the original dataset. Only effective for merging attributes coercion type. Refer `formatting options and examples. <https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#dicom-attribute-coercion-parameters>`_
 
     (dcmMergeAttribute)"
     "
     .. _dcmCoercionParam:
 
-    :ref:`Other Coercion Parameter(s) <dcmCoercionParam>`",string,"Other Attribute Coercion specific Parameters.
+    :ref:`Other Coercion Parameters(s) <dcmCoercionParam>`",string,"Refer applicability to coercion types and examples in `Other Attribute Coercion specific Parameters <https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#other-coercion-parameters>`_
 
     (dcmCoercionParam)"

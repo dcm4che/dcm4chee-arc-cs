@@ -22,7 +22,7 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmDIMSE:
 
-    :ref:`DIMSE <dcmDIMSE>`",string,"DICOM Message Element on which this Attribute Coercion shall be applied Enumerated values: N_CREATE_RQ, C_STORE_RQ, C_FIND_RQ or C_FIND_RSP.
+    :ref:`DIMSE <dcmDIMSE>`",string,"DICOM Message Element on which this Attribute Coercion shall be applied. Also `applicable if the requests are received over web <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Legacy-Archive-Attribute-Coercion---Application-of-multiple-coercions-using-one-coercion-rule#dimse>`_ Enumerated values: N_CREATE_RQ, C_STORE_RQ, C_FIND_RQ or C_FIND_RSP.
 
     (dcmDIMSE)"
     "
@@ -70,7 +70,7 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmMergeMWLMatchingKey:
 
-    :ref:`Merge MWL Matching Key <dcmMergeMWLMatchingKey>`",string,"Specifies attribute of received object to lookup MWL Item used to coerce request attributes. If absent, request attributes of received objects will not be coerced. PatientID - Patient ID and Accession Number considered for querying MWLs. If Accession Number not available in object attributes, only Patient ID considered for querying MWLs. PatientIDOnly - Only Patient ID considered for querying MWLs. PatientIDAccessionNumber - Patient ID and Accession Number considered for querying MWLs. If Accession Number not available in object attributes, fall back to Study Instance UID. AccessionNumber - Only Accession Number considered for querying MWLs. StudyInstanceUID - Only Study Instance UID considered for querying MWLs. ScheduledProcedureStepID - Scheduled Procedure Step ID and Study Instance UID considered for querying MWLs. Enumerated values: PatientID, PatientIDOnly, PatientIDAccessionNumber, AccessionNumber, StudyInstanceUID or ScheduledProcedureStepID.
+    :ref:`Merge MWL Matching Key <dcmMergeMWLMatchingKey>`",string,"Specifies attribute of received object to lookup MWL Item used to coerce request attributes. If absent, request attributes of received objects will not be coerced. Refer `applicability of merge MWL matching keys. <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Legacy-Archive-Attribute-Coercion---Application-of-multiple-coercions-using-one-coercion-rule#configurations-specific-to-merging-from-mwl-coercion-type>`_ Enumerated values: PatientID, PatientIDOnly, PatientIDAccessionNumber, AccessionNumber, StudyInstanceUID or ScheduledProcedureStepID.
 
     (dcmMergeMWLMatchingKey)"
     "
@@ -94,7 +94,7 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmMergeLocalMWLWithStatus:
 
-    :ref:`Merge Local MWL With Status(s) <dcmMergeLocalMWLWithStatus>`",string,"Only consider MWL items with one of the specified Scheduled Procedure Step Status codes. Enumerated values: SCHEDULED, ARRIVED, READY, STARTED, DEPARTED, CANCELED, DISCONTINUED, COMPLETED. If absent, MWL items with any Scheduled Procedure Step Status are considered. Enumerated values: SCHEDULED, ARRIVED, READY, STARTED, DEPARTED, CANCELED, DISCONTINUED or COMPLETED.
+    :ref:`Merge Local MWL With Status(s) <dcmMergeLocalMWLWithStatus>`",string,"Only consider MWL items with one of the specified Scheduled Procedure Step Status codes. If absent, MWL items with any Scheduled Procedure Step Status are considered. Enumerated values: SCHEDULED, ARRIVED, READY, STARTED, DEPARTED, CANCELED, DISCONTINUED or COMPLETED.
 
     (dcmMergeLocalMWLWithStatus)"
     "
@@ -112,13 +112,13 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmAttributeUpdatePolicy:
 
-    :ref:`Attribute Update Policy <dcmAttributeUpdatePolicy>`",string,"Specifies how attributes shall be updated with attributes fetched from Leading C-FIND SCP. Refer `Attribute Update Policies meanings <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Attribute-Update-Policy>`_ Enumerated values: PRESERVE, SUPPLEMENT, MERGE or OVERWRITE.
+    :ref:`Attribute Update Policy <dcmAttributeUpdatePolicy>`",string,"Specifies how attributes shall be updated with attributes fetched from Leading C-FIND SCP. Refer `Attribute Update Policies meanings. <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Attribute-Update-Policy>`_ Enumerated values: PRESERVE, SUPPLEMENT, MERGE or OVERWRITE.
 
     (dcmAttributeUpdatePolicy)"
     "
     .. _dcmTrimISO2022CharacterSet:
 
-    :ref:`Trim ISO 2022 Character Set <dcmTrimISO2022CharacterSet>`",boolean,"Replace single code for Single-Byte Character Sets with Code Extensions by code for Single-Byte Character Sets without Code Extensions. Only effective with DIMSE = C_STORE_RQ and DICOM Transfer Role = SCU.
+    :ref:`Trim ISO 2022 Character Set <dcmTrimISO2022CharacterSet>`",boolean,"Replace single code for Single-Byte Character Sets with Code Extensions by code for Single-Byte Character Sets without Code Extensions. Refer `character sets to which this coercion applies. <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Legacy-Archive-Attribute-Coercion---Application-of-multiple-coercions-using-one-coercion-rule#configurations-specific-to-trim-iso-2022-character-set-coercion-type>`_
 
     (dcmTrimISO2022CharacterSet)"
     "
@@ -136,7 +136,7 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmMergeAttribute:
 
-    :ref:`Merge Attribute(s) <dcmMergeAttribute>`",string,"Merge DICOM Attribute in format {attributeID}={value}. {attributeID} inside of {value} will be replaced by the value of that attribute in the original dataset. Example: InstitutionName=RegionalHospital or 00081040=XRay.
+    :ref:`Merge Attribute(s) <dcmMergeAttribute>`",string,"Merge DICOM Attribute in format {attributeID}={value}. {attributeID} inside {value} will be replaced by the value of that attribute in the original dataset. Refer `applicability, formats and some examples. <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Legacy-Archive-Attribute-Coercion---Application-of-multiple-coercions-using-one-coercion-rule#configurations-specific-to-merge-attributes-coercion-type>`_
 
     (dcmMergeAttribute)"
     "
@@ -148,18 +148,18 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmIssuerOfPatientID:
 
-    :ref:`Issuer of Patient ID(s) <dcmIssuerOfPatientID>`",string,"Issuer of Patient ID (0010,0021), and optionally also values for the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Patient ID Qualifiers Sequence (0010,0024) against values in received objects are matched, if Nullify Issuer of Patient ID is set to MATCHING or NOT_MATCHING. Format: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].
+    :ref:`Issuer of Patient ID(s) <dcmIssuerOfPatientID>`",string,"Issuer of Patient ID (0010,0021), and optionally also values for the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Patient ID Qualifiers Sequence (0010,0024) against values in received objects are matched, if Nullify Issuer of Patient ID is set to MATCHING or NOT_MATCHING. Specify values in format: {IssuerOfPatientID}[&{UniversalEntityID&UniversalEntityIDType}].
 
     (dcmIssuerOfPatientID)"
     "
     .. _dcmIssuerOfPatientIDFormat:
 
-    :ref:`Issuer Of Patient ID Format <dcmIssuerOfPatientIDFormat>`",string,"Format of Issuer of Patient ID (0010,0021) derived from other attributes. E.g. ""{00100010,hash}-{00100030}"": use hash value of Patient Name and Birth Date separated by ""-"". For coercion of existing values of Issuer of Patient ID in received objects also dcmNullifyIssuerOfPatientID must be set accordingly.
+    :ref:`Issuer Of Patient ID Format <dcmIssuerOfPatientIDFormat>`",string,"Format of Issuer of Patient ID (0010,0021) derived from other attributes. E.g. ""{00100010,hash}-{00100030}"": use hash value of Patient Name and Birth Date separated by ""-"". Refer `applicability of this field and some examples. <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Legacy-Archive-Attribute-Coercion---Application-of-multiple-coercions-using-one-coercion-rule#configurations-specific-to-supplement-issuer-of-patient-id-format-coercion-type>`_
 
     (dcmIssuerOfPatientIDFormat)"
     "
     .. _dcmSupplementFromDeviceReference:
 
-    :ref:`Supplement from Device <dcmSupplementFromDeviceReference>`",string,"Name of Device from which Assigning Authorities and other information is taken to supplement received Composite Objects and MPPS.
+    :ref:`Supplement from Device <dcmSupplementFromDeviceReference>`",string,"Name of Device from which Assigning Authorities and other information is supplemented. Refer `applicability to entities and information supplemented from device. <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Legacy-Archive-Attribute-Coercion---Application-of-multiple-coercions-using-one-coercion-rule#configurations-specific-to-supplementing-from-device-coercion-type>`_
 
     (dcmSupplementFromDeviceReference)"
