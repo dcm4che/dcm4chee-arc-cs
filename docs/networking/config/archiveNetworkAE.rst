@@ -538,7 +538,7 @@ DICOM Archive Network AE related information
     "
     .. _hl7PSUCondition:
 
-    :ref:`HL7 Procedure Status Update Attribute Conditions(s) <hl7PSUCondition>`",string,"Restrict notification of configured HL7 Procedure Status Update Receiving Applications about Procedure Status Update by conditions on attributes of received composite object in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER. Overwrites value specified on Device level.
+    :ref:`HL7 Procedure Status Update Conditions(s) <hl7PSUCondition>`",string,"Restrict notification of configured HL7 Procedure Status Update Receiving Applications about Procedure Status Update by conditions on attributes of received composite object in format {key}[!]={value}. Refer `applicability, format and some examples <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions>`_. Overwrites value specified on Device level.
 
     (hl7PSUCondition)"
     "
@@ -672,3 +672,17 @@ DICOM Archive Network AE related information
     ":doc:`storeAccessControlIDRule` (s)",object,"Store Access Control Rules applied to Studies received by this AE. Supplements Store Access Control Rules specified on Device level."
     ":doc:`upsOnStore` (s)",object,"UPS on Store Rules applied to DICOM objects received by this AE. Supplements UPS on Store Rules specified on Device level."
     ":doc:`upsOnUPSCompleted` (s)",object,"UPS on UPS Completed Rules applied to UPS managed by this AE. Supplements UPS on UPS Completed Rules specified on Device level."
+
+.. toctree::
+
+    exportRule
+    exportPriorsRule
+    mppsForwardRule
+    rsForwardRule
+    archiveCompressionRule
+    archiveAttributeCoercion
+    archiveAttributeCoercion2
+    studyRetentionPolicy
+    storeAccessControlIDRule
+    upsOnStore
+    upsOnUPSCompleted

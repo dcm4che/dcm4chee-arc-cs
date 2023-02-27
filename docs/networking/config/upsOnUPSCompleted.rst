@@ -16,7 +16,7 @@ Create Workitem in unified Worklist on previous UPS Completed
     "
     .. _dcmProperty:
 
-    :ref:`Condition(s) <dcmProperty>`",string,"Conditions in format {attributeID[number]})[!]={regEx} or {sequenceAttributeID}[!]=(CV, CSD, ""CM""). E.g.: PerformedWorkitemCodeSequence=(110005,DCM,""Interpretation""). More than one value can be specified for a given attribute by separating them with a | symbol.
+    :ref:`Condition(s) <dcmProperty>`",string,"Conditions in format {key}[!]={value}. Refer `applicability, format and some examples. <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions>`_
 
     (dcmProperty)"
     "
