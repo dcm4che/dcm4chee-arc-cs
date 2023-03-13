@@ -148,6 +148,6 @@ Storage Descriptor
     "
     .. _dcmProperty:
 
-    :ref:`Storage Property(s) <dcmProperty>`",string,"Property in format <name>=<value>
+    :ref:`Storage Property(s) <dcmProperty>`",string,"Specify storage properties in format {name}={value}. Refer various `Storage Properties <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Storage-Properties>`_ that can be configured based on the storage type.
 
     (dcmProperty)"
