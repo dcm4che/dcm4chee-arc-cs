@@ -16,7 +16,7 @@ Exporter Descriptor
     "
     .. _dcmURI:
 
-    :ref:`URI <dcmURI>`",string,"RFC2079: Uniform Resource Identifier
+    :ref:`Exporter URI <dcmURI>`",string,"RFC2079: Uniform Resource Identifier. Refer various `Exporter URI <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Exporter-Properties>`_ that can be configured based on the exporter type.
 
     (dcmURI)"
     "
@@ -94,6 +94,6 @@ Exporter Descriptor
     "
     .. _dcmProperty:
 
-    :ref:`Property(s) <dcmProperty>`",string,"Property in format <name>=<value>
+    :ref:`Exporter Property(s) <dcmProperty>`",string,"Specify exporter properties in format {name}={value}. Refer various `Exporter Properties <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Exporter-Properties>`_ that can be configured based on the exporter type.
 
     (dcmProperty)"
