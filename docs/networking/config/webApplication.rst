@@ -58,7 +58,7 @@ Web Application information
     "
     .. _dcmProperty:
 
-    :ref:`Property(s) <dcmProperty>`",string,"Property in format <name>=<value>. E.g.: roles=<accepted-user-role>[,...], IID_PATIENT_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=PATIENT&patientID={{patientID}} or IID_STUDY_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=STUDY&studyUID={{studyUID}}, ( Other valid parameters are: 'patientBirthDate' and 'accessionNumber' ) , you could define the target of the Url by setting it to the parameter 'IID_URL_TARGET=_blank|_self'
+    :ref:`Web Application Property(s) <dcmProperty>`",string,"Web application property in format {name}={value}. Refer `Web Application Properties <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Web-Application-Properties>`_ configuration examples based on use cases.
 
     (dcmProperty)"
     "
