@@ -6,6 +6,6 @@ sphinx:
 
 # Explicitly set the version of Python and its requirements
 python:
-  version: 2.7.18
+  version: 2.7
   install:
     - requirements: docs/requirements.txt
