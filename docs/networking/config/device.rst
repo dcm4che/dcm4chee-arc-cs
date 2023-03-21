@@ -96,15 +96,15 @@ DICOM Device related information
 
     :ref:`Issuer of Patient ID <dicomIssuerOfPatientID>`",string,"Default value for the Issuer of Patient ID (0010,0021), and optionally also default values for the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Patient ID Qualifiers Sequence (0010,0024) for SOP Instances created by this device when Patient ID (0010,0020) is missing; may be overridden with values received in a worklist or other source. It is also used on `invocation by archive attribute coercions on an archive device to supplement from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when assigning authority of Patient ID (0010,0020) is missing : 
 
-	 - on receive and creation of SOP instances by the invoking archive device
+	 # on receive and creation of SOP instances by the invoking archive device
 
-	 - on receive and creation of MPPS by the invoking archive device
+	 # on receive and creation of MPPS by the invoking archive device
 
-	 - on DICOM (MWl) C-FIND requests from external systems to invoking archive device
+	 # on DICOM (MWl) C-FIND requests from external systems to invoking archive device
 
-	 - on DICOM (MWl) C-FIND requests from invoking archive device to external systems
+	 # on DICOM (MWl) C-FIND requests from invoking archive device to external systems
 
-	 - on DICOM (MWl) C-FIND responses from external systems to invoking archive device.
+	 # on DICOM (MWl) C-FIND responses from external systems to invoking archive device.
 
 	Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}]
 
