@@ -64,7 +64,7 @@ release = u'5.29.2'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -156,8 +156,8 @@ html_title = 'DICOM Conformance Statement dcm4che Archive 5'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-def setup(app):
-    app.add_stylesheet("theme_overrides.css")
+#def setup(app):
+   # app.add_stylesheet("theme_overrides.css")
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
