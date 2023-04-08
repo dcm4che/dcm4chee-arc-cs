@@ -138,3 +138,4 @@
 "Filler Order Number / Imaging Service Request", "0040,2017", "LO", "NONE"
 "Imaging Service Request Comments", "0040,2400", "LT", "NONE"
 "Study Status ID (retired)", "0032,000A", "CS", "NONE"
+"Worklist Label", "0074,1202", "LO", "S,*,U,M"
