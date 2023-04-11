@@ -404,6 +404,12 @@ DICOM Archive Network AE related information
 
     (dcmDefaultCharacterSet)"
     "
+    .. _dcmMWLWorklistLabel:
+
+    :ref:`MWL Worklist Label <dcmMWLWorklistLabel>`",string,"Only consider MWL items with this or no Worklist Label (0074,1202) for matching by this Archive AE acting as MWP SCP. If absent, MWL items with any Value of Worklist Label (0074,1202) are considered for matching by this Archive AE acting as MWL SCP.
+
+    (dcmMWLWorklistLabel)"
+    "
     .. _dcmUPSWorklistLabel:
 
     :ref:`UPS Worklist Label <dcmUPSWorklistLabel>`",string,"Value of Worklist Label (0074,1202) of created UPS by this Network AE, if the UPS Push SCU or UPS-RS User Agent does not provide a value for this attribute. If absent, the AE Title of the receiving AE will be used. Overwrites value specified on Device level.
@@ -672,17 +678,3 @@ DICOM Archive Network AE related information
     ":doc:`storeAccessControlIDRule` (s)",object,"Store Access Control Rules applied to Studies received by this AE. Supplements Store Access Control Rules specified on Device level."
     ":doc:`upsOnStore` (s)",object,"UPS on Store Rules applied to DICOM objects received by this AE. Supplements UPS on Store Rules specified on Device level."
     ":doc:`upsOnUPSCompleted` (s)",object,"UPS on UPS Completed Rules applied to UPS managed by this AE. Supplements UPS on UPS Completed Rules specified on Device level."
-
-.. toctree::
-
-    exportRule
-    exportPriorsRule
-    mppsForwardRule
-    rsForwardRule
-    archiveCompressionRule
-    archiveAttributeCoercion
-    archiveAttributeCoercion2
-    studyRetentionPolicy
-    storeAccessControlIDRule
-    upsOnStore
-    upsOnUPSCompleted

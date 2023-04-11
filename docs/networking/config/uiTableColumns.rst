@@ -14,6 +14,12 @@ Study Table Columns
 
     (dcmuiColumnName)"
     "
+    .. _dcmuiColumnId:
+
+    :ref:`Column ID <dcmuiColumnId>`",string,"Every possible column that is used in the UI, has and ID, by using the ID you can change some of the properties of that Column, like Name, Description, Order or width
+
+    (dcmuiColumnId)"
+    "
     .. _dcmuiColumnTitle:
 
     :ref:`Column Description <dcmuiColumnTitle>`",string,"Description of the Column, shown on hover
@@ -40,6 +46,6 @@ Study Table Columns
     "
     .. _dcmuiColumnOrder:
 
-    :ref:`Order of the Column <dcmuiColumnOrder>`",string,"Order of the Column
+    :ref:`Order of the Column <dcmuiColumnOrder>`",number,"Order of the Column
 
     (dcmuiColumnOrder)"

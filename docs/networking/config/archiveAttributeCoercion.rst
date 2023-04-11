@@ -86,11 +86,11 @@ Archive Attribute Coercion of received/sent DIMSE
 
     (dcmMergeMWLSCP)"
     "
-    .. _dcmMergeLocalMWLSCP:
+    .. _dcmMWLWorklistLabel:
 
-    :ref:`Merge Local MWL SCP(s) <dcmMergeLocalMWLSCP>`",string,"AE Title of archive's MWL SCP used to lookup MWL Item to coerce request attributes of received objects. If absent, the Archive DB is queried for a matching MWL item provided by any Archive MWL AE.
+    :ref:`Merge MWL Worklist Label <dcmMWLWorklistLabel>`",string,"Only consider MWL items with this or no Worklist Label (0074,1202) in the Archive DB to coerce request attributes of received objects. If absent, the Archive DB is queried for a matching MWL item provided by any Archive MWL AE.
 
-    (dcmMergeLocalMWLSCP)"
+    (dcmMWLWorklistLabel)"
     "
     .. _dcmMergeLocalMWLWithStatus:
 

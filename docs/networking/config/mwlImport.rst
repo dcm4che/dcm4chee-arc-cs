@@ -26,11 +26,11 @@ Specifies import of Scheduled Procedure Step from external MWL SCP
 
     (dcmMergeMWLSCP)"
     "
-    .. _dcmDestinationAE:
+    .. _dcmMWLWorklistLabel:
 
-    :ref:`Destination MWL SCP <dcmDestinationAE>`",string,"AE Title of local MWL SCP feeded/updated by Scheduled Procedure Steps returned by external MWL SCP.
+    :ref:`MWL Worklist Label <dcmMWLWorklistLabel>`",string,"Value of Worklist Label (0074,1202) of imported MWL items fetched from Source MWL SCP. If absent, imported MWL items are provided by all MWL SCP Archive Network AEs.
 
-    (dcmDestinationAE)"
+    (dcmMWLWorklistLabel)"
     "
     .. _dcmDuration:
 

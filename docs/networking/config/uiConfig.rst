@@ -45,6 +45,18 @@ UI Configuration
 
     (dcmuiDateTimeFormat)"
     "
+    .. _dcmuiHideClock:
+
+    :ref:`Hide Clock <dcmuiHideClock>`",boolean,"Set to true if you want to hide the clock in the UI
+
+    (dcmuiHideClock)"
+    "
+    .. _dcmuiPageTitle:
+
+    :ref:`Page Title <dcmuiPageTitle>`",string,"If set, it will be used as UI page Title ( The Text shown in the Tab of the Browser ) 
+
+    (dcmuiPageTitle)"
+    "
     .. _dcmuiPersonNameFormat:
 
     :ref:`Format Person Name <dcmuiPersonNameFormat>`",string,"Here you can format the person Name in the UI by using:{FAMILY-NAME}, {GIVEN-NAME}, {MIDDLE-NAME}, {NAME-PREFIX}, {NAME-SUFFIX} for Alphabetic, or by appending 'I_' for the Ideographic and 'P_' for the Phonetic version like {P_FAMILY-NAME}, {I_NAME-SUFFIX}

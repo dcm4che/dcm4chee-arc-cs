@@ -102,9 +102,9 @@ DICOM Device related information
 
 	- on DICOM (MWl) C-FIND requests from external systems to invoking archive device
 
-	- on DICOM (MWl) C-FIND requests from invoking archive device to external systems
+	- on DICOM (MWl) C-FIND requests from invoking archive device to external systems 
 
-	- on DICOM (MWl) C-FIND responses from external systems to invoking archive device.
+	- on DICOM (MWl) C-FIND responses from external systems to invoking archive device. 
 
 	Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}]
 
