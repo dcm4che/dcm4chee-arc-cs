@@ -50,6 +50,12 @@ HL7 Application information
 
     (hl7SendingCharacterSet)"
     "
+    .. _hl7RequiredMSHField:
+
+    :ref:`HL7 Required MSH Fields(s) <hl7RequiredMSHField>`",integer,"MSH fields to be validated if missing or not, according to `IHE RAD TF Vol 2 Message Control requirements <https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf#page=43>`_. If absent, `previous default checks in dcm4che library <https://dcm4chee-arc-hl7cs.readthedocs.io/en/latest/hl7-impl-notes.html#error-codes-mapping>`_ are applied.
+
+    (hl7RequiredMSHField)"
+    "
     .. _dicomDescription:
 
     :ref:`HL7 Description <dicomDescription>`",string,"Unconstrained text description of the HL7 Application
