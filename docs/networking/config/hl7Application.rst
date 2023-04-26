@@ -52,7 +52,7 @@ HL7 Application information
     "
     .. _hl7RequiredMSHField:
 
-    :ref:`HL7 Required MSH Fields(s) <hl7RequiredMSHField>`",integer,"MSH fields to be validated if missing or not, according to `IHE RAD TF Vol 2 Message Control requirements <https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf#page=43>`_. If absent, `previous default checks in dcm4che library <https://dcm4chee-arc-hl7cs.readthedocs.io/en/latest/hl7-impl-notes.html#error-codes-mapping>`_ are applied.
+    :ref:`HL7 Required MSH Fields(s) <hl7RequiredMSHField>`",integer,"MSH fields to be validated if missing or not, according to `IHE RAD TF Vol 2 Message Control requirements <https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf#page=43>`_. If absent, `previous default checks in dcm4che library <https://dcm4chee-arc-hl7cs.readthedocs.io/en/latest/hl7-impl-notes.html#error-codes-mapping>`_ are applied. By default, all of the displayed MSH fields are validated. Enumerated values: 3, 4, 5, 6, 7, 9, 10, 11 or 12.
 
     (hl7RequiredMSHField)"
     "
