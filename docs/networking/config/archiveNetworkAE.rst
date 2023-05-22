@@ -64,7 +64,7 @@ DICOM Archive Network AE related information
     "
     .. _dcmOverwritePolicy:
 
-    :ref:`Overwrite Policy <dcmOverwritePolicy>`",string,"Overwrite Policy for Objects received by this AE. Overwrites value specified on Device level. Enumerated values: NEVER, ALWAYS, SAME_SOURCE, SAME_SERIES or SAME_SOURCE_AND_SERIES.
+    :ref:`Overwrite Policy <dcmOverwritePolicy>`",string,"Overwrite Policy for Objects received by this AE. Overwrites value specified on Device level. Enumerated values: NEVER, ALWAYS, SAME_SOURCE, SAME_SERIES, SAME_SOURCE_AND_SERIES or EVEN_WITH_EQUAL_DIGEST.
 
     (dcmOverwritePolicy)"
     "

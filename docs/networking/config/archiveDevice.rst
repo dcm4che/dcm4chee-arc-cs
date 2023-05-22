@@ -166,7 +166,7 @@ DICOM Archive Device related information
     "
     .. _dcmOverwritePolicy:
 
-    :ref:`Overwrite Policy <dcmOverwritePolicy>`",string,"Overwrite Policy. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: NEVER, ALWAYS, SAME_SOURCE, SAME_SERIES or SAME_SOURCE_AND_SERIES.
+    :ref:`Overwrite Policy <dcmOverwritePolicy>`",string,"Overwrite Policy. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: NEVER, ALWAYS, SAME_SOURCE, SAME_SERIES, SAME_SOURCE_AND_SERIES or EVEN_WITH_EQUAL_DIGEST.
 
     (dcmOverwritePolicy)"
     "
