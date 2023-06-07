@@ -125,7 +125,7 @@ Patient created by HL7 ADT message
         <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
             <AuditSourceTypeCode csd-code="4"/>
         </AuditSourceIdentification>
-        <ParticipantObjectIdentification ParticipantObjectID="MEE4-54798^^^MEE4&1.3.6.1.4.1.12559.11.1.4.1.2&ISO^PI" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+        <ParticipantObjectIdentification ParticipantObjectID="MM2^^^JMS~MM2^^^JMS1&1.2.3&ISO~MM2^^^JMS2~MM2^^^&1.2.3.4.5.6.7&ISO" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
             <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
             <ParticipantObjectName>Berger^Oliver^^^^^L</ParticipantObjectName>
             <ParticipantObjectDetail type="HL7v2 Message" value="TVNIfF5+XCZ8UEFNU2ltdWxhdG9yfElIRXxEQ000Q0hFRXxEQ000Q0hFRXwyMDE2MDYwMjE0Mjg1Nnx8QURUXkEyOF5BRFRfQTA1fDIwMTYwNjAyMTQyODU2fFB8Mi41fHx8fHx8QVNDSUlbQ1JdDQpFVk58fDIwMTYwNjAyMTQyODU2DQpQSUR8fHxNRUU0LTU0Nzk4Xl5eTUVFNCYxLjMuNi4xLjQuMS4xMjU1OS4xMS4xLjQuMS4yJklTT15QSXx8QmVyZ2VyXk9saXZlcl5eXl5eTHxTY2h1c3Rlcl5eXl5eXk18MTk5NDEwMjV8TXx8fEdhc3RlaWd3ZWdeXkhhbGxlaW5eXjU0MDBeQVVUfHxeUFJOXlBIfHx8fENBVHwxMTIyOV5eXklIRVBBTSYxLjMuNi4xLjQuMS4xMjU1OS4xMS4xLjIuMi41JklTT15BTnx8fHx8fHx8fHx8fHxOW0NSXQ0KUFYxfHxO"/>

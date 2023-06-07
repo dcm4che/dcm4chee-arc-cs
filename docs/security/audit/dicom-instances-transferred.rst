@@ -296,7 +296,7 @@ Reports stored using HL7 ORU^R01
              <SOPClass UID="1.2.840.10008.5.1.4.1.1.88.11" NumberOfInstances="1" />
           </ParticipantObjectDescription>
        </ParticipantObjectIdentification>
-       <ParticipantObjectIdentification ParticipantObjectID="P3^^^MINIRIS" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+       <ParticipantObjectIdentification ParticipantObjectID="MM2^^^JMS~MM2^^^JMS1&1.2.3&ISO~MM2^^^JMS2~MM2^^^&1.2.3.4.5.6.7&ISO" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
           <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881" />
           <ParticipantObjectName>Miller^John</ParticipantObjectName>
        </ParticipantObjectIdentification>

@@ -128,6 +128,18 @@ DICOM Archive HL7 Application related information
 
     (hl7VeterinaryUsePatientName)"
     "
+    .. _hl7PrimaryAssigningAuthorityOfPatientID:
+
+    :ref:`HL7 Primary Assigning Authority of Patient ID <hl7PrimaryAssigningAuthorityOfPatientID>`",string,"Assigning Authority of Patient ID in received HL7 message used to search primary qualified patient identifier in the list of identifiers in PID-3. This qualified patient identifier shall be used on the root dataset. If absent, by default the first patient identifier pair in PID-3 shall be used as primary patient identifier on root dataset. If none of the qualified patient identifiers in the list match with the configured issuer, archive server log shall contain a log INFO message and by default the first qualified patient identifier in PID-3 shall be used. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}]. Overwrites value specified on Device level.
+
+    (hl7PrimaryAssigningAuthorityOfPatientID)"
+    "
+    .. _hl7OtherPatientIDs:
+
+    :ref:`HL7 Other Patient IDs <hl7OtherPatientIDs>`",string,"Specifies inclusion policy for patient identifiers in PID-3 of HL7 message in Other Patient IDs Sequence (0010,1002). Overwrites value specified on Device level. Enumerated values: ALL, NONE or OTHER.
+
+    (hl7OtherPatientIDs)"
+    "
     .. _hl7OrderMissingStudyIUIDPolicy:
 
     :ref:`HL7 Order Missing Study Instance UID Policy <hl7OrderMissingStudyIUIDPolicy>`",string,"Specifies policy for missing Study Instance UID in incoming HL7 Order messages. Overwrites value specified on Device level. Enumerated values: REJECT, GENERATE or ACCESSION_BASED.
@@ -182,3 +194,13 @@ DICOM Archive HL7 Application related information
     ":doc:`hl7StudyRetentionPolicy` (s)",object,"HL7 Study Retention Policies triggered by HL7 messages received by this HL7 Application. Supplements values specified on Device level."
     ":doc:`hl7OrderScheduledStation` (s)",object,"Scheduled Station selected on MWL HL7 Order Feed. Supplements values specified on Device level."
     ":doc:`hl7OrderSPSStatus` (s)",object,"Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages. Overwrites values specified on Device level."
+
+.. toctree::
+
+    hl7ForwardRule
+    hl7ExportRule
+    upsOnHL7
+    hl7PrefetchRule
+    hl7StudyRetentionPolicy
+    hl7OrderScheduledStation
+    hl7OrderSPSStatus

@@ -139,7 +139,7 @@ MWL created by HL7 Order message
                 <Accession Number="$ACCESSION_NUMBER$"/>
             </ParticipantObjectDescription>
         </ParticipantObjectIdentification>
-        <ParticipantObjectIdentification ParticipantObjectID="M4001^^^ADT1" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+        <ParticipantObjectIdentification ParticipantObjectID="MM2^^^JMS~MM2^^^JMS1&1.2.3&ISO~MM2^^^JMS2~MM2^^^&1.2.3.4.5.6.7&ISO" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
             <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
             <ParticipantObjectName>KING^MARTIN</ParticipantObjectName>
         </ParticipantObjectIdentification>
