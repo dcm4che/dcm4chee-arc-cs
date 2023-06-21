@@ -58,7 +58,7 @@ Storage Descriptor
     "
     .. _dcmStorageClusterID:
 
-    :ref:`Storage Cluster ID <dcmStorageClusterID>`",string,"Identifies a CACHE Storage belonging to a Storage Cluster. Objects of one Study may be distributed over Storage Systems of one Storage Cluster. Used by threshold triggered deletion.
+    :ref:`Storage Cluster ID <dcmStorageClusterID>`",string,"Identifies a Storage to belong to a Storage Cluster. Objects of one Study may be distributed over Storage Systems of one Storage Cluster. Used by threshold triggered deletion.
 
     (dcmStorageClusterID)"
     "
