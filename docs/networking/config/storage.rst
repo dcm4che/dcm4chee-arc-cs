@@ -58,7 +58,7 @@ Storage Descriptor
     "
     .. _dcmStorageClusterID:
 
-    :ref:`Storage Cluster ID <dcmStorageClusterID>`",string,"Identifies a Storage to belong to a Storage Cluster. Objects of one Study may be distributed over Storage Systems of one Storage Cluster. Used by threshold triggered deletion.
+    :ref:`Storage Cluster ID <dcmStorageClusterID>`",string,"Identifies a CACHE Storage belonging to a Storage Cluster. Objects of one Study may be distributed over Storage Systems of one Storage Cluster. Used by threshold triggered deletion.
 
     (dcmStorageClusterID)"
     "
@@ -139,6 +139,18 @@ Storage Descriptor
     :ref:`Retrieve Cache Storage ID <dcmRetrieveCacheStorageID>`",string,"Specifies another Storage to which objects are copied in parallel on retrieve to increase the performance on accessing storage systems which provides more bandwidth using multiple connections in parallel.
 
     (dcmRetrieveCacheStorageID)"
+    "
+    .. _dcmNoRetrieveCacheOnDestinationAETitle:
+
+    :ref:`No Retrieve Cache on Destination AE Title(s) <dcmNoRetrieveCacheOnDestinationAETitle>`",string,"Specifies AE Titles of C-STORE SCPs to which objects are retrieved without copying them to a configured Retrieve Cache Storage.
+
+    (dcmNoRetrieveCacheOnDestinationAETitle)"
+    "
+    .. _dcmNoRetrieveCacheOnPurgedInstanceRecords:
+
+    :ref:`No Retrieve Cache on Purged Instance Records <dcmNoRetrieveCacheOnPurgedInstanceRecords>`",boolean,"Indicates to NOT copy retrieved objects to a configured Retrieve Cache Storage, wherein corresponding Instance Records were already purged from the DB.
+
+    (dcmNoRetrieveCacheOnPurgedInstanceRecords)"
     "
     .. _dcmRetrieveCacheMaxParallel:
 
