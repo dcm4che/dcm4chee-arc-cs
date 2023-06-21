@@ -154,7 +154,15 @@ dcm4che proprietary Network Connection Attributes
     "
     .. _dcmResponseTimeout:
 
-    :ref:`Response Timeout <dcmResponseTimeout>`",integer,"Timeout in ms for receive of other outstanding DIMSE RSPs than C-MOVE  or C-GET RSPs; no timeout if absent
+    :ref:`Response Timeout <dcmResponseTimeout>`",integer,"Timeout in ms for receive of outstanding 
+
+	- DIMSE RSPs other than C-MOVE / C-GET RSPs 
+
+	- responses of outgoing HL7 messages 
+
+	- HTTP(S) responses 
+
+	No timeout if absent
 
     (dcmResponseTimeout)"
     "
