@@ -20,18 +20,6 @@ RESTful Forward Rule
 
     (dcmWebAppName)"
     "
-    .. _dcmTLSAllowAnyHostname:
-
-    :ref:`TLS Allow Any Hostname <dcmTLSAllowAnyHostname>`",boolean,"If the other server requires HTTPS and this config option is set to true the other server’s certificate is validated via the truststore, but host name validation is not done.
-
-    (dcmTLSAllowAnyHostname)"
-    "
-    .. _dcmTLSDisableTrustManager:
-
-    :ref:`TLS Disable Trust Manager <dcmTLSDisableTrustManager>`",boolean,"If the other server requires HTTPS and this config option is set to true you do not have to specify a truststore
-
-    (dcmTLSDisableTrustManager)"
-    "
     .. _dcmURIPattern:
 
     :ref:`Request URL Pattern <dcmURIPattern>`",string,"Only forward requests which match the given Regular Expression. If prefixed with !, only forward requests which does not match the given Regular Expression.
