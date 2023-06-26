@@ -164,7 +164,7 @@
 "Ophthalmic Axial Measurements Storage", "1.2.840.10008.5.1.4.1.1.78.7", "Yes", "No"
 "Intraocular Lens Calculations Storage", "1.2.840.10008.5.1.4.1.1.78.8", "Yes", "No"
 "Ophthalmic Visual Field Static Perimetry Measurements Storage", "1.2.840.10008.5.1.4.1.1.80.1", "Yes", "No"
-"BasicStructuredDisplayStorage", "1.2.840.10008.5.1.4.1.1.131", "Yes", "No"
+"Basic Structured Display Storage", "1.2.840.10008.5.1.4.1.1.131", "Yes", "No"
 "Encapsulated PDF Storage", "1.2.840.10008.5.1.4.1.1.104.1", "Yes", "No"
 "Encapsulated CDA Storage", "1.2.840.10008.5.1.4.1.1.104.2", "Yes", "No"
 "Encapsulated STL Storage", "1.2.840.10008.5.1.4.1.1.104.3", "Yes", "No"
