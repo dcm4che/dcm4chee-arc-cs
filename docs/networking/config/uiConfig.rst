@@ -33,6 +33,12 @@ UI Configuration
 
     (dcmuiBackgroundURL)"
     "
+    .. _dcmuiHideOtherPatientIDs:
+
+    :ref:`Hide Other Patient IDs <dcmuiHideOtherPatientIDs>`",boolean,"Indicates if other patient identifiers of patient record present in Other Patient IDs Sequence (0010,1002) shall be hidden. By default, all patient identifiers of patient record are displayed separated by comma.
+
+    (dcmuiHideOtherPatientIDs)"
+    "
     .. _dcmuiLogoURL:
 
     :ref:`Logo URL <dcmuiLogoURL>`",string,"Logo URL for changing the logo of the UI, it can be relative or absolute URL, the image should have the width of 140px and should be in format png with the transparent background
