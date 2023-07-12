@@ -524,6 +524,24 @@ DICOM Archive Device related information
 
     (dcmDeleteStudyBatchSize)"
     "
+    .. _dcmDeleteStudyInterval:
+
+    :ref:`Delete Study Interval <dcmDeleteStudyInterval>`",string,"Specifies maximum range of access time of studies, in ISO-8601 duration format PnDTnHnMnS, to be deleted from the storage system, if the usable space falls below configured Deleter Thresholds, before checking the Deleter Thresholds again. If absent, the number of Studies to be deleted is only limited by configured Delete Study Batch Size.
+
+    (dcmDeleteStudyInterval)"
+    "
+    .. _dcmPreserveStudyInterval:
+
+    :ref:`Preserve Study Interval <dcmPreserveStudyInterval>`",string,"Protect studies which were accessed later than the specified time interval, in ISO-8601 duration format PnDTnHnMnS, from deletion from the storage system, if the usable space falls below configured Deleter Thresholds. If absent, most recently accessed studies shall also get deleted from the storage system, if least recently accessed studies were not found or if Delete Least Recently Accessed Study First is set to false.
+
+    (dcmPreserveStudyInterval)"
+    "
+    .. _dcmDeleteStudyLeastRecentlyAccessedFirst:
+
+    :ref:`Delete Least Recently Accessed Study First <dcmDeleteStudyLeastRecentlyAccessedFirst>`",boolean,"Indicates to delete studies beginning with the least recently accessed study first, if the usable space falls below configured Deleter Thresholds.
+
+    (dcmDeleteStudyLeastRecentlyAccessedFirst)"
+    "
     .. _dcmDeleteStudyChunkSize:
 
     :ref:`Delete Study Chunk Size <dcmDeleteStudyChunkSize>`",integer,"Number of Instances deleted in one DB transaction on permanent deletion of Studies.
