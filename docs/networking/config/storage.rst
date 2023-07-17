@@ -20,6 +20,12 @@ Storage Descriptor
 
     (dcmURI)"
     "
+    .. _dcmLocationStatus:
+
+    :ref:`Location Status <dcmLocationStatus>`",string,"Initial Location Status of DICOM files written to this Storage System: 'OK' or 'VERIFY_QSTAR_ACCESS_STATE'; 'OK' if absent. Enumerated values: OK or VERIFY_QSTAR_ACCESS_STATE.
+
+    (dcmLocationStatus)"
+    "
     .. _dcmDigestAlgorithm:
 
     :ref:`Digest Algorithm <dcmDigestAlgorithm>`",string,"Algorithm for generation of check sums. Enumerated values: MD5 or SHA-1.
