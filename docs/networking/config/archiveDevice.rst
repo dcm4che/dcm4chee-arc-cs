@@ -10,7 +10,21 @@ DICOM Archive Device related information
     "
     .. _dcmFuzzyAlgorithmClass:
 
-    :ref:`Fuzzy Algorithm Class <dcmFuzzyAlgorithmClass>`",string,"Specifies Fuzzy Algorithm Implementation Class. Enumerated values: org.dcm4che3.soundex.Soundex, org.dcm4che3.soundex.ESoundex, org.dcm4che3.soundex.ESoundex9, org.dcm4che3.soundex.Metaphone, org.dcm4che3.soundex.KPhonetik or org.dcm4che3.soundex.Phonem.
+    :ref:`Fuzzy Algorithm Class <dcmFuzzyAlgorithmClass>`",string,"Specifies Fuzzy Algorithm Implementation Class.
+
+    Enumerated values:
+
+    org.dcm4che3.soundex.Soundex
+
+    org.dcm4che3.soundex.ESoundex
+
+    org.dcm4che3.soundex.ESoundex9
+
+    org.dcm4che3.soundex.Metaphone
+
+    org.dcm4che3.soundex.KPhonetik
+
+    org.dcm4che3.soundex.Phonem
 
     (dcmFuzzyAlgorithmClass)"
     "
@@ -166,7 +180,21 @@ DICOM Archive Device related information
     "
     .. _dcmOverwritePolicy:
 
-    :ref:`Overwrite Policy <dcmOverwritePolicy>`",string,"Overwrite Policy. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: NEVER, ALWAYS, SAME_SOURCE, SAME_SERIES, SAME_SOURCE_AND_SERIES or EVEN_WITH_EQUAL_DIGEST.
+    :ref:`Overwrite Policy <dcmOverwritePolicy>`",string,"Overwrite Policy. May be overwritten by configured values for particular Archive Network AEs.
+
+    Enumerated values:
+
+    NEVER
+
+    ALWAYS
+
+    SAME_SOURCE
+
+    SAME_SERIES
+
+    SAME_SOURCE_AND_SERIES
+
+    EVEN_WITH_EQUAL_DIGEST
 
     (dcmOverwritePolicy)"
     "
@@ -178,13 +206,29 @@ DICOM Archive Device related information
     "
     .. _dcmAcceptMissingPatientID:
 
-    :ref:`Accept Missing Patient ID <dcmAcceptMissingPatientID>`",string,"Indicates if objects without Patient IDs shall be accepted and if a Patient ID shall be created. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: YES, NO or CREATE.
+    :ref:`Accept Missing Patient ID <dcmAcceptMissingPatientID>`",string,"Indicates if objects without Patient IDs shall be accepted and if a Patient ID shall be created. May be overwritten by configured values for particular Archive Network AEs.
+
+    Enumerated values:
+
+    YES
+
+    NO
+
+    CREATE
 
     (dcmAcceptMissingPatientID)"
     "
     .. _dcmAcceptConflictingPatientID:
 
-    :ref:`Accept Conflicting Patient ID <dcmAcceptConflictingPatientID>`",string,"Indicates if objects with a Patient IDs which differs from the Patient ID in previous received objects of the Study shall be accepted. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: YES, NO or MERGED.
+    :ref:`Accept Conflicting Patient ID <dcmAcceptConflictingPatientID>`",string,"Indicates if objects with a Patient IDs which differs from the Patient ID in previous received objects of the Study shall be accepted. May be overwritten by configured values for particular Archive Network AEs.
+
+    Enumerated values:
+
+    YES
+
+    NO
+
+    MERGED
 
     (dcmAcceptConflictingPatientID)"
     "
@@ -202,19 +246,65 @@ DICOM Archive Device related information
     "
     .. _dcmHideSPSWithStatusFromMWL:
 
-    :ref:`Hide SPS with Status by MWL SCP(s) <dcmHideSPSWithStatusFromMWL>`",string,"Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL SCP. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: SCHEDULED, ARRIVED, READY, STARTED, DEPARTED, CANCELED, DISCONTINUED or COMPLETED.
+    :ref:`Hide SPS with Status by MWL SCP(s) <dcmHideSPSWithStatusFromMWL>`",string,"Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL SCP. May be overwritten by configured values for particular Archive Network AEs.
+
+    Enumerated values:
+
+    SCHEDULED
+
+    ARRIVED
+
+    READY
+
+    STARTED
+
+    DEPARTED
+
+    CANCELED
+
+    DISCONTINUED
+
+    COMPLETED
 
     (dcmHideSPSWithStatusFromMWL)"
     "
     .. _dcmHideSPSWithStatusFromMWLRS:
 
-    :ref:`Hide SPS with Status by MWL RS(s) <dcmHideSPSWithStatusFromMWLRS>`",string,"Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL RS. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: SCHEDULED, ARRIVED, READY, STARTED, DEPARTED, CANCELED, DISCONTINUED or COMPLETED.
+    :ref:`Hide SPS with Status by MWL RS(s) <dcmHideSPSWithStatusFromMWLRS>`",string,"Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL RS. May be overwritten by configured values for particular Archive Network AEs.
+
+    Enumerated values:
+
+    SCHEDULED
+
+    ARRIVED
+
+    READY
+
+    STARTED
+
+    DEPARTED
+
+    CANCELED
+
+    DISCONTINUED
+
+    COMPLETED
 
     (dcmHideSPSWithStatusFromMWLRS)"
     "
     .. _dcmEncodeAsJSONNumber:
 
-    :ref:`Encode as JSON Number(s) <dcmEncodeAsJSONNumber>`",string,"VR encoded as JSON Number. If not listed, IS, DS, SV and UV values are encoded as JSON Strings. May be supplemented by configured values for particular Archive Network AEs. Enumerated values: DS, IS, SV or UV.
+    :ref:`Encode as JSON Number(s) <dcmEncodeAsJSONNumber>`",string,"VR encoded as JSON Number. If not listed, IS, DS, SV and UV values are encoded as JSON Strings. May be supplemented by configured values for particular Archive Network AEs.
+
+    Enumerated values:
+
+    DS
+
+    IS
+
+    SV
+
+    UV
 
     (dcmEncodeAsJSONNumber)"
     "
@@ -226,7 +316,15 @@ DICOM Archive Device related information
     "
     .. _dcmUserIdentityNegotiation:
 
-    :ref:`User Identity Negotiation <dcmUserIdentityNegotiation>`",string,"Specifies to ignore User Identity Negotiation Sub-Item in Association requests (=NOT_SUPPORTED), to verify passed Username and password or JSON Web Token are against a Keycloak server (=SUPPORTS), or to reject Association requests without a valid Username and password or JSON Web Token in its Identity Negotiation Sub-Item (=REQUIRED). May be overwritten by configured values for particular Archive Network AEs. Enumerated values: NOT_SUPPORTED, SUPPORTS or REQUIRED.
+    :ref:`User Identity Negotiation <dcmUserIdentityNegotiation>`",string,"Specifies to ignore User Identity Negotiation Sub-Item in Association requests (=NOT_SUPPORTED), to verify passed Username and password or JSON Web Token are against a Keycloak server (=SUPPORTS), or to reject Association requests without a valid Username and password or JSON Web Token in its Identity Negotiation Sub-Item (=REQUIRED). May be overwritten by configured values for particular Archive Network AEs.
+
+    Enumerated values:
+
+    NOT_SUPPORTED
+
+    SUPPORTS
+
+    REQUIRED
 
     (dcmUserIdentityNegotiation)"
     "
@@ -388,7 +486,15 @@ DICOM Archive Device related information
     "
     .. _dcmSpanningCFindSCPPolicy:
 
-    :ref:`Spanning C-Find SCP Policy <dcmSpanningCFindSCPPolicy>`",string,"Specifies policy for combining matches returned from configured Spanning C-Find SCP with matching entries from the archive DB. SUPPLEMENT (= returns local matches before additional matches from Spanning C-Find SCP ), MERGE (= returns matches from Spanning C-Find SCP before additional local matches), REPLACE (= returns only matches from Spanning C-Find SCP). May be overwritten by configured values for particular Archive Network AEs. Enumerated values: SUPPLEMENT, MERGE or REPLACE.
+    :ref:`Spanning C-Find SCP Policy <dcmSpanningCFindSCPPolicy>`",string,"Specifies policy for combining matches returned from configured Spanning C-Find SCP with matching entries from the archive DB. SUPPLEMENT (= returns local matches before additional matches from Spanning C-Find SCP ), MERGE (= returns matches from Spanning C-Find SCP before additional local matches), REPLACE (= returns only matches from Spanning C-Find SCP). May be overwritten by configured values for particular Archive Network AEs.
+
+    Enumerated values:
+
+    SUPPLEMENT
+
+    MERGE
+
+    REPLACE
 
     (dcmSpanningCFindSCPPolicy)"
     "
@@ -436,7 +542,17 @@ DICOM Archive Device related information
     "
     .. _dcmFallbackWadoURIHttpStatusCode:
 
-    :ref:`Fallback Wado URI Http Status Code <dcmFallbackWadoURIHttpStatusCode>`",integer,"HTTP Status code of Redirect Response configured by Fallback WADO-URI Web Application Name. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: 301, 302, 303 or 307.
+    :ref:`Fallback Wado URI Http Status Code <dcmFallbackWadoURIHttpStatusCode>`",integer,"HTTP Status code of Redirect Response configured by Fallback WADO-URI Web Application Name. May be overwritten by configured values for particular Archive Network AEs.
+
+    Enumerated values:
+
+    301
+
+    302
+
+    303
+
+    307
 
     (dcmFallbackWadoURIHttpStatusCode)"
     "
@@ -532,13 +648,13 @@ DICOM Archive Device related information
     "
     .. _dcmPreserveStudyInterval:
 
-    :ref:`Preserve Study Interval <dcmPreserveStudyInterval>`",string,"Protect studies which were accessed later than the specified time interval, in ISO-8601 duration format PnDTnHnMnS, from deletion from the storage system, if the usable space falls below configured Deleter Thresholds. If absent, most recently accessed studies shall also get deleted from the storage system, if least recently accessed studies were not found or if Delete Least Recently Accessed Study First is set to false.
+    :ref:`Preserve Study Interval <dcmPreserveStudyInterval>`",string,"Protect studies which were accessed later than the specified time interval, in ISO-8601 duration format PnDTnHnMnS, from deletion from the storage system, if the usable space falls below configured Deleter Thresholds. If absent, most recently accessed studies shall also get deleted from the storage system, if least recently accessed studies were not found or if Delete Least Recently Accessed Study First is set to FALSE.
 
     (dcmPreserveStudyInterval)"
     "
     .. _dcmDeleteStudyLeastRecentlyAccessedFirst:
 
-    :ref:`Delete Least Recently Accessed Study First <dcmDeleteStudyLeastRecentlyAccessedFirst>`",boolean,"Indicates to delete studies beginning with the least recently accessed study first, if the usable space falls below configured Deleter Thresholds.
+    :ref:`Delete Least Recently Accessed Study First <dcmDeleteStudyLeastRecentlyAccessedFirst>`",boolean,"Indicates to delete studies beginning with the least recently accessed study first, if the usable space falls below configured Deleter Thresholds. By default, TRUE.
 
     (dcmDeleteStudyLeastRecentlyAccessedFirst)"
     "
@@ -646,13 +762,29 @@ DICOM Archive Device related information
     "
     .. _dcmShowPatientInfoInSystemLog:
 
-    :ref:`Show Patient Info In System Log <dcmShowPatientInfoInSystemLog>`",string,"Specifies if Patient Information is shown as plain text or hashed in system logs. Enumerated values: PLAIN_TEXT, HASH_NAME or HASH_NAME_AND_ID.
+    :ref:`Show Patient Info In System Log <dcmShowPatientInfoInSystemLog>`",string,"Specifies if Patient Information is shown as plain text or hashed in system logs.
+
+    Enumerated values:
+
+    PLAIN_TEXT
+
+    HASH_NAME
+
+    HASH_NAME_AND_ID
 
     (dcmShowPatientInfoInSystemLog)"
     "
     .. _dcmShowPatientInfoInAuditLog:
 
-    :ref:`Show Patient Info In Audit Log <dcmShowPatientInfoInAuditLog>`",string,"Specifies if Patient Information is shown as plain text or hashed in emitted audit messages. Enumerated values: PLAIN_TEXT, HASH_NAME or HASH_NAME_AND_ID.
+    :ref:`Show Patient Info In Audit Log <dcmShowPatientInfoInAuditLog>`",string,"Specifies if Patient Information is shown as plain text or hashed in emitted audit messages.
+
+    Enumerated values:
+
+    PLAIN_TEXT
+
+    HASH_NAME
+
+    HASH_NAME_AND_ID
 
     (dcmShowPatientInfoInAuditLog)"
     "
@@ -688,7 +820,13 @@ DICOM Archive Device related information
     "
     .. _hl7ORUAction:
 
-    :ref:`HL7 ORU Action(s) <hl7ORUAction>`",string,"Specifies action on receive of HL7 ORU^R01 message: IMPORT_REPORT (= transcode received HL7 ORU^R01 to DICOM SR), MWL_COMPLETED (= set Status of matching MWL items to COMPLETED). May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: IMPORT_REPORT or MWL_COMPLETED.
+    :ref:`HL7 ORU Action(s) <hl7ORUAction>`",string,"Specifies action on receive of HL7 ORU^R01 message: IMPORT_REPORT (= transcode received HL7 ORU^R01 to DICOM SR), MWL_COMPLETED (= set Status of matching MWL items to COMPLETED). May be overwritten by configured values for particular Archive HL7 Application.
+
+    Enumerated values:
+
+    IMPORT_REPORT
+
+    MWL_COMPLETED
 
     (hl7ORUAction)"
     "
@@ -724,13 +862,23 @@ DICOM Archive Device related information
     "
     .. _hl7ScheduledProtocolCodeInOrder:
 
-    :ref:`HL7 Schedule Protocol Code in Order <hl7ScheduledProtocolCodeInOrder>`",string,"Specifies location of Scheduled Protocol Code in received HL7 Order message. May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: OBR_4_1 or OBR_4_4.
+    :ref:`HL7 Schedule Protocol Code in Order <hl7ScheduledProtocolCodeInOrder>`",string,"Specifies location of Scheduled Protocol Code in received HL7 Order message. May be overwritten by configured values for particular Archive HL7 Application.
+
+    Enumerated values:
+
+    OBR_4_1
+
+    OBR_4_4
 
     (hl7ScheduledProtocolCodeInOrder)"
     "
     .. _hl7ScheduledStationAETInOrder:
 
-    :ref:`HL7 Schedule Station AET in Order <hl7ScheduledStationAETInOrder>`",string,"Specifies location of Scheduled Station AE Title in received HL7 Order message. Should not be configured for HL7 v2.5.1 OMI^O23 with IPC segment. If absent or no value is provided in the configured field, the Scheduled Station AE Title is selected according configured rules. May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: ORC_18.
+    :ref:`HL7 Schedule Station AET in Order <hl7ScheduledStationAETInOrder>`",string,"Specifies location of Scheduled Station AE Title in received HL7 Order message. Should not be configured for HL7 v2.5.1 OMI^O23 with IPC segment. If absent or no value is provided in the configured field, the Scheduled Station AE Title is selected according configured rules. May be overwritten by configured values for particular Archive HL7 Application.
+
+    Enumerated values:
+
+    ORC_18
 
     (hl7ScheduledStationAETInOrder)"
     "
@@ -754,7 +902,11 @@ DICOM Archive Device related information
     "
     .. _hl7PatientArrivalMessageType:
 
-    :ref:`HL7 Patient Arrival Message Type <hl7PatientArrivalMessageType>`",string,"Message Type of HL7 messages which triggers the change the status of Scheduled Procedure Steps associated with the Patient from SCHEDULED to ARRIVED. If absent, the status of Scheduled Procedure Steps will not be affected by HL7 ADT messages. May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: ADT^A10.
+    :ref:`HL7 Patient Arrival Message Type <hl7PatientArrivalMessageType>`",string,"Message Type of HL7 messages which triggers the change the status of Scheduled Procedure Steps associated with the Patient from SCHEDULED to ARRIVED. If absent, the status of Scheduled Procedure Steps will not be affected by HL7 ADT messages. May be overwritten by configured values for particular Archive HL7 Application.
+
+    Enumerated values:
+
+    ADT^A10
 
     (hl7PatientArrivalMessageType)"
     "
@@ -886,19 +1038,43 @@ DICOM Archive Device related information
     "
     .. _dcmAllowRejectionForDataRetentionPolicyExpired:
 
-    :ref:`Allow Rejection For Data Retention Policy Expired <dcmAllowRejectionForDataRetentionPolicyExpired>`",string,"Allow Rejection For Data Retention Policy Expired. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: NEVER, ALWAYS, EXPIRED_UNSET or ONLY_EXPIRED.
+    :ref:`Allow Rejection For Data Retention Policy Expired <dcmAllowRejectionForDataRetentionPolicyExpired>`",string,"Allow Rejection For Data Retention Policy Expired. May be overwritten by configured values for particular Archive Network AEs.
+
+    Enumerated values:
+
+    NEVER
+
+    ALWAYS
+
+    EXPIRED_UNSET
+
+    ONLY_EXPIRED
 
     (dcmAllowRejectionForDataRetentionPolicyExpired)"
     "
     .. _dcmAllowDeleteStudyPermanently:
 
-    :ref:`Allow Delete Study permanently <dcmAllowDeleteStudyPermanently>`",string,"Allow to delete Study permanently. REJECTED = only already rejected Studies. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: ALWAYS or REJECTED.
+    :ref:`Allow Delete Study permanently <dcmAllowDeleteStudyPermanently>`",string,"Allow to delete Study permanently. REJECTED = only already rejected Studies. May be overwritten by configured values for particular Archive Network AEs.
+
+    Enumerated values:
+
+    ALWAYS
+
+    REJECTED
 
     (dcmAllowDeleteStudyPermanently)"
     "
     .. _dcmAllowDeletePatient:
 
-    :ref:`Allow Delete Patient <dcmAllowDeletePatient>`",string,"Allow permanent deletion of Patients. WITHOUT_STUDIES = only Patients without Studies. Enumerated values: NEVER, ALWAYS or WITHOUT_STUDIES.
+    :ref:`Allow Delete Patient <dcmAllowDeletePatient>`",string,"Allow permanent deletion of Patients. WITHOUT_STUDIES = only Patients without Studies.
+
+    Enumerated values:
+
+    NEVER
+
+    ALWAYS
+
+    WITHOUT_STUDIES
 
     (dcmAllowDeletePatient)"
     "
@@ -1006,19 +1182,57 @@ DICOM Archive Device related information
     "
     .. _dcmCopyMoveUpdatePolicy:
 
-    :ref:`Copy Move Update Policy <dcmCopyMoveUpdatePolicy>`",string,"Specifies update policy for attributes of the destination Study on Copy/Move of Instances from another Study. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: PRESERVE, SUPPLEMENT, MERGE, OVERWRITE or REPLACE.
+    :ref:`Copy Move Update Policy <dcmCopyMoveUpdatePolicy>`",string,"Specifies update policy for attributes of the destination Study on Copy/Move of Instances from another Study. May be overwritten by configured values for particular Archive Network AEs.
+
+    Enumerated values:
+
+    PRESERVE
+
+    SUPPLEMENT
+
+    MERGE
+
+    OVERWRITE
+
+    REPLACE
 
     (dcmCopyMoveUpdatePolicy)"
     "
     .. _dcmLinkMWLEntryUpdatePolicy:
 
-    :ref:`Link MWL Entry Update Policy <dcmLinkMWLEntryUpdatePolicy>`",string,"Specifies update policy for Study attributes on Link of Instances of another Study with a MWL Entry referring an existing Study. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: PRESERVE, SUPPLEMENT, MERGE, OVERWRITE or REPLACE.
+    :ref:`Link MWL Entry Update Policy <dcmLinkMWLEntryUpdatePolicy>`",string,"Specifies update policy for Study attributes on Link of Instances of another Study with a MWL Entry referring an existing Study. May be overwritten by configured values for particular Archive Network AEs.
+
+    Enumerated values:
+
+    PRESERVE
+
+    SUPPLEMENT
+
+    MERGE
+
+    OVERWRITE
+
+    REPLACE
 
     (dcmLinkMWLEntryUpdatePolicy)"
     "
     .. _dcmStorageVerificationPolicy:
 
-    :ref:`Storage Verification Policy <dcmStorageVerificationPolicy>`",string,"DB_RECORD_EXISTS: only check for existence of DB records, OBJECT_EXISTS: check if object exists on Storage System, OBJECT_SIZE: check size of object on Storage System, OBJECT_FETCH: fetch object from Storage System), OBJECT_CHECKSUM: recalculate checksum of object on Storage System, S3_MD5SUM: check MD5 checksum of object on S3 Storage System. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: DB_RECORD_EXISTS, OBJECT_EXISTS, OBJECT_SIZE, OBJECT_FETCH, OBJECT_CHECKSUM or S3_MD5SUM.
+    :ref:`Storage Verification Policy <dcmStorageVerificationPolicy>`",string,"DB_RECORD_EXISTS: only check for existence of DB records, OBJECT_EXISTS: check if object exists on Storage System, OBJECT_SIZE: check size of object on Storage System, OBJECT_FETCH: fetch object from Storage System), OBJECT_CHECKSUM: recalculate checksum of object on Storage System, S3_MD5SUM: check MD5 checksum of object on S3 Storage System. May be overwritten by configured values for particular Archive Network AEs.
+
+    Enumerated values:
+
+    DB_RECORD_EXISTS
+
+    OBJECT_EXISTS
+
+    OBJECT_SIZE
+
+    OBJECT_FETCH
+
+    OBJECT_CHECKSUM
+
+    S3_MD5SUM
 
     (dcmStorageVerificationPolicy)"
     "
@@ -1282,7 +1496,13 @@ DICOM Archive Device related information
     "
     .. _hl7PSUMessageType:
 
-    :ref:`HL7 Procedure Status Update Message Type <hl7PSUMessageType>`",string,"Message Type of HL7 Procedure Status Update message. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: OMG_O19 or ORU_R01.
+    :ref:`HL7 Procedure Status Update Message Type <hl7PSUMessageType>`",string,"Message Type of HL7 Procedure Status Update message. May be overwritten by configured values for particular Archive Network AEs.
+
+    Enumerated values:
+
+    OMG_O19
+
+    ORU_R01
 
     (hl7PSUMessageType)"
     "
@@ -1300,7 +1520,13 @@ DICOM Archive Device related information
     "
     .. _hl7PSUMWLMatchingKey:
 
-    :ref:`HL7 Procedure Status Update MWL Matching Key <hl7PSUMWLMatchingKey>`",string,"Specifies attribute of received object to lookup MWL Item whose status is to be updated to COMPLETED. Only applicable is 'HL7 Procedure Status Update MWL' is configured as or implicitly set to true. May be overwritten by configured values for particular Archive Network AEs. Enumerated values: AccessionNumber or StudyInstanceUID.
+    :ref:`HL7 Procedure Status Update MWL Matching Key <hl7PSUMWLMatchingKey>`",string,"Specifies attribute of received object to lookup MWL Item whose status is to be updated to COMPLETED. Only applicable is 'HL7 Procedure Status Update MWL' is configured as or implicitly set to true. May be overwritten by configured values for particular Archive Network AEs.
+
+    Enumerated values:
+
+    AccessionNumber
+
+    StudyInstanceUID
 
     (hl7PSUMWLMatchingKey)"
     "
@@ -1330,31 +1556,71 @@ DICOM Archive Device related information
     "
     .. _hl7OtherPatientIDs:
 
-    :ref:`HL7 Other Patient IDs <hl7OtherPatientIDs>`",string,"Specifies inclusion policy for patient identifiers in PID-3 / MRG-1 of HL7 message in Other Patient IDs Sequence (0010,1002). May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: ALL, NONE or OTHER.
+    :ref:`HL7 Other Patient IDs <hl7OtherPatientIDs>`",string,"Specifies inclusion policy for patient identifiers in PID-3 / MRG-1 of HL7 message in Other Patient IDs Sequence (0010,1002). May be overwritten by configured values for particular Archive HL7 Application.
+
+    Enumerated values:
+
+    ALL
+
+    NONE
+
+    OTHER
 
     (hl7OtherPatientIDs)"
     "
     .. _hl7OrderMissingStudyIUIDPolicy:
 
-    :ref:`HL7 Order Missing Study Instance UID Policy <hl7OrderMissingStudyIUIDPolicy>`",string,"Specifies policy for missing Study Instance UID in incoming HL7 Order messages. May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: REJECT, GENERATE or ACCESSION_BASED.
+    :ref:`HL7 Order Missing Study Instance UID Policy <hl7OrderMissingStudyIUIDPolicy>`",string,"Specifies policy for missing Study Instance UID in incoming HL7 Order messages. May be overwritten by configured values for particular Archive HL7 Application.
+
+    Enumerated values:
+
+    REJECT
+
+    GENERATE
+
+    ACCESSION_BASED
 
     (hl7OrderMissingStudyIUIDPolicy)"
     "
     .. _hl7OrderMissingAdmissionIDPolicy:
 
-    :ref:`HL7 Order Missing Admission ID Policy <hl7OrderMissingAdmissionIDPolicy>`",string,"Specifies policy on incoming HL7 Order messages without a value for PID-18 Patient Account Number nor field PV1-19 Visit Number. May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: ACCEPT, REJECT or ACCESSION_AS_ADMISSION.
+    :ref:`HL7 Order Missing Admission ID Policy <hl7OrderMissingAdmissionIDPolicy>`",string,"Specifies policy on incoming HL7 Order messages without a value for PID-18 Patient Account Number nor field PV1-19 Visit Number. May be overwritten by configured values for particular Archive HL7 Application.
+
+    Enumerated values:
+
+    ACCEPT
+
+    REJECT
+
+    ACCESSION_AS_ADMISSION
 
     (hl7OrderMissingAdmissionIDPolicy)"
     "
     .. _hl7ImportReportMissingStudyIUIDPolicy:
 
-    :ref:`HL7 Import Report Missing Study Instance UID Policy <hl7ImportReportMissingStudyIUIDPolicy>`",string,"Specifies policy for missing Study Instance UID in incoming HL7 Import Report (ORU) messages. May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: REJECT, GENERATE or ACCESSION_BASED.
+    :ref:`HL7 Import Report Missing Study Instance UID Policy <hl7ImportReportMissingStudyIUIDPolicy>`",string,"Specifies policy for missing Study Instance UID in incoming HL7 Import Report (ORU) messages. May be overwritten by configured values for particular Archive HL7 Application.
+
+    Enumerated values:
+
+    REJECT
+
+    GENERATE
+
+    ACCESSION_BASED
 
     (hl7ImportReportMissingStudyIUIDPolicy)"
     "
     .. _hl7ImportReportMissingAdmissionIDPolicy:
 
-    :ref:`HL7 Import Report Missing Admission ID Policy <hl7ImportReportMissingAdmissionIDPolicy>`",string,"Specifies policy on incoming HL7 ImportReport (ORU) messages without a value for PID-18 Patient Account Number nor field PV1-19 Visit Number. May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: ACCEPT, REJECT or ACCESSION_AS_ADMISSION.
+    :ref:`HL7 Import Report Missing Admission ID Policy <hl7ImportReportMissingAdmissionIDPolicy>`",string,"Specifies policy on incoming HL7 ImportReport (ORU) messages without a value for PID-18 Patient Account Number nor field PV1-19 Visit Number. May be overwritten by configured values for particular Archive HL7 Application.
+
+    Enumerated values:
+
+    ACCEPT
+
+    REJECT
+
+    ACCESSION_AS_ADMISSION
 
     (hl7ImportReportMissingAdmissionIDPolicy)"
     "
@@ -1366,13 +1632,27 @@ DICOM Archive Device related information
     "
     .. _hl7ImportReportAdjustIUID:
 
-    :ref:`HL7 Import Report Adjust Instance UID <hl7ImportReportAdjustIUID>`",string,"Specifies adjustment of Series and SOP Instances UIDs returned by XSLT on incoming HL7 Import Report (ORU) messages. May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: NONE or APPEND_HASH_OF_STUDY_INSTANCE_UID.
+    :ref:`HL7 Import Report Adjust Instance UID <hl7ImportReportAdjustIUID>`",string,"Specifies adjustment of Series and SOP Instances UIDs returned by XSLT on incoming HL7 Import Report (ORU) messages. May be overwritten by configured values for particular Archive HL7 Application.
+
+    Enumerated values:
+
+    NONE
+
+    APPEND_HASH_OF_STUDY_INSTANCE_UID
 
     (hl7ImportReportAdjustIUID)"
     "
     .. _hl7ReferredMergedPatientPolicy:
 
-    :ref:`HL7 Referred Merged Patient Policy <hl7ReferredMergedPatientPolicy>`",string,"Specifies policy on incoming HL7 messages referring an already merged Patient. REJECT: reject any such HL7 message, IGNORE: ignore any such HL7 message, IGNORE_DUPLICATE_MERGE: Ignore only duplicate HL7 Merge messages, Reject any other such Message. May be overwritten by configured values for particular Archive HL7 Application. Enumerated values: REJECT, IGNORE or IGNORE_DUPLICATE_MERGE.
+    :ref:`HL7 Referred Merged Patient Policy <hl7ReferredMergedPatientPolicy>`",string,"Specifies policy on incoming HL7 messages referring an already merged Patient. REJECT: reject any such HL7 message, IGNORE: ignore any such HL7 message, IGNORE_DUPLICATE_MERGE: Ignore only duplicate HL7 Merge messages, Reject any other such Message. May be overwritten by configured values for particular Archive HL7 Application.
+
+    Enumerated values:
+
+    REJECT
+
+    IGNORE
+
+    IGNORE_DUPLICATE_MERGE
 
     (hl7ReferredMergedPatientPolicy)"
     "
