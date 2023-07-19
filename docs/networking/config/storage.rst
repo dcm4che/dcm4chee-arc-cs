@@ -22,7 +22,7 @@ Storage Descriptor
     "
     .. _dcmLocationStatus:
 
-    :ref:`Location Status <dcmLocationStatus>`",string,"Initial Location Status of DICOM files written to this Storage System: 'OK' or 'VERIFY_QSTAR_ACCESS_STATE'; 'OK' if absent. Enumerated values: OK or VERIFY_QSTAR_ACCESS_STATE.
+    :ref:`Location Status <dcmLocationStatus>`",string,"Initial Location Status of DICOM files written to this Storage System. Default behaviour 'OK'. (hover on options to see their descriptions) Enumerated values: OK|Indicates access state of stored objects is stable or VERIFY_QSTAR_ACCESS_STATE|Indicates to verify access state of stored objects from QStar Tape File System.
 
     (dcmLocationStatus)"
     "
