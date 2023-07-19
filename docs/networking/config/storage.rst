@@ -70,7 +70,7 @@ Storage Descriptor
     "
     .. _dcmDigestAlgorithm:
 
-    :ref:`Digest Algorithm <dcmDigestAlgorithm>`",string,"Algorithm for generation of check sums. Enumerated values: MD5 or SHA-1.
+    :ref:`Digest Algorithm <dcmDigestAlgorithm>`",string,"Algorithm for generation of check sums. Enumerated values: MD5|Message-digest algorithm or SHA-1|Secure Hash Algorithm 1.
 
     (dcmDigestAlgorithm)"
     "
@@ -94,7 +94,7 @@ Storage Descriptor
     "
     .. _dcmStorageDuration:
 
-    :ref:`Storage Duration <dcmStorageDuration>`",string,"Indicates if the Storage is used as permanent (=PERMANENT), cache (=CACHE) or temporary (=TEMPORARY) storage. Objects get purged from cache and temporary storage according configured deleter thresholds or - if no deleter threshold is specified and no Retention Periods are configured - all objects on the Storage will get purged. In the case of temporary storage, the studies which objects were purged are also deleted from the database. Enumerated values: PERMANENT, CACHE or TEMPORARY.
+    :ref:`Storage Duration <dcmStorageDuration>`",string,"Indicates the type of storage duration. Objects get purged from cache and temporary storage according configured deleter thresholds or - if no deleter threshold is specified and no Retention Periods are configured - all objects on the Storage will get purged. In the case of temporary storage, the studies whose objects were purged are also deleted from the database. Enumerated values: PERMANENT|Permanent storage, CACHE|Cache storage or TEMPORARY|Temporary storage.
 
     (dcmStorageDuration)"
     "
