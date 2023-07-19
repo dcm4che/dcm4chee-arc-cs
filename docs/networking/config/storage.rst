@@ -34,7 +34,15 @@ Storage Descriptor
     "
     .. _dcmOnStoragePathAlreadyExists:
 
-    :ref:`Already Exists on Storage Path <dcmOnStoragePathAlreadyExists>`",string,"Specifies behavior if an object already exists on the storage path on the storage system, assembled according to the configured 'Storage Path Format'. Default behaviour 'RANDOM_PATH'. (hover on options to see their descriptions) Enumerated values: FAILURE|Signals failure writing the new object, NOOP|Proceed without writing the new object or RANDOM_PATH|Replace last path element be random 8 hex digit number and try again.
+    :ref:`Already Exists on Storage Path <dcmOnStoragePathAlreadyExists>`",string,"Specifies behavior if an object already exists on the storage path on the storage system, assembled according to the configured 'Storage Path Format'. Default behaviour 'RANDOM_PATH'. 
+
+    Enumerated values:
+
+    FAILURE (= Signals failure writing the new object)
+
+    NOOP (= Proceed without writing the new object)
+
+    RANDOM_PATH (= Replace last path element be random 8 hex digit number and try again)
 
     (dcmOnStoragePathAlreadyExists)"
     "
@@ -58,19 +66,39 @@ Storage Descriptor
     "
     .. _dcmFileOpenOption:
 
-    :ref:`File Open Option(s)(s) <dcmFileOpenOption>`",string,"Options specifying how the file is opened for writing. Default behaviour 'CREATE_NEW'. (hover on options to see their descriptions) Enumerated values: CREATE_NEW|Create a new file, failing if the file already exists, DSYNC|Requires that every update to the file's content be written synchronously to the underlying storage device or SYNC|Requires that every update to the file's content or metadata be written synchronously to the underlying storage device.
+    :ref:`File Open Option(s)(s) <dcmFileOpenOption>`",string,"Options specifying how the file is opened for writing. Default behaviour 'CREATE_NEW'. 
+
+    Enumerated values:
+
+    CREATE_NEW (= Create a new file, failing if the file already exists)
+
+    DSYNC (= Requires that every update to the file's content be written synchronously to the underlying storage device)
+
+    SYNC (= Requires that every update to the file's content or metadata be written synchronously to the underlying storage device)
 
     (dcmFileOpenOption)"
     "
     .. _dcmLocationStatus:
 
-    :ref:`Location Status <dcmLocationStatus>`",string,"Initial Location Status of DICOM files written to this Storage System. Default behaviour 'OK'. (hover on options to see their descriptions) Enumerated values: OK|Indicates access state of stored objects is stable or VERIFY_QSTAR_ACCESS_STATE|Indicates to verify access state of stored objects from QStar Tape File System.
+    :ref:`Location Status <dcmLocationStatus>`",string,"Initial Location Status of DICOM files written to this Storage System. Default behaviour 'OK'. 
+
+    Enumerated values:
+
+    OK (= Indicates access state of stored objects is stable)
+
+    VERIFY_QSTAR_ACCESS_STATE (= Indicates to verify access state of stored objects from QStar Tape File System)
 
     (dcmLocationStatus)"
     "
     .. _dcmDigestAlgorithm:
 
-    :ref:`Digest Algorithm <dcmDigestAlgorithm>`",string,"Algorithm for generation of check sums. Enumerated values: MD5|Message-digest algorithm or SHA-1|Secure Hash Algorithm 1.
+    :ref:`Digest Algorithm <dcmDigestAlgorithm>`",string,"Algorithm for generation of check sums.
+
+    Enumerated values:
+
+    MD5 (= Message-digest algorithm)
+
+    SHA-1 (= Secure Hash Algorithm 1)
 
     (dcmDigestAlgorithm)"
     "
@@ -88,13 +116,29 @@ Storage Descriptor
     "
     .. _dcmInstanceAvailability:
 
-    :ref:`Instance Availability <dcmInstanceAvailability>`",string,"Instance Availability. Enumerated values: ONLINE, NEARLINE or OFFLINE.
+    :ref:`Instance Availability <dcmInstanceAvailability>`",string,"Instance Availability.
+
+    Enumerated values:
+
+    ONLINE
+
+    NEARLINE
+
+    OFFLINE
 
     (dcmInstanceAvailability)"
     "
     .. _dcmStorageDuration:
 
-    :ref:`Storage Duration <dcmStorageDuration>`",string,"Indicates the type of storage duration. Objects get purged from cache and temporary storage according configured deleter thresholds or - if no deleter threshold is specified and no Retention Periods are configured - all objects on the Storage will get purged. In the case of temporary storage, the studies whose objects were purged are also deleted from the database. Enumerated values: PERMANENT|Permanent storage, CACHE|Cache storage or TEMPORARY|Temporary storage.
+    :ref:`Storage Duration <dcmStorageDuration>`",string,"Indicates the type of storage duration. Objects get purged from cache and temporary storage according configured deleter thresholds or - if no deleter threshold is specified and no Retention Periods are configured - all objects on the Storage will get purged. In the case of temporary storage, the studies whose objects were purged are also deleted from the database.
+
+    Enumerated values:
+
+    PERMANENT (= Permanent storage)
+
+    CACHE (= Cache storage)
+
+    TEMPORARY (= Temporary storage)
 
     (dcmStorageDuration)"
     "
@@ -172,7 +216,15 @@ Storage Descriptor
     "
     .. _dcmExternalRetrieveInstanceAvailability:
 
-    :ref:`External Retrieve Instance Availability <dcmExternalRetrieveInstanceAvailability>`",string,"Updates instance availability on deletion of studies for instances available on external retrieve archive. Enumerated values: ONLINE, NEARLINE or OFFLINE.
+    :ref:`External Retrieve Instance Availability <dcmExternalRetrieveInstanceAvailability>`",string,"Updates instance availability on deletion of studies for instances available on external retrieve archive.
+
+    Enumerated values:
+
+    ONLINE
+
+    NEARLINE
+
+    OFFLINE
 
     (dcmExternalRetrieveInstanceAvailability)"
     "
