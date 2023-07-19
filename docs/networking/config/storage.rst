@@ -20,6 +20,48 @@ Storage Descriptor
 
     (dcmURI)"
     "
+    .. _dcmArchiveSeriesAsTAR:
+
+    :ref:`Archive Series as TAR <dcmArchiveSeriesAsTAR>`",boolean,"Indicates that binary DICOM objects of one Series are packed in one TAR archive on this Storage System; false if absent.
+
+    (dcmArchiveSeriesAsTAR)"
+    "
+    .. _dcmStoragePathFormat:
+
+    :ref:`Storage Path Format <dcmStoragePathFormat>`",string,"Format of file path of DICOM binary objects or metadata in JSON format or of ZIP archives containing metadata in JSON format for each DICOM object of one Series, written to this Storage System. '{now,date,yyyy/MM/dd}/{0020000D,hash}/{0020000E,hash}/{00080018,hash}', if absent.
+
+    (dcmStoragePathFormat)"
+    "
+    .. _dcmOnStoragePathAlreadyExists:
+
+    :ref:`Already Exists on Storage Path <dcmOnStoragePathAlreadyExists>`",string,"Specifies behavior if an object already exists on the storage path on the storage system, assembled according to the configured 'Storage Path Format'. Default behaviour 'RANDOM_PATH'. (hover on options to see their descriptions) Enumerated values: FAILURE|Signals failure writing the new object, NOOP|Proceed without writing the new object or RANDOM_PATH|Replace last path element be random 8 hex digit number and try again.
+
+    (dcmOnStoragePathAlreadyExists)"
+    "
+    .. _dcmRetryCreateDirectories:
+
+    :ref:`Retry Create Directories <dcmRetryCreateDirectories>`",integer,"Specifies number of retries to create parent directories of the storage file path - may workaround issues concerning NFS; 0 if absent.
+
+    (dcmRetryCreateDirectories)"
+    "
+    .. _dcmAltCreateDirectories:
+
+    :ref:`Alt Create Directories <dcmAltCreateDirectories>`",boolean,"Indicate to not rely on 'createDirectories' function in 'java.nio.file.Files' Java class, to create all nonexistent parent directories first, but instead explicitly create parent directories if NoSuchFileException is thrown. May workaround issues concerning NFS.
+
+    (dcmAltCreateDirectories)"
+    "
+    .. _dcmCheckMountFilePath:
+
+    :ref:`Check Mount File Path <dcmCheckMountFilePath>`",string,"Indicates to check if a mounted file system did not get detached from its mount point, by specifying the path of a shadow file in the directory used as mount point. If the shadow file becomes inaccessible, write to storage operation fails. Checked for each DICOM object storage (write operation). Typically applicable to NFS / external file systems.
+
+    (dcmCheckMountFilePath)"
+    "
+    .. _dcmFileOpenOption:
+
+    :ref:`File Open Option(s)(s) <dcmFileOpenOption>`",string,"Options specifying how the file is opened for writing. Default behaviour 'CREATE_NEW'. (hover on options to see their descriptions) Enumerated values: CREATE_NEW|Create a new file, failing if the file already exists, DSYNC|Requires that every update to the file's content be written synchronously to the underlying storage device or SYNC|Requires that every update to the file's content or metadata be written synchronously to the underlying storage device.
+
+    (dcmFileOpenOption)"
+    "
     .. _dcmLocationStatus:
 
     :ref:`Location Status <dcmLocationStatus>`",string,"Initial Location Status of DICOM files written to this Storage System. Default behaviour 'OK'. (hover on options to see their descriptions) Enumerated values: OK|Indicates access state of stored objects is stable or VERIFY_QSTAR_ACCESS_STATE|Indicates to verify access state of stored objects from QStar Tape File System.
