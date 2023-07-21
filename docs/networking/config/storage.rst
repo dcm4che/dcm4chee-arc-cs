@@ -90,6 +90,12 @@ Storage Descriptor
 
     (dcmLocationStatus)"
     "
+    .. _dcmCountLocationsByStatus:
+
+    :ref:`Count Locations by Status <dcmCountLocationsByStatus>`",boolean,"Indicate to include counts of locations with status != 0 (=OK) for this Storage System by RESTful service to list Storage Systems; false if absent.
+
+    (dcmCountLocationsByStatus)"
+    "
     .. _dcmDigestAlgorithm:
 
     :ref:`Digest Algorithm <dcmDigestAlgorithm>`",string,"Algorithm for generation of check sums.
