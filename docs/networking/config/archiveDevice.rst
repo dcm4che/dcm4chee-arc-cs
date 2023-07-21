@@ -1827,6 +1827,12 @@ DICOM Archive Device related information
     -1
 
     (dcmQStarVerificationMockAccessState)"
+    "
+    .. _dcmIdentifyPatientByOtherPatientIDs:
+
+    :ref:`Identify Patient by Other PatientIDs <dcmIdentifyPatientByOtherPatientIDs>`",boolean,"Indicates to use multiple Patient IDs - provided in the Other Patient ID Sequence of DICOM objects or in repeating PID-3 Patient Identifier List field in HL7 v2 messages - for Patient Identification. If false, only the primary patient identifier of DICOM objects or for HL7 messages (with repeating patient identifiers in PID-3) only the patient identifier picked by Assigning Authority specified in 'HL7 Primary Assigning Authority of Patient ID', will be used.
+
+    (dcmIdentifyPatientByOtherPatientIDs)"
     ":doc:`attributeFilter` (s)",object,"Specifies Attributes stored in the database"
     ":doc:`attributeSet` (s)",object,"Named Attribute Set for Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests."
     ":doc:`bulkData` (s)",object,"Specifies Bulk Data Descriptors applied by services providing Metadata of archived instances."
