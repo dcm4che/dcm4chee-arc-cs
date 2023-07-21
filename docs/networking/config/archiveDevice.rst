@@ -1781,6 +1781,52 @@ DICOM Archive Device related information
     :ref:`UPS Update Without Transaction UID <dcmUPSUpdateWithoutTransactionUID>`",boolean,"Indicates to permit an UPS Pull SCU or UPS-RS Web client to update or change the state of an UPS workitem in state IN PROCESS without specifying a Transaction UID. May be overwritten by configured value for particular Archive Network AEs.
 
     (dcmUPSUpdateWithoutTransactionUID)"
+    "
+    .. _dcmQStarVerificationPollingInterval:
+
+    :ref:`QStar Verification Polling Interval <dcmQStarVerificationPollingInterval>`",string,"Polling Interval for Verification of Access State of objects stored on QStar Tape File System in ISO-8601 duration format PnDTnHnMnS. If absent, Access State of objects stored objects stored on QStar Tape File System will not be verified.
+
+    (dcmQStarVerificationPollingInterval)"
+    "
+    .. _dcmQStarVerificationFetchSize:
+
+    :ref:`QStar Verification Fetch Size <dcmQStarVerificationFetchSize>`",integer,"Limit result set of DB query for Verification of Access State of objects stored on QStar Tape File System; 100 if absent.
+
+    (dcmQStarVerificationFetchSize)"
+    "
+    .. _dcmQStarVerificationDelay:
+
+    :ref:`QStar Verification Delay <dcmQStarVerificationDelay>`",string,"Delay for Verification of Access State after objects stored on QStar Tape File System in ISO-8601 duration format PnDTnHnMnS. If absent, Access State of objects stored objects stored on QStar Tape File System will not be verified.
+
+    (dcmQStarVerificationDelay)"
+    "
+    .. _dcmQStarVerificationURL:
+
+    :ref:`QStar Verification URL <dcmQStarVerificationURL>`",string,"URL of QStar Archive Storage Manager WEB Services - including username and password (http://username:password@qstar.host:port/) - invoked for Verification of Access State after objects stored on QStar Tape File System. If absent, Access State of objects stored objects stored on QStar Tape File System will not be verified.
+
+    (dcmQStarVerificationURL)"
+    "
+    .. _dcmQStarVerificationMockAccessState:
+
+    :ref:`QStar Verification Mock Access State <dcmQStarVerificationMockAccessState>`",integer,"Indicates to mock invoke of QStar Archive Storage Manager (ASM) WEB Services by return of specified Access State (0 - ACCESS_STATE_NONE, 1 - ACCESS_STATE_EMPTY, 2 - ACCESS_STATE_UNSTABLE, 3 - ACCESS_STATE_STABLE, 4 - ACCESS_STATE_OUT_OF_CACHE, 5 - ACCESS_STATE_OFFLINE, -1 - simulate error response) for testing.
+
+    Enumerated values:
+
+    0
+
+    1
+
+    2
+
+    3
+
+    4
+
+    5
+
+    -1
+
+    (dcmQStarVerificationMockAccessState)"
     ":doc:`attributeFilter` (s)",object,"Specifies Attributes stored in the database"
     ":doc:`attributeSet` (s)",object,"Named Attribute Set for Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests."
     ":doc:`bulkData` (s)",object,"Specifies Bulk Data Descriptors applied by services providing Metadata of archived instances."
