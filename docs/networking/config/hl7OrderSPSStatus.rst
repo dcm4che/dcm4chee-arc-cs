@@ -10,12 +10,40 @@ Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01,
     "
     .. _dcmSPSStatus:
 
-    :ref:`Scheduled Procedure Step Status code <dcmSPSStatus>`",string,"Scheduled Procedure Step Status code Enumerated values: SCHEDULED, CANCELED, DISCONTINUED or COMPLETED.
+    :ref:`Scheduled Procedure Step Status code <dcmSPSStatus>`",string,"Scheduled Procedure Step Status code
+
+    Enumerated values:
+
+    SCHEDULED
+
+    CANCELED
+
+    DISCONTINUED
+
+    COMPLETED
 
     (dcmSPSStatus)"
     "
     .. _hl7OrderControlStatus:
 
-    :ref:`HL7 Order Control Status(s) <hl7OrderControlStatus>`",string,"HL7 Order Control Status Code combinations. These combinations refer to values present in ORC-1_ORC-5. Enumerated values: NW_SC, NW_IP, CA_CA, DC_CA, XO_SC, XO_CM, SC_CM or SC_A.
+    :ref:`HL7 Order Control Status(s) <hl7OrderControlStatus>`",string,"HL7 Order Control Status Code combinations. These combinations refer to values present in ORC-1_ORC-5.
+
+    Enumerated values:
+
+    NW_SC
+
+    NW_IP
+
+    CA_CA
+
+    DC_CA
+
+    XO_SC
+
+    XO_CM
+
+    SC_CM
+
+    SC_A
 
     (hl7OrderControlStatus)"

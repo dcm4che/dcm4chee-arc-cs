@@ -34,7 +34,15 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmCoercionOnFailure:
 
-    :ref:`Attribute Coercion on Failure <dcmCoercionOnFailure>`",string,"Behavior on failure applying this Attribute Coercion. Refer `Attribute Coercion on Failure meanings. <https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#attribute-coercion-on-failure>`_ Enumerated values: RETHROW, CONTINUE or SUFFICIENT.
+    :ref:`Attribute Coercion on Failure <dcmCoercionOnFailure>`",string,"Behavior on failure applying this Attribute Coercion. Refer `Attribute Coercion on Failure meanings. <https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#attribute-coercion-on-failure>`_
+
+    Enumerated values:
+
+    RETHROW
+
+    CONTINUE
+
+    SUFFICIENT
 
     (dcmCoercionOnFailure)"
     "
@@ -46,13 +54,29 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmDIMSE:
 
-    :ref:`DIMSE <dcmDIMSE>`",string,"DICOM Message Element on which this Attribute Coercion shall be applied. Also `applicable if the requests are received over web. <https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#dimse>`_ Enumerated values: N_CREATE_RQ, C_STORE_RQ, C_FIND_RQ or C_FIND_RSP.
+    :ref:`DIMSE <dcmDIMSE>`",string,"DICOM Message Element on which this Attribute Coercion shall be applied. Also `applicable if the requests are received over web. <https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#dimse>`_
+
+    Enumerated values:
+
+    N_CREATE_RQ
+
+    C_STORE_RQ
+
+    C_FIND_RQ
+
+    C_FIND_RSP
 
     (dcmDIMSE)"
     "
     .. _dicomTransferRole:
 
-    :ref:`DICOM Transfer Role <dicomTransferRole>`",string,"DICOM Transfer Role of peer DICOM AE. Enumerated values: SCU or SCP.
+    :ref:`DICOM Transfer Role <dicomTransferRole>`",string,"DICOM Transfer Role of peer DICOM AE.
+
+    Enumerated values:
+
+    SCU
+
+    SCP
 
     (dicomTransferRole)"
     "
@@ -70,7 +94,17 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmAttributeUpdatePolicy:
 
-    :ref:`Attribute Update Policy <dcmAttributeUpdatePolicy>`",string,"Applied Attribute Update Policy. Only effective for coerce from Leading C-FIND SCP coercion type. Refer `Attribute Update Policies' meanings. <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Attribute-Update-Policy>`_ Enumerated values: PRESERVE, SUPPLEMENT, MERGE or OVERWRITE.
+    :ref:`Attribute Update Policy <dcmAttributeUpdatePolicy>`",string,"Applied Attribute Update Policy. Only effective for coerce from Leading C-FIND SCP coercion type. Refer `Attribute Update Policies' meanings. <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Attribute-Update-Policy>`_
+
+    Enumerated values:
+
+    PRESERVE
+
+    SUPPLEMENT
+
+    MERGE
+
+    OVERWRITE
 
     (dcmAttributeUpdatePolicy)"
     "

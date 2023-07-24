@@ -46,6 +46,14 @@ Export Priors Rule
     "
     .. _dcmExportReoccurredInstances:
 
-    :ref:`Export Reoccurred Instances <dcmExportReoccurredInstances>`",string,"Indicates if the entity shall be exported on subsequent occurrence of instances Enumerated values: NEVER, ALWAYS or REPLACE.
+    :ref:`Export Reoccurred Instances <dcmExportReoccurredInstances>`",string,"Indicates if the entity shall be exported on subsequent occurrence of instances
+
+    Enumerated values:
+
+    NEVER
+
+    ALWAYS
+
+    REPLACE
 
     (dcmExportReoccurredInstances)"

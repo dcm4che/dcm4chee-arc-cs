@@ -46,13 +46,29 @@ Process matching Workitems in unified Worklist
     "
     .. _dcmUPSInputReadinessState:
 
-    :ref:`Input Readiness State <dcmUPSInputReadinessState>`",string,"Process Workitems with matching Input Readiness State (0040,4041). Enumerated values: INCOMPLETE, UNAVAILABLE or READY.
+    :ref:`Input Readiness State <dcmUPSInputReadinessState>`",string,"Process Workitems with matching Input Readiness State (0040,4041).
+
+    Enumerated values:
+
+    INCOMPLETE
+
+    UNAVAILABLE
+
+    READY
 
     (dcmUPSInputReadinessState)"
     "
     .. _dcmUPSPriority:
 
-    :ref:`Priority <dcmUPSPriority>`",string,"Process Workitems with matching Scheduled Procedure Step Priority (0074,1200). If absent, process Workitems of any priority, but order the processing according their priority. Enumerated values: HIGH, MEDIUM or LOW.
+    :ref:`Priority <dcmUPSPriority>`",string,"Process Workitems with matching Scheduled Procedure Step Priority (0074,1200). If absent, process Workitems of any priority, but order the processing according their priority.
+
+    Enumerated values:
+
+    HIGH
+
+    MEDIUM
+
+    LOW
 
     (dcmUPSPriority)"
     "

@@ -82,7 +82,15 @@ Exporter Descriptor
     "
     .. _dcmInstanceAvailability:
 
-    :ref:`Instance Availability <dcmInstanceAvailability>`",string,"Instance Availability. Enumerated values: ONLINE, NEARLINE or OFFLINE.
+    :ref:`Instance Availability <dcmInstanceAvailability>`",string,"Instance Availability.
+
+    Enumerated values:
+
+    ONLINE
+
+    NEARLINE
+
+    OFFLINE
 
     (dcmInstanceAvailability)"
     "

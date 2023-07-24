@@ -40,13 +40,29 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
     "
     .. _dcmUPSPriority:
 
-    :ref:`Priority <dcmUPSPriority>`",string,"Value of Scheduled Procedure Step Priority (0074,1200) in created UPS. Enumerated Values: HIGH, MEDIUM, LOW. If absent, MEDIUM will be applied. Enumerated values: HIGH, MEDIUM or LOW.
+    :ref:`Priority <dcmUPSPriority>`",string,"Value of Scheduled Procedure Step Priority (0074,1200) in created UPS. Enumerated Values: HIGH, MEDIUM, LOW. If absent, MEDIUM will be applied.
+
+    Enumerated values:
+
+    HIGH
+
+    MEDIUM
+
+    LOW
 
     (dcmUPSPriority)"
     "
     .. _dcmUPSInputReadinessState:
 
-    :ref:`Input Readiness State <dcmUPSInputReadinessState>`",string,"Value of Input Readiness State (0040,4041) in created UPS Enumerated values: INCOMPLETE, UNAVAILABLE or READY.
+    :ref:`Input Readiness State <dcmUPSInputReadinessState>`",string,"Value of Input Readiness State (0040,4041) in created UPS
+
+    Enumerated values:
+
+    INCOMPLETE
+
+    UNAVAILABLE
+
+    READY
 
     (dcmUPSInputReadinessState)"
     "
@@ -70,7 +86,19 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
     "
     .. _dcmUPSIncludeInputInformation:
 
-    :ref:`Include Input Information <dcmUPSIncludeInputInformation>`",string,"Indicates if received objects shall be referenced in the Input Information Sequence (0040,4021) in created UPS. SINGLE (= do not updating existing UPS), APPEND (= update existing UPS in state SCHEDULED), SINGLE_OR_CREATE (= if UPS already exists, create new UPS with derived UID), APPEND_OR_CREATE (= if existing UPS is no longer in state SCHEDULED, create new UPS with derived UID). Enumerated values: NO, SINGLE, APPEND, SINGLE_OR_CREATE or APPEND_OR_CREATE.
+    :ref:`Include Input Information <dcmUPSIncludeInputInformation>`",string,"Indicates if received objects shall be referenced in the Input Information Sequence (0040,4021) in created UPS. SINGLE (= do not updating existing UPS), APPEND (= update existing UPS in state SCHEDULED), SINGLE_OR_CREATE (= if UPS already exists, create new UPS with derived UID), APPEND_OR_CREATE (= if existing UPS is no longer in state SCHEDULED, create new UPS with derived UID).
+
+    Enumerated values:
+
+    NO
+
+    SINGLE
+
+    APPEND
+
+    SINGLE_OR_CREATE
+
+    APPEND_OR_CREATE
 
     (dcmUPSIncludeInputInformation)"
     "
@@ -88,7 +116,15 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
     "
     .. _dcmEntity:
 
-    :ref:`Scope of Accumulation <dcmEntity>`",string,"Scope of Accumulation Enumerated values: Study, Series or MPPS.
+    :ref:`Scope of Accumulation <dcmEntity>`",string,"Scope of Accumulation
+
+    Enumerated values:
+
+    Study
+
+    Series
+
+    MPPS
 
     (dcmEntity)"
     "

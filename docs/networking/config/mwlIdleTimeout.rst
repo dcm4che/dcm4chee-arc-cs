@@ -28,7 +28,15 @@ MWL Idle Timeout
     "
     .. _dcmMWLStatusOnIdle:
 
-    :ref:`MWL Status on Idle <dcmMWLStatusOnIdle>`",string,"Change Status of idle Scheduled Procedure Steps to specified value. Enumerated values: CANCELED, DISCONTINUED or COMPLETED.
+    :ref:`MWL Status on Idle <dcmMWLStatusOnIdle>`",string,"Change Status of idle Scheduled Procedure Steps to specified value.
+
+    Enumerated values:
+
+    CANCELED
+
+    DISCONTINUED
+
+    COMPLETED
 
     (dcmMWLStatusOnIdle)"
     "

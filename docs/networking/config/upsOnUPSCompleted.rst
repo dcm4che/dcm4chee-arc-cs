@@ -40,13 +40,29 @@ Create Workitem in unified Worklist on previous UPS Completed
     "
     .. _dcmUPSPriority:
 
-    :ref:`Priority <dcmUPSPriority>`",string,"Value of Scheduled Procedure Step Priority (0074,1200) in created UPS. Enumerated Values: HIGH, MEDIUM, LOW. If absent, MEDIUM will be applied. Enumerated values: HIGH, MEDIUM or LOW.
+    :ref:`Priority <dcmUPSPriority>`",string,"Value of Scheduled Procedure Step Priority (0074,1200) in created UPS. Enumerated Values: HIGH, MEDIUM, LOW. If absent, MEDIUM will be applied.
+
+    Enumerated values:
+
+    HIGH
+
+    MEDIUM
+
+    LOW
 
     (dcmUPSPriority)"
     "
     .. _dcmUPSInputReadinessState:
 
-    :ref:`Input Readiness State <dcmUPSInputReadinessState>`",string,"Value of Input Readiness State (0040,4041) in created UPS Enumerated values: INCOMPLETE, UNAVAILABLE or READY.
+    :ref:`Input Readiness State <dcmUPSInputReadinessState>`",string,"Value of Input Readiness State (0040,4041) in created UPS
+
+    Enumerated values:
+
+    INCOMPLETE
+
+    UNAVAILABLE
+
+    READY
 
     (dcmUPSInputReadinessState)"
     "
@@ -70,7 +86,15 @@ Create Workitem in unified Worklist on previous UPS Completed
     "
     .. _dcmUPSIncludeInputInformation:
 
-    :ref:`Include Input Information <dcmUPSIncludeInputInformation>`",string,"Indicates if the Input Information Sequence (0040,4021) or/and the Output Information Sequence (0040,4033) in the Unified Procedure Step Performed Procedure Sequence (0074,1216) of the previous UPS is included in Input Information Sequence (0040,4021) of the in created UPS. Enumerated values: NO, COPY_INPUT or COPY_OUTPUT.
+    :ref:`Include Input Information <dcmUPSIncludeInputInformation>`",string,"Indicates if the Input Information Sequence (0040,4021) or/and the Output Information Sequence (0040,4033) in the Unified Procedure Step Performed Procedure Sequence (0074,1216) of the previous UPS is included in Input Information Sequence (0040,4021) of the in created UPS.
+
+    Enumerated values:
+
+    NO
+
+    COPY_INPUT
+
+    COPY_OUTPUT
 
     (dcmUPSIncludeInputInformation)"
     "
@@ -88,7 +112,15 @@ Create Workitem in unified Worklist on previous UPS Completed
     "
     .. _dcmEntity:
 
-    :ref:`Scope of Accumulation <dcmEntity>`",string,"Scope of Accumulation Enumerated values: Study, Series or MPPS.
+    :ref:`Scope of Accumulation <dcmEntity>`",string,"Scope of Accumulation
+
+    Enumerated values:
+
+    Study
+
+    Series
+
+    MPPS
 
     (dcmEntity)"
     "

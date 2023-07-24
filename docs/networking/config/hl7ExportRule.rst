@@ -34,7 +34,15 @@ HL7 Export Rule
     "
     .. _dcmNullifyIssuerOfPatientID:
 
-    :ref:`Ignore Assigning Authority of Patient ID <dcmNullifyIssuerOfPatientID>`",string,"Conditionally ignore Assigning Authority of Patient ID (PID-3.4) in received HL7 message which triggered the export for selecting Studies of the Patient. Enumerated values: ALWAYS, MATCHING or NOT_MATCHING.
+    :ref:`Ignore Assigning Authority of Patient ID <dcmNullifyIssuerOfPatientID>`",string,"Conditionally ignore Assigning Authority of Patient ID (PID-3.4) in received HL7 message which triggered the export for selecting Studies of the Patient.
+
+    Enumerated values:
+
+    ALWAYS
+
+    MATCHING
+
+    NOT_MATCHING
 
     (dcmNullifyIssuerOfPatientID)"
     "

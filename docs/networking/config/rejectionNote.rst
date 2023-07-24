@@ -16,7 +16,19 @@ Specifies behavior on Rejection Note Stored
     "
     .. _dcmRejectionNoteType:
 
-    :ref:`Rejection Note Type <dcmRejectionNoteType>`",string,"Type of Rejection Note. Enumerated values: REJECTED_FOR_QUALITY_REASONS, REJECTED_FOR_PATIENT_SAFETY_REASONS, INCORRECT_MODALITY_WORKLIST_ENTRY, DATA_RETENTION_POLICY_EXPIRED or REVOKE_REJECTION.
+    :ref:`Rejection Note Type <dcmRejectionNoteType>`",string,"Type of Rejection Note.
+
+    Enumerated values:
+
+    REJECTED_FOR_QUALITY_REASONS
+
+    REJECTED_FOR_PATIENT_SAFETY_REASONS
+
+    INCORRECT_MODALITY_WORKLIST_ENTRY
+
+    DATA_RETENTION_POLICY_EXPIRED
+
+    REVOKE_REJECTION
 
     (dcmRejectionNoteType)"
     "
@@ -28,7 +40,15 @@ Specifies behavior on Rejection Note Stored
     "
     .. _dcmAcceptPreviousRejectedInstance:
 
-    :ref:`Accept Previous Rejected Instance <dcmAcceptPreviousRejectedInstance>`",string,"Specifies behavior on subsequent occurrence of instances rejected by a particular Rejection Note. Enumerated values: REJECT, RESTORE or IGNORE.
+    :ref:`Accept Previous Rejected Instance <dcmAcceptPreviousRejectedInstance>`",string,"Specifies behavior on subsequent occurrence of instances rejected by a particular Rejection Note.
+
+    Enumerated values:
+
+    REJECT
+
+    RESTORE
+
+    IGNORE
 
     (dcmAcceptPreviousRejectedInstance)"
     "

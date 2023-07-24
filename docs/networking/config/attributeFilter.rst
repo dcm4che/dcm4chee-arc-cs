@@ -10,7 +10,21 @@ Attributes stored in the database
     "
     .. _dcmEntity:
 
-    :ref:`Attribute Entity <dcmEntity>`",string,"Entity of the Attribute Filter or Export Rule ('Patient', 'Study', 'Series', 'Instance', 'MPPS', 'MWL'). Enumerated values: Patient, Study, Series, Instance, MPPS or MWL.
+    :ref:`Attribute Entity <dcmEntity>`",string,"Entity of the Attribute Filter or Export Rule ('Patient', 'Study', 'Series', 'Instance', 'MPPS', 'MWL').
+
+    Enumerated values:
+
+    Patient
+
+    Study
+
+    Series
+
+    Instance
+
+    MPPS
+
+    MWL
 
     (dcmEntity)"
     "
@@ -40,6 +54,18 @@ Attributes stored in the database
     "
     .. _dcmAttributeUpdatePolicy:
 
-    :ref:`Attribute Update Policy <dcmAttributeUpdatePolicy>`",string,"Specifies update policy for extracted attributes into the DB on Series, Study & Patient level on receive of further instance of the entity. PRESERVE (= nullify attributes in the new dataset which are not present in the original dataset), SUPPLEMENT (= attributes not present in original dataset will be supplemented), REPLACE (= original dataset is completely replaced), MERGE (= attribute values will be written from new dataset), OVERWRITE (= attribute values if null in new dataset, will be nullified in original dataset). If absent, PRESERVE will be applied Enumerated values: PRESERVE, SUPPLEMENT, MERGE, OVERWRITE or REPLACE.
+    :ref:`Attribute Update Policy <dcmAttributeUpdatePolicy>`",string,"Specifies update policy for extracted attributes into the DB on Series, Study & Patient level on receive of further instance of the entity. PRESERVE (= nullify attributes in the new dataset which are not present in the original dataset), SUPPLEMENT (= attributes not present in original dataset will be supplemented), REPLACE (= original dataset is completely replaced), MERGE (= attribute values will be written from new dataset), OVERWRITE (= attribute values if null in new dataset, will be nullified in original dataset). If absent, PRESERVE will be applied
+
+    Enumerated values:
+
+    PRESERVE
+
+    SUPPLEMENT
+
+    MERGE
+
+    OVERWRITE
+
+    REPLACE
 
     (dcmAttributeUpdatePolicy)"

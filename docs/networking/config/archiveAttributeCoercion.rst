@@ -22,13 +22,29 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmDIMSE:
 
-    :ref:`DIMSE <dcmDIMSE>`",string,"DICOM Message Element on which this Attribute Coercion shall be applied. Also `applicable if the requests are received over web. <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Legacy-Archive-Attribute-Coercion---Application-of-multiple-coercions-using-one-coercion-rule#dimse>`_ Enumerated values: N_CREATE_RQ, C_STORE_RQ, C_FIND_RQ or C_FIND_RSP.
+    :ref:`DIMSE <dcmDIMSE>`",string,"DICOM Message Element on which this Attribute Coercion shall be applied. Also `applicable if the requests are received over web. <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Legacy-Archive-Attribute-Coercion---Application-of-multiple-coercions-using-one-coercion-rule#dimse>`_
+
+    Enumerated values:
+
+    N_CREATE_RQ
+
+    C_STORE_RQ
+
+    C_FIND_RQ
+
+    C_FIND_RSP
 
     (dcmDIMSE)"
     "
     .. _dicomTransferRole:
 
-    :ref:`DICOM Transfer Role <dicomTransferRole>`",string,"DICOM Transfer Role of peer DICOM AE. Enumerated values: SCU or SCP.
+    :ref:`DICOM Transfer Role <dicomTransferRole>`",string,"DICOM Transfer Role of peer DICOM AE.
+
+    Enumerated values:
+
+    SCU
+
+    SCP
 
     (dicomTransferRole)"
     "
@@ -52,7 +68,21 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmDeIdentification:
 
-    :ref:`De-identification(s) <dcmDeIdentification>`",string,"De-identify objects according the Basic Application Level Confidentiality Profile specified in DICOM PS3.15. Selecting any Option implicitly includes the Basic Application Level Confidentiality Profile. Enumerated values: BasicApplicationConfidentialityProfile, RetainLongitudinalTemporalInformationFullDatesOption, RetainDeviceIdentityOption, RetainInstitutionIdentityOption, RetainUIDsOption or RetainPatientIDHashOption.
+    :ref:`De-identification(s) <dcmDeIdentification>`",string,"De-identify objects according the Basic Application Level Confidentiality Profile specified in DICOM PS3.15. Selecting any Option implicitly includes the Basic Application Level Confidentiality Profile.
+
+    Enumerated values:
+
+    BasicApplicationConfidentialityProfile
+
+    RetainLongitudinalTemporalInformationFullDatesOption
+
+    RetainDeviceIdentityOption
+
+    RetainInstitutionIdentityOption
+
+    RetainUIDsOption
+
+    RetainPatientIDHashOption
 
     (dcmDeIdentification)"
     "
@@ -70,7 +100,21 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmMergeMWLMatchingKey:
 
-    :ref:`Merge MWL Matching Key <dcmMergeMWLMatchingKey>`",string,"Specifies attribute of received object to lookup MWL Item used to coerce request attributes. If absent, request attributes of received objects will not be coerced. Refer `applicability of merge MWL matching keys. <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Legacy-Archive-Attribute-Coercion---Application-of-multiple-coercions-using-one-coercion-rule#configurations-specific-to-merging-from-mwl-coercion-type>`_ Enumerated values: PatientID, PatientIDOnly, PatientIDAccessionNumber, AccessionNumber, StudyInstanceUID or ScheduledProcedureStepID.
+    :ref:`Merge MWL Matching Key <dcmMergeMWLMatchingKey>`",string,"Specifies attribute of received object to lookup MWL Item used to coerce request attributes. If absent, request attributes of received objects will not be coerced. Refer `applicability of merge MWL matching keys. <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Legacy-Archive-Attribute-Coercion---Application-of-multiple-coercions-using-one-coercion-rule#configurations-specific-to-merging-from-mwl-coercion-type>`_
+
+    Enumerated values:
+
+    PatientID
+
+    PatientIDOnly
+
+    PatientIDAccessionNumber
+
+    AccessionNumber
+
+    StudyInstanceUID
+
+    ScheduledProcedureStepID
 
     (dcmMergeMWLMatchingKey)"
     "
@@ -94,7 +138,25 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmMergeLocalMWLWithStatus:
 
-    :ref:`Merge Local MWL With Status(s) <dcmMergeLocalMWLWithStatus>`",string,"Only consider MWL items with one of the specified Scheduled Procedure Step Status codes. If absent, MWL items with any Scheduled Procedure Step Status are considered. Enumerated values: SCHEDULED, ARRIVED, READY, STARTED, DEPARTED, CANCELED, DISCONTINUED or COMPLETED.
+    :ref:`Merge Local MWL With Status(s) <dcmMergeLocalMWLWithStatus>`",string,"Only consider MWL items with one of the specified Scheduled Procedure Step Status codes. If absent, MWL items with any Scheduled Procedure Step Status are considered.
+
+    Enumerated values:
+
+    SCHEDULED
+
+    ARRIVED
+
+    READY
+
+    STARTED
+
+    DEPARTED
+
+    CANCELED
+
+    DISCONTINUED
+
+    COMPLETED
 
     (dcmMergeLocalMWLWithStatus)"
     "
@@ -112,7 +174,17 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmAttributeUpdatePolicy:
 
-    :ref:`Attribute Update Policy <dcmAttributeUpdatePolicy>`",string,"Specifies how attributes shall be updated with attributes fetched from Leading C-FIND SCP. Refer `Attribute Update Policies meanings. <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Attribute-Update-Policy>`_ Enumerated values: PRESERVE, SUPPLEMENT, MERGE or OVERWRITE.
+    :ref:`Attribute Update Policy <dcmAttributeUpdatePolicy>`",string,"Specifies how attributes shall be updated with attributes fetched from Leading C-FIND SCP. Refer `Attribute Update Policies meanings. <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Attribute-Update-Policy>`_
+
+    Enumerated values:
+
+    PRESERVE
+
+    SUPPLEMENT
+
+    MERGE
+
+    OVERWRITE
 
     (dcmAttributeUpdatePolicy)"
     "
@@ -124,7 +196,13 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmUseCallingAETitleAs:
 
-    :ref:`Use Calling AE Title as <dcmUseCallingAETitleAs>`",string,"Identifies the attribute which is set to the value of the Calling AET if it is absent or empty. ScheduledStationAETitle (= Scheduled Station AE Title (0040,0001) in item of Scheduled Procedure Step Sequence (0040,0100)), SendingApplicationEntityTitleOfSeries (= Sending Application Entity Title of Series (7777,xx37)). Enumerated values: ScheduledStationAETitle or SendingApplicationEntityTitleOfSeries.
+    :ref:`Use Calling AE Title as <dcmUseCallingAETitleAs>`",string,"Identifies the attribute which is set to the value of the Calling AET if it is absent or empty. ScheduledStationAETitle (= Scheduled Station AE Title (0040,0001) in item of Scheduled Procedure Step Sequence (0040,0100)), SendingApplicationEntityTitleOfSeries (= Sending Application Entity Title of Series (7777,xx37)).
+
+    Enumerated values:
+
+    ScheduledStationAETitle
+
+    SendingApplicationEntityTitleOfSeries
 
     (dcmUseCallingAETitleAs)"
     "
@@ -142,7 +220,15 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmNullifyIssuerOfPatientID:
 
-    :ref:`Nullify Issuer of Patient ID <dcmNullifyIssuerOfPatientID>`",string,"Conditionally nullify Issuer of Patient ID (0010,0021) and Issuer of Patient ID Qualifiers Sequence (0010,0024) from received objects Enumerated values: ALWAYS, MATCHING or NOT_MATCHING.
+    :ref:`Nullify Issuer of Patient ID <dcmNullifyIssuerOfPatientID>`",string,"Conditionally nullify Issuer of Patient ID (0010,0021) and Issuer of Patient ID Qualifiers Sequence (0010,0024) from received objects
+
+    Enumerated values:
+
+    ALWAYS
+
+    MATCHING
+
+    NOT_MATCHING
 
     (dcmNullifyIssuerOfPatientID)"
     "

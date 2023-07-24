@@ -16,7 +16,15 @@ Export Rule
     "
     .. _dcmEntity:
 
-    :ref:`Export Entity <dcmEntity>`",string,"Entity of Export Enumerated values: Study, Series or Instance.
+    :ref:`Export Entity <dcmEntity>`",string,"Entity of Export
+
+    Enumerated values:
+
+    Study
+
+    Series
+
+    Instance
 
     (dcmEntity)"
     "
@@ -58,6 +66,14 @@ Export Rule
     "
     .. _dcmExportReoccurredInstances:
 
-    :ref:`Export Reoccurred Instances <dcmExportReoccurredInstances>`",string,"Indicates if the entity shall be exported on subsequent occurrence of instances Enumerated values: NEVER, ALWAYS or REPLACE.
+    :ref:`Export Reoccurred Instances <dcmExportReoccurredInstances>`",string,"Indicates if the entity shall be exported on subsequent occurrence of instances
+
+    Enumerated values:
+
+    NEVER
+
+    ALWAYS
+
+    REPLACE
 
     (dcmExportReoccurredInstances)"

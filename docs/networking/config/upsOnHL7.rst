@@ -40,13 +40,29 @@ Create/Update Workitem in unified Worklist on receive of HL7v2 message
     "
     .. _dcmUPSPriority:
 
-    :ref:`Priority <dcmUPSPriority>`",string,"Value of Scheduled Procedure Step Priority (0074,1200) in created UPS. Enumerated Values: HIGH, MEDIUM, LOW. If absent, MEDIUM will be applied. Enumerated values: HIGH, MEDIUM or LOW.
+    :ref:`Priority <dcmUPSPriority>`",string,"Value of Scheduled Procedure Step Priority (0074,1200) in created UPS. Enumerated Values: HIGH, MEDIUM, LOW. If absent, MEDIUM will be applied.
+
+    Enumerated values:
+
+    HIGH
+
+    MEDIUM
+
+    LOW
 
     (dcmUPSPriority)"
     "
     .. _dcmUPSInputReadinessState:
 
-    :ref:`Input Readiness State <dcmUPSInputReadinessState>`",string,"Value of Input Readiness State (0040,4041) in created UPS Enumerated values: INCOMPLETE, UNAVAILABLE or READY.
+    :ref:`Input Readiness State <dcmUPSInputReadinessState>`",string,"Value of Input Readiness State (0040,4041) in created UPS
+
+    Enumerated values:
+
+    INCOMPLETE
+
+    UNAVAILABLE
+
+    READY
 
     (dcmUPSInputReadinessState)"
     "

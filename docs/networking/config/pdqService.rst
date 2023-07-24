@@ -34,7 +34,13 @@ Patient Demographics Query Service Descriptor
     "
     .. _dcmEntity:
 
-    :ref:`Query Entity <dcmEntity>`",string,"Indicates if the C-FIND SCP is queried for a particular Patient or for Studies of a particular Patient. Only effective for DICOM PDQ Services (URI: pdq-dicom:{AETitle}). Enumerated values: Patient or Study.
+    :ref:`Query Entity <dcmEntity>`",string,"Indicates if the C-FIND SCP is queried for a particular Patient or for Studies of a particular Patient. Only effective for DICOM PDQ Services (URI: pdq-dicom:{AETitle}).
+
+    Enumerated values:
+
+    Patient
+
+    Study
 
     (dcmEntity)"
     "
