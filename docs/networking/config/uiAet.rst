@@ -22,7 +22,13 @@ Aet drop-down list
     "
     .. _dcmuiMode:
 
-    :ref:`AEt list mode <dcmuiMode>`",string,"Define in which mode should be this config available in 'internal' ( archive own AETs, in some places called also 'Home AET' or 'Local AET' ) or 'external' ( or in some places also called 'Remote AET' ) aet drop-down list, to be available for both don't select any of them Enumerated values: internal or external.
+    :ref:`AEt list mode <dcmuiMode>`",string,"Define in which mode should be this config available in 'internal' ( archive own AETs, in some places called also 'Home AET' or 'Local AET' ) or 'external' ( or in some places also called 'Remote AET' ) aet drop-down list, to be available for both don't select any of them
+
+    Enumerated values:
+
+    internal
+
+    external
 
     (dcmuiMode)"
     "

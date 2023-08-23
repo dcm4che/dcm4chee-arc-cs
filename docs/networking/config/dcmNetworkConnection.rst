@@ -10,7 +10,21 @@ dcm4che proprietary Network Connection Attributes
     "
     .. _dcmProtocol:
 
-    :ref:`Protocol <dcmProtocol>`",string,"Protocol of Network Connection. Enumerated values: DICOM, HL7, HL7_MLLP2, SYSLOG_TLS, SYSLOG_UDP or HTTP.
+    :ref:`Protocol <dcmProtocol>`",string,"Protocol of Network Connection.
+
+    Enumerated values:
+
+    DICOM
+
+    HL7
+
+    HL7_MLLP2
+
+    SYSLOG_TLS
+
+    SYSLOG_UDP
+
+    HTTP
 
     (dcmProtocol)"
     "
@@ -28,13 +42,31 @@ dcm4che proprietary Network Connection Attributes
     "
     .. _dcmTLSProtocol:
 
-    :ref:`TLS Protocol(s) <dcmTLSProtocol>`",string,"The Supported TLS Protocols. Enumerated values: TLSv1.3, TLSv1.2, TLSv1.1, TLSv1 or SSLv3.
+    :ref:`TLS Protocol(s) <dcmTLSProtocol>`",string,"The Supported TLS Protocols.
+
+    Enumerated values:
+
+    TLSv1.3
+
+    TLSv1.2
+
+    TLSv1.1
+
+    TLSv1
+
+    SSLv3
 
     (dcmTLSProtocol)"
     "
     .. _dcmTLSEndpointIdentificationAlgorithm:
 
-    :ref:`TLS Endpoint Identification Algorithm <dcmTLSEndpointIdentificationAlgorithm>`",string,"Indicates the endpoint identification or verification procedures during TLS handshaking. Enumerated values: HTTPS or LDAPS.
+    :ref:`TLS Endpoint Identification Algorithm <dcmTLSEndpointIdentificationAlgorithm>`",string,"Indicates the endpoint identification or verification procedures during TLS handshaking.
+
+    Enumerated values:
+
+    HTTPS
+
+    LDAPS
 
     (dcmTLSEndpointIdentificationAlgorithm)"
     "

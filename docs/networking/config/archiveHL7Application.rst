@@ -52,7 +52,13 @@ DICOM Archive HL7 Application related information
     "
     .. _hl7ORUAction:
 
-    :ref:`HL7 ORU Action(s) <hl7ORUAction>`",string,"Specifies action on receive of HL7 ORU^R01 message: IMPORT_REPORT (= transcode received HL7 ORU^R01 to DICOM SR), MWL_COMPLETED (= set Status of matching MWL items to COMPLETED). Overwrites value specified on Device level. Enumerated values: IMPORT_REPORT or MWL_COMPLETED.
+    :ref:`HL7 ORU Action(s) <hl7ORUAction>`",string,"Specifies action on receive of HL7 ORU^R01 message: IMPORT_REPORT (= transcode received HL7 ORU^R01 to DICOM SR), MWL_COMPLETED (= set Status of matching MWL items to COMPLETED). Overwrites value specified on Device level.
+
+    Enumerated values:
+
+    IMPORT_REPORT
+
+    MWL_COMPLETED
 
     (hl7ORUAction)"
     "
@@ -82,13 +88,23 @@ DICOM Archive HL7 Application related information
     "
     .. _hl7ScheduledProtocolCodeInOrder:
 
-    :ref:`HL7 Schedule Protocol Code in Order <hl7ScheduledProtocolCodeInOrder>`",string,"Specifies location of Scheduled Protocol Code in received HL7 Order message. Overwrites value specified on Device level. Enumerated values: OBR_4_1 or OBR_4_4.
+    :ref:`HL7 Schedule Protocol Code in Order <hl7ScheduledProtocolCodeInOrder>`",string,"Specifies location of Scheduled Protocol Code in received HL7 Order message. Overwrites value specified on Device level.
+
+    Enumerated values:
+
+    OBR_4_1
+
+    OBR_4_4
 
     (hl7ScheduledProtocolCodeInOrder)"
     "
     .. _hl7ScheduledStationAETInOrder:
 
-    :ref:`HL7 Schedule Station AET in Order <hl7ScheduledStationAETInOrder>`",string,"Specifies location of Scheduled Station AE Title in received HL7 Order message. Should not be configured for HL7 v2.5.1 OMI^O23 with IPC segment. Overwrites value specified on Device level. Enumerated values: ORC_18.
+    :ref:`HL7 Schedule Station AET in Order <hl7ScheduledStationAETInOrder>`",string,"Specifies location of Scheduled Station AE Title in received HL7 Order message. Should not be configured for HL7 v2.5.1 OMI^O23 with IPC segment. Overwrites value specified on Device level.
+
+    Enumerated values:
+
+    ORC_18
 
     (hl7ScheduledStationAETInOrder)"
     "
@@ -112,7 +128,11 @@ DICOM Archive HL7 Application related information
     "
     .. _hl7PatientArrivalMessageType:
 
-    :ref:`HL7 Patient Arrival Message Type <hl7PatientArrivalMessageType>`",string,"Message Type of HL7 messages which triggers the change the status of Scheduled Procedure Steps associated with the Patient from SCHEDULED to ARRIVED. Overwrite value specified on Device level. Enumerated values: ADT^A10.
+    :ref:`HL7 Patient Arrival Message Type <hl7PatientArrivalMessageType>`",string,"Message Type of HL7 messages which triggers the change the status of Scheduled Procedure Steps associated with the Patient from SCHEDULED to ARRIVED. Overwrite value specified on Device level.
+
+    Enumerated values:
+
+    ADT^A10
 
     (hl7PatientArrivalMessageType)"
     "
@@ -130,37 +150,77 @@ DICOM Archive HL7 Application related information
     "
     .. _hl7PrimaryAssigningAuthorityOfPatientID:
 
-    :ref:`HL7 Primary Assigning Authority of Patient ID <hl7PrimaryAssigningAuthorityOfPatientID>`",string,"Assigning Authority of Patient ID in received HL7 message used to search primary qualified patient identifier in the list of identifiers in PID-3. This qualified patient identifier shall be used on the root dataset. If absent, by default the first patient identifier pair in PID-3 shall be used as primary patient identifier on root dataset. If none of the qualified patient identifiers in the list match with the configured issuer, archive server log shall contain a log INFO message and by default the first qualified patient identifier in PID-3 shall be used. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}]. Overwrites value specified on Device level.
+    :ref:`HL7 Primary Assigning Authority of Patient ID <hl7PrimaryAssigningAuthorityOfPatientID>`",string,"Assigning Authority of Patient ID in received HL7 message used to search primary qualified patient identifier in the list of identifiers in PID-3 / MRG.1. This qualified patient identifier shall be used on the root dataset. If absent, by default the first patient identifier pair in PID-3 / MRG.1 shall be used as primary patient identifier on root dataset. If none of the qualified patient identifiers in the list match with the configured issuer, archive server log shall contain a log INFO message and by default the first qualified patient identifier in PID-3 / MRG.1 shall be used. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}]. Overwrites value specified on Device level.
 
     (hl7PrimaryAssigningAuthorityOfPatientID)"
     "
     .. _hl7OtherPatientIDs:
 
-    :ref:`HL7 Other Patient IDs <hl7OtherPatientIDs>`",string,"Specifies inclusion policy for patient identifiers in PID-3 of HL7 message in Other Patient IDs Sequence (0010,1002). Overwrites value specified on Device level. Enumerated values: ALL, NONE or OTHER.
+    :ref:`HL7 Other Patient IDs <hl7OtherPatientIDs>`",string,"Specifies inclusion policy for patient identifiers in PID-3 / MRG-1 of HL7 message in Other Patient IDs Sequence (0010,1002). Overwrites value specified on Device level.
+
+    Enumerated values:
+
+    ALL
+
+    NONE
+
+    OTHER
 
     (hl7OtherPatientIDs)"
     "
     .. _hl7OrderMissingStudyIUIDPolicy:
 
-    :ref:`HL7 Order Missing Study Instance UID Policy <hl7OrderMissingStudyIUIDPolicy>`",string,"Specifies policy for missing Study Instance UID in incoming HL7 Order messages. Overwrites value specified on Device level. Enumerated values: REJECT, GENERATE or ACCESSION_BASED.
+    :ref:`HL7 Order Missing Study Instance UID Policy <hl7OrderMissingStudyIUIDPolicy>`",string,"Specifies policy for missing Study Instance UID in incoming HL7 Order messages. Overwrites value specified on Device level.
+
+    Enumerated values:
+
+    REJECT
+
+    GENERATE
+
+    ACCESSION_BASED
 
     (hl7OrderMissingStudyIUIDPolicy)"
     "
     .. _hl7OrderMissingAdmissionIDPolicy:
 
-    :ref:`HL7 Order Missing Admission ID Policy <hl7OrderMissingAdmissionIDPolicy>`",string,"Specifies policy on incoming HL7 Order messages without a value for PID-18 Patient Account Number nor field PV1-19 Visit Number. Overwrites value specified on Device level. Enumerated values: ACCEPT, REJECT or ACCESSION_AS_ADMISSION.
+    :ref:`HL7 Order Missing Admission ID Policy <hl7OrderMissingAdmissionIDPolicy>`",string,"Specifies policy on incoming HL7 Order messages without a value for PID-18 Patient Account Number nor field PV1-19 Visit Number. Overwrites value specified on Device level.
+
+    Enumerated values:
+
+    ACCEPT
+
+    REJECT
+
+    ACCESSION_AS_ADMISSION
 
     (hl7OrderMissingAdmissionIDPolicy)"
     "
     .. _hl7ImportReportMissingStudyIUIDPolicy:
 
-    :ref:`HL7 Import Report Missing Study Instance UID Policy <hl7ImportReportMissingStudyIUIDPolicy>`",string,"Specifies policy for missing Study Instance UID in incoming HL7 Import Report (ORU) messages. Overwrites value specified on Device level. Enumerated values: REJECT, GENERATE or ACCESSION_BASED.
+    :ref:`HL7 Import Report Missing Study Instance UID Policy <hl7ImportReportMissingStudyIUIDPolicy>`",string,"Specifies policy for missing Study Instance UID in incoming HL7 Import Report (ORU) messages. Overwrites value specified on Device level.
+
+    Enumerated values:
+
+    REJECT
+
+    GENERATE
+
+    ACCESSION_BASED
 
     (hl7ImportReportMissingStudyIUIDPolicy)"
     "
     .. _hl7ImportReportMissingAdmissionIDPolicy:
 
-    :ref:`HL7 Import Report Missing Admission ID Policy <hl7ImportReportMissingAdmissionIDPolicy>`",string,"Specifies policy on incoming HL7 ImportReport (ORU) messages without a value for PID-18 Patient Account Number nor field PV1-19 Visit Number. Overwrites value specified on Device level. Enumerated values: ACCEPT, REJECT or ACCESSION_AS_ADMISSION.
+    :ref:`HL7 Import Report Missing Admission ID Policy <hl7ImportReportMissingAdmissionIDPolicy>`",string,"Specifies policy on incoming HL7 ImportReport (ORU) messages without a value for PID-18 Patient Account Number nor field PV1-19 Visit Number. Overwrites value specified on Device level.
+
+    Enumerated values:
+
+    ACCEPT
+
+    REJECT
+
+    ACCESSION_AS_ADMISSION
 
     (hl7ImportReportMissingAdmissionIDPolicy)"
     "
@@ -172,13 +232,27 @@ DICOM Archive HL7 Application related information
     "
     .. _hl7ImportReportAdjustIUID:
 
-    :ref:`HL7 Import Report Adjust Instance UID <hl7ImportReportAdjustIUID>`",string,"Specifies adjustment of Series and SOP Instances UIDs returned by XSLT on incoming HL7 Import Report (ORU) messages. Overwrites value specified on Device level. Enumerated values: NONE or APPEND_HASH_OF_STUDY_INSTANCE_UID.
+    :ref:`HL7 Import Report Adjust Instance UID <hl7ImportReportAdjustIUID>`",string,"Specifies adjustment of Series and SOP Instances UIDs returned by XSLT on incoming HL7 Import Report (ORU) messages. Overwrites value specified on Device level.
+
+    Enumerated values:
+
+    NONE
+
+    APPEND_HASH_OF_STUDY_INSTANCE_UID
 
     (hl7ImportReportAdjustIUID)"
     "
     .. _hl7ReferredMergedPatientPolicy:
 
-    :ref:`HL7 Referred Merged Patient Policy <hl7ReferredMergedPatientPolicy>`",string,"Specifies policy on incoming HL7 messages referring an already merged Patient. REJECT: reject any such HL7 message, IGNORE: ignore any such HL7 message, IGNORE_DUPLICATE_MERGE: Ignore only duplicate HL7 Merge messages, Reject any other such Message. Overwrites value specified on Device level. Enumerated values: REJECT, IGNORE or IGNORE_DUPLICATE_MERGE.
+    :ref:`HL7 Referred Merged Patient Policy <hl7ReferredMergedPatientPolicy>`",string,"Specifies policy on incoming HL7 messages referring an already merged Patient. REJECT: reject any such HL7 message, IGNORE: ignore any such HL7 message, IGNORE_DUPLICATE_MERGE: Ignore only duplicate HL7 Merge messages, Reject any other such Message. Overwrites value specified on Device level.
+
+    Enumerated values:
+
+    REJECT
+
+    IGNORE
+
+    IGNORE_DUPLICATE_MERGE
 
     (hl7ReferredMergedPatientPolicy)"
     "
@@ -194,13 +268,3 @@ DICOM Archive HL7 Application related information
     ":doc:`hl7StudyRetentionPolicy` (s)",object,"HL7 Study Retention Policies triggered by HL7 messages received by this HL7 Application. Supplements values specified on Device level."
     ":doc:`hl7OrderScheduledStation` (s)",object,"Scheduled Station selected on MWL HL7 Order Feed. Supplements values specified on Device level."
     ":doc:`hl7OrderSPSStatus` (s)",object,"Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages. Overwrites values specified on Device level."
-
-.. toctree::
-
-    hl7ForwardRule
-    hl7ExportRule
-    upsOnHL7
-    hl7PrefetchRule
-    hl7StudyRetentionPolicy
-    hl7OrderScheduledStation
-    hl7OrderSPSStatus

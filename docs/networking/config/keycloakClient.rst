@@ -28,7 +28,13 @@ Keycloak Client
     "
     .. _dcmKeycloakGrantType:
 
-    :ref:`Keycloak grant type <dcmKeycloakGrantType>`",string,"Keycloak grant type used in token requests. Enumerated values: client_credentials or password.
+    :ref:`Keycloak grant type <dcmKeycloakGrantType>`",string,"Keycloak grant type used in token requests.
+
+    Enumerated values:
+
+    client_credentials
+
+    password
 
     (dcmKeycloakGrantType)"
     "

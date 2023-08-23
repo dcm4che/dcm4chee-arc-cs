@@ -28,7 +28,23 @@ Describes one TCP/UDP port on one network device.
     "
     .. _dicomTLSCipherSuite:
 
-    :ref:`TLS CipherSuites(s) <dicomTLSCipherSuite>`",string,"The TLS CipherSuites that are supported on this particular connection. If not present TLS is disabled Enumerated values: SSL_RSA_WITH_NULL_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, SSL_RSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 or TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384.
+    :ref:`TLS CipherSuites(s) <dicomTLSCipherSuite>`",string,"The TLS CipherSuites that are supported on this particular connection. If not present TLS is disabled
+
+    Enumerated values:
+
+    SSL_RSA_WITH_NULL_SHA
+
+    TLS_RSA_WITH_AES_128_CBC_SHA
+
+    SSL_RSA_WITH_3DES_EDE_CBC_SHA
+
+    TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+
+    TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+
+    TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+
+    TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
 
     (dicomTLSCipherSuite)"
     "

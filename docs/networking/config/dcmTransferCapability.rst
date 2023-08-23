@@ -40,18 +40,46 @@ dcm4che proprietary Transfer Capability Attributes
     "
     .. _dcmStorageConformance:
 
-    :ref:`Storage Conformance <dcmStorageConformance>`",integer,"Indicates level of Conformance of a Storage SCP Enumerated values: 0, 1, 2 or 3.
+    :ref:`Storage Conformance <dcmStorageConformance>`",integer,"Indicates level of Conformance of a Storage SCP
+
+    Enumerated values:
+
+    0
+
+    1
+
+    2
+
+    3
 
     (dcmStorageConformance)"
     "
     .. _dcmDigitalSignatureSupport:
 
-    :ref:`Digital Signature Support <dcmDigitalSignatureSupport>`",integer,"Indicates level of Digital Signature Support of a Storage SCP Enumerated values: 0, 1, 2 or 3.
+    :ref:`Digital Signature Support <dcmDigitalSignatureSupport>`",integer,"Indicates level of Digital Signature Support of a Storage SCP
+
+    Enumerated values:
+
+    0
+
+    1
+
+    2
+
+    3
 
     (dcmDigitalSignatureSupport)"
     "
     .. _dcmDataElementCoercion:
 
-    :ref:`Data Element Coercion <dcmDataElementCoercion>`",integer,"Indicates coercion of Data Elements of a Storage SCP Enumerated values: 0, 1 or 2.
+    :ref:`Data Element Coercion <dcmDataElementCoercion>`",integer,"Indicates coercion of Data Elements of a Storage SCP
+
+    Enumerated values:
+
+    0
+
+    1
+
+    2
 
     (dcmDataElementCoercion)"
