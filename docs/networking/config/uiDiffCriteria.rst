@@ -40,12 +40,30 @@ UI Diff Criteria
     "
     .. _dcmuiDiffGroupButton:
 
-    :ref:`UI Diff Group Button(s) <dcmuiDiffGroupButton>`",string,"UI Diff Group Button Enumerated values: synchronize, export or reject.
+    :ref:`UI Diff Group Button(s) <dcmuiDiffGroupButton>`",string,"UI Diff Group Button
+
+    Enumerated values:
+
+    synchronize
+
+    export
+
+    reject
 
     (dcmuiDiffGroupButton)"
     "
     .. _dcmuiDiffAction:
 
-    :ref:`UI Diff Action(s) <dcmuiDiffAction>`",string,"UI Diff Action Enumerated values: patient-update, study-reject-export, study-reject or study-export.
+    :ref:`UI Diff Action(s) <dcmuiDiffAction>`",string,"UI Diff Action
+
+    Enumerated values:
+
+    patient-update
+
+    study-reject-export
+
+    study-reject
+
+    study-export
 
     (dcmuiDiffAction)"

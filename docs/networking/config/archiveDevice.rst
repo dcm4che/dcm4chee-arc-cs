@@ -536,13 +536,13 @@ DICOM Archive Device related information
     "
     .. _dcmFallbackWadoURIWebAppName:
 
-    :ref:`Fallback WADO-URI Web Application Name <dcmFallbackWadoURIWebAppName>`",string,"Name of external Web Application to redirect WADO URI requests if the requested Object is not available by this archive. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`Fallback WADO-URI Web Application Name <dcmFallbackWadoURIWebAppName>`",string,"Name of external Web Application to redirect WADO-URI requests if the requested Object is not available by this archive. May be overwritten by configured values for particular Archive Network AEs.
 
     (dcmFallbackWadoURIWebAppName)"
     "
     .. _dcmFallbackWadoURIHttpStatusCode:
 
-    :ref:`Fallback Wado URI Http Status Code <dcmFallbackWadoURIHttpStatusCode>`",integer,"HTTP Status code of Redirect Response configured by Fallback WADO-URI Web Application Name. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`Fallback WADO-URI Http Status Code <dcmFallbackWadoURIHttpStatusCode>`",integer,"HTTP Status code of Redirect Response configured by Fallback WADO-URI Web Application Name. May be overwritten by configured values for particular Archive Network AEs.
 
     Enumerated values:
 
@@ -555,6 +555,40 @@ DICOM Archive Device related information
     307
 
     (dcmFallbackWadoURIHttpStatusCode)"
+    "
+    .. _dcmFallbackWadoURIRedirectOnNotFound:
+
+    :ref:`Fallback WADO-URI Redirect On Not Found <dcmFallbackWadoURIRedirectOnNotFound>`",boolean,"Indicates if WADO-URI requests are redirected to configured Fallback WADO-URI Web Application Name even if the object was not found or - if set to false - only if the object is no longer accessible on this archive. May be overwritten by configured values for particular Archive Network AEs.
+
+    (dcmFallbackWadoURIRedirectOnNotFound)"
+    "
+    .. _dcmExternalWadoRSWebAppName:
+
+    :ref:`External WADO-RS Web Application Name <dcmExternalWadoRSWebAppName>`",string,"Name of external Web Application to redirect WADO-RS requests if some of the requested objects are no longer accessible on this archive. May be overwritten by configured values for particular Archive Network AEs.
+
+    (dcmExternalWadoRSWebAppName)"
+    "
+    .. _dcmExternalWadoRSHttpStatusCode:
+
+    :ref:`External WADO-RS Http Status Code <dcmExternalWadoRSHttpStatusCode>`",integer,"HTTP Status code of Redirect Response configured by External WADO-RS Web Application Name. May be overwritten by configured values for particular Archive Network AEs.
+
+    Enumerated values:
+
+    301
+
+    302
+
+    303
+
+    307
+
+    (dcmExternalWadoRSHttpStatusCode)"
+    "
+    .. _dcmExternalWadoRSRedirectOnNotFound:
+
+    :ref:`External WADO-RS Redirect On Not Found <dcmExternalWadoRSRedirectOnNotFound>`",boolean,"Indicates if WADO-RS requests are redirected to configured External WADO-RS Web Application Name even if the requested objects were not found or - if set to false - only if some of the requested objects are no longer accessible on this archive. May be overwritten by configured values for particular Archive Network AEs.
+
+    (dcmExternalWadoRSRedirectOnNotFound)"
     "
     .. _dcmFallbackCMoveSCPCallingAET:
 

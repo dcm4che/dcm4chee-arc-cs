@@ -22,7 +22,13 @@ Web App drop-down list
     "
     .. _dcmuiMode:
 
-    :ref:`List mode <dcmuiMode>`",string,"You have two possibilities how to show the defined list: 1.) On top on the rest of list 'separated' with a line, 2.) Show only those hir defined ( 'exclusive' ). Enumerated values: separated or exclusive.
+    :ref:`List mode <dcmuiMode>`",string,"You have two possibilities how to show the defined list: 1.) On top on the rest of list 'separated' with a line, 2.) Show only those hir defined ( 'exclusive' ).
+
+    Enumerated values:
+
+    separated
+
+    exclusive
 
     (dcmuiMode)"
     "
