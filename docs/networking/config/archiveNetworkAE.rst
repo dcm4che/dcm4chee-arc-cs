@@ -64,21 +64,7 @@ DICOM Archive Network AE related information
     "
     .. _dcmOverwritePolicy:
 
-    :ref:`Overwrite Policy <dcmOverwritePolicy>`",string,"Overwrite Policy for Objects received by this AE. Overwrites value specified on Device level.
-
-    Enumerated values:
-
-    NEVER
-
-    ALWAYS
-
-    SAME_SOURCE
-
-    SAME_SERIES
-
-    SAME_SOURCE_AND_SERIES
-
-    EVEN_WITH_EQUAL_DIGEST
+    :ref:`Overwrite Policy <dcmOverwritePolicy>`",string,"Overwrite Policy for Objects received by this AE. Overwrites value specified on Device level. Enumerated values: NEVER, ALWAYS, SAME_SOURCE, SAME_SERIES, SAME_SOURCE_AND_SERIES or EVEN_WITH_EQUAL_DIGEST.
 
     (dcmOverwritePolicy)"
     "
@@ -90,29 +76,13 @@ DICOM Archive Network AE related information
     "
     .. _dcmAcceptMissingPatientID:
 
-    :ref:`Accept Missing Patient ID <dcmAcceptMissingPatientID>`",string,"Indicates if objects without Patient IDs shall be accepted and if a Patient ID shall be created. Overwrites value specified on Device level.
-
-    Enumerated values:
-
-    YES
-
-    NO
-
-    CREATE
+    :ref:`Accept Missing Patient ID <dcmAcceptMissingPatientID>`",string,"Indicates if objects without Patient IDs shall be accepted and if a Patient ID shall be created. Overwrites value specified on Device level. Enumerated values: YES, NO or CREATE.
 
     (dcmAcceptMissingPatientID)"
     "
     .. _dcmAcceptConflictingPatientID:
 
-    :ref:`Accept Conflicting Patient ID <dcmAcceptConflictingPatientID>`",string,"Indicates if objects with a Patient IDs which differs from the Patient ID in previous received objects of the Study shall be accepted. Overwrites value specified on Device level.
-
-    Enumerated values:
-
-    YES
-
-    NO
-
-    MERGED
+    :ref:`Accept Conflicting Patient ID <dcmAcceptConflictingPatientID>`",string,"Indicates if objects with a Patient IDs which differs from the Patient ID in previous received objects of the Study shall be accepted. Overwrites value specified on Device level. Enumerated values: YES, NO or MERGED.
 
     (dcmAcceptConflictingPatientID)"
     "
@@ -130,49 +100,13 @@ DICOM Archive Network AE related information
     "
     .. _dcmHideSPSWithStatusFromMWL:
 
-    :ref:`Hide SPS with Status by MWL SCP(s) <dcmHideSPSWithStatusFromMWL>`",string,"Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL SCP. Overwrites value specified on Device level.
-
-    Enumerated values:
-
-    SCHEDULED
-
-    ARRIVED
-
-    READY
-
-    STARTED
-
-    DEPARTED
-
-    CANCELED
-
-    DISCONTINUED
-
-    COMPLETED
+    :ref:`Hide SPS with Status by MWL SCP(s) <dcmHideSPSWithStatusFromMWL>`",string,"Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL SCP. Overwrites value specified on Device level. Enumerated values: SCHEDULED, ARRIVED, READY, STARTED, DEPARTED, CANCELED, DISCONTINUED or COMPLETED.
 
     (dcmHideSPSWithStatusFromMWL)"
     "
     .. _dcmHideSPSWithStatusFromMWLRS:
 
-    :ref:`Hide SPS with Status by MWL RS(s) <dcmHideSPSWithStatusFromMWLRS>`",string,"Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL RS. Overwrites value specified on Device level.
-
-    Enumerated values:
-
-    SCHEDULED
-
-    ARRIVED
-
-    READY
-
-    STARTED
-
-    DEPARTED
-
-    CANCELED
-
-    DISCONTINUED
-
-    COMPLETED
+    :ref:`Hide SPS with Status by MWL RS(s) <dcmHideSPSWithStatusFromMWLRS>`",string,"Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL RS. Overwrites value specified on Device level. Enumerated values: SCHEDULED, ARRIVED, READY, STARTED, DEPARTED, CANCELED, DISCONTINUED or COMPLETED.
 
     (dcmHideSPSWithStatusFromMWLRS)"
     "
@@ -196,17 +130,7 @@ DICOM Archive Network AE related information
     "
     .. _dcmEncodeAsJSONNumber:
 
-    :ref:`Encode as JSON Number(s) <dcmEncodeAsJSONNumber>`",string,"VR encoded as JSON Number. If not listed, IS, DS, SV and UV values are encoded as JSON Strings. Supplements values specified on Device level.
-
-    Enumerated values:
-
-    DS
-
-    IS
-
-    SV
-
-    UV
+    :ref:`Encode as JSON Number(s) <dcmEncodeAsJSONNumber>`",string,"VR encoded as JSON Number. If not listed, IS, DS, SV and UV values are encoded as JSON Strings. Supplements values specified on Device level. Enumerated values: DS, IS, SV or UV.
 
     (dcmEncodeAsJSONNumber)"
     "
@@ -218,15 +142,7 @@ DICOM Archive Network AE related information
     "
     .. _dcmUserIdentityNegotiation:
 
-    :ref:`User Identity Negotiation <dcmUserIdentityNegotiation>`",string,"Specifies to ignore User Identity Negotiation Sub-Item in Association requests (=NOT_SUPPORTED), to verify passed Username and password or JSON Web Token are against a Keycloak server (=SUPPORTS), or to reject Association requests without a valid Username and password or JSON Web Token in its Identity Negotiation Sub-Item (=REQUIRED). Overwrites value specified on Device level.
-
-    Enumerated values:
-
-    NOT_SUPPORTED
-
-    SUPPORTS
-
-    REQUIRED
+    :ref:`User Identity Negotiation <dcmUserIdentityNegotiation>`",string,"Specifies to ignore User Identity Negotiation Sub-Item in Association requests (=NOT_SUPPORTED), to verify passed Username and password or JSON Web Token are against a Keycloak server (=SUPPORTS), or to reject Association requests without a valid Username and password or JSON Web Token in its Identity Negotiation Sub-Item (=REQUIRED). Overwrites value specified on Device level. Enumerated values: NOT_SUPPORTED, SUPPORTS or REQUIRED.
 
     (dcmUserIdentityNegotiation)"
     "
@@ -358,15 +274,7 @@ DICOM Archive Network AE related information
     "
     .. _dcmSpanningCFindSCPPolicy:
 
-    :ref:`Spanning C-Find SCP Policy <dcmSpanningCFindSCPPolicy>`",string,"Specifies policy for combining matches returned from configured Spanning C-Find SCP with matching entries from the archive DB. SUPPLEMENT (= returns local matches before additional matches from Spanning C-Find SCP ), MERGE (= returns matches from Spanning C-Find SCP before additional local matches), REPLACE (= returns only matches from Spanning C-Find SCP). Overwrites value specified on Device level.
-
-    Enumerated values:
-
-    SUPPLEMENT
-
-    MERGE
-
-    REPLACE
+    :ref:`Spanning C-Find SCP Policy <dcmSpanningCFindSCPPolicy>`",string,"Specifies policy for combining matches returned from configured Spanning C-Find SCP with matching entries from the archive DB. SUPPLEMENT (= returns local matches before additional matches from Spanning C-Find SCP ), MERGE (= returns matches from Spanning C-Find SCP before additional local matches), REPLACE (= returns only matches from Spanning C-Find SCP). Overwrites value specified on Device level. Enumerated values: SUPPLEMENT, MERGE or REPLACE.
 
     (dcmSpanningCFindSCPPolicy)"
     "
@@ -408,59 +316,15 @@ DICOM Archive Network AE related information
     "
     .. _dcmFallbackWadoURIWebAppName:
 
-    :ref:`Fallback WADO-URI Web Application Name <dcmFallbackWadoURIWebAppName>`",string,"Name of external Web Application to redirect WADO-URI requests if the requested Object is not available by this archive. Overwrites value specified on Device level.
+    :ref:`Fallback WADO-URI Web Application Name <dcmFallbackWadoURIWebAppName>`",string,"Name of external Web Application to redirect WADO URI requests if the requested Object is not available by this archive. Overwrites value specified on Device level.
 
     (dcmFallbackWadoURIWebAppName)"
     "
     .. _dcmFallbackWadoURIHttpStatusCode:
 
-    :ref:`Fallback WADO-URI HTTP Status Code <dcmFallbackWadoURIHttpStatusCode>`",integer,"HTTP Status code of Redirect Response configured by Fallback WADO-URI Web Application Name. Overwrites value specified on Device level.
-
-    Enumerated values:
-
-    301
-
-    302
-
-    303
-
-    307
+    :ref:`Fallback WADO-URI HTTP Status Code <dcmFallbackWadoURIHttpStatusCode>`",integer,"HTTP Status code of Redirect Response configured by Fallback WADO-URI Web Application Name. Overwrites value specified on Device level. Enumerated values: 301, 302, 303 or 307.
 
     (dcmFallbackWadoURIHttpStatusCode)"
-    "
-    .. _dcmFallbackWadoURIRedirectOnNotFound:
-
-    :ref:`Fallback WADO-URI Redirect On Not Found <dcmFallbackWadoURIRedirectOnNotFound>`",boolean,"Indicates if WADO-URI requests are redirected to configured Fallback WADO-URI Web Application Name even if the object was not found or - if set to false - only if the object is no longer accessible on this archive. Overwrites value specified on Device level.
-
-    (dcmFallbackWadoURIRedirectOnNotFound)"
-    "
-    .. _dcmExternalWadoRSWebAppName:
-
-    :ref:`External WADO-RS Web Application Name <dcmExternalWadoRSWebAppName>`",string,"Name of external Web Application to redirect WADO-RS requests if the requested Object is not available by this archive. Overwrites value specified on Device level.
-
-    (dcmExternalWadoRSWebAppName)"
-    "
-    .. _dcmExternalWadoRSHttpStatusCode:
-
-    :ref:`External WADO-RS HTTP Status Code <dcmExternalWadoRSHttpStatusCode>`",integer,"HTTP Status code of Redirect Response configured by External WADO-RS Web Application Name. Overwrites value specified on Device level.
-
-    Enumerated values:
-
-    301
-
-    302
-
-    303
-
-    307
-
-    (dcmExternalWadoRSHttpStatusCode)"
-    "
-    .. _dcmExternalWadoRSRedirectOnNotFound:
-
-    :ref:`External WADO-RS Redirect On Not Found <dcmExternalWadoRSRedirectOnNotFound>`",boolean,"Indicates if WADO-RS requests are redirected to configured External WADO-RS Web Application Name even if the requested objects were not found or - if set to false - only if some of the requested objects are no longer accessible on this archive. Overwrites value specified on Device level.
-
-    (dcmExternalWadoRSRedirectOnNotFound)"
     "
     .. _dcmFallbackCMoveSCPCallingAET:
 
@@ -512,17 +376,7 @@ DICOM Archive Network AE related information
     "
     .. _dcmAllowRejectionForDataRetentionPolicyExpired:
 
-    :ref:`Allow Rejection For Data Retention Policy Expired <dcmAllowRejectionForDataRetentionPolicyExpired>`",string,"Allow Rejection For Data Retention Policy Expired. Overwrites value specified on Device level.
-
-    Enumerated values:
-
-    NEVER
-
-    ALWAYS
-
-    EXPIRED_UNSET
-
-    ONLY_EXPIRED
+    :ref:`Allow Rejection For Data Retention Policy Expired <dcmAllowRejectionForDataRetentionPolicyExpired>`",string,"Allow Rejection For Data Retention Policy Expired. Overwrites value specified on Device level. Enumerated values: NEVER, ALWAYS, EXPIRED_UNSET or ONLY_EXPIRED.
 
     (dcmAllowRejectionForDataRetentionPolicyExpired)"
     "
@@ -534,27 +388,13 @@ DICOM Archive Network AE related information
     "
     .. _dcmAllowDeleteStudyPermanently:
 
-    :ref:`Allow Delete Study permanently <dcmAllowDeleteStudyPermanently>`",string,"Allow to delete Study permanently. REJECTED = only already rejected Studies. Overwrites value specified on Device level.
-
-    Enumerated values:
-
-    ALWAYS
-
-    REJECTED
+    :ref:`Allow Delete Study permanently <dcmAllowDeleteStudyPermanently>`",string,"Allow to delete Study permanently. REJECTED = only already rejected Studies. Overwrites value specified on Device level. Enumerated values: ALWAYS or REJECTED.
 
     (dcmAllowDeleteStudyPermanently)"
     "
     .. _dcmAllowDeletePatient:
 
-    :ref:`Allow Delete Patient <dcmAllowDeletePatient>`",string,"Allow permanent deletion of Patients. Enumerated values: NEVER, ALWAYS, WITHOUT_STUDIES. Overwrites value specified on Device level.
-
-    Enumerated values:
-
-    NEVER
-
-    ALWAYS
-
-    WITHOUT_STUDIES
+    :ref:`Allow Delete Patient <dcmAllowDeletePatient>`",string,"Allow permanent deletion of Patients. Enumerated values: NEVER, ALWAYS, WITHOUT_STUDIES. Overwrites value specified on Device level. Enumerated values: NEVER, ALWAYS or WITHOUT_STUDIES.
 
     (dcmAllowDeletePatient)"
     "
@@ -614,57 +454,19 @@ DICOM Archive Network AE related information
     "
     .. _dcmCopyMoveUpdatePolicy:
 
-    :ref:`Copy Move Update Policy <dcmCopyMoveUpdatePolicy>`",string,"Specifies update policy for attributes of the destination Study on Copy/Move of Instances from another Study. If absent, the attributes will not be updated. Overwrites value specified on Device level.
-
-    Enumerated values:
-
-    PRESERVE
-
-    SUPPLEMENT
-
-    MERGE
-
-    OVERWRITE
-
-    REPLACE
+    :ref:`Copy Move Update Policy <dcmCopyMoveUpdatePolicy>`",string,"Specifies update policy for attributes of the destination Study on Copy/Move of Instances from another Study. If absent, the attributes will not be updated. Overwrites value specified on Device level. Enumerated values: PRESERVE, SUPPLEMENT, MERGE, OVERWRITE or REPLACE.
 
     (dcmCopyMoveUpdatePolicy)"
     "
     .. _dcmLinkMWLEntryUpdatePolicy:
 
-    :ref:`Link MWL Entry Update Policy <dcmLinkMWLEntryUpdatePolicy>`",string,"Specifies update policy for Study attributes on Link of Instances of another Study with a MWL Entry referring an existing Study. Overwrites value specified on Device level.
-
-    Enumerated values:
-
-    PRESERVE
-
-    SUPPLEMENT
-
-    MERGE
-
-    OVERWRITE
-
-    REPLACE
+    :ref:`Link MWL Entry Update Policy <dcmLinkMWLEntryUpdatePolicy>`",string,"Specifies update policy for Study attributes on Link of Instances of another Study with a MWL Entry referring an existing Study. Overwrites value specified on Device level. Enumerated values: PRESERVE, SUPPLEMENT, MERGE, OVERWRITE or REPLACE.
 
     (dcmLinkMWLEntryUpdatePolicy)"
     "
     .. _dcmStorageVerificationPolicy:
 
-    :ref:`Storage Verification Policy <dcmStorageVerificationPolicy>`",string,"DB_RECORD_EXISTS: only check for existence of DB records, OBJECT_EXISTS: check if object exists on Storage System, OBJECT_SIZE: check size of object on Storage System, OBJECT_FETCH: fetch object from Storage System), OBJECT_CHECKSUM: recalculate checksum of object on Storage System, S3_MD5SUM: check MD5 checksum of object on S3 Storage System. Overwrites value specified on Device level.
-
-    Enumerated values:
-
-    DB_RECORD_EXISTS
-
-    OBJECT_EXISTS
-
-    OBJECT_SIZE
-
-    OBJECT_FETCH
-
-    OBJECT_CHECKSUM
-
-    S3_MD5SUM
+    :ref:`Storage Verification Policy <dcmStorageVerificationPolicy>`",string,"DB_RECORD_EXISTS: only check for existence of DB records, OBJECT_EXISTS: check if object exists on Storage System, OBJECT_SIZE: check size of object on Storage System, OBJECT_FETCH: fetch object from Storage System), OBJECT_CHECKSUM: recalculate checksum of object on Storage System, S3_MD5SUM: check MD5 checksum of object on S3 Storage System. Overwrites value specified on Device level. Enumerated values: DB_RECORD_EXISTS, OBJECT_EXISTS, OBJECT_SIZE, OBJECT_FETCH, OBJECT_CHECKSUM or S3_MD5SUM.
 
     (dcmStorageVerificationPolicy)"
     "
@@ -760,13 +562,7 @@ DICOM Archive Network AE related information
     "
     .. _hl7PSUMessageType:
 
-    :ref:`HL7 Procedure Status Update Message Type <hl7PSUMessageType>`",string,"Message Type of HL7 Procedure Status Update message. Overwrites value specified on Device level.
-
-    Enumerated values:
-
-    OMG_O19
-
-    ORU_R01
+    :ref:`HL7 Procedure Status Update Message Type <hl7PSUMessageType>`",string,"Message Type of HL7 Procedure Status Update message. Overwrites value specified on Device level. Enumerated values: OMG_O19 or ORU_R01.
 
     (hl7PSUMessageType)"
     "
@@ -784,13 +580,7 @@ DICOM Archive Network AE related information
     "
     .. _hl7PSUMWLMatchingKey:
 
-    :ref:`HL7 Procedure Status Update MWL Matching Key <hl7PSUMWLMatchingKey>`",string,"Specifies attribute of received object to lookup MWL Item whose status is to be updated to COMPLETED. Only applicable is 'HL7 Procedure Status Update MWL' is configured as or implicitly set to true. Overwrites value specified on Device level.
-
-    Enumerated values:
-
-    AccessionNumber
-
-    StudyInstanceUID
+    :ref:`HL7 Procedure Status Update MWL Matching Key <hl7PSUMWLMatchingKey>`",string,"Specifies attribute of received object to lookup MWL Item whose status is to be updated to COMPLETED. Only applicable is 'HL7 Procedure Status Update MWL' is configured as or implicitly set to true. Overwrites value specified on Device level. Enumerated values: AccessionNumber or StudyInstanceUID.
 
     (hl7PSUMWLMatchingKey)"
     "

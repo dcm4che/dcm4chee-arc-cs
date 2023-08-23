@@ -34,13 +34,7 @@ Study Table Columns
     "
     .. _dcmuiValueType:
 
-    :ref:`Type of the value <dcmuiValueType>`",string,"Type of the column how to get the value, default should be 'value'
-
-    Enumerated values:
-
-    value
-
-    pipe
+    :ref:`Type of the value <dcmuiValueType>`",string,"Type of the column how to get the value, default should be 'value' Enumerated values: value or pipe.
 
     (dcmuiValueType)"
     "

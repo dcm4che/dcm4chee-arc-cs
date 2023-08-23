@@ -22,13 +22,7 @@ Each transfer capability specifies the SOP class that the Network AE can support
     "
     .. _dicomTransferRole:
 
-    :ref:`DICOM Transfer Role <dicomTransferRole>`",string,"DICOM Transfer Role.
-
-    Enumerated values:
-
-    SCP
-
-    SCU
+    :ref:`DICOM Transfer Role <dicomTransferRole>`",string,"DICOM Transfer Role. Enumerated values: SCP or SCU.
 
     (dicomTransferRole)"
     "

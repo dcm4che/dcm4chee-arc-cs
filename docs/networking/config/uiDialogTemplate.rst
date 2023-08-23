@@ -28,12 +28,6 @@ Define Create Dialog Template
     "
     .. _dcmuiDialog:
 
-    :ref:`Dialog Function <dcmuiDialog>`",string,"Specifies the function where this Dialog Template shall get applied
-
-    Enumerated values:
-
-    mwl
-
-    patient
+    :ref:`Dialog Function <dcmuiDialog>`",string,"Specifies the function where this Dialog Template shall get applied Enumerated values: mwl or patient.
 
     (dcmuiDialog)"

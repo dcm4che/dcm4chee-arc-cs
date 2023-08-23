@@ -80,26 +80,6 @@ UI Configuration
     :ref:`MWL Worklist Label(s) <dcmuiMWLWorklistLabel>`",string,"Selectable values for MWL Worklist Label
 
     (dcmuiMWLWorklistLabel)"
-    "
-    .. _dcmuiInstitutionNameFilterType:
-
-    :ref:`Institution Name Filter Type <dcmuiInstitutionNameFilterType>`",string,"This will define how the Institution Name filter used in the Navigation Page should be displayed and if there should be a prefilled dropdown and where to get those data from
-
-    Enumerated values:
-
-    simple_filed (= Simple input field (= Simple input field)
-
-    ui_config (= Dropdown by using this config ( See next field 'Institution Names' ) (= Dropdown by using this config)
-
-    db (= Dropdown will be prefilled with the strings coming by calling the service '../institutions' (= Dropdown by querying the Database)
-
-    (dcmuiInstitutionNameFilterType)"
-    "
-    .. _dcmuiInstitutionName:
-
-    :ref:`Institution Names(s) <dcmuiInstitutionName>`",string,"This will be used in combination with the previous field 'Institution Name Filter Type' to prefill the Dropdown of the Filter Institution Names in the Navigation Page
-
-    (dcmuiInstitutionName)"
     ":doc:`uiAet` (s)",object,"Define which AETs should be visible in the drop-down lists in the UI"
     ":doc:`uiWebApp` (s)",object,"Define which WebApps should be visible on the top of the drop-down list in the UI"
     ":doc:`uiPermission` (s)",object,"Permission"

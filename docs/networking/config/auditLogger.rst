@@ -46,153 +46,31 @@ Audit Logger related information
     "
     .. _dcmAuditFacility:
 
-    :ref:`Syslog Facility <dcmAuditFacility>`",string,"RFC 5424 Syslog Facility string value of audit message.
-
-    Enumerated values:
-
-    kern
-
-    user
-
-    mail
-
-    daemon
-
-    auth
-
-    syslog
-
-    lpr
-
-    news
-
-    uucp
-
-    cron
-
-    authpriv
-
-    ftp
-
-    ntp
-
-    audit
-
-    console
-
-    cron2
-
-    local0
-
-    local1
-
-    local2
-
-    local3
-
-    local4
-
-    local5
-
-    local6
-
-    local7
+    :ref:`Syslog Facility <dcmAuditFacility>`",string,"RFC 5424 Syslog Facility string value of audit message. Enumerated values: kern, user, mail, daemon, auth, syslog, lpr, news, uucp, cron, authpriv, ftp, ntp, audit, console, cron2, local0, local1, local2, local3, local4, local5, local6 or local7.
 
     (dcmAuditFacility)"
     "
     .. _dcmAuditSuccessSeverity:
 
-    :ref:`Syslog Severity - Success <dcmAuditSuccessSeverity>`",string,"RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 0 (Success).
-
-    Enumerated values:
-
-    emerg
-
-    alert
-
-    crit
-
-    err
-
-    warning
-
-    notice
-
-    info
-
-    debug
+    :ref:`Syslog Severity - Success <dcmAuditSuccessSeverity>`",string,"RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 0 (Success). Enumerated values: emerg, alert, crit, err, warning, notice, info or debug.
 
     (dcmAuditSuccessSeverity)"
     "
     .. _dcmAuditMinorFailureSeverity:
 
-    :ref:`Syslog Severity - Failure <dcmAuditMinorFailureSeverity>`",string,"RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 4 (Minor failure).
-
-    Enumerated values:
-
-    emerg
-
-    alert
-
-    crit
-
-    err
-
-    warning
-
-    notice
-
-    info
-
-    debug
+    :ref:`Syslog Severity - Failure <dcmAuditMinorFailureSeverity>`",string,"RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 4 (Minor failure). Enumerated values: emerg, alert, crit, err, warning, notice, info or debug.
 
     (dcmAuditMinorFailureSeverity)"
     "
     .. _dcmAuditSeriousFailureSeverity:
 
-    :ref:`Syslog Severity - Failure <dcmAuditSeriousFailureSeverity>`",string,"RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 8 (Serious failure).
-
-    Enumerated values:
-
-    emerg
-
-    alert
-
-    crit
-
-    err
-
-    warning
-
-    notice
-
-    info
-
-    debug
+    :ref:`Syslog Severity - Failure <dcmAuditSeriousFailureSeverity>`",string,"RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 8 (Serious failure). Enumerated values: emerg, alert, crit, err, warning, notice, info or debug.
 
     (dcmAuditSeriousFailureSeverity)"
     "
     .. _dcmAuditMajorFailureSeverity:
 
-    :ref:`Syslog Severity - Major <dcmAuditMajorFailureSeverity>`",string,"RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 12 (Major failure).
-
-    Enumerated values:
-
-    emerg
-
-    alert
-
-    crit
-
-    err
-
-    warning
-
-    notice
-
-    info
-
-    debug
+    :ref:`Syslog Severity - Major <dcmAuditMajorFailureSeverity>`",string,"RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 12 (Major failure). Enumerated values: emerg, alert, crit, err, warning, notice, info or debug.
 
     (dcmAuditMajorFailureSeverity)"
     "

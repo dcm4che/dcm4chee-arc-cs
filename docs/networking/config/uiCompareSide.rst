@@ -22,13 +22,7 @@ Compare Side
     "
     .. _dcmuiCompareSideOrder:
 
-    :ref:`Order <dcmuiCompareSideOrder>`",integer,"Order of the Compare side
-
-    Enumerated values:
-
-    0
-
-    1
+    :ref:`Order <dcmuiCompareSideOrder>`",integer,"Order of the Compare side Enumerated values: 0 or 1.
 
     (dcmuiCompareSideOrder)"
     "

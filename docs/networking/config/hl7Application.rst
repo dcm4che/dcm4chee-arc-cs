@@ -52,25 +52,7 @@ HL7 Application information
     "
     .. _hl7OptionalMSHField:
 
-    :ref:`Optional MSH Field(s) <hl7OptionalMSHField>`",integer,"Accept HL7 Messages with missing values for specified MSH fields, even they are required according to `IHE RAD TF Vol 2 Message Control requirements <https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf#page=43>`_.
-
-    Enumerated values:
-
-    3
-
-    4
-
-    5
-
-    6
-
-    7
-
-    10
-
-    11
-
-    12
+    :ref:`Optional MSH Field(s) <hl7OptionalMSHField>`",integer,"Accept HL7 Messages with missing values for specified MSH fields, even they are required according to `IHE RAD TF Vol 2 Message Control requirements <https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf#page=43>`_. Enumerated values: 3, 4, 5, 6, 7, 10, 11 or 12.
 
     (hl7OptionalMSHField)"
     "
