@@ -98,6 +98,8 @@ RESTful Forward Rule
 
     UpdateMWL
 
+    UpdateMWLStatus
+
     DeleteMWL
 
     (dcmRSOperation)"
