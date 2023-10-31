@@ -60,7 +60,7 @@ Storage Descriptor
     "
     .. _dcmCheckMountFilePath:
 
-    :ref:`Check Mount File Path <dcmCheckMountFilePath>`",string,"Indicates to check if a mounted file system did not get detached from its mount point, by specifying the path of a file relative to the path of the Storage URI, which is shadowed by the mount, so its visibility signals that the mount failed. If the file becomes accessible, the write operation to the storage fails, preventing to store objects on the file system of the mount point directory.
+    :ref:`Check Mount File Path <dcmCheckMountFilePath>`",string,"Indicates to check if a mounted file system did not get detached from its mount point, by specifying the path of a file relative to the path of the Storage URI, which is shadowed by the mount, so its visibility signals that the mount failed. If the file becomes visible, the write operation to the storage fails, preventing to store objects on the file system of the mount point directory.
 
     (dcmCheckMountFilePath)"
     "
