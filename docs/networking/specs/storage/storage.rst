@@ -225,6 +225,9 @@ The list of accepted Transfer Syntaxes for each accepted Abstract Syntax - as th
    "JPEG-LS Lossy (Near-Lossless)", "1.2.840.10008.1.2.4.81"
    "JPEG 2000 (Lossless Only)", "1.2.840.10008.1.2.4.90"
    "JPEG 2000", "1.2.840.10008.1.2.4.91"
+   "High-Throughput JPEG 2000 (Lossless Only)", "1.2.840.10008.1.2.4.201"
+   "High-Throughput JPEG 2000 with RPCL (Lossless Only)", "1.2.840.10008.1.2.4.202"
+   "High-Throughput JPEG 2000", "1.2.840.10008.1.2.4.203"
    "RLE Lossless", "1.2.840.10008.1.2.5"
 
 .. csv-table:: Transfer Syntax for Video Storage SOP Classes
