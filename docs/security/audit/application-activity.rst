@@ -11,7 +11,7 @@ Message Structure
 
 .. csv-table:: Application Activity Message
    :name: application-activity
-   :widths: 15, 20, 2, 45, 10
+   :widths: 15, 15, 2, 45, 15
    :header: Real World Entities, Field Name, Opt, Value Constraints, Note
 
    Event, Event ID, M, "| EV (110100, DCM, 'Application Activity')",
