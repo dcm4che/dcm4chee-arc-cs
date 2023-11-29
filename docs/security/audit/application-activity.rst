@@ -18,9 +18,6 @@ Message Structure
    , EventActionCode, M, E (= Execute),
    , EventDateTime, M, , The time at which the event occurred
    , EventOutcomeIndicator, M, 0 (= Success),
-   , EventTypeCode, M, "| DT (110120, DCM, 'Application Start')
-   | DT (110121, DCM, 'Application Stop')", "| Applicable on startup of archive
-   | Applicable on shutdown of archive"
 
 Sample Message
 --------------
