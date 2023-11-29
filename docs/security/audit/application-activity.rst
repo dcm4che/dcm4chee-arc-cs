@@ -41,11 +41,35 @@ Message Structure
    , UserTypeCode, U, 2 (= Application),
    , AlternativeUserID, MC, , Process ID of Audit logger
    , UserIsRequestor, M, "| true
+   | OR
    | false",  "| - Application **startup / shutdown** of archive by a **process**
    |
    | - Applicable on **startup / shutdown** of archive using **REST service**"
    , RoleIDCode, M, "| EV (110150, DCM, 'Application')",
    , NetworkAccessPointID, U, , Hostname/IP Address of the connection referenced by Audit logger
+   , NetworkAccessPointTypeCode, U, "| 1 (= Machine name)
+   | OR
+   | 2 (= IP Address)", "| - Applicable if NetworkAccessPointID is a **hostname**
+   |
+   | - Applicable if NetworkAccessPointID is an **IP Address**"
+   "| Active Participant:
+   | Persons and or processes that started the Application (0..N)
+   | Applicable only if archive **startup / shutdown** done using **REST service**", UserID, M, "| User Name
+   | Remote IP Address", "| - Applicable for **Secured version of archive**
+   |
+   | - Applicable for **Unsecured version of archive**"
+   , UserIDTypeCode, U, "| EV (113871, DCM, 'Person ID')
+   | EV (110182, DCM, 'Node ID')", "| - Applicable for **Secured version of archive**
+   |
+   | - Applicable for **Unsecured version of archive**"
+   , UserTypeCode, U, "| 1 (= Person)
+   | OR
+   | 2 (= Application)", "| - Applicable for **Secured version of archive**
+   |
+   | - Applicable for **Unsecured version of archive**"
+   , UserIsRequestor, M, true,
+   , RoleIDCode, M, "| EV (110151, DCM, 'Application Launcher')",
+   , NetworkAccessPointID, U, , Hostname/IP Address of calling host
    , NetworkAccessPointTypeCode, U, "| 1 (= Machine name)
    | OR
    | 2 (= IP Address)", "| - Applicable if NetworkAccessPointID is a **hostname**
