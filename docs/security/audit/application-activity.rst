@@ -11,13 +11,35 @@ Message Structure
 
 .. csv-table:: Application Activity Message
    :name: application-activity
-   :widths: 25, 30, 5, 40, 10
+   :widths: 15, 30, 5, 40, 10
    :header: Real World Entities, Field Name, Opt, Value Constraints, Note
 
-   Event, EventID, M, EV (110100, DCM, 'Application Activity'),
+   Event, EventID, M, "| EV (110100, DCM, 'Application Activity')",
    , EventActionCode, M, E (= Execute),
    , EventDateTime, M, , The time at which the event occurred
    , EventOutcomeIndicator, M, 0 (= Success),
+   , EventTypeCode, M, "| DT (110120, DCM, 'Application Start')
+   | DT (110121, DCM, 'Application Stop')", "| Applicable on startup of archive
+   | Applicable on shutdown of archive"
+   "| Active Participant:
+   | Application started (1)", UserID, M, "| Device Name of archive
+   | `Start Archive <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/CTRL-RS/start>`_ request URL
+   | `Stop Archive <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/CTRL-RS/stop>`_ request URL", "| Applicable on startup / shutdown of archive by a process
+   | Applicable on startup of archive using REST service
+   | Applicable on shutdown of archive using REST service"
+   , UserIDTypeCode, U, "| EV (113877, DCM, 'Device Name')
+   | EV (12, RFC-3881, 'URI')", "| Application startup/shutdown of archive by a process
+   | Applicable on startup / shutdown of archive using REST service"
+   , UserTypeCode, U, 2 (= Application),
+   , AlternativeUserID, MC, , Process ID of Audit logger
+   , UserIsRequestor, M, "| true
+   | false",  "| Application startup/shutdown of archive by a process
+   | Applicable on startup / shutdown of archive using REST service"
+   , RoleIDCode, M, "| EV (110150, DCM, 'Application')",
+   , NetworkAccessPointID, U, , Hostname/IP Address of the connection referenced by Audit logger
+   , NetworkAccessPointTypeCode, U, "| 1 (= Machine name)
+   | 2 (= IP Address)", "| Applicable if NetworkAccessPointID is a hostname
+   | Applicable if NetworkAccessPointID is an IP Address"
 
 Sample Message
 --------------
