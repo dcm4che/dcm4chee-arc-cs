@@ -14,17 +14,17 @@ Message Structure
    :widths: 15, 20, 2, 45, 10
    :header: Real World Entities, Field Name, Opt, Value Constraints, Note
 
-   Event, EventID, M, "| EV (110100, DCM, 'Application Activity')",
-   , EventActionCode, M, E (= Execute),
-   , EventDateTime, M, , The time at which the event occurred
-   , EventOutcomeIndicator, M, 0 (= Success),
-   , EventTypeCode, M, "| DT (110120, DCM, 'Application Start')
+   Event, Event ID, M, "| EV (110100, DCM, 'Application Activity')",
+   , Event Action Code, M, E (= Execute),
+   , Event Date Time, M, , The time at which the event occurred
+   , Event Outcome Indicator, M, 0 (= Success),
+   , Event Type Code, M, "| DT (110120, DCM, 'Application Start')
    | OR
    | DT (110121, DCM, 'Application Stop')", "| - Applicable on **startup** of archive.
    |
    | - Applicable on **shutdown** of archive"
    "| Active Participant:
-   | Application started (1)", UserID, M, "| Device Name of archive
+   | Application started (1)", User ID, M, "| Device Name of archive
    | OR
    | `Start Archive <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/CTRL-RS/start>`_ request URL
    | OR
@@ -33,44 +33,45 @@ Message Structure
    | - Applicable on **startup** of archive using **REST service**
    |
    | - Applicable on **shutdown** of archive using **REST service**"
-   , UserIDTypeCode, U, "| EV (113877, DCM, 'Device Name')
+   , User ID Type Code, U, "| EV (113877, DCM, 'Device Name')
    | OR
    | EV (12, RFC-3881, 'URI')", "| - Application startup/shutdown of archive by a process
    |
    | - Applicable on startup / shutdown of archive using REST service"
-   , UserTypeCode, U, 2 (= Application),
-   , AlternativeUserID, MC, , Process ID of Audit logger
-   , UserIsRequestor, M, "| true
+   , User Type Code, U, 2 (= Application),
+   , Alternative User ID, MC, , Process ID of Audit logger
+   , User Is Requestor, M, "| true
    | OR
    | false",  "| - Application **startup / shutdown** of archive by a **process**
    |
    | - Applicable on **startup / shutdown** of archive using **REST service**"
-   , RoleIDCode, M, "| EV (110150, DCM, 'Application')",
-   , NetworkAccessPointID, U, , Hostname/IP Address of the connection referenced by Audit logger
-   , NetworkAccessPointTypeCode, U, "| 1 (= Machine name)
+   , Role ID Code, M, "| EV (110150, DCM, 'Application')",
+   , Network Access Point ID, U, , Hostname/IP Address of the connection referenced by Audit logger
+   , Network Access Point Type Code, U, "| 1 (= Machine name)
    | OR
    | 2 (= IP Address)", "| - Applicable if NetworkAccessPointID is a **hostname**
    |
    | - Applicable if NetworkAccessPointID is an **IP Address**"
    "| Active Participant:
    | Persons and or processes that started the Application (0..N)
-   | Applicable only if archive **startup / shutdown** done using **REST service**", UserID, M, "| User Name
+   |
+   | Applicable only if archive **startup / shutdown** done using **REST service**", User ID, M, "| User Name
    | Remote IP Address", "| - Applicable for **Secured version of archive**
    |
    | - Applicable for **Unsecured version of archive**"
-   , UserIDTypeCode, U, "| EV (113871, DCM, 'Person ID')
+   , User ID Type Code, U, "| EV (113871, DCM, 'Person ID')
    | EV (110182, DCM, 'Node ID')", "| - Applicable for **Secured version of archive**
    |
    | - Applicable for **Unsecured version of archive**"
-   , UserTypeCode, U, "| 1 (= Person)
+   , User Type Code, U, "| 1 (= Person)
    | OR
    | 2 (= Application)", "| - Applicable for **Secured version of archive**
    |
    | - Applicable for **Unsecured version of archive**"
-   , UserIsRequestor, M, true,
+   , User Is Requestor, M, true,
    , RoleIDCode, M, "| EV (110151, DCM, 'Application Launcher')",
-   , NetworkAccessPointID, U, , Hostname/IP Address of calling host
-   , NetworkAccessPointTypeCode, U, "| 1 (= Machine name)
+   , Network Access Point ID, U, , Hostname/IP Address of calling host
+   , Network Access Point Type Code, U, "| 1 (= Machine name)
    | OR
    | 2 (= IP Address)", "| - Applicable if NetworkAccessPointID is a **hostname**
    |
