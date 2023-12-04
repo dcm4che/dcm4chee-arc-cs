@@ -128,10 +128,10 @@ Message Structure
    ParticipantObjectName, U, Patient Name
 
 
-Sample Message
---------------
+Sample Messages
+---------------
 
-Study rejected completely using unsecured archive UI
+Study completely rejected using unsecured archive UI
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: xml
@@ -166,7 +166,7 @@ Study rejected completely using unsecured archive UI
     	</ParticipantObjectIdentification>
     </AuditMessage>
 
-Study rejected completely on store of rejection note by STOW-RS REST Services
+Study completely rejected on store of rejection note by STOW-RS REST Services
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 `Store over Web of DICOM Objects <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/STOW-RS>`_ REST Services
@@ -203,7 +203,7 @@ Study rejected completely on store of rejection note by STOW-RS REST Services
     	</ParticipantObjectIdentification>
     </AuditMessage>
 
-Study rejected completely on store of rejection note over DICOM C-Store
+Study completely rejected on store of rejection note over DICOM C-Store
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: xml
