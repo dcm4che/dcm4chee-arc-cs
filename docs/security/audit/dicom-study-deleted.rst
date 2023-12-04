@@ -10,23 +10,24 @@ Trigger Events
 This message is emitted by the archive when :
 
 - Study in a **local archive** is **completely rejected** using :
-  - Archive UI : Reject Study function (*Navigation page Studies tab with local archive QIDO_RS web application*)
-  - `Reject Study <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/IOCM-RS/RejectStudy>`_ REST Service invoked by an external client
+   - Archive UI : Reject Study function (*Navigation page Studies tab with local archive QIDO_RS web application*)
+   - `Reject Study <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/IOCM-RS/RejectStudy>`_ REST Service invoked by an external client
 
 - Study in a **local archive** is **completely rejected** on receive of **Rejection Notes Key Objects** using `RAD-66 <http://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf#page=40>`_ transaction, over :
-  - DICOM C-Store
-  - `Store over Web of DICOM Objects <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/STOW-RS>`_ REST Services
+   - DICOM C-Store
+   - `Store over Web of DICOM Objects <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/STOW-RS>`_ REST Services
 
 - Expired study is **completely rejected** by Reject Expired Studies Scheduler
 - Previous study is **completely rejected** on subsequent receive of objects having same SOP Instance UID but different Study/Series Instance UIDs
 - Study in an **external archive** is **completely rejected** using :
-  - Archive UI : Reject Study function (*Navigation page Studies tab with external archive QIDO_RS web application*)
-  - `Reject Study from StoreSCP <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/IOCM-RS/RejectStudyStoreSCP>`_ and `Query FindSCP Reject Study from StoreSCP <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/IOCM-RS/QueryFindSCPRejectStudyStoreSCP>`_ REST Services
+   - Archive UI : Reject Study function (*Navigation page Studies tab with external archive QIDO_RS web application*)
+   - `Reject Study from StoreSCP <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/IOCM-RS/RejectStudyStoreSCP>`_ and `Query FindSCP Reject Study from StoreSCP <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/IOCM-RS/QueryFindSCPRejectStudyStoreSCP>`_ REST Services
 
 - Study in a **local archive** is **completely deleted** by :
-  - Purge Storage Scheduler
-  - `Delete Study Permanently <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/openapi.json#/IOCM-RS/DeleteStudy>`_ REST Service invoked by an external client or using archive UI
-  - `Delete Patient Permanently <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/PAM-RS/DeletePatient>`_ REST Service invoked by an external client or using archive UI
+   - Purge Storage Scheduler
+   - `Delete Study Permanently <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/openapi.json#/IOCM-RS/DeleteStudy>`_ REST Service invoked by an external client or using archive UI
+   - `Delete Patient Permanently <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/PAM-RS/DeletePatient>`_ REST Service invoked by an external client or using archive UI
+
 - Study `deleted on reimport <https://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/openapi.json#/IOCM-RS/ReimportStudy>`_
 
 Message Structure
@@ -57,7 +58,7 @@ Message Structure
    |
    | - Applicable only if study is **completely deleted** and an **exception** is caught
    |
-   |  - Applicable only if study is **completely deleted successfully**"
+   | - Applicable only if study is **completely deleted successfully**"
    Active Participant - Archive, User ID, M, "| Device Name of archive
    | OR
    | REST Service Request URL
@@ -149,97 +150,6 @@ Message Structure
    , Participant Object Type Code Role, M, 1 (= Patient),
    , Participant Object ID Type Code, M, "| EV (2, RFC-3881, 'Patient Number')",
    , Participant Object Name, U, The patient name,
-
-.. csv-table:: Entities in DICOM Study Deleted Audit Message
-
-    :ref:`event-identification-study-deleted`
-    :ref:`active-participant-archive-study-deleted`
-    :ref:`active-participant-initiator-study-deleted`, Not present in Study Deleted by Scheduler case
-    :ref:`audit-general-message-audit-source`
-    :ref:`participant-object-study-study-deleted`
-    :ref:`participant-object-patient-study-deleted`
-
-.. csv-table:: Event Identification
-   :name: event-identification-study-deleted
-   :widths: 30, 5, 65
-   :header: Field Name, Opt, Description
-
-   EventID, M, "| EV (110105, DCM, 'DICOM Study Deleted')"
-   EventActionCode, M, | Delete ⇒ 'D'
-   EventDateTime, M, | The time at which the event occurred
-   EventOutcomeIndicator, M, "| Success ⇒ '0'
-   | Minor failure ⇒ '4'"
-   EventOutcomeDescription, M, "| Success ⇒ 'Rejection Code Meaning'
-   | Minor failure case ⇒ 'Rejection Code Meaning + Error/Exception message'"
-
-.. csv-table:: Active Participant : Archive application
-   :name: active-participant-archive-study-deleted
-   :widths: 30, 5, 65
-   :header: Field Name, Opt, Description
-
-   UserID, M, "| Rejection triggered using association ⇒ 'Application entity title of Archive Device used in the association'
-   | Rejection triggered using archive UI ⇒ 'Invoked URL'
-   | Permanent Deletion of Study using RESTful service ⇒ 'Invoked URL'
-   | Permanent Deletion of Study by scheduler ⇒ 'Archive device name'"
-   UserIDTypeCode, U, "| Rejection triggered using association ⇒ EV (110119, DCM, 'Station AE Title')
-   | Rejection triggered from UI ⇒ EV (12, RFC-3881, 'URI')
-   | Permanent Deletion of Study using RESTful service ⇒ EV (12, RFC-3881, 'URI')
-   | Permanent Deletion of Study by scheduler ⇒ EV (113877, DCM, 'Device Name')"
-   UserTypeCode, U, | Application ⇒ '2'
-   AlternativeUserID, MC, | Process ID of Audit logger
-   UserIsRequestor, M, "| Permanent Deletion of Study by scheduler ⇒ 'true'
-   | All other cases ⇒ 'false'"
-   NetworkAccessPointID, U, | Hostname/IP Address of the connection referenced by Audit logger
-   NetworkAccessPointTypeCode, U, "| NetworkAccessPointID is host name ⇒ '1'
-   | NetworkAccessPointID is an IP address ⇒ '2'"
-
-.. csv-table:: Active Participant : Initiator
-   :name: active-participant-initiator-study-deleted
-   :widths: 30, 5, 65
-   :header: Field Name, Opt, Description
-
-   UserID, M, "| Rejection triggered using association ⇒ 'Application entity title of initiating system'
-   | Rejection triggered using UI : Secured Archive ⇒ 'User name of logged in user'
-   | Rejection triggered using UI : Unsecured archive ⇒ 'Remote IP address'
-   | Permanent Deletion using RESTful service : Secured archive ⇒ 'User name of logged in user'
-   | Permanent Deletion using RESTful service : Unsecured archive ⇒ 'Remote IP address'"
-   UserIDTypeCode, U, "| Rejection triggered using archive UI (Secured archive) ⇒ EV (113871, DCM, 'Person ID')
-   | Rejection triggered using archive UI (Unsecured archive) ⇒ EV (110182, DCM, 'Node ID')
-   | Rejection triggered using association ⇒ EV (110119, DCM, 'Station AE Title')
-   | Permanent Deletion using RESTful service : Secured archive ⇒ EV (113871, DCM, 'Person ID')
-   | Permanent Deletion using RESTful service : Unsecured archive ⇒ EV (110182, DCM, 'Node ID')"
-   UserTypeCode, U, "| Rejection triggered using association : Application ⇒ '2'
-   | All other cases : Person ⇒ '1'"
-   UserIsRequestor, M, | true
-   NetworkAccessPointID, U, | Hostname/IP Address of calling host
-   NetworkAccessPointTypeCode, U, "| NetworkAccessPointID is host name ⇒ '1'
-   | NetworkAccessPointID is an IP address ⇒ '2'"
-
-.. csv-table:: Participant Object Identification : Study
-   :name: participant-object-study-study-deleted
-   :widths: 30, 5, 65
-   :header: Field Name, Opt, Description
-
-   ParticipantObjectID, M, Study Instance UID or 1.2.40.0.13.1.15.110.3.165.1 if unknown
-   ParticipantObjectTypeCode, M, System ⇒ '2'
-   ParticipantObjectTypeCodeRole, M, Report ⇒ '3'
-   ParticipantObjectIDTypeCode, M, "EV (110180, DCM, 'Study Instance UID')"
-   ParticipantObjectDetail, U, "Base-64 encoded study date if Study has StudyDate(0008,0020) attribute"
-   ParticipantObjectDescription, U
-   SOPClass, MC, Sop Class UID and Number of instances with this sop class. eg. <SOPClass UID='1.2.840.10008.5.1.4.1.1.88.22' NumberOfInstances='4'/>
-   Accession, U, Accession Number
-
-.. csv-table:: Participant Object Identification : Patient
-   :name: participant-object-patient-study-deleted
-   :widths: 30, 5, 65
-   :header: Field Name, Opt, Description
-
-   ParticipantObjectID, M, Patient ID or <none> if unknown
-   ParticipantObjectTypeCode, M, Person ⇒ '1'
-   ParticipantObjectTypeCodeRole, M, Patient ⇒ '1'
-   ParticipantObjectIDTypeCode, M,  "EV (2, RFC-3881, 'Patient Number')"
-   ParticipantObjectName, U, Patient Name
-
 
 Sample Messages
 ---------------
