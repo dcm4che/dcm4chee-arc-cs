@@ -1,6 +1,8 @@
 Application Activity
 ====================
 
+This audit message describes the event of an archive application starting or stopping.
+
 Trigger Events
 --------------
 This audit message is emitted when the archive is started or stopped using the archive user interface. It is also
@@ -77,8 +79,8 @@ Message Structure
    |
    | - Applicable if NetworkAccessPointID is an **IP Address**"
 
-Sample Message
---------------
+Sample Messages
+---------------
 
 Application Activity Message - Application Start - Startup of archive / Deploy archive ear file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
