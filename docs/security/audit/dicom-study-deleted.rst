@@ -6,12 +6,32 @@ Trigger Events
 
 This message is emitted by the archive when :
 
-- Study is rejected using UI
-- Study in an external archive is rejected using UI
-- Rejection Notes for all objects of a study are stored to the archive using `RAD-66 <http://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf#page=40>`_ transaction
-- Study is deleted by the scheduler or `permanently deleted <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/openapi.json#/IOCM-RS/DeleteStudy>`_
-  using UI
-- Previous study is deleted on subsequent receive of objects having same SOP IUID but different Study/Series IUID
+- Study in a **local archive** is **completely rejected** using :
+  - Archive UI : Reject Study function (*Navigation page Studies tab with local archive QIDO_RS web application*)
+  - `Reject Study <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/IOCM-RS/RejectStudy>`_
+    REST Service invoked by an external client
+
+- Study in a **local archive** is **completely rejected** on receive of **Rejection Notes Key Objects** using `RAD-66 <http://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf#page=40>`_
+  transaction, over :
+  - DICOM C-Store
+  - `Store over Web of DICOM Objects <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/STOW-RS>`_ REST Services
+
+- Expired study is **completely rejected** by Reject Expired Studies Scheduler
+- Previous study is **completely rejected** on subsequent receive of objects having same SOP Instance UID but different
+  Study/Series Instance UIDs
+- Study in an **external archive** is **completely rejected** using :
+  - Archive UI : Reject Study function (*Navigation page Studies tab with external archive QIDO_RS web application*)
+  - `Reject Study from StoreSCP <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/IOCM-RS/RejectStudyStoreSCP>`_
+    and `Query FindSCP Reject Study from StoreSCP <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/IOCM-RS/QueryFindSCPRejectStudyStoreSCP>`_
+    REST Services
+
+- Study in a **local archive** is **completely deleted** by :
+  - Purge Storage Scheduler
+  - `Delete Study Permanently <http://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/openapi.json#/IOCM-RS/DeleteStudy>`_
+    REST Service invoked by an external client or using archive UI
+  - `Delete Patient Permanently <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/PAM-RS/DeletePatient>`_
+    REST Service invoked by an external client or using archive UI
+
 - Study `deleted on reimport <https://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/openapi.json#/IOCM-RS/ReimportStudy>`_
 
 Message Structure
