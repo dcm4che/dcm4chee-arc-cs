@@ -10,7 +10,7 @@ Attributes stored in the database
     "
     .. _dcmEntity:
 
-    :ref:`Attribute Entity <dcmEntity>`",string,"Entity of the Attribute Filter or Export Rule ('Patient', 'Study', 'Series', 'Instance', 'MPPS', 'MWL').
+    :ref:`Attribute Entity <dcmEntity>`",string,"Entity of the Attribute Filter or Export Rule ('Patient', 'Study', 'Series', 'Instance', 'MPPS', 'MWL', 'UPS').
 
     Enumerated values:
 
@@ -25,6 +25,8 @@ Attributes stored in the database
     MPPS
 
     MWL
+
+    UPS
 
     (dcmEntity)"
     "

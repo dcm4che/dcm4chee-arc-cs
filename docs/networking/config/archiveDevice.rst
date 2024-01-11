@@ -1862,15 +1862,15 @@ DICOM Archive Device related information
 
     (dcmQStarVerificationMockAccessState)"
     "
-    .. _dcmTrustedIssuerOfPatientIDPattern:
+    .. _dcmTrustedPatientIDPattern:
 
-    :ref:`Trusted Issuer of Patient ID Pattern <dcmTrustedIssuerOfPatientIDPattern>`",string,"Regular Expression identifying trusted Assigning Authority of Patient IDs in received DICOM objects and HL7 messages. If both, this field and 'Trusted Issuer of Patient ID' are configured, Patient IDs not qualified by trusted Assigning Authority matching the specified pattern, will be checked against one of the specified Assigning Authorities in 'Trusted Issuer of Patient ID' field. If Patient IDs are not qualified by either of these fields, they won't be used for identifying the Patient. If neither this field nor 'Trusted Issuer of Patient ID' is configured, all Patient IDs in received DICOM Objects and HL7 messages will be used for identifying the Patient.
+    :ref:`Trusted Patient ID Pattern(s) <dcmTrustedPatientIDPattern>`",string,"Regular Expression identifying trusted Patient IDs in HL7 v2 CX format: {Patient ID}^^^{Issuer of Patient ID}&{Universal Entity ID}&{Universal Entity ID Type} in received DICOM objects and HL7 messages. Only Patient IDs matching one of the specified patterns or Patient IDs qualified by an Assigning Authority matching one of the configured 'Trusted Issuers of Patient IDs' will be used for identifying the Patient. If neither this attribute nor any 'Trusted Issuers of Patient ID' is configured, all Patient IDs in received DICOM Objects and HL7 messages will be used for identifying the Patient.
 
-    (dcmTrustedIssuerOfPatientIDPattern)"
+    (dcmTrustedPatientIDPattern)"
     "
     .. _dcmTrustedIssuerOfPatientID:
 
-    :ref:`Trusted Issuer of Patient ID(s) <dcmTrustedIssuerOfPatientID>`",string,"Trusted Assigning Authority of Patient IDs in received DICOM objects and HL7 messages. If both, this field and 'Trusted Issuer of Patient ID Pattern' are configured, Patient IDs not qualified by trusted Assigning Authority matching the pattern specified in 'Trusted Issuer of Patient ID Pattern', will be checked against one of the specified Assigning Authorities in this field. If Patient IDs are not qualified by either of these fields, they won't be used for identifying the Patient. If neither this field nor 'Trusted Issuer of Patient ID Pattern' is configured, all Patient IDs in received DICOM Objects and HL7 messages will be used for identifying the Patient. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].
+    :ref:`Trusted Issuer of Patient ID(s) <dcmTrustedIssuerOfPatientID>`",string,"Trusted Assigning Authority of Patient IDs in received DICOM objects and HL7 messages. Only Patient IDs qualified by an Assigning Authority matching one of the specified values or Patient IDs matching one of the configured 'Trusted Patient ID Patterns' will be used for identifying the Patient. If neither this attribute nor dcmTrustedPatientIDPattern is configured, all Patient IDs in received DICOM Objects and HL7 messages will be used for identifying the Patient. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].
 
     (dcmTrustedIssuerOfPatientID)"
     ":doc:`attributeFilter` (s)",object,"Specifies Attributes stored in the database"
