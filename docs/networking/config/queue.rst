@@ -88,6 +88,6 @@ Managed Task Queue
     "
     .. _dcmSchedule:
 
-    :ref:`Restrict Scheduling(s) <dcmSchedule>`",string,"Restrict Scheduling to specified time ranges. Use Maximum Queue Size to control maximal number of Tasks processed between specified time ranges.
+    :ref:`Restrict Scheduling(s) <dcmSchedule>`",string,"Restrict Scheduling to specified time ranges.
 
     (dcmSchedule)"
