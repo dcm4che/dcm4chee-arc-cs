@@ -9,7 +9,7 @@
 "", "Rejection Failed - Already Rejected", "A774", "Failed to reject Instance[uid={SOP Instance UID}] - already rejected.", "Indicates that the rejected object was already rejected."
 "", "Rejection for Retention Policy Expired not Authorized", "A775", "Rejection for Retention Policy Expired not authorized.", "Indicates that rejection of objects with type as Retention Expired  are not allowed by LDAP configuration."
 "", "Retention Period of Study not yet Expired", "A776", "Retention Period of Study not yet expired.", "Indicates that rejection of objects is not allowed as Study Retention Period has not expired yet."
-"", "Patient ID Missing in Object", "A777", "Storage denied as Patient ID missing in object.", "Indicates that the Patient ID is missing in the object."
+"", "No Patient ID (from trusted Assigning Authority) in object.", "A777", "Storage denied as Patient ID missing in object.", "Indicates that the Patient ID is missing in the object or is not from a trusted Assigning Authority."
 "", "Conflicting Patient ID in Object", "A778", "Patient ID in incoming object does not match with that of patient associated with study.", "Indicates that the Patient ID in incoming object does not match with that of patient associated with study."
 "", "Conflicting Patient Attributes in Object", "A779", "Patient differs from previous received object in attribute {Keyword <Tag>}.", "Indicates that the Patient in incoming object has differing attributes with that of same patient associated with previous received object."
 "", "Different Study Instance UID", "C409", "Study Instance UID differs from Accepted Study Instance UID.", "Indicates that Accepted Study Instance UID varies from the Study Instance UID received in the request body."
