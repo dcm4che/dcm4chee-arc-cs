@@ -928,6 +928,18 @@ DICOM Archive Device related information
 
     (hl7ErrorLogFilePattern)"
     "
+    .. _hl7OutgoingLogFilePattern:
+
+    :ref:`HL7 Outgoing Log File Pattern <hl7OutgoingLogFilePattern>`",string,"Path to HL7 messages which will be captured exactly as sent. If absent, there is no logging. May be overwritten by configured values for particular Archive HL7 Application. eg. ${jboss.server.data.dir}/hl7-out/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7
+
+    (hl7OutgoingLogFilePattern)"
+    "
+    .. _hl7OutgoingErrorLogFilePattern:
+
+    :ref:`HL7 Outgoing Error Log File Pattern <hl7OutgoingErrorLogFilePattern>`",string,"Path to HL7 messages which will be captured exactly as sent, when processing of sent HL7 messages fails. If absent, there is no logging. May be overwritten by configured values for particular Archive HL7 Application. eg. ${jboss.server.data.dir}/hl7-out-error/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7
+
+    (hl7OutgoingErrorLogFilePattern)"
+    "
     .. _hl7NoPatientCreateMessageType:
 
     :ref:`HL7 No Patient Create Message Type(s) <hl7NoPatientCreateMessageType>`",string,"Message Type(s) (MessageType^TriggerEvent) of HL7 messages which are only processed, if there is already a Patient record in the database, which Patient ID matches the Patient ID in the PID or MRG segment of the message. Thus no new Patient record will be created by messages of the specified types. May be overwritten by configured values for particular Archive HL7 Application.
@@ -1537,6 +1549,8 @@ DICOM Archive Device related information
     OMG_O19
 
     ORU_R01
+
+    OMI_O23
 
     (hl7PSUMessageType)"
     "

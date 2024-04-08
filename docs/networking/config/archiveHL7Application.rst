@@ -120,6 +120,18 @@ DICOM Archive HL7 Application related information
 
     (hl7ErrorLogFilePattern)"
     "
+    .. _hl7OutgoingLogFilePattern:
+
+    :ref:`HL7 Outgoing Log File Pattern <hl7OutgoingLogFilePattern>`",string,"Path to HL7 messages which will be captured exactly as sent. If absent, there is no logging. May be overwritten by configured values for particular Archive HL7 Application. eg. ${jboss.server.data.dir}/hl7-out/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7
+
+    (hl7OutgoingLogFilePattern)"
+    "
+    .. _hl7OutgoingErrorLogFilePattern:
+
+    :ref:`HL7 Outgoing Error Log File Pattern <hl7OutgoingErrorLogFilePattern>`",string,"Path to HL7 messages which will be captured exactly as sent, when processing of sent HL7 messages fails. If absent, there is no logging. May be overwritten by configured values for particular Archive HL7 Application. eg. ${jboss.server.data.dir}/hl7-out-error/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7
+
+    (hl7OutgoingErrorLogFilePattern)"
+    "
     .. _hl7NoPatientCreateMessageType:
 
     :ref:`HL7 No Patient Create Message Type(s) <hl7NoPatientCreateMessageType>`",string,"Message Type(s) (MessageType^TriggerEvent) of HL7 messages which are only processed, if there is already a Patient record in the database, which Patient ID matches the Patient ID in the PID or MRG segment of the message. Thus no new Patient record will be created by messages of the specified types. Overwrites value specified on Device level.
@@ -268,3 +280,13 @@ DICOM Archive HL7 Application related information
     ":doc:`hl7StudyRetentionPolicy` (s)",object,"HL7 Study Retention Policies triggered by HL7 messages received by this HL7 Application. Supplements values specified on Device level."
     ":doc:`hl7OrderScheduledStation` (s)",object,"Scheduled Station selected on MWL HL7 Order Feed. Supplements values specified on Device level."
     ":doc:`hl7OrderSPSStatus` (s)",object,"Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages. Overwrites values specified on Device level."
+
+.. toctree::
+
+    hl7ForwardRule
+    hl7ExportRule
+    upsOnHL7
+    hl7PrefetchRule
+    hl7StudyRetentionPolicy
+    hl7OrderScheduledStation
+    hl7OrderSPSStatus
