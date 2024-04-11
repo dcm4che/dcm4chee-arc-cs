@@ -148,6 +148,10 @@ UI Permission
 
     action-monitoring->external_retrieve-single_action
 
+    action-monitoring->storage_verification-all_action
+
+    action-monitoring->storage_verification-single_action
+
     (dcmuiAction)"
     "
     .. _dcmuiActionParam:

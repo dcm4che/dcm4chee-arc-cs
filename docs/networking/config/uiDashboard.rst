@@ -53,7 +53,7 @@ UI Dashboard Configuration
     "
     .. _dicomuiDockerContainer:
 
-    :ref:`Archive Docker Containers(s) <dicomuiDockerContainer>`",string,"Names of the archive docker containers used in the hardware page
+    :ref:`Network Docker Devices(s) <dicomuiDockerContainer>`",string,"Names of the network devices in docker containers used in the hardware page.
 
     (dicomuiDockerContainer)"
 

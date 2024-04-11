@@ -768,6 +768,8 @@ DICOM Archive Network AE related information
 
     ORU_R01
 
+    OMI_O23
+
     (hl7PSUMessageType)"
     "
     .. _hl7PSUPIDPV1:

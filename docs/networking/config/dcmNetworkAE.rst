@@ -44,6 +44,12 @@ dcm4che proprietary Attributes of Network AE
 
     (dcmPreferredTransferSyntax)"
     "
+    .. _dcmShareTransferCapabilitiesFromAETitle:
+
+    :ref:`Share Transfer Capabilities from AE Title <dcmShareTransferCapabilitiesFromAETitle>`",string,"Indicates that this Network AE supports the Transfer Capabilities specified for another Network AE of the same Device.
+
+    (dcmShareTransferCapabilitiesFromAETitle)"
+    "
     .. _hl7ApplicationName:
 
     :ref:`HL7 Application name <hl7ApplicationName>`",string,"HL7 Application and Facility name (Application|Facility) associated with this AE

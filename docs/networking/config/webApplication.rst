@@ -72,6 +72,10 @@ Web Application information
 
     ELASTICSEARCH
 
+    PROMETHEUS
+
+    GRAFANA
+
     XDS_RS
 
     AGFA_BLOB
