@@ -22,7 +22,7 @@ Store Access Control ID Rule
     "
     .. _dcmRulePriority:
 
-    :ref:`Rule Priority <dcmRulePriority>`",integer,"Rule Priority.
+    :ref:`Rule Priority <dcmRulePriority>`",integer,"If the condition of several Store Access Control ID rules match for a received image, higher priority rule is applied. If there are several matching rules with equal priority, it is undefined which rule gets applied.
 
     (dcmRulePriority)"
     "

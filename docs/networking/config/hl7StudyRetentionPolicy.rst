@@ -34,7 +34,7 @@ HL7 Study Retention Policy
     "
     .. _dcmRulePriority:
 
-    :ref:`Rule Priority <dcmRulePriority>`",integer,"Rule Priority.
+    :ref:`Rule Priority <dcmRulePriority>`",integer,"If the condition of several HL7 Study Retention policies match for a received HL7 message, higher priority policy is applied. If there are several matching policies with equal priority, it is undefined which policy gets applied.
 
     (dcmRulePriority)"
     "

@@ -22,7 +22,7 @@ Scheduled Station selected on MWL HL7 Order Feed
     "
     .. _dcmRulePriority:
 
-    :ref:`Mapping Priority <dcmRulePriority>`",integer,"Mapping Priority.
+    :ref:`Mapping Priority <dcmRulePriority>`",integer,"If the condition of several Scheduled Station for HL7 Order rules match for a received HL7 message and each have different priority, Scheduled Station Device Name of highest priority is applied. If the condition of several Scheduled Station for HL7 Order rules match for a received HL7 message and each have equal priority, Scheduled Station Device Name of each is applied.
 
     (dcmRulePriority)"
     "

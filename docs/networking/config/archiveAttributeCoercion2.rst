@@ -48,7 +48,7 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmRulePriority:
 
-    :ref:`Attribute Coercion Priority <dcmRulePriority>`",integer,"Rule Priority. Higher priority rule takes precedence.
+    :ref:`Attribute Coercion Priority <dcmRulePriority>`",integer,"If the condition of several archive attribute coercion (new) matches for a received image, higher priority coercion takes precedence. If there are several matching coercions with equal priority, it is undefined which coercion takes precedence.
 
     (dcmRulePriority)"
     "
