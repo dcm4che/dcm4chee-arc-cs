@@ -57,7 +57,7 @@ The following table indicates the meaning of values returned in **FailureReason 
 
 .. csv-table:: STOW-RS Error Response Status Return Reasons
     :header-rows: 1
-    :widths: 10, 15, 5, 20, 20
+    :widths: 10, 15, 5, 5, 20, 20
     :file: stow-rs-error-response-status-return-reasons.csv
 
 
