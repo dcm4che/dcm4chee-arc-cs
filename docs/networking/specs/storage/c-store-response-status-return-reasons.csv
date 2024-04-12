@@ -1,5 +1,4 @@
 "Service Status", "Further Meaning", "Error Code", "Error Comment", "Behaviour"
-"Service Status", "Further Meaning", "Error Code", "Error Comment", "Behaviour"
 "Success", "Success", "0000", "", "The Composite SOP Instance was successfully received, verified, and stored in the system database."
 "Refused", "Out of Resources", "A700", "", "Indicates that there was not enough disk space to store the image. Error message is output to the Service Log. The SOP Instance will not be saved."
 "", "Duplicate Rejection Note", "A770", "Rejection Note [uid={SOP Instance UID}] already received.", "Indicates that rejection note was already received."

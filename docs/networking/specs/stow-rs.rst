@@ -53,6 +53,13 @@ The DCM4CHEE-STOW-SERVICE response message header contains status codes indicati
    "Warning", "202 - Accepted", "This indicates that the STOW-RS Service stored some of the instances but warnings or failures exist for others. Additional information regarding this error can be found in the XML response message body."
    "Success", "200 - OK", "This indicates that the STOW-RS Service successfully stored all the instances."
 
+The following table indicates the meaning of values returned in **FailureReason (0008,1197)** tag in any of the above STOW-RS error responses
+
+.. csv-table:: STOW-RS Error Response Status Return Reasons
+    :header-rows: 1
+    :widths: 10, 15, 5, 20, 20
+    :file: stow-rs-error-response-status-return-reasons.csv
+
 
 Web Service Endpoint URL
 ''''''''''''''''''''''''
