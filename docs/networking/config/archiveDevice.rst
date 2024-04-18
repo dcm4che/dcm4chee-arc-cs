@@ -108,7 +108,7 @@ DICOM Archive Device related information
     "
     .. _dcmPurgeInstanceRecords:
 
-    :ref:`Purged Instance Records <dcmPurgeInstanceRecords>`",boolean,"Indicates that Instance Records may have been purged from the DB.
+    :ref:`Purge(d) Instance Records <dcmPurgeInstanceRecords>`",boolean,"Indicates to purge instance records from DB. Also indicates to explicitly query series metadata zip files to check for purged instances for subsequent processing of archive functions. Set to 'True' if 'Purge Instance Records Delay' is configured.
 
     (dcmPurgeInstanceRecords)"
     "
