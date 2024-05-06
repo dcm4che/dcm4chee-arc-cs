@@ -4,19 +4,116 @@ Query
 Trigger Events
 --------------
 
-This message is emitted by the archive for queries triggered by UI or by C-FIND on following levels :
+This message is emitted by the archive for queries triggered by archive UI / REST APIs or by C-FIND on following levels :
 
 - Patient
 - Study
 - Series
 - Instance
 - Modality Worklist Entry
+- Modality Performed Procedure Step
+- Unified Worklist
 
 Additionally, this message is also emitted if a Patient Demographics Query is invoked by the archive acting as a Patient
-Demographics Consumer to any Patient Demographics Supplier.
+Demographics Consumer to a Patient Demographics Supplier supporting patient demographics query, like
+
+- HL7 Patient Demographics Supplier supporting `Patient Demographics Query [ITI-21] - QBP^Q22 HL7 messages <https://profiles.ihe.net/ITI/TF/Volume2/ITI-21.html>`_
+- FHIR Patient Demographics Supplier supporting `Mobile Patient Demographics Query [ITI-78] <https://profiles.ihe.net/ITI/PDQm/ITI-78.html>`_
 
 Message Structure
 -----------------
+
+.. csv-table:: Query Message
+   :name: query
+   :widths: 15, 15, 2, 45, 15
+   :header: Real World Entities, Field Name, Opt, Value Constraints, Note
+
+   Event, Event ID, M, "| EV (110112, DCM, 'Query')",
+   , Event Action Code, M, E (= Execute),
+   , Event Date Time, M, , The time at which the event occurred
+   , Event Outcome Indicator, M, "| 0 (= Success)
+   | OR
+   | 4 (= Minor Failure)", "| - Default indicator for DICOM C-FIND / REST triggered DICOM entities' queries or if patient demographics were not found at HL7 PDQ / FHIR PDQ suppliers
+   |
+   | - Only applicable for HL7 PDQ or FHIR PDQ queries, if patient demographics were not found at PDQ supplier"
+   , Event Outcome Description, U, Querying the PDQ Service for patient identifier was unsuccessful, Applicable only in HL7 PDQ or FHIR PDQ queries, if patient demographics were not found at PDQ supplier
+   , Event Type Code, U, "| DT ('ITI-21', 'IHE Transactions', 'Patient Demographics Query')
+   | OR
+   | DT ('ITI-78', 'urn:ihe:event-type-code', 'Mobile Patient Demographics Query')", "| - Only applicable for HL7 PDQ queries
+   |
+   | - Only applicable for FHIR PDQ queries"
+   Participating Object - Query, Participating Object ID, U, "| SearchForStudies (See [#Note1]_)
+   | OR
+   | 1.2.840.10008.5.1.4.1.2.2.1 (See [#Note2]_)
+   | OR
+   | PatientVerificationScheduler
+   | OR
+   | QueryPatientDemographics", "| - Only applicable for REST triggered DICOM entities' queries (See [#Note1]_)
+   |
+   | - Only applicable for DICOM C-FIND queries (See [#Note2]_)
+   |
+   | - Only applicable for scheduler triggered HL7 PDQ or FHIR PDQ queries
+   |
+   | - Only applicable for REST triggered HL7 PDQ or FHIR PDQ queries"
+   , Participant Object Type Code, M, 2 (= System Object),
+   , Participant Object Type Code Role, M, "| 3 (= Report)
+   | OR
+   | 24 (= Query)","| - Only applicable for DICOM C-FIND queries
+   |
+   | - Only applicable for REST triggered DICOM entities' queries or HL7 PDQ / FHIR PDQ queries"
+   , Participant Object ID Type Code, U, "| EV ('REST', '99DCM4CHEE', 'RESTful Web Service')
+   | OR
+   | EV ('110181', 'DCM', 'SOP Class UID')
+   | OR
+   | EV ('ITI-21', 'IHE Transactions', 'Patient Demographics Query')
+   | OR
+   | EV ('ITI-78', 'IHE Transactions', 'Mobile Patient Demographics Query')", "| - Only applicable for REST triggered DICOM entities' queries
+   |
+   | - Only applicable for DICOM C-FIND queries
+   |
+   | - Only applicable for HL7 PDQ queries
+   |
+   | - Only applicable for FHIR PDQ queries"
+   , Participant Object Detail, MC, "| Base64 encoded value for 'UTF-8' ⇒ 'type=QueryEncoding value=VVRGLTg='
+   | OR
+   | Base64 encoded value for 'ImplicitVRLittleEndian' ⇒ 'type=TransferSyntax value=MS4yLjg0MC4xMDAwOC4xLjI='", "| - Only applicable for REST triggered DICOM entities' / HL7 PDQ / FHIR PDQ queries
+   |
+   | - Only applicable for DICOM C-FIND queries"
+   , Participant Object Detail, MC, Base64 encoded value of MSH-10 value sent in QBP^Q22 message to supplier, Only applicable for HL7 PDQ queries
+   Participating Object - Patient, Participating Object ID, U, Patient identifier, Only applicable for HL7 PDQ or FHIR PDQ queries
+   , Participant Object Type Code, M, 1 (= Person),
+   , Participant Object Type Code Role, M, 1 (= Patient),
+   , Participant Object ID Type Code, M, "| EV (2, RFC-3881, 'Patient Number')",
+   , Participant Object Name, U, The patient name,
+   , Participant Object Detail, MC, Base64 encoded value of HL7v2 Message sent as QBP^Q22 message to supplier, Only applicable for HL7 PDQ queries
+   , Participant Object Detail, MC, Base64 encoded value of MSH-9 value sent in QBP^Q22 message request to supplier, Only applicable for HL7 PDQ queries
+   , Participant Object Detail, MC, Base64 encoded value of MSH-10 value sent in QBP^Q22 message request to supplier, Only applicable for HL7 PDQ queries
+   , Participant Object Detail, MC, Base64 encoded value of HL7v2 Message received as RSP^K22 response from supplier, Only applicable for HL7 PDQ queries
+   , Participant Object Detail, MC, Base64 encoded value of MSH-9 value received in RSP^K22 message response from supplier, Only applicable for HL7 PDQ queries
+   , Participant Object Detail, MC, Base64 encoded value of MSH-10 value sent in QBP^Q22 message response from supplier, Only applicable for HL7 PDQ queries
+
+.. [#Note1] Depending on the query level triggered by :
+   - `QIDO-RS REST APIs <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/QIDO-RS>`_
+   - Search / Count Modality Worklists in `MWL-RS REST APIs <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/MWL-RS>`_
+   - `MPPS-RS REST APIs <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/MPPS-RS>`_
+   - Search / Count Workitems in `UPS-RS REST APIs <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/UPS-RS>`_
+   may contain either of the following values :
+   - **SearchForPatients**
+   - **SearchForStudies**
+   - **SearchForSeries**
+   - **SearchForStudySeries**
+   - **SearchForInstances**
+   - **SearchForStudyInstances**
+   - **SearchForStudySeriesInstances**
+   - **SearchForSPS** (applicable for MWLs - Modality Worklists)
+   - **SearchForMPPS**
+   - **SearchForUPS** (applicable for UWLs - Unified Worklists)
+
+.. [#Note2] May contain either of the following values depending on the DICOM C-FIND query level -
+   **1.2.840.10008.5.1.4.1.2.1.1** : Patient Root Query/Retrieve Information Model - FIND, SOPClass
+   **1.2.840.10008.5.1.4.1.2.3.1** : Patient/Study Only Query/Retrieve Information Model - FIND (Retired), SOPClass
+   **1.2.840.10008.5.1.4.1.2.2.1** : Study Root Query/Retrieve Information Model - FIND, SOPClass
+   **1.2.840.10008.5.1.4.31** : Modality Worklist Information Model - FIND, SOPClass
 
 .. csv-table:: Entities in Query Audit Message
 
@@ -238,106 +335,164 @@ Sample Message
 --------------
 
 Query triggered using QIDO-RS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: xml
 
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-        <EventIdentification EventActionCode="E" EventDateTime="2017-07-27T09:12:21.331+02:00" EventOutcomeIndicator="0">
-            <EventID csd-code="110112" codeSystemName="DCM" originalText="Query"/>
-        </EventIdentification>
-        <ActiveParticipant UserID="127.0.0.1" UserTypeCode="1" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
-            <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source"/>
-            <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
-        </ActiveParticipant>
-        <ActiveParticipant UserID="/dcm4chee-arc/aets/DCM4CHEE/rs/patients" AlternativeUserID="3390" UserTypeCode="2" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-            <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination"/>
-            <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
-        </ActiveParticipant>
-        <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
-            <AuditSourceTypeCode csd-code="4"/>
-        </AuditSourceIdentification>
-        <ParticipantObjectIdentification ParticipantObjectID="SearchForPatients" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="24">
-            <ParticipantObjectIDTypeCode csd-code="QIDO" originalText="QIDO_Query" codeSystemName="99DCM4CHEE"/>
-            <ParticipantObjectQuery>L2RjbTRjaGVlLWFyYy9hZXRzL0RDTTRDSEVFL3JzL3BhdGllbnRzaW5jbHVkZWZpZWxkPWFsbCZvZmZzZXQ9MCZsaW1pdD0yMSZvcmRlcmJ5PVBhdGllbnROYW1l</ParticipantObjectQuery>
-            <ParticipantObjectDetail type="QueryEncoding" value="VVRGLTg="/>
-        </ParticipantObjectIdentification>
+    <AuditMessage
+    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+    	<EventIdentification EventActionCode="E" EventDateTime="2024-05-06T13:13:44.343+02:00" EventOutcomeIndicator="0">
+    		<EventID csd-code="110112" codeSystemName="DCM" originalText="Query"/>
+    	</EventIdentification>
+    	<ActiveParticipant UserID="http://localhost:8880/dcm4chee-arc/aets/DCM4CHEE/rs/studies" AlternativeUserID="16153" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    		<RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID"/>
+    		<UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
+    	</ActiveParticipant>
+    	<ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+    		<RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID"/>
+    		<UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
+    	</ActiveParticipant>
+    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+    		<AuditSourceTypeCode csd-code="4"/>
+    	</AuditSourceIdentification>
+    	<ParticipantObjectIdentification ParticipantObjectID="SearchForStudies" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="24">
+    		<ParticipantObjectIDTypeCode csd-code="REST" originalText="RESTful Web Service" codeSystemName="99DCM4CHEE"/>
+    		<ParticipantObjectQuery>bGltaXQ9MjEmaW5jbHVkZWZpZWxkPWFsbCZvZmZzZXQ9MA==</ParticipantObjectQuery>
+    		<ParticipantObjectDetail type="QueryEncoding" value="VVRGLTg="/>
+    	</ParticipantObjectIdentification>
     </AuditMessage>
 
 Query triggered using C-FIND
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: xml
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-       <EventIdentification EventActionCode="E" EventDateTime="2019-02-05T18:01:25+01:00" EventOutcomeIndicator="0">
-          <EventID csd-code="110112" codeSystemName="DCM" originalText="Query" />
-       </EventIdentification>
-       <ActiveParticipant UserID="FINDSCU" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-          <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID" />
-          <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title" />
-       </ActiveParticipant>
-       <ActiveParticipant UserID="DCM4CHEE" AlternativeUserID="5726" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-          <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID" />
-          <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title" />
-       </ActiveParticipant>
-       <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
-          <AuditSourceTypeCode csd-code="4" />
-       </AuditSourceIdentification>
-       <ParticipantObjectIdentification ParticipantObjectID="1.2.840.10008.5.1.4.1.2.2.1" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
-          <ParticipantObjectIDTypeCode csd-code="110181" originalText="SOP Class UID" codeSystemName="DCM" />
-          <ParticipantObjectQuery>CABSAAYAAABTVFVEWSAgAA0ALAAAADIuMjUuMjIzNDk1ODQxNjcyNTIzMjI3ODMyMTMzMTUzNTY3ODg2NjU5ODAx</ParticipantObjectQuery>
-          <ParticipantObjectDetail type="TransferSyntax" value="MS4yLjg0MC4xMDAwOC4xLjI=" />
-       </ParticipantObjectIdentification>
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage
+    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+    	<EventIdentification EventActionCode="E" EventDateTime="2024-05-06T13:17:34.441+02:00" EventOutcomeIndicator="0">
+    		<EventID csd-code="110112" codeSystemName="DCM" originalText="Query"/>
+    	</EventIdentification>
+    	<ActiveParticipant UserID="DCM4CHEE" AlternativeUserID="16153" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    		<RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID"/>
+    		<UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
+    	</ActiveParticipant>
+    	<ActiveParticipant UserID="FINDSCU" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="view-localhost" NetworkAccessPointTypeCode="1">
+    		<RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID"/>
+    		<UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
+    	</ActiveParticipant>
+    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+    		<AuditSourceTypeCode csd-code="4"/>
+    	</AuditSourceIdentification>
+    	<ParticipantObjectIdentification ParticipantObjectID="1.2.840.10008.5.1.4.1.2.2.1" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+    		<ParticipantObjectIDTypeCode csd-code="110181" originalText="SOP Class UID" codeSystemName="DCM"/>
+    		<ParticipantObjectQuery>CAAgAAoAAAAyMDIwMDEwMS0gCABQAAAAAAAIAFIABgAAAFNUVURZIAgAYQACAAAAQ1QQABAAAAAAABAAIAAAAAAAIAANAAAAAAA=</ParticipantObjectQuery>
+    		<ParticipantObjectDetail type="TransferSyntax" value="MS4yLjg0MC4xMDAwOC4xLjI="/>
+    	</ParticipantObjectIdentification>
     </AuditMessage>
 
-Patient Demographics Query
+HL7 Patient Demographics Query - REST triggered
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+`Query Patient Demographics <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/PDQ-RS/queryPatientDemographics>`_
+REST Service triggered HL7 Patient Demographics Query audit.
 
 .. code-block:: xml
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <AuditMessage xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-        <EventIdentification EventActionCode="E" EventDateTime="2021-07-05T09:16:21.400+02:00" EventOutcomeIndicator="0">
-            <EventID csd-code="110112" codeSystemName="DCM" originalText="Query"/>
-            <EventTypeCode csd-code="ITI-21" codeSystemName="IHE Transactions" originalText="Patient Demographics Query"/>
-            <EventOutcomeDescription>Patient Demographics Query</EventOutcomeDescription>
-        </EventIdentification>
-        <ActiveParticipant UserID="HL7RCV|DCM4CHEE" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-            <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID"/>
-            <UserIDTypeCode csd-code="HL7APP" codeSystemName="99DCM4CHEE" originalText="Application and Facility"/>
-        </ActiveParticipant>
-        <ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
-            <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
-        </ActiveParticipant>
-        <ActiveParticipant UserID="http://localhost:8080/dcm4chee-arc/pdq/testhl7pdq/patients/PDQ-4711%5E%5E%5EDCM4CHE-TEST%261.2.40.0.13.1.1.999%26ISO" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-            <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
-        </ActiveParticipant>
-        <ActiveParticipant UserID="HL7SND|DCM4CHEE" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-            <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID"/>
-            <UserIDTypeCode csd-code="HL7APP" codeSystemName="99DCM4CHEE" originalText="Application and Facility"/>
-        </ActiveParticipant>
-        <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
-            <AuditSourceTypeCode csd-code="4"/>
-        </AuditSourceIdentification>
-        <ParticipantObjectIdentification ParticipantObjectID="QueryPatientDemographics" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="24">
-            <ParticipantObjectIDTypeCode csd-code="ITI-21" originalText="Patient Demographics Query" codeSystemName="IHE Transactions"/>
-            <ParticipantObjectQuery>
-                TVNIfF5+XCZ8SEw3U05EfERDTTRDSEVFfEhMN1JDVnxEQ000Q0hFRXwyMDIxMDcwNTA5MTYyMC43ODd8fFFCUF5RMjJeUUJQX1EyMXwyMTI2MTA5NTkzfFB8Mi41fHx8fHx8ODg1OS8xfHx8DVFQRHxJSEUgUERRIFF1ZXJ5fFFSWTIxMjYxMDk1OTN8QFBJRC4zLjFeUERRLTQ3MTF+QFBJRC4zLjQuMV5EQ000Q0hFLVRFU1R+QFBJRC4zLjQuMl4xLjIuNDAuMC4xMy4xLjEuOTk5fkBQSUQuMy40LjNeSVNPfA1SQ1B8SXx8fHx8fA0=
-            </ParticipantObjectQuery>
-        </ParticipantObjectIdentification>
-        <ParticipantObjectIdentification ParticipantObjectID="PDQ-4711^^^DCM4CHE-TEST&1.2.40.0.13.1.1.999&ISO" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
-            <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
-            <ParticipantObjectName>DOE^JOHN</ParticipantObjectName>
-            <ParticipantObjectDetail type="HL7v2 Message" value="TVNIfF5+XCZ8SEw3U05EfERDTTRDSEVFfEhMN1JDVnxEQ000Q0hFRXwyMDIxMDcwNTA5MTYyMC43ODd8fFFCUF5RMjJeUUJQX1EyMXwyMTI2MTA5NTkzfFB8Mi41fHx8fHx8ODg1OS8xfHx8DVFQRHxJSEUgUERRIFF1ZXJ5fFFSWTIxMjYxMDk1OTN8QFBJRC4zLjFeUERRLTQ3MTF+QFBJRC4zLjQuMV5EQ000Q0hFLVRFU1R+QFBJRC4zLjQuMl4xLjIuNDAuMC4xMy4xLjEuOTk5fkBQSUQuMy40LjNeSVNPfA1SQ1B8SXx8fHx8fA0="/>
-            <ParticipantObjectDetail type="MSH-9" value="UUJQXlEyMg=="/>
-            <ParticipantObjectDetail type="MSH-10" value="MjEyNjEwOTU5Mw=="/>
-            <ParticipantObjectDetail type="HL7v2 Message" value="TVNIfF5+XCZ8SEw3UkNWfERDTTRDSEVFfEhMN1NORHxEQ000Q0hFRXwyMDIxMDcwNTA5MTYyMC44MjB8fFJTUF5LMjJeUlNQX0syMXwxMDY0NjIyMjk0fFB8Mi41fHx8fHx8ODg1OS8xDU1TQXxBQXwyMTI2MTA5NTkzfA1RQUt8UVJZMjEyNjEwOTU5M3xPSw1RUER8SUhFIFBEUSBRdWVyeXxRUlkyMTI2MTA5NTkzfEBQSUQuMy4xXlBEUS00NzExfkBQSUQuMy40LjFeRENNNENIRS1URVNUfkBQSUQuMy40LjJeMS4yLjQwLjAuMTMuMS4xLjk5OX5AUElELjMuNC4zXklTT3wNUElEfHx8UERRLTQ3MTFeXl5EQ000Q0hFLVRFU1QmMS4yLjQwLjAuMTMuMS4xLjk5OSZJU098fERPRV5KT0hOfHwxOTQ3MTExMXxNfHx8U1RSRUVUXl5DSVRZXl40NzExfHx8fHx8fEFDQy00NzExXl5eRENNNENIRS1URVNUJjEuMi40MC4wLjEzLjEuMS45OTkmSVNP"/>
-            <ParticipantObjectDetail type="MSH-9" value="UlNQXksyMg=="/>
-            <ParticipantObjectDetail type="MSH-10" value="MTA2NDYyMjI5NA=="/>
-        </ParticipantObjectIdentification>
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage
+    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+    	<EventIdentification EventActionCode="E" EventOutcomeIndicator="0">
+    	    <EventTypeCode csd-code="ITI-21" codeSystemName="IHE Transactions" originalText="Patient Demographics Query"/>
+    		<EventID csd-code="110112" codeSystemName="DCM" originalText="Query"/>
+    	</EventIdentification>
+    	<ActiveParticipant UserID="HL7SND|DCM4CHEE" AlternativeUserID="16153" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    		<RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID"/>
+    		<UserIDTypeCode csd-code="HL7APP" codeSystemName="99DCM4CHEE" originalText="Application and Facility"/>
+    	</ActiveParticipant>
+    	<ActiveParticipant UserID="HL7RCV|DCM4CHEE" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost">
+    		<RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID"/>
+    		<UserIDTypeCode csd-code="HL7APP" codeSystemName="99DCM4CHEE" originalText="Application and Facility"/>
+    	</ActiveParticipant>
+    	<ActiveParticipant UserID="http://localhost:8880/dcm4chee-arc/pdq/HL7PatientDemographicsQuery-to-PatientDemographicsSupplier/patients/PDQ-4713455" AlternativeUserID="16153" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    		<RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID"/>
+    		<UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
+    	</ActiveParticipant>
+    	<ActiveParticipant UserID="admin" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+    		<UserIDTypeCode csd-code="113871" codeSystemName="DCM" originalText="Node ID"/>
+    	</ActiveParticipant>
+    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+    		<AuditSourceTypeCode csd-code="4"/>
+    	</AuditSourceIdentification>
+    	<ParticipantObjectIdentification ParticipantObjectID="PDQ-4713455" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+    		<ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
+    		<ParticipantObjectName>DOE^JOHN</ParticipantObjectName>
+    		<ParticipantObjectDetail type="HL7v2 Message" value="TVNIfF5+XCZ8SEw3U05EfERDTTRDSEVFfEhMN1JDVnxEQ000Q0hFRXwyMDI0MDUwNjEzMzgyNC4yOTh8fFFCUF5RMjJeUUJQX1EyMXwxNjk3OTc4MTkzfFB8Mi41fHx8fHx8VU5JQ09ERSBVVEYtOHx8fA1RUER8SUhFIFBEUSBRdWVyeXxRUlkxNjk3OTc4MTkzfEBQSUQuMy4xXlBEUS00NzEzNDU1fA1SQ1B8SXx8fHx8fA0="/>
+    		<ParticipantObjectDetail type="MSH-9" value="UUJQXlEyMg=="/>
+    		<ParticipantObjectDetail type="MSH-10" value="MTY5Nzk3ODE5Mw=="/>
+    		<ParticipantObjectDetail type="HL7v2 Message" value="TVNIfF5+XCZ8SEw3UkNWfERDTTRDSEVFfEhMN1NORHxEQ000Q0hFRXwyMDI0MDUwNjEzMzgyNC4zOTV8fFJTUF5LMjJeUlNQX0syMXwyMDk2NzI2NjkwfFB8Mi41fHx8fHx8VU5JQ09ERSBVVEYtOA1NU0F8QUF8MTY5Nzk3ODE5M3wNUUFLfFFSWTE2OTc5NzgxOTN8T0sNUVBEfElIRSBQRFEgUXVlcnl8UVJZMTY5Nzk3ODE5M3xAUElELjMuMV5QRFEtNDcxMzQ1NXwNUElEfHx8Xl5eJiZ8fERPRV5KT0hOfHwxOTQ3MTExMXxNfHx8U1RSRUVUXl5DSVRZXl40NzExfHx8fHx8fEFDQy00NzExXl5eRENNNENIRS1URVNUJjEuMi40MC4wLjEzLjEuMS45OTkmSVNP"/>
+    		<ParticipantObjectDetail type="MSH-9" value="UlNQXksyMg=="/>
+    		<ParticipantObjectDetail type="MSH-10" value="MjA5NjcyNjY5MA=="/>
+    	</ParticipantObjectIdentification>
+    	<ParticipantObjectIdentification ParticipantObjectID="QueryPatientDemographics" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="24">
+    		<ParticipantObjectIDTypeCode csd-code="ITI-21" originalText="Patient Demographics Query" codeSystemName="IHE Transactions"/>
+    		<ParticipantObjectQuery>TVNIfF5+XCZ8SEw3U05EfERDTTRDSEVFfEhMN1JDVnxEQ000Q0hFRXwyMDI0MDUwNjEzMzgyNC4yOTh8fFFCUF5RMjJeUUJQX1EyMXwxNjk3OTc4MTkzfFB8Mi41fHx8fHx8VU5JQ09ERSBVVEYtOHx8fA1RUER8SUhFIFBEUSBRdWVyeXxRUlkxNjk3OTc4MTkzfEBQSUQuMy4xXlBEUS00NzEzNDU1fA1SQ1B8SXx8fHx8fA0=</ParticipantObjectQuery>
+    		<ParticipantObjectDetail type="MSH-10" value="MTY5Nzk3ODE5Mw=="/>
+    	</ParticipantObjectIdentification>
     </AuditMessage>
 
-FHIR Patient Demographics Query
+HL7 Patient Demographics Query - Scheduler triggered
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Patient Verification Scheduler triggered HL7 Patient Demographics Query audit.
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage
+    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+    	<EventIdentification EventActionCode="E" EventOutcomeIndicator="0">
+    	    <EventTypeCode csd-code="ITI-21" codeSystemName="IHE Transactions" originalText="Patient Demographics Query"/>
+    		<EventID csd-code="110112" codeSystemName="DCM" originalText="Query"/>
+    	</EventIdentification>
+    	<ActiveParticipant UserID="HL7SND|DCM4CHEE" AlternativeUserID="16153" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    		<RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID"/>
+    		<UserIDTypeCode csd-code="HL7APP" codeSystemName="99DCM4CHEE" originalText="Application and Facility"/>
+    	</ActiveParticipant>
+    	<ActiveParticipant UserID="HL7RCV|DCM4CHEE" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost">
+    		<RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID"/>
+    		<UserIDTypeCode csd-code="HL7APP" codeSystemName="99DCM4CHEE" originalText="Application and Facility"/>
+    	</ActiveParticipant>
+    	<ActiveParticipant UserID="dcm4chee-arc" AlternativeUserID="16153" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    		<RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID"/>
+    		<UserIDTypeCode csd-code="113877" codeSystemName="DCM" originalText="Device Name"/>
+    	</ActiveParticipant>
+    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+    		<AuditSourceTypeCode csd-code="4"/>
+    	</AuditSourceIdentification>
+    	<ParticipantObjectIdentification ParticipantObjectID="PDQ-4713455" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+    		<ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
+    		<ParticipantObjectName>DOE^JOHN</ParticipantObjectName>
+    		<ParticipantObjectDetail type="HL7v2 Message" value="TVNIfF5+XCZ8SEw3U05EfERDTTRDSEVFfEhMN1JDVnxEQ000Q0hFRXwyMDI0MDUwNjEzNDQyNS4yNjZ8fFFCUF5RMjJeUUJQX1EyMXwxNjk3OTc4MTk0fFB8Mi41fHx8fHx8VU5JQ09ERSBVVEYtOHx8fA1RUER8SUhFIFBEUSBRdWVyeXxRUlkxNjk3OTc4MTk0fEBQSUQuMy4xXlBEUS00NzEzNDU1fA1SQ1B8SXx8fHx8fA0="/>
+    		<ParticipantObjectDetail type="MSH-9" value="UUJQXlEyMg=="/>
+    		<ParticipantObjectDetail type="MSH-10" value="MTY5Nzk3ODE5NA=="/>
+    		<ParticipantObjectDetail type="HL7v2 Message" value="TVNIfF5+XCZ8SEw3UkNWfERDTTRDSEVFfEhMN1NORHxEQ000Q0hFRXwyMDI0MDUwNjEzNDQyNS4yNzF8fFJTUF5LMjJeUlNQX0syMXwyMDk2NzI2NjkxfFB8Mi41fHx8fHx8VU5JQ09ERSBVVEYtOA1NU0F8QUF8MTY5Nzk3ODE5NHwNUUFLfFFSWTE2OTc5NzgxOTR8T0sNUVBEfElIRSBQRFEgUXVlcnl8UVJZMTY5Nzk3ODE5NHxAUElELjMuMV5QRFEtNDcxMzQ1NXwNUElEfHx8Xl5eJiZ8fERPRV5KT0hOfHwxOTQ3MTExMXxNfHx8U1RSRUVUXl5DSVRZXl40NzExfHx8fHx8fEFDQy00NzExXl5eRENNNENIRS1URVNUJjEuMi40MC4wLjEzLjEuMS45OTkmSVNP"/>
+    		<ParticipantObjectDetail type="MSH-9" value="UlNQXksyMg=="/>
+    		<ParticipantObjectDetail type="MSH-10" value="MjA5NjcyNjY5MQ=="/>
+    	</ParticipantObjectIdentification>
+    	<ParticipantObjectIdentification ParticipantObjectID="PatientVerificationScheduler" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="24">
+    		<ParticipantObjectIDTypeCode csd-code="ITI-21" originalText="Patient Demographics Query" codeSystemName="IHE Transactions"/>
+    		<ParticipantObjectQuery>TVNIfF5+XCZ8SEw3U05EfERDTTRDSEVFfEhMN1JDVnxEQ000Q0hFRXwyMDI0MDUwNjEzNDQyNS4yNjZ8fFFCUF5RMjJeUUJQX1EyMXwxNjk3OTc4MTk0fFB8Mi41fHx8fHx8VU5JQ09ERSBVVEYtOHx8fA1RUER8SUhFIFBEUSBRdWVyeXxRUlkxNjk3OTc4MTk0fEBQSUQuMy4xXlBEUS00NzEzNDU1fA1SQ1B8SXx8fHx8fA0=</ParticipantObjectQuery>
+    		<ParticipantObjectDetail type="MSH-10" value="MTY5Nzk3ODE5NA=="/>
+    	</ParticipantObjectIdentification>
+    </AuditMessage>
+
+FHIR Patient Demographics Query - REST triggered
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+`Query Patient Demographics <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/PDQ-RS/queryPatientDemographics>`_
+REST Service triggered FHIR Patient Demographics Query audit.
 
 .. code-block:: xml
 
@@ -349,12 +504,12 @@ FHIR Patient Demographics Query
             <EventTypeCode csd-code="ITI-78" codeSystemName="urn:ihe:event-type-code" originalText="Mobile Patient Demographics Query"/>
             <EventOutcomeDescription>Mobile Patient Demographics Query</EventOutcomeDescription>
         </EventIdentification>
-        <ActiveParticipant UserID="http://localhost:8780/hapi-fhir-jpaserver/fhir/Patient" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+        <ActiveParticipant UserID="http://localhost:8080/hapi-fhir-jpaserver/fhir/Patient" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
             <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID"/>
             <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
         </ActiveParticipant>
-        <ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
-            <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
+        <ActiveParticipant UserID="admin" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+            <UserIDTypeCode csd-code="113871" codeSystemName="DCM" originalText="Person ID"/>
         </ActiveParticipant>
         <ActiveParticipant UserID="http://localhost:8880/dcm4chee-arc/pdq/testHAPI/patients/e925b0f3%2D8006%2D43f6%2Daa31%2D94bd215e55e7%5E%5E%5Ehttps%3A%2F%2Fgithub%2Ecom%2Fsynthetichealth%2Fsynthea" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
             <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID"/>
@@ -372,4 +527,41 @@ FHIR Patient Demographics Query
             <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
             <ParticipantObjectName>Koepp^Abdul^^Mr.</ParticipantObjectName>
         </ParticipantObjectIdentification>
+    </AuditMessage>
+
+FHIR Patient Demographics Query - Scheduler triggered
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Patient Verification Scheduler triggered FHIR Patient Demographics Query audit.
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage
+    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+    	<EventIdentification EventActionCode="E" EventDateTime="2022-07-18T13:20:56.601+02:00" EventOutcomeIndicator="0">
+            <EventID csd-code="110112" codeSystemName="DCM" originalText="Query"/>
+            <EventTypeCode csd-code="ITI-78" codeSystemName="urn:ihe:event-type-code" originalText="Mobile Patient Demographics Query"/>
+            <EventOutcomeDescription>Mobile Patient Demographics Query</EventOutcomeDescription>
+        </EventIdentification>
+    	<ActiveParticipant UserID="http://localhost:8080/hapi-fhir-jpaserver/fhir" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost">
+    		<RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID"/>
+    		<UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
+    	</ActiveParticipant>
+    	<ActiveParticipant UserID="dcm4chee-arc" AlternativeUserID="43631" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    		<RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID"/>
+    		<UserIDTypeCode csd-code="113877" codeSystemName="DCM" originalText="Device Name"/>
+    	</ActiveParticipant>
+    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+    		<AuditSourceTypeCode csd-code="4"/>
+    	</AuditSourceIdentification>
+    	<ParticipantObjectIdentification ParticipantObjectID="e925b0f3-8006-43f6-aa31-94bd215e55e7^^^https://github.com/synthetichealth/synthea" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+            <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
+            <ParticipantObjectName>Koepp^Abdul^^Mr.</ParticipantObjectName>
+        </ParticipantObjectIdentification>
+    	<ParticipantObjectIdentification ParticipantObjectID="PatientVerificationScheduler" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="24">
+    		<ParticipantObjectIDTypeCode csd-code="ITI-78" originalText="Mobile Patient Demographics Query" codeSystemName="IHE Transactions"/>
+    		<ParticipantObjectQuery>aWRlbnRpZmllcj1lOTI1YjBmMy04MDA2LTQzZjYtYWEzMS05NGJkMjE1ZTU1ZTcmX2Zvcm1hdD14bWw=</ParticipantObjectQuery>
+    		<ParticipantObjectDetail type="QueryEncoding" value="VVRGLTg="/>
+    	</ParticipantObjectIdentification>
     </AuditMessage>
