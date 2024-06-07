@@ -40,6 +40,10 @@ Web Application information
 
     QIDO_RS
 
+    AI_CHAT
+
+    DOCUMENTATION
+
     STOW_RS
 
     WADO_RS

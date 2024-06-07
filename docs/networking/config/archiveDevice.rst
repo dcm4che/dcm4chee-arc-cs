@@ -716,6 +716,12 @@ DICOM Archive Device related information
 
     (dcmDeleteRejectedFetchSize)"
     "
+    .. _dcmDBReadOnly:
+
+    :ref:`DB Read Only <dcmDBReadOnly>`",boolean,"Indicates read-only access to the database, preventing DB updates on query/retrieve.
+
+    (dcmDBReadOnly)"
+    "
     .. _dcmMaxAccessTimeStaleness:
 
     :ref:`Maximum Access Time Staleness <dcmMaxAccessTimeStaleness>`",string,"Maximal staleness of recorded study accession time in ISO-8601 duration format PnDTnHnMnS. Update of the access time disabled, if absent.
@@ -1830,9 +1836,15 @@ DICOM Archive Device related information
 
     (dcmUPSUpdateWithoutTransactionUID)"
     "
+    .. _dcmQStarVerificationStorageID:
+
+    :ref:`QStar Verification Storage ID <dcmQStarVerificationStorageID>`",string,"ID of QStar Tape File System to which objects were stored which Access State shall be verified. If absent, Access State of objects stored on QStar Tape File System will not be verified.
+
+    (dcmQStarVerificationStorageID)"
+    "
     .. _dcmQStarVerificationPollingInterval:
 
-    :ref:`QStar Verification Polling Interval <dcmQStarVerificationPollingInterval>`",string,"Polling Interval for Verification of Access State of objects stored on QStar Tape File System in ISO-8601 duration format PnDTnHnMnS. If absent, Access State of objects stored objects stored on QStar Tape File System will not be verified.
+    :ref:`QStar Verification Polling Interval <dcmQStarVerificationPollingInterval>`",string,"Polling Interval for Verification of Access State of objects stored on QStar Tape File System in ISO-8601 duration format PnDTnHnMnS. If absent, Access State of objects stored on QStar Tape File System will not be verified.
 
     (dcmQStarVerificationPollingInterval)"
     "
@@ -1844,13 +1856,13 @@ DICOM Archive Device related information
     "
     .. _dcmQStarVerificationDelay:
 
-    :ref:`QStar Verification Delay <dcmQStarVerificationDelay>`",string,"Delay for Verification of Access State after objects stored on QStar Tape File System in ISO-8601 duration format PnDTnHnMnS. If absent, Access State of objects stored objects stored on QStar Tape File System will not be verified.
+    :ref:`QStar Verification Delay <dcmQStarVerificationDelay>`",string,"Delay for Verification of Access State after objects stored on QStar Tape File System in ISO-8601 duration format PnDTnHnMnS. If absent, Access State of objects stored on QStar Tape File System will not be verified.
 
     (dcmQStarVerificationDelay)"
     "
     .. _dcmQStarVerificationURL:
 
-    :ref:`QStar Verification URL <dcmQStarVerificationURL>`",string,"URL of QStar Archive Storage Manager WEB Services - including username and password (http://username:password@qstar.host:port/) - invoked for Verification of Access State after objects stored on QStar Tape File System. If absent, Access State of objects stored objects stored on QStar Tape File System will not be verified.
+    :ref:`QStar Verification URL <dcmQStarVerificationURL>`",string,"URL of QStar Archive Storage Manager WEB Services - including username and password (http://username:password@qstar.host:port/) - invoked for Verification of Access State after objects stored on QStar Tape File System. If absent, Access State of objects stored on QStar Tape File System will not be verified.
 
     (dcmQStarVerificationURL)"
     "

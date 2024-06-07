@@ -20,6 +20,8 @@ UI Permission
 
     Enumerated values:
 
+    page-ai-chat-docs
+
     menu-studies
 
     menu-dashboard
