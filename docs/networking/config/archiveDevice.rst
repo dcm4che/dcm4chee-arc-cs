@@ -180,7 +180,7 @@ DICOM Archive Device related information
     "
     .. _dcmOverwritePolicy:
 
-    :ref:`Overwrite Policy <dcmOverwritePolicy>`",string,"Overwrite Policy. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`Overwrite Policy <dcmOverwritePolicy>`",string,"Specifies behavior on receive of objects, which SOP Instance UID matches a previous received object. May be overwritten by configured values for particular Archive Network AEs.
 
     Enumerated values:
 
@@ -190,13 +190,25 @@ DICOM Archive Device related information
 
     SAME_SOURCE
 
-    SAME_SERIES
-
-    SAME_SOURCE_AND_SERIES
-
     EVEN_WITH_EQUAL_DIGEST
 
     (dcmOverwritePolicy)"
+    "
+    .. _dcmRelationalMismatchPolicy:
+
+    :ref:`Relational Mismatch Policy <dcmRelationalMismatchPolicy>`",string,"Specifies behavior on receive of objects, which SOP Instance UID matches a previous received object belonging to a different Series. May be overwritten by configured values for particular Archive Network AEs.
+
+    Enumerated values:
+
+    IGNORE
+
+    REJECT
+
+    OVERWRITE
+
+    STORE_ADDITIONALLY
+
+    (dcmRelationalMismatchPolicy)"
     "
     .. _dcmRecordAttributeModification:
 
