@@ -16,9 +16,15 @@ Store Access Control ID Rule
     "
     .. _dcmStoreAccessControlID:
 
-    :ref:`Store Access Control ID <dcmStoreAccessControlID>`",string,"Access Control ID assigned to Studies which attributes match all conditions
+    :ref:`Store Access Control ID <dcmStoreAccessControlID>`",string,"Access Control ID assigned to whole Studies or individual Series which attributes match all conditions.
 
     (dcmStoreAccessControlID)"
+    "
+    .. _dcmAccessControlSeriesIndividually:
+
+    :ref:`Access Control Series Individually <dcmAccessControlSeriesIndividually>`",boolean,"Indicates if access of series should be controlled individually or not.
+
+    (dcmAccessControlSeriesIndividually)"
     "
     .. _dcmRulePriority:
 
