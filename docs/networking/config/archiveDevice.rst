@@ -1946,13 +1946,13 @@ DICOM Archive Device related information
     "
     .. _dcmXRoadProperty:
 
-    :ref:`X-Road Property(s) <dcmXRoadProperty>`",string,"Properties for accessing Estonian National Patient Registry in format <name>=<value>
+    :ref:`X-Road Property(s) <dcmXRoadProperty>`",string,"Properties for accessing Estonian National Patient Registry in format {name}={value}
 
     (dcmXRoadProperty)"
     "
     .. _dcmImpaxReportProperty:
 
-    :ref:`Impax Report Property(s) <dcmImpaxReportProperty>`",string,"Properties for accessing Agfa Impax Report Service in format <name>=<value>
+    :ref:`Impax Report Property(s) <dcmImpaxReportProperty>`",string,"Properties for accessing Agfa Impax Report Service in format {name}={value}
 
     (dcmImpaxReportProperty)"
 
