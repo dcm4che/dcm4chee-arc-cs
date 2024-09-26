@@ -240,6 +240,12 @@ Storage Descriptor
 
     (dcmExportStorageID)"
     "
+    .. _dcmSingleExportStorageByStudy:
+
+    :ref:`Single Export Storage by Study <dcmSingleExportStorageByStudy>`",boolean,"Indicates that objects of one Study are NOT distributed over several Export Storages.
+
+    (dcmSingleExportStorageByStudy)"
+    "
     .. _dcmRetrieveCacheStorageID:
 
     :ref:`Retrieve Cache Storage ID <dcmRetrieveCacheStorageID>`",string,"Specifies another Storage to which objects are copied in parallel on retrieve to increase the performance on accessing storage systems which provides more bandwidth using multiple connections in parallel.
