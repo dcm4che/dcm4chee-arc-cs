@@ -67,6 +67,7 @@ Patient Record audits on Incoming HL7 Messages
 
 Following sample messages show audits emitted on HL7 transactions. Audit messages for Patient Create / Update may be
 emitted on receive of any of the following HL7 messages :
+
 - ADT^A01
 - ADT^A02
 - ADT^A03
@@ -294,6 +295,7 @@ Patient READ on receive of HL7 Appointments
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Applicable for following HL7 messages :
+
 - SIU^S12
 - SIU^S13
 - SIU^S15

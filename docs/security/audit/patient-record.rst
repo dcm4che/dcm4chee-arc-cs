@@ -107,4 +107,4 @@ Sample Messages
 
 .. toctree::
 
-   audit/patient-record-sample-messages
+   patient-record-sample-messages
