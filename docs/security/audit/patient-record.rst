@@ -169,7 +169,7 @@ Patient created on receive of MPPS
 Patient Record audits on Incoming HL7 Messages
 ..............................................
 
-Following sample messages show audits emitted on HL7 transactions. Audit messages for Patient Create / Update may be
+Following sample messages show audits emitted on receive of HL7 messages. Audit messages for Patient Create / Update may be
 emitted on receive of any of the following HL7 messages :
 
 - ADT^A01
@@ -258,11 +258,77 @@ Patients demographics updated on receive of HL7
         </ParticipantObjectIdentification>
     </AuditMessage>
 
+Patients identifier changed
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Applicable for ADT^A47 message.
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+        <EventIdentification EventActionCode="U" EventDateTime="2024-09-02T09:42:02.150+02:00" EventOutcomeIndicator="0">
+            <EventID csd-code="110110" codeSystemName="DCM" originalText="Patient Record"/>
+        </EventIdentification>
+        <ActiveParticipant UserID="PAMSimulator|IHE" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID"/>
+            <UserIDTypeCode csd-code="HL7APP" codeSystemName="99DCM4CHEE" originalText="Application and Facility"/>
+        </ActiveParticipant>
+        <ActiveParticipant UserID="DCM4CHEE|DCM4CHEE" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID"/>
+            <UserIDTypeCode csd-code="HL7APP" codeSystemName="99DCM4CHEE" originalText="Application and Facility"/>
+        </ActiveParticipant>
+        <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+            <AuditSourceTypeCode csd-code="4"/>
+        </AuditSourceIdentification>
+        <ParticipantObjectIdentification ParticipantObjectID="MEE4NEW-54798^^^MEE4&amp;1.2.3.4.5.6.7&amp;ISO^PI" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+            <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
+            <ParticipantObjectName>Berger^Oliver^^^^^L</ParticipantObjectName>
+            <ParticipantObjectDetail type="HL7v2 Message" value="TVNIfF5+XCZ8UEFNU2ltdWxhdG9yfElIRXxEQ000Q0hFRXxEQ000Q0hFRXwyMDE2MDYwMjE0MzcwNHx8QURUXkE0N15BRFRfQTMwfDIwMTYwNjAyMTQzNzA0fFB8Mi41fHx8fHx8QVNDSUlbQ1JdDQpQSUR8fHxNRUU0TkVXLTU0Nzk4Xl5eTUVFNCYxLjIuMy40LjUuNi43JklTT15QSXx8QmVyZ2VyXk9saXZlcl5eXl5eTHxTY2h1c3Rlcl5eXl5eXk18MTk5NDEwMjV8TXx8fEdhc3RlaWd3ZWdeXkhhbGxlaW5eXjU0MDBeQVVUfHxeUFJOXlBIfHx8fENBVHwxMTIyOV5eXklIRVBBTSYxLjMuNi4xLjQuMS4xMjU1OS4xMS4xLjIuMi41JklTT15BTnx8fHx8fHx8fHx8fHxOW0NSXQ0KTVJHfE1FRTRORVctNTQ3OTheXl5NRUU0fHx8fHx8QmVyZ2VyXk9saXZlcl5eXl5eTA0K"/>
+            <ParticipantObjectDetail type="MSH-9" value="QURUXkE0Nw=="/>
+            <ParticipantObjectDetail type="MSH-10" value="MjAxNjA2MDIxNDM3MDQ="/>
+            <ParticipantObjectDetail type="HL7v2 Message" value="TVNIfF5+XCZ8RENNNENIRUV8RENNNENIRUV8UEFNU2ltdWxhdG9yfElIRXwyMDI0MDkwMjA5NDIwMi4wODN8fEFDS15BNDdeQUNLfDEzMjg3MjY5ODl8UHwyLjV8fHx8fHxBU0NJSVtDUl0NTVNBfEFBfDIwMTYwNjAyMTQzNzA0fA=="/>
+            <ParticipantObjectDetail type="MSH-9" value="QUNLXkE0Nw=="/>
+            <ParticipantObjectDetail type="MSH-10" value="MTMyODcyNjk4OQ=="/>
+        </ParticipantObjectIdentification>
+    </AuditMessage>
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+        <EventIdentification EventActionCode="D" EventDateTime="2024-09-02T09:42:02.150+02:00" EventOutcomeIndicator="0">
+            <EventID csd-code="110110" codeSystemName="DCM" originalText="Patient Record"/>
+        </EventIdentification>
+        <ActiveParticipant UserID="PAMSimulator|IHE" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID"/>
+            <UserIDTypeCode csd-code="HL7APP" codeSystemName="99DCM4CHEE" originalText="Application and Facility"/>
+        </ActiveParticipant>
+        <ActiveParticipant UserID="DCM4CHEE|DCM4CHEE" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID"/>
+            <UserIDTypeCode csd-code="HL7APP" codeSystemName="99DCM4CHEE" originalText="Application and Facility"/>
+        </ActiveParticipant>
+        <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+            <AuditSourceTypeCode csd-code="4"/>
+        </AuditSourceIdentification>
+        <ParticipantObjectIdentification ParticipantObjectID="MEE4NEW-54798^^^MEE4" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+            <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
+            <ParticipantObjectName>Berger^Oliver^^^^^L</ParticipantObjectName>
+            <ParticipantObjectDetail type="HL7v2 Message" value="TVNIfF5+XCZ8UEFNU2ltdWxhdG9yfElIRXxEQ000Q0hFRXxEQ000Q0hFRXwyMDE2MDYwMjE0MzcwNHx8QURUXkE0N15BRFRfQTMwfDIwMTYwNjAyMTQzNzA0fFB8Mi41fHx8fHx8QVNDSUlbQ1JdDQpQSUR8fHxNRUU0TkVXLTU0Nzk4Xl5eTUVFNCYxLjIuMy40LjUuNi43JklTT15QSXx8QmVyZ2VyXk9saXZlcl5eXl5eTHxTY2h1c3Rlcl5eXl5eXk18MTk5NDEwMjV8TXx8fEdhc3RlaWd3ZWdeXkhhbGxlaW5eXjU0MDBeQVVUfHxeUFJOXlBIfHx8fENBVHwxMTIyOV5eXklIRVBBTSYxLjMuNi4xLjQuMS4xMjU1OS4xMS4xLjIuMi41JklTT15BTnx8fHx8fHx8fHx8fHxOW0NSXQ0KTVJHfE1FRTRORVctNTQ3OTheXl5NRUU0fHx8fHx8QmVyZ2VyXk9saXZlcl5eXl5eTA0K"/>
+            <ParticipantObjectDetail type="MSH-9" value="QURUXkE0Nw=="/>
+            <ParticipantObjectDetail type="MSH-10" value="MjAxNjA2MDIxNDM3MDQ="/>
+            <ParticipantObjectDetail type="HL7v2 Message" value="TVNIfF5+XCZ8RENNNENIRUV8RENNNENIRUV8UEFNU2ltdWxhdG9yfElIRXwyMDI0MDkwMjA5NDIwMi4wODN8fEFDS15BNDdeQUNLfDEzMjg3MjY5ODl8UHwyLjV8fHx8fHxBU0NJSVtDUl0NTVNBfEFBfDIwMTYwNjAyMTQzNzA0fA=="/>
+            <ParticipantObjectDetail type="MSH-9" value="QUNLXkE0Nw=="/>
+            <ParticipantObjectDetail type="MSH-10" value="MTMyODcyNjk4OQ=="/>
+        </ParticipantObjectIdentification>
+    </AuditMessage>
+
 Patients merged on receive of HL7
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Applicable for ADT^A40 message.
-- Applicable similarly for Change Patient Identifier on receive of ADT^A47.
 
 .. code-block:: xml
 
@@ -1419,8 +1485,8 @@ Notify HL7 Receivers on receive of Study - Using DCM2HL7Exporter triggered by RE
         </ParticipantObjectIdentification>
     </AuditMessage>
 
-Notify HL7 Receivers on receive of Study - Using DCM2HL7Exporter triggered by Scheduler
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Notify HL7 Receivers on receive of Study - Using DCM2HL7Exporter triggered by Export Scheduler
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: xml
 
