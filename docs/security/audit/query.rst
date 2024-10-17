@@ -331,8 +331,8 @@ Message Structure
    ParticipantObjectIDTypeCode, M,  "EV (2, RFC-3881, 'Patient Number')"
    ParticipantObjectName, U, Patient Name
 
-Sample Message
---------------
+Sample Messages
+---------------
 
 Query triggered using QIDO-RS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
