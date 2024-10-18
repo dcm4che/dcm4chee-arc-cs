@@ -653,8 +653,11 @@ Partial Rejection of Expired Study by Scheduler
         </ParticipantObjectIdentification>
     </AuditMessage>
 
-Lifecycle Management - Apply Retention Policy REST API
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Lifecycle Management
+....................
+
+Apply Retention Policy REST API
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Applicable for expiration of studies by `Apply Retention Policy REST Service <https://petstore.swagger.io/index.html?url=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-ui2/src/swagger/openapi.json#/IOCM-RS/applyRetentionPolicy>`_ REST API
 
@@ -687,8 +690,8 @@ Applicable for expiration of studies by `Apply Retention Policy REST Service <ht
        </ParticipantObjectIdentification>
     </AuditMessage>
 
-Lifecycle Management - Apply Retention Policy by HL7
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Apply Retention Policy by HL7
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Applicable for expiration of studies by `HL7 Study Retention Policy <https://dcm4chee-arc-cs.readthedocs.io/en/latest/networking/config/hl7StudyRetentionPolicy.html>`_
 
@@ -724,7 +727,7 @@ Applicable for expiration of studies by `HL7 Study Retention Policy <https://dcm
 
 
 Retrieve of objects from fallback C-MOVE SCP
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+............................................
 
 Applicable only if `Fallback C-MOVE SCP <https://dcm4chee-arc-cs.readthedocs.io/en/latest/networking/config/archiveDevice.html#dcmfallbackcmovescp>`_ is configured
 
