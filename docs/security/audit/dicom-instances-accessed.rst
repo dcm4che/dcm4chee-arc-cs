@@ -588,78 +588,8 @@ Study Size Calculation
 Partial Rejection of Studies
 ............................
 
-Partial Rejection of Study by DICOM C-STORE
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: xml
-
-    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-    <AuditMessage
-    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-    	<EventIdentification EventActionCode="D" EventDateTime="2023-11-22T12:45:53.042+01:00" EventOutcomeIndicator="0">
-    		<EventID csd-code="110103" codeSystemName="DCM" originalText="DICOM Instances Accessed"/>
-    		<EventOutcomeDescription>Data Retention Policy Expired</EventOutcomeDescription>
-    	</EventIdentification>
-    	<ActiveParticipant UserID="DCM4CHEE" AlternativeUserID="39489" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-    		<UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
-    	</ActiveParticipant>
-    	<ActiveParticipant UserID="STORESCU" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="view-localhost" NetworkAccessPointTypeCode="1">
-    		<UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
-    	</ActiveParticipant>
-    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
-    		<AuditSourceTypeCode csd-code="4"/>
-    	</AuditSourceIdentification>
-    	<ParticipantObjectIdentification ParticipantObjectID="1.2.840.113674.1115.261.200" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
-    		<ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM"/>
-    		<ParticipantObjectDetail type="StudyDate" value="MTk5NTA2MDg="/>
-    		<ParticipantObjectDescription>
-    			<Accession Number="GE0005"/>
-    			<SOPClass UID="1.2.840.10008.5.1.4.1.1.4" NumberOfInstances="9"/>
-    		</ParticipantObjectDescription>
-    	</ParticipantObjectIdentification>
-    	<ParticipantObjectIdentification ParticipantObjectID="GE1115^^^DCM4CHEE.A0DE4BE6.null" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
-    		<ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
-    		<ParticipantObjectName>DAVIDSON^JOSHUA</ParticipantObjectName>
-    	</ParticipantObjectIdentification>
-    </AuditMessage>
-
-Partial Rejection of Study by STOW
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: xml
-
-    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-    <AuditMessage
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-        <EventIdentification EventActionCode="D" EventDateTime="2023-12-04T09:55:28.062+01:00" EventOutcomeIndicator="0">
-            <EventID csd-code="110103" codeSystemName="DCM" originalText="DICOM Instances Accessed"/>
-            <EventOutcomeDescription>Data Retention Policy Expired</EventOutcomeDescription>
-        </EventIdentification>
-        <ActiveParticipant UserID="http://localhost:8880/dcm4chee-arc/aets/DCM4CHEE/rs/studies" AlternativeUserID="10469" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-            <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
-        </ActiveParticipant>
-        <ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
-            <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
-        </ActiveParticipant>
-        <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
-            <AuditSourceTypeCode csd-code="4"/>
-        </AuditSourceIdentification>
-        <ParticipantObjectIdentification ParticipantObjectID="1.2.840.113674.1118.54.200" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
-            <ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM"/>
-            <ParticipantObjectDetail type="StudyDate" value="MTk5NTA3MjU="/>
-            <ParticipantObjectDescription>
-                <Accession Number="GE0002"/>
-                <SOPClass UID="1.2.840.10008.5.1.4.1.1.4" NumberOfInstances="9"/>
-            </ParticipantObjectDescription>
-        </ParticipantObjectIdentification>
-        <ParticipantObjectIdentification ParticipantObjectID="GE1118^^^JMS" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
-            <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
-            <ParticipantObjectName>BUXTON^STEVEN</ParticipantObjectName>
-        </ParticipantObjectIdentification>
-    </AuditMessage>
-
-Partial Rejection of Study by REST API
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Using REST API
+^^^^^^^^^^^^^^
 
 .. code-block:: xml
 
@@ -693,40 +623,78 @@ Partial Rejection of Study by REST API
         </ParticipantObjectIdentification>
     </AuditMessage>
 
-Partial Rejection of Expired Study by Scheduler
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+On store of rejection note over DICOM C-Store
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage
+    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+    	<EventIdentification EventActionCode="D" EventDateTime="2023-11-22T12:45:53.042+01:00" EventOutcomeIndicator="0">
+    		<EventID csd-code="110103" codeSystemName="DCM" originalText="DICOM Instances Accessed"/>
+    		<EventOutcomeDescription>Data Retention Policy Expired</EventOutcomeDescription>
+    	</EventIdentification>
+    	<ActiveParticipant UserID="DCM4CHEE" AlternativeUserID="39489" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    		<UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
+    	</ActiveParticipant>
+    	<ActiveParticipant UserID="STORESCU" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="view-localhost" NetworkAccessPointTypeCode="1">
+    		<UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
+    	</ActiveParticipant>
+    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+    		<AuditSourceTypeCode csd-code="4"/>
+    	</AuditSourceIdentification>
+    	<ParticipantObjectIdentification ParticipantObjectID="1.2.840.113674.1115.261.200" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+    		<ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM"/>
+    		<ParticipantObjectDetail type="StudyDate" value="MTk5NTA2MDg="/>
+    		<ParticipantObjectDescription>
+    			<Accession Number="GE0005"/>
+    			<SOPClass UID="1.2.840.10008.5.1.4.1.1.4" NumberOfInstances="9"/>
+    		</ParticipantObjectDescription>
+    	</ParticipantObjectIdentification>
+    	<ParticipantObjectIdentification ParticipantObjectID="GE1115^^^DCM4CHEE.A0DE4BE6.null" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+    		<ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
+    		<ParticipantObjectName>DAVIDSON^JOSHUA</ParticipantObjectName>
+    	</ParticipantObjectIdentification>
+    </AuditMessage>
+
+On store of rejection note by STOW-RS REST API
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: xml
 
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <AuditMessage
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-        <EventIdentification EventActionCode="D" EventDateTime="2023-11-22T09:59:09.996+01:00" EventOutcomeIndicator="0">
+        <EventIdentification EventActionCode="D" EventDateTime="2023-12-04T09:55:28.062+01:00" EventOutcomeIndicator="0">
             <EventID csd-code="110103" codeSystemName="DCM" originalText="DICOM Instances Accessed"/>
             <EventOutcomeDescription>Data Retention Policy Expired</EventOutcomeDescription>
         </EventIdentification>
-        <ActiveParticipant UserID="dcm4chee-arc" AlternativeUserID="12384" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-            <UserIDTypeCode csd-code="113877" codeSystemName="DCM" originalText="Device Name"/>
+        <ActiveParticipant UserID="http://localhost:8880/dcm4chee-arc/aets/DCM4CHEE/rs/studies" AlternativeUserID="10469" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
+        </ActiveParticipant>
+        <ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+            <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
         </ActiveParticipant>
         <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
             <AuditSourceTypeCode csd-code="4"/>
         </AuditSourceIdentification>
-        <ParticipantObjectIdentification ParticipantObjectID="1.2.840.113674.1115.261.200" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+        <ParticipantObjectIdentification ParticipantObjectID="1.2.840.113674.1118.54.200" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
             <ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM"/>
-            <ParticipantObjectDetail type="StudyDate" value="MTk5NTA2MDg="/>
+            <ParticipantObjectDetail type="StudyDate" value="MTk5NTA3MjU="/>
             <ParticipantObjectDescription>
-                <Accession Number="GE0005"/>
-                <SOPClass UID="1.2.840.10008.5.1.4.1.1.4" NumberOfInstances="1"/>
+                <Accession Number="GE0002"/>
+                <SOPClass UID="1.2.840.10008.5.1.4.1.1.4" NumberOfInstances="9"/>
             </ParticipantObjectDescription>
         </ParticipantObjectIdentification>
-        <ParticipantObjectIdentification ParticipantObjectID="GE1115^^^DCM4CHEE.A0DE4BE6.null" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+        <ParticipantObjectIdentification ParticipantObjectID="GE1118^^^JMS" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
             <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
-            <ParticipantObjectName>DAVIDSON^JOSHUA</ParticipantObjectName>
+            <ParticipantObjectName>BUXTON^STEVEN</ParticipantObjectName>
         </ParticipantObjectIdentification>
     </AuditMessage>
 
-Partial Rejection of Study in external archive
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In external archive
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: xml
 
@@ -762,8 +730,8 @@ Partial Rejection of Study in external archive
         </ParticipantObjectIdentification>
     </AuditMessage>
 
-Partial rejection of expired study by Reject Expired Studies Scheduler
-......................................................................
+Expired study partially rejected by Reject Expired Studies Scheduler
+....................................................................
 
 .. code-block:: xml
 
@@ -794,8 +762,8 @@ Partial rejection of expired study by Reject Expired Studies Scheduler
         </ParticipantObjectIdentification>
     </AuditMessage>
 
-Partial rejection of previous study on subsequent receive of objects with same SOP Instance UID but different Study/Series Instance UIDs
-........................................................................................................................................
+Previous study partially rejected on subsequent receive of objects with same SOP Instance UID but different Study/Series Instance UIDs
+......................................................................................................................................
 
 .. code-block:: xml
 

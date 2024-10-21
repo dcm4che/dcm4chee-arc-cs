@@ -76,18 +76,18 @@ Audit Messages
 .. toctree::
 
    audit/general-message
-   audit/application-activity
-   audit/audit-log-used
    audit/begin-transferring-dicom-instances
-   audit/data-export
-   audit/dicom-instances-accessed
    audit/dicom-instances-transferred
+   audit/dicom-instances-accessed
    audit/dicom-study-deleted
-   audit/query
    audit/patient-record
    audit/procedure-record
    audit/security-alert
+   audit/query
+   audit/application-activity
+   audit/data-export
    audit/user-authentication
+   audit/audit-log-used
 
 Audit Trail Message Transmission Profile - SYSLOG-TLS
 -----------------------------------------------------
