@@ -984,15 +984,15 @@ QStar
 Applicable for `Verify Access State of objects stored on QStar Tape File System <https://github.com/dcm4che/dcm4chee-arc-light/issues/4131>`_
 
 .. csv-table:: QStar Access State - Event Outcome Mapping
-   :name: event-identification-instances-transferred
+   :name: qstar-access-state-event-outcome-mapping
    :widths: 30, 5, 65
    :header: fetched Access State, Outcome Indicator, Outcome Description
 
    0 - ACCESS_STATE_NONE, 8, QStar Access State: Not present
    1 - ACCESS_STATE_EMPTY, 8, QStar Access State: Created but no data written
-   2 - ACCESS_STATE_UNSTABLE, 4, QStar Access State: Created, primary only
+   2 - ACCESS_STATE_UNSTABLE, 4, QStar Access State: Created - primary only
    3 - ACCESS_STATE_STABLE, 0,
-   4 - ACCESS_STATE_OUT_OF_CACHE, 4, QStar Access State: Fully migrated, out of cache
+   4 - ACCESS_STATE_OUT_OF_CACHE, 4, QStar Access State: Fully migrated - out of cache
    5 - ACCESS_STATE_OFFLINE, 4, QStar Access State: Offline
    ASM WEB Service returns error status, 4, Failed to get QStar Access State
 
