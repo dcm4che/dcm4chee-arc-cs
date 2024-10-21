@@ -255,8 +255,8 @@ Update Study Expiration Date - Triggered by REST API
         </ParticipantObjectIdentification>
     </AuditMessage>
 
-Update Series Expiration Date
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Update Series Expiration Date - Triggered by REST API
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: xml
 
@@ -292,7 +292,10 @@ Update Series Expiration Date
 DICOM Instances Accessed audits on Update Access Control ID
 ...........................................................
 
+Applicable for `Study Access Control Services <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/ACCESS-RS>`_
+
 Update Study Access Control ID
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: xml
 

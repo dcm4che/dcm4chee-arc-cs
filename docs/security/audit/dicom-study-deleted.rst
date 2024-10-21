@@ -154,8 +154,11 @@ Message Structure
 Sample Messages
 ---------------
 
-Study completely rejected using unsecured archive UI
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Study completely rejected
+.........................
+
+Using REST API
+^^^^^^^^^^^^^^
 
 .. code-block:: xml
 
@@ -189,8 +192,8 @@ Study completely rejected using unsecured archive UI
     	</ParticipantObjectIdentification>
     </AuditMessage>
 
-Study completely rejected on store of rejection note by STOW-RS REST Services
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+On store of rejection note by STOW-RS REST API
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 `Store over Web of DICOM Objects <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/STOW-RS>`_ REST Services
 
@@ -226,8 +229,8 @@ Study completely rejected on store of rejection note by STOW-RS REST Services
     	</ParticipantObjectIdentification>
     </AuditMessage>
 
-Study completely rejected on store of rejection note over DICOM C-Store
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+On store of rejection note over DICOM C-Store
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: xml
 
@@ -261,207 +264,8 @@ Study completely rejected on store of rejection note over DICOM C-Store
     	</ParticipantObjectIdentification>
     </AuditMessage>
 
-Study permanently deleted using unsecured archive UI
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: xml
-
-    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-    <AuditMessage
-    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-    	<EventIdentification EventActionCode="D" EventDateTime="2023-11-14T19:35:08.600+01:00" EventOutcomeIndicator="0">
-    		<EventID csd-code="110105" codeSystemName="DCM" originalText="DICOM Study Deleted"/>
-    	</EventIdentification>
-    	<ActiveParticipant UserID="http://localhost:8880/dcm4chee-arc/aets/DCM4CHEE/rs/studies/1.3.12.2.1107.5.8.1.12345678.199508041416590859569" AlternativeUserID="40918" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-    		<UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
-    	</ActiveParticipant>
-    	<ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
-    		<UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
-    	</ActiveParticipant>
-    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
-    		<AuditSourceTypeCode csd-code="4"/>
-    	</AuditSourceIdentification>
-    	<ParticipantObjectIdentification ParticipantObjectID="1.3.12.2.1107.5.8.1.12345678.199508041416590859569" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
-    		<ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM"/>
-    		<ParticipantObjectDetail type="StudyDate" value="MTk5NTA2MDI="/>
-    		<ParticipantObjectDescription>
-    			<Accession Number="SMS000018"/>
-    			<SOPClass UID="1.2.840.10008.5.1.4.1.1.2" NumberOfInstances="9"/>
-    		</ParticipantObjectDescription>
-    	</ParticipantObjectIdentification>
-    	<ParticipantObjectIdentification ParticipantObjectID="SMS530102^^^DCM4CHEE.95FB6349.06B2DF89" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
-    		<ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
-    		<ParticipantObjectName>COTTA^ANNA</ParticipantObjectName>
-    	</ParticipantObjectIdentification>
-    </AuditMessage>
-
-Study permanently deleted on deletion of patient using unsecured archive UI
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: xml
-
-    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-    <AuditMessage
-    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-    	<EventIdentification EventActionCode="D" EventDateTime="2023-11-14T19:43:44.555+01:00" EventOutcomeIndicator="0">
-    		<EventID csd-code="110105" codeSystemName="DCM" originalText="DICOM Study Deleted"/>
-    	</EventIdentification>
-    	<ActiveParticipant UserID="http://localhost:8880/dcm4chee-arc/aets/DCM4CHEE/rs/patients/ALGO00001%5E%5E%5EDCM4CHEE.6347B1A7.FE005DEA" AlternativeUserID="40918" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-    		<UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
-    	</ActiveParticipant>
-    	<ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
-    		<UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
-    	</ActiveParticipant>
-    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
-    		<AuditSourceTypeCode csd-code="4"/>
-    	</AuditSourceIdentification>
-    	<ParticipantObjectIdentification ParticipantObjectID="2.16.376.1.1.511752826.1.2.21313.5230164" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
-    		<ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM"/>
-    		<ParticipantObjectDescription>
-    			<Accession Number="ALGO00000"/>
-    			<SOPClass UID="1.2.840.10008.5.1.4.1.1.7" NumberOfInstances="5"/>
-    			<SOPClass UID="1.2.840.10008.5.1.4.1.1.2" NumberOfInstances="14"/>
-    		</ParticipantObjectDescription>
-    	</ParticipantObjectIdentification>
-    	<ParticipantObjectIdentification ParticipantObjectID="ALGO00001^^^DCM4CHEE.6347B1A7.FE005DEA" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
-    		<ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
-    		<ParticipantObjectName>PROBST^KATHY</ParticipantObjectName>
-    	</ParticipantObjectIdentification>
-    </AuditMessage>
-
-Study deleted on reimporting a study using unsecured archive UI
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: xml
-
-    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-    <AuditMessage
-    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-    	<EventIdentification EventActionCode="D" EventDateTime="2023-12-04T10:35:24.488+01:00" EventOutcomeIndicator="0">
-    		<EventID csd-code="110105" codeSystemName="DCM" originalText="DICOM Study Deleted"/>
-    	</EventIdentification>
-    	<ActiveParticipant UserID="http://localhost:8880/dcm4chee-arc/aets/DCM4CHEE/rs/studies/1.2.840.113674.1118.54.200/reimport" AlternativeUserID="10469" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-    		<UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
-    	</ActiveParticipant>
-    	<ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
-    		<UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
-    	</ActiveParticipant>
-    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
-    		<AuditSourceTypeCode csd-code="4"/>
-    	</AuditSourceIdentification>
-    	<ParticipantObjectIdentification ParticipantObjectID="1.2.840.113674.1118.54.200" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
-    		<ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM"/>
-    		<ParticipantObjectDetail type="StudyDate" value="MTk5NTA3MjU="/>
-    		<ParticipantObjectDescription>
-    			<Accession Number="GE0002"/>
-    			<SOPClass UID="1.2.840.10008.5.1.4.1.1.4" NumberOfInstances="18"/>
-    		</ParticipantObjectDescription>
-    	</ParticipantObjectIdentification>
-    	<ParticipantObjectIdentification ParticipantObjectID="GE1118^^^JMS" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
-    		<ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
-    		<ParticipantObjectName>BUXTON^STEVEN</ParticipantObjectName>
-    	</ParticipantObjectIdentification>
-    </AuditMessage>
-
-Expired study completely rejected by Reject Expired Studies Scheduler
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: xml
-
-    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-    <AuditMessage
-    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-    	<EventIdentification EventActionCode="D" EventDateTime="2023-11-22T09:51:09.577+01:00" EventOutcomeIndicator="0">
-    		<EventID csd-code="110105" codeSystemName="DCM" originalText="DICOM Study Deleted"/>
-    		<EventOutcomeDescription>Data Retention Policy Expired</EventOutcomeDescription>
-    	</EventIdentification>
-    	<ActiveParticipant UserID="dcm4chee-arc" AlternativeUserID="12384" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-    		<UserIDTypeCode csd-code="113877" codeSystemName="DCM" originalText="Device Name"/>
-    	</ActiveParticipant>
-    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
-    		<AuditSourceTypeCode csd-code="4"/>
-    	</AuditSourceIdentification>
-    	<ParticipantObjectIdentification ParticipantObjectID="1.2.840.113674.1115.261.200" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
-    		<ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM"/>
-    		<ParticipantObjectDetail type="StudyDate" value="MTk5NTA2MDg="/>
-    		<ParticipantObjectDescription>
-    			<Accession Number="GE0005"/>
-    			<SOPClass UID="1.2.840.10008.5.1.4.1.1.4" NumberOfInstances="10"/>
-    		</ParticipantObjectDescription>
-    	</ParticipantObjectIdentification>
-    	<ParticipantObjectIdentification ParticipantObjectID="GE1115^^^DCM4CHEE.A0DE4BE6.null" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
-    		<ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
-    		<ParticipantObjectName>DAVIDSON^JOSHUA</ParticipantObjectName>
-    	</ParticipantObjectIdentification>
-    </AuditMessage>
-
-Study completely deleted by Purge Storage Scheduler
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: xml
-
-    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-    <AuditMessage
-    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-    	<EventIdentification EventActionCode="D" EventDateTime="2023-11-14T20:57:03.604+01:00" EventOutcomeIndicator="0">
-    		<EventID csd-code="110105" codeSystemName="DCM" originalText="DICOM Study Deleted"/>
-    	</EventIdentification>
-    	<ActiveParticipant UserID="dcm4chee-arc" AlternativeUserID="54573" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-    		<UserIDTypeCode csd-code="113877" codeSystemName="DCM" originalText="Device Name"/>
-    	</ActiveParticipant>
-    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
-    		<AuditSourceTypeCode csd-code="4"/>
-    	</AuditSourceIdentification>
-    	<ParticipantObjectIdentification ParticipantObjectID="2.16.376.1.1.511752826.1.2.3390529.6263391" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
-    		<ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM"/>
-    		<ParticipantObjectDescription>
-    			<Accession Number="ALGO00002"/>
-    			<SOPClass UID="1.2.840.10008.5.1.4.1.1.7" NumberOfInstances="5"/>
-    			<SOPClass UID="1.2.840.10008.5.1.4.1.1.2" NumberOfInstances="4"/>
-    		</ParticipantObjectDescription>
-    	</ParticipantObjectIdentification>
-    	<ParticipantObjectIdentification ParticipantObjectID="ALGO00003^^^DCM4CHEE.A2100E2B.FFEDA3D5" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
-    		<ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
-    		<ParticipantObjectName>PRITCHET^LAURIE</ParticipantObjectName>
-    	</ParticipantObjectIdentification>
-    </AuditMessage>
-
-Previous study completely rejected on subsequent receive of objects with same SOP Instance UID but different Study/Series Instance UIDs
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: xml
-
-    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-    <AuditMessage
-    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-    	<EventIdentification EventActionCode="D" EventDateTime="2023-11-22T11:36:47.213+01:00" EventOutcomeIndicator="0">
-    		<EventID csd-code="110105" codeSystemName="DCM" originalText="DICOM Study Deleted"/>
-    	</EventIdentification>
-    	<ActiveParticipant UserID="DCM4CHEE" AlternativeUserID="12384" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-    		<UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
-    	</ActiveParticipant>
-    	<ActiveParticipant UserID="STORESCU" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="view-localhost" NetworkAccessPointTypeCode="1">
-    		<UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
-    	</ActiveParticipant>
-    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
-    		<AuditSourceTypeCode csd-code="4"/>
-    	</AuditSourceIdentification>
-    	<ParticipantObjectIdentification ParticipantObjectID="1.2.840.113674.1115.261.200" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
-    		<ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM"/>
-    		<ParticipantObjectDetail type="StudyDate" value="MTk5NTA2MDg="/>
-    		<ParticipantObjectDescription>
-    			<Accession Number="GE0005"/>
-    			<SOPClass UID="1.2.840.10008.5.1.4.1.1.4" NumberOfInstances="10"/>
-    		</ParticipantObjectDescription>
-    	</ParticipantObjectIdentification>
-    	<ParticipantObjectIdentification ParticipantObjectID="GE1115^^^DCM4CHEE.A0DE4BE6.null" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
-    		<ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
-    		<ParticipantObjectName>DAVIDSON^JOSHUA</ParticipantObjectName>
-    	</ParticipantObjectIdentification>
-    </AuditMessage>
-
-Study completely rejected in external archive
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In external archive
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: xml
 
@@ -494,5 +298,207 @@ Study completely rejected in external archive
     	<ParticipantObjectIdentification ParticipantObjectID="FUJI00007" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
     		<ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
     		<ParticipantObjectName>ITO^TOSHIAKI</ParticipantObjectName>
+    	</ParticipantObjectIdentification>
+    </AuditMessage>
+
+Study permanently deleted
+.........................
+
+Using REST API
+^^^^^^^^^^^^^^
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage
+    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+    	<EventIdentification EventActionCode="D" EventDateTime="2023-11-14T19:35:08.600+01:00" EventOutcomeIndicator="0">
+    		<EventID csd-code="110105" codeSystemName="DCM" originalText="DICOM Study Deleted"/>
+    	</EventIdentification>
+    	<ActiveParticipant UserID="http://localhost:8880/dcm4chee-arc/aets/DCM4CHEE/rs/studies/1.3.12.2.1107.5.8.1.12345678.199508041416590859569" AlternativeUserID="40918" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    		<UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
+    	</ActiveParticipant>
+    	<ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+    		<UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
+    	</ActiveParticipant>
+    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+    		<AuditSourceTypeCode csd-code="4"/>
+    	</AuditSourceIdentification>
+    	<ParticipantObjectIdentification ParticipantObjectID="1.3.12.2.1107.5.8.1.12345678.199508041416590859569" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+    		<ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM"/>
+    		<ParticipantObjectDetail type="StudyDate" value="MTk5NTA2MDI="/>
+    		<ParticipantObjectDescription>
+    			<Accession Number="SMS000018"/>
+    			<SOPClass UID="1.2.840.10008.5.1.4.1.1.2" NumberOfInstances="9"/>
+    		</ParticipantObjectDescription>
+    	</ParticipantObjectIdentification>
+    	<ParticipantObjectIdentification ParticipantObjectID="SMS530102^^^DCM4CHEE.95FB6349.06B2DF89" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+    		<ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
+    		<ParticipantObjectName>COTTA^ANNA</ParticipantObjectName>
+    	</ParticipantObjectIdentification>
+    </AuditMessage>
+
+On deletion of patient using REST API
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage
+    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+    	<EventIdentification EventActionCode="D" EventDateTime="2023-11-14T19:43:44.555+01:00" EventOutcomeIndicator="0">
+    		<EventID csd-code="110105" codeSystemName="DCM" originalText="DICOM Study Deleted"/>
+    	</EventIdentification>
+    	<ActiveParticipant UserID="http://localhost:8880/dcm4chee-arc/aets/DCM4CHEE/rs/patients/ALGO00001%5E%5E%5EDCM4CHEE.6347B1A7.FE005DEA" AlternativeUserID="40918" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    		<UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
+    	</ActiveParticipant>
+    	<ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+    		<UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
+    	</ActiveParticipant>
+    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+    		<AuditSourceTypeCode csd-code="4"/>
+    	</AuditSourceIdentification>
+    	<ParticipantObjectIdentification ParticipantObjectID="2.16.376.1.1.511752826.1.2.21313.5230164" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+    		<ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM"/>
+    		<ParticipantObjectDescription>
+    			<Accession Number="ALGO00000"/>
+    			<SOPClass UID="1.2.840.10008.5.1.4.1.1.7" NumberOfInstances="5"/>
+    			<SOPClass UID="1.2.840.10008.5.1.4.1.1.2" NumberOfInstances="14"/>
+    		</ParticipantObjectDescription>
+    	</ParticipantObjectIdentification>
+    	<ParticipantObjectIdentification ParticipantObjectID="ALGO00001^^^DCM4CHEE.6347B1A7.FE005DEA" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+    		<ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
+    		<ParticipantObjectName>PROBST^KATHY</ParticipantObjectName>
+    	</ParticipantObjectIdentification>
+    </AuditMessage>
+
+On reimporting a study using REST API
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage
+    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+    	<EventIdentification EventActionCode="D" EventDateTime="2023-12-04T10:35:24.488+01:00" EventOutcomeIndicator="0">
+    		<EventID csd-code="110105" codeSystemName="DCM" originalText="DICOM Study Deleted"/>
+    	</EventIdentification>
+    	<ActiveParticipant UserID="http://localhost:8880/dcm4chee-arc/aets/DCM4CHEE/rs/studies/1.2.840.113674.1118.54.200/reimport" AlternativeUserID="10469" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    		<UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
+    	</ActiveParticipant>
+    	<ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+    		<UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
+    	</ActiveParticipant>
+    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+    		<AuditSourceTypeCode csd-code="4"/>
+    	</AuditSourceIdentification>
+    	<ParticipantObjectIdentification ParticipantObjectID="1.2.840.113674.1118.54.200" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+    		<ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM"/>
+    		<ParticipantObjectDetail type="StudyDate" value="MTk5NTA3MjU="/>
+    		<ParticipantObjectDescription>
+    			<Accession Number="GE0002"/>
+    			<SOPClass UID="1.2.840.10008.5.1.4.1.1.4" NumberOfInstances="18"/>
+    		</ParticipantObjectDescription>
+    	</ParticipantObjectIdentification>
+    	<ParticipantObjectIdentification ParticipantObjectID="GE1118^^^JMS" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+    		<ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
+    		<ParticipantObjectName>BUXTON^STEVEN</ParticipantObjectName>
+    	</ParticipantObjectIdentification>
+    </AuditMessage>
+
+Purge Storage Scheduler triggered
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage
+    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+    	<EventIdentification EventActionCode="D" EventDateTime="2023-11-14T20:57:03.604+01:00" EventOutcomeIndicator="0">
+    		<EventID csd-code="110105" codeSystemName="DCM" originalText="DICOM Study Deleted"/>
+    	</EventIdentification>
+    	<ActiveParticipant UserID="dcm4chee-arc" AlternativeUserID="54573" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    		<UserIDTypeCode csd-code="113877" codeSystemName="DCM" originalText="Device Name"/>
+    	</ActiveParticipant>
+    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+    		<AuditSourceTypeCode csd-code="4"/>
+    	</AuditSourceIdentification>
+    	<ParticipantObjectIdentification ParticipantObjectID="2.16.376.1.1.511752826.1.2.3390529.6263391" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+    		<ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM"/>
+    		<ParticipantObjectDescription>
+    			<Accession Number="ALGO00002"/>
+    			<SOPClass UID="1.2.840.10008.5.1.4.1.1.7" NumberOfInstances="5"/>
+    			<SOPClass UID="1.2.840.10008.5.1.4.1.1.2" NumberOfInstances="4"/>
+    		</ParticipantObjectDescription>
+    	</ParticipantObjectIdentification>
+    	<ParticipantObjectIdentification ParticipantObjectID="ALGO00003^^^DCM4CHEE.A2100E2B.FFEDA3D5" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+    		<ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
+    		<ParticipantObjectName>PRITCHET^LAURIE</ParticipantObjectName>
+    	</ParticipantObjectIdentification>
+    </AuditMessage>
+
+Expired study completely rejected by Reject Expired Studies Scheduler
+.....................................................................
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage
+    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+    	<EventIdentification EventActionCode="D" EventDateTime="2023-11-22T09:51:09.577+01:00" EventOutcomeIndicator="0">
+    		<EventID csd-code="110105" codeSystemName="DCM" originalText="DICOM Study Deleted"/>
+    		<EventOutcomeDescription>Data Retention Policy Expired</EventOutcomeDescription>
+    	</EventIdentification>
+    	<ActiveParticipant UserID="dcm4chee-arc" AlternativeUserID="12384" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    		<UserIDTypeCode csd-code="113877" codeSystemName="DCM" originalText="Device Name"/>
+    	</ActiveParticipant>
+    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+    		<AuditSourceTypeCode csd-code="4"/>
+    	</AuditSourceIdentification>
+    	<ParticipantObjectIdentification ParticipantObjectID="1.2.840.113674.1115.261.200" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+    		<ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM"/>
+    		<ParticipantObjectDetail type="StudyDate" value="MTk5NTA2MDg="/>
+    		<ParticipantObjectDescription>
+    			<Accession Number="GE0005"/>
+    			<SOPClass UID="1.2.840.10008.5.1.4.1.1.4" NumberOfInstances="10"/>
+    		</ParticipantObjectDescription>
+    	</ParticipantObjectIdentification>
+    	<ParticipantObjectIdentification ParticipantObjectID="GE1115^^^DCM4CHEE.A0DE4BE6.null" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+    		<ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
+    		<ParticipantObjectName>DAVIDSON^JOSHUA</ParticipantObjectName>
+    	</ParticipantObjectIdentification>
+    </AuditMessage>
+
+Previous study completely rejected on subsequent receive of objects with same SOP Instance UID but different Study/Series Instance UIDs
+.......................................................................................................................................
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage
+    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+    	<EventIdentification EventActionCode="D" EventDateTime="2023-11-22T11:36:47.213+01:00" EventOutcomeIndicator="0">
+    		<EventID csd-code="110105" codeSystemName="DCM" originalText="DICOM Study Deleted"/>
+    	</EventIdentification>
+    	<ActiveParticipant UserID="DCM4CHEE" AlternativeUserID="12384" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    		<UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
+    	</ActiveParticipant>
+    	<ActiveParticipant UserID="STORESCU" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="view-localhost" NetworkAccessPointTypeCode="1">
+    		<UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
+    	</ActiveParticipant>
+    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+    		<AuditSourceTypeCode csd-code="4"/>
+    	</AuditSourceIdentification>
+    	<ParticipantObjectIdentification ParticipantObjectID="1.2.840.113674.1115.261.200" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+    		<ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM"/>
+    		<ParticipantObjectDetail type="StudyDate" value="MTk5NTA2MDg="/>
+    		<ParticipantObjectDescription>
+    			<Accession Number="GE0005"/>
+    			<SOPClass UID="1.2.840.10008.5.1.4.1.1.4" NumberOfInstances="10"/>
+    		</ParticipantObjectDescription>
+    	</ParticipantObjectIdentification>
+    	<ParticipantObjectIdentification ParticipantObjectID="GE1115^^^DCM4CHEE.A0DE4BE6.null" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+    		<ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
+    		<ParticipantObjectName>DAVIDSON^JOSHUA</ParticipantObjectName>
     	</ParticipantObjectIdentification>
     </AuditMessage>
