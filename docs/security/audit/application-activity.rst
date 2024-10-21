@@ -82,19 +82,22 @@ Message Structure
 Sample Messages
 ---------------
 
-Application Activity Message - Application Start - Startup of archive / Deploy archive ear file
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Application Activity Message - Application Start
+................................................
+
+Startup of archive / Deploy archive ear file
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: xml
 
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <AuditMessage
     	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-    	<EventIdentification EventActionCode="E" EventDateTime="2023-11-14T17:09:15.082+01:00" EventOutcomeIndicator="0">
+    	<EventIdentification EventActionCode="E" EventDateTime="2023-11-14T17:06:12.209+01:00" EventOutcomeIndicator="0">
     		<EventID csd-code="110100" codeSystemName="DCM" originalText="Application Activity"/>
     		<EventTypeCode csd-code="110120" codeSystemName="DCM" originalText="Application Start"/>
     	</EventIdentification>
-    	<ActiveParticipant UserID="dcm4chee-arc" AlternativeUserID="40918" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    	<ActiveParticipant UserID="dcm4chee-arc" AlternativeUserID="38551" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
     		<RoleIDCode csd-code="110150" codeSystemName="DCM" originalText="Application"/>
     		<UserIDTypeCode csd-code="113877" codeSystemName="DCM" originalText="Device Name"/>
     	</ActiveParticipant>
@@ -103,8 +106,8 @@ Application Activity Message - Application Start - Startup of archive / Deploy a
     	</AuditSourceIdentification>
     </AuditMessage>
 
-Application Activity Message - Application Start - Using REST service
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Archive Startup by REST API
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Triggered by external client or user logged in to archive UI
 
@@ -121,7 +124,7 @@ Triggered by external client or user logged in to archive UI
     		<RoleIDCode csd-code="110150" codeSystemName="DCM" originalText="Application"/>
     		<UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
     	</ActiveParticipant>
-    	<ActiveParticipant UserID="127.0.0.1" AlternativeUserID="40918" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+    	<ActiveParticipant UserID="127.0.0.1" AlternativeUserID="40918" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
     		<RoleIDCode csd-code="110151" codeSystemName="DCM" originalText="Application Launcher"/>
     		<UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
     	</ActiveParticipant>
@@ -130,30 +133,11 @@ Triggered by external client or user logged in to archive UI
     	</AuditSourceIdentification>
     </AuditMessage>
 
-.. code-block:: xml
+Application Activity Message - Application Stop
+...............................................
 
-    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-    <AuditMessage
-    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-    	<EventIdentification EventActionCode="E" EventDateTime="2023-11-14T17:14:44.048+01:00" EventOutcomeIndicator="0">
-    		<EventID csd-code="110100" codeSystemName="DCM" originalText="Application Activity"/>
-    		<EventTypeCode csd-code="110120" codeSystemName="DCM" originalText="Application Start"/>
-    	</EventIdentification>
-    	<ActiveParticipant UserID="/dcm4chee-arc/ctrl/start" AlternativeUserID="40918" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-    		<RoleIDCode csd-code="110150" codeSystemName="DCM" originalText="Application"/>
-    		<UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
-    	</ActiveParticipant>
-    	<ActiveParticipant UserID="admin" AlternativeUserID="40918" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
-    		<RoleIDCode csd-code="110151" codeSystemName="DCM" originalText="Application Launcher"/>
-    		<UserIDTypeCode csd-code="113871" codeSystemName="DCM" originalText="Person ID"/>
-    	</ActiveParticipant>
-    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
-    		<AuditSourceTypeCode csd-code="4"/>
-    	</AuditSourceIdentification>
-    </AuditMessage>
-
-Application Activity Message - Application Stop - Shutdown of archive / Undeploy archive ear file
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Shutdown of archive / Undeploy archive ear file
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: xml
 
@@ -173,8 +157,8 @@ Application Activity Message - Application Stop - Shutdown of archive / Undeploy
     	</AuditSourceIdentification>
     </AuditMessage>
 
-Application Activity Message - Application Stop - Using REST service
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Archive Stop using REST API
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Triggered by external client or user logged in to archive UI
 
@@ -194,28 +178,6 @@ Triggered by external client or user logged in to archive UI
     	<ActiveParticipant UserID="127.0.0.1" AlternativeUserID="40918" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
     		<RoleIDCode csd-code="110151" codeSystemName="DCM" originalText="Application Launcher"/>
     		<UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
-    	</ActiveParticipant>
-    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
-    		<AuditSourceTypeCode csd-code="4"/>
-    	</AuditSourceIdentification>
-    </AuditMessage>
-
-.. code-block:: xml
-
-    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-    <AuditMessage
-    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-    	<EventIdentification EventActionCode="E" EventDateTime="2023-11-14T17:14:42.628+01:00" EventOutcomeIndicator="0">
-    		<EventID csd-code="110100" codeSystemName="DCM" originalText="Application Activity"/>
-    		<EventTypeCode csd-code="110121" codeSystemName="DCM" originalText="Application Stop"/>
-    	</EventIdentification>
-    	<ActiveParticipant UserID="/dcm4chee-arc/ctrl/stop" AlternativeUserID="40918" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-    		<RoleIDCode csd-code="110150" codeSystemName="DCM" originalText="Application"/>
-    		<UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
-    	</ActiveParticipant>
-    	<ActiveParticipant UserID="127.0.0.1" AlternativeUserID="40918" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
-    		<RoleIDCode csd-code="110151" codeSystemName="DCM" originalText="Application Launcher"/>
-    		<UserIDTypeCode csd-code="113871" codeSystemName="DCM" originalText="Person ID"/>
     	</ActiveParticipant>
     	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
     		<AuditSourceTypeCode csd-code="4"/>

@@ -334,8 +334,11 @@ Message Structure
 Sample Messages
 ---------------
 
-Query triggered using QIDO-RS
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Query
+.....
+
+Using QIDO-RS REST APIs
+^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: xml
 
@@ -363,8 +366,8 @@ Query triggered using QIDO-RS
     	</ParticipantObjectIdentification>
     </AuditMessage>
 
-Query triggered using C-FIND
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Using DICOM C-FIND
+^^^^^^^^^^^^^^^^^^
 
 .. code-block:: xml
 
@@ -392,11 +395,13 @@ Query triggered using C-FIND
     	</ParticipantObjectIdentification>
     </AuditMessage>
 
-HL7 Patient Demographics Query - REST triggered
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+HL7 Patient Demographics Query
+..............................
 
-`Query Patient Demographics <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/PDQ-RS/queryPatientDemographics>`_
-REST Service triggered HL7 Patient Demographics Query audit.
+Using REST API
+^^^^^^^^^^^^^^
+
+Applicable for `Query Patient Demographics <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/PDQ-RS/queryPatientDemographics>`_ REST API
 
 .. code-block:: xml
 
@@ -442,10 +447,10 @@ REST Service triggered HL7 Patient Demographics Query audit.
     	</ParticipantObjectIdentification>
     </AuditMessage>
 
-HL7 Patient Demographics Query - Scheduler triggered
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Scheduler triggered
+^^^^^^^^^^^^^^^^^^^
 
-Patient Verification Scheduler triggered HL7 Patient Demographics Query audit.
+Applicable for HL7 Patient Demographics Query triggered by Patient Verification Scheduler
 
 .. code-block:: xml
 
@@ -488,11 +493,13 @@ Patient Verification Scheduler triggered HL7 Patient Demographics Query audit.
     	</ParticipantObjectIdentification>
     </AuditMessage>
 
-FHIR Patient Demographics Query - REST triggered
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FHIR Patient Demographics Query
+...............................
 
-`Query Patient Demographics <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/PDQ-RS/queryPatientDemographics>`_
-REST Service triggered FHIR Patient Demographics Query audit.
+Using REST API
+^^^^^^^^^^^^^^
+
+Applicable for `Query Patient Demographics <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/PDQ-RS/queryPatientDemographics>`_ REST API
 
 .. code-block:: xml
 
@@ -529,10 +536,10 @@ REST Service triggered FHIR Patient Demographics Query audit.
         </ParticipantObjectIdentification>
     </AuditMessage>
 
-FHIR Patient Demographics Query - Scheduler triggered
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Scheduler triggered
+^^^^^^^^^^^^^^^^^^^
 
-Patient Verification Scheduler triggered FHIR Patient Demographics Query audit.
+Applicable for HL7 Patient Demographics Query triggered by Patient Verification Scheduler
 
 .. code-block:: xml
 
