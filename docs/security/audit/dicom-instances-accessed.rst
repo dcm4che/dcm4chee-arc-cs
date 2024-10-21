@@ -116,8 +116,8 @@ Message Structure
 Sample Messages
 ---------------
 
-DICOM Instances Accessed audits on Update Entity
-................................................
+Update Entities
+...............
 
 Update Study
 ^^^^^^^^^^^^
@@ -185,8 +185,8 @@ Update Series
         </ParticipantObjectIdentification>
     </AuditMessage>
 
-DICOM Instances Accessed audits on Update Expiration Date
-.........................................................
+Expiration Date Update
+......................
 
 Update Study Expiration Date - Triggered by HL7
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -289,8 +289,8 @@ Update Series Expiration Date - Triggered by REST API
         </ParticipantObjectIdentification>
     </AuditMessage>
 
-DICOM Instances Accessed audits on Update Access Control ID
-...........................................................
+Access Control ID Update
+........................
 
 Applicable for `Study Access Control Services <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/ACCESS-RS>`_
 
@@ -360,10 +360,13 @@ Update Access Control ID of Matching Studies
         </ParticipantObjectIdentification>
     </AuditMessage>
 
-DICOM Instances Accessed audits on Retrieve Entities from external archive
-..........................................................................
+Retrieve Entities from external archive
+.......................................
 
 Applicable for `Invoke C-MOVE requests on external C-MOVE SCP <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/MOVE-RS>`_ REST APIs
+
+Retrieve matching studies from external archive
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: xml
 
@@ -429,8 +432,74 @@ Error Case
         </ParticipantObjectIdentification>
     </AuditMessage>
 
-DICOM Instances Accessed audits on HL7 triggered Prefetch Studies
-.................................................................
+Retrieve study from external archive
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+        <EventIdentification EventActionCode="R" EventDateTime="2024-08-19T15:58:57.929+02:00" EventOutcomeIndicator="0">
+            <EventID csd-code="110103" codeSystemName="DCM" originalText="DICOM Instances Accessed"/>
+        </EventIdentification>
+        <ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+            <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
+        </ActiveParticipant>
+        <ActiveParticipant UserID="http://localhost:8080/dcm4chee-arc/aets/DCM4CHEE/dimse/DCM4CHEE/studies/1.2.840.113619.2.216.2.1.2642006103252234.10589/export/dicom:STORESCP" AlternativeUserID="54270" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
+        </ActiveParticipant>
+        <ActiveParticipant UserID="DCM4CHEE" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID"/>
+            <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
+        </ActiveParticipant>
+        <ActiveParticipant UserID="STORESCP" UserIsRequestor="false" UserTypeCode="2">
+            <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID"/>
+            <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
+        </ActiveParticipant>
+        <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+            <AuditSourceTypeCode csd-code="4"/>
+        </AuditSourceIdentification>
+        <ParticipantObjectIdentification ParticipantObjectID="1.2.840.113619.2.216.2.1.2642006103252234.10589" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+            <ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM"/>
+        </ParticipantObjectIdentification>
+    </AuditMessage>
+
+Error Case
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+        <EventIdentification EventActionCode="R" EventDateTime="2024-08-19T16:14:17.756+02:00" EventOutcomeIndicator="4">
+            <EventID csd-code="110103" codeSystemName="DCM" originalText="DICOM Instances Accessed"/>
+            <EventOutcomeDescription>java.net.ConnectException: Connection refused</EventOutcomeDescription>
+        </EventIdentification>
+        <ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+            <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
+        </ActiveParticipant>
+        <ActiveParticipant UserID="http://localhost:8080/dcm4chee-arc/aets/DCM4CHEE/dimse/DCM4CHEE/studies/1.2.840.113619.2.216.2.1.2642006103252234.10589/export/dicom:STORESCP" AlternativeUserID="54270" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
+        </ActiveParticipant>
+        <ActiveParticipant UserID="DCM4CHEE" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID"/>
+            <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
+        </ActiveParticipant>
+        <ActiveParticipant UserID="STORESCP" UserIsRequestor="false" UserTypeCode="2">
+            <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID"/>
+            <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
+        </ActiveParticipant>
+        <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+            <AuditSourceTypeCode csd-code="4"/>
+        </AuditSourceIdentification>
+        <ParticipantObjectIdentification ParticipantObjectID="1.2.840.113619.2.216.2.1.2642006103252234.10589" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+            <ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM"/>
+        </ParticipantObjectIdentification>
+    </AuditMessage>
+
+HL7 triggered Prefetch Studies
+..............................
 
 .. code-block:: xml
 
@@ -490,8 +559,8 @@ Error Case
         </ParticipantObjectIdentification>
     </AuditMessage>
 
-DICOM Instances Accessed audits on Study Size Calculation
-.........................................................
+Study Size Calculation
+......................
 
 .. code-block:: xml
 
@@ -516,8 +585,8 @@ DICOM Instances Accessed audits on Study Size Calculation
         </ParticipantObjectIdentification>
     </AuditMessage>
 
-DICOM Instances Accessed audits on Partial Rejection of Studies
-...............................................................
+Partial Rejection of Studies
+............................
 
 Partial Rejection of Study by DICOM C-STORE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

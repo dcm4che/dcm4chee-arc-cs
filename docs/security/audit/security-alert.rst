@@ -172,273 +172,333 @@ Message Structure
    ParticipantObjectName, U, Patient Name
 
 
-Sample Message
---------------
+Sample Messages
+---------------
 
 Connection Events Failure
+.........................
 
 .. code-block:: xml
 
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-    
-        <EventIdentification EventActionCode="E" EventDateTime="2016-06-17T10:35:49.560+02:00" EventOutcomeIndicator="4">
-            <EventID csd-code="110113" codeSystemName="DCM" originalText="Node Authentication"/>
-            <EventOutcomeDescription>null cert chain</EventOutcomeDescription>
-        </EventIdentification>
-    
-        <ActiveParticipant UserID="/127.0.0.1:54404" UserTypeCode="1" UserIsRequestor="true" NetworkAccessPointID="/127.0.0.1:54404" NetworkAccessPointTypeCode="2">
-            <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
-        </ActiveParticipant>
-    
-        <ActiveParticipant UserID="dcm4chee-arc" UserTypeCode="2" AlternativeUserID="3390" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-            <UserIDTypeCode csd-code="113877" codeSystemName="DCM" originalText="Device Name"/>
-        </ActiveParticipant>
-    
-        <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
-            <AuditSourceTypeCode csd-code="4"/>
-        </AuditSourceIdentification>
-    
+    <AuditMessage
+    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+    	<EventIdentification EventActionCode="E" EventDateTime="2024-08-21T11:53:02.200+02:00" EventOutcomeIndicator="4">
+    		<EventID csd-code="110113" codeSystemName="DCM" originalText="Security Alert"/>
+    		<EventTypeCode csd-code="110126" codeSystemName="DCM" originalText="Node Authentication"/>
+    		<EventOutcomeDescription>Connection refused</EventOutcomeDescription>
+    	</EventIdentification>
+    	<ActiveParticipant UserID="dcm4chee-arc" AlternativeUserID="30068" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    		<UserIDTypeCode csd-code="113877" codeSystemName="DCM" originalText="Device Name"/>
+    	</ActiveParticipant>
+    	<ActiveParticipant UserID="storescp" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    		<UserIDTypeCode csd-code="113877" codeSystemName="DCM" originalText="Device Name"/>
+    	</ActiveParticipant>
+    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+    		<AuditSourceTypeCode csd-code="4"/>
+    	</AuditSourceIdentification>
     </AuditMessage>
 
 
 Associations Events Failure
+...........................
+
+Association FAILED
+^^^^^^^^^^^^^^^^^^
 
 .. code-block:: xml
 
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+    <AuditMessage
+    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+    	<EventIdentification EventActionCode="E" EventDateTime="2024-08-21T11:53:18.916+02:00" EventOutcomeIndicator="4">
+    		<EventID csd-code="110113" codeSystemName="DCM" originalText="Security Alert"/>
+    		<EventTypeCode csd-code="ASSOCIATION-FAILURE" codeSystemName="99DCM4CHEE" originalText="Association Failure"/>
+    		<EventOutcomeDescription>A-ASSOCIATE-RJ[result: 1 - rejected-permanent, source: 1 - service-user, reason: 7 - called-AE-title-not-recognized]</EventOutcomeDescription>
+    	</EventIdentification>
+    	<ActiveParticipant UserID="DCM4CHEE" AlternativeUserID="30068" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    		<UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
+    	</ActiveParticipant>
+    	<ActiveParticipant UserID="STORESCP" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    		<UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
+    	</ActiveParticipant>
+    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+    		<AuditSourceTypeCode csd-code="4"/>
+    	</AuditSourceIdentification>
+    </AuditMessage>
 
-        <EventIdentification EventActionCode="E" EventDateTime="2018-10-23T15:33:19.804+02:00" EventOutcomeIndicator="4">
+Association REJECTED
+^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+        <EventIdentification EventActionCode="E" EventDateTime="2024-08-21T12:02:58.152+02:00" EventOutcomeIndicator="4">
             <EventID csd-code="110113" codeSystemName="DCM" originalText="Security Alert"/>
             <EventTypeCode csd-code="ASSOCIATION-FAILURE" codeSystemName="99DCM4CHEE" originalText="Association Failure"/>
-            <EventOutcomeDescription>A-ASSOCIATE-RJ[result: 1 - rejected-permanent, source: 1 - service-user, reason: 3 - calling-AE-title-not-recognized]</EventOutcomeDescription>
+            <EventOutcomeDescription>A-ASSOCIATE-RJ[result: 1 - rejected-permanent, source: 1 - service-user, reason: 7 - called-AE-title-not-recognized]</EventOutcomeDescription>
         </EventIdentification>
-
-        <ActiveParticipant UserID="STGCMTSCU1" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+        <ActiveParticipant UserID="DCM4CHEE123" AlternativeUserID="30068" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
             <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
         </ActiveParticipant>
-
-        <ActiveParticipant UserID="DCM4CHEE" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+        <ActiveParticipant UserID="STORESCU" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="view-localhost" NetworkAccessPointTypeCode="1">
             <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
         </ActiveParticipant>
-
         <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
             <AuditSourceTypeCode csd-code="4"/>
         </AuditSourceIdentification>
-
     </AuditMessage>
 
 Software Configuration Changes
+..............................
 
 .. code-block:: xml
 
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-
-        <EventIdentification EventActionCode="E" EventDateTime="2017-09-22T10:35:49+02:00" EventOutcomeIndicator="0">
-            <EventID csd-code="110113" codeSystemName="DCM" originalText="Security Alert"/>
-            <EventTypeCode csd-code="110131" codeSystemName="DCM" originalText="Software Configuration"/>
-        </EventIdentification>
-
-        <ActiveParticipant UserID="/dcm4chee-arc/devices/dcm4chee-arc" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-            <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
-        </ActiveParticipant>
-
-        <ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
-            <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
-        </ActiveParticipant>
-
-        <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
-            <AuditSourceTypeCode csd-code="4"/>
-        </AuditSourceIdentification>
-
-        <ParticipantObjectIdentification ParticipantObjectID="dcm4chee-arc" ParticipantObjectTypeCode="2">
-            <ParticipantObjectIDTypeCode csd-code="113877" originalText="Device Name" codeSystemName="DCM"/>
-            <ParticipantObjectDetail type="Alert Description" value="VSBkaWNvbURldmljZU5hbWU9ZGNtNGNoZWUtYXJjLGNuPURldmljZXMsY249RElDT00gQ29uZmlndXJhdGlvbixkYz1kY200Y2hlLGRjPW9yZwogIGRjbVNlcmllc01ldGFkYXRhUG9sbGluZ0ludGVydmFsOiBbXT0+W1BUMU1dCiAgZGNtQUVDYWNoZVN0YWxlVGltZW91dDogW1BUNU1dPT5bXQogIGRjbUFjY2VwdE1pc3NpbmdQYXRpZW50SUQ6IFtDUkVBVEVdPT5bWUVTXQ=="/>
-        </ParticipantObjectIdentification>
-
+    <AuditMessage
+    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+    	<EventIdentification EventActionCode="E" EventDateTime="2024-07-29T09:48:15.624+02:00" EventOutcomeIndicator="0">
+    		<EventID csd-code="110113" codeSystemName="DCM" originalText="Security Alert"/>
+    		<EventTypeCode csd-code="110131" codeSystemName="DCM" originalText="Software Configuration"/>
+    	</EventIdentification>
+    	<ActiveParticipant UserID="http://localhost:8080/dcm4chee-arc/devices/dcm4chee-arc" AlternativeUserID="5518" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    		<UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
+    	</ActiveParticipant>
+    	<ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+    		<UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
+    	</ActiveParticipant>
+    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+    		<AuditSourceTypeCode csd-code="4"/>
+    	</AuditSourceIdentification>
+    	<ParticipantObjectIdentification ParticipantObjectID="dcm4chee-arc" ParticipantObjectTypeCode="2">
+    		<ParticipantObjectIDTypeCode csd-code="113877" originalText="Device Name" codeSystemName="DCM"/>
+    		<ParticipantObjectDetail type="Alert Description" value="VSBkaWNvbURldmljZU5hbWU9ZGNtNGNoZWUtYXJjLGNuPURldmljZXMsY249RElDT00gQ29uZmlndXJhdGlvbixkYz1kY200Y2hlLGRjPW9yZwogIGRjbVB1cmdlUXVldWVNZXNzYWdlUG9sbGluZ0ludGVydmFsOiBbUDFEXT0+W1AyRF0="/>
+    	</ParticipantObjectIdentification>
     </AuditMessage>
 
+Tasks Management
+................
 
-User Password Update
-
-.. code-block:: xml
-
-    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-
-        <EventIdentification EventActionCode="E" EventDateTime="2018-09-18T17:42:55.226+02:00" EventOutcomeIndicator="0">
-            <EventID csd-code="110113" codeSystemName="DCM" originalText="Security Alert"/>
-            <EventTypeCode csd-code="110137" codeSystemName="DCM" originalText="User security Attributes Changed"/>
-        </EventIdentification>
-
-        <ActiveParticipant UserID="admin" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
-            <UserIDTypeCode csd-code="113871" codeSystemName="DCM" originalText="Person ID"/>
-        </ActiveParticipant>
-
-        <ActiveParticipant UserID="dcm4chee-arc" AlternativeUserID="31064" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-            <UserIDTypeCode csd-code="113877" codeSystemName="DCM" originalText="Device Name"/>
-        </ActiveParticipant>
-
-        <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
-            <AuditSourceTypeCode csd-code="4"/>
-        </AuditSourceIdentification>
-
-    </AuditMessage>
-
-
-Super User Login
+Delete Tasks using REST API
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: xml
 
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-
-        <EventIdentification EventActionCode="E" EventDateTime="2018-09-18T17:42:55.226+02:00" EventOutcomeIndicator="0">
-            <EventID csd-code="110113" codeSystemName="DCM" originalText="Security Alert"/>
-            <EventTypeCode csd-code="110127" codeSystemName="DCM" originalText="Emergency Override Started"/>
-        </EventIdentification>
-
-        <ActiveParticipant UserID="admin" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
-            <UserIDTypeCode csd-code="113871" codeSystemName="DCM" originalText="Person ID"/>
-        </ActiveParticipant>
-
-        <ActiveParticipant UserID="dcm4chee-arc" AlternativeUserID="31064" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-            <UserIDTypeCode csd-code="113877" codeSystemName="DCM" originalText="Device Name"/>
-        </ActiveParticipant>
-
-        <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
-            <AuditSourceTypeCode csd-code="4"/>
-        </AuditSourceIdentification>
-
-    </AuditMessage>
-
-
-Cancel Export Task
-
-.. code-block:: xml
-
-    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-
-        <EventIdentification EventActionCode="E" EventDateTime="2018-01-29T13:54:56.838+01:00" EventOutcomeIndicator="0">
-            <EventID csd-code="110113" codeSystemName="DCM" originalText="Security Alert"/>
-            <EventTypeCode csd-code="CANCEL" codeSystemName="99DCM4CHEE" originalText="Cancel Message"/>
-        </EventIdentification>
-
-        <ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
-            <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
-        </ActiveParticipant>
-
-        <ActiveParticipant UserID="/dcm4chee-arc/monitor/export/51/cancel" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-            <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
-        </ActiveParticipant>
-
-        <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
-            <AuditSourceTypeCode csd-code="4"/>
-        </AuditSourceIdentification>
-
-        <ParticipantObjectIdentification ParticipantObjectID="ID:fb45eabd-04f2-11e8-8a74-7c5cf82aac4c" ParticipantObjectTypeCode="2">
-            <ParticipantObjectIDTypeCode csd-code="TASK" originalText="Archive Task" codeSystemName="99DCM4CHEE"/>
-            <ParticipantObjectDetail type="Task" value="eyJpZCI6IklEOmZiNDVlYWJkLTA0ZjItMTFlOC04YTc0LTdjNWNmODJhYWM0YyIsInF1ZXVlIjoiRXhwb3J0MSIsInByaW9yaXR5Ijo0LCJjcmVhdGVkVGltZSI6IjIwMTgtMDEtMjlUMTM6NDg6MDQuNjQ3KzAxMDAiLCJ1cGRhdGVkVGltZSI6IjIwMTgtMDEtMjlUMTM6NTQ6NTYuODM0KzAxMDAiLCJkaWNvbURldmljZU5hbWUiOiJkY200Y2hlZS1hcmMiLCJzdGF0dXMiOiJDQU5DRUxFRCIsImZhaWx1cmVzIjoxLCJzY2hlZHVsZWRUaW1lIjoiMjAxOC0wMS0yOVQxMzo1MDo1Ny45MDYrMDEwMCIsInByb2Nlc3NpbmdTdGFydFRpbWUiOiIyMDE4LTAxLTI5VDEzOjUwOjU3LjkxNSswMTAwIiwicHJvY2Vzc2luZ0VuZFRpbWUiOiIyMDE4LTAxLTI5VDEzOjUwOjU4LjA4NiswMTAwIiwiZXJyb3JNZXNzYWdlIjoiamF2YS5uZXQuQ29ubmVjdEV4Y2VwdGlvbjogQ29ubmVjdGlvbiByZWZ1c2VkIChDb25uZWN0aW9uIHJlZnVzZWQpIiwib3V0Y29tZU1lc3NhZ2UiOiJFeHBvcnQgU3R1ZHlbdWlkPTEuMi44NDAuMTEzNjc0LjExMTguNTQuMjAwXSB0byBBRTogU1RPUkVTQ1AxIC0gY29tcGxldGVkOjE4IiwiQUVUaXRsZSI6IkRDTTRDSEVFIiwiUmVxdWVzdGVySG9zdE5hbWUiOiIxMjcuMC4wLjEiLCJSZXF1ZXN0ZXJVc2VySUQiOiIxMjcuMC4wLjEiLCJSZXF1ZXN0VVJJIjoiL2RjbTRjaGVlLWFyYy9hZXRzL0RDTTRDSEVFL3JzL3N0dWRpZXMvMS4yLjg0MC4xMTM2NzQuMTExOC41NC4yMDAvZXhwb3J0L1NUT1JFU0NQIiwiU3R1ZHlJbnN0YW5jZVVJRCI6IjEuMi44NDAuMTEzNjc0LjExMTguNTQuMjAwIiwiRXhwb3J0ZXJJRCI6IlNUT1JFU0NQMSJ9"/>
-        </ParticipantObjectIdentification>
-
-    </AuditMessage>
-
-Delete Export Tasks
-
-.. code-block:: xml
-
-    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-
-        <EventIdentification EventActionCode="E" EventDateTime="2018-10-24T17:06:24.727+02:00" EventOutcomeIndicator="0">
+    <AuditMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+        <EventIdentification EventActionCode="E" EventDateTime="2024-07-28T23:48:41.141+02:00" EventOutcomeIndicator="0">
             <EventID csd-code="110113" codeSystemName="DCM" originalText="Security Alert"/>
             <EventTypeCode csd-code="DELETE" codeSystemName="99DCM4CHEE" originalText="Delete Task"/>
         </EventIdentification>
-
-        <ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
-            <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
-        </ActiveParticipant>
-
-        <ActiveParticipant UserID="/dcm4chee-arc/monitor/export" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+        <ActiveParticipant UserID="http://localhost:8080/dcm4chee-arc/monitor/export" AlternativeUserID="39023" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
             <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
         </ActiveParticipant>
-
+        <ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+            <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
+        </ActiveParticipant>
         <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
             <AuditSourceTypeCode csd-code="4"/>
         </AuditSourceIdentification>
-
         <ParticipantObjectIdentification ParticipantObjectID="DeleteTasks" ParticipantObjectTypeCode="2">
             <ParticipantObjectIDTypeCode csd-code="TASKS" originalText="Archive Tasks" codeSystemName="99DCM4CHEE"/>
-            <ParticipantObjectDetail type="Filters" value="c3RhdHVzPUNPTVBMRVRFRA=="/>
-            <ParticipantObjectDetail type="Count" value="Mg=="/>
+            <ParticipantObjectDetail type="Filters" value="b3JkZXJieT0tdXBkYXRlZFRpbWU="/>
+            <ParticipantObjectDetail type="Count" value="NA=="/>
+            <ParticipantObjectDetail type="Failed" value="MA=="/>
         </ParticipantObjectIdentification>
-
     </AuditMessage>
 
-Keycloak Admin Event
+Delete Task using REST API
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: xml
 
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-
-        <EventIdentification EventActionCode="E" EventDateTime="2018-10-29T14:39:19.406+01:00" EventOutcomeIndicator="0">
+    <AuditMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+        <EventIdentification EventActionCode="E" EventDateTime="2024-07-28T23:51:43.898+02:00" EventOutcomeIndicator="0">
             <EventID csd-code="110113" codeSystemName="DCM" originalText="Security Alert"/>
-            <EventTypeCode csd-code="110129" codeSystemName="DCM" originalText="Security Configuration"/>
-            <EventOutcomeDescription>CREATE CLIENT</EventOutcomeDescription>
+            <EventTypeCode csd-code="DELETE" codeSystemName="99DCM4CHEE" originalText="Delete Task"/>
         </EventIdentification>
-
-        <ActiveParticipant UserID="admin" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
-            <UserIDTypeCode csd-code="113871" codeSystemName="DCM" originalText="Person ID"/>
+        <ActiveParticipant UserID="http://localhost:8080/dcm4chee-arc/monitor/export/1982" AlternativeUserID="39023" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
         </ActiveParticipant>
-
-        <ActiveParticipant UserID="keycloak" AlternativeUserID="17431" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-            <UserIDTypeCode csd-code="113877" codeSystemName="DCM" originalText="Device Name"/>
+        <ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+            <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
         </ActiveParticipant>
-
-        <AuditSourceIdentification AuditSourceID="keycloak">
+        <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
             <AuditSourceTypeCode csd-code="4"/>
         </AuditSourceIdentification>
-
-        <ParticipantObjectIdentification ParticipantObjectID="keycloak" ParticipantObjectTypeCode="2">
-            <ParticipantObjectIDTypeCode csd-code="113877" originalText="Device Name" codeSystemName="DCM"/>
-            <ParticipantObjectDetail type="Alert Description" value="UmVwcmVzZW50YXRpb246IHsiY2xpZW50SWQiOiJ0ZXN0IiwiZW5hYmxlZCI6dHJ1ZSwicmVkaXJlY3RVcmlzIjpbXSwicHJvdG9jb2wiOiJvcGVuaWQtY29ubmVjdCIsImF0dHJpYnV0ZXMiOnt9fQpSZXNvdXJjZVBhdGg6IGNsaWVudHMvYzIwZWFiMjEtY2FhNC00NjhjLThjNWMtNWU4YmY3N2RkNTIy"/>
+        <ParticipantObjectIdentification ParticipantObjectID="1982" ParticipantObjectTypeCode="2">
+            <ParticipantObjectIDTypeCode csd-code="TASKS" originalText="Archive Tasks" codeSystemName="99DCM4CHEE"/>
+            <ParticipantObjectDetail type="Task" value="eyJ0YXNrSUQiOiIxOTgyIiwiZGljb21EZXZpY2VOYW1lIjoiZGNtNGNoZWUtYXJjIiwicXVldWUiOiJFeHBvcnQiLCJ0eXBlIjoiRVhQT1JUIiwic3RhdHVzIjoiQ09NUExFVEVEIiwiY3JlYXRlZFRpbWUiOiIyMDI0LTA3LTI4VDIzOjUxOjI2Ljk0NSswMjAwIiwidXBkYXRlZFRpbWUiOiIyMDI0LTA3LTI4VDIzOjUxOjI3LjE1OCswMjAwIiwic2NoZWR1bGVkVGltZSI6IjIwMjQtMDctMjhUMjM6NTE6MjYuOTM3KzAyMDAiLCJwcm9jZXNzaW5nU3RhcnRUaW1lIjoiMjAyNC0wNy0yOFQyMzo1MToyNi45OTUrMDIwMCIsInByb2Nlc3NpbmdFbmRUaW1lIjoiMjAyNC0wNy0yOFQyMzo1MToyNy4xNTcrMDIwMCIsIm91dGNvbWVNZXNzYWdlIjoiRXhwb3J0IFN0dWR5W3VpZD0xLjIuODQwLjExMzYxOS4yLjIxNi4yLjEuMjY0MjAwNjEwMzI1MjIzNC4xMDU4OV0gdG8gU1RPUkVTQ1AgLSBjb21wbGV0ZWQ6MSIsIlJlcXVlc3RlclVzZXJJRCI6IjEyNy4wLjAuMSIsIlJlcXVlc3Rlckhvc3ROYW1lIjoiMTI3LjAuMC4xIiwiUmVxdWVzdFVSSSI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9kY200Y2hlZS1hcmMvYWV0cy9EQ000Q0hFRS9ycy9zdHVkaWVzL2V4cG9ydC9FeHBvcnQlMjB0byUyMFNUT1JFU0NQIiwiTG9jYWxBRVQiOiJEQ000Q0hFRSIsIkV4cG9ydGVySUQiOiJFeHBvcnQgdG8gU1RPUkVTQ1AiLCJTdHVkeUluc3RhbmNlVUlEIjoiMS4yLjg0MC4xMTM2MTkuMi4yMTYuMi4xLjI2NDIwMDYxMDMyNTIyMzQuMTA1ODkiLCJOdW1iZXJPZkluc3RhbmNlcyI6IjEiLCJNb2RhbGl0eSI6WyJOTSJdfQ=="/>
         </ParticipantObjectIdentification>
-
     </AuditMessage>
 
-IMPAX Reports Import Service
+Delete Tasks triggered by Scheduler
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+        <EventIdentification EventActionCode="E" EventDateTime="2024-07-28T23:56:18.523+02:00" EventOutcomeIndicator="0">
+            <EventID csd-code="110113" codeSystemName="DCM" originalText="Security Alert"/>
+            <EventTypeCode csd-code="DELETE" codeSystemName="99DCM4CHEE" originalText="Delete Task"/>
+        </EventIdentification>
+        <ActiveParticipant UserID="dcm4chee-arc" AlternativeUserID="39023" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <UserIDTypeCode csd-code="113877" codeSystemName="DCM" originalText="Device Name"/>
+        </ActiveParticipant>
+        <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+            <AuditSourceTypeCode csd-code="4"/>
+        </AuditSourceIdentification>
+        <ParticipantObjectIdentification ParticipantObjectID="DeleteTasks" ParticipantObjectTypeCode="2">
+            <ParticipantObjectIDTypeCode csd-code="TASKS" originalText="Archive Tasks" codeSystemName="99DCM4CHEE"/>
+            <ParticipantObjectDetail type="QueueName" value="RXhwb3J0"/>
+            <ParticipantObjectDetail type="Count" value="Mw=="/>
+            <ParticipantObjectDetail type="Failed" value="MA=="/>
+        </ParticipantObjectIdentification>
+    </AuditMessage>
+
+Cancel Tasks using REST API
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage
+    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+    	<EventIdentification EventActionCode="E" EventDateTime="2024-07-29T00:04:07.210+02:00" EventOutcomeIndicator="0">
+    		<EventID csd-code="110113" codeSystemName="DCM" originalText="Security Alert"/>
+    		<EventTypeCode csd-code="CANCEL" codeSystemName="99DCM4CHEE" originalText="Cancel Task"/>
+    	</EventIdentification>
+    	<ActiveParticipant UserID="http://localhost:8080/dcm4chee-arc/monitor/export/cancel" AlternativeUserID="39023" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    		<UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
+    	</ActiveParticipant>
+    	<ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+    		<UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
+    	</ActiveParticipant>
+    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+    		<AuditSourceTypeCode csd-code="4"/>
+    	</AuditSourceIdentification>
+    	<ParticipantObjectIdentification ParticipantObjectID="CancelTasks" ParticipantObjectTypeCode="2">
+    		<ParticipantObjectIDTypeCode csd-code="TASKS" originalText="Archive Tasks" codeSystemName="99DCM4CHEE"/>
+    		<ParticipantObjectDetail type="Filters" value="b3JkZXJieT0tdXBkYXRlZFRpbWUmc3RhdHVzPVNDSEVEVUxFRCUyMEZPUiUyMFJFVFJZ"/>
+    		<ParticipantObjectDetail type="Count" value="Mg=="/>
+    		<ParticipantObjectDetail type="Failed" value="MA=="/>
+    	</ParticipantObjectIdentification>
+    </AuditMessage>
+
+Cancel Task using REST API
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage
+    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+    	<EventIdentification EventActionCode="E" EventDateTime="2024-07-29T00:07:06.847+02:00" EventOutcomeIndicator="0">
+    		<EventID csd-code="110113" codeSystemName="DCM" originalText="Security Alert"/>
+    		<EventTypeCode csd-code="CANCEL" codeSystemName="99DCM4CHEE" originalText="Cancel Task"/>
+    	</EventIdentification>
+    	<ActiveParticipant UserID="http://localhost:8080/dcm4chee-arc/monitor/export/1988/cancel" AlternativeUserID="39023" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    		<UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
+    	</ActiveParticipant>
+    	<ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+    		<UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
+    	</ActiveParticipant>
+    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+    		<AuditSourceTypeCode csd-code="4"/>
+    	</AuditSourceIdentification>
+    	<ParticipantObjectIdentification ParticipantObjectID="1988" ParticipantObjectTypeCode="2">
+    		<ParticipantObjectIDTypeCode csd-code="TASKS" originalText="Archive Tasks" codeSystemName="99DCM4CHEE"/>
+    		<ParticipantObjectDetail type="Task" value="eyJ0YXNrSUQiOiIxOTg4IiwiZGljb21EZXZpY2VOYW1lIjoiZGNtNGNoZWUtYXJjIiwicXVldWUiOiJFeHBvcnQgdG8gQUkiLCJ0eXBlIjoiRVhQT1JUIiwic3RhdHVzIjoiQ0FOQ0VMRUQiLCJmYWlsdXJlcyI6IjEiLCJjcmVhdGVkVGltZSI6IjIwMjQtMDctMjlUMDA6MDY6NTYuNDcwKzAyMDAiLCJ1cGRhdGVkVGltZSI6IjIwMjQtMDctMjlUMDA6MDY6NTYuNTMyKzAyMDAiLCJzY2hlZHVsZWRUaW1lIjoiMjAyNC0wNy0yOVQwMDowNzoyNi41MzIrMDIwMCIsInByb2Nlc3NpbmdTdGFydFRpbWUiOiIyMDI0LTA3LTI5VDAwOjA2OjU2LjQ4NiswMjAwIiwicHJvY2Vzc2luZ0VuZFRpbWUiOiIyMDI0LTA3LTI5VDAwOjA2OjU2LjUzMiswMjAwIiwiZXJyb3JNZXNzYWdlIjoiamF2YS5uZXQuQ29ubmVjdEV4Y2VwdGlvbjogQ29ubmVjdGlvbiByZWZ1c2VkIiwiUmVxdWVzdGVyVXNlcklEIjoiMTI3LjAuMC4xIiwiUmVxdWVzdGVySG9zdE5hbWUiOiIxMjcuMC4wLjEiLCJSZXF1ZXN0VVJJIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2RjbTRjaGVlLWFyYy9hZXRzL0RDTTRDSEVFL3JzL3N0dWRpZXMvZXhwb3J0L0V4cG9ydCUyMHRvJTIwR2xlYW1lcj9Nb2RhbGl0aWVzSW5TdHVkeT1NRyIsIkxvY2FsQUVUIjoiRENNNENIRUUiLCJFeHBvcnRlcklEIjoiRXhwb3J0IHRvIEdsZWFtZXIiLCJTdHVkeUluc3RhbmNlVUlEIjoiMS4xIiwiTnVtYmVyT2ZJbnN0YW5jZXMiOiIxIiwiTW9kYWxpdHkiOlsiTUciXX0="/>
+    	</ParticipantObjectIdentification>
+    </AuditMessage>
+
+Reschedule Tasks using REST API
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage
+    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+    	<EventIdentification EventActionCode="E" EventDateTime="2024-07-29T00:14:07.815+02:00" EventOutcomeIndicator="0">
+    		<EventID csd-code="110113" codeSystemName="DCM" originalText="Security Alert"/>
+    		<EventTypeCode csd-code="RESCHEDULE" codeSystemName="99DCM4CHEE" originalText="Reschedule Task"/>
+    	</EventIdentification>
+    	<ActiveParticipant UserID="http://localhost:8080/dcm4chee-arc/monitor/export/reschedule" AlternativeUserID="39023" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    		<UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
+    	</ActiveParticipant>
+    	<ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+    		<UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
+    	</ActiveParticipant>
+    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+    		<AuditSourceTypeCode csd-code="4"/>
+    	</AuditSourceIdentification>
+    	<ParticipantObjectIdentification ParticipantObjectID="RescheduleTasks" ParticipantObjectTypeCode="2">
+    		<ParticipantObjectIDTypeCode csd-code="TASKS" originalText="Archive Tasks" codeSystemName="99DCM4CHEE"/>
+    		<ParticipantObjectDetail type="Filters" value="b3JkZXJieT0tdXBkYXRlZFRpbWU="/>
+    		<ParticipantObjectDetail type="Count" value="Mw=="/>
+    		<ParticipantObjectDetail type="Failed" value="MA=="/>
+    	</ParticipantObjectIdentification>
+    </AuditMessage>
+
+Reschedule Task using REST API
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage
+    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+    	<EventIdentification EventActionCode="E" EventDateTime="2024-07-29T00:12:14.811+02:00" EventOutcomeIndicator="0">
+    		<EventID csd-code="110113" codeSystemName="DCM" originalText="Security Alert"/>
+    		<EventTypeCode csd-code="RESCHEDULE" codeSystemName="99DCM4CHEE" originalText="Reschedule Task"/>
+    	</EventIdentification>
+    	<ActiveParticipant UserID="http://localhost:8080/dcm4chee-arc/monitor/export/1988/reschedule/Export%20to%20Gleamer" AlternativeUserID="39023" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+    		<UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
+    	</ActiveParticipant>
+    	<ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+    		<UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
+    	</ActiveParticipant>
+    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+    		<AuditSourceTypeCode csd-code="4"/>
+    	</AuditSourceIdentification>
+    	<ParticipantObjectIdentification ParticipantObjectID="1988" ParticipantObjectTypeCode="2">
+    		<ParticipantObjectIDTypeCode csd-code="TASKS" originalText="Archive Tasks" codeSystemName="99DCM4CHEE"/>
+    		<ParticipantObjectDetail type="Task" value="eyJ0YXNrSUQiOiIxOTg4IiwiZGljb21EZXZpY2VOYW1lIjoiZGNtNGNoZWUtYXJjIiwicXVldWUiOiJFeHBvcnQgdG8gQUkiLCJ0eXBlIjoiRVhQT1JUIiwic3RhdHVzIjoiU0NIRURVTEVEIiwiY3JlYXRlZFRpbWUiOiIyMDI0LTA3LTI5VDAwOjA2OjU2LjQ3MCswMjAwIiwidXBkYXRlZFRpbWUiOiIyMDI0LTA3LTI5VDAwOjA3OjA2LjgxNyswMjAwIiwic2NoZWR1bGVkVGltZSI6IjIwMjQtMDctMjlUMDA6MTI6MTQuODA1KzAyMDAiLCJSZXF1ZXN0ZXJVc2VySUQiOiIxMjcuMC4wLjEiLCJSZXF1ZXN0ZXJIb3N0TmFtZSI6IjEyNy4wLjAuMSIsIlJlcXVlc3RVUkkiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvZGNtNGNoZWUtYXJjL2FldHMvRENNNENIRUUvcnMvc3R1ZGllcy9leHBvcnQvRXhwb3J0JTIwdG8lMjBHbGVhbWVyP01vZGFsaXRpZXNJblN0dWR5PU1HIiwiTG9jYWxBRVQiOiJEQ000Q0hFRSIsIkV4cG9ydGVySUQiOiJFeHBvcnQgdG8gR2xlYW1lciIsIlN0dWR5SW5zdGFuY2VVSUQiOiIxLjEiLCJOdW1iZXJPZkluc3RhbmNlcyI6IjEiLCJNb2RhbGl0eSI6WyJNRyJdfQ=="/>
+    	</ParticipantObjectIdentification>
+    </AuditMessage>
+
+Import Reports from AGFA IMPAX
+..............................
 
 .. code-block:: xml
 
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-
         <EventIdentification EventActionCode="E" EventDateTime="2018-10-23T10:14:46.381+02:00" EventOutcomeIndicator="4">
             <EventID csd-code="110113" codeSystemName="DCM" originalText="Security Alert"/>
             <EventTypeCode csd-code="IMPAXREP_PATDIFF" codeSystemName="99DCM4CHEE" originalText="Patient in IMPAX Report does not match Patient of Study in VNA"/>
             <EventOutcomeDescription>Patient in IMPAX Report does not match Patient of Study in VNA</EventOutcomeDescription>
         </EventIdentification>
-
         <ActiveParticipant UserID="testuser" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
             <UserIDTypeCode csd-code="113871" codeSystemName="DCM" originalText="Person"/>
         </ActiveParticipant>
-
         <ActiveParticipant UserID="https://aps1tln.pacs.ee/AgfaHC.Connectivity.Web.Services/ReportServiceCM.asmx" UserTypeCode="1" UserIsRequestor="true" NetworkAccessPointID="agfa-host" NetworkAccessPointTypeCode="1">
             <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
         </ActiveParticipant>
-
         <ActiveParticipant UserID="/dcm4chee-arc/aets/DCM4CHEE/rs/studies/1.113654.1.2001.30/impax/reports" UserTypeCode="2" AlternativeUserID="5373" UserIsRequestor="false" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
             <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
         </ActiveParticipant>
-
         <AuditSourceIdentification AuditSourceID="keycloak">
             <AuditSourceTypeCode csd-code="4"/>
         </AuditSourceIdentification>
-
         <ParticipantObjectIdentification ParticipantObjectID="1.113654.1.2001.30" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3" ParticipantObjectDataLifeCycle="1">
             <ParticipantObjectIDTypeCode csd-code="110180" originalText="Study Instance UID" codeSystemName="DCM"/>
             <ParticipantObjectDetail type="StudyDate" value="MjAwMTA0MzA="/>
@@ -447,10 +507,142 @@ IMPAX Reports Import Service
                 <SOPClass UID="1.2.840.10008.5.1.4.1.1.88.11" NumberOfInstances="1"/>
             </ParticipantObjectDescription>
         </ParticipantObjectIdentification>
-
         <ParticipantObjectIdentification ParticipantObjectID="CR3^^^SiteA" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
             <ParticipantObjectIDTypeCode csd-code="2" originalText="Patient Number" codeSystemName="RFC-3881"/>
             <ParticipantObjectName>CRTHREE^PAUL</ParticipantObjectName>
         </ParticipantObjectIdentification>
-
     </AuditMessage>
+
+Keycloak Events
+...............
+
+User Password Update
+^^^^^^^^^^^^^^^^^^^^
+
+Applicable for User Authentication Events :
+
+- LOGIN
+- LOGIN_ERROR
+- LOGOUT
+- LOGOUT_ERROR
+- UPDATE_PASSWORD
+- UPDATE_PASSWORD_ERROR
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+        <EventIdentification EventActionCode="E" EventDateTime="2018-09-18T17:42:55.226+02:00" EventOutcomeIndicator="0">
+            <EventID csd-code="110113" codeSystemName="DCM" originalText="Security Alert"/>
+            <EventTypeCode csd-code="110137" codeSystemName="DCM" originalText="User security Attributes Changed"/>
+        </EventIdentification>
+        <ActiveParticipant UserID="admin" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+            <UserIDTypeCode csd-code="113871" codeSystemName="DCM" originalText="Person ID"/>
+        </ActiveParticipant>
+        <ActiveParticipant UserID="dcm4chee-arc" AlternativeUserID="31064" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <UserIDTypeCode csd-code="113877" codeSystemName="DCM" originalText="Device Name"/>
+        </ActiveParticipant>
+        <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+            <AuditSourceTypeCode csd-code="4"/>
+        </AuditSourceIdentification>
+    </AuditMessage>
+
+Super User Login
+^^^^^^^^^^^^^^^^
+
+Applicable when a user with `SUPER_USER_ROLE <https://github.com/dcm4che-dockerfiles/dcm4chee-arc-psql?tab=readme-ov-file#super_user_role>`_ logs in to archive UI
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+        <EventIdentification EventActionCode="E" EventDateTime="2018-09-18T17:42:55.226+02:00" EventOutcomeIndicator="0">
+            <EventID csd-code="110113" codeSystemName="DCM" originalText="Security Alert"/>
+            <EventTypeCode csd-code="110127" codeSystemName="DCM" originalText="Emergency Override Started"/>
+        </EventIdentification>
+        <ActiveParticipant UserID="admin" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+            <UserIDTypeCode csd-code="113871" codeSystemName="DCM" originalText="Person ID"/>
+        </ActiveParticipant>
+        <ActiveParticipant UserID="dcm4chee-arc" AlternativeUserID="31064" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <UserIDTypeCode csd-code="113877" codeSystemName="DCM" originalText="Device Name"/>
+        </ActiveParticipant>
+        <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+            <AuditSourceTypeCode csd-code="4"/>
+        </AuditSourceIdentification>
+    </AuditMessage>
+
+Keycloak Admin Event
+^^^^^^^^^^^^^^^^^^^^
+
+Applicable for combination of Operation Types and Resource Types of Admin Events in Keycloak.
+
+Operation Types :
+
+- CREATE
+- UPDATE
+- DELETE
+- ACTION
+
+Resource Types :
+
+- REALM
+- REALM_ROLE
+- REALM_ROLE_MAPPING
+- REALM_SCOPE_MAPPING
+- AUTH_FLOW
+- AUTH_EXECUTION_FLOW
+- AUTH_EXECUTION
+- AUTHENTICATOR_CONFIG
+- REQUIRED_ACTION_CONFIG
+- REQUIRED_ACTION
+- IDENTITY_PROVIDER
+- IDENTITY_PROVIDER_MAPPER
+- PROTOCOL_MAPPER
+- USER
+- USER_LOGIN_FAILURE
+- USER_SESSION
+- USER_FEDERATION_PROVIDER
+- USER_FEDERATION_MAPPER
+- GROUP
+- GROUP_MEMBERSHIP
+- CLIENT
+- CLIENT_INITIAL_ACCESS_MODEL
+- CLIENT_ROLE
+- CLIENT_ROLE_MAPPING
+- CLIENT_SCOPE
+- CLIENT_SCOPE_MAPPING
+- CLIENT_SCOPE_CLIENT_MAPPING
+- CLUSTER_NODE
+- COMPONENT
+- AUTHORIZATION_RESOURCE_SERVER
+- AUTHORIZATION_RESOURCE
+- AUTHORIZATION_SCOPE
+- AUTHORIZATION_POLICY
+- CUSTOM
+- USER_PROFILE
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+        <EventIdentification EventActionCode="E" EventDateTime="2018-10-29T14:39:19.406+01:00" EventOutcomeIndicator="0">
+            <EventID csd-code="110113" codeSystemName="DCM" originalText="Security Alert"/>
+            <EventTypeCode csd-code="110129" codeSystemName="DCM" originalText="Security Configuration"/>
+            <EventOutcomeDescription>CREATE CLIENT</EventOutcomeDescription>
+        </EventIdentification>
+        <ActiveParticipant UserID="admin" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+            <UserIDTypeCode csd-code="113871" codeSystemName="DCM" originalText="Person ID"/>
+        </ActiveParticipant>
+        <ActiveParticipant UserID="keycloak" AlternativeUserID="17431" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <UserIDTypeCode csd-code="113877" codeSystemName="DCM" originalText="Device Name"/>
+        </ActiveParticipant>
+        <AuditSourceIdentification AuditSourceID="keycloak">
+            <AuditSourceTypeCode csd-code="4"/>
+        </AuditSourceIdentification>
+        <ParticipantObjectIdentification ParticipantObjectID="keycloak" ParticipantObjectTypeCode="2">
+            <ParticipantObjectIDTypeCode csd-code="113877" originalText="Device Name" codeSystemName="DCM"/>
+            <ParticipantObjectDetail type="Alert Description" value="UmVwcmVzZW50YXRpb246IHsiY2xpZW50SWQiOiJ0ZXN0IiwiZW5hYmxlZCI6dHJ1ZSwicmVkaXJlY3RVcmlzIjpbXSwicHJvdG9jb2wiOiJvcGVuaWQtY29ubmVjdCIsImF0dHJpYnV0ZXMiOnt9fQpSZXNvdXJjZVBhdGg6IGNsaWVudHMvYzIwZWFiMjEtY2FhNC00NjhjLThjNWMtNWU4YmY3N2RkNTIy"/>
+        </ParticipantObjectIdentification>
+    </AuditMessage>
+
+
