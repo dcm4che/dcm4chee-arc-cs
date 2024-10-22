@@ -354,8 +354,12 @@ Export Study by Scheduler
     	</ParticipantObjectIdentification>
     </AuditMessage>
 
+Using WADO-RS REST APIs
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Applicable for `WADO-RS REST APIs <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/WADO-RS>`_
+
 Retrieve Study Metadata by WADO-RS
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: xml
 

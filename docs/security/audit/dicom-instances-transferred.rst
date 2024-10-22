@@ -350,7 +350,7 @@ Using HTTP STOW
 Study Reimport
 ..............
 
-Applicable for `Import Instances <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/IMPORT-RS/ImportInstances>`_ REST API
+Applicable for `Re-import Study <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/IOCM-RS/ReimportStudy>`_ REST API
 
 .. code-block:: xml
 
@@ -581,8 +581,12 @@ Export Study by Scheduler
         </ParticipantObjectIdentification>
     </AuditMessage>
 
+Using WADO-RS REST APIs
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Applicable for `WADO-RS REST APIs <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/WADO-RS>`_
+
 Retrieve Study Metadata by WADO-RS
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: xml
 
@@ -877,6 +881,8 @@ Storage Verification
 
 Using REST API
 ^^^^^^^^^^^^^^
+
+Applicable for `Storage Verification <https://petstore.swagger.io/index.html?url=https://dcm4che.github.io/dcm4chee-arc-light/swagger/openapi.json#/STGVER-RS>`_ REST APIs
 
 .. code-block:: xml
 
