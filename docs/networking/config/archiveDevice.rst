@@ -1710,7 +1710,7 @@ DICOM Archive Device related information
     "
     .. _hl7ReferredMergedPatientPolicy:
 
-    :ref:`HL7 Referred Merged Patient Policy <hl7ReferredMergedPatientPolicy>`",string,"Specifies policy on incoming HL7 messages referring an already merged Patient. REJECT: reject any such HL7 message, IGNORE: ignore any such HL7 message, IGNORE_DUPLICATE_MERGE: Ignore only duplicate HL7 Merge messages, Reject any other such Message. May be overwritten by configured values for particular Archive HL7 Application.
+    :ref:`HL7 Referred Merged Patient Policy <hl7ReferredMergedPatientPolicy>`",string,"Specifies policy on incoming HL7 messages referring an already merged Patient. Refer `HL7 Referred Merged Patient Policy <https://github.com/dcm4che/dcm4chee-arc-light/wiki/HL7-Referred-Merged-Patient-Policy>`_ meanings. May be overwritten by configured values for particular Archive HL7 Application.
 
     Enumerated values:
 
@@ -1719,6 +1719,8 @@ DICOM Archive Device related information
     IGNORE
 
     IGNORE_DUPLICATE_MERGE
+
+    ACCEPT_INVERSE_MERGE
 
     (hl7ReferredMergedPatientPolicy)"
     "

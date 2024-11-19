@@ -32,9 +32,15 @@ dcm4che proprietary Attributes of Network AE
 
     (dcmNoAsyncModeCalledAETitle)"
     "
+    .. _dcmMasqueradeCalledAETitle:
+
+    :ref:`Masquerade Called AE Title(s) <dcmMasqueradeCalledAETitle>`",string,"Called AE Title used for initiating network associations, masquerading the configured AE Title of the remote Network AE. Format <Configured AE Title>:<Used Called AE Title>.
+
+    (dcmMasqueradeCalledAETitle)"
+    "
     .. _dcmMasqueradeCallingAETitle:
 
-    :ref:`Masquerade Calling AE Title(s) <dcmMasqueradeCallingAETitle>`",string,"AE Title used for initiating network associations, masquerading the actual AE Title for this Network AE - optional prefix [<Called AE Title>] limits the masquerading to association to a particular AE Title
+    :ref:`Masquerade Calling AE Title(s) <dcmMasqueradeCallingAETitle>`",string,"Calling AE Title used for initiating network associations, masquerading the actual AE Title for this Network AE - optional prefix [<Called AE Title>] limits the masquerading to association to a particular AE Title.
 
     (dcmMasqueradeCallingAETitle)"
     "

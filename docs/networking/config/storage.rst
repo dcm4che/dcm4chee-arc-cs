@@ -64,6 +64,12 @@ Storage Descriptor
 
     (dcmCheckMountFilePath)"
     "
+    .. _dcmCheckExistFilePath:
+
+    :ref:`Check Exist File Path <dcmCheckExistFilePath>`",string,"Indicates to check if the specified file on the storage file system exists. If the file becomes inaccessible, the write operation to the storage fails, preventing to store objects on the file system.
+
+    (dcmCheckExistFilePath)"
+    "
     .. _dcmFileOpenOption:
 
     :ref:`File Open Option(s)(s) <dcmFileOpenOption>`",string,"Options specifying how the file is opened for writing. Default behaviour 'CREATE_NEW'. 
@@ -189,6 +195,18 @@ Storage Descriptor
     :ref:`Deleter Threshold(s) <dcmDeleterThreshold>`",string,"Minimal Usable Space on Storage System to trigger deletion. If present, studies are deleted from the Storage System configured for cache (Storage Duration = CACHE) or temporary (Storage Duration = TEMPORARY) storage, if the usable space fall below that value. Format [nn'['<schedule>']']nnn(MB|GB|MiB|GiB).
 
     (dcmDeleterThreshold)"
+    "
+    .. _dcmDeleterThresholdMaxUseableSpace:
+
+    :ref:`Deleter Threshold Max Usable Space(s) <dcmDeleterThresholdMaxUseableSpace>`",string,"Maximal Usable Space on Storage System to trigger deletion. If present, studies are deleted from the Storage System configured for cache (Storage Duration = CACHE) or temporary (Storage Duration = TEMPORARY) storage, if the used disk space exceeds that value. Format [nn'['<schedule>']']nnn(MB|GB|MiB|GiB).
+
+    (dcmDeleterThresholdMaxUseableSpace)"
+    "
+    .. _dcmDeleterThresholdBlocksFilePath:
+
+    :ref:`Deleter Threshold Blocks File Path <dcmDeleterThresholdBlocksFilePath>`",string,"Path of file containing the current used disk space in blocks (1024 bytes), periodically updated by an external application.
+
+    (dcmDeleterThresholdBlocksFilePath)"
     "
     .. _dcmDeleteStudiesOlderThan:
 

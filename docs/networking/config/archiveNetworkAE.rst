@@ -578,7 +578,7 @@ DICOM Archive Network AE related information
     "
     .. _dcmMWLWorklistLabel:
 
-    :ref:`MWL Worklist Label <dcmMWLWorklistLabel>`",string,"Only consider MWL items with this or no Worklist Label (0074,1202) for matching by this Archive AE acting as MWP SCP. If absent, MWL items with any Value of Worklist Label (0074,1202) are considered for matching by this Archive AE acting as MWL SCP.
+    :ref:`MWL Worklist Label <dcmMWLWorklistLabel>`",string,"Only consider MWL items with this or no Worklist Label (0074,1202) for matching by this Archive AE acting as MWP SCP. If absent, MWL items with any Value of Worklist Label (0074,1202) are considered for matching by this Archive AE acting as MWL SCP. Also, for MWL-RS Create / Update MWL, use this MWL Worklist Label as fall back, if Worklist Label (0074,1202) is missing or has no value in request payload - before falling back to *
 
     (dcmMWLWorklistLabel)"
     "
