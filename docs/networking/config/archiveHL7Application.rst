@@ -138,6 +138,12 @@ DICOM Archive HL7 Application related information
 
     (hl7NoPatientCreateMessageType)"
     "
+    .. _hl7NoPatientUpdateMessageType:
+
+    :ref:`HL7 No Patient Update Message Type(s) <hl7NoPatientUpdateMessageType>`",string,"Patient record will be not be updated by HL7 messages of specified Message Type(s) (MessageType^TriggerEvent). Overwrites value specified on Device level.
+
+    (hl7NoPatientUpdateMessageType)"
+    "
     .. _hl7PatientArrivalMessageType:
 
     :ref:`HL7 Patient Arrival Message Type <hl7PatientArrivalMessageType>`",string,"Message Type of HL7 messages which triggers the change the status of Scheduled Procedure Steps associated with the Patient from SCHEDULED to ARRIVED. Overwrite value specified on Device level.
@@ -282,3 +288,13 @@ DICOM Archive HL7 Application related information
     ":doc:`hl7StudyRetentionPolicy` (s)",object,"HL7 Study Retention Policies triggered by HL7 messages received by this HL7 Application. Supplements values specified on Device level."
     ":doc:`hl7OrderScheduledStation` (s)",object,"Scheduled Station selected on MWL HL7 Order Feed. Supplements values specified on Device level."
     ":doc:`hl7OrderSPSStatus` (s)",object,"Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages. Overwrites values specified on Device level."
+
+.. toctree::
+
+    hl7ForwardRule
+    hl7ExportRule
+    upsOnHL7
+    hl7PrefetchRule
+    hl7StudyRetentionPolicy
+    hl7OrderScheduledStation
+    hl7OrderSPSStatus

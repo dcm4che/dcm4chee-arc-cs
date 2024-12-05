@@ -964,6 +964,12 @@ DICOM Archive Device related information
 
     (hl7NoPatientCreateMessageType)"
     "
+    .. _hl7NoPatientUpdateMessageType:
+
+    :ref:`HL7 No Patient Update Message Type(s) <hl7NoPatientUpdateMessageType>`",string,"Patient record will be not be updated by HL7 messages of specified Message Type(s) (MessageType^TriggerEvent). May be overwritten by configured values for particular Archive HL7 Application.
+
+    (hl7NoPatientUpdateMessageType)"
+    "
     .. _hl7PatientArrivalMessageType:
 
     :ref:`HL7 Patient Arrival Message Type <hl7PatientArrivalMessageType>`",string,"Message Type of HL7 messages which triggers the change the status of Scheduled Procedure Steps associated with the Patient from SCHEDULED to ARRIVED. If absent, the status of Scheduled Procedure Steps will not be affected by HL7 ADT messages. May be overwritten by configured values for particular Archive HL7 Application.
