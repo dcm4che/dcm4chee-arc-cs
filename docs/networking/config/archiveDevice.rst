@@ -1856,6 +1856,24 @@ DICOM Archive Device related information
 
     (dcmUPSUpdateWithoutTransactionUID)"
     "
+    .. _dcmUPS2MWLCFindSCP:
+
+    :ref:`UPS 2 MWL C-Find SCP <dcmUPS2MWLCFindSCP>`",boolean,"Indicates to feed Modality Worklist C-FIND SCP service from managed list of Unified Procedure Step (UPS) instances mapped to MWL items. May be overwritten by configured value for particular Archive Network AEs.
+
+    (dcmUPS2MWLCFindSCP)"
+    "
+    .. _dcmUPS2MWLScheduledStationNameCode:
+
+    :ref:`UPS 2 MWL Scheduled Station Name Code(s) <dcmUPS2MWLScheduledStationNameCode>`",string,"Defines list of Station Name Codes in format (CV, CSD, ""CM"") used to map Scheduled Station AE Titles (0040,0001) in MWL C-FIND RQ/RSPs to Station Name Code Sequence (0040,4025) items of Unified Procedure Step (UPS) instances.
+
+    (dcmUPS2MWLScheduledStationNameCode)"
+    "
+    .. _dcmUPS2MWLScheduledStationNameCodeValueAsAET:
+
+    :ref:`UPS 2 MWL Scheduled Station Name Code Value as AE Title <dcmUPS2MWLScheduledStationNameCodeValueAsAET>`",boolean,"Indicates to map Code Value (0008,0101) - instead Code Meaning (0008,0104) - of Scheduled Station Name Code Sequence (0040,4025) items of Unified Procedure Step (UPS) instances to Scheduled Station AE Titles (0040,0001) of MWL C-FIND RQ/RSPs.
+
+    (dcmUPS2MWLScheduledStationNameCodeValueAsAET)"
+    "
     .. _dcmQStarVerificationStorageID:
 
     :ref:`QStar Verification Storage ID <dcmQStarVerificationStorageID>`",string,"ID of QStar Tape File System to which objects were stored which Access State shall be verified. If absent, Access State of objects stored on QStar Tape File System will not be verified.
