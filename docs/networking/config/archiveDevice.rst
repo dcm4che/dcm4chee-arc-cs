@@ -448,6 +448,12 @@ DICOM Archive Device related information
 
     (dcmQidoETag)"
     "
+    .. _dcmQidoResultOrderBy:
+
+    :ref:`QIDO Result Order By(s) <dcmQidoResultOrderBy>`",string,"Specifies order of matching results returned by QIDO-RS, UPS-RS and proprietary Search Services, if not specified by query parameter orderby. Format: {service}:[-]{attributeID}[,...], with {service} is patients, studies, series, instances, workitems, mwlitems or mpps. May be overwritten by configured values for particular Archive Network AEs.
+
+    (dcmQidoResultOrderBy)"
+    "
     .. _dcmFwdMppsDestination:
 
     :ref:`Mpps Forward Destination(s) <dcmFwdMppsDestination>`",string,"Destination to forward MPPS N-CREATE RQ and N-SET RQ. May be overwritten by configured values for particular Archive Network AEs.
