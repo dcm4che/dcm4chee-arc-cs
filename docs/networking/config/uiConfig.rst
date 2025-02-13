@@ -27,23 +27,11 @@ UI Configuration
 
     (dcmuiWidgetAets)"
     "
-    .. _dcmuiBackgroundURL:
-
-    :ref:`Background URL <dcmuiBackgroundURL>`",string,"Background URL for changing the background of the UI, it can be relative or absolute URL, the image should have the width of at least of 1024px 
-
-    (dcmuiBackgroundURL)"
-    "
     .. _dcmuiHideOtherPatientIDs:
 
     :ref:`Hide Other Patient IDs <dcmuiHideOtherPatientIDs>`",boolean,"Indicates if other patient identifiers of patient record present in Other Patient IDs Sequence (0010,1002) shall be hidden. By default, all patient identifiers of patient record are displayed separated by comma.
 
     (dcmuiHideOtherPatientIDs)"
-    "
-    .. _dcmuiLogoURL:
-
-    :ref:`Logo URL <dcmuiLogoURL>`",string,"Logo URL for changing the logo of the UI, it can be relative or absolute URL, the image should have the width of 140px and should be in format png with the transparent background
-
-    (dcmuiLogoURL)"
     "
     .. _dcmuiDateTimeFormat:
 
@@ -100,6 +88,24 @@ UI Configuration
     :ref:`Institution Names(s) <dcmuiInstitutionName>`",string,"This will be used in combination with the previous field 'Institution Name Filter Type' to prefill the Dropdown of the Filter Institution Names in the Navigation Page
 
     (dcmuiInstitutionName)"
+    "
+    .. _dcmuiIssuerOfPatientIDSequence:
+
+    :ref:`Issuer of Patient ID Sequence(s) <dcmuiIssuerOfPatientIDSequence>`",string,"This will be used to show a dropdown in the Patient Identifier widget instead of the Issuer of Patient ID, Issuer of Patient ID Qualifiers Sequence - Universal Entity ID and Issuer of Patient ID Qualifiers Sequence - Universal Entity ID Type input fields. You can use the & character between the strings to mark the different fields like: 'issuerOfP&ipIDQuSeUniversalEntityID&ipIDQuSeUniversalEntityIDType'
+
+    (dcmuiIssuerOfPatientIDSequence)"
+    "
+    .. _dcmuiIssuerOfAccessionNumberSequence:
+
+    :ref:`Issuer of Accession Number Sequence(s) <dcmuiIssuerOfAccessionNumberSequence>`",string,"This will be used to show a dropdown in the Accession Number widget instead of the ""Local Namespace Entity ID"", ""Universal Entity ID"" and ""Universal Entity ID Type"" input fields. You can use the ^ character between the strings to mark the different fields like: 'dummylNamespace^uEntityID^uEntityIDType'
+
+    (dcmuiIssuerOfAccessionNumberSequence)"
+    "
+    .. _dcmuiIssuerOfAdmissionIDSequence:
+
+    :ref:`Issuer of Admission ID Sequence(s) <dcmuiIssuerOfAdmissionIDSequence>`",string,"This will be used to show a dropdown in the Admission ID widget instead of the ""Local Namespace Entity ID"",""Universal Entity ID"" and ""Universal Entity ID Type"" input fields. You can use the & character between the strings to mark the different fields like: 'dummylNamespace&uEntityID&uEntityIDType'
+
+    (dcmuiIssuerOfAdmissionIDSequence)"
     ":doc:`uiAet` (s)",object,"Define which AETs should be visible in the drop-down lists in the UI"
     ":doc:`uiWebApp` (s)",object,"Define which WebApps should be visible on the top of the drop-down list in the UI"
     ":doc:`uiPermission` (s)",object,"Permission"
