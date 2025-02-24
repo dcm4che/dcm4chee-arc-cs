@@ -76,6 +76,12 @@ DICOM Archive Device related information
 
     (dcmSeriesMetadataDelay)"
     "
+    .. _dcmUpdateSeriesMetadata:
+
+    :ref:`Update Series Metadata <dcmUpdateSeriesMetadata>`",boolean,"Indicates to update aggregated Series Metadata on attributes update.
+
+    (dcmUpdateSeriesMetadata)"
+    "
     .. _dcmSeriesMetadataPollingInterval:
 
     :ref:`Update Series Metadata Polling Interval <dcmSeriesMetadataPollingInterval>`",string,"Polling Interval for Series scheduled for Metadata update in ISO-8601 duration format PnDTnHnMnS. If absent, no aggregated Series Metadata will be stored.
