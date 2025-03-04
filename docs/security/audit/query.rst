@@ -344,26 +344,26 @@ Using QIDO-RS REST APIs
 
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <AuditMessage
-    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-    	<EventIdentification EventActionCode="E" EventDateTime="2024-05-06T13:13:44.343+02:00" EventOutcomeIndicator="0">
-    		<EventID csd-code="110112" codeSystemName="DCM" originalText="Query"/>
-    	</EventIdentification>
-    	<ActiveParticipant UserID="http://localhost:8880/dcm4chee-arc/aets/DCM4CHEE/rs/studies" AlternativeUserID="16153" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-    		<RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID"/>
-    		<UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
-    	</ActiveParticipant>
-    	<ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
-    		<RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID"/>
-    		<UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
-    	</ActiveParticipant>
-    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
-    		<AuditSourceTypeCode csd-code="4"/>
-    	</AuditSourceIdentification>
-    	<ParticipantObjectIdentification ParticipantObjectID="SearchForStudies" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="24">
-    		<ParticipantObjectIDTypeCode csd-code="REST" originalText="RESTful Web Service" codeSystemName="99DCM4CHEE"/>
-    		<ParticipantObjectQuery>bGltaXQ9MjEmaW5jbHVkZWZpZWxkPWFsbCZvZmZzZXQ9MA==</ParticipantObjectQuery>
-    		<ParticipantObjectDetail type="QueryEncoding" value="VVRGLTg="/>
-    	</ParticipantObjectIdentification>
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+        <EventIdentification EventActionCode="E" EventDateTime="2025-03-04T16:16:11.168+01:00" EventOutcomeIndicator="0">
+            <EventID csd-code="110112" codeSystemName="DCM" originalText="Query"/>
+        </EventIdentification>
+        <ActiveParticipant UserID="http://localhost:8080/dcm4chee-arc/aets/DCM4CHEE/rs/studies" AlternativeUserID="234026" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID"/>
+            <UserIDTypeCode csd-code="12" codeSystemName="RFC-3881" originalText="URI"/>
+        </ActiveParticipant>
+        <ActiveParticipant UserID="127.0.0.1" UserIsRequestor="true" UserTypeCode="1" NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2">
+            <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID"/>
+            <UserIDTypeCode csd-code="110182" codeSystemName="DCM" originalText="Node ID"/>
+        </ActiveParticipant>
+        <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+            <AuditSourceTypeCode csd-code="4"/>
+        </AuditSourceIdentification>
+        <ParticipantObjectIdentification ParticipantObjectID="SearchForStudies" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="24">
+            <ParticipantObjectIDTypeCode csd-code="REST" originalText="RESTful Web Service" codeSystemName="99DCM4CHEE"/>
+            <ParticipantObjectQuery>L2RjbTRjaGVlLWFyYy9hZXRzL0RDTTRDSEVFL3JzL3N0dWRpZXNsaW1pdD0yMSZpbmNsdWRlZmllbGQ9YWxsJm9mZnNldD0wJkFjY2Vzc2lvbk51bWJlcj1BQ0MqJlN0dWR5RGVzY3JpcHRpb249RGVzYyo=</ParticipantObjectQuery>
+            <ParticipantObjectDetail type="QueryEncoding" value="VVRGLTg="/>
+        </ParticipantObjectIdentification>
     </AuditMessage>
 
 Using DICOM C-FIND
@@ -373,26 +373,27 @@ Using DICOM C-FIND
 
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <AuditMessage
-    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
-    	<EventIdentification EventActionCode="E" EventDateTime="2024-05-06T13:17:34.441+02:00" EventOutcomeIndicator="0">
-    		<EventID csd-code="110112" codeSystemName="DCM" originalText="Query"/>
-    	</EventIdentification>
-    	<ActiveParticipant UserID="DCM4CHEE" AlternativeUserID="16153" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
-    		<RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID"/>
-    		<UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
-    	</ActiveParticipant>
-    	<ActiveParticipant UserID="FINDSCU" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="view-localhost" NetworkAccessPointTypeCode="1">
-    		<RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID"/>
-    		<UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
-    	</ActiveParticipant>
-    	<AuditSourceIdentification AuditSourceID="dcm4chee-arc">
-    		<AuditSourceTypeCode csd-code="4"/>
-    	</AuditSourceIdentification>
-    	<ParticipantObjectIdentification ParticipantObjectID="1.2.840.10008.5.1.4.1.2.2.1" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
-    		<ParticipantObjectIDTypeCode csd-code="110181" originalText="SOP Class UID" codeSystemName="DCM"/>
-    		<ParticipantObjectQuery>CAAgAAoAAAAyMDIwMDEwMS0gCABQAAAAAAAIAFIABgAAAFNUVURZIAgAYQACAAAAQ1QQABAAAAAAABAAIAAAAAAAIAANAAAAAAA=</ParticipantObjectQuery>
-    		<ParticipantObjectDetail type="TransferSyntax" value="MS4yLjg0MC4xMDAwOC4xLjI="/>
-    	</ParticipantObjectIdentification>
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.dcm4che.org/DICOM/audit-message.rnc">
+        <EventIdentification EventActionCode="E" EventDateTime="2025-03-04T16:17:36.429+01:00" EventOutcomeIndicator="0">
+            <EventID csd-code="110112" codeSystemName="DCM" originalText="Query"/>
+        </EventIdentification>
+        <ActiveParticipant UserID="DCM4CHEE" AlternativeUserID="234026" UserIsRequestor="false" UserTypeCode="2" NetworkAccessPointID="localhost" NetworkAccessPointTypeCode="1">
+            <RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination Role ID"/>
+            <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
+        </ActiveParticipant>
+        <ActiveParticipant UserID="FINDSCU" UserIsRequestor="true" UserTypeCode="2" NetworkAccessPointID="view-localhost" NetworkAccessPointTypeCode="1">
+            <RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source Role ID"/>
+            <UserIDTypeCode csd-code="110119" codeSystemName="DCM" originalText="Station AE Title"/>
+        </ActiveParticipant>
+        <AuditSourceIdentification AuditSourceID="dcm4chee-arc">
+            <AuditSourceTypeCode csd-code="4"/>
+        </AuditSourceIdentification>
+        <ParticipantObjectIdentification ParticipantObjectID="1.2.840.10008.5.1.4.1.2.2.1" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+            <ParticipantObjectIDTypeCode csd-code="110181" originalText="SOP Class UID" codeSystemName="DCM"/>
+            <ParticipantObjectQuery>CABQAAQAAABBQ0MqCABSAAYAAABTVFVEWSAIADAQBgAAAERlc2MqIBAAEAAAAAAAEAAgAAAAAAAgAA0AAAAAAA==</ParticipantObjectQuery>
+            <ParticipantObjectDetail type="TransferSyntax" value="MS4yLjg0MC4xMDAwOC4xLjI="/>
+            <ParticipantObjectDetail type="Identifier" value="KDAwMDgsMDA1MCkgU0ggW0FDQypdIEFjY2Vzc2lvbk51bWJlcgooMDAwOCwwMDUyKSBDUyBbU1RVRFldIFF1ZXJ5UmV0cmlldmVMZXZlbAooMDAwOCwxMDMwKSBMTyBbRGVzYypdIFN0dWR5RGVzY3JpcHRpb24KKDAwMTAsMDAxMCkgUE4gW10gUGF0aWVudE5hbWUKKDAwMTAsMDAyMCkgTE8gW10gUGF0aWVudElECigwMDIwLDAwMEQpIFVJIFtdIFN0dWR5SW5zdGFuY2VVSUQK"/>
+        </ParticipantObjectIdentification>
     </AuditMessage>
 
 HL7 Patient Demographics Query
