@@ -64,7 +64,7 @@ Exporter Descriptor
     "
     .. _dcmIanDestination:
 
-    :ref:`Ian Destination(s) <dcmIanDestination>`",string,"Destination to send IAN N-CREATE RQ
+    :ref:`IAN Destination(s) <dcmIanDestination>`",string,"Destination to send IAN N-CREATE RQ
 
     (dcmIanDestination)"
     "

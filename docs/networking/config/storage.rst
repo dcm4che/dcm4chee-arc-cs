@@ -190,6 +190,12 @@ Storage Descriptor
 
     (dcmNoDeletionConstraint)"
     "
+    .. _dcmDeleterMinStudyAccessTime:
+
+    :ref:`Deleter Min Study Access Time <dcmDeleterMinStudyAccessTime>`",string,"Least recent access time of Studies for Deletion in format YYYYMMDDHHMMSS.FFFFFF.
+
+    (dcmDeleterMinStudyAccessTime)"
+    "
     .. _dcmDeleterThreshold:
 
     :ref:`Deleter Threshold(s) <dcmDeleterThreshold>`",string,"Minimal Usable Space on Storage System to trigger deletion. If present, studies are deleted from the Storage System configured for cache (Storage Duration = CACHE) or temporary (Storage Duration = TEMPORARY) storage, if the usable space fall below that value. Format [nn'['<schedule>']']nnn(MB|GB|MiB|GiB).

@@ -444,13 +444,13 @@ DICOM Archive Device related information
     "
     .. _dcmQidoMaxNumberOfResults:
 
-    :ref:`Qido Max Number Of Results <dcmQidoMaxNumberOfResults>`",integer,"Maximal number of return results by QIDO-RS Service. 0 = no limitation. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`QIDO Max Number Of Results <dcmQidoMaxNumberOfResults>`",integer,"Maximal number of return results by QIDO-RS Service. 0 = no limitation. May be overwritten by configured values for particular Archive Network AEs.
 
     (dcmQidoMaxNumberOfResults)"
     "
     .. _dcmQidoETag:
 
-    :ref:`Qido ETag <dcmQidoETag>`",boolean,"Indicates to return Last-Modified and ETag for Search Series or Instances of a Study; disabled if absent. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`QIDO ETag <dcmQidoETag>`",boolean,"Indicates to return Last-Modified and ETag for Search Series or Instances of a Study; disabled if absent. May be overwritten by configured values for particular Archive Network AEs.
 
     (dcmQidoETag)"
     "
@@ -462,37 +462,53 @@ DICOM Archive Device related information
     "
     .. _dcmFwdMppsDestination:
 
-    :ref:`Mpps Forward Destination(s) <dcmFwdMppsDestination>`",string,"Destination to forward MPPS N-CREATE RQ and N-SET RQ. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`MPPS Forward Destination(s) <dcmFwdMppsDestination>`",string,"Destination to forward MPPS N-CREATE RQ and N-SET RQ. May be overwritten by configured values for particular Archive Network AEs.
 
     (dcmFwdMppsDestination)"
     "
     .. _dcmIanDestination:
 
-    :ref:`Ian Destination(s) <dcmIanDestination>`",string,"Destination to send IAN N-CREATE RQ. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`IAN Destination(s) <dcmIanDestination>`",string,"Destination to send IAN N-CREATE RQ. May be overwritten by configured values for particular Archive Network AEs.
 
     (dcmIanDestination)"
     "
+    .. _dcmIanTrigger:
+
+    :ref:`IAN Trigger(s) <dcmIanTrigger>`",string,"Events triggering to send an IAN N-CREATE RQ to Application Entities configured by IAN Destination. May be overwritten by configured values for particular Archive Network AEs.
+
+    Enumerated values:
+
+    STUDY_RECEIVED
+
+    MPPS_RECEIVED
+
+    REJECTION_NOTE_RECEIVED
+
+    FIRST_OBJECT_OF_STUDY_RECEIVED
+
+    (dcmIanTrigger)"
+    "
     .. _dcmIanDelay:
 
-    :ref:`IAN Delay <dcmIanDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMnS after which an IAN for a received study is sent to configured IAN destinations. If absent, IANs are triggered by received MPPS. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`IAN Delay <dcmIanDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMnS after which an IAN for a received study is sent to configured IAN destinations. Only effective if IAN Trigger includes STUDY_RECEIVED. May be overwritten by configured values for particular Archive Network AEs.
 
     (dcmIanDelay)"
     "
     .. _dcmIanTimeout:
 
-    :ref:`IAN Timeout <dcmIanTimeout>`",string,"Timeout in ISO-8601 duration format PnDTnHnMnS for waiting on receive of instances referenced in MPPS; check for completeness forever if absent. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`IAN Timeout <dcmIanTimeout>`",string,"Timeout in ISO-8601 duration format PnDTnHnMnS for waiting on receive of instances referenced in MPPS; check for completeness forever if absent. Only effective if IAN Trigger includes MPPS_RECEIVED. May be overwritten by configured values for particular Archive Network AEs.
 
     (dcmIanTimeout)"
     "
     .. _dcmIanOnTimeout:
 
-    :ref:`IAN On Timeout <dcmIanOnTimeout>`",boolean,"Specifies if the IAN is sent if the timeout for waiting on receive of instances referenced is exceeded. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`IAN On Timeout <dcmIanOnTimeout>`",boolean,"Specifies if the IAN is sent if the timeout for waiting on receive of instances referenced in MPPS is exceeded. Only effective if IAN Trigger includes MPPS_RECEIVED. May be overwritten by configured values for particular Archive Network AEs.
 
     (dcmIanOnTimeout)"
     "
     .. _dcmIanTaskPollingInterval:
 
-    :ref:`IAN Task Polling Interval <dcmIanTaskPollingInterval>`",string,"Polling Interval for IAN Tasks in ISO-8601 duration format PnDTnHnMnS. IAN disabled, if absent
+    :ref:`IAN Task Polling Interval <dcmIanTaskPollingInterval>`",string,"Polling Interval for IAN Tasks in ISO-8601 duration format PnDTnHnMnS for checking vor completeness of study or instances referenced in MPPS. If absent, configured IAN Trigger STUDY_RECEIVED or MPPS_RECEIVED will not be effective.
 
     (dcmIanTaskPollingInterval)"
     "

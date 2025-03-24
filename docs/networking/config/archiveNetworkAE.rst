@@ -322,13 +322,13 @@ DICOM Archive Network AE related information
     "
     .. _dcmQidoMaxNumberOfResults:
 
-    :ref:`Qido Max Number Of Results <dcmQidoMaxNumberOfResults>`",integer,"Maximal number of return results by QIDO-RS Service. 0 = unlimited. Overwrites value specified on Device level.
+    :ref:`QIDO Max Number Of Results <dcmQidoMaxNumberOfResults>`",integer,"Maximal number of return results by QIDO-RS Service. 0 = unlimited. Overwrites value specified on Device level.
 
     (dcmQidoMaxNumberOfResults)"
     "
     .. _dcmQidoETag:
 
-    :ref:`Qido ETag <dcmQidoETag>`",boolean,"Indicates to return Last-Modified and ETag for Search Series or Instances of a Study. Overwrites value specified on Device level.
+    :ref:`QIDO ETag <dcmQidoETag>`",boolean,"Indicates to return Last-Modified and ETag for Search Series or Instances of a Study. Overwrites value specified on Device level.
 
     (dcmQidoETag)"
     "
@@ -340,15 +340,31 @@ DICOM Archive Network AE related information
     "
     .. _dcmFwdMppsDestination:
 
-    :ref:`Mpps Forward Destination(s) <dcmFwdMppsDestination>`",string,"Destination to forward MPPS N-CREATE RQ and N-SET RQ. Overwrites value specified on Device level.
+    :ref:`MPPS Forward Destination(s) <dcmFwdMppsDestination>`",string,"Destination to forward MPPS N-CREATE RQ and N-SET RQ. Overwrites value specified on Device level.
 
     (dcmFwdMppsDestination)"
     "
     .. _dcmIanDestination:
 
-    :ref:`Ian Destination(s) <dcmIanDestination>`",string,"Destination to send IAN N-CREATE RQ. Overwrites value specified on Device level.
+    :ref:`IAN Destination(s) <dcmIanDestination>`",string,"Destination to send IAN N-CREATE RQ. Overwrites value specified on Device level.
 
     (dcmIanDestination)"
+    "
+    .. _dcmIanTrigger:
+
+    :ref:`IAN Trigger(s) <dcmIanTrigger>`",string,"Events triggering to send an IAN N-CREATE RQ to Application Entities configured by IAN Destination. Overwrites value specified on Device level.
+
+    Enumerated values:
+
+    STUDY_RECEIVED
+
+    MPPS_RECEIVED
+
+    REJECTION_NOTE_RECEIVED
+
+    FIRST_OBJECT_OF_STUDY_RECEIVED
+
+    (dcmIanTrigger)"
     "
     .. _dcmIanDelay:
 
