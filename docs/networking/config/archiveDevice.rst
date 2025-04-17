@@ -250,6 +250,12 @@ DICOM Archive Device related information
 
     (dcmAcceptConflictingPatientID)"
     "
+    .. _dcmIdentifyPatientByIDAndName:
+
+    :ref:`Identify Patient by ID and Name <dcmIdentifyPatientByIDAndName>`",boolean,"Indicates to consider also the Patient Name on receive of DICOM objects to determine if they belongs to an already existing Patient in the archive.
+
+    (dcmIdentifyPatientByIDAndName)"
+    "
     .. _dcmIdentifyPatientByAllAttributes:
 
     :ref:`Identify Patient by all Attributes <dcmIdentifyPatientByAllAttributes>`",boolean,"Indicates if all Patient attributes in received objects shall be used for associating an already existing Patient in the archive, if the Assigning Authority of the Patient ID is not specified by an Issuer of Patient ID or Universal Entity ID. Attention: disables the coercion of stale Patient attributes in received objects and breaks Patient Management functions relying on the unambiguity of Patient IDs.
