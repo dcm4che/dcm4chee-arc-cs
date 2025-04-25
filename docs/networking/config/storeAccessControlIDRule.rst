@@ -20,11 +20,17 @@ Store Access Control ID Rule
 
     (dcmStoreAccessControlID)"
     "
-    .. _dcmAccessControlSeriesIndividually:
+    .. _dcmEntity:
 
-    :ref:`Access Control Series Individually <dcmAccessControlSeriesIndividually>`",boolean,"Indicates if access of series should be controlled individually or not.
+    :ref:`Entity <dcmEntity>`",string,"Indicates if the Access Control ID shall be assigned to whole Studies or individual Series.
 
-    (dcmAccessControlSeriesIndividually)"
+    Enumerated values:
+
+    Study
+
+    Series
+
+    (dcmEntity)"
     "
     .. _dcmRulePriority:
 

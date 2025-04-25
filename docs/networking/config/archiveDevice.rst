@@ -250,12 +250,6 @@ DICOM Archive Device related information
 
     (dcmAcceptConflictingPatientID)"
     "
-    .. _dcmIdentifyPatientByIDAndName:
-
-    :ref:`Identify Patient by ID and Name <dcmIdentifyPatientByIDAndName>`",boolean,"Indicates to consider also the Patient Name on receive of DICOM objects to determine if they belongs to an already existing Patient in the archive.
-
-    (dcmIdentifyPatientByIDAndName)"
-    "
     .. _dcmIdentifyPatientByAllAttributes:
 
     :ref:`Identify Patient by all Attributes <dcmIdentifyPatientByAllAttributes>`",boolean,"Indicates if all Patient attributes in received objects shall be used for associating an already existing Patient in the archive, if the Assigning Authority of the Patient ID is not specified by an Issuer of Patient ID or Universal Entity ID. Attention: disables the coercion of stale Patient attributes in received objects and breaks Patient Management functions relying on the unambiguity of Patient IDs.
@@ -1442,6 +1436,12 @@ DICOM Archive Device related information
 
     (dcmCompressionFetchSize)"
     "
+    .. _dcmChangeAccessControlIDPollingInterval:
+
+    :ref:`Change Access Control ID Polling Interval <dcmChangeAccessControlIDPollingInterval>`",string,"Polling Interval for Studies or Series to change its assigned Access Control ID according configured Change Access Control ID rules in ISO-8601 duration format PnDTnHnMnS.
+
+    (dcmChangeAccessControlIDPollingInterval)"
+    "
     .. _dcmDiffTaskProgressUpdateInterval:
 
     :ref:`Diff Task Progress Update Interval <dcmDiffTaskProgressUpdateInterval>`",string,"Interval of updating Diff Tasks in process for progress monitoring; disabled if absent.
@@ -1990,6 +1990,7 @@ DICOM Archive Device related information
     ":doc:`rejectionNote` (s)",object,"Specifies behavior on Rejection Note Stored"
     ":doc:`studyRetentionPolicy` (s)",object,"Study Retention Policies applied to Studies received by any AE. May be supplemented by configured Study Retention Policies for particular Archive Network AEs."
     ":doc:`storeAccessControlIDRule` (s)",object,"Store Access Control Rules applied to Studies received by any AE. May be supplemented by configured Store Access Control Rules for particular Archive Network AEs."
+    ":doc:`changeAccessControlIDRule` (s)",object,"Change Access Control Rules applied to received Studies or Series."
     ":doc:`upsOnStore` (s)",object,"UPS on Store Rules applied to DICOM objects received by any AE. May be supplemented by configured UPS on Store Rules for particular Archive Network AEs."
     ":doc:`upsOnHL7` (s)",object,"UPS on HL7 Rules applied to HL7 messages received by any HL7 Application. May be supplemented by configured UPS on HL7 Rules for particular HL7 Applications."
     ":doc:`upsOnUPSCompleted` (s)",object,"UPS on UPS Completed Rules applied to UPS managed by any AE. May be supplemented by configured UPS on Store Rules for particular Archive Network AEs."
@@ -2037,6 +2038,7 @@ DICOM Archive Device related information
     rejectionNote
     studyRetentionPolicy
     storeAccessControlIDRule
+    changeAccessControlIDRule
     upsOnStore
     upsOnHL7
     upsOnUPSCompleted
