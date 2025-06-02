@@ -1,0 +1,3 @@
+"0112", "No Such Object Instance", "The specified SOP Instance was not available at the SCP."
+"0119", "Class Instance Conflict", "The specified SOP Class of the given SOP Instance did not correspond to the SOP Class registered for this SOP Instance at the SCP."
+"0110", "Processing Failure", "A general failure in processing the operation was encountered."

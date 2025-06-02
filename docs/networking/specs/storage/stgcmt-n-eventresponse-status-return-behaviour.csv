@@ -1,3 +1,0 @@
-"Success", "Success", "0000", "The SCU has successfully received the Storage Commitment Push Model N-EVENT-REPORT Request. Success indication message is output to the Service Logs. No message is posted to the User Interface."
-"Warning", "Attribute List Error", "0107", "Transmission of Storage Commitment Push Model N-EVENT-REPORT Request is considered successful. Warning indication message is output to the Service Logs. No message is posted to the User Interface."
-"*", "*", "Any other status code.", "This is treated as a permanent Failure. Error indication message is output to the Service Logs. No message is posted to the User Interface."

@@ -1,0 +1,2 @@
+"1", "Storage Commitment Request Successful", "The SCP has successfully accepted storage commitment responsibility for all the SOP Instances referenced by a Storage Commitment request."
+"2", "Storage Commitment Request Complete - Failures Exist", "The SCP has not accepted storage commitment responsibility for one or more of the referenced SOP Instances referenced by a Storage Commitment request."

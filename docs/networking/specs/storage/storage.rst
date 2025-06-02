@@ -381,13 +381,34 @@ The Behavior of Storage Application Entity during communication failure is summa
 SOP Specific Conformance for Storage Commitment SOP Class
 .........................................................
 
-The associated Activity with the Storage Commitment Push Model service is the communication by the Storage Application Entity to peer AEs that it has committed to permanently store Composite SOP Instances that have been sent to it. It thus allows peer AEs to determine whether the DCM4CHEE archive has taken responsibility for the archiving of specific SOP Instances so that they can be flushed from the peer AE system.
-The Storage Application Entity takes the list of Composite SOP Instance UIDs specified in a Storage Commitment Push Model N-ACTION Request and checks if they are present in the DCM4CHEE archive database. As long as the Composite SOP Instance UIDs are present in the database, the Storage Application Entity will consider those Composite SOP Instance UIDs to be successfully archived. The Storage Application Entity does not require the Composite SOP Instances to actually be successfully written to archive media in order to commit to responsibility for maintaining these SOP Instances.
-Once the Storage Application Entity has checked for the existence of the specified Composite SOP Instances, it will then attempt to send the Notification request (N-EVENT-REPORT-RQ). The default behavior is to attempt to send this Notification over the same Association that was used by the peer AE to send the original N-ACTION Request. If the Association has already been released or Message transfer fails for some reason then the Storage Application Entity will attempt to send the N-EVENT-REPORT-RQ over a new Association. The Storage Application Entity will request a new Association with the peer AE that made the original N-ACTION Request. The Storage Application Entity can be configured to always open a new Association in order to send the Notification request.
-The Storage Application Entity will not cache Storage Commitment Push Model N-ACTION Requests that specify Composite SOP Instances that have not yet been transferred to the DCM4CHEE archive. If a peer AE sends a Storage Commitment Push Model N-ACTION Request before the specified Composite SOP Instances are later sent over the same Association, the Storage Application Entity will not commit to responsibility for such SOP Instances.
+The associated Activity with the Storage Commitment Push Model service is the communication by the Storage Application
+Entity to peer AEs that it has committed to permanently store Composite SOP Instances that have been sent to it. It thus
+allows peer AEs to determine whether the DCM4CHEE archive has taken responsibility for the archiving of specific SOP
+Instances so that they can be flushed from the peer AE system.
+The Storage Application Entity takes the list of Composite SOP Instance UIDs specified in a Storage Commitment Push Model
+N-ACTION Request and checks if they are present in the DCM4CHEE archive database. As long as the Composite SOP Instance
+UIDs are present in the database, the Storage Application Entity will consider those Composite SOP Instance UIDs to be
+successfully archived. The Storage Application Entity does not require the Composite SOP Instances to actually be successfully
+written to archive media in order to commit to responsibility for maintaining these SOP Instances.
+Once the Storage Application Entity has checked for the existence of the specified Composite SOP Instances, it will then
+attempt to send the Notification request (N-EVENT-REPORT-RQ). The default behavior is to attempt to send this Notification
+over the same Association that was used by the peer AE to send the original N-ACTION Request. If the Association has
+already been released or Message transfer fails for some reason then the Storage Application Entity will attempt to send
+the N-EVENT-REPORT-RQ over a new Association. The Storage Application Entity will request a new Association with the peer
+AE that made the original N-ACTION Request. The Storage Application Entity can be configured to always open a new Association
+in order to send the Notification request.
+The Storage Application Entity will not cache Storage Commitment Push Model N-ACTION Requests that specify Composite SOP
+Instances that have not yet been transferred to the DCM4CHEE archive. If a peer AE sends a Storage Commitment Push Model
+N-ACTION Request before the specified Composite SOP Instances are later sent over the same Association, the Storage
+Application Entity will not commit to responsibility for such SOP Instances.
 The Storage Application Entity does not support the optional Storage Media File-Set ID & UID attributes in the N-ACTION.
-The DCM4CHEE archive never automatically deletes Composite SOP Instances from the archive. The absolute persistence of SOP Instances and the maximum archiving capacity for such SOP Instances is dependent on the archiving media and capacity used by the DCM4CHEE archive and is dependent on the actual specifications of the purchased system. It is necessary to check the actual system specifications to determine these characteristics.
-The Storage Application Entity will support Storage Commitment Push Model requests for SOP Instances of any of the Storage SOP Classes that are also supported by the Storage Application Entity as given in 4.2.1.1-1.: SOP Classes for Storage Application Entity (SCP)
+The DCM4CHEE archive never automatically deletes Composite SOP Instances from the archive. The absolute persistence of
+SOP Instances and the maximum archiving capacity for such SOP Instances is dependent on the archiving media and capacity
+used by the DCM4CHEE archive and is dependent on the actual specifications of the purchased system. It is necessary to
+check the actual system specifications to determine these characteristics.
+The Storage Application Entity will support Storage Commitment Push Model requests for SOP Instances of any of the Storage
+SOP Classes that are also supported by the Storage Application Entity as given in 4.2.1.1-1.: SOP Classes for Storage
+Application Entity (SCP)
 
 The Storage Application Entity will return the following Status Code values in N-ACTION Responses:
 
@@ -396,11 +417,28 @@ The Storage Application Entity will return the following Status Code values in N
    :widths: 8, 8, 5, 30
    :file: stgcmt-n-action-response-status-return-behaviour.csv
 
-The Storage Application Entity will exhibit the following Behavior according to the Status Code value returned in an N-EVENT-REPORT Response from a destination Storage Commitment Push Model SCU:
+The Storage Application Entity will exhibit the following Behavior according to the *Event Type ID (0000,1002)* value
+returned in an N-EVENT-REPORT Request to a destination Storage Commitment Push Model SCU:
 
-.. csv-table:: Storage Application Entity N-EVENT-REPORT Response Status Handling Behavior
-   :header: "Service Status", "Further Meaning", "Error Code", "Behaviour"
-   :widths: 8, 8, 5, 30
-   :file: stgcmt-n-eventresponse-status-return-behaviour.csv
+.. csv-table:: Storage Application Entity N-EVENT-REPORT Request Event Type Handling Behavior
+   :header: "Event Type ID", "Further Meaning", "Behaviour"
+   :widths: 5, 10, 30
+   :file: stgcmt-n-event-request-event-type-behaviour.csv
 
-All Status Codes indicating an error or refusal are treated as a permanent failure. The Storage Application Entity can be configured to automatically reattempt the sending of Storage Commitment Push Model N-EVENT-REPORT Requests if an error Status Code is returned or a communication failure occurs. The maximum number of times to attempt sending as well as the time to wait between attempts is configurable.
+All Status Codes indicating an error or refusal are treated as a permanent failure. The Storage Application Entity can be
+configured to automatically re-attempt the sending of Storage Commitment Push Model N-EVENT-REPORT Requests if an error
+Status Code is returned or a communication failure occurs. The maximum number of times to attempt sending as well as the
+time to wait between attempts is configurable.
+
+For Service Class User Behaviour on N-EVENT-REPORT Response and Status Codes it may return, refer
+
+- `DICOM PS3.4 2025b - Service Class Specifications - J.3.3.1.3. Storage Commitment Service Class (Normative) - Notifications - Service Class User Behavior <https://dicom.nema.org/medical/dicom/current/output/html/part04.html#sect_J.3.3.1.3>`_
+- `DICOM PS3.4 2025b - Service Class Specifications - J.3.3.1.3. Storage Commitment Service Class (Normative) - Notifications - Status Codes <https://dicom.nema.org/medical/dicom/current/output/html/part04.html#sect_J.3.3.1.4>`_
+
+N-EVENT-REPORT Request dataset may contain *Failed SOP Sequence (0008,1198)* containing references to SOP Instances for
+which storage commitment failed, each reference containing *Failure Reason (0008,1197)*
+
+.. csv-table:: Storage Application Entity N-EVENT-REPORT Request Dataset - Failure Reason in Failed SOP Sequence
+   :header: "Failure Reason", "Further Meaning", "Behaviour"
+   :widths: 5, 10, 30
+   :file: stgcmt-n-event-request-failure-reason-behaviour.csv
