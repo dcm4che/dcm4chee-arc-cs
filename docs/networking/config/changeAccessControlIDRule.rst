@@ -26,6 +26,12 @@ Change Access Control ID Rule
 
     (dcmStoreAccessControlID)"
     "
+    .. _dcmAccessControlID:
+
+    :ref:`Access Control ID(s) <dcmAccessControlID>`",string,"Previous Access Control IDs assigned to selected Studies or individual Series to change. If no value is specified, all Access Control IDs accessible by the specified Archive Application Entity (AE) will be changed.
+
+    (dcmAccessControlID)"
+    "
     .. _dcmEntity:
 
     :ref:`Entity <dcmEntity>`",string,"Indicates if Access Control ID assigned to Studies or individual Series shall be changed.
@@ -46,12 +52,12 @@ Change Access Control ID Rule
     "
     .. _dcmChangeAccessControlIDDelay:
 
-    :ref:`Change Access Control ID Delay <dcmChangeAccessControlIDDelay>`",string,"Delay after receive of the first object of a Study after which the Access Control ID associated with the Study or including Series shall be changed to the specified Store Access Control ID in ISO-8601 duration format PnDTnHnMn.nS.
+    :ref:`Change Access Control ID Delay <dcmChangeAccessControlIDDelay>`",string,"Delay after receive of the first object of a Study/Series after which the Access Control ID associated with the Study or including Series shall be changed to the specified Store Access Control ID in ISO-8601 duration format PnDTnHnMn.nS.
 
     (dcmChangeAccessControlIDDelay)"
     "
     .. _dcmChangeAccessControlIDMaxDelay:
 
-    :ref:`Change Access Control ID Maximal Delay <dcmChangeAccessControlIDMaxDelay>`",string,"Indicates to stop applying this rule for Studies which first object was received before the specified interval in ISO-8601 duration format PnDTnHnMn.nS. Required if there are other rules for changing the Access Control ID again in the future.
+    :ref:`Change Access Control ID Maximal Delay <dcmChangeAccessControlIDMaxDelay>`",string,"Indicates to stop applying this rule for Studies/Series which first object was received before the specified interval in ISO-8601 duration format PnDTnHnMn.nS. Required if there are other rules for changing the Access Control ID again in the future.
 
     (dcmChangeAccessControlIDMaxDelay)"
