@@ -744,6 +744,34 @@ DICOM Archive Network AE related information
 
     (hl7PSUReceivingApplication)"
     "
+    .. _hl7PSUAction:
+
+    :ref:`HL7 Procedure Status Update Action(s) <hl7PSUAction>`",string,"Specifies HL7 Procedure Status Update action: SEND_NOTIFICATION (= send HL7 Procedure Status Update Notification message to configured HL7 Procedure Status Update Receiving Applications), UPDATE_MWL_STATUS (= set Scheduled Procedure Step Status of MWL Items associated to STUDY to COMPLETED). May be overwritten by configured values for particular Archive Network AEs.
+
+    Enumerated values:
+
+    SEND_NOTIFICATION
+
+    UPDATE_MWL_STATUS
+
+    (hl7PSUAction)"
+    "
+    .. _hl7PSUTrigger:
+
+    :ref:`HL7 Procedure Status Update Trigger(s) <hl7PSUTrigger>`",string,"Specifies trigger events to send a HL7 Procedure Status Update notification to HL7 Receivers configured by HL7 Procedure Status Update Receiving Application. Overwrites value specified on Device level.
+
+    Enumerated values:
+
+    STUDY_RECEIVED
+
+    MPPS_RECEIVED
+
+    REJECTION_NOTE_RECEIVED
+
+    FIRST_OBJECT_OF_STUDY_RECEIVED
+
+    (hl7PSUTrigger)"
+    "
     .. _hl7PSUDelay:
 
     :ref:`HL7 Procedure Status Update Delay <hl7PSUDelay>`",string,"Delay in ISO-8601 duration format PnDTnHnMn.nS after which an HL7 Procedure Status Update for a received study is sent to configured HL7 receivers. If absent, HL7 Procedure Status Update is triggered by received MPPS. Overwrites value specified on Device level.
@@ -930,3 +958,17 @@ DICOM Archive Network AE related information
     ":doc:`storeAccessControlIDRule` (s)",object,"Store Access Control Rules applied to Studies received by this AE. Supplements Store Access Control Rules specified on Device level."
     ":doc:`upsOnStore` (s)",object,"UPS on Store Rules applied to DICOM objects received by this AE. Supplements UPS on Store Rules specified on Device level."
     ":doc:`upsOnUPSCompleted` (s)",object,"UPS on UPS Completed Rules applied to UPS managed by this AE. Supplements UPS on UPS Completed Rules specified on Device level."
+
+.. toctree::
+
+    exportRule
+    exportPriorsRule
+    mppsForwardRule
+    rsForwardRule
+    archiveCompressionRule
+    archiveAttributeCoercion
+    archiveAttributeCoercion2
+    studyRetentionPolicy
+    storeAccessControlIDRule
+    upsOnStore
+    upsOnUPSCompleted

@@ -250,6 +250,12 @@ DICOM Archive Device related information
 
     (dcmAcceptConflictingPatientID)"
     "
+    .. _dcmIdentifyPatientByIDAndName:
+
+    :ref:`Identify Patient by ID and Name <dcmIdentifyPatientByIDAndName>`",boolean,"Indicates to consider also the Patient Name on receive of DICOM objects to determine if they belongs to an already existing Patient in the archive.
+
+    (dcmIdentifyPatientByIDAndName)"
+    "
     .. _dcmIdentifyPatientByAllAttributes:
 
     :ref:`Identify Patient by all Attributes <dcmIdentifyPatientByAllAttributes>`",boolean,"Indicates if all Patient attributes in received objects shall be used for associating an already existing Patient in the archive, if the Assigning Authority of the Patient ID is not specified by an Issuer of Patient ID or Universal Entity ID. Attention: disables the coercion of stale Patient attributes in received objects and breaks Patient Management functions relying on the unambiguity of Patient IDs.
@@ -1549,6 +1555,34 @@ DICOM Archive Device related information
     :ref:`HL7 Procedure Status Update Tasks Fetch Size <hl7PSUTaskFetchSize>`",integer,"Maximal number of HL7 Procedure Status Update Tasks fetched in one query.
 
     (hl7PSUTaskFetchSize)"
+    "
+    .. _hl7PSUAction:
+
+    :ref:`HL7 Procedure Status Update Action(s) <hl7PSUAction>`",string,"Specifies HL7 Procedure Status Update action: SEND_NOTIFICATION (= send HL7 Procedure Status Update Notification message to configured HL7 Procedure Status Update Receiving Applications), UPDATE_MWL_STATUS (= set Scheduled Procedure Step Status of MWL Items associated to STUDY to COMPLETED). May be overwritten by configured values for particular Archive Network AEs.
+
+    Enumerated values:
+
+    SEND_NOTIFICATION
+
+    UPDATE_MWL_STATUS
+
+    (hl7PSUAction)"
+    "
+    .. _hl7PSUTrigger:
+
+    :ref:`HL7 Procedure Status Update Trigger(s) <hl7PSUTrigger>`",string,"Specifies trigger events to send a HL7 Procedure Status Update notification to HL7 Receivers configured by HL7 Procedure Status Update Receiving Application. May be overwritten by configured values for particular Archive Network AEs.
+
+    Enumerated values:
+
+    STUDY_RECEIVED
+
+    MPPS_RECEIVED
+
+    REJECTION_NOTE_RECEIVED
+
+    FIRST_OBJECT_OF_STUDY_RECEIVED
+
+    (hl7PSUTrigger)"
     "
     .. _hl7PSUDelay:
 
