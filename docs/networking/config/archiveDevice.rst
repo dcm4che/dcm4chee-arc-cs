@@ -1266,6 +1266,24 @@ DICOM Archive Device related information
 
     (dcmXDSiImagingDocumentSourceAETitle)"
     "
+    .. _dcmXDSiFallbackCMoveSCP:
+
+    :ref:`XDS-I Fallback C-MOVE SCP <dcmXDSiFallbackCMoveSCP>`",string,"AE Title of external C-MOVE SCP to invoke C-MOVE RQs if the requested Entities are not managed by this XDS-I Imaging Document Source.
+
+    (dcmXDSiFallbackCMoveSCP)"
+    "
+    .. _dcmXDSiFallbackCMoveSCPCallingAET:
+
+    :ref:`XDS-I Fallback C-MOVE SCP Calling AET <dcmXDSiFallbackCMoveSCPCallingAET>`",string,"Calling AE Title used in A-ASSOCIATE-RQ to configured XDSi Fallback C-MOVE SCP. If not specified, the configured XDS-I Imaging Document Source AE Title will be used.
+
+    (dcmXDSiFallbackCMoveSCPCallingAET)"
+    "
+    .. _dcmXDSiFallbackCMoveSCPDestination:
+
+    :ref:`XDS-I Fallback C-MOVE SCP Destination <dcmXDSiFallbackCMoveSCPDestination>`",string,"AE Title of local C-STORE-SCP to be set as Move Destination in C-MOVE RQs invoked to configured XDSi Fallback C-MOVE SCP. If not specified, the configured XDS-I Imaging Document Source AE Title will be used.
+
+    (dcmXDSiFallbackCMoveSCPDestination)"
+    "
     .. _dcmQueueTasksFetchSize:
 
     :ref:`Queue Tasks Fetch Size <dcmQueueTasksFetchSize>`",integer,"Maximal number of Tasks rescheduled or deleted or canceled in one transaction.
