@@ -48,17 +48,27 @@ RESTful Forward Rule
 
     UpdatePatient
 
+    UpdatePatientByPID
+
     DeletePatient
+
+    DeletePatientByPID
 
     ChangePatientID
 
     ChangePatientID2
 
+    ChangePatientIDByPID
+
     MergePatient
 
     MergePatient2
 
+    MergePatientByPID
+
     UnmergePatient
+
+    UnmergePatientByPID
 
     SupplementIssuer
 
