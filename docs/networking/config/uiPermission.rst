@@ -184,6 +184,8 @@ UI Permission
 
     recreate
 
+    unmerge
+
     (dcmuiActionParam)"
     "
     .. _dcmAcceptedUserRole:
