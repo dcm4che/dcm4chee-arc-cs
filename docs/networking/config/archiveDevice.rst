@@ -1538,6 +1538,12 @@ DICOM Archive Device related information
 
     (dcmUpdateCharsetFetchSize)"
     "
+    .. _dcmInExpressionCountLimit:
+
+    :ref:`IN Expression Count Limit <dcmInExpressionCountLimit>`",integer,"Limit the number of elements in the IN predicate used for matching SOP Instance UIDs in SQL queries (0 - only limited by DB specific constraint).
+
+    (dcmInExpressionCountLimit)"
+    "
     .. _hl7ADTSendingApplication:
 
     :ref:`HL7 ADT Sending Application <hl7ADTSendingApplication>`",string,"Application|Facility name of Sending Application for HL7 ADT messages to synchronize external systems about performed Patient Information updates. If absent, synchronization of external systems by HL7 ADT messages is disabled.
