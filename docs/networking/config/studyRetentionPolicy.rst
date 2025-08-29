@@ -58,6 +58,6 @@ Study Retention Policy
     "
     .. _dcmRevokeExpiration:
 
-    :ref:`Revoke Expiration Date <dcmRevokeExpiration>`",boolean,"Indicate to revoke a previous set Expiration Date.
+    :ref:`Revoke Expiration Date <dcmRevokeExpiration>`",boolean,"Indicate to revoke a previous set Expiration Date and protect the study by permanently freezing it. Only effective if 'Freeze Expiration Date' is also configured.
 
     (dcmRevokeExpiration)"
