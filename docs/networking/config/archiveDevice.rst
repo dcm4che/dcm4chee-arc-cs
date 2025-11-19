@@ -2023,6 +2023,60 @@ DICOM Archive Device related information
     :ref:`Trusted Issuer of Patient ID(s) <dcmTrustedIssuerOfPatientID>`",string,"Trusted Assigning Authority of Patient IDs in received DICOM objects and HL7 messages. Only Patient IDs qualified by an Assigning Authority matching one of the specified values or Patient IDs matching one of the configured 'Trusted Patient ID Patterns' will be used for identifying the Patient. If neither this attribute nor dcmTrustedPatientIDPattern is configured, all Patient IDs in received DICOM Objects and HL7 messages will be used for identifying the Patient. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].
 
     (dcmTrustedIssuerOfPatientID)"
+    "
+    .. _fhirPreferredAssigningAuthorityOfPatientID:
+
+    :ref:`FHIR Preferred Assigning Authority of Patient ID <fhirPreferredAssigningAuthorityOfPatientID>`",string,"Assigning Authority of preferred Patient ID in logical reference of Patients with multiple Patient IDs in outgoing FHIR messages. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].
+
+    (fhirPreferredAssigningAuthorityOfPatientID)"
+    "
+    .. _fhirDefaultSystemOfPatientID:
+
+    :ref:`FHIR Default System of Patient ID <fhirDefaultSystemOfPatientID>`",string,"Namespace (system) of the Patient ID in logical references of Patients in outgoing FHIR messages, if no value is derived from the 'Issuer of Patient ID' or the 'Universal Entity ID' according configured 'FHIR System of Patient ID' and 'FHIR System by Issuer of Patient ID'.
+
+    (fhirDefaultSystemOfPatientID)"
+    "
+    .. _fhirSystemOfPatientID:
+
+    :ref:`FHIR System of Patient ID(s) <fhirSystemOfPatientID>`",string,"Specifies if the 'Issuer of Patient ID' (= Local Namespace Entity ID) or the 'Universal Entity ID' shall be used as namespace (system) of the Patient ID in logical references of Patients in outgoing FHIR messages. If both are specified, the 'Issuer of Patient ID' will only be used if there is no the 'Universal Entity ID'.
+
+    Enumerated values:
+
+    LocalNamespaceEntityID
+
+    UniversalEntityID
+
+    (fhirSystemOfPatientID)"
+    "
+    .. _fhirSystemByIssuerOfPatientID:
+
+    :ref:`FHIR System by Issuer of Patient ID(s) <fhirSystemByIssuerOfPatientID>`",string,"Specifies mapping of 'Issuer of Patient ID' to namespace (system) of the Patient ID in logical references of Patients in outgoing FHIR messages. Format: {Issuer of Patient ID}={system}. Required if 'FHIR System of Patient ID' includes 'LocalNamespaceEntityID'.
+
+    (fhirSystemByIssuerOfPatientID)"
+    "
+    .. _fhirDefaultSystemOfAccessionNumber:
+
+    :ref:`FHIR Default System of Accession Number <fhirDefaultSystemOfAccessionNumber>`",string,"Namespace (system) of the Accession Number in logical references of Service Requests in outgoing FHIR messages, if no value is derived from the Local Namespace Entity ID or the Universal Entity ID according configured 'FHIR System of Accession Number' and 'FHIR System by Local Namespace Entity ID of Accession Number'.
+
+    (fhirDefaultSystemOfAccessionNumber)"
+    "
+    .. _fhirSystemOfAccessionNumber:
+
+    :ref:`FHIR System of Accession Number(s) <fhirSystemOfAccessionNumber>`",string,"Specifies if the 'Local Namespace Entity ID' or the 'Universal Entity ID' shall be used as namespace (system) of the Accession Number in logical references of Service Requests in outgoing FHIR messages. If both are specified, the 'Local Namespace Entity ID' will only be used if there is no 'Universal Entity ID'.
+
+    Enumerated values:
+
+    LocalNamespaceEntityID
+
+    UniversalEntityID
+
+    (fhirSystemOfAccessionNumber)"
+    "
+    .. _fhirSystemByLocalNamespaceEntityIDOfAccessionNumber:
+
+    :ref:`FHIR System by Local Namespace Entity ID of Accession Number(s) <fhirSystemByLocalNamespaceEntityIDOfAccessionNumber>`",string,"Specifies Mapping of 'Local Namespace Entity ID' to namespace (system) of the Accession Number in logical references of Service Requests in outgoing FHIR messages. Format: {Local Namespace Entity ID}={system}. Required if 'FHIR System of Accession Number' includes 'LocalNamespaceEntityID'.
+
+    (fhirSystemByLocalNamespaceEntityIDOfAccessionNumber)"
     ":doc:`attributeFilter` (s)",object,"Specifies Attributes stored in the database"
     ":doc:`attributeSet` (s)",object,"Named Attribute Set for Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests."
     ":doc:`bulkData` (s)",object,"Specifies Bulk Data Descriptors applied by services providing Metadata of archived instances."

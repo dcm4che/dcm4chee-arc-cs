@@ -56,6 +56,12 @@ Exporter Descriptor
 
     (dcmRejectForDataRetentionExpiry)"
     "
+    .. _dcmCheckIfAlreadyExistsOnDestination:
+
+    :ref:`Check if already exists on Destination <dcmCheckIfAlreadyExistsOnDestination>`",boolean,"Indicates to only export an object if there is not already an object with such Storage Path on the destination storage.
+
+    (dcmCheckIfAlreadyExistsOnDestination)"
+    "
     .. _dcmStgCmtSCP:
 
     :ref:`Storage Commitment SCP AE Title <dcmStgCmtSCP>`",string,"AE Title of external Storage Commitment SCP used to verify export to another archive.
