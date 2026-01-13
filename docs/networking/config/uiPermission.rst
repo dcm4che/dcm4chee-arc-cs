@@ -174,8 +174,6 @@ UI Permission
 
     visible
 
-    merge
-
     upload
 
     reject

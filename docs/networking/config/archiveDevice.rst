@@ -436,6 +436,20 @@ DICOM Archive Device related information
 
     (dcmWadoMetadataExcludePrivate)"
     "
+    .. _dcmWadoVideoAcceptRanges:
+
+    :ref:`Wado Video Accept Ranges <dcmWadoVideoAcceptRanges>`",string,"Indicates if Range Requests accessing encapsulated videos by WADO-URI or WADO-RS Rendered Instance are supported. KNOWN_TOTAL_LENGTH: support if Encapsulated Pixel Data Value Total Length is known. May be overwritten by configured value for particular Archive Network AEs.
+
+    Enumerated values:
+
+    YES
+
+    NO
+
+    KNOWN_TOTAL_LENGTH
+
+    (dcmWadoVideoAcceptRanges)"
+    "
     .. _dcmQueryFetchSize:
 
     :ref:`Query Fetch Size <dcmQueryFetchSize>`",integer,"Number of rows fetched from the database at once by the Query Service.

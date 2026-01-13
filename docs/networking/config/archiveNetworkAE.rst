@@ -314,6 +314,20 @@ DICOM Archive Network AE related information
 
     (dcmWadoMetadataExcludePrivate)"
     "
+    .. _dcmWadoVideoAcceptRanges:
+
+    :ref:`Wado Video Accept Ranges <dcmWadoVideoAcceptRanges>`",string,"Indicates if Range Requests accessing encapsulated videos by WADO-URI or WADO-RS Rendered Instance are supported. KNOWN_TOTAL_LENGTH: support if Encapsulated Pixel Data Value Total Length is known. Overwrites value specified on Device level.
+
+    Enumerated values:
+
+    YES
+
+    NO
+
+    KNOWN_TOTAL_LENGTH
+
+    (dcmWadoVideoAcceptRanges)"
+    "
     .. _dcmQueryMaxNumberOfResults:
 
     :ref:`Query Max Number Of Results <dcmQueryMaxNumberOfResults>`",integer,"Maximal number of return results by C-FIND SCP. If the number of matches extends the limit, the C-FIND request will be refused. 0 = no limitation. Overwrites value specified on Device level.

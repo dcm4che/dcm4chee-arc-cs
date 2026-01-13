@@ -112,6 +112,8 @@ Storage Descriptor
 
     SHA-1 (= Secure Hash Algorithm 1)
 
+    SHA-265 (= Secure Hash Algorithm 256)
+
     (dcmDigestAlgorithm)"
     "
     .. _dcmMaxRetries:
