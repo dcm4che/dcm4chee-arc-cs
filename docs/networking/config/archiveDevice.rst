@@ -2040,13 +2040,13 @@ DICOM Archive Device related information
     "
     .. _fhirPreferredAssigningAuthorityOfPatientID:
 
-    :ref:`FHIR Preferred Assigning Authority of Patient ID <fhirPreferredAssigningAuthorityOfPatientID>`",string,"Assigning Authority of preferred Patient ID in logical reference of Patients with multiple Patient IDs in outgoing FHIR messages. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].
+    :ref:`FHIR Preferred Assigning Authority of Patient ID(s) <fhirPreferredAssigningAuthorityOfPatientID>`",string,"Assigning Authority of Patient IDs included in outgoing FHIR messages. If absent, all Patient IDs of the Patient are included. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].
 
     (fhirPreferredAssigningAuthorityOfPatientID)"
     "
     .. _fhirDefaultSystemOfPatientID:
 
-    :ref:`FHIR Default System of Patient ID <fhirDefaultSystemOfPatientID>`",string,"Namespace (system) of the Patient ID in logical references of Patients in outgoing FHIR messages, if no value is derived from the 'Issuer of Patient ID' or the 'Universal Entity ID' according configured 'FHIR System of Patient ID' and 'FHIR System by Issuer of Patient ID'.
+    :ref:`FHIR Default System of Patient ID <fhirDefaultSystemOfPatientID>`",string,"Namespace (system) of the Patient ID in logical references of Patients in outgoing FHIR messages, if no value is derived from the 'Issuer of Patient ID' or the 'Universal Entity ID' according configured 'FHIR System of Patient ID', 'FHIR System by Issuer of Patient ID' and 'FHIR System Issuer of Patient ID Prefix'.
 
     (fhirDefaultSystemOfPatientID)"
     "
@@ -2064,13 +2064,19 @@ DICOM Archive Device related information
     "
     .. _fhirSystemByIssuerOfPatientID:
 
-    :ref:`FHIR System by Issuer of Patient ID(s) <fhirSystemByIssuerOfPatientID>`",string,"Specifies mapping of 'Issuer of Patient ID' to namespace (system) of the Patient ID in logical references of Patients in outgoing FHIR messages. Format: {Issuer of Patient ID}={system}. Required if 'FHIR System of Patient ID' includes 'LocalNamespaceEntityID'.
+    :ref:`FHIR System by Issuer of Patient ID(s) <fhirSystemByIssuerOfPatientID>`",string,"Specifies mapping of 'Issuer of Patient ID' to namespace (system) of the Patient ID in outgoing FHIR messages. Format: {Issuer of Patient ID}={system}. Required if 'FHIR System of Patient ID' includes 'LocalNamespaceEntityID'.
 
     (fhirSystemByIssuerOfPatientID)"
     "
+    .. _fhirSystemIssuerOfPatientIDPrefix:
+
+    :ref:`FHIR System Issuer of Patient ID Prefix <fhirSystemIssuerOfPatientIDPrefix>`",string,"Specifies prefix used to convert the 'Issuer of Patient ID' to namespace (system) of the Patient ID in outgoing FHIR messages, if 'FHIR System by Issuer of Patient ID' does not contain a matching entry for the 'Issuer of Patient ID'.
+
+    (fhirSystemIssuerOfPatientIDPrefix)"
+    "
     .. _fhirDefaultSystemOfAccessionNumber:
 
-    :ref:`FHIR Default System of Accession Number <fhirDefaultSystemOfAccessionNumber>`",string,"Namespace (system) of the Accession Number in logical references of Service Requests in outgoing FHIR messages, if no value is derived from the Local Namespace Entity ID or the Universal Entity ID according configured 'FHIR System of Accession Number' and 'FHIR System by Local Namespace Entity ID of Accession Number'.
+    :ref:`FHIR Default System of Accession Number <fhirDefaultSystemOfAccessionNumber>`",string,"Namespace (system) of the Accession Number in logical references of Service Requests in outgoing FHIR messages, if no value is derived from the Local Namespace Entity ID or the Universal Entity ID according configured 'FHIR System of Accession Number', 'FHIR System by Local Namespace Entity ID of Accession Number' and 'FHIR System Local Namespace Entity ID of Accession Number Prefix'.
 
     (fhirDefaultSystemOfAccessionNumber)"
     "
@@ -2091,6 +2097,12 @@ DICOM Archive Device related information
     :ref:`FHIR System by Local Namespace Entity ID of Accession Number(s) <fhirSystemByLocalNamespaceEntityIDOfAccessionNumber>`",string,"Specifies Mapping of 'Local Namespace Entity ID' to namespace (system) of the Accession Number in logical references of Service Requests in outgoing FHIR messages. Format: {Local Namespace Entity ID}={system}. Required if 'FHIR System of Accession Number' includes 'LocalNamespaceEntityID'.
 
     (fhirSystemByLocalNamespaceEntityIDOfAccessionNumber)"
+    "
+    .. _fhirSystemLocalNamespaceEntityIDOfAccessionNumberPrefix:
+
+    :ref:`FHIR System Local Namespace Entity ID of Accession Number Prefix <fhirSystemLocalNamespaceEntityIDOfAccessionNumberPrefix>`",string,"Specifies prefix used to convert the 'Local Namespace Entity ID' to namespace (system) of the Accession Number in logical references of Service Requests in outgoing FHIR messages, if 'FHIR System by Local Namespace Entity ID of Accession Number' does not contain a matching entry for the 'Local Namespace Entity ID'.
+
+    (fhirSystemLocalNamespaceEntityIDOfAccessionNumberPrefix)"
     ":doc:`attributeFilter` (s)",object,"Specifies Attributes stored in the database"
     ":doc:`attributeSet` (s)",object,"Named Attribute Set for Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests."
     ":doc:`bulkData` (s)",object,"Specifies Bulk Data Descriptors applied by services providing Metadata of archived instances."
