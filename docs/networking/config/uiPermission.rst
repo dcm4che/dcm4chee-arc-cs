@@ -58,6 +58,8 @@ UI Permission
 
     tab-monitoring->storage_systems
 
+    tab-monitoring->storage_verification
+
     tab-monitoring->diff
 
     tab-statistics->statistics
