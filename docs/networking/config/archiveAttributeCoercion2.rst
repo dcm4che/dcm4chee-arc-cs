@@ -116,7 +116,7 @@ Archive Attribute Coercion of received/sent DIMSE
     "
     .. _dcmMergeAttribute:
 
-    :ref:`DICOM Attribute Coercion Parameters(s) <dcmMergeAttribute>`",string,"DICOM Attribute Coercion Parameters in format {attributeID}={value}. {attributeID} inside of {value} may be replaced by the value of that attribute in the original dataset. Only effective for merging attributes coercion type. Refer `formatting options <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions#formats>`_ and `examples. <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions#examples>`_
+    :ref:`DICOM Attribute Coercion Parameters(s) <dcmMergeAttribute>`",string,"DICOM Attribute Coercion Parameters in format {attributeID}={value}. {attributeID} inside of {value} may be replaced by the value of that attribute in the original dataset. Only effective for merging attributes coercion type. Refer `DICOM Attribute Coercion Parameters <https://github.com/dcm4che/dcm4chee-arc-light/wiki/DICOM-Attribute-Coercion-Parameters>`_ for formatting options and examples.
 
     (dcmMergeAttribute)"
     "
