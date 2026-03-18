@@ -204,11 +204,11 @@ Storage Descriptor
 
     (dcmDeleterThreshold)"
     "
-    .. _dcmDeleterThresholdMaxUseableSpace:
+    .. _dcmDeleterThresholdMaxUsableSpace:
 
-    :ref:`Deleter Threshold Max Usable Space(s) <dcmDeleterThresholdMaxUseableSpace>`",string,"Maximal Usable Space on Storage System to trigger deletion. If present, studies are deleted from the Storage System configured for cache (Storage Duration = CACHE) or temporary (Storage Duration = TEMPORARY) storage, if the used disk space exceeds that value. Format [nn'['<schedule>']']nnn(MB|GB|MiB|GiB).
+    :ref:`Deleter Threshold Max Usable Space(s) <dcmDeleterThresholdMaxUsableSpace>`",string,"Maximal Usable Space on Storage System to trigger deletion. If present, studies are deleted from the Storage System configured for cache (Storage Duration = CACHE) or temporary (Storage Duration = TEMPORARY) storage, if the used disk space exceeds that value. Format [nn'['<schedule>']']nnn(MB|GB|MiB|GiB).
 
-    (dcmDeleterThresholdMaxUseableSpace)"
+    (dcmDeleterThresholdMaxUsableSpace)"
     "
     .. _dcmDeleterThresholdBlocksFilePath:
 
