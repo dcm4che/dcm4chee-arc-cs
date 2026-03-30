@@ -2125,7 +2125,8 @@ DICOM Archive Device related information
     ":doc:`changeAccessControlIDRule` (s)",object,"Change Access Control Rules applied to received Studies or Series."
     ":doc:`upsOnStore` (s)",object,"UPS on Store Rules applied to DICOM objects received by any AE. May be supplemented by configured UPS on Store Rules for particular Archive Network AEs."
     ":doc:`upsOnHL7` (s)",object,"UPS on HL7 Rules applied to HL7 messages received by any HL7 Application. May be supplemented by configured UPS on HL7 Rules for particular HL7 Applications."
-    ":doc:`upsOnUPSCompleted` (s)",object,"UPS on UPS Completed Rules applied to UPS managed by any AE. May be supplemented by configured UPS on Store Rules for particular Archive Network AEs."
+    ":doc:`upsOnUPSCompleted` (s)",object,"UPS on UPS Completed Rules applied to UPS managed by any AE. May be supplemented by configured UPS on UPS Completed Rules for particular Archive Network AEs."
+    ":doc:`upsOnUPSCanceled` (s)",object,"UPS on UPS Canceled Rules applied to UPS managed by any AE. May be supplemented by configured UPS on UPS Canceled Rules for particular Archive Network AEs."
     ":doc:`upsProcessingRule` (s)",object,"UPS Processing Rules."
     ":doc:`idGenerator` (s)",object,"ID Generator"
     ":doc:`mwlImport` (s)",object,"MWL Import"
@@ -2174,6 +2175,7 @@ DICOM Archive Device related information
     upsOnStore
     upsOnHL7
     upsOnUPSCompleted
+    upsOnUPSCanceled
     upsProcessingRule
     idGenerator
     mwlImport
