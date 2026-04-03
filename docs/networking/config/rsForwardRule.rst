@@ -100,6 +100,8 @@ RESTful Forward Rule
 
     UpdateStudyAccessControlID
 
+    UpdateSeriesAccessControlID
+
     MoveStudyToPatient
 
     LinkStudyToMWLMerge
