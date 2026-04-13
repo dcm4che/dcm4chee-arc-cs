@@ -624,6 +624,12 @@ DICOM Archive Network AE related information
 
     (dcmUPSWorklistLabel)"
     "
+    .. _dcmUPSWorklistLabelFilter:
+
+    :ref:`UPS Worklist Label Filter(s) <dcmUPSWorklistLabelFilter>`",string,"Value of Worklist Label (0074,1202) used as matching Key by this AE on processing queries by DIMSE (UPS Query SOP Class) or dicomWeb (Worklist Search Transaction) service for matching Unified Procedure Steps (UPS), if no matching key for this attribute is specified in the request. If multiple values are specified, UPS with any of the specified values of Worklist Label (0074,1202) matches. If no value is specified, UPS with any value of Worklist Label (0074,1202) will match.
+
+    (dcmUPSWorklistLabelFilter)"
+    "
     .. _dcmUPSEventSCU:
 
     :ref:`UPS Event SCU(s) <dcmUPSEventSCU>`",string,"AE Title of UPS Event SOP Class SCU, to which UPS Event Reports are sent for subscriptions created on this Network AE  - independently if the subscription was created by the N-ACTION DIMSE service, or by a corresponding UPS RESTful service. Overwrites value specified on Device level.
