@@ -70,10 +70,10 @@ Export Rule
 
     Enumerated values:
 
-    NEVER
+    NEVER (= Never export entity on reoccurrence of instances)
 
-    ALWAYS
+    ALWAYS (= Always export entity on reoccurrence of instances)
 
-    REPLACE
+    REPLACE (= Export entity only on reoccurrence of replaced instances)
 
     (dcmExportReoccurredInstances)"

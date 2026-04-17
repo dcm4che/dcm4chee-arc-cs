@@ -40,7 +40,7 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
     "
     .. _dcmUPSPriority:
 
-    :ref:`Priority <dcmUPSPriority>`",string,"Value of Scheduled Procedure Step Priority (0074,1200) in created UPS. Enumerated Values: HIGH, MEDIUM, LOW. If absent, MEDIUM will be applied.
+    :ref:`Priority <dcmUPSPriority>`",string,"Value of Scheduled Procedure Step Priority (0074,1200) in created UPS.
 
     Enumerated values:
 
@@ -86,19 +86,19 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
     "
     .. _dcmUPSIncludeInputInformation:
 
-    :ref:`Include Input Information <dcmUPSIncludeInputInformation>`",string,"Indicates if received objects shall be referenced in the Input Information Sequence (0040,4021) in created UPS. SINGLE (= do not updating existing UPS), APPEND (= update existing UPS in state SCHEDULED), SINGLE_OR_CREATE (= if UPS already exists, create new UPS with derived UID), APPEND_OR_CREATE (= if existing UPS is no longer in state SCHEDULED, create new UPS with derived UID).
+    :ref:`Include Input Information <dcmUPSIncludeInputInformation>`",string,"Indicates if received objects shall be referenced in the Input Information Sequence (0040,4021) in created UPS.
 
     Enumerated values:
 
-    NO
+    NO (= Do not include Input Information Sequence)
 
-    SINGLE
+    SINGLE (= Do not updating existing UPS)
 
-    APPEND
+    APPEND (= Update existing UPS in state SCHEDULED)
 
-    SINGLE_OR_CREATE
+    SINGLE_OR_CREATE (= If UPS already exists, create new UPS with derived UID)
 
-    APPEND_OR_CREATE
+    APPEND_OR_CREATE (= If existing UPS is no longer in state SCHEDULED, create new UPS with derived UID)
 
     (dcmUPSIncludeInputInformation)"
     "

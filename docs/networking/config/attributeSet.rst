@@ -16,17 +16,17 @@ Named Attribute Set for Query Parameter 'includefields' of QIDO-RS and WADO-RS M
     "
     .. _dcmAttributeSetType:
 
-    :ref:`Attribute Set Type <dcmAttributeSetType>`",string,"Specifies if this Attribute Set is used by Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests.
+    :ref:`Attribute Set Type <dcmAttributeSetType>`",string,"Specifies usage of this Attribute Set Type.
 
     Enumerated values:
 
-    QIDO_RS
+    QIDO_RS (= Attribute Set is used by Query Parameter 'includefields' of QIDO-RS requests)
 
-    WADO_RS
+    WADO_RS (= Attribute Set is used by Query Parameter 'includefields' of WADO-RS requests)
 
-    DIFF_RS
+    DIFF_RS (= Attribute Set is used by Query Parameter 'comparefields' of DIFF-RS requests)
 
-    LEADING_CFIND_SCP
+    LEADING_CFIND_SCP (= Attribute Set is used by Leading C-FIND SCP coercion)
 
     (dcmAttributeSetType)"
     "

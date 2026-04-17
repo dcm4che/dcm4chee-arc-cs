@@ -14,17 +14,17 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    org.dcm4che3.soundex.Soundex
+    org.dcm4che3.soundex.Soundex (= Classic Soundex phonetic algorithm that encodes names into a 4-character code based on English pronunciation so similarly sounding names match despite spelling differences)
 
-    org.dcm4che3.soundex.ESoundex
+    org.dcm4che3.soundex.ESoundex (= Extended Soundex variant that produces variable-length phonetic codes (instead of fixed 4 characters) to improve matching accuracy for longer words)
 
-    org.dcm4che3.soundex.ESoundex9
+    org.dcm4che3.soundex.ESoundex9 (= Extended Soundex variant that generates phonetic codes up to 9 characters long for higher precision fuzzy matching than standard Soundex)
 
-    org.dcm4che3.soundex.Metaphone
+    org.dcm4che3.soundex.Metaphone (= Metaphone phonetic algorithm that encodes words based on English pronunciation rules and spelling patterns, providing more accurate phonetic matching than Soundex)
 
-    org.dcm4che3.soundex.KPhonetik
+    org.dcm4che3.soundex.KPhonetik (= Cologne Phonetic (Kölner Phonetik) algorithm optimized for German phonetics to match words that sound similar in German pronunciation)
 
-    org.dcm4che3.soundex.Phonem
+    org.dcm4che3.soundex.Phonem (= Phonem algorithm that normalizes words into a simplified phonetic representation to improve fuzzy matching across spelling variations (commonly used for Germanic names))
 
     (dcmFuzzyAlgorithmClass)"
     "
@@ -190,13 +190,13 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    NEVER
+    NEVER (= Never overwrite previous received object on receive of object with matching SOP Instance UID)
 
-    ALWAYS
+    ALWAYS (= Always overwrite previous received object on receive of object with matching SOP Instance UID and if instance location digest is unequal)
 
-    SAME_SOURCE
+    SAME_SOURCE (= Overwrite previous received object on receive of object with matching SOP Instance UID if it is from same source (Calling AET))
 
-    EVEN_WITH_EQUAL_DIGEST
+    EVEN_WITH_EQUAL_DIGEST (= Overwrite previous received object on receive of object with matching SOP Instance UID even if instance location digest is equal)
 
     (dcmOverwritePolicy)"
     "
@@ -206,13 +206,13 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    IGNORE
+    IGNORE (= Silently ignores the received object)
 
-    REJECT
+    REJECT (= Reject the received object with error status A77BH)
 
-    OVERWRITE
+    OVERWRITE (= Replace previous received object by new one belonging to other Series (\poor-man IOCM\))
 
-    STORE_ADDITIONALLY
+    STORE_ADDITIONALLY (= Store received object, retaining the previous received object, replacing the value SAME_SOURCE of config field Overwrite Policy)
 
     (dcmRelationalMismatchPolicy)"
     "
@@ -228,11 +228,11 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    YES
+    YES (= Accept missing Patient ID (0010,0020) in DICOM dataset)
 
-    NO
+    NO (= Do not accept missing Patient ID (0010,0020) in DICOM dataset)
 
-    CREATE
+    CREATE (= Create patient identifier if missing Patient ID (0010,0020) in DICOM dataset)
 
     (dcmAcceptMissingPatientID)"
     "
@@ -242,11 +242,11 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    YES
+    YES (= Accept patient identifier in DICOM dataset differing from patient identifier in previous received objects of study)
 
-    NO
+    NO (= Do not accept patient identifier in DICOM dataset differing from patient identifier in previous received objects of study)
 
-    MERGED
+    MERGED (= Accept patient identifier in DICOM dataset if already merged with another patient identifier)
 
     (dcmAcceptConflictingPatientID)"
     "
@@ -322,13 +322,13 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    DS
+    DS (= Decimal String)
 
-    IS
+    IS (= Integer String)
 
-    SV
+    SV (= Signed 64-bit Very Long)
 
-    UV
+    UV (= Unsigned 64-bit Very Long)
 
     (dcmEncodeAsJSONNumber)"
     "
@@ -344,11 +344,11 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    NOT_SUPPORTED
+    NOT_SUPPORTED (= Ignore User Identity Negotiation Sub-Item in Association requests)
 
-    SUPPORTS
+    SUPPORTS (= Verify passed Username and password or JSON Web Token are against a Keycloak server)
 
-    REQUIRED
+    REQUIRED (= Reject Association requests without a valid Username and password or JSON Web Token in its Identity Negotiation Sub-Item)
 
     (dcmUserIdentityNegotiation)"
     "
@@ -438,15 +438,15 @@ DICOM Archive Device related information
     "
     .. _dcmWadoVideoAcceptRanges:
 
-    :ref:`Wado Video Accept Ranges <dcmWadoVideoAcceptRanges>`",string,"Indicates if Range Requests accessing encapsulated videos by WADO-URI or WADO-RS Rendered Instance are supported. KNOWN_TOTAL_LENGTH: support if Encapsulated Pixel Data Value Total Length is known. May be overwritten by configured value for particular Archive Network AEs.
+    :ref:`Wado Video Accept Ranges <dcmWadoVideoAcceptRanges>`",string,"Indicates if Range Requests accessing encapsulated videos by WADO-URI or WADO-RS Rendered Instance are supported. May be overwritten by configured value for particular Archive Network AEs.
 
     Enumerated values:
 
-    YES
+    YES (= HTTP Range Requests supported)
 
-    NO
+    NO (= HTTP Range Requests not supported)
 
-    KNOWN_TOTAL_LENGTH
+    KNOWN_TOTAL_LENGTH (= HTTP Range Requests supported if Encapsulated Pixel Data Value Total Length is known)
 
     (dcmWadoVideoAcceptRanges)"
     "
@@ -498,13 +498,13 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    STUDY_RECEIVED
+    STUDY_RECEIVED (= Send IAN on receiving studies)
 
-    MPPS_RECEIVED
+    MPPS_RECEIVED (= Send IAN on receiving MPPS)
 
-    REJECTION_NOTE_RECEIVED
+    REJECTION_NOTE_RECEIVED (= Send IAN on IOCM trigger)
 
-    FIRST_OBJECT_OF_STUDY_RECEIVED
+    FIRST_OBJECT_OF_STUDY_RECEIVED (= Send IAN on receiving first object of study)
 
     (dcmIanTrigger)"
     "
@@ -546,15 +546,15 @@ DICOM Archive Device related information
     "
     .. _dcmSpanningCFindSCPPolicy:
 
-    :ref:`Spanning C-Find SCP Policy <dcmSpanningCFindSCPPolicy>`",string,"Specifies policy for combining matches returned from configured Spanning C-Find SCP with matching entries from the archive DB. SUPPLEMENT (= returns local matches before additional matches from Spanning C-Find SCP ), MERGE (= returns matches from Spanning C-Find SCP before additional local matches), REPLACE (= returns only matches from Spanning C-Find SCP). May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`Spanning C-Find SCP Policy <dcmSpanningCFindSCPPolicy>`",string,"Specifies policy for combining matches returned from configured Spanning C-Find SCP with matching entries from the archive DB. May be overwritten by configured values for particular Archive Network AEs.
 
     Enumerated values:
 
-    SUPPLEMENT
+    SUPPLEMENT (= Returns local matches before additional matches from Spanning C-Find SCP)
 
-    MERGE
+    MERGE (= Returns matches from Spanning C-Find SCP before additional local matches)
 
-    REPLACE
+    REPLACE (= Returns only matches from Spanning C-Find SCP)
 
     (dcmSpanningCFindSCPPolicy)"
     "
@@ -866,11 +866,11 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    PLAIN_TEXT
+    PLAIN_TEXT (= Patient Identifier and Patient Name shown as plain text in system logs)
 
-    HASH_NAME
+    HASH_NAME (= Patient Identifier shown as plain text, Patient Name shown as hashed in system logs)
 
-    HASH_NAME_AND_ID
+    HASH_NAME_AND_ID (= Patient Identifier and Patient Name shown as hashed in system logs)
 
     (dcmShowPatientInfoInSystemLog)"
     "
@@ -880,11 +880,11 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    PLAIN_TEXT
+    PLAIN_TEXT (= Patient Identifier and Patient Name shown as plain text in audit logs)
 
-    HASH_NAME
+    HASH_NAME (= Patient Identifier shown as plain text, Patient Name shown as hashed in audit logs)
 
-    HASH_NAME_AND_ID
+    HASH_NAME_AND_ID (= Patient Identifier and Patient Name shown as hashed in audit logs)
 
     (dcmShowPatientInfoInAuditLog)"
     "
@@ -920,13 +920,13 @@ DICOM Archive Device related information
     "
     .. _hl7ORUAction:
 
-    :ref:`HL7 ORU Action(s) <hl7ORUAction>`",string,"Specifies action on receive of HL7 ORU^R01 message: IMPORT_REPORT (= transcode received HL7 ORU^R01 to DICOM SR), MWL_COMPLETED (= set Status of matching MWL items to COMPLETED). May be overwritten by configured values for particular Archive HL7 Application.
+    :ref:`HL7 ORU Action(s) <hl7ORUAction>`",string,"Specifies action on receive of HL7 ORU^R01 message. May be overwritten by configured values for particular Archive HL7 Application.
 
     Enumerated values:
 
-    IMPORT_REPORT
+    IMPORT_REPORT (= Transcode received HL7 ORU^R01 to DICOM SR or PDF or CDA)
 
-    MWL_COMPLETED
+    MWL_COMPLETED (= Set Status of matching MWL items to COMPLETED)
 
     (hl7ORUAction)"
     "
@@ -966,9 +966,9 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    OBR_4_1
+    OBR_4_1 (= HL7 Schedule Protocol Code in Order in OBR.4.1 to OBR.4.3)
 
-    OBR_4_4
+    OBR_4_4 (= HL7 Schedule Protocol Code in Order in OBR.4.4 to OBR.4.6)
 
     (hl7ScheduledProtocolCodeInOrder)"
     "
@@ -978,7 +978,7 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    ORC_18
+    ORC_18 (= HL7 Schedule Station AET in Order in ORC.18)
 
     (hl7ScheduledStationAETInOrder)"
     "
@@ -1024,7 +1024,7 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    ADT^A10
+    ADT^A10 (= Patient Arriving / Tracking)
 
     (hl7PatientArrivalMessageType)"
     "
@@ -1160,39 +1160,39 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    NEVER
+    NEVER (= Never allow rejection for Data Retention Policy Expired)
 
-    ALWAYS
+    ALWAYS (= Always allow rejection for Data Retention Policy Expired)
 
-    EXPIRED_UNSET
+    EXPIRED_UNSET (= Allow rejection for Data Retention Policy Expired for expired studies or studies with no expiration date)
 
-    ONLY_EXPIRED
+    ONLY_EXPIRED (= Allow rejection for Data Retention Policy Expired only for expired studies)
 
     (dcmAllowRejectionForDataRetentionPolicyExpired)"
     "
     .. _dcmAllowDeleteStudyPermanently:
 
-    :ref:`Allow Delete Study permanently <dcmAllowDeleteStudyPermanently>`",string,"Allow to delete Study permanently. REJECTED = only already rejected Studies. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`Allow Delete Study permanently <dcmAllowDeleteStudyPermanently>`",string,"Allow to delete Study permanently. May be overwritten by configured values for particular Archive Network AEs.
 
     Enumerated values:
 
-    ALWAYS
+    ALWAYS (= Always allow delete study permanently)
 
-    REJECTED
+    REJECTED (= Allow delete study permanently only for study with all objects rejected)
 
     (dcmAllowDeleteStudyPermanently)"
     "
     .. _dcmAllowDeletePatient:
 
-    :ref:`Allow Delete Patient <dcmAllowDeletePatient>`",string,"Allow permanent deletion of Patients. WITHOUT_STUDIES = only Patients without Studies.
+    :ref:`Allow Delete Patient <dcmAllowDeletePatient>`",string,"Allow permanent deletion of Patients. May be overwritten by configured values for particular Archive Network AEs.
 
     Enumerated values:
 
-    NEVER
+    NEVER (= Never allow delete patient permanently)
 
-    ALWAYS
+    ALWAYS (= Always allow delete patient permanently)
 
-    WITHOUT_STUDIES
+    WITHOUT_STUDIES (= Allow delete patient permanently only for patient without studies)
 
     (dcmAllowDeletePatient)"
     "
@@ -1322,15 +1322,15 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    PRESERVE
+    PRESERVE (= The attributes will be preserved. Nullify attributes in the new dataset which are not present in the original dataset. Any extra attributes will be nullified)
 
-    SUPPLEMENT
+    SUPPLEMENT (= The attributes will be overwritten. Attributes not present in original dataset will be supplemented. Any extra attributes with not null values will be added)
 
-    MERGE
+    MERGE (= The attributes will be overwritten. Attribute values will be written from new dataset. Any attributes with not null values, shall not be overwritten by attributes with null values)
 
-    OVERWRITE
+    OVERWRITE (= The attributes will be overwritten. Attribute values if null in new dataset, will be nullified in original dataset. Any attributes with not null values, shall be overwritten by attributes with null values)
 
-    REPLACE
+    REPLACE (= The attributes will be completely overwritten)
 
     (dcmCopyMoveUpdatePolicy)"
     "
@@ -1340,35 +1340,35 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    PRESERVE
+    PRESERVE (= The attributes will be preserved. Nullify attributes in the new dataset which are not present in the original dataset. Any extra attributes will be nullified)
 
-    SUPPLEMENT
+    SUPPLEMENT (= The attributes will be overwritten. Attributes not present in original dataset will be supplemented. Any extra attributes with not null values will be added)
 
-    MERGE
+    MERGE (= The attributes will be overwritten. Attribute values will be written from new dataset. Any attributes with not null values, shall not be overwritten by attributes with null values)
 
-    OVERWRITE
+    OVERWRITE (= The attributes will be overwritten. Attribute values if null in new dataset, will be nullified in original dataset. Any attributes with not null values, shall be overwritten by attributes with null values)
 
-    REPLACE
+    REPLACE (= The attributes will be completely overwritten)
 
     (dcmLinkMWLEntryUpdatePolicy)"
     "
     .. _dcmStorageVerificationPolicy:
 
-    :ref:`Storage Verification Policy <dcmStorageVerificationPolicy>`",string,"DB_RECORD_EXISTS: only check for existence of DB records, OBJECT_EXISTS: check if object exists on Storage System, OBJECT_SIZE: check size of object on Storage System, OBJECT_FETCH: fetch object from Storage System), OBJECT_CHECKSUM: recalculate checksum of object on Storage System, S3_MD5SUM: check MD5 checksum of object on S3 Storage System. May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`Storage Verification Policy <dcmStorageVerificationPolicy>`",string,"Policy applied on storage verification of studies. May be overwritten by configured values for particular Archive Network AEs.
 
     Enumerated values:
 
-    DB_RECORD_EXISTS
+    DB_RECORD_EXISTS (= Only check for existence of DB records)
 
-    OBJECT_EXISTS
+    OBJECT_EXISTS (= Check if object exists on Storage System)
 
-    OBJECT_SIZE
+    OBJECT_SIZE (= Check size of object on Storage System)
 
-    OBJECT_FETCH
+    OBJECT_FETCH (= Fetch object from Storage System)
 
-    OBJECT_CHECKSUM
+    OBJECT_CHECKSUM (= Recalculate checksum of object on Storage System)
 
-    S3_MD5SUM
+    S3_MD5SUM (= Check MD5 checksum of object on S3 Storage System)
 
     (dcmStorageVerificationPolicy)"
     "
@@ -1596,13 +1596,13 @@ DICOM Archive Device related information
     "
     .. _hl7PSUAction:
 
-    :ref:`HL7 Procedure Status Update Action(s) <hl7PSUAction>`",string,"Specifies HL7 Procedure Status Update action: SEND_NOTIFICATION (= send HL7 Procedure Status Update Notification message to configured HL7 Procedure Status Update Receiving Applications), UPDATE_MWL_STATUS (= set Scheduled Procedure Step Status of MWL Items associated to STUDY to COMPLETED). May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`HL7 Procedure Status Update Action(s) <hl7PSUAction>`",string,"Specifies HL7 Procedure Status Update action. May be overwritten by configured values for particular Archive Network AEs.
 
     Enumerated values:
 
-    SEND_NOTIFICATION
+    SEND_NOTIFICATION (= Send HL7 Procedure Status Update Notification message to configured HL7 Procedure Status Update Receiving Applications)
 
-    UPDATE_MWL_STATUS
+    UPDATE_MWL_STATUS (= Set Scheduled Procedure Step Status of MWL Items associated to STUDY to COMPLETED)
 
     (hl7PSUAction)"
     "
@@ -1612,13 +1612,13 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    STUDY_RECEIVED
+    STUDY_RECEIVED (= Send notification on receive of studies)
 
-    MPPS_RECEIVED
+    MPPS_RECEIVED (= Send notification on receive of MPPS)
 
-    REJECTION_NOTE_RECEIVED
+    REJECTION_NOTE_RECEIVED (= Send notification on receive of IOCM KO)
 
-    FIRST_OBJECT_OF_STUDY_RECEIVED
+    FIRST_OBJECT_OF_STUDY_RECEIVED (= Send notification on receive of first object of study)
 
     (hl7PSUTrigger)"
     "
@@ -1676,11 +1676,11 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    OMG_O19
+    OMG_O19 (= Eyecare Order Message)
 
-    ORU_R01
+    ORU_R01 (= Unsolicited Observation Message)
 
-    OMI_O23
+    OMI_O23 (= Clinical Order Message)
 
     (hl7PSUMessageType)"
     "
@@ -1696,9 +1696,9 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    AccessionNumber
+    AccessionNumber (= Use Accession Number (0008,0050) for matching MWL)
 
-    StudyInstanceUID
+    StudyInstanceUID (= Use Study Instance UID (0020,000D) for matching MWL)
 
     (hl7PSUMWLMatchingKey)"
     "
@@ -1732,11 +1732,11 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    ALL
+    ALL (= Include all patient identifiers in PID.3 / MRG.1, including patient identifier on root dataset in Other Patient IDs Sequence (0010,1002))
 
-    NONE
+    NONE (= Include no patient identifiers from PID.3 / MRG.1 in Other Patient IDs Sequence (0010,1002))
 
-    OTHER
+    OTHER (= Include all patient identifiers in PID.3 / MRG.1, except patient identifier on root dataset in Other Patient IDs Sequence (0010,1002))
 
     (hl7OtherPatientIDs)"
     "
@@ -1746,11 +1746,11 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    REJECT
+    REJECT (= Reject HL7 Order Messages with missing Study Instance UID in ZDS.1 / IPC.3)
 
-    GENERATE
+    GENERATE (= Generate random Study Instance UID if missing in HL7 Order Messages in ZDS.1 / IPC.3)
 
-    ACCESSION_BASED
+    ACCESSION_BASED (= Generate Study Instance UID based on Accession Number present in OBR.18 / IPC.1 if Study Instance UID missing in HL7 Order Messages in ZDS.1 / IPC.3)
 
     (hl7OrderMissingStudyIUIDPolicy)"
     "
@@ -1760,11 +1760,11 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    ACCEPT
+    ACCEPT (= Accept HL7 Order Messages with missing Admission ID in PV1.19 / PID.18)
 
-    REJECT
+    REJECT (= Reject HL7 Order Messages with missing Admission ID in PV1.19 / PID.18)
 
-    ACCESSION_AS_ADMISSION
+    ACCESSION_AS_ADMISSION (= Use Accession Number present in OBR.18 / IPC.1 as Admission ID if it is missing in HL7 Order Message in PV1.19 / PID.18)
 
     (hl7OrderMissingAdmissionIDPolicy)"
     "
@@ -1774,11 +1774,11 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    REJECT
+    REJECT (= Reject HL7 ORU^R01 message with missing Study Instance UID in OBX.5 for OBX segment with OBX.3 as 'Study Instance UID' / 'DICOM Study')
 
-    GENERATE
+    GENERATE (= Generate random Study Instance UID if it is missing in HL7 ORU^R01 Message in OBX.5 for OBX segment with OBX.3 as 'Study Instance UID' / 'DICOM Study')
 
-    ACCESSION_BASED
+    ACCESSION_BASED (= Generate Study Instance UID based on Accession Number present in OBR.18 if Study Instance UID missing in HL7 ORU^R01 Messages in OBX.5 for OBX segment with OBX.3 as 'Study Instance UID' / 'DICOM Study')
 
     (hl7ImportReportMissingStudyIUIDPolicy)"
     "
@@ -1788,11 +1788,11 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    ACCEPT
+    ACCEPT (= Accept HL7 ORU^R01 Messages with missing Admission ID in PV1.19 / PID.18)
 
-    REJECT
+    REJECT (= Reject HL7 ORU^R01 Messages with missing Admission ID in PV1.19 / PID.18)
 
-    ACCESSION_AS_ADMISSION
+    ACCESSION_AS_ADMISSION (= Use Accession Number present in OBR.18 as Admission ID if it is missing in HL7 ORU^R01 Message in PV1.19 / PID.18)
 
     (hl7ImportReportMissingAdmissionIDPolicy)"
     "
@@ -1808,25 +1808,25 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    NONE
+    NONE (= No adjustment done to Study / Series / SOP IUIDs)
 
-    APPEND_HASH_OF_STUDY_INSTANCE_UID
+    APPEND_HASH_OF_STUDY_INSTANCE_UID (= Hash of Study Instance UID appended as suffix to Study / Series / SOP IUIDs)
 
     (hl7ImportReportAdjustIUID)"
     "
     .. _hl7ReferredMergedPatientPolicy:
 
-    :ref:`HL7 Referred Merged Patient Policy <hl7ReferredMergedPatientPolicy>`",string,"Specifies policy on incoming HL7 messages referring an already merged Patient. Refer `HL7 Referred Merged Patient Policy <https://github.com/dcm4che/dcm4chee-arc-light/wiki/HL7-Referred-Merged-Patient-Policy>`_ meanings. May be overwritten by configured values for particular Archive HL7 Application.
+    :ref:`HL7 Referred Merged Patient Policy <hl7ReferredMergedPatientPolicy>`",string,"Specifies policy on incoming HL7 messages referring an already merged Patient. May be overwritten by configured values for particular Archive HL7 Application.
 
     Enumerated values:
 
-    REJECT
+    REJECT (= Reject any incoming HL7 messages referring an already merged Patient)
 
-    IGNORE
+    IGNORE (= Ignore any incoming HL7 messages referring an already merged Patient)
 
-    IGNORE_DUPLICATE_MERGE
+    IGNORE_DUPLICATE_MERGE (= Ignore only duplicate incoming HL7 Patient Merge (ADT^A40) messages referring an already merged Patient. Reject any other incoming HL7 messages referring an already merged Patient.)
 
-    ACCEPT_INVERSE_MERGE
+    ACCEPT_INVERSE_MERGE (= Accept any incoming inverse HL7 Patient Merge (ADT^A40) messages referring an already merged Patient, optionally allowing inverse merging of patient records if clients send duplicated ADT^A40 patient merge messages repeatedly, just reversing the patient identifier values in PID / MRG segments.)
 
     (hl7ReferredMergedPatientPolicy)"
     "
@@ -2056,9 +2056,9 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    LocalNamespaceEntityID
+    LocalNamespaceEntityID (= Use IssuerOfPatientID as namespace (system) of the Patient ID in logical references of Patients in outgoing FHIR messages)
 
-    UniversalEntityID
+    UniversalEntityID (= Use IssuerOfPatientIDQualifiersSequence.UniversalEntityID as namespace (system) of the Patient ID in logical references of Patients in outgoing FHIR messages)
 
     (fhirSystemOfPatientID)"
     "
@@ -2086,9 +2086,9 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    LocalNamespaceEntityID
+    LocalNamespaceEntityID (= Use IssuerOfAccessionNumberSequence.LocalNamespaceEntityID as namespace (system) of the Accession Number in logical references of Service Requests in outgoing FHIR messages)
 
-    UniversalEntityID
+    UniversalEntityID (= Use IssuerOfAccessionNumberSequence.UniversalEntityID as namespace (system) of the Accession Number in logical references of Service Requests in outgoing FHIR messages)
 
     (fhirSystemOfAccessionNumber)"
     "

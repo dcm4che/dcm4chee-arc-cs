@@ -68,13 +68,13 @@ DICOM Archive Network AE related information
 
     Enumerated values:
 
-    NEVER
+    NEVER (= Never overwrite previous received object on receive of object with matching SOP Instance UID)
 
-    ALWAYS
+    ALWAYS (= Always overwrite previous received object on receive of object with matching SOP Instance UID and if instance location digest is unequal)
 
-    SAME_SOURCE
+    SAME_SOURCE (= Overwrite previous received object on receive of object with matching SOP Instance UID if it is from same source (Calling AET))
 
-    EVEN_WITH_EQUAL_DIGEST
+    EVEN_WITH_EQUAL_DIGEST (= Overwrite previous received object on receive of object with matching SOP Instance UID even if instance location digest is equal)
 
     (dcmOverwritePolicy)"
     "
@@ -84,13 +84,13 @@ DICOM Archive Network AE related information
 
     Enumerated values:
 
-    IGNORE
+    IGNORE (= Silently ignores the received object)
 
-    REJECT
+    REJECT (= Reject the received object with error status A77BH)
 
-    OVERWRITE
+    OVERWRITE (= Replace previous received object by new one belonging to other Series (\poor-man IOCM\))
 
-    STORE_ADDITIONALLY
+    STORE_ADDITIONALLY (= Store received object, retaining the previous received object, replacing the value SAME_SOURCE of config field Overwrite Policy)
 
     (dcmRelationalMismatchPolicy)"
     "
@@ -106,11 +106,11 @@ DICOM Archive Network AE related information
 
     Enumerated values:
 
-    YES
+    YES (= Accept missing Patient ID (0010,0020) in DICOM dataset)
 
-    NO
+    NO (= Do not accept missing Patient ID (0010,0020) in DICOM dataset)
 
-    CREATE
+    CREATE (= Create patient identifier if missing Patient ID (0010,0020) in DICOM dataset)
 
     (dcmAcceptMissingPatientID)"
     "
@@ -120,11 +120,11 @@ DICOM Archive Network AE related information
 
     Enumerated values:
 
-    YES
+    YES (= Accept patient identifier in DICOM dataset differing from patient identifier in previous received objects of study)
 
-    NO
+    NO (= Do not accept patient identifier in DICOM dataset differing from patient identifier in previous received objects of study)
 
-    MERGED
+    MERGED (= Accept patient identifier in DICOM dataset if already merged with another patient identifier)
 
     (dcmAcceptConflictingPatientID)"
     "
@@ -212,13 +212,13 @@ DICOM Archive Network AE related information
 
     Enumerated values:
 
-    DS
+    DS (= Decimal String)
 
-    IS
+    IS (= Integer String)
 
-    SV
+    SV (= Signed 64-bit Very Long)
 
-    UV
+    UV (= Unsigned 64-bit Very Long)
 
     (dcmEncodeAsJSONNumber)"
     "
@@ -234,11 +234,11 @@ DICOM Archive Network AE related information
 
     Enumerated values:
 
-    NOT_SUPPORTED
+    NOT_SUPPORTED (= Ignore User Identity Negotiation Sub-Item in Association requests)
 
-    SUPPORTS
+    SUPPORTS (= Verify passed Username and password or JSON Web Token are against a Keycloak server)
 
-    REQUIRED
+    REQUIRED (= Reject Association requests without a valid Username and password or JSON Web Token in its Identity Negotiation Sub-Item)
 
     (dcmUserIdentityNegotiation)"
     "
@@ -316,15 +316,15 @@ DICOM Archive Network AE related information
     "
     .. _dcmWadoVideoAcceptRanges:
 
-    :ref:`Wado Video Accept Ranges <dcmWadoVideoAcceptRanges>`",string,"Indicates if Range Requests accessing encapsulated videos by WADO-URI or WADO-RS Rendered Instance are supported. KNOWN_TOTAL_LENGTH: support if Encapsulated Pixel Data Value Total Length is known. Overwrites value specified on Device level.
+    :ref:`Wado Video Accept Ranges <dcmWadoVideoAcceptRanges>`",string,"Indicates if Range Requests accessing encapsulated videos by WADO-URI or WADO-RS Rendered Instance are supported. Overwrites value specified on Device level.
 
     Enumerated values:
 
-    YES
+    YES (= HTTP Range Requests supported)
 
-    NO
+    NO (= HTTP Range Requests not supported)
 
-    KNOWN_TOTAL_LENGTH
+    KNOWN_TOTAL_LENGTH (= HTTP Range Requests supported if Encapsulated Pixel Data Value Total Length is known)
 
     (dcmWadoVideoAcceptRanges)"
     "
@@ -370,13 +370,13 @@ DICOM Archive Network AE related information
 
     Enumerated values:
 
-    STUDY_RECEIVED
+    STUDY_RECEIVED (= Send IAN on receiving studies)
 
-    MPPS_RECEIVED
+    MPPS_RECEIVED (= Send IAN on receiving MPPS)
 
-    REJECTION_NOTE_RECEIVED
+    REJECTION_NOTE_RECEIVED (= Send IAN on IOCM trigger)
 
-    FIRST_OBJECT_OF_STUDY_RECEIVED
+    FIRST_OBJECT_OF_STUDY_RECEIVED (= Send IAN on receiving first object of study)
 
     (dcmIanTrigger)"
     "
@@ -406,15 +406,15 @@ DICOM Archive Network AE related information
     "
     .. _dcmSpanningCFindSCPPolicy:
 
-    :ref:`Spanning C-Find SCP Policy <dcmSpanningCFindSCPPolicy>`",string,"Specifies policy for combining matches returned from configured Spanning C-Find SCP with matching entries from the archive DB. SUPPLEMENT (= returns local matches before additional matches from Spanning C-Find SCP ), MERGE (= returns matches from Spanning C-Find SCP before additional local matches), REPLACE (= returns only matches from Spanning C-Find SCP). Overwrites value specified on Device level.
+    :ref:`Spanning C-Find SCP Policy <dcmSpanningCFindSCPPolicy>`",string,"Specifies policy for combining matches returned from configured Spanning C-Find SCP with matching entries from the archive DB. Overwrites value specified on Device level.
 
     Enumerated values:
 
-    SUPPLEMENT
+    SUPPLEMENT (= Returns local matches before additional matches from Spanning C-Find SCP)
 
-    MERGE
+    MERGE (= Returns matches from Spanning C-Find SCP before additional local matches)
 
-    REPLACE
+    REPLACE (= Returns only matches from Spanning C-Find SCP)
 
     (dcmSpanningCFindSCPPolicy)"
     "
@@ -564,13 +564,13 @@ DICOM Archive Network AE related information
 
     Enumerated values:
 
-    NEVER
+    NEVER (= Never allow rejection for Data Retention Policy Expired)
 
-    ALWAYS
+    ALWAYS (= Always allow rejection for Data Retention Policy Expired)
 
-    EXPIRED_UNSET
+    EXPIRED_UNSET (= Allow rejection for Data Retention Policy Expired for expired studies or studies with no expiration date)
 
-    ONLY_EXPIRED
+    ONLY_EXPIRED (= Allow rejection for Data Retention Policy Expired only for expired studies)
 
     (dcmAllowRejectionForDataRetentionPolicyExpired)"
     "
@@ -582,27 +582,27 @@ DICOM Archive Network AE related information
     "
     .. _dcmAllowDeleteStudyPermanently:
 
-    :ref:`Allow Delete Study permanently <dcmAllowDeleteStudyPermanently>`",string,"Allow to delete Study permanently. REJECTED = only already rejected Studies. Overwrites value specified on Device level.
+    :ref:`Allow Delete Study permanently <dcmAllowDeleteStudyPermanently>`",string,"Allow to delete Study permanently. Overwrites value specified on Device level.
 
     Enumerated values:
 
-    ALWAYS
+    ALWAYS (= Always allow delete study permanently)
 
-    REJECTED
+    REJECTED (= Allow delete study permanently only for study with all objects rejected)
 
     (dcmAllowDeleteStudyPermanently)"
     "
     .. _dcmAllowDeletePatient:
 
-    :ref:`Allow Delete Patient <dcmAllowDeletePatient>`",string,"Allow permanent deletion of Patients. Enumerated values: NEVER, ALWAYS, WITHOUT_STUDIES. Overwrites value specified on Device level.
+    :ref:`Allow Delete Patient <dcmAllowDeletePatient>`",string,"Allow permanent deletion of Patients. Overwrites value specified on Device level.
 
     Enumerated values:
 
-    NEVER
+    NEVER (= Never allow delete patient permanently)
 
-    ALWAYS
+    ALWAYS (= Always allow delete patient permanently)
 
-    WITHOUT_STUDIES
+    WITHOUT_STUDIES (= Allow delete patient permanently only for patient without studies)
 
     (dcmAllowDeletePatient)"
     "
@@ -672,15 +672,15 @@ DICOM Archive Network AE related information
 
     Enumerated values:
 
-    PRESERVE
+    PRESERVE (= The attributes will be preserved. Nullify attributes in the new dataset which are not present in the original dataset. Any extra attributes will be nullified)
 
-    SUPPLEMENT
+    SUPPLEMENT (= The attributes will be overwritten. Attributes not present in original dataset will be supplemented. Any extra attributes with not null values will be added)
 
-    MERGE
+    MERGE (= The attributes will be overwritten. Attribute values will be written from new dataset. Any attributes with not null values, shall not be overwritten by attributes with null values)
 
-    OVERWRITE
+    OVERWRITE (= The attributes will be overwritten. Attribute values if null in new dataset, will be nullified in original dataset. Any attributes with not null values, shall be overwritten by attributes with null values)
 
-    REPLACE
+    REPLACE (= The attributes will be completely overwritten)
 
     (dcmCopyMoveUpdatePolicy)"
     "
@@ -690,35 +690,35 @@ DICOM Archive Network AE related information
 
     Enumerated values:
 
-    PRESERVE
+    PRESERVE (= The attributes will be preserved. Nullify attributes in the new dataset which are not present in the original dataset. Any extra attributes will be nullified)
 
-    SUPPLEMENT
+    SUPPLEMENT (= The attributes will be overwritten. Attributes not present in original dataset will be supplemented. Any extra attributes with not null values will be added)
 
-    MERGE
+    MERGE (= The attributes will be overwritten. Attribute values will be written from new dataset. Any attributes with not null values, shall not be overwritten by attributes with null values)
 
-    OVERWRITE
+    OVERWRITE (= The attributes will be overwritten. Attribute values if null in new dataset, will be nullified in original dataset. Any attributes with not null values, shall be overwritten by attributes with null values)
 
-    REPLACE
+    REPLACE (= The attributes will be completely overwritten)
 
     (dcmLinkMWLEntryUpdatePolicy)"
     "
     .. _dcmStorageVerificationPolicy:
 
-    :ref:`Storage Verification Policy <dcmStorageVerificationPolicy>`",string,"DB_RECORD_EXISTS: only check for existence of DB records, OBJECT_EXISTS: check if object exists on Storage System, OBJECT_SIZE: check size of object on Storage System, OBJECT_FETCH: fetch object from Storage System), OBJECT_CHECKSUM: recalculate checksum of object on Storage System, S3_MD5SUM: check MD5 checksum of object on S3 Storage System. Overwrites value specified on Device level.
+    :ref:`Storage Verification Policy <dcmStorageVerificationPolicy>`",string,"Policy applied on storage verification of studies. Overwrites value specified on Device level.
 
     Enumerated values:
 
-    DB_RECORD_EXISTS
+    DB_RECORD_EXISTS (= Only check for existence of DB records)
 
-    OBJECT_EXISTS
+    OBJECT_EXISTS (= Check if object exists on Storage System)
 
-    OBJECT_SIZE
+    OBJECT_SIZE (= Check size of object on Storage System)
 
-    OBJECT_FETCH
+    OBJECT_FETCH (= Fetch object from Storage System)
 
-    OBJECT_CHECKSUM
+    OBJECT_CHECKSUM (= Recalculate checksum of object on Storage System)
 
-    S3_MD5SUM
+    S3_MD5SUM (= Check MD5 checksum of object on S3 Storage System)
 
     (dcmStorageVerificationPolicy)"
     "
@@ -766,13 +766,13 @@ DICOM Archive Network AE related information
     "
     .. _hl7PSUAction:
 
-    :ref:`HL7 Procedure Status Update Action(s) <hl7PSUAction>`",string,"Specifies HL7 Procedure Status Update action: SEND_NOTIFICATION (= send HL7 Procedure Status Update Notification message to configured HL7 Procedure Status Update Receiving Applications), UPDATE_MWL_STATUS (= set Scheduled Procedure Step Status of MWL Items associated to STUDY to COMPLETED). May be overwritten by configured values for particular Archive Network AEs.
+    :ref:`HL7 Procedure Status Update Action(s) <hl7PSUAction>`",string,"Specifies HL7 Procedure Status Update action. May be overwritten by configured values for particular Archive Network AEs.
 
     Enumerated values:
 
-    SEND_NOTIFICATION
+    SEND_NOTIFICATION (= Send HL7 Procedure Status Update Notification message to configured HL7 Procedure Status Update Receiving Applications)
 
-    UPDATE_MWL_STATUS
+    UPDATE_MWL_STATUS (= Set Scheduled Procedure Step Status of MWL Items associated to STUDY to COMPLETED)
 
     (hl7PSUAction)"
     "
@@ -782,13 +782,13 @@ DICOM Archive Network AE related information
 
     Enumerated values:
 
-    STUDY_RECEIVED
+    STUDY_RECEIVED (= Send notification on receive of studies)
 
-    MPPS_RECEIVED
+    MPPS_RECEIVED (= Send notification on receive of MPPS)
 
-    REJECTION_NOTE_RECEIVED
+    REJECTION_NOTE_RECEIVED (= Send notification on receive of IOCM KO)
 
-    FIRST_OBJECT_OF_STUDY_RECEIVED
+    FIRST_OBJECT_OF_STUDY_RECEIVED (= Send notification on receive of first object of study)
 
     (hl7PSUTrigger)"
     "
@@ -846,11 +846,11 @@ DICOM Archive Network AE related information
 
     Enumerated values:
 
-    OMG_O19
+    OMG_O19 (= Eyecare Order Message)
 
-    ORU_R01
+    ORU_R01 (= Unsolicited Observation Message)
 
-    OMI_O23
+    OMI_O23 (= Clinical Order Message)
 
     (hl7PSUMessageType)"
     "
@@ -866,9 +866,9 @@ DICOM Archive Network AE related information
 
     Enumerated values:
 
-    AccessionNumber
+    AccessionNumber (= Use Accession Number (0008,0050) for matching MWL)
 
-    StudyInstanceUID
+    StudyInstanceUID (= Use Study Instance UID (0020,000D) for matching MWL)
 
     (hl7PSUMWLMatchingKey)"
     "

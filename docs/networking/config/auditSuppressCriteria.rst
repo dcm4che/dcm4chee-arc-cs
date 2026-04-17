@@ -156,15 +156,15 @@ Audit Suppress Criteria
 
     Enumerated values:
 
-    C
+    C (= Create)
 
-    R
+    R (= Read)
 
-    U
+    U (= Update)
 
-    D
+    D (= Delete)
 
-    E
+    E (= Execute)
 
     (dcmAuditEventActionCode)"
     "
@@ -174,13 +174,13 @@ Audit Suppress Criteria
 
     Enumerated values:
 
-    0
+    0 (= Success)
 
-    4
+    4 (= Minor Failure)
 
-    8
+    8 (= Major Failure)
 
-    12
+    12 (= Serious Failure)
 
     (dcmAuditEventOutcomeIndicator)"
     "
@@ -234,13 +234,13 @@ Audit Suppress Criteria
 
     Enumerated values:
 
-    1
+    1 (= Person)
 
-    2
+    2 (= System Object)
 
-    3
+    3 (= Organization)
 
-    4
+    4 (= Other)
 
     (dcmParticipantObjectTypeCode)"
     "
@@ -250,57 +250,57 @@ Audit Suppress Criteria
 
     Enumerated values:
 
-    1
+    1 (= Patient)
 
-    2
+    2 (= Location)
 
-    3
+    3 (= Report)
 
-    4
+    4 (= Resource)
 
-    5
+    5 (= Master File)
 
-    6
+    6 (= User)
 
-    7
+    7 (= List)
 
-    8
+    8 (= Doctor)
 
-    9
+    9 (= Subscriber)
 
-    10
+    10 (= Guarantor)
 
-    11
+    11 (= Security User Entity)
 
-    12
+    12 (= Security User Group)
 
-    13
+    13 (= Security Resource)
 
-    14
+    14 (= Security Granualarity Definition)
 
-    15
+    15 (= Provider)
 
-    16
+    16 (= Report Destination)
 
-    17
+    17 (= Report Library)
 
-    18
+    18 (= Schedule)
 
-    19
+    19 (= Customeer)
 
-    20
+    20 (= Job)
 
-    21
+    21 (= Job Stream)
 
-    22
+    22 (= Table)
 
-    23
+    23 (= Routing Criteria)
 
-    24
+    24 (= Query)
 
-    25
+    25 (= Data Source)
 
-    26
+    26 (= Processing Element)
 
     (dcmParticipantObjectTypeCodeRole)"
     "
@@ -310,34 +310,34 @@ Audit Suppress Criteria
 
     Enumerated values:
 
-    1
+    1 (= Origination Creation)
 
-    2
+    2 (= Import Copy From Original)
 
-    3
+    3 (= Amendment)
 
-    4
+    4 (= Verification)
 
-    5
+    5 (= Translation)
 
-    6
+    6 (= Access Use)
 
-    7
+    7 (= DeIdentification)
 
-    8
+    8 (= Aggregation Summarization Derivation)
 
-    9
+    9 (= Report)
 
-    10
+    10 (= Export Copy To Target)
 
-    11
+    11 (= Disclosure)
 
-    12
+    12 (= Receipt Of Disclosure)
 
-    13
+    13 (= Archiving)
 
-    14
+    14 (= Logical Deletion)
 
-    15
+    15 (= Permanent Erasure Physical Destruction)
 
     (dcmParticipantObjectDataLifeCycle)"

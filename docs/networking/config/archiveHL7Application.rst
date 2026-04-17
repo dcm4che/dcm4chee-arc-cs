@@ -52,13 +52,13 @@ DICOM Archive HL7 Application related information
     "
     .. _hl7ORUAction:
 
-    :ref:`HL7 ORU Action(s) <hl7ORUAction>`",string,"Specifies action on receive of HL7 ORU^R01 message: IMPORT_REPORT (= transcode received HL7 ORU^R01 to DICOM SR), MWL_COMPLETED (= set Status of matching MWL items to COMPLETED). Overwrites value specified on Device level.
+    :ref:`HL7 ORU Action(s) <hl7ORUAction>`",string,"Specifies action on receive of HL7 ORU^R01 message. Overwrites value specified on Device level.
 
     Enumerated values:
 
-    IMPORT_REPORT
+    IMPORT_REPORT (= Transcode received HL7 ORU^R01 to DICOM SR or PDF or CDA)
 
-    MWL_COMPLETED
+    MWL_COMPLETED (= Set Status of matching MWL items to COMPLETED)
 
     (hl7ORUAction)"
     "
@@ -92,9 +92,9 @@ DICOM Archive HL7 Application related information
 
     Enumerated values:
 
-    OBR_4_1
+    OBR_4_1 (= HL7 Schedule Protocol Code in Order in OBR.4.1 to OBR.4.3)
 
-    OBR_4_4
+    OBR_4_4 (= HL7 Schedule Protocol Code in Order in OBR.4.4 to OBR.4.6)
 
     (hl7ScheduledProtocolCodeInOrder)"
     "
@@ -104,7 +104,7 @@ DICOM Archive HL7 Application related information
 
     Enumerated values:
 
-    ORC_18
+    ORC_18 (= HL7 Schedule Station AET in Order in ORC.18)
 
     (hl7ScheduledStationAETInOrder)"
     "
@@ -150,7 +150,7 @@ DICOM Archive HL7 Application related information
 
     Enumerated values:
 
-    ADT^A10
+    ADT^A10 (= Patient Arriving / Tracking)
 
     (hl7PatientArrivalMessageType)"
     "
@@ -178,11 +178,11 @@ DICOM Archive HL7 Application related information
 
     Enumerated values:
 
-    ALL
+    ALL (= Include all patient identifiers in PID.3 / MRG.1, including patient identifier on root dataset in Other Patient IDs Sequence (0010,1002))
 
-    NONE
+    NONE (= Include no patient identifiers from PID.3 / MRG.1 in Other Patient IDs Sequence (0010,1002))
 
-    OTHER
+    OTHER (= Include all patient identifiers in PID.3 / MRG.1, except patient identifier on root dataset in Other Patient IDs Sequence (0010,1002))
 
     (hl7OtherPatientIDs)"
     "
@@ -192,11 +192,11 @@ DICOM Archive HL7 Application related information
 
     Enumerated values:
 
-    REJECT
+    REJECT (= Reject HL7 Order Messages with missing Study Instance UID in ZDS.1 / IPC.3)
 
-    GENERATE
+    GENERATE (= Generate random Study Instance UID if missing in HL7 Order Messages in ZDS.1 / IPC.3)
 
-    ACCESSION_BASED
+    ACCESSION_BASED (= Generate Study Instance UID based on Accession Number present in OBR.18 / IPC.1 if Study Instance UID missing in HL7 Order Messages in ZDS.1 / IPC.3)
 
     (hl7OrderMissingStudyIUIDPolicy)"
     "
@@ -206,11 +206,11 @@ DICOM Archive HL7 Application related information
 
     Enumerated values:
 
-    ACCEPT
+    ACCEPT (= Accept HL7 Order Messages with missing Admission ID in PV1.19 / PID.18)
 
-    REJECT
+    REJECT (= Reject HL7 Order Messages with missing Admission ID in PV1.19 / PID.18)
 
-    ACCESSION_AS_ADMISSION
+    ACCESSION_AS_ADMISSION (= Use Accession Number present in OBR.18 / IPC.1 as Admission ID if it is missing in HL7 Order Message in PV1.19 / PID.18)
 
     (hl7OrderMissingAdmissionIDPolicy)"
     "
@@ -220,11 +220,11 @@ DICOM Archive HL7 Application related information
 
     Enumerated values:
 
-    REJECT
+    REJECT (= Reject HL7 ORU^R01 message with missing Study Instance UID in OBX.5 for OBX segment with OBX.3 as 'Study Instance UID' / 'DICOM Study')
 
-    GENERATE
+    GENERATE (= Generate random Study Instance UID if it is missing in HL7 ORU^R01 Message in OBX.5 for OBX segment with OBX.3 as 'Study Instance UID' / 'DICOM Study')
 
-    ACCESSION_BASED
+    ACCESSION_BASED (= Generate Study Instance UID based on Accession Number present in OBR.18 if Study Instance UID missing in HL7 ORU^R01 Messages in OBX.5 for OBX segment with OBX.3 as 'Study Instance UID' / 'DICOM Study')
 
     (hl7ImportReportMissingStudyIUIDPolicy)"
     "
@@ -234,11 +234,11 @@ DICOM Archive HL7 Application related information
 
     Enumerated values:
 
-    ACCEPT
+    ACCEPT (= Accept HL7 ORU^R01 Messages with missing Admission ID in PV1.19 / PID.18)
 
-    REJECT
+    REJECT (= Reject HL7 ORU^R01 Messages with missing Admission ID in PV1.19 / PID.18)
 
-    ACCESSION_AS_ADMISSION
+    ACCESSION_AS_ADMISSION (= Use Accession Number present in OBR.18 as Admission ID if it is missing in HL7 ORU^R01 Message in PV1.19 / PID.18)
 
     (hl7ImportReportMissingAdmissionIDPolicy)"
     "
@@ -254,9 +254,9 @@ DICOM Archive HL7 Application related information
 
     Enumerated values:
 
-    NONE
+    NONE (= No adjustment done to Study / Series / SOP IUIDs)
 
-    APPEND_HASH_OF_STUDY_INSTANCE_UID
+    APPEND_HASH_OF_STUDY_INSTANCE_UID (= Hash of Study Instance UID appended as suffix to Study / Series / SOP IUIDs)
 
     (hl7ImportReportAdjustIUID)"
     "
@@ -266,13 +266,13 @@ DICOM Archive HL7 Application related information
 
     Enumerated values:
 
-    REJECT
+    REJECT (= Reject any incoming HL7 messages referring an already merged Patient)
 
-    IGNORE
+    IGNORE (= Ignore any incoming HL7 messages referring an already merged Patient)
 
-    IGNORE_DUPLICATE_MERGE
+    IGNORE_DUPLICATE_MERGE (= Ignore only duplicate incoming HL7 Patient Merge (ADT^A40) messages referring an already merged Patient. Reject any other incoming HL7 messages referring an already merged Patient.)
 
-    ACCEPT_INVERSE_MERGE
+    ACCEPT_INVERSE_MERGE (= Accept any incoming inverse HL7 Patient Merge (ADT^A40) messages referring an already merged Patient, optionally allowing inverse merging of patient records if clients send duplicated ADT^A40 patient merge messages repeatedly, just reversing the patient identifier values in PID / MRG segments.)
 
     (hl7ReferredMergedPatientPolicy)"
     "

@@ -134,9 +134,9 @@ Storage Descriptor
 
     Enumerated values:
 
-    ONLINE
+    ONLINE (= DICOM objects available on ONLINE storage)
 
-    NEARLINE
+    NEARLINE (= DICOM objects available on NEARLINE storage)
 
     OFFLINE
 

@@ -46,14 +46,14 @@ Export Priors Rule
     "
     .. _dcmExportReoccurredInstances:
 
-    :ref:`Export Reoccurred Instances <dcmExportReoccurredInstances>`",string,"Indicates if the entity shall be exported on subsequent occurrence of instances
+    :ref:`Export Reoccurred Instances <dcmExportReoccurredInstances>`",string,"Indicates if prior studies shall be exported on subsequent occurrence of instances
 
     Enumerated values:
 
-    NEVER
+    NEVER (= Never export prior Studies on reoccurrence of instances)
 
-    ALWAYS
+    ALWAYS (= Always export prior Studies on reoccurrence of instances)
 
-    REPLACE
+    REPLACE (= Export prior Studies only on reoccurrence of replaced instances)
 
     (dcmExportReoccurredInstances)"

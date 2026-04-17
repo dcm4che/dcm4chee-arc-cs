@@ -38,11 +38,11 @@ HL7 Export Rule
 
     Enumerated values:
 
-    ALWAYS
+    ALWAYS (= Always ignore Assigning Authority of Patient ID (PID-3.4) for selecting Studies of the Patient)
 
-    MATCHING
+    MATCHING (= Ignore matching Assigning Authority of Patient ID (PID-3.4) for selecting Studies of the Patient)
 
-    NOT_MATCHING
+    NOT_MATCHING (= Ignore not matching Assigning Authority of Patient ID (PID-3.4) for selecting Studies of the Patient)
 
     (dcmNullifyIssuerOfPatientID)"
     "

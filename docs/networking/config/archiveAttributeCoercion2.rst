@@ -38,11 +38,11 @@ Archive Attribute Coercion of received/sent DIMSE
 
     Enumerated values:
 
-    RETHROW
+    RETHROW (= Propagates failure to operation which applied this (current) Attribute Coercion)
 
-    CONTINUE
+    CONTINUE (= Continues applying other matching attribute coercions of lesser priority)
 
-    SUFFICIENT
+    SUFFICIENT (= Does not apply other matching attribute coercions of lesser priority)
 
     (dcmCoercionOnFailure)"
     "
@@ -58,13 +58,13 @@ Archive Attribute Coercion of received/sent DIMSE
 
     Enumerated values:
 
-    N_CREATE_RQ
+    N_CREATE_RQ (= Applicable to MPPS N-CREATE request datasets)
 
-    C_STORE_RQ
+    C_STORE_RQ (= Applicable to objects stored / retrieved using C_STORE / C-MOVE / STOW / WADO-RS)
 
-    C_FIND_RQ
+    C_FIND_RQ (= Applicable to C-FIND / QIDO request datasets)
 
-    C_FIND_RSP
+    C_FIND_RSP (= Applicable to C-FIND / QIDO response datasets)
 
     (dcmDIMSE)"
     "
@@ -74,9 +74,9 @@ Archive Attribute Coercion of received/sent DIMSE
 
     Enumerated values:
 
-    SCU
+    SCU (= Service Class User)
 
-    SCP
+    SCP (= Service Class Provider)
 
     (dicomTransferRole)"
     "
@@ -98,13 +98,13 @@ Archive Attribute Coercion of received/sent DIMSE
 
     Enumerated values:
 
-    PRESERVE
+    PRESERVE (= The attributes will be preserved. Nullify attributes in the new dataset which are not present in the original dataset. Any extra attributes will be nullified)
 
-    SUPPLEMENT
+    SUPPLEMENT (= The attributes will be overwritten. Attributes not present in original dataset will be supplemented. Any extra attributes with not null values will be added)
 
-    MERGE
+    MERGE (= The attributes will be overwritten. Attribute values will be written from new dataset. Any attributes with not null values, shall not be overwritten by attributes with null values)
 
-    OVERWRITE
+    OVERWRITE (= The attributes will be overwritten. Attribute values if null in new dataset, will be nullified in original dataset. Any attributes with not null values, shall be overwritten by attributes with null values)
 
     (dcmAttributeUpdatePolicy)"
     "

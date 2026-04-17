@@ -40,7 +40,7 @@ Create Workitem in unified Worklist on previous UPS Canceled
     "
     .. _dcmUPSPriority:
 
-    :ref:`Priority <dcmUPSPriority>`",string,"Value of Scheduled Procedure Step Priority (0074,1200) in created UPS. Enumerated Values: HIGH, MEDIUM, LOW. If absent, MEDIUM will be applied.
+    :ref:`Priority <dcmUPSPriority>`",string,"Value of Scheduled Procedure Step Priority (0074,1200) in created UPS.
 
     Enumerated values:
 

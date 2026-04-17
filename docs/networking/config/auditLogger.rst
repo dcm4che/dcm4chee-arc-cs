@@ -50,37 +50,37 @@ Audit Logger related information
 
     Enumerated values:
 
-    kern
+    kern (= kernel messages)
 
-    user
+    user (= user-level messages)
 
-    mail
+    mail (= mail system messages)
 
-    daemon
+    daemon (= system daemons' messages)
 
-    auth
+    auth (= authorization messages)
 
-    syslog
+    syslog (= messages generated internally by syslogd)
 
-    lpr
+    lpr (= line printer subsystem messages)
 
-    news
+    news (= network news subsystem messages)
 
-    uucp
+    uucp (= UUCP subsystem messages)
 
-    cron
+    cron (= clock daemon messages)
 
-    authpriv
+    authpriv (= security/authorization messages)
 
-    ftp
+    ftp (= ftp daemon messages)
 
-    ntp
+    ntp (= NTP subsystem messages)
 
-    audit
+    audit (= audit messages)
 
-    console
+    console (= console messages)
 
-    cron2
+    cron2 (= clock daemon messages)
 
     local0
 
@@ -106,21 +106,21 @@ Audit Logger related information
 
     Enumerated values:
 
-    emerg
+    emerg (= emergency; system is unusable)
 
-    alert
+    alert (= action must be taken immediately)
 
-    crit
+    crit (= critical condition)
 
-    err
+    err (= error condition)
 
-    warning
+    warning (= warning condition)
 
-    notice
+    notice (= normal but significant condition)
 
-    info
+    info (= informational message)
 
-    debug
+    debug (= debug-level messages)
 
     (dcmAuditSuccessSeverity)"
     "
@@ -130,21 +130,21 @@ Audit Logger related information
 
     Enumerated values:
 
-    emerg
+    emerg (= emergency; system is unusable)
 
-    alert
+    alert (= action must be taken immediately)
 
-    crit
+    crit (= critical condition)
 
-    err
+    err (= error condition)
 
-    warning
+    warning (= warning condition)
 
-    notice
+    notice (= normal but significant condition)
 
-    info
+    info (= informational message)
 
-    debug
+    debug (= debug-level messages)
 
     (dcmAuditMinorFailureSeverity)"
     "
@@ -154,21 +154,21 @@ Audit Logger related information
 
     Enumerated values:
 
-    emerg
+    emerg (= emergency; system is unusable)
 
-    alert
+    alert (= action must be taken immediately)
 
-    crit
+    crit (= critical condition)
 
-    err
+    err (= error condition)
 
-    warning
+    warning (= warning condition)
 
-    notice
+    notice (= normal but significant condition)
 
-    info
+    info (= informational message)
 
-    debug
+    debug (= debug-level messages)
 
     (dcmAuditSeriousFailureSeverity)"
     "
@@ -178,21 +178,21 @@ Audit Logger related information
 
     Enumerated values:
 
-    emerg
+    emerg (= emergency; system is unusable)
 
-    alert
+    alert (= action must be taken immediately)
 
-    crit
+    crit (= critical condition)
 
-    err
+    err (= error condition)
 
-    warning
+    warning (= warning condition)
 
-    notice
+    notice (= normal but significant condition)
 
-    info
+    info (= informational message)
 
-    debug
+    debug (= debug-level messages)
 
     (dcmAuditMajorFailureSeverity)"
     "

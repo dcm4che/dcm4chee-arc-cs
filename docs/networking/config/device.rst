@@ -68,107 +68,107 @@ DICOM Device related information
 
     Enumerated values:
 
-    ARCHIVE
+    ARCHIVE (= Archive)
 
-    COMP
+    COMP (= Computation Server)
 
-    CAD
+    CAD (= Computer Assisted Detection/Diagnosis)
 
-    DSS
+    DSS (= Department System Scheduler)
 
-    FILMD
+    FILMD (= Film Digitizer)
 
-    M3D
+    M3D (= 3D Manufacturing Modeling System)
 
-    MCD
+    MCD (= Media Creation Device)
 
-    PRINT
+    PRINT (= Hard Copy Print Server)
 
-    CAPTURE
+    CAPTURE (= Image Capture)
 
-    LOG
+    LOG (= Procedure Logging)
 
-    RT
+    RT (= Radiation Therapy Device)
 
-    WSD
+    WSD (= Workstation)
 
-    AR
+    AR (= Autorefraction)
 
-    BMD
+    BMD (= Bone Mineral Densitometry)
 
-    BDUS
+    BDUS (= Ultrasound Bone Densitometry)
 
-    EPS
+    EPS (= Cardiac Electrophysiology)
 
-    CR
+    CR (= Computed Radiography)
 
-    CT
+    CT (= Computed Tomography)
 
-    DX
+    DX (= Digital Radiography)
 
-    ECG
+    ECG (= Electrocardiography)
 
-    ES
+    ES (= Endoscopy)
 
-    XC
+    XC (= External-camera Photography)
 
-    GM
+    GM (= General Microscopy)
 
-    HD
+    HD (= Hemodynamic)
 
-    IO
+    IO (= Intra-oral Radiography)
 
-    IVOCT
+    IVOCT (= Intravascular Optical Coherence Tomography)
 
-    IVUS
+    IVUS (= Intravascular Ultrasound)
 
-    KER
+    KER (= Keratometry)
 
-    LEN
+    LEN (= Lensometry)
 
-    MR
+    MR (= Magnetic Resonance)
 
-    MG
+    MG (= Mammography)
 
-    NM
+    NM (= Nuclear Medicine)
 
-    OAM
+    OAM (= Ophthalmic Axial Measurements)
 
-    OCT
+    OCT (= Optical Coherence Tomography)
 
-    OPM
+    OPM (= Ophthalmic Mapping)
 
-    OP
+    OP (= Ophthalmic Photography)
 
-    OPR
+    OPR (= Ophthalmic Refraction)
 
-    OPT
+    OPT (= Ophthalmic Tomography)
 
-    OPTBSV
+    OPTBSV (= Ophthalmic Tomography B-scan Volume Analysis)
 
-    OPTENF
+    OPTENF (= Ophthalmic Tomography En Face)
 
-    OPV
+    OPV (= Ophthalmic Visual Field)
 
-    OSS
+    OSS (= Optical Surface Scanner)
 
-    PX
+    PX (= Panoramic X-Ray)
 
-    PT
+    PT (= Positron emission tomography)
 
-    RF
+    RF (= Radiofluoroscopy)
 
-    RG
+    RG (= Radiographic imaging)
 
-    SM
+    SM (= Slide Microscopy)
 
-    SRF
+    SRF (= Subjective Refraction)
 
-    US
+    US (= Ultrasound)
 
-    VA
+    VA (= Visual Acuity)
 
-    XA
+    XA (= X-Ray Angiography)
 
     (dicomPrimaryDeviceType)"
     "
