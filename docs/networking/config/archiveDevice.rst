@@ -606,13 +606,13 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    301
+    301 (= Moved Permanently)
 
-    302
+    302 (= Found)
 
-    303
+    303 (= See Other)
 
-    307
+    307 (= Temporary Redirect)
 
     (dcmFallbackWadoURIHttpStatusCode)"
     "
@@ -634,13 +634,13 @@ DICOM Archive Device related information
 
     Enumerated values:
 
-    301
+    301 (= Moved Permanently)
 
-    302
+    302 (= Found)
 
-    303
+    303 (= See Other)
 
-    307
+    307 (= Temporary Redirect)
 
     (dcmExternalWadoRSHttpStatusCode)"
     "
@@ -2006,23 +2006,23 @@ DICOM Archive Device related information
     "
     .. _dcmQStarVerificationMockAccessState:
 
-    :ref:`QStar Verification Mock Access State <dcmQStarVerificationMockAccessState>`",integer,"Indicates to mock invoke of QStar Archive Storage Manager (ASM) WEB Services by return of specified Access State (0 - ACCESS_STATE_NONE, 1 - ACCESS_STATE_EMPTY, 2 - ACCESS_STATE_UNSTABLE, 3 - ACCESS_STATE_STABLE, 4 - ACCESS_STATE_OUT_OF_CACHE, 5 - ACCESS_STATE_OFFLINE, -1 - simulate error response) for testing.
+    :ref:`QStar Verification Mock Access State <dcmQStarVerificationMockAccessState>`",integer,"Indicates to mock invoke of QStar Archive Storage Manager (ASM) WEB Services by return of specified Access State for testing.
 
     Enumerated values:
 
-    0
+    0 (= ACCESS_STATE_NONE)
 
-    1
+    1 (= ACCESS_STATE_EMPTY)
 
-    2
+    2 (= ACCESS_STATE_UNSTABLE)
 
-    3
+    3 (= ACCESS_STATE_STABLE)
 
-    4
+    4 (= ACCESS_STATE_OUT_OF_CACHE)
 
-    5
+    5 (= ACCESS_STATE_OFFLINE)
 
-    -1
+    -1 (= simulate error response)
 
     (dcmQStarVerificationMockAccessState)"
     "

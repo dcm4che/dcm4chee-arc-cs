@@ -56,21 +56,21 @@ HL7 Application information
 
     Enumerated values:
 
-    3
+    3 (= Sending Application)
 
-    4
+    4 (= Sending Facility)
 
-    5
+    5 (= Receiving Application)
 
-    6
+    6 (= Receiving Facility)
 
-    7
+    7 (= Date/Time of Message)
 
-    10
+    10 (= Message Control ID)
 
-    11
+    11 (= Processing ID)
 
-    12
+    12 (= Version ID)
 
     (hl7OptionalMSHField)"
     "

@@ -466,13 +466,13 @@ DICOM Archive Network AE related information
 
     Enumerated values:
 
-    301
+    301 (= Moved Permanently)
 
-    302
+    302 (= Found)
 
-    303
+    303 (= See Other)
 
-    307
+    307 (= Temporary Redirect)
 
     (dcmFallbackWadoURIHttpStatusCode)"
     "
@@ -494,13 +494,13 @@ DICOM Archive Network AE related information
 
     Enumerated values:
 
-    301
+    301 (= Moved Permanently)
 
-    302
+    302 (= Found)
 
-    303
+    303 (= See Other)
 
-    307
+    307 (= Temporary Redirect)
 
     (dcmExternalWadoRSHttpStatusCode)"
     "
