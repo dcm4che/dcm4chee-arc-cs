@@ -614,9 +614,15 @@ DICOM Archive Network AE related information
     "
     .. _dcmMWLWorklistLabel:
 
-    :ref:`MWL Worklist Label <dcmMWLWorklistLabel>`",string,"Only consider MWL items with this or no Worklist Label (0074,1202) for matching by this Archive AE acting as MWP SCP. If absent, MWL items with any Value of Worklist Label (0074,1202) are considered for matching by this Archive AE acting as MWL SCP. Also, for MWL-RS Create / Update MWL, use this MWL Worklist Label as fall back, if Worklist Label (0074,1202) is missing or has no value in request payload - before falling back to *
+    :ref:`MWL Worklist Label <dcmMWLWorklistLabel>`",string,"Value of Worklist Label (0074,1202) of created MWL items by this AE on receive of Create Scheduled Procedure Step REST API if Worklist Label (0074,1202) is missing or empty in request payload. If absentno value is configured, created MWL items are not bound to a particular MWL Worklist and are provided by all Archive AEs with MWL SCP Transfer Capability.
 
     (dcmMWLWorklistLabel)"
+    "
+    .. _dcmMWLWorklistLabelFilter:
+
+    :ref:`MWL Worklist Label Filter(s) <dcmMWLWorklistLabelFilter>`",string,"Value of Worklist Label (0074,1202) used as matching Key by this AE on processing queries by DIMSE (MWL Query SOP Class) or dicomWeb (Modality Worklist Search Transaction) service for matching Modality Worklist items (MWL), if no matching key for this attribute is specified in the request. If multiple values are specified, MWL with any of the specified values of Worklist Label (0074,1202) matches. If no value is specified, MWL with any value of Worklist Label (0074,1202) will match.
+
+    (dcmMWLWorklistLabelFilter)"
     "
     .. _dcmUPSWorklistLabel:
 
