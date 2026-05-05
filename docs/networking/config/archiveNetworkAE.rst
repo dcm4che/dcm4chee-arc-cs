@@ -46,7 +46,7 @@ DICOM Archive Network AE related information
     "
     .. _dcmStoreAccessControlID:
 
-    :ref:`Store Access Control ID <dcmStoreAccessControlID>`",string,"Access Control ID assigned to Studies received by this AE
+    :ref:`Store Access Control ID(s) <dcmStoreAccessControlID>`",string,"Access Control IDs assigned to Studies received by this AE
 
     (dcmStoreAccessControlID)"
     "

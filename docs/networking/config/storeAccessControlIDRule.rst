@@ -16,7 +16,7 @@ Store Access Control ID Rule
     "
     .. _dcmStoreAccessControlID:
 
-    :ref:`Store Access Control ID <dcmStoreAccessControlID>`",string,"Access Control ID assigned to whole Studies or individual Series which attributes match all conditions.
+    :ref:`Store Access Control ID(s) <dcmStoreAccessControlID>`",string,"Access Control IDs assigned to whole Studies or individual Series which attributes match all conditions.
 
     (dcmStoreAccessControlID)"
     "

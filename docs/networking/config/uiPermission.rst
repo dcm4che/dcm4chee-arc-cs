@@ -106,6 +106,8 @@ UI Permission
 
     tab-study-diff
 
+    action-create-ae
+
     action-devicelist-device_configuration
 
     action-studies-patient
