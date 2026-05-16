@@ -9,8 +9,9 @@ Elasticsearch Configuration for the pro version
 
     "
     .. _dcmuiElasticsearchConfigName:
+    .. _uiElasticsearch-dcmuiElasticsearchConfigName:
 
-    :ref:`UI Elasticsearch Configuration Name <dcmuiElasticsearchConfigName>`",string,"UI Elasticsearch Configuration Name
+    :ref:`UI Elasticsearch Configuration Name <uiElasticsearch-dcmuiElasticsearchConfigName>`",string,"UI Elasticsearch Configuration Name
 
     (dcmuiElasticsearchConfigName)"
     ":doc:`uiElasticsearchURL` (s)",object,"UI Elasticsearch URL"

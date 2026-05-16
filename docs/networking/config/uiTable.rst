@@ -9,32 +9,37 @@ Study Table configuration for the pro version
 
     "
     .. _dcmuiTableConfigName:
+    .. _uiTable-dcmuiTableConfigName:
 
-    :ref:`Configuration Name <dcmuiTableConfigName>`",string,"UI  Table Configuration Name
+    :ref:`Configuration Name <uiTable-dcmuiTableConfigName>`",string,"UI  Table Configuration Name
 
     (dcmuiTableConfigName)"
     "
     .. _dcmuiTableConfigUsername:
+    .. _uiTable-dcmuiTableConfigUsername:
 
-    :ref:`Username(s) <dcmuiTableConfigUsername>`",string,"Username to which this set should be available
+    :ref:`Username(s) <uiTable-dcmuiTableConfigUsername>`",string,"Username to which this set should be available
 
     (dcmuiTableConfigUsername)"
     "
     .. _dcmuiTableConfigRoles:
+    .. _uiTable-dcmuiTableConfigRoles:
 
-    :ref:`Role(s) <dcmuiTableConfigRoles>`",string,"Username role that can use this Set ( If you set the username, the role will be ignored )
+    :ref:`Role(s) <uiTable-dcmuiTableConfigRoles>`",string,"Username role that can use this Set ( If you set the username, the role will be ignored )
 
     (dcmuiTableConfigRoles)"
     "
     .. _dcmuiTableID:
+    .. _uiTable-dcmuiTableID:
 
-    :ref:`Table ID <dcmuiTableID>`",string,"The ID of the Table in the UI for which the config should be effective
+    :ref:`Table ID <uiTable-dcmuiTableID>`",string,"The ID of the Table in the UI for which the config should be effective
 
     (dcmuiTableID)"
     "
     .. _dcmuiTableConfigIsDefault:
+    .. _uiTable-dcmuiTableConfigIsDefault:
 
-    :ref:`Is Default <dcmuiTableConfigIsDefault>`",boolean,"Set this Column-Set to the default one. (Make sure that only one of the Set - siblings child is set to default).
+    :ref:`Is Default <uiTable-dcmuiTableConfigIsDefault>`",boolean,"Set this Column-Set to the default one. (Make sure that only one of the Set - siblings child is set to default).
 
     (dcmuiTableConfigIsDefault)"
     ":doc:`uiTableColumns` (s)",object,"Define Table Columns"

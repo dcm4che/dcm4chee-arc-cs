@@ -9,26 +9,30 @@ Define Create Dialog Template
 
     "
     .. _dcmuiTemplateName:
+    .. _uiDialogTemplate-dcmuiTemplateName:
 
-    :ref:`Name <dcmuiTemplateName>`",string,"Name of the dialog template
+    :ref:`Name <uiDialogTemplate-dcmuiTemplateName>`",string,"Name of the dialog template
 
     (dcmuiTemplateName)"
     "
     .. _dcmTag:
+    .. _uiDialogTemplate-dcmTag:
 
-    :ref:`Attribute Tag(s) <dcmTag>`",string,"DICOM Tag as hex string which shall be included in this dialog template
+    :ref:`Attribute Tag(s) <uiDialogTemplate-dcmTag>`",string,"DICOM Tag as hex string which shall be included in this dialog template
 
     (dcmTag)"
     "
     .. _dicomDescription:
+    .. _uiDialogTemplate-dicomDescription:
 
-    :ref:`Description <dicomDescription>`",string,"Dialog template description
+    :ref:`Description <uiDialogTemplate-dicomDescription>`",string,"Dialog template description
 
     (dicomDescription)"
     "
     .. _dcmuiDialog:
+    .. _uiDialogTemplate-dcmuiDialog:
 
-    :ref:`Dialog Function <dcmuiDialog>`",string,"Specifies the function where this Dialog Template shall get applied
+    :ref:`Dialog Function <uiDialogTemplate-dcmuiDialog>`",string,"Specifies the function where this Dialog Template shall get applied
 
     Enumerated values:
 

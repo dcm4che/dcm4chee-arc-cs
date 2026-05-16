@@ -9,50 +9,58 @@ UI Diff Configuration
 
     "
     .. _dcmuiDiffConfigName:
+    .. _uiDiffConfig-dcmuiDiffConfigName:
 
-    :ref:`UI Diff Configuration Name <dcmuiDiffConfigName>`",string,"UI Diff Configuration Name
+    :ref:`UI Diff Configuration Name <uiDiffConfig-dcmuiDiffConfigName>`",string,"UI Diff Configuration Name
 
     (dcmuiDiffConfigName)"
     "
     .. _dcmuiDiffCallingAET:
+    .. _uiDiffConfig-dcmuiDiffCallingAET:
 
-    :ref:`Diff Calling AET <dcmuiDiffCallingAET>`",string,"Diff Calling AET
+    :ref:`Diff Calling AET <uiDiffConfig-dcmuiDiffCallingAET>`",string,"Diff Calling AET
 
     (dcmuiDiffCallingAET)"
     "
     .. _dcmuiDiffPrimaryCFindSCP:
+    .. _uiDiffConfig-dcmuiDiffPrimaryCFindSCP:
 
-    :ref:`UI Diff Primary C-FIND SCP <dcmuiDiffPrimaryCFindSCP>`",string,"UI Diff Primary C-FIND SCP
+    :ref:`UI Diff Primary C-FIND SCP <uiDiffConfig-dcmuiDiffPrimaryCFindSCP>`",string,"UI Diff Primary C-FIND SCP
 
     (dcmuiDiffPrimaryCFindSCP)"
     "
     .. _dcmuiDiffPrimaryCMoveSCP:
+    .. _uiDiffConfig-dcmuiDiffPrimaryCMoveSCP:
 
-    :ref:`UI Diff Primary C-MOVE SCP <dcmuiDiffPrimaryCMoveSCP>`",string,"UI Diff Primary C-MOVE SCP
+    :ref:`UI Diff Primary C-MOVE SCP <uiDiffConfig-dcmuiDiffPrimaryCMoveSCP>`",string,"UI Diff Primary C-MOVE SCP
 
     (dcmuiDiffPrimaryCMoveSCP)"
     "
     .. _dcmuiDiffPrimaryCStoreSCP:
+    .. _uiDiffConfig-dcmuiDiffPrimaryCStoreSCP:
 
-    :ref:`UI Diff Primary C-STORE SCP <dcmuiDiffPrimaryCStoreSCP>`",string,"UI Diff Primary C-STORE SCP
+    :ref:`UI Diff Primary C-STORE SCP <uiDiffConfig-dcmuiDiffPrimaryCStoreSCP>`",string,"UI Diff Primary C-STORE SCP
 
     (dcmuiDiffPrimaryCStoreSCP)"
     "
     .. _dcmuiDiffSecondaryCFindSCP:
+    .. _uiDiffConfig-dcmuiDiffSecondaryCFindSCP:
 
-    :ref:`UI Diff Secondary C-FIND SCP <dcmuiDiffSecondaryCFindSCP>`",string,"UI Diff Secondary C-FIND SCP
+    :ref:`UI Diff Secondary C-FIND SCP <uiDiffConfig-dcmuiDiffSecondaryCFindSCP>`",string,"UI Diff Secondary C-FIND SCP
 
     (dcmuiDiffSecondaryCFindSCP)"
     "
     .. _dcmuiDiffSecondaryCMoveSCP:
+    .. _uiDiffConfig-dcmuiDiffSecondaryCMoveSCP:
 
-    :ref:`UI Diff Secondary C-MOVE SCP <dcmuiDiffSecondaryCMoveSCP>`",string,"UI Diff Secondary C-MOVE SCP
+    :ref:`UI Diff Secondary C-MOVE SCP <uiDiffConfig-dcmuiDiffSecondaryCMoveSCP>`",string,"UI Diff Secondary C-MOVE SCP
 
     (dcmuiDiffSecondaryCMoveSCP)"
     "
     .. _dcmuiDiffSecondaryCStoreSCP:
+    .. _uiDiffConfig-dcmuiDiffSecondaryCStoreSCP:
 
-    :ref:`UI Diff Secondary C-STORE SCP <dcmuiDiffSecondaryCStoreSCP>`",string,"UI Diff Secondary C-STORE SCP
+    :ref:`UI Diff Secondary C-STORE SCP <uiDiffConfig-dcmuiDiffSecondaryCStoreSCP>`",string,"UI Diff Secondary C-STORE SCP
 
     (dcmuiDiffSecondaryCStoreSCP)"
     ":doc:`uiDiffCriteria` (s)",object,"UI Diff Criteria"

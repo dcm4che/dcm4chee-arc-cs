@@ -2,6 +2,7 @@ Introduction
 ************
 
 .. _revision:
+.. _introduction-revision:
 
 Revision History
 ================
@@ -14,6 +15,7 @@ Revision History
    5.29.2, "Jan 2, 2023", gz, Update Supported Storage SOP Classes and Transfer Syntaxes
 
 .. _audience:
+.. _introduction-audience:
 
 Audience
 ========
@@ -26,6 +28,7 @@ in this document relate to the product's functionality, and how that functionali
 that support compatible DICOM features.
 
 .. _remarks:
+.. _introduction-remarks:
 
 Remarks
 =======
@@ -48,6 +51,7 @@ of intended information. In fact, the user should be aware of the following impo
   may facilitate the process of validation testing.
 
 .. _terms:
+.. _introduction-terms:
 
 Terms and Definitions
 =====================

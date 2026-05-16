@@ -112,6 +112,10 @@ todo_include_todos = False
 
 numfig = True
 
+# Suppress duplicate-label warnings produced by stacked legacy labels
+# (kept to preserve external URL anchors during the per-page label migration)
+suppress_warnings = ['ref.label']
+
 # -- Options for HTML output ----------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for

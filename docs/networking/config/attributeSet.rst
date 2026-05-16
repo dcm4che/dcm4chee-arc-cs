@@ -9,14 +9,16 @@ Named Attribute Set for Query Parameter 'includefields' of QIDO-RS and WADO-RS M
 
     "
     .. _dicomDescription:
+    .. _attributeSet-dicomDescription:
 
-    :ref:`Attribute Set Description <dicomDescription>`",string,"Unconstrained text description of this Attribute Set
+    :ref:`Attribute Set Description <attributeSet-dicomDescription>`",string,"Unconstrained text description of this Attribute Set
 
     (dicomDescription)"
     "
     .. _dcmAttributeSetType:
+    .. _attributeSet-dcmAttributeSetType:
 
-    :ref:`Attribute Set Type <dcmAttributeSetType>`",string,"Specifies usage of this Attribute Set Type.
+    :ref:`Attribute Set Type <attributeSet-dcmAttributeSetType>`",string,"Specifies usage of this Attribute Set Type.
 
     Enumerated values:
 
@@ -31,37 +33,43 @@ Named Attribute Set for Query Parameter 'includefields' of QIDO-RS and WADO-RS M
     (dcmAttributeSetType)"
     "
     .. _dcmAttributeSetID:
+    .. _attributeSet-dcmAttributeSetID:
 
-    :ref:`Attribute Set ID <dcmAttributeSetID>`",string,"ID used by Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata requests and by Query Parameter 'comparefield' of DIFF-RS requests to refer this Attribute Set.
+    :ref:`Attribute Set ID <attributeSet-dcmAttributeSetID>`",string,"ID used by Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata requests and by Query Parameter 'comparefield' of DIFF-RS requests to refer this Attribute Set.
 
     (dcmAttributeSetID)"
     "
     .. _dcmAttributeSetTitle:
+    .. _attributeSet-dcmAttributeSetTitle:
 
-    :ref:`Attribute Set Title <dcmAttributeSetTitle>`",string,"Title of this Attribute Set.
+    :ref:`Attribute Set Title <attributeSet-dcmAttributeSetTitle>`",string,"Title of this Attribute Set.
 
     (dcmAttributeSetTitle)"
     "
     .. _dcmAttributeSetNumber:
+    .. _attributeSet-dcmAttributeSetNumber:
 
-    :ref:`Attribute Set Number <dcmAttributeSetNumber>`",integer,"Number used to order Attribute Sets.
+    :ref:`Attribute Set Number <attributeSet-dcmAttributeSetNumber>`",integer,"Number used to order Attribute Sets.
 
     (dcmAttributeSetNumber)"
     "
     .. _dicomInstalled:
+    .. _attributeSet-dicomInstalled:
 
-    :ref:`installed <dicomInstalled>`",boolean,"Boolean to indicate whether this Attribute Set is presently installed on the archive device
+    :ref:`installed <attributeSet-dicomInstalled>`",boolean,"Boolean to indicate whether this Attribute Set is presently installed on the archive device
 
     (dicomInstalled)"
     "
     .. _dcmTag:
+    .. _attributeSet-dcmTag:
 
-    :ref:`Attribute Tag(s) <dcmTag>`",string,"DICOM Tag as hex string
+    :ref:`Attribute Tag(s) <attributeSet-dcmTag>`",string,"DICOM Tag as hex string
 
     (dcmTag)"
     "
     .. _dcmProperty:
+    .. _attributeSet-dcmProperty:
 
-    :ref:`Property(s) <dcmProperty>`",string,"Property in format <name>=<value>
+    :ref:`Property(s) <attributeSet-dcmProperty>`",string,"Property in format <name>=<value>
 
     (dcmProperty)"

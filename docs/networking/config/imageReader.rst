@@ -9,26 +9,30 @@ Specifies Java Image IO Image Readers used for decompressing compressed DICOM im
 
     "
     .. _dicomTransferSyntax:
+    .. _imageReader-dicomTransferSyntax:
 
-    :ref:`Transfer Syntax <dicomTransferSyntax>`",string,"Transfer Syntax of compressed DICOM image
+    :ref:`Transfer Syntax <imageReader-dicomTransferSyntax>`",string,"Transfer Syntax of compressed DICOM image
 
     (dicomTransferSyntax)"
     "
     .. _dcmIIOFormatName:
+    .. _imageReader-dcmIIOFormatName:
 
-    :ref:`Image IO Reader Format Name <dcmIIOFormatName>`",string,"Image IO Reader Format Name
+    :ref:`Image IO Reader Format Name <imageReader-dcmIIOFormatName>`",string,"Image IO Reader Format Name
 
     (dcmIIOFormatName)"
     "
     .. _dcmJavaClassName:
+    .. _imageReader-dcmJavaClassName:
 
-    :ref:`Java Class Name <dcmJavaClassName>`",string,"Fully qualified Java class of Image IO Reader. If absent, use any Image Reader found for specified Format Name
+    :ref:`Java Class Name <imageReader-dcmJavaClassName>`",string,"Fully qualified Java class of Image IO Reader. If absent, use any Image Reader found for specified Format Name
 
     (dcmJavaClassName)"
     "
     .. _dcmPatchJPEGLS:
+    .. _imageReader-dcmPatchJPEGLS:
 
-    :ref:`Patch JPEG-LS <dcmPatchJPEGLS>`",string,"Patch JPEG-LS before decompressing
+    :ref:`Patch JPEG-LS <imageReader-dcmPatchJPEGLS>`",string,"Patch JPEG-LS before decompressing
 
     Enumerated values:
 
@@ -43,7 +47,8 @@ Specifies Java Image IO Image Readers used for decompressing compressed DICOM im
     (dcmPatchJPEGLS)"
     "
     .. _dcmImageReadParam:
+    .. _imageReader-dcmImageReadParam:
 
-    :ref:`Image Read Param(s) <dcmImageReadParam>`",string,"Image Read Parameter(s) (name=value)
+    :ref:`Image Read Param(s) <imageReader-dcmImageReadParam>`",string,"Image Read Parameter(s) (name=value)
 
     (dcmImageReadParam)"

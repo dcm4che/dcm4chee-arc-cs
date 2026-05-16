@@ -17,11 +17,13 @@ The Query/Retrieve Application Entity provides Standard Conformance to the follo
 These are the default SOP Classes supported. By altering the configuration it is possible to support additional or fewer SOP Classes.
 
 .. _association-policies:
+.. _query-retrieve-association-policies:
 
 Association Policies
 """"""""""""""""""""
 
 .. _general:
+.. _query-retrieve-general:
 
 General
 '''''''
@@ -33,6 +35,7 @@ The DICOM standard Application Context Name for DICOM 3.0 is always accepted and
   "Application Context Name", "1.2.840.10008.3.1.1.1"
 
 .. _number-of-associations:
+.. _query-retrieve-number-of-associations:
 
 Number Of Associations
 ''''''''''''''''''''''
@@ -50,6 +53,7 @@ each simultaneous processed MOVE Retrieve request, a new Association to the spec
    "Maximum number of simultaneous Associations initiated by the Query/Retrieve Application Application Entity", "No Maximum Limit"
 
 .. _asynchronous-nature:
+.. _query-retrieve-asynchronous-nature:
 
 Asynchronous Nature
 '''''''''''''''''''
@@ -63,6 +67,7 @@ The maximum number of outstanding asynchronous transactions is configurable. It 
    "Maximum number of outstanding asynchronous transactions", "No Maximum Limit (Configurable)"
 
 .. _storage-scu-implementation-identifying-info:
+.. _query-retrieve-storage-scu-implementation-identifying-info:
 
 Implementation Identifying Information
 ''''''''''''''''''''''''''''''''''''''
@@ -78,16 +83,19 @@ All Application Entities of |product| use the same Implementation Version Name. 
 new release of the product software.
 
 .. _association-initiation-policy:
+.. _query-retrieve-association-initiation-policy:
 
 Association Initiation Policy
 """""""""""""""""""""""""""""
 
 .. _activity:
+.. _query-retrieve-activity:
 
 Activity - Send Images Requested By an External Peer AE
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 .. _description:
+.. _query-retrieve-description:
 
 Description and Sequencing of Activity
 ......................................
@@ -95,6 +103,7 @@ Description and Sequencing of Activity
 <TODO>
 
 .. _proposed_presentation_contexts:
+.. _query-retrieve-proposed_presentation_contexts:
 
 Proposed Presentation Contexts
 ..............................
@@ -186,6 +195,7 @@ Study Root Query/Retrieve Information Model - MOVE and of supported Storage SOP 
    "Explicit VR Little Endian", "1.2.840.10008.1.2.1"
 
 .. _verification_sop_class_conformance:
+.. _query-retrieve-verification_sop_class_conformance:
 
 SOP Specific Conformance for Verification SOP Class
 ...................................................
@@ -193,6 +203,7 @@ SOP Specific Conformance for Verification SOP Class
 Standard conformance is provided to the DICOM Verification Service Class as an SCU. The Verification Service as an SCU is actually only supported as a diagnostic service tool for network communication issues.
 
 .. _image_sop_class_conformance:
+.. _query-retrieve-image_sop_class_conformance:
 
 SOP Specific Conformance for Image SOP Classes
 ..............................................
@@ -212,6 +223,7 @@ All Status Codes indicating an error or refusal are treated as a permanent failu
    :file: storage-scu-communication-failure-behaviour.csv
 
 .. _association-acceptance-policy:
+.. _query-retrieve-association-acceptance-policy:
 
 Association Acceptance Policy
 """""""""""""""""""""""""""""
@@ -229,6 +241,7 @@ Description and Sequencing of Activity
 <TODO>
 
 .. _accepted-presentation-context:
+.. _query-retrieve-accepted-presentation-context:
 
 Accepted Presentation Contexts
 ..............................
@@ -280,6 +293,7 @@ The list of accepted Transfer Syntaxes for each accepted Abstract Syntax - as th
 
 
 .. _query-sop-class-conformance:
+.. _query-retrieve-query-sop-class-conformance:
 
 SOP Specific Conformance for Query SOP Classes
 ..............................................
@@ -355,6 +369,7 @@ The values in 'Types of Matching' column mean as follows :
    :file: query-retrieve-scp-c-find-response-status-behaviour.csv
 
 .. _retrieval-sop-class-conformance:
+.. _query-retrieve-retrieval-sop-class-conformance:
 
 SOP Specific Conformance for Retrieval SOP Classes
 ..................................................

@@ -9,25 +9,29 @@ Elasticsearch URL
 
     "
     .. _dcmuiLanguageProfileName:
+    .. _uiLanguageProfile-dcmuiLanguageProfileName:
 
-    :ref:`Name <dcmuiLanguageProfileName>`",string,"Language profile name
+    :ref:`Name <uiLanguageProfile-dcmuiLanguageProfileName>`",string,"Language profile name
 
     (dcmuiLanguageProfileName)"
     "
     .. _dcmDefaultLanguage:
+    .. _uiLanguageProfile-dcmDefaultLanguage:
 
-    :ref:`Default language(s) <dcmDefaultLanguage>`",string,"Select default language for the UI
+    :ref:`Default language(s) <uiLanguageProfile-dcmDefaultLanguage>`",string,"Select default language for the UI
 
     (dcmDefaultLanguage)"
     "
     .. _dcmuiLanguageProfileRole:
+    .. _uiLanguageProfile-dcmuiLanguageProfileRole:
 
-    :ref:`Role(s) <dcmuiLanguageProfileRole>`",string,"Username role that this language profile should apply to
+    :ref:`Role(s) <uiLanguageProfile-dcmuiLanguageProfileRole>`",string,"Username role that this language profile should apply to
 
     (dcmuiLanguageProfileRole)"
     "
     .. _dcmuiLanguageProfileUsername:
+    .. _uiLanguageProfile-dcmuiLanguageProfileUsername:
 
-    :ref:`Username <dcmuiLanguageProfileUsername>`",string,"Username for the language profile
+    :ref:`Username <uiLanguageProfile-dcmuiLanguageProfileUsername>`",string,"Username for the language profile
 
     (dcmuiLanguageProfileUsername)"

@@ -84,6 +84,7 @@ Sample Response
 
 
 .. _error-codes:
+.. _wado-ws-error-codes:
 
 Error Codes
 """""""""""

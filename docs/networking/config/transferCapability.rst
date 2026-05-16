@@ -9,20 +9,23 @@ Each transfer capability specifies the SOP class that the Network AE can support
 
     "
     .. _cn:
+    .. _transferCapability-cn:
 
-    :ref:`Name <cn>`",string,"Arbitrary/Meaningful name for the Transfer Capability object
+    :ref:`Name <transferCapability-cn>`",string,"Arbitrary/Meaningful name for the Transfer Capability object
 
     (cn)"
     "
     .. _dicomSOPClass:
+    .. _transferCapability-dicomSOPClass:
 
-    :ref:`SOP Class <dicomSOPClass>`",string,"SOP Class UID
+    :ref:`SOP Class <transferCapability-dicomSOPClass>`",string,"SOP Class UID
 
     (dicomSOPClass)"
     "
     .. _dicomTransferRole:
+    .. _transferCapability-dicomTransferRole:
 
-    :ref:`DICOM Transfer Role <dicomTransferRole>`",string,"DICOM Transfer Role.
+    :ref:`DICOM Transfer Role <transferCapability-dicomTransferRole>`",string,"DICOM Transfer Role.
 
     Enumerated values:
 
@@ -33,8 +36,9 @@ Each transfer capability specifies the SOP class that the Network AE can support
     (dicomTransferRole)"
     "
     .. _dicomTransferSyntax:
+    .. _transferCapability-dicomTransferSyntax:
 
-    :ref:`Transfer Syntax(s) <dicomTransferSyntax>`",string,"Transfer syntax(es) that may be requested as an SCU or that are offered as an SCP.
+    :ref:`Transfer Syntax(s) <transferCapability-dicomTransferSyntax>`",string,"Transfer syntax(es) that may be requested as an SCU or that are offered as an SCP.
 
     (dicomTransferSyntax)"
     ":doc:`dcmTransferCapability` ",object,"dcm4che proprietary Transfer Capability Attributes"

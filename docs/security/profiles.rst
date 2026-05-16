@@ -2,6 +2,7 @@ Security Profiles
 """""""""""""""""
 
 .. _secure-transport-connection-profiles:
+.. _profiles-secure-transport-connection-profiles:
 
 Secure Transport Connection Profiles
 ''''''''''''''''''''''''''''''''''''
@@ -31,6 +32,7 @@ from remote applications during the TLS negotiation can also be provided in a lo
 or at the central LDAP server, used as configuration backend for all instances of |product|.
 
 .. _network-address-management-profiles:
+.. _profiles-network-address-management-profiles:
 
 Network Address Management Profiles
 '''''''''''''''''''''''''''''''''''
@@ -40,6 +42,7 @@ network configuration options of the underlying operating system.
 S. `DICOM Standard, Part 15, Annex F.1 <http://dicom.nema.org/medical/dicom/current/output/chtml/part15/chapter_F.html#sect_F.1>`_.
 
 .. _time-synchronization-profiles:
+.. _profiles-time-synchronization-profiles:
 
 Time Synchronization Profiles
 '''''''''''''''''''''''''''''
@@ -49,6 +52,7 @@ time synchronization options of the underlying operating system.
 S. `DICOM Standard, Part 15, Annex G.1 <http://dicom.nema.org/medical/dicom/current/output/chtml/part15/chapter_G.html#sect_G.1>`_.
 
 .. _application-configuration-management-profiles:
+.. _profiles-application-configuration-management-profiles:
 
 Application Configuration Management Profiles
 '''''''''''''''''''''''''''''''''''''''''''''
@@ -60,6 +64,7 @@ actor.
 S. `DICOM Standard, Part 15, Annex H.1 <http://dicom.nema.org/medical/dicom/current/output/chtml/part15/chapter_H.html#sect_H.1>`_.
 
 .. _audit-trail-profiles:
+.. _profiles-audit-trail-profiles:
 
 Audit Trail Profiles
 ''''''''''''''''''''
@@ -102,6 +107,7 @@ Audit Trail Message Transmission Profile - SYSLOG-UDP
 `DICOM Standard, Part 15, Annex A.7 <http://dicom.nema.org/medical/dicom/current/output/chtml/part15/sect_A.7.html>`_.
 
 .. _attribute-confidentiality-profiles:
+.. _profiles-attribute-confidentiality-profiles:
 
 Attribute Confidentiality Profiles
 ''''''''''''''''''''''''''''''''''

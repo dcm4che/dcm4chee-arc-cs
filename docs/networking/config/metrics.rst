@@ -9,25 +9,29 @@ Metrics Descriptor
 
     "
     .. _dcmMetricsName:
+    .. _metrics-dcmMetricsName:
 
-    :ref:`Metrics Name <dcmMetricsName>`",string,"Metrics Name
+    :ref:`Metrics Name <metrics-dcmMetricsName>`",string,"Metrics Name
 
     (dcmMetricsName)"
     "
     .. _dicomDescription:
+    .. _metrics-dicomDescription:
 
-    :ref:`Metrics Description <dicomDescription>`",string,"Unconstrained text description of the metrics
+    :ref:`Metrics Description <metrics-dicomDescription>`",string,"Unconstrained text description of the metrics
 
     (dicomDescription)"
     "
     .. _dcmMetricsRetentionPeriod:
+    .. _metrics-dcmMetricsRetentionPeriod:
 
-    :ref:`Metrics Retention Period <dcmMetricsRetentionPeriod>`",integer,"Metrics Retention Period in minutes
+    :ref:`Metrics Retention Period <metrics-dcmMetricsRetentionPeriod>`",integer,"Metrics Retention Period in minutes
 
     (dcmMetricsRetentionPeriod)"
     "
     .. _dcmUnit:
+    .. _metrics-dcmUnit:
 
-    :ref:`Metrics Unit <dcmUnit>`",string,"Unit of metrics data
+    :ref:`Metrics Unit <metrics-dcmUnit>`",string,"Unit of metrics data
 
     (dcmUnit)"

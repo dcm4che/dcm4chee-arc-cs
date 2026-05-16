@@ -9,26 +9,30 @@ Specifies Java Image IO Image Writer and Write Parameter used for compressing DI
 
     "
     .. _dicomTransferSyntax:
+    .. _imageWriter-dicomTransferSyntax:
 
-    :ref:`Transfer Syntax <dicomTransferSyntax>`",string,"Transfer Syntax to which to compress the DICOM image
+    :ref:`Transfer Syntax <imageWriter-dicomTransferSyntax>`",string,"Transfer Syntax to which to compress the DICOM image
 
     (dicomTransferSyntax)"
     "
     .. _dcmIIOFormatName:
+    .. _imageWriter-dcmIIOFormatName:
 
-    :ref:`Image IO Writer Format Name <dcmIIOFormatName>`",string,"Image IO Writer Format Name
+    :ref:`Image IO Writer Format Name <imageWriter-dcmIIOFormatName>`",string,"Image IO Writer Format Name
 
     (dcmIIOFormatName)"
     "
     .. _dcmJavaClassName:
+    .. _imageWriter-dcmJavaClassName:
 
-    :ref:`Java Class Name <dcmJavaClassName>`",string,"Fully qualified Java class of Image IO Writer. If absent, use any Image Writer found for specified Format Name
+    :ref:`Java Class Name <imageWriter-dcmJavaClassName>`",string,"Fully qualified Java class of Image IO Writer. If absent, use any Image Writer found for specified Format Name
 
     (dcmJavaClassName)"
     "
     .. _dcmPatchJPEGLS:
+    .. _imageWriter-dcmPatchJPEGLS:
 
-    :ref:`Patch JPEG-LS <dcmPatchJPEGLS>`",string,"Patch JPEG-LS after compressing
+    :ref:`Patch JPEG-LS <imageWriter-dcmPatchJPEGLS>`",string,"Patch JPEG-LS after compressing
 
     Enumerated values:
 
@@ -43,7 +47,8 @@ Specifies Java Image IO Image Writer and Write Parameter used for compressing DI
     (dcmPatchJPEGLS)"
     "
     .. _dcmImageWriteParam:
+    .. _imageWriter-dcmImageWriteParam:
 
-    :ref:`Image Write Param(s) <dcmImageWriteParam>`",string,"Image Write Parameter(s) (name=value) set at on Image Writer before compression
+    :ref:`Image Write Param(s) <imageWriter-dcmImageWriteParam>`",string,"Image Write Parameter(s) (name=value) set at on Image Writer before compression
 
     (dcmImageWriteParam)"

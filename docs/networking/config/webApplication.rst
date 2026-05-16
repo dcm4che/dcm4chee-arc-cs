@@ -9,32 +9,37 @@ Web Application information
 
     "
     .. _dcmWebAppName:
+    .. _webApplication-dcmWebAppName:
 
-    :ref:`Web Application name <dcmWebAppName>`",string,"Name of the Web Application
+    :ref:`Web Application name <webApplication-dcmWebAppName>`",string,"Name of the Web Application
 
     (dcmWebAppName)"
     "
     .. _dicomNetworkConnectionReference:
+    .. _webApplication-dicomNetworkConnectionReference:
 
-    :ref:`Web Application Network Connection(s) <dicomNetworkConnectionReference>`",string,"Network Connection(s) on which the services of the Web application are available
+    :ref:`Web Application Network Connection(s) <webApplication-dicomNetworkConnectionReference>`",string,"Network Connection(s) on which the services of the Web application are available
 
     (dicomNetworkConnectionReference)"
     "
     .. _dicomDescription:
+    .. _webApplication-dicomDescription:
 
-    :ref:`Web Application Description <dicomDescription>`",string,"Unconstrained text description of the Web Application
+    :ref:`Web Application Description <webApplication-dicomDescription>`",string,"Unconstrained text description of the Web Application
 
     (dicomDescription)"
     "
     .. _dcmWebServicePath:
+    .. _webApplication-dcmWebServicePath:
 
-    :ref:`Web Service Path <dcmWebServicePath>`",string,"HTTP Path of the services of the Web application
+    :ref:`Web Service Path <webApplication-dcmWebServicePath>`",string,"HTTP Path of the services of the Web application
 
     (dcmWebServicePath)"
     "
     .. _dcmWebServiceClass:
+    .. _webApplication-dcmWebServiceClass:
 
-    :ref:`Web Service Class(s) <dcmWebServiceClass>`",string,"Web Service Classes provided by the Web application
+    :ref:`Web Service Class(s) <webApplication-dcmWebServiceClass>`",string,"Web Service Classes provided by the Web application
 
     Enumerated values:
 
@@ -93,31 +98,36 @@ Web Application information
     (dcmWebServiceClass)"
     "
     .. _dcmKeycloakClientID:
+    .. _webApplication-dcmKeycloakClientID:
 
-    :ref:`Keycloak Client ID <dcmKeycloakClientID>`",string,"Keycloak Client ID for the Web application
+    :ref:`Keycloak Client ID <webApplication-dcmKeycloakClientID>`",string,"Keycloak Client ID for the Web application
 
     (dcmKeycloakClientID)"
     "
     .. _dicomAETitle:
+    .. _webApplication-dicomAETitle:
 
-    :ref:`AE Title <dicomAETitle>`",string,"AE title of Network AE associated with this Web Application
+    :ref:`AE Title <webApplication-dicomAETitle>`",string,"AE title of Network AE associated with this Web Application
 
     (dicomAETitle)"
     "
     .. _dicomApplicationCluster:
+    .. _webApplication-dicomApplicationCluster:
 
-    :ref:`Application Cluster(s) <dicomApplicationCluster>`",string,"Locally defined names for a subset of related applications
+    :ref:`Application Cluster(s) <webApplication-dicomApplicationCluster>`",string,"Locally defined names for a subset of related applications
 
     (dicomApplicationCluster)"
     "
     .. _dcmProperty:
+    .. _webApplication-dcmProperty:
 
-    :ref:`Web Application Property(s) <dcmProperty>`",string,"Web application property in format {name}={value}. Refer `Web Application Properties <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Web-Application-Properties>`_ configuration examples based on use cases.
+    :ref:`Web Application Property(s) <webApplication-dcmProperty>`",string,"Web application property in format {name}={value}. Refer `Web Application Properties <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Web-Application-Properties>`_ configuration examples based on use cases.
 
     (dcmProperty)"
     "
     .. _dicomInstalled:
+    .. _webApplication-dicomInstalled:
 
-    :ref:`installed <dicomInstalled>`",boolean,"True if the Web Application is installed on network. If not present, information about the installed status of the Web Application is inherited from the device
+    :ref:`installed <webApplication-dicomInstalled>`",boolean,"True if the Web Application is installed on network. If not present, information about the installed status of the Web Application is inherited from the device
 
     (dicomInstalled)"
