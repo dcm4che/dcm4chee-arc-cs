@@ -128,6 +128,7 @@ only the Transfer Syntax Implicit VR Little Endian will be proposed.
    +-------------------------------+----------------------+---------------------------+---------------------+------+-----------+
 
 .. _stgcmt-conformance:
+.. _storage-stgcmt-conformance:
 
 SOP Specific Conformance for Storage Commitment Push Model SOP Class
 ....................................................................

@@ -9,62 +9,72 @@ DICOM Device related information
 
     "
     .. _dicomDeviceName:
+    .. _device-dicomDeviceName:
 
-    :ref:`Device Name <dicomDeviceName>`",string,"A unique name for this device
+    :ref:`Device Name <device-dicomDeviceName>`",string,"A unique name for this device
 
     (dicomDeviceName)"
     "
     .. _dicomDescription:
+    .. _device-dicomDescription:
 
-    :ref:`Device Description <dicomDescription>`",string,"Unconstrained text description of the device
+    :ref:`Device Description <device-dicomDescription>`",string,"Unconstrained text description of the device
 
     (dicomDescription)"
     "
     .. _dicomVendorData:
+    .. _device-dicomVendorData:
 
-    :ref:`Vendor Device Data <dicomVendorData>`",boolean,"Device specific vendor configuration information
+    :ref:`Vendor Device Data <device-dicomVendorData>`",boolean,"Device specific vendor configuration information
 
     (dicomVendorData)"
     "
     .. _dicomDeviceUID:
+    .. _device-dicomDeviceUID:
 
-    :ref:`Device UID <dicomDeviceUID>`",string,"Unique identifier of the device
+    :ref:`Device UID <device-dicomDeviceUID>`",string,"Unique identifier of the device
 
     (dicomDeviceUID)"
     "
     .. _dicomManufacturer:
+    .. _device-dicomManufacturer:
 
-    :ref:`Manufacturer <dicomManufacturer>`",string,"Manufacturer of the device. Default value of Manufacturer (0008,0070) on `invocation by archive attribute coercions on an archive device to supplement this attribute from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when it is missing in the SOP Instances created by the invoking archive device.
+    :ref:`Manufacturer <device-dicomManufacturer>`",string,"Manufacturer of the device. Default value of Manufacturer (0008,0070) on `invocation by archive attribute coercions on an archive device to supplement this attribute from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when it is missing in the SOP Instances created by the invoking archive device.
 
     (dicomManufacturer)"
     "
     .. _dicomManufacturerModelName:
+    .. _device-dicomManufacturerModelName:
 
-    :ref:`Manufacturer Model Name <dicomManufacturerModelName>`",string,"Manufacturer Model Name of the device. Default value of Manufacturer Model Name (0008,1090) on `invocation by archive attribute coercions on an archive device to supplement this attribute from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when it is missing in the SOP Instances created by the invoking archive device.
+    :ref:`Manufacturer Model Name <device-dicomManufacturerModelName>`",string,"Manufacturer Model Name of the device. Default value of Manufacturer Model Name (0008,1090) on `invocation by archive attribute coercions on an archive device to supplement this attribute from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when it is missing in the SOP Instances created by the invoking archive device.
 
     (dicomManufacturerModelName)"
     "
     .. _dicomSoftwareVersion:
+    .. _device-dicomSoftwareVersion:
 
-    :ref:`Software Version(s) <dicomSoftwareVersion>`",string,"Software Versions of the device. Default values of Software Versions (0018,1020) on `invocation by archive attribute coercions on an archive device to supplement this attribute from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when it is missing in the SOP Instances created by the invoking archive device.
+    :ref:`Software Version(s) <device-dicomSoftwareVersion>`",string,"Software Versions of the device. Default values of Software Versions (0018,1020) on `invocation by archive attribute coercions on an archive device to supplement this attribute from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when it is missing in the SOP Instances created by the invoking archive device.
 
     (dicomSoftwareVersion)"
     "
     .. _dicomStationName:
+    .. _device-dicomStationName:
 
-    :ref:`Station Name <dicomStationName>`",string,"Station Name of the device. Default value of Station Name (0008,1010) on `invocation by archive attribute coercions on an archive device to supplement this attribute from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when it is missing in the SOP Instances created by the invoking archive device.
+    :ref:`Station Name <device-dicomStationName>`",string,"Station Name of the device. Default value of Station Name (0008,1010) on `invocation by archive attribute coercions on an archive device to supplement this attribute from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when it is missing in the SOP Instances created by the invoking archive device.
 
     (dicomStationName)"
     "
     .. _dicomDeviceSerialNumber:
+    .. _device-dicomDeviceSerialNumber:
 
-    :ref:`Device Serial Number <dicomDeviceSerialNumber>`",string,"Device Serial Number of the device. Default value of Device Serial Number (0018,1000) on `invocation by archive attribute coercions on an archive device to supplement this attribute from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when it is missing in the SOP Instances created by the invoking archive device.
+    :ref:`Device Serial Number <device-dicomDeviceSerialNumber>`",string,"Device Serial Number of the device. Default value of Device Serial Number (0018,1000) on `invocation by archive attribute coercions on an archive device to supplement this attribute from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when it is missing in the SOP Instances created by the invoking archive device.
 
     (dicomDeviceSerialNumber)"
     "
     .. _dicomPrimaryDeviceType:
+    .. _device-dicomPrimaryDeviceType:
 
-    :ref:`Primary Device Type(s) <dicomPrimaryDeviceType>`",string,"Represents the kind of device and is most applicable for acquisition modalities
+    :ref:`Primary Device Type(s) <device-dicomPrimaryDeviceType>`",string,"Represents the kind of device and is most applicable for acquisition modalities
 
     Enumerated values:
 
@@ -173,32 +183,37 @@ DICOM Device related information
     (dicomPrimaryDeviceType)"
     "
     .. _dicomInstitutionName:
+    .. _device-dicomInstitutionName:
 
-    :ref:`Institution Name(s) <dicomInstitutionName>`",string,"Institution Name of the device. Default value of Institution Name (0008,0080) on `invocation by archive attribute coercions on an archive device to supplement this attribute from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when it is missing in the SOP Instances created by the invoking archive device. Only the first configured value gets used by supplementing coercion, as the field is single-valued according to the `General Equipment Module Attributes <https://dicom.nema.org/medical/dicom/current/output/html/part03.html#table_C.7-8>`_. Multi-valued possibility for this field here is to fulfill the requirement in `DICOM Part 15 - Security and System Management Profiles - LDAP Schema For Objects and Attributes <https://dicom.nema.org/medical/dicom/current/output/html/part15.html#sect_H.1.3>`_.
+    :ref:`Institution Name(s) <device-dicomInstitutionName>`",string,"Institution Name of the device. Default value of Institution Name (0008,0080) on `invocation by archive attribute coercions on an archive device to supplement this attribute from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when it is missing in the SOP Instances created by the invoking archive device. Only the first configured value gets used by supplementing coercion, as the field is single-valued according to the `General Equipment Module Attributes <https://dicom.nema.org/medical/dicom/current/output/html/part03.html#table_C.7-8>`_. Multi-valued possibility for this field here is to fulfill the requirement in `DICOM Part 15 - Security and System Management Profiles - LDAP Schema For Objects and Attributes <https://dicom.nema.org/medical/dicom/current/output/html/part15.html#sect_H.1.3>`_.
 
     (dicomInstitutionName)"
     "
     .. _dicomInstitutionCode:
+    .. _device-dicomInstitutionCode:
 
-    :ref:`Institution Code(s) <dicomInstitutionCode>`",string,"Institution Code of the device. Default value of Institution Code Sequence (0008,0082) in format (CV, CSD, ""CM"") on `invocation by archive attribute coercions on an archive device to supplement this attribute from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when it is missing in the SOP Instances created by the invoking archive device. Only the first configured value gets used by supplementing coercion, as the field is single-valued according to the `General Equipment Module Attributes <https://dicom.nema.org/medical/dicom/current/output/html/part03.html#table_C.7-8>`_. Multi-valued possibility for this field here is to fulfill the requirement in `DICOM Part 15 - Security and System Management Profiles - LDAP Schema For Objects and Attributes <https://dicom.nema.org/medical/dicom/current/output/html/part15.html#sect_H.1.3>`_.
+    :ref:`Institution Code(s) <device-dicomInstitutionCode>`",string,"Institution Code of the device. Default value of Institution Code Sequence (0008,0082) in format (CV, CSD, ""CM"") on `invocation by archive attribute coercions on an archive device to supplement this attribute from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when it is missing in the SOP Instances created by the invoking archive device. Only the first configured value gets used by supplementing coercion, as the field is single-valued according to the `General Equipment Module Attributes <https://dicom.nema.org/medical/dicom/current/output/html/part03.html#table_C.7-8>`_. Multi-valued possibility for this field here is to fulfill the requirement in `DICOM Part 15 - Security and System Management Profiles - LDAP Schema For Objects and Attributes <https://dicom.nema.org/medical/dicom/current/output/html/part15.html#sect_H.1.3>`_.
 
     (dicomInstitutionCode)"
     "
     .. _dicomInstitutionAddress:
+    .. _device-dicomInstitutionAddress:
 
-    :ref:`Institution Address(s) <dicomInstitutionAddress>`",string,"Institution Address of the device. Default value of Institution Address (0008,0081) on `invocation by archive attribute coercions on an archive device to supplement this attribute from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when it is missing in the SOP Instances created by the invoking archive device. Only the first configured value gets used by supplementing coercion, as the field is single-valued according to the `General Equipment Module Attributes <https://dicom.nema.org/medical/dicom/current/output/html/part03.html#table_C.7-8>`_. Multi-valued possibility for this field here is to fulfill the requirement in `DICOM Part 15 - Security and System Management Profiles - LDAP Schema For Objects and Attributes <https://dicom.nema.org/medical/dicom/current/output/html/part15.html#sect_H.1.3>`_.
+    :ref:`Institution Address(s) <device-dicomInstitutionAddress>`",string,"Institution Address of the device. Default value of Institution Address (0008,0081) on `invocation by archive attribute coercions on an archive device to supplement this attribute from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when it is missing in the SOP Instances created by the invoking archive device. Only the first configured value gets used by supplementing coercion, as the field is single-valued according to the `General Equipment Module Attributes <https://dicom.nema.org/medical/dicom/current/output/html/part03.html#table_C.7-8>`_. Multi-valued possibility for this field here is to fulfill the requirement in `DICOM Part 15 - Security and System Management Profiles - LDAP Schema For Objects and Attributes <https://dicom.nema.org/medical/dicom/current/output/html/part15.html#sect_H.1.3>`_.
 
     (dicomInstitutionAddress)"
     "
     .. _dicomInstitutionDepartmentName:
+    .. _device-dicomInstitutionDepartmentName:
 
-    :ref:`Institution Department Name(s) <dicomInstitutionDepartmentName>`",string,"Institutional Department Name of the device. Default value of Institutional Department Name (0008,1040) on `invocation by archive attribute coercions on an archive device to supplement this attribute from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when it is missing in the SOP Instances created by the invoking archive device. Only the first configured value gets used by supplementing coercion, as the field is single-valued according to the `General Equipment Module Attributes <https://dicom.nema.org/medical/dicom/current/output/html/part03.html#table_C.7-8>`_. Multi-valued possibility for this field here is to fulfill the requirement in `DICOM Part 15 - Security and System Management Profiles - LDAP Schema For Objects and Attributes <https://dicom.nema.org/medical/dicom/current/output/html/part15.html#sect_H.1.3>`_.
+    :ref:`Institution Department Name(s) <device-dicomInstitutionDepartmentName>`",string,"Institutional Department Name of the device. Default value of Institutional Department Name (0008,1040) on `invocation by archive attribute coercions on an archive device to supplement this attribute from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when it is missing in the SOP Instances created by the invoking archive device. Only the first configured value gets used by supplementing coercion, as the field is single-valued according to the `General Equipment Module Attributes <https://dicom.nema.org/medical/dicom/current/output/html/part03.html#table_C.7-8>`_. Multi-valued possibility for this field here is to fulfill the requirement in `DICOM Part 15 - Security and System Management Profiles - LDAP Schema For Objects and Attributes <https://dicom.nema.org/medical/dicom/current/output/html/part15.html#sect_H.1.3>`_.
 
     (dicomInstitutionDepartmentName)"
     "
     .. _dicomIssuerOfPatientID:
+    .. _device-dicomIssuerOfPatientID:
 
-    :ref:`Issuer of Patient ID <dicomIssuerOfPatientID>`",string,"Default value for the Issuer of Patient ID (0010,0021), and optionally also default values for the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Patient ID Qualifiers Sequence (0010,0024) for SOP Instances created by this device when Patient ID (0010,0020) is missing; may be overridden with values received in a worklist or other source. It is also used on `invocation by archive attribute coercions on an archive device to supplement from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when assigning authority of Patient ID (0010,0020) is missing : 
+    :ref:`Issuer of Patient ID <device-dicomIssuerOfPatientID>`",string,"Default value for the Issuer of Patient ID (0010,0021), and optionally also default values for the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Patient ID Qualifiers Sequence (0010,0024) for SOP Instances created by this device when Patient ID (0010,0020) is missing; may be overridden with values received in a worklist or other source. It is also used on `invocation by archive attribute coercions on an archive device to supplement from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when assigning authority of Patient ID (0010,0020) is missing : 
 
 	- on receive and creation of SOP instances by the invoking archive device
 
@@ -215,8 +230,9 @@ DICOM Device related information
     (dicomIssuerOfPatientID)"
     "
     .. _dicomIssuerOfAccessionNumber:
+    .. _device-dicomIssuerOfAccessionNumber:
 
-    :ref:`Issuer of Accession Number <dicomIssuerOfAccessionNumber>`",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Accession Number Sequence (0008,0051) for Modality Worklist items created or updated by this device when Accession Number (0008,0050) is missing; may be overridden with values received in a worklist or other source. It is also used on `invocation by archive attribute coercions on an archive device to supplement from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when assigning authority of Accession Number (0008,0050) is missing : 
+    :ref:`Issuer of Accession Number <device-dicomIssuerOfAccessionNumber>`",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Accession Number Sequence (0008,0051) for Modality Worklist items created or updated by this device when Accession Number (0008,0050) is missing; may be overridden with values received in a worklist or other source. It is also used on `invocation by archive attribute coercions on an archive device to supplement from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when assigning authority of Accession Number (0008,0050) is missing : 
 
 	- within Request Attributes Sequence (0040,0275) item and root level attributes on receive and creation of SOP instances by the invoking archive device
 
@@ -233,8 +249,9 @@ DICOM Device related information
     (dicomIssuerOfAccessionNumber)"
     "
     .. _dicomOrderPlacerIdentifier:
+    .. _device-dicomOrderPlacerIdentifier:
 
-    :ref:`Order Placer Identifier <dicomOrderPlacerIdentifier>`",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Order Placer Identifier Sequence (0040,0026) on `invocation by archive attribute coercions on an archive device to supplement from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when assigning authority of Placer Order Number / Imaging Service Request (0040,2016) is missing : 
+    :ref:`Order Placer Identifier <device-dicomOrderPlacerIdentifier>`",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Order Placer Identifier Sequence (0040,0026) on `invocation by archive attribute coercions on an archive device to supplement from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when assigning authority of Placer Order Number / Imaging Service Request (0040,2016) is missing : 
 
 	- within Request Attributes Sequence (0040,0275) item on receive and creation of SOP instances by the invoking archive device
 
@@ -251,8 +268,9 @@ DICOM Device related information
     (dicomOrderPlacerIdentifier)"
     "
     .. _dicomOrderFillerIdentifier:
+    .. _device-dicomOrderFillerIdentifier:
 
-    :ref:`Order Filler Identifier <dicomOrderFillerIdentifier>`",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Order Filler Identifier Sequence (0040,0027) on `invocation by archive attribute coercions on an archive device to supplement from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when assigning authority of Filler Order Number / Imaging Service Request (0040,2017) is missing : 
+    :ref:`Order Filler Identifier <device-dicomOrderFillerIdentifier>`",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Order Filler Identifier Sequence (0040,0027) on `invocation by archive attribute coercions on an archive device to supplement from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when assigning authority of Filler Order Number / Imaging Service Request (0040,2017) is missing : 
 
 	- within Request Attributes Sequence (0040,0275) item on receive and creation of SOP instances by the invoking archive device
 
@@ -269,8 +287,9 @@ DICOM Device related information
     (dicomOrderFillerIdentifier)"
     "
     .. _dicomIssuerOfAdmissionID:
+    .. _device-dicomIssuerOfAdmissionID:
 
-    :ref:`Issuer of Admission ID <dicomIssuerOfAdmissionID>`",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Admission ID Sequence (0038,0014) on `invocation by archive attribute coercions on an archive device to supplement from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when assigning authority of Admission ID (0038,0010) is missing : 
+    :ref:`Issuer of Admission ID <device-dicomIssuerOfAdmissionID>`",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Admission ID Sequence (0038,0014) on `invocation by archive attribute coercions on an archive device to supplement from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when assigning authority of Admission ID (0038,0010) is missing : 
 
 	- on receive and creation of SOP instances by the invoking archive device
 
@@ -287,8 +306,9 @@ DICOM Device related information
     (dicomIssuerOfAdmissionID)"
     "
     .. _dicomIssuerOfServiceEpisodeID:
+    .. _device-dicomIssuerOfServiceEpisodeID:
 
-    :ref:`Issuer of Service Episode ID <dicomIssuerOfServiceEpisodeID>`",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Service Episode ID Sequence (0038,0064) on `invocation by archive attribute coercions on an archive device to supplement from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when assigning authority of Service Episode ID (0038,0060) is missing : 
+    :ref:`Issuer of Service Episode ID <device-dicomIssuerOfServiceEpisodeID>`",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Service Episode ID Sequence (0038,0064) on `invocation by archive attribute coercions on an archive device to supplement from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when assigning authority of Service Episode ID (0038,0060) is missing : 
 
 	- on receive and creation of SOP instances by the invoking archive device
 
@@ -305,8 +325,9 @@ DICOM Device related information
     (dicomIssuerOfServiceEpisodeID)"
     "
     .. _dicomIssuerOfContainerIdentifier:
+    .. _device-dicomIssuerOfContainerIdentifier:
 
-    :ref:`Issuer of Container Identifier <dicomIssuerOfContainerIdentifier>`",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Container Identifier Sequence (0040,0513) on `invocation by archive attribute coercions on an archive device to supplement from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when assigning authority of Container Identifier (0040,0512) is missing : 
+    :ref:`Issuer of Container Identifier <device-dicomIssuerOfContainerIdentifier>`",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Container Identifier Sequence (0040,0513) on `invocation by archive attribute coercions on an archive device to supplement from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when assigning authority of Container Identifier (0040,0512) is missing : 
 
 	- on receive and creation of SOP instances by the invoking archive device
 
@@ -323,8 +344,9 @@ DICOM Device related information
     (dicomIssuerOfContainerIdentifier)"
     "
     .. _dicomIssuerOfSpecimenIdentifier:
+    .. _device-dicomIssuerOfSpecimenIdentifier:
 
-    :ref:`Issuer of Specimen Identifier <dicomIssuerOfSpecimenIdentifier>`",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Specimen Identifier Sequence (0040,0562) on `invocation by archive attribute coercions on an archive device to supplement from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when assigning authority of Specimen Identifier (0040,0551) is missing : 
+    :ref:`Issuer of Specimen Identifier <device-dicomIssuerOfSpecimenIdentifier>`",string,"Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Specimen Identifier Sequence (0040,0562) on `invocation by archive attribute coercions on an archive device to supplement from this device <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview>`_ when assigning authority of Specimen Identifier (0040,0551) is missing : 
 
 	- on receive and creation of SOP instances by the invoking archive device
 
@@ -341,20 +363,23 @@ DICOM Device related information
     (dicomIssuerOfSpecimenIdentifier)"
     "
     .. _dicomAuthorizedNodeCertificateReference:
+    .. _device-dicomAuthorizedNodeCertificateReference:
 
-    :ref:`Authorized Node Certificate Reference(s) <dicomAuthorizedNodeCertificateReference>`",string,"The DNs for the certificates of nodes that are authorized to connect to this device
+    :ref:`Authorized Node Certificate Reference(s) <device-dicomAuthorizedNodeCertificateReference>`",string,"The DNs for the certificates of nodes that are authorized to connect to this device
 
     (dicomAuthorizedNodeCertificateReference)"
     "
     .. _dicomThisNodeCertificateReference:
+    .. _device-dicomThisNodeCertificateReference:
 
-    :ref:`This Node Certificate Reference(s) <dicomThisNodeCertificateReference>`",string,"The DNs of the public certificate(s) for this node
+    :ref:`This Node Certificate Reference(s) <device-dicomThisNodeCertificateReference>`",string,"The DNs of the public certificate(s) for this node
 
     (dicomThisNodeCertificateReference)"
     "
     .. _dicomInstalled:
+    .. _device-dicomInstalled:
 
-    :ref:`installed <dicomInstalled>`",boolean,"Boolean to indicate whether this device is presently installed on the network
+    :ref:`installed <device-dicomInstalled>`",boolean,"Boolean to indicate whether this device is presently installed on the network
 
     (dicomInstalled)"
     ":doc:`networkConnection` (s)",object,"network connections of the device"

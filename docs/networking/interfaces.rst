@@ -2,6 +2,7 @@ Network Interfaces
 ^^^^^^^^^^^^^^^^^^
 
 .. _interface-physical-network-interface:
+.. _interfaces-interface-physical-network-interface:
 
 Physical Network Interface
 """"""""""""""""""""""""""
@@ -9,6 +10,7 @@ Physical Network Interface
 The application is indifferent to the physical medium over which TCP/IP executes, which is dependent on the underlying operating system and hardware
 
 .. _interface-additional-protocols:
+.. _interfaces-interface-additional-protocols:
 
 Additional Protocols
 """"""""""""""""""""
@@ -16,6 +18,7 @@ Additional Protocols
 When host names rather than IP addresses are used in the configuration properties to specify presentation addresses for remote AEs, the application is dependent on the name resolution mechanism of the underlying operating system.
 
 .. _interface-ip-support:
+.. _interfaces-interface-ip-support:
 
 IPv4 and IPv6 Support
 """""""""""""""""""""

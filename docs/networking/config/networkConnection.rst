@@ -9,26 +9,30 @@ Describes one TCP/UDP port on one network device.
 
     "
     .. _cn:
+    .. _networkConnection-cn:
 
-    :ref:`Name <cn>`",string,"Arbitrary/Meaningful name for the Network Connection object
+    :ref:`Name <networkConnection-cn>`",string,"Arbitrary/Meaningful name for the Network Connection object
 
     (cn)"
     "
     .. _dicomHostname:
+    .. _networkConnection-dicomHostname:
 
-    :ref:`Hostname <dicomHostname>`",string,"DNS name for this particular connection
+    :ref:`Hostname <networkConnection-dicomHostname>`",string,"DNS name for this particular connection
 
     (dicomHostname)"
     "
     .. _dicomPort:
+    .. _networkConnection-dicomPort:
 
-    :ref:`Port <dicomPort>`",integer,"TCP/UDP port that a service is listening on. May be missing if this network connection is only used for outbound connections
+    :ref:`Port <networkConnection-dicomPort>`",integer,"TCP/UDP port that a service is listening on. May be missing if this network connection is only used for outbound connections
 
     (dicomPort)"
     "
     .. _dicomTLSCipherSuite:
+    .. _networkConnection-dicomTLSCipherSuite:
 
-    :ref:`TLS CipherSuites(s) <dicomTLSCipherSuite>`",string,"The TLS CipherSuites that are supported on this particular connection. If not present TLS is disabled
+    :ref:`TLS CipherSuites(s) <networkConnection-dicomTLSCipherSuite>`",string,"The TLS CipherSuites that are supported on this particular connection. If not present TLS is disabled
 
     Enumerated values:
 
@@ -49,8 +53,9 @@ Describes one TCP/UDP port on one network device.
     (dicomTLSCipherSuite)"
     "
     .. _dicomInstalled:
+    .. _networkConnection-dicomInstalled:
 
-    :ref:`installed <dicomInstalled>`",boolean,"True if the Network Connection is installed on the network. If not present, information about the installed status of the Network Connection is inherited from the device
+    :ref:`installed <networkConnection-dicomInstalled>`",boolean,"True if the Network Connection is installed on the network. If not present, information about the installed status of the Network Connection is inherited from the device
 
     (dicomInstalled)"
     ":doc:`dcmNetworkConnection` ",object,"dcm4che proprietary Network Connection Attributes"

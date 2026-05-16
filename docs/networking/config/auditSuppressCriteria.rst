@@ -9,14 +9,16 @@ Audit Suppress Criteria
 
     "
     .. _cn:
+    .. _auditSuppressCriteria-cn:
 
-    :ref:`Name <cn>`",string,"Arbitrary/Meaningful name of the Audit Suppress Criteria.
+    :ref:`Name <auditSuppressCriteria-cn>`",string,"Arbitrary/Meaningful name of the Audit Suppress Criteria.
 
     (cn)"
     "
     .. _dcmAuditEventID:
+    .. _auditSuppressCriteria-dcmAuditEventID:
 
-    :ref:`Audit Event ID(s) <dcmAuditEventID>`",string,"DICOM PS 3.15 A.5 Audit Event ID code and codeSystemName in format (CV, CSD, ""CM"").
+    :ref:`Audit Event ID(s) <auditSuppressCriteria-dcmAuditEventID>`",string,"DICOM PS 3.15 A.5 Audit Event ID code and codeSystemName in format (CV, CSD, ""CM"").
 
     Enumerated values:
 
@@ -63,8 +65,9 @@ Audit Suppress Criteria
     (dcmAuditEventID)"
     "
     .. _dcmAuditEventTypeCode:
+    .. _auditSuppressCriteria-dcmAuditEventTypeCode:
 
-    :ref:`Audit Event Type Code(s) <dcmAuditEventTypeCode>`",string,"DICOM PS 3.15 A.5 Audit Event Type code in format (CV, CSD, ""CM"").
+    :ref:`Audit Event Type Code(s) <auditSuppressCriteria-dcmAuditEventTypeCode>`",string,"DICOM PS 3.15 A.5 Audit Event Type code in format (CV, CSD, ""CM"").
 
     Enumerated values:
 
@@ -151,8 +154,9 @@ Audit Suppress Criteria
     (dcmAuditEventTypeCode)"
     "
     .. _dcmAuditEventActionCode:
+    .. _auditSuppressCriteria-dcmAuditEventActionCode:
 
-    :ref:`Event Action Code(s) <dcmAuditEventActionCode>`",string,"DICOM PS 3.15 A.5 Audit Event Action Type code.
+    :ref:`Event Action Code(s) <auditSuppressCriteria-dcmAuditEventActionCode>`",string,"DICOM PS 3.15 A.5 Audit Event Action Type code.
 
     Enumerated values:
 
@@ -169,8 +173,9 @@ Audit Suppress Criteria
     (dcmAuditEventActionCode)"
     "
     .. _dcmAuditEventOutcomeIndicator:
+    .. _auditSuppressCriteria-dcmAuditEventOutcomeIndicator:
 
-    :ref:`Event Outcome Indicator(s) <dcmAuditEventOutcomeIndicator>`",string,"DICOM PS 3.15 A.5 Audit Event Outcome Indicator.
+    :ref:`Event Outcome Indicator(s) <auditSuppressCriteria-dcmAuditEventOutcomeIndicator>`",string,"DICOM PS 3.15 A.5 Audit Event Outcome Indicator.
 
     Enumerated values:
 
@@ -185,20 +190,23 @@ Audit Suppress Criteria
     (dcmAuditEventOutcomeIndicator)"
     "
     .. _dcmAuditUserID:
+    .. _auditSuppressCriteria-dcmAuditUserID:
 
-    :ref:`User ID(s) <dcmAuditUserID>`",string,"DICOM PS 3.15 A.5 Audit Active Participant User ID.
+    :ref:`User ID(s) <auditSuppressCriteria-dcmAuditUserID>`",string,"DICOM PS 3.15 A.5 Audit Active Participant User ID.
 
     (dcmAuditUserID)"
     "
     .. _dcmAuditAlternativeUserID:
+    .. _auditSuppressCriteria-dcmAuditAlternativeUserID:
 
-    :ref:`Alternative User ID(s) <dcmAuditAlternativeUserID>`",string,"DICOM PS 3.15 A.5 Audit Active Participant Alternative User ID.
+    :ref:`Alternative User ID(s) <auditSuppressCriteria-dcmAuditAlternativeUserID>`",string,"DICOM PS 3.15 A.5 Audit Active Participant Alternative User ID.
 
     (dcmAuditAlternativeUserID)"
     "
     .. _dcmAuditUserRoleIDCode:
+    .. _auditSuppressCriteria-dcmAuditUserRoleIDCode:
 
-    :ref:`User Role ID Code(s) <dcmAuditUserRoleIDCode>`",string,"DICOM PS 3.15 A.5 Audit Active Participant User Role ID code in format (CV, CSD, ""CM"").
+    :ref:`User Role ID Code(s) <auditSuppressCriteria-dcmAuditUserRoleIDCode>`",string,"DICOM PS 3.15 A.5 Audit Active Participant User Role ID code in format (CV, CSD, ""CM"").
 
     Enumerated values:
 
@@ -217,20 +225,23 @@ Audit Suppress Criteria
     (dcmAuditUserRoleIDCode)"
     "
     .. _dcmAuditNetworkAccessPointID:
+    .. _auditSuppressCriteria-dcmAuditNetworkAccessPointID:
 
-    :ref:`Network Access Point ID(s) <dcmAuditNetworkAccessPointID>`",string,"DICOM PS 3.15 A.5 Audit Active Participant Network Access Point ID.
+    :ref:`Network Access Point ID(s) <auditSuppressCriteria-dcmAuditNetworkAccessPointID>`",string,"DICOM PS 3.15 A.5 Audit Active Participant Network Access Point ID.
 
     (dcmAuditNetworkAccessPointID)"
     "
     .. _dcmAuditUserIsRequestor:
+    .. _auditSuppressCriteria-dcmAuditUserIsRequestor:
 
-    :ref:`User is Requestor <dcmAuditUserIsRequestor>`",boolean,"Indicates if Active Participant is initiator/requestor of the Audit Event as specified by DICOM PS 3.15 A.5
+    :ref:`User is Requestor <auditSuppressCriteria-dcmAuditUserIsRequestor>`",boolean,"Indicates if Active Participant is initiator/requestor of the Audit Event as specified by DICOM PS 3.15 A.5
 
     (dcmAuditUserIsRequestor)"
     "
     .. _dcmParticipantObjectTypeCode:
+    .. _auditSuppressCriteria-dcmParticipantObjectTypeCode:
 
-    :ref:`Participant Object Type Code(s) <dcmParticipantObjectTypeCode>`",string,"DICOM PS 3.15 A.5 Participant Object Type Code.
+    :ref:`Participant Object Type Code(s) <auditSuppressCriteria-dcmParticipantObjectTypeCode>`",string,"DICOM PS 3.15 A.5 Participant Object Type Code.
 
     Enumerated values:
 
@@ -245,8 +256,9 @@ Audit Suppress Criteria
     (dcmParticipantObjectTypeCode)"
     "
     .. _dcmParticipantObjectTypeCodeRole:
+    .. _auditSuppressCriteria-dcmParticipantObjectTypeCodeRole:
 
-    :ref:`Participant Object Type Code Role(s) <dcmParticipantObjectTypeCodeRole>`",string,"DICOM PS 3.15 A.5 Participant Object Type Code Role.
+    :ref:`Participant Object Type Code Role(s) <auditSuppressCriteria-dcmParticipantObjectTypeCodeRole>`",string,"DICOM PS 3.15 A.5 Participant Object Type Code Role.
 
     Enumerated values:
 
@@ -305,8 +317,9 @@ Audit Suppress Criteria
     (dcmParticipantObjectTypeCodeRole)"
     "
     .. _dcmParticipantObjectDataLifeCycle:
+    .. _auditSuppressCriteria-dcmParticipantObjectDataLifeCycle:
 
-    :ref:`Participant Object Data Life Cycle(s) <dcmParticipantObjectDataLifeCycle>`",string,"DICOM PS 3.15 A.5 Participant Object Data Life Cycle.
+    :ref:`Participant Object Data Life Cycle(s) <auditSuppressCriteria-dcmParticipantObjectDataLifeCycle>`",string,"DICOM PS 3.15 A.5 Participant Object Data Life Cycle.
 
     Enumerated values:
 

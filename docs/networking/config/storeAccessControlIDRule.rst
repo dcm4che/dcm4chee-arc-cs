@@ -9,20 +9,23 @@ Store Access Control ID Rule
 
     "
     .. _cn:
+    .. _storeAccessControlIDRule-cn:
 
-    :ref:`Name <cn>`",string,"Arbitrary/Meaningful name of the Store Access Control ID Rule
+    :ref:`Name <storeAccessControlIDRule-cn>`",string,"Arbitrary/Meaningful name of the Store Access Control ID Rule
 
     (cn)"
     "
     .. _dcmStoreAccessControlID:
+    .. _storeAccessControlIDRule-dcmStoreAccessControlID:
 
-    :ref:`Store Access Control ID(s) <dcmStoreAccessControlID>`",string,"Access Control IDs assigned to whole Studies or individual Series which attributes match all conditions.
+    :ref:`Store Access Control ID(s) <storeAccessControlIDRule-dcmStoreAccessControlID>`",string,"Access Control IDs assigned to whole Studies or individual Series which attributes match all conditions.
 
     (dcmStoreAccessControlID)"
     "
     .. _dcmEntity:
+    .. _storeAccessControlIDRule-dcmEntity:
 
-    :ref:`Entity <dcmEntity>`",string,"Indicates if the Access Control ID shall be assigned to whole Studies or individual Series.
+    :ref:`Entity <storeAccessControlIDRule-dcmEntity>`",string,"Indicates if the Access Control ID shall be assigned to whole Studies or individual Series.
 
     Enumerated values:
 
@@ -33,13 +36,15 @@ Store Access Control ID Rule
     (dcmEntity)"
     "
     .. _dcmRulePriority:
+    .. _storeAccessControlIDRule-dcmRulePriority:
 
-    :ref:`Rule Priority <dcmRulePriority>`",integer,"If the condition of several Store Access Control ID rules match for a received image, higher priority rule is applied. If there are several matching rules with equal priority, it is undefined which rule gets applied.
+    :ref:`Rule Priority <storeAccessControlIDRule-dcmRulePriority>`",integer,"If the condition of several Store Access Control ID rules match for a received image, higher priority rule is applied. If there are several matching rules with equal priority, it is undefined which rule gets applied.
 
     (dcmRulePriority)"
     "
     .. _dcmProperty:
+    .. _storeAccessControlIDRule-dcmProperty:
 
-    :ref:`Conditions(s) <dcmProperty>`",string,"Conditions in format {key}[!]={value}. Refer `applicability, format and some examples. <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions>`_
+    :ref:`Conditions(s) <storeAccessControlIDRule-dcmProperty>`",string,"Conditions in format {key}[!]={value}. Refer `applicability, format and some examples. <https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions>`_
 
     (dcmProperty)"

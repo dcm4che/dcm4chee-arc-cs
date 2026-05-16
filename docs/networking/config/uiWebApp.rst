@@ -9,20 +9,23 @@ Web App drop-down list
 
     "
     .. _dcmuiWebAppListName:
+    .. _uiWebApp-dcmuiWebAppListName:
 
-    :ref:`List Name <dcmuiWebAppListName>`",string,"Define a name for this config
+    :ref:`List Name <uiWebApp-dcmuiWebAppListName>`",string,"Define a name for this config
 
     (dcmuiWebAppListName)"
     "
     .. _dcmuiWebAppListDescription:
+    .. _uiWebApp-dcmuiWebAppListDescription:
 
-    :ref:`Description <dcmuiWebAppListDescription>`",string,"Web Application List description
+    :ref:`Description <uiWebApp-dcmuiWebAppListDescription>`",string,"Web Application List description
 
     (dcmuiWebAppListDescription)"
     "
     .. _dcmuiMode:
+    .. _uiWebApp-dcmuiMode:
 
-    :ref:`List mode <dcmuiMode>`",string,"You have two possibilities how to show the defined list: 1.) On top on the rest of list 'separated' with a line, 2.) Show only those hir defined ( 'exclusive' ).
+    :ref:`List mode <uiWebApp-dcmuiMode>`",string,"You have two possibilities how to show the defined list: 1.) On top on the rest of list 'separated' with a line, 2.) Show only those hir defined ( 'exclusive' ).
 
     Enumerated values:
 
@@ -33,19 +36,22 @@ Web App drop-down list
     (dcmuiMode)"
     "
     .. _dcmuiWebApps:
+    .. _uiWebApp-dcmuiWebApps:
 
-    :ref:`WebApps(s) <dcmuiWebApps>`",string,"Web Application
+    :ref:`WebApps(s) <uiWebApp-dcmuiWebApps>`",string,"Web Application
 
     (dcmuiWebApps)"
     "
     .. _dcmAcceptedUserRole:
+    .. _uiWebApp-dcmAcceptedUserRole:
 
-    :ref:`Accepted User Role(s) <dcmAcceptedUserRole>`",string,"Define the roles for which this config should be available, use 'user' to be available for all roles ( You should either define a username ( following attribute ) or user role ( this attribute ))
+    :ref:`Accepted User Role(s) <uiWebApp-dcmAcceptedUserRole>`",string,"Define the roles for which this config should be available, use 'user' to be available for all roles ( You should either define a username ( following attribute ) or user role ( this attribute ))
 
     (dcmAcceptedUserRole)"
     "
     .. _dcmAcceptedUserName:
+    .. _uiWebApp-dcmAcceptedUserName:
 
-    :ref:`Accepted User Name(s) <dcmAcceptedUserName>`",string,"Define the Username for which this config should be available ( You should either define a username ( this attribute ) or user role ( previous attribute ))
+    :ref:`Accepted User Name(s) <uiWebApp-dcmAcceptedUserName>`",string,"Define the Username for which this config should be available ( You should either define a username ( this attribute ) or user role ( previous attribute ))
 
     (dcmAcceptedUserName)"

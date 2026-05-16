@@ -9,14 +9,16 @@ UI Language Config
 
     "
     .. _dcmuiLanguageConfigName:
+    .. _uiLanguage-dcmuiLanguageConfigName:
 
-    :ref:`Language Config Name <dcmuiLanguageConfigName>`",string,"Name of the Language Config
+    :ref:`Language Config Name <uiLanguage-dcmuiLanguageConfigName>`",string,"Name of the Language Config
 
     (dcmuiLanguageConfigName)"
     "
     .. _dcmLanguages:
+    .. _uiLanguage-dcmLanguages:
 
-    :ref:`Available languages(s) <dcmLanguages>`",string,"Set languages that should be available in the UI (The JSON-files to those language must exist in the code, if they don't exist open an Issue in github
+    :ref:`Available languages(s) <uiLanguage-dcmLanguages>`",string,"Set languages that should be available in the UI (The JSON-files to those language must exist in the code, if they don't exist open an Issue in github
 
     (dcmLanguages)"
     ":doc:`uiLanguageProfile` (s)",object,"Language profile for username, role or everyone"

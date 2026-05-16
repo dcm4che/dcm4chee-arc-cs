@@ -9,25 +9,29 @@ Bulk Data Descriptor
 
     "
     .. _dcmBulkDataDescriptorID:
+    .. _bulkData-dcmBulkDataDescriptorID:
 
-    :ref:`Bulk Data Descriptor ID <dcmBulkDataDescriptorID>`",string,"Bulk Data Descriptor ID
+    :ref:`Bulk Data Descriptor ID <bulkData-dcmBulkDataDescriptorID>`",string,"Bulk Data Descriptor ID
 
     (dcmBulkDataDescriptorID)"
     "
     .. _dcmBulkDataExcludeDefaults:
+    .. _bulkData-dcmBulkDataExcludeDefaults:
 
-    :ref:`Exclude Defaults <dcmBulkDataExcludeDefaults>`",boolean,"Indicates if Attributes specified by the 'Composite Instance Retrieve Without Bulk Data Service Class' shall be implicitly treated as Bulk Data (=false) or not (=true).
+    :ref:`Exclude Defaults <bulkData-dcmBulkDataExcludeDefaults>`",boolean,"Indicates if Attributes specified by the 'Composite Instance Retrieve Without Bulk Data Service Class' shall be implicitly treated as Bulk Data (=false) or not (=true).
 
     (dcmBulkDataExcludeDefaults)"
     "
     .. _dcmAttributeSelector:
+    .. _bulkData-dcmAttributeSelector:
 
-    :ref:`Attribute Selector(s) <dcmAttributeSelector>`",string,"Specifies individual Attributes treated as Bulk Data by XPath (e.g. 'DicomAttribute[@tag=""54000100""]/Item/DicomAttribute[@tag=""54001010""]' ).
+    :ref:`Attribute Selector(s) <bulkData-dcmAttributeSelector>`",string,"Specifies individual Attributes treated as Bulk Data by XPath (e.g. 'DicomAttribute[@tag=""54000100""]/Item/DicomAttribute[@tag=""54001010""]' ).
 
     (dcmAttributeSelector)"
     "
     .. _dcmBulkDataVRLengthThreshold:
+    .. _bulkData-dcmBulkDataVRLengthThreshold:
 
-    :ref:`VR Length Threshold(s) <dcmBulkDataVRLengthThreshold>`",string,"Specifies to treat all Attributes with a particular Value Representation (VR) which value length exceeds the specified threshold as Bulk Date. Format: <VR>=<length-threshold>.
+    :ref:`VR Length Threshold(s) <bulkData-dcmBulkDataVRLengthThreshold>`",string,"Specifies to treat all Attributes with a particular Value Representation (VR) which value length exceeds the specified threshold as Bulk Date. Format: <VR>=<length-threshold>.
 
     (dcmBulkDataVRLengthThreshold)"

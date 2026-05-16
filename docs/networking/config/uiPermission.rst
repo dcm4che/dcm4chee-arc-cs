@@ -9,14 +9,16 @@ UI Permission
 
     "
     .. _dcmuiPermissionName:
+    .. _uiPermission-dcmuiPermissionName:
 
-    :ref:`UI Permission Name <dcmuiPermissionName>`",string,"Name of Permission for UI Action
+    :ref:`UI Permission Name <uiPermission-dcmuiPermissionName>`",string,"Name of Permission for UI Action
 
     (dcmuiPermissionName)"
     "
     .. _dcmuiAction:
+    .. _uiPermission-dcmuiAction:
 
-    :ref:`UI Action <dcmuiAction>`",string,"UI Action
+    :ref:`UI Action <uiPermission-dcmuiAction>`",string,"UI Action
 
     Enumerated values:
 
@@ -161,8 +163,9 @@ UI Permission
     (dcmuiAction)"
     "
     .. _dcmuiActionParam:
+    .. _uiPermission-dcmuiActionParam:
 
-    :ref:`UI Action Parameter(s) <dcmuiActionParam>`",string,"UI Action Parameter
+    :ref:`UI Action Parameter(s) <uiPermission-dcmuiActionParam>`",string,"UI Action Parameter
 
     Enumerated values:
 
@@ -191,7 +194,8 @@ UI Permission
     (dcmuiActionParam)"
     "
     .. _dcmAcceptedUserRole:
+    .. _uiPermission-dcmAcceptedUserRole:
 
-    :ref:`Accepted User Role(s) <dcmAcceptedUserRole>`",string,"Accepted User Role
+    :ref:`Accepted User Role(s) <uiPermission-dcmAcceptedUserRole>`",string,"Accepted User Role
 
     (dcmAcceptedUserRole)"

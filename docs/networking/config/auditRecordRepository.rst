@@ -9,13 +9,15 @@ Audit Record Repository related information
 
     "
     .. _dicomNetworkConnectionReference:
+    .. _auditRecordRepository-dicomNetworkConnectionReference:
 
-    :ref:`Network Connection Reference(s) <dicomNetworkConnectionReference>`",string,"The JSON Pointers to the Network Connection objects of this Audit Record Repository
+    :ref:`Network Connection Reference(s) <auditRecordRepository-dicomNetworkConnectionReference>`",string,"The JSON Pointers to the Network Connection objects of this Audit Record Repository
 
     (dicomNetworkConnectionReference)"
     "
     .. _dicomInstalled:
+    .. _auditRecordRepository-dicomInstalled:
 
-    :ref:`installed <dicomInstalled>`",boolean,"True if the ARR is installed on network. If not present, information about the installed status of the ARR is inherited from the device
+    :ref:`installed <auditRecordRepository-dicomInstalled>`",boolean,"True if the ARR is installed on network. If not present, information about the installed status of the ARR is inherited from the device
 
     (dicomInstalled)"
