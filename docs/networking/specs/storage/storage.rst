@@ -330,11 +330,11 @@ the same Patient, Study and Series is configurable for each Entity Level by sele
 NONE:
   Do not update the Attributes of the Entity in the database from its initial values extracted from the first received Instance of the Entity. 
 
-SUPPLEMENT (default for Patient Attributes):
+SUPPLEMENT (default for Patient, Study and Series Attributes):
   Supplement the Attributes of the Entity in the database with Attributes of subsequently received Instances which were not present or had
   no value in previous received Instances of the same Entity.
 
-MERGE (default for Study and Series Attributes):
+MERGE:
   Overwrite the Attributes of the Entity in the database with non-empty Attributes from subsequently received Instances of the same Entity.
 
 OVERWRITE: 
