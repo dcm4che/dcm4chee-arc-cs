@@ -359,15 +359,21 @@ By default, no image compression is configured.
 
 .. csv-table:: Storage Application C-STORE Response Status Return Reasons
     :header-rows: 1
-    :widths: 10, 15, 5, 20, 20
+    :widths: 10, 15, 5, 5, 20, 20
     :file: c-store-response-status-return-reasons.csv
 
-Note : If a failure condition does occur when handling an Association then all images previously received successfully over the Association
-are maintained in the DCM4CHEE archive database. No previously successfully received images are discarded. Even if an image is successfully
-received but an error occurs transmitting the C-STORE Response then this final image is maintained rather than discarded. If the loss of an
-Association is detected then the Association is closed. In the above table, some references to rejection error codes in Refused Service
-Status is due to the fact that, when objects are rejected the rejection notes are stored in the database for further processing.
+Note :
 
+- If a failure condition does occur when handling an Association then all images previously received successfully over
+  the Association are maintained in the DCM4CHEE archive database.
+- No previously successfully received images are discarded.
+- Even if an image is successfully received but an error occurs transmitting the C-STORE Response then this final image
+  is maintained rather than discarded.
+- If the loss of an Association is detected then the Association is closed.
+- In the above table, some references to rejection error codes in Refused Service Status is due to the fact that, when
+  objects are rejected the rejection notes are stored in the database for further processing.
+- Status Code (decimal) provided as these are returned in the *Failure Reason (0008,1197)* tag if storage of objects failed
+  via `HTTP POST STore Objects over Web <https://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5>`_.
 
 The Behavior of Storage Application Entity during communication failure is summarized in the following table:
 
