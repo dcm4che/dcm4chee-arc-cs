@@ -52,7 +52,7 @@ dcm4che proprietary Attributes of Network AE
     "
     .. _dcmShareTransferCapabilitiesFromAETitle:
 
-    :ref:`Share Transfer Capabilities from AE Title <dcmShareTransferCapabilitiesFromAETitle>`",string,"Indicates that this Network AE supports the Transfer Capabilities specified for another Network AE of the same Device.
+    :ref:`Share Transfer Capabilities from AE Title <dcmShareTransferCapabilitiesFromAETitle>`",string,"Indicates that this Network AE supports the Transfer Capabilities specified for another Archive Network AE of the same Archive Device.
 
     (dcmShareTransferCapabilitiesFromAETitle)"
     "
