@@ -214,6 +214,18 @@ DICOM Archive HL7 Application related information
 
     (hl7OrderMissingAdmissionIDPolicy)"
     "
+    .. _hl7MergeCompositeObjectMatchingKey:
+
+    :ref:`HL7 Merge Composite Object Matching Key <hl7MergeCompositeObjectMatchingKey>`",string,"Specifies attribute of MWL to lookup already stored DICOM composite objects whose study and series attributes are updated with MWL attributes. Overwrites value specified on Device level.
+
+    Enumerated values:
+
+    AccessionNumber (= Use Accession Number (0008,0050) from MWL for matching composite objects)
+
+    StudyInstanceUID (= Use Study Instance UID (0020,000D) from MWL for matching composite objects)
+
+    (hl7MergeCompositeObjectMatchingKey)"
+    "
     .. _hl7ImportReportMissingStudyIUIDPolicy:
 
     :ref:`HL7 Import Report Missing Study Instance UID Policy <hl7ImportReportMissingStudyIUIDPolicy>`",string,"Specifies policy for missing Study Instance UID in incoming HL7 Import Report (ORU) messages. Overwrites value specified on Device level.
