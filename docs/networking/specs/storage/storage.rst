@@ -219,7 +219,7 @@ The list of accepted Transfer Syntaxes for each accepted Abstract Syntax - as th
    "Explicit VR Little Endian", "1.2.840.10008.1.2.1"
    "JPEG Baseline (Process 1)", "1.2.840.10008.1.2.4.50"
    "JPEG Extended (Process 2 & 4)", "1.2.840.10008.1.2.4.51"
-   "JPEG Lossless, Non-Hierarchical (Process 14)", "1.2.840.10008.1.2.4.54"
+   "JPEG Lossless, Non-Hierarchical (Process 14)", "1.2.840.10008.1.2.4.57"
    "JPEG Lossless, Non-Hierarchical, First-Order Prediction (Process 14 [Selection Value 1])", "1.2.840.10008.1.2.4.70"
    "JPEG-LS Lossless", "1.2.840.10008.1.2.4.80"
    "JPEG-LS Lossy (Near-Lossless)", "1.2.840.10008.1.2.4.81"
