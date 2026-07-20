@@ -125,7 +125,7 @@ Attributes removed or replaced
 ..............................
 
 One can directly refer the table `Application Level Confidentiality Profile Attributes <http://dicom.nema.org/medical/dicom/current/output/html/part15.html#table_E.1-1>`_
-with different `action codes <http://dicom.nema.org/medical/dicom/current/output/html/part15.html#sect_E.1.1>`_ to see
+with different `action codes <https://dicom.nema.org/medical/dicom/current/output/html/part15.html#table_E.1-1a>`_ to see
 the list of attributes supported dependent on the applied *Basic Application Level Confidentiality Option*.
 
 In addition to the above list of attributes, below table lists out the private attributes and some more DICOM attributes
