@@ -521,10 +521,6 @@ User Password Update
 
 Applicable for User Authentication Events :
 
-- LOGIN
-- LOGIN_ERROR
-- LOGOUT
-- LOGOUT_ERROR
 - UPDATE_PASSWORD
 - UPDATE_PASSWORD_ERROR
 

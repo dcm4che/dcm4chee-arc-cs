@@ -5,6 +5,7 @@ Trigger Events
 --------------
 
 This message is sent if the archive is secured with Keycloak. The trigger events for this message are :
+
 - Login
 - Login Error
 - Logout
