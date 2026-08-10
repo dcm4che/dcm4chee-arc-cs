@@ -56,6 +56,12 @@ DICOM Archive Network AE related information
 
     (dcmAccessControlID)"
     "
+    .. _dcmGrantAccessPrevStudiesOfPatient:
+
+    :ref:`Grant Access Previous Studies of Patient <dcmGrantAccessPrevStudiesOfPatient>`",string,"Provide Access to all Studies of a particular Patient, if there is one Study for that Patient provided by this Archive AE not older than the time interval specified in ISO-8601 duration format PnYnMnD or PnW.
+
+    (dcmGrantAccessPrevStudiesOfPatient)"
+    "
     .. _dcmAcceptedMoveDestination:
 
     :ref:`Accepted Move Destination(s) <dcmAcceptedMoveDestination>`",string,"Accepted Move Destination in C-MOVE requests; any if absent.
