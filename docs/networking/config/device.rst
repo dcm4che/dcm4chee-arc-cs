@@ -210,7 +210,7 @@ DICOM Device related information
 
 	- on DICOM (MWl) C-FIND responses from external systems to invoking archive device. 
 
-	Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}]
+	Format: <Issuer of Patient ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]
 
     (dicomIssuerOfPatientID)"
     "
@@ -228,7 +228,7 @@ DICOM Device related information
 
 	- within Request Attributes Sequence (0040,0275) item and root level attributes on DICOM (MWl) C-FIND responses from external systems to invoking archive device. 
 
-	Format: {LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]
+	Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]
 
     (dicomIssuerOfAccessionNumber)"
     "
@@ -246,7 +246,7 @@ DICOM Device related information
 
 	- within Request Attributes Sequence (0040,0275) item on DICOM C-FIND / root level attributes on DICOM MWL C-FIND responses respectively, from external systems to invoking archive device. 
 
-	May be overridden by the values received in a worklist or other source. Format: {LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]
+	May be overridden by the values received in a worklist or other source. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]
 
     (dicomOrderPlacerIdentifier)"
     "
@@ -264,7 +264,7 @@ DICOM Device related information
 
 	- within Request Attributes Sequence (0040,0275) item on DICOM C-FIND / root level attributes on DICOM MWL C-FIND responses respectively, from external systems to invoking archive device. 
 
-	May be overridden by the values received in a worklist or other source. Format: {LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]
+	May be overridden by the values received in a worklist or other source. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]
 
     (dicomOrderFillerIdentifier)"
     "
@@ -282,7 +282,7 @@ DICOM Device related information
 
 	- on DICOM (MWl) C-FIND responses from external systems to invoking archive device. 
 
-	May be overridden by the values received in a worklist or other source. Format: {LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]
+	May be overridden by the values received in a worklist or other source. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]
 
     (dicomIssuerOfAdmissionID)"
     "
@@ -300,7 +300,7 @@ DICOM Device related information
 
 	- on DICOM (MWl) C-FIND responses from external systems to invoking archive device. 
 
-	May be overridden by the values received in a worklist or other source. Format: {LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]
+	May be overridden by the values received in a worklist or other source. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]
 
     (dicomIssuerOfServiceEpisodeID)"
     "
@@ -318,7 +318,7 @@ DICOM Device related information
 
 	- on DICOM (MWl) C-FIND responses from external systems to invoking archive device. 
 
-	May be overridden by the values received in a worklist or other source. Format: {LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]
+	May be overridden by the values received in a worklist or other source. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]
 
     (dicomIssuerOfContainerIdentifier)"
     "
@@ -336,7 +336,7 @@ DICOM Device related information
 
 	- on DICOM (MWl) C-FIND responses from external systems to invoking archive device. 
 
-	May be overridden by the values received in a worklist or other source. Format: {LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]
+	May be overridden by the values received in a worklist or other source. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]
 
     (dicomIssuerOfSpecimenIdentifier)"
     "
