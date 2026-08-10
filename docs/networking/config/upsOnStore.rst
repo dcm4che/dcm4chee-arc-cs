@@ -220,7 +220,7 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
     "
     .. _dcmRequestedProcedureCode:
 
-    :ref:`Requested Procedure Code Sequence <dcmRequestedProcedureCode>`",string,"Value of Code Value (0008,0100), Coding Scheme Designator (0008,0102) and Code Meaning (0008,0104) in Item of Requested Procedure Code Sequence (0032,1064) in Item of Referenced Request Sequence (0040,A370) in created UPS. Format: (&lt;CodeValue&gt;, &lt;CodingSchemeDesignator&gt;, ""&lt;CodeMeaning&gt;"")
+    :ref:`Requested Procedure Code Sequence <dcmRequestedProcedureCode>`",string,"Value of Code Value (0008,0100), Coding Scheme Designator (0008,0102) and Code Meaning (0008,0104) in Item of Requested Procedure Code Sequence (0032,1064) in Item of Referenced Request Sequence (0040,A370) in created UPS. Format: (<CodeValue>, <CodingSchemeDesignator>, ""<CodeMeaning>"")
 
     (dcmRequestedProcedureCode)"
     "
