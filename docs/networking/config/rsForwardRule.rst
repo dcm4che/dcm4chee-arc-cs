@@ -114,4 +114,10 @@ RESTful Forward Rule
 
     DeleteMWL
 
+    CreateUPS
+
+    UpdateUPS
+
+    ChangeUPSState
+
     (dcmRSOperation)"
