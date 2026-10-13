@@ -224,6 +224,12 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
 
     (dcmRequestedProcedureCode)"
     "
+    .. _dcmRequestedProcedureComments:
+
+    :ref:`Requested Procedure Comments <dcmRequestedProcedureComments>`",string,"Value of Requested Procedure Comments (0040,1400) in Item of Referenced Request Sequence (0040,A370) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {RequestAttributesSequence.RequestedProcedureComments}
+
+    (dcmRequestedProcedureComments)"
+    "
     .. _dcmRequestingPhysician:
 
     :ref:`Requesting Physician <dcmRequestingPhysician>`",string,"Value of Requesting Physician (0032,1032) in Item of Referenced Request Sequence (0040,A370) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {PerformingPhysicianName}
