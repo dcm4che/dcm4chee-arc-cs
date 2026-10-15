@@ -338,6 +338,12 @@ DICOM Archive Device related information
 
     (dcmValidateCallingAEHostname)"
     "
+    .. _hl7ValidateSendingApplicationHostname:
+
+    :ref:`Validate Sending HL7 Application Hostname <hl7ValidateSendingApplicationHostname>`",boolean,"Validate Hostname or IP Address of Sending HL7 Application. May be overwritten by configured values for particular Archive HL7 Application.
+
+    (hl7ValidateSendingApplicationHostname)"
+    "
     .. _dcmUserIdentityNegotiation:
 
     :ref:`User Identity Negotiation <dcmUserIdentityNegotiation>`",string,"Specifies to ignore User Identity Negotiation Sub-Item in Association requests (=NOT_SUPPORTED), to verify passed Username and password or JSON Web Token are against a Keycloak server (=SUPPORTS), or to reject Association requests without a valid Username and password or JSON Web Token in its Identity Negotiation Sub-Item (=REQUIRED). May be overwritten by configured values for particular Archive Network AEs.

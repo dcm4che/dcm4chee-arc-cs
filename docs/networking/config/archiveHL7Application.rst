@@ -14,6 +14,12 @@ DICOM Archive HL7 Application related information
 
     (dicomAETitle)"
     "
+    .. _hl7ValidateSendingApplicationHostname:
+
+    :ref:`Validate Sending HL7 Application Hostname <hl7ValidateSendingApplicationHostname>`",boolean,"Validate Hostname or IP Address of Sending HL7 Application. Overwrites value specified on Device level.
+
+    (hl7ValidateSendingApplicationHostname)"
+    "
     .. _dcmRecordAttributeModification:
 
     :ref:`Record Attribute Modification <dcmRecordAttributeModification>`",boolean,"Indicates if modifications of attributes of stored objects by this HL7 Application are recorded in Items of the Original Attributes Sequence. Overwrites value specified on Device level.

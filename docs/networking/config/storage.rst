@@ -116,6 +116,22 @@ Storage Descriptor
 
     (dcmDigestAlgorithm)"
     "
+    .. _dcmStorageVerificationPolicy:
+
+    :ref:`Storage Verification Policy <dcmStorageVerificationPolicy>`",string,"Policy applied to verify if an individual object was successfully written to this Storage System. If absent, no explicit verification of the storage is performed after the completion of the write operation without failure.
+
+    Enumerated values:
+
+    OBJECT_EXISTS (= Check if object exists on Storage System)
+
+    OBJECT_SIZE (= Check size of object on Storage System)
+
+    OBJECT_FETCH (= Fetch object from Storage System)
+
+    OBJECT_CHECKSUM (= Recalculate checksum of object on Storage System)
+
+    (dcmStorageVerificationPolicy)"
+    "
     .. _dcmMaxRetries:
 
     :ref:`Maximum Number of Retries <dcmMaxRetries>`",integer,"Maximum number of retries to store an object on the storage system.
