@@ -242,6 +242,36 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
 
     (dcmRequestingService)"
     "
+    .. _dicomInstitutionName:
+
+    :ref:`Institution Name <dicomInstitutionName>`",string,"Value of Institution Name (0008,0080) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {InstitutionName}
+
+    (dicomInstitutionName)"
+    "
+    .. _dicomInstitutionCode:
+
+    :ref:`Institution Code Sequence <dicomInstitutionCode>`",string,"Value of Code Value (0008,0100), Coding Scheme Designator (0008,0102) and Code Meaning (0008,0104) in Institution Code Sequence (0008,0082) in created UPS. Format: (<CodeValue>, <CodingSchemeDesignator>, ""<CodeMeaning>"")
+
+    (dicomInstitutionCode)"
+    "
+    .. _dicomInstitutionDepartmentName:
+
+    :ref:`Institutional Department Name <dicomInstitutionDepartmentName>`",string,"Value of Institutional Department Name (0008,1040) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {InstitutionDepartmentName}
+
+    (dicomInstitutionDepartmentName)"
+    "
+    .. _dcmInstitutionDepartmentCode:
+
+    :ref:`Institutional Department Type Code Sequence <dcmInstitutionDepartmentCode>`",string,"Value of Code Value (0008,0100), Coding Scheme Designator (0008,0102) and Code Meaning (0008,0104) in Institutional Department Type Code Sequence (0008,1041) in created UPS. Format: (<CodeValue>, <CodingSchemeDesignator>, ""<CodeMeaning>"")
+
+    (dcmInstitutionDepartmentCode)"
+    "
+    .. _dicomInstitutionAddress:
+
+    :ref:`Institution Address <dicomInstitutionAddress>`",string,"Value of Institution Address (0008,0081) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {InstitutionAddress}
+
+    (dicomInstitutionAddress)"
+    "
     .. _dcmURI:
 
     :ref:`XSL Stylesheet URI <dcmURI>`",string,"Specifies URI of the XSL style sheet to include additional attributes in created UPS.
