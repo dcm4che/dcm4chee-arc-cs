@@ -250,6 +250,20 @@ DICOM Archive Device related information
 
     (dcmAcceptConflictingPatientID)"
     "
+    .. _dcmAcceptNonUniquePatientIDs:
+
+    :ref:`Accept Non-Unique Patient IDs <dcmAcceptNonUniquePatientIDs>`",string,"Indicates if objects with multiple Patient IDs in in the root dataset and in items of the Other Patient ID sequence matching Patient IDs of different existing Patients in the archive will be accepted. May be overwritten by configured values for particular Archive Network AEs.
+
+    Enumerated values:
+
+    NEVER (= Reject such objects)
+
+    UNIQUE_PATIENT_ATTRS (= Only accept such objects if all attributes of one of the existing Patients matches)
+
+    CREATE_NEW_PATIENT (= Accept such objects and create a new Patient record with the Patient IDs in the received object)
+
+    (dcmAcceptNonUniquePatientIDs)"
+    "
     .. _dcmIdentifyPatientByIDAndName:
 
     :ref:`Identify Patient by ID and Name <dcmIdentifyPatientByIDAndName>`",boolean,"Indicates to consider also the Patient Name on receive of DICOM objects to determine if they belongs to an already existing Patient in the archive.

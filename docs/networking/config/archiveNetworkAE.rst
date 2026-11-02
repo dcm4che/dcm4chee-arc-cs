@@ -134,6 +134,20 @@ DICOM Archive Network AE related information
 
     (dcmAcceptConflictingPatientID)"
     "
+    .. _dcmAcceptNonUniquePatientIDs:
+
+    :ref:`Accept Non-Unique Patient IDs <dcmAcceptNonUniquePatientIDs>`",string,"Indicates if objects with multiple Patient IDs in in the root dataset and in items of the Other Patient ID sequence matching Patient IDs of different existing Patients in the archive will be accepted. Overwrites value specified on Device level.
+
+    Enumerated values:
+
+    NEVER (= Reject such objects)
+
+    UNIQUE_PATIENT_ATTRS (= Only accept such objects if all attributes of one of the existing Patients matches)
+
+    CREATE_NEW_PATIENT (= Accept such objects and create a new Patient record with the Patient IDs in the received object)
+
+    (dcmAcceptNonUniquePatientIDs)"
+    "
     .. _dcmQueryRetrieveViewID:
 
     :ref:`Query/Retrieve View ID <dcmQueryRetrieveViewID>`",string,"Query/Retrieve View Identifier.
