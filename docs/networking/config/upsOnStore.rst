@@ -256,7 +256,7 @@ Create/Update Workitem in unified Worklist on receive of Composite Object
     "
     .. _dicomInstitutionDepartmentName:
 
-    :ref:`Institutional Department Name <dicomInstitutionDepartmentName>`",string,"Value of Institutional Department Name (0008,1040) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {InstitutionDepartmentName}
+    :ref:`Institutional Department Name <dicomInstitutionDepartmentName>`",string,"Value of Institutional Department Name (0008,1040) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {InstitutionalDepartmentName}
 
     (dicomInstitutionDepartmentName)"
     "
